@@ -1,3 +1,4 @@
+# translation of gu.po to Gujarati
 # translation of chkconfig.po to Gujarati
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
@@ -5,10 +6,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-08-13 13:02+0530\n"
+"PO-Revision-Date: 2004-11-02 12:29+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +21,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s આવૃત્તિ %s - મુદ્રણાધિકાર (C) ૧૯૯૭-૨૦૦૦ રેડ હેટ, ઈન્ક.\n"
+msgstr "%s આવૃત્તિ %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
@@ -176,7 +177,7 @@ msgstr "સંજ્ઞાવાળી કડી %s બનાવવામાં 
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "વૈકલ્પિક આવૃત્તિ %s - મુદ્રણાધિકાર (C) ૨૦૦૧ રેડ હેટ, ઈન્ક.\n"
+msgstr "વૈકલ્પિક આવૃત્તિ %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -439,7 +440,7 @@ msgstr "(શું %s ને કાઢી નાંખશે\n"
 #: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%sને દૂર કરવામાં નિષ્ફળ: %s\n"
+msgstr "%s ને દૂર કરવામાં નિષ્ફળ: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
