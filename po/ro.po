@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.36 1999/04/13 01:02:52 gafton Exp $
+# $Id: ro.po,v 1.37 1999/04/13 02:38:11 gafton Exp $
 #
 msgid ""
 msgstr ""
@@ -14,8 +14,7 @@ msgstr ""
 #: ../chkconfig.c:21
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Acest program poate fi distribuit gratuit sub licenþa GNU Public License.\n"
+msgstr "Acest program poate fi distribuit gratuit sub licenþa GNU Public License.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
