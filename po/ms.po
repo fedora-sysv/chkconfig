@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-07-05 08:53+0800\n"
+"PO-Revision-Date: 2003-07-28 18:40+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -336,96 +336,87 @@ msgstr "pautan utama bagi %s mestilah %s\n"
 
 #: ../alternatives.c:574
 #, c-format
-#, fuzzy
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "paut"
+msgstr "pautan %s tidak betul untuk slave %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
-#, fuzzy
 msgid "%s - status is auto.\n"
-msgstr "status adalah"
+msgstr "%s - status adalah auto.\n"
 
 #: ../alternatives.c:618
 #, c-format
-#, fuzzy
 msgid "%s - status is manual.\n"
-msgstr "status adalah"
+msgstr "%s - status adalah manual.\n"
 
 #: ../alternatives.c:620
 #, c-format
-#, fuzzy
 msgid " link currently points to %s\n"
-msgstr "paut titik kepada"
+msgstr " pautan merujuk kepada %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - keutamaan %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
-#, fuzzy
 msgid "Current `best' version is %s.\n"
-msgstr "Semasa adalah"
+msgstr "Versi 'terbaik' semasa ialah %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Terdapat %d program yang menyediakan '%s'.\n"
 
 #: ../alternatives.c:663
-#, fuzzy
 msgid "  Selection    Command\n"
-msgstr "Arahan"
+msgstr "  Pilihan    Arahan\n"
 
 #: ../alternatives.c:672
-#, fuzzy
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter "
+msgstr "Enter untuk menyimpan pilihan semasa[+], atau taip nombor pilihan: "
 
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
 "\n"
-" ralat"
+"ralat membaca pilihan\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
-#, fuzzy
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "bukan"
+msgstr "%s tidak ditentutetap sebagai alternatif untuk %s\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(akan membuang %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "kepada"
+msgstr "gagal untuk membuang %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s tidak sah\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s tidak sah\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s versi %s\n"
+msgstr "versi alternatif %s\n"
 
