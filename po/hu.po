@@ -4,42 +4,43 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 1999-03-18 19:49-0500\n"
-"PO-Revision-Date: 1999-03-20 14:50+0100\n"
-"Last-Translator: L\341szl\363 N\351meth <nemeth@qwertynet.hu>\n"
+"PO-Revision-Date: 1999-04-09 22:01+0200\n"
+"Last-Translator: László Németh <nemeth@qwertynet.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ez a szoftver szabadon terjeszthet\365 a GNU Public License szerint.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ez a szoftver szabadon terjeszthetõ a GNU Public License szerint.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr "usage:   chkconfig --list [n\351v]\n"
+msgstr "usage:   chkconfig --list [név]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr "         chkconfig --add <n\351v>\n"
+msgstr "         chkconfig --add <név>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr "         chkconfig --del <n\351v>\n"
+msgstr "         chkconfig --del <név>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr "         chkconfig [--level <levels>] <n\351v> <on|off|reset>\n"
+msgstr "         chkconfig [--level <levels>] <név> <on|off|reset>\n"
 
 # , c-format
 #: ../chkconfig.c:34
 msgid "service %s does not support chkconfig\n"
-msgstr "a %s szolg\341ltat\341s nem t\341mogatja a chkconfig haszn\341lat\341t\n"
+msgstr "a %s szolgáltatás nem támogatja a chkconfig használatát\n"
 
 # , c-format
 #: ../chkconfig.c:36
 msgid "error reading information on service %s: %s\n"
-msgstr "inform\341ci\363 olvas\341si hiba a(z) %s szolg\341ltat\341sn\341l: %s\n"
+msgstr "információ olvasási hiba a(z) %s szolgáltatásnál: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
@@ -52,24 +53,24 @@ msgstr "ki"
 # , c-format
 #: ../chkconfig.c:115
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d nem megnyithat\363: %s\n"
+msgstr "%s/init.d nem megnyitható: %s\n"
 
 # , c-format
 #: ../chkconfig.c:138
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d k\366nyvt\341r nem olvashat\363: %s"
+msgstr "%s/init.d könyvtár nem olvasható: %s"
 
 #: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "a --list, --add \351s --del opci\363k k\366z\374l csak egyet lehet megadni\n"
+msgstr "a --list, --add és --del opciók közül csak egyet lehet megadni\n"
 
 #: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "csak egy runlevel-t lehet megadni egy chkconfig lek\351rdez\351shez\n"
+msgstr "csak egy runlevel-t lehet megadni egy chkconfig lekérdezéshez\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Nyomja meg az <F1>-et tov\341bbi inform\341ci\363k\351rt a szolg\341ltat\341sr\363l."
+msgstr "Nyomja meg az <F1>-et további információkért a szolgáltatásról."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
@@ -81,33 +82,33 @@ msgstr "Vissza"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr "M\351gsem"
+msgstr "Mégsem"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Milyen szolg\341ltat\341sok induljanak automatikusan?"
+msgstr "Milyen szolgáltatások induljanak automatikusan?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr "Szolg\341ltat\341sok"
+msgstr "Szolgáltatások"
 
 # , c-format
 #: ../ntsysv.c:164
 msgid "error reading info for service %s: %s\n"
-msgstr "%s szolg\341ltat\341s inform\341ci\363 olvas\341si hiba: %s\n"
+msgstr "%s szolgáltatás információ olvasási hiba: %s\n"
 
 # , c-format
 #: ../ntsysv.c:173
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d k\366nyvt\341r nem olvashat\363: %s\n"
+msgstr "%s/init.d könyvtár nem olvasható: %s\n"
 
 #: ../ntsysv.c:218
 msgid "bad argument to --levels\n"
-msgstr "hib\341s --levels argumentum\n"
+msgstr "hibás --levels argumentum\n"
 
 #: ../ntsysv.c:225
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Az ntsysv semmilyen szolg\341ltat\341st nem kezel!\n"
+msgstr "Az ntsysv semmilyen szolgáltatást nem kezel!\n"
 
 # , c-format
 #: ../leveldb.c:256
@@ -116,9 +117,9 @@ msgstr "nem lehet kibontani %s: %s\n"
 
 #: ../leveldb.c:287
 msgid "cannot determine current run level\n"
-msgstr "az aktu\341lis runlevel nem meg\341llap\355that\363\n"
+msgstr "az aktuális runlevel nem megállapítható\n"
 
 # , c-format
 #: ../leveldb.c:321
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s szimbolikus link nem hozhat\363 l\351tre: %s\n"
+msgstr "%s szimbolikus link nem hozható létre: %s\n"
