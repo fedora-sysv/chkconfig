@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 1998-11-28 12:50+0200\n"
 "Last-Translator: Leon Kanter <leon@blackcatlinux.com>\n"
 "Language-Team: Black Cat Linux Team <blackcat-support@blackcatlinux.com>\n"
@@ -129,11 +129,16 @@ msgstr "ошибка чтения из директории %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "ошибка чтения из директории %s: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "неверный аргумент для --levels\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Нет сервисов, управляемых ntsysv!\n"
 

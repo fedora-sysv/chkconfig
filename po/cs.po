@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 2001-02-02 12:49-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 2001-02-08 00:05+0100\n"
 "Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -129,11 +129,16 @@ msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "chyba pøi ètení z adresáøe %s: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "chybný argument volby --levels\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemù¾e spravovat ¾ádné slu¾by!\n"
 

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 2001-01-30 10:15+1\n"
 "Last-Translator: Nuria Soriano <nsoriano@redhat.it>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -137,11 +137,16 @@ msgstr "error al leer en el directorio %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "argumento incorrecto para --niveles\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "¡ntsysv no puede gestionar ningún servicio!\n"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 1999-04-04 02:44+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Gelecek A.Þ <gorkem@gelecek.com.tr>\n"
@@ -130,11 +130,16 @@ msgstr "%s/init.d dizininden okurken hata: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "%s dizininden okurken hata: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "--levels için hatalý argüman\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.11\n"
-"POT-Creation-Date: 2001-01-25 15:49-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 2000-08-04 01:50+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -130,11 +130,16 @@ msgstr "feil under lesing fra katalog %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "feil under lesing fra katalog %s: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "galt argument til --levels\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 

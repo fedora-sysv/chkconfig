@@ -1,9 +1,9 @@
-# $Id: ro.po,v 1.48 2001/01/14 13:47:28 i18n Exp $
+# $Id: ro.po,v 1.49 2001/02/14 19:12:56 pbrown Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 199-04-10 12:00+EST\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -132,11 +132,16 @@ msgstr "eroare la citirea din directorul %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "eroare la citirea din directorul %s: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "argument invalid pentru --levels\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nu s-a gãsit nici un serviciu care poate fi operat de cãtre ntsysv!\n"
 

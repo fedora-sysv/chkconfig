@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 2000-08-03 18:25+0200\n"
 "Last-Translator: László Németh <nemeth@qwertynet.hu>\n"
 "Language-Team: Hungarian\n"
@@ -128,11 +128,16 @@ msgstr "%s/init.d könyvtár nem olvasható: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "hiba %s könyvtárból való olvasáskor: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "hibás --levels argumentum\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Az ntsysv semmilyen szolgáltatást nem kezel!\n"
 

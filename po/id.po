@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ID-chkconfig 1.0\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2001-02-14 13:53-0500\n"
 "PO-Revision-Date: 1998-09-12 09:57+0700\n"
 "Last-Translator: Mohammad DAMT <mdamt@ldp.linux.or.id>\n"
 "Language-Team: LDP Indonesia <http://ldp.linux.or.id>\n"
@@ -134,11 +134,16 @@ msgstr "gagal membaca direktori %s/init.d: %s\n"
 msgid "error reading from directory %s: %s\n"
 msgstr "gagal membaca direktori %s/init.d: %s\n"
 
-#: ../ntsysv.c:270
+#: ../ntsysv.c:261
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
 msgstr "parameter untuk --levels salah\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:285
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Tidak ada layanan yang dapat diatur oleh ntsysv!\n"
 
