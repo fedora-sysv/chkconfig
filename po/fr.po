@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chkconfig 6.1\n"
 "POT-Creation-Date: 1999-12-06 14:42-0500\n"
 "PO-Revision-Date: 1999-09-03\n"
-"Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
+"Last-Translator: Christian Gafton <gafton@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
@@ -22,27 +22,27 @@ msgstr ""
 
 # ../chkconfig.c:24
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Utilisation :   chkconfig --list [nom]\n"
+msgstr "Utilisation :   %s --list [nom]\n"
 
 # ../chkconfig.c:25
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <nom>\n"
+msgstr "         %s --add <nom>\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <nom>\n"
+msgstr "         %s --del <nom>\n"
 
 # ../chkconfig.c:27
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <niveaux>] <nom> <on|off|reset>\n"
+msgstr "         %s [--level <niveaux>] <nom> %s)\n"
 
 # ../chkconfig.c:49
 #: ../chkconfig.c:36
@@ -127,15 +127,15 @@ msgstr "Services"
 
 # ../chkconfig.c:51
 #: ../ntsysv.c:164
-#, fuzzy, c-format
+#, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 
 # ../chkconfig.c:130 ../ntsysv.c:168
 #: ../ntsysv.c:173
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s"
+msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s\n"
 
 # ../ntsysv.c:213
 #: ../ntsysv.c:219
@@ -149,9 +149,9 @@ msgstr "Aucun service ne peut être administré par ntsysv!\n"
 
 # ../leveldb.c:255
 #: ../leveldb.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "Echec de commutation du mode pour l'expression %s\n"
+msgstr "Echec de commutation du mode pour l'expression %s: %s\n"
 
 # ../leveldb.c:285
 #: ../leveldb.c:296
