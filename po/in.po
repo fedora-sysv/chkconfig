@@ -5,7 +5,7 @@
 # , fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: ID-chkconfig 1.0\n"
 "POT-Creation-Date: 1999-03-16 23:27-0500\n"
 "PO-Revision-Date: 1998-03-18 00:24+0700\n"
 "Last-Translator: Mohammad DAMT <mdamt@ldp.linux.or.id>\n"
@@ -14,8 +14,10 @@ msgstr ""
 "Content-Type: text/plain\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Program ini dapat didistribusikan di bawah Lisensi GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Program ini dapat didistribusikan di bawah Lisensi GNU Public License.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
@@ -33,12 +35,10 @@ msgstr "           chkconfig --del <name>\n"
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 msgstr "          chkconfig [--level <levels>] <name> <on|off|reset>\n"
 
-# , c-format
 #: ../chkconfig.c:53
 msgid "service %s does not support chkconfig\n"
 msgstr "layanan %s tidak mendukung chkconfig\n"
 
-# , c-format
 #: ../chkconfig.c:55
 msgid "error reading information on service %s: %s\n"
 msgstr "terdapat error ketika membaca informasi layanan %s: %s\n"
@@ -51,12 +51,10 @@ msgstr "hidup"
 msgid "off"
 msgstr "mati"
 
-# , c-format
 #: ../chkconfig.c:114
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gagal membuka %s/init.d: %s\n"
 
-# , c-format
 #: ../chkconfig.c:137
 msgid "error reading from directory %s/init.d: %s"
 msgstr "tidak dapat membaca direktori %s/init.d: %s"
@@ -93,12 +91,10 @@ msgstr "Layanan mana yang harus distart secara otomatis?"
 msgid "Services"
 msgstr "Layanan"
 
-# , c-format
 #: ../ntsysv.c:164
 msgid "error reading info for service %s: %s\n"
 msgstr "gagal membaca info layanan %s: %s\n"
 
-# , c-format
 #: ../ntsysv.c:173
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "gagal membaca direktori %s/init.d: %s\n"
@@ -111,7 +107,6 @@ msgstr "parameter untuk --levels salah\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Tidak ada layanan yang dapat diatur oleh ntsysv!\n"
 
-# , c-format
 #: ../leveldb.c:256
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gagal untuk mengglob pola %s: %s\n"
@@ -120,7 +115,6 @@ msgstr "gagal untuk mengglob pola %s: %s\n"
 msgid "cannot determine current run level\n"
 msgstr "tidak dapat menentukan run level yang aktif\n"
 
-# , c-format
 #: ../leveldb.c:321
 msgid "failed to make symlink %s: %s\n"
 msgstr "gagal untuk membuat symlink %s: %s\n"
