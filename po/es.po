@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-03-12 11:48GMT\n"
+"PO-Revision-Date: 2002-06-18 15:08GMT\n"
 "Last-Translator: Nuria Soriano <nuria@redhat.es>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -44,10 +44,10 @@ msgstr "         %s --del <nombre>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <niveles>] <nombre> %s)\n"
+msgstr "         %s [--level <levels>] <nombre> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
@@ -72,11 +72,11 @@ msgstr "error al abrir %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "on"
+msgstr "activo"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "off"
+msgstr "desactivado"
 
 #: ../chkconfig.c:282
 #, c-format
@@ -154,7 +154,7 @@ msgstr " Tiene que ser root para poder ejecutar el programa %s\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "argumento incorrecto para --niveles\n"
+msgstr "argumento incorrecto para --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
