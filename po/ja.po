@@ -69,13 +69,13 @@ msgstr ""
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "サービス %s は、chkconfig をサポートしていません\n"
+msgstr "サービス %s は、chkconfig をサポートしていません。\n"
 
 # ../chkconfig.c:37
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
+msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました: %s\n"
 
 # ../chkconfig.c:138
 #: ../chkconfig.c:98 ../chkconfig.c:248
@@ -163,13 +163,13 @@ msgstr "サービス"
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
+msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました: %s\n"
 
 # ../ntsysv.c:226
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました： %s\n"
+msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
@@ -465,7 +465,7 @@ msgstr "  選択       コマンド\n"
 #: ../alternatives.c:674
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enterを押して現在の選択[+]を保持するか、選択番号を入力します："
+msgstr "Enterを押して現在の選択[+]を保持するか、選択番号を入力します:"
 
 # ../ntsysv.c:174 ../ntsysv.c:217
 #: ../alternatives.c:677
@@ -511,4 +511,4 @@ msgstr "alternatives バージョン %s\n"
 
 # ../chkconfig.c:172
 #~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"
+#~ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました: %s"
