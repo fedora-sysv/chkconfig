@@ -1,15 +1,17 @@
+# translation of zh_TW.po to Traditional Chinese
 # Translation of zh_TW.po to Traditional Chinese
 # Translation of chkconfig to Chinese (traditional)
-# Copyright (C) 2002, 2003 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
 # Ben Wu <hpwu@redhat.com>, 2002, 2003.
+# Jouston Huang <jouston@jouston.no-ip.com>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2003-11-19 15:50+1000\n"
-"Last-Translator: Ben Wu <hpwu@redhat.com>\n"
-"Language-Team: Traditional Chinese <i18n-list@redhat.com>\n"
+"PO-Revision-Date: 2004-06-27 23:18+0800\n"
+"Last-Translator: Jouston Huang <jouston@jouston.no-ip.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@i18n.org.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,40 +21,37 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 版本 %s - 版權 (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s 版本 %s - 版權所有 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "在遵守 GNU Public License 的條款下，可以自由的散佈這個程式。\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "在遵守 GNU 通用公共許可證(GPL) 的條款下，可以自由的散佈這個程式。\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "用法:   %s --list [name]\n"
+msgstr "用法:   %s --list [名稱]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "         %s --add <名稱>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --del <名稱>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--level <執行等級們>] <名稱> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"%s 服務支援 chkconfig，但未向任何執行等級註冊 (請執行 'chkconfig --add %s')\n"
+msgstr "%s 服務支援 chkconfig，但未向任何執行等級註冊 (請執行 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -94,7 +93,7 @@ msgstr "無法開啟 %s 目錄: %s\n"
 #: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s version %s\n"
+msgstr "%s 版本 %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -154,7 +153,7 @@ msgstr "無任何服務可被 ntsysv 管理！\n"
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob pattern %s 失敗: %s\n"
+msgstr "設定全域設定值 %s 失敗: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
@@ -168,13 +167,13 @@ msgstr "建立 %s 符號連結失敗: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "另一版本 %s - 版權 (C) 2001 Red Hat, Inc.\n"
+msgstr "另一版本 %s - 版權所有 (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在遵守 GNU 通用公共許可證的條款下，可以自由的散佈這個程式。\n"
+msgstr "在遵守 GNU 通用公共許可證(GPL)的條款下，可以自由的散佈這個程式。\n"
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
@@ -221,9 +220,8 @@ msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <目錄> --admindir <目錄>\n"
 
 #: ../alternatives.c:157
-#, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "讀取中 %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -286,9 +284,8 @@ msgid "unexpected line in %s: %s\n"
 msgstr "%s 中有錯誤的行列: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "無法讀取 %s: %s\n"
+msgstr "無法讀取連結 %s: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -336,7 +333,7 @@ msgstr "取代 %s 以 %s 失敗: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "執行中 %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -431,3 +428,4 @@ msgstr "另一版本 %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "讀取 %s/init.d 目錄錯誤: %s"
+
