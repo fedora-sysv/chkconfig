@@ -26,7 +26,7 @@ msgid "usage:   %s --list [name]\n"
 msgstr "використання:   %s --list [служба]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <служба>\n"
 
@@ -36,7 +36,7 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <служба>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <р╕вн╕>] <служба> <on|off|reset>\n"
 
