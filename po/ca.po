@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-03-07 02:34+0100\n"
+"PO-Revision-Date: 2004-03-07 04:14+0100\n"
 "Last-Translator: Josep Puigdemont <baldrick@terra.es>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "         %s –-del <nom>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <nivell>]<nom>%s)\n"
+msgstr "         %s [--level <nivells>] <nom>%s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -64,7 +64,7 @@ msgstr "El servei %s no és compatible amb el chkconfig\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "S'ha produït un error llegint la informació en el servei %s: %s\n"
+msgstr "S'ha produït un error en llegir la informació del servei %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
@@ -82,7 +82,7 @@ msgstr "apagat"
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "S'ha produït un error llegint el directori %s/init.d: %s\n"
+msgstr "S'ha produït un error en llegir el directori %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
@@ -91,7 +91,7 @@ msgstr "serveis basats en xinetd:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "no s’ha pogut obrir el directori %s: %s\n"
+msgstr "no s'ha pogut obrir el directori %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -117,7 +117,7 @@ msgstr "D'acord"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Endarrera"
+msgstr "Endarrere"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -134,12 +134,12 @@ msgstr "Serveis"
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "s'ha produït un error llegint la informació per al sevei %s: %s\n"
+msgstr "s'ha produït un error en llegir la informació per al sevei %s: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "s'ha produït un error llegint des del directori %s: %s\n"
+msgstr "s'ha produït un error en llegir des del directori %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
@@ -171,7 +171,7 @@ msgstr "no s'ha pogut fer un enllaç simbòlic %s: %s\n"
 #: ../alternatives.c:46
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "versions alternatives %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives versió %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
 msgid ""
@@ -287,17 +287,16 @@ msgstr "no s'esperava la línia a %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"l'enllaç no assenyala a cap alternativa -- s'està canviant a mode manual\n"
+msgstr "l'enllaç no assenyala a cap alternativa -- es canviarà a mode manual\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "l'enllaç ha canviat –- s'està canviant a mode manual\n"
+msgstr "l'enllaç ha canviat –- es canviarà a mode manual\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr "suprimiria %s\n"
+msgstr "se suprimiria %s\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
 #, c-format
@@ -307,7 +306,7 @@ msgstr "no s'ha pogut eliminar l'enllaç %s: %s\n"
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "enllaçaria %s -> %s\n"
+msgstr "s'enllaçaria %s -> %s\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
@@ -352,7 +351,7 @@ msgstr "%s - l'estat és manual.\n"
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr " l’enllaç assenyala a %s\n"
+msgstr " l'enllaç assenyala a %s\n"
 
 #: ../alternatives.c:623
 #, c-format
@@ -367,7 +366,7 @@ msgstr " esclau %s: %s\n"
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "La `millor' versió actual és %s.\n"
+msgstr "La 'millor' versió actual és %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
@@ -381,7 +380,8 @@ msgstr "  Selecció     Ordre\n"
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Retorn per mantenir la selecció actual[+], o teclegeu el número escollit: "
+"Premeu la tecla de retorn per mantenir la selecció actual[+], o teclegeu el "
+"número de la selecció: "
 
 #: ../alternatives.c:675
 msgid ""
@@ -389,7 +389,7 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"s'ha produït un error llegint l'opció\n"
+"s'ha produït un error en llegir l'opció\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
@@ -399,7 +399,7 @@ msgstr "no s'ha configurat %s com a alternativa per a %s\n"
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(suprimiria %s\n"
+msgstr "(se suprimiria %s\n"
 
 #: ../alternatives.c:746
 #, c-format
