@@ -2,7 +2,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.3.11
-Release: 0.2.1
+Release: 0.3
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
-* Fri Jun  4 2004 Bill Nottingham <notting@redhat.com> 1.3.11-0.2.1
+* Fri Jun  4 2004 Bill Nottingham <notting@redhat.com> 1.3.11-0.3
 - fix LSB comment parsing (#85678)
 
 * Wed May 29 2004 Bill Nottingham <notting@redhat.com> 1.3.10-1
