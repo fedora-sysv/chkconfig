@@ -118,7 +118,7 @@ msgstr "Назад"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Відмінити"
+msgstr "Скасувати"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
