@@ -37,7 +37,7 @@ static int servicesWindow(struct service * services, int numServices,
 
     subform = newtForm(sb, NULL, 0);
     newtFormSetBackground(subform, NEWT_COLORSET_CHECKBOX);
-    newtFormSetHeight(subform, 10);
+    newtFormSetHeight(subform, height);
 
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
@@ -103,6 +103,13 @@ static int servicesWindow(struct service * services, int numServices,
     return 0;
 }
 
+static int serviceNameCmp(const void * a, const void * b) {
+    const struct service * first = a;
+    const struct service * second = b;
+
+    return strcmp(first->name, second->name);
+}
+
 static int getServices(struct service ** servicesPtr, int * numServicesPtr) {
     DIR * dir;
     struct dirent * ent;
@@ -152,6 +159,8 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr) {
     }
 
     closedir(dir);
+
+    qsort(services, numServices, sizeof(*services), serviceNameCmp);
 
     *servicesPtr = services;
     *numServicesPtr = numServices;
