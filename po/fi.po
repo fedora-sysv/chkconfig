@@ -1,0 +1,74 @@
+# Finnish messages for chkconfig
+# Revised by Raimo Koski <rkoski@pp.weppi.fi>, 1998.
+#
+# Status:
+#
+# 1998-05-17 
+# First version.
+
+msgid ""
+msgstr ""
+"POT-Creation-Date: 1998-05-17\n"
+"Last-Translator: Raimo Koski <rkoski@pp.weppi.fi>\n"
+"Language-Team: Finnish <linux@sot.com>\n"
+"Date: 1998-03-23 18:26:20-0500\n"
+"From: Erik Troan <ewt@mercury.redhat.com>\n"
+"Content-Type: text/plain; charset=\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
+
+#: ../chkconfig.c:21
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "T‰t‰ ohjelmaa voi levitt‰‰ vapaasti GNU Public License:n puitteissa.\n"
+
+#: ../chkconfig.c:49
+msgid "service %s does not support chkconfig\n"
+msgstr "palvelu %s ei tue chkconfig:a\n"
+
+#: ../chkconfig.c:51
+msgid "error reading information on service %s: %s\n"
+msgstr "virhe luettaessa tietoja palvelulta %s: %s\n"
+
+#: ../chkconfig.c:109
+msgid "failed to open "
+msgstr "en voinut avata  "
+
+#: ../chkconfig.c:130 ../ntsysv.c:168
+msgid "error reading from directory %s/init.d: %s"
+msgstr "virhe luettaessa hakemistosta %s/init.d: %s"
+
+#: ../chkconfig.c:204
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "vain yht‰ joukosta --list, --add tai --del voidaan k‰ytt‰‰\n"
+
+#: ../chkconfig.c:251
+msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgstr "vain yksi ajotaso voidaan m‰‰ritell‰ chkconfig:n kyselylle\n"
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "Paina <F1> saadaksesi lis‰‰ tietoja palvelusta."
+
+#: ../ntsysv.c:56 ../ntsysv.c:93
+msgid "Ok"
+msgstr "Ok"
+
+#: ../ntsysv.c:68
+msgid "What services should be automatically started?"
+msgstr "Mitk‰ palvelut haluat k‰ynnistett‰v‰n automaattisesti?"
+
+#: ../ntsysv.c:74
+msgid "Services"
+msgstr "Palvelut"
+
+#: ../leveldb.c:193
+msgid "failed to glob pattern %s\n"
+msgstr "failed to glob pattern %s\n"
+
+#: ../leveldb.c:223
+msgid "cannot determine current run level\n"
+msgstr "en voi m‰‰ritell‰ nykyist‰ ajotasoa\n"
+
+#: ../leveldb.c:257
+msgid "failed to make symlink %s: %s\n"
+msgstr "en voinut luoda symbolista linkki‰ %s: %s\n"
