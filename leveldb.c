@@ -38,12 +38,71 @@ int parseLevels(char * str, int emptyOk) {
     return rc;
 }
 
+int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
+	char * filename = alloca(strlen(name) + strlen(XINETDDIR) + 50);
+	int fd;
+	struct service serv = { NULL, -1, -1, -1, NULL, 1, -1 };
+	struct stat sb;
+	char * buf, *ptr;
+	
+	snprintf(filename, strlen(name)+strlen(XINETDDIR)+50, XINETDDIR "/%s", name);
+	
+	if ((fd = open(filename, O_RDONLY)) < 0) return -1;
+	fstat(fd,&sb);
+	buf = malloc(sb.st_size+1);
+	if (read(fd,buf,sb.st_size)!=sb.st_size) {
+		close(fd);
+		free(buf);
+		return -1;
+	}
+	close(fd);
+        serv.name = strdup(name);
+	buf[sb.st_size] = '\0';
+	while (buf) {
+		ptr = strchr(buf,'\n');
+		if (ptr) {
+			*ptr = '\0';
+			ptr++;
+		} 
+		if (*buf == '#') {
+			buf++;
+			while (isspace(*buf)) buf++;
+			if (!strncmp(buf,"default ", 8)) {
+				if (!strncmp(buf+8,"on",2)) {
+					serv.enabled = 1;
+				} else {
+					serv.enabled = 0;
+				}
+			}
+			buf = ptr;
+			continue;
+		}
+		while (isspace(*buf)) buf++;
+		if (!strncmp(buf,"disable", 7)) {
+			buf = strstr(buf,"=")+1;
+			while (isspace(*buf)) buf++;
+			if (strncmp(buf,"yes",3)) {
+				serv.levels = parseLevels("0123456",0);
+				if (serv.enabled == -1)
+				  serv.enabled = 1;
+			} else {
+				serv.levels = 0;
+				if (serv.enabled == -1)
+				  serv.enabled = 0;
+			}
+		}
+		buf = ptr;
+	}
+	*service = serv;
+	return 0;
+}
+
 int readServiceInfo(char * name, struct service * service, int honorHide) {
     char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
     int fd, i;
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next;
-    struct service serv = { NULL, -1, -1, -1, NULL };
+    struct service serv = { NULL, -1, -1, -1, NULL, 0, 0 };
     char overflow;
     char english;
     char is_my_lang = 0;
@@ -55,7 +114,9 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 
     sprintf(filename, RUNLEVELS "/init.d/%s", name);
 
-    if ((fd = open(filename, O_RDONLY)) < 0) return -1;
+    if ((fd = open(filename, O_RDONLY)) < 0) {
+	    return readXinetdServiceInfo(name,service,honorHide);
+    }
     fstat(fd, &sb);
 
     bufstart = mmap(NULL, sb.st_size, PROT_READ, MAP_SHARED, fd, 0);
@@ -306,6 +367,60 @@ int isOn(char * name, int level) {
 
     globfree(&globres);
     return 1;
+}
+
+int setXinetdService(struct service s, int on) {
+	int oldfd, newfd;
+	char oldfname[100], newfname[100];
+	char tmpstr[50];
+	char *buf, *ptr, *tmp;
+	struct stat sb;
+	
+	if (on == -1) {
+		on = s.enabled ? 1 : 0;
+	}
+	snprintf(oldfname,100,"%s/%s",XINETDDIR,s.name);
+	if ( (oldfd = open(oldfname,O_RDONLY)) == -1 ) {
+		return -1;
+	}
+	fstat(oldfd,&sb);
+	buf = malloc(sb.st_size+1);
+	if (read(oldfd,buf,sb.st_size)!=sb.st_size) {
+		close(oldfd);
+		free(buf);
+		return -1;
+	}
+	close(oldfd);
+	buf[sb.st_size] = '\0';
+	snprintf(newfname,100,"%s/%s.XXXXXX",XINETDDIR,s.name);
+	newfd = mkstemp(newfname);
+	if (newfd == -1) {
+		free(buf);
+		return -1;
+	}
+	while (buf) {
+		tmp = buf;
+		ptr = strchr(buf,'\n');
+		if (ptr) {
+			*ptr = '\0';
+			ptr++;
+		} 
+		while (isspace(*buf)) buf++;
+		if (strncmp(buf,"disable", 7)) {
+			write(newfd,tmp,strlen(tmp));
+			write(newfd,"\n",1);
+			if (buf[0] == '{') {
+				snprintf(tmpstr,50,"\tdisable\t= %s", on ? "no" : "yes");
+				write(newfd,tmpstr,strlen(tmpstr));
+				write(newfd,"\n",1);
+			}
+		}
+		buf = ptr;
+	}
+	close(newfd);
+	chmod(newfname,644);
+	unlink(oldfname);
+	return(rename(newfname,oldfname));
 }
 
 int doSetService(struct service s, int level, int on) {

@@ -2,13 +2,19 @@
 #define H_LEVELDB
 
 #define RUNLEVELS "/etc"
+#define XINETDDIR "/etc/xinetd.d"
 
 #include <glob.h>
+
+#define TYPE_INIT_D	0
+#define TYPE_XINETD	1
 
 struct service {
     char * name;
     int levels, kPriority, sPriority;
     char * desc;
+    int type;
+    int enabled;
 };
 
 int parseLevels(char * str, int emptyOk);
@@ -21,5 +27,7 @@ int isOn(char * name, int where);
 int isConfigured(char * name, int level);
 int doSetService(struct service s, int level, int on);
 int findServiceEntries(char * name, int level, glob_t * globresptr);
+int readXinetdServiceInfo(char *name, struct service *service, int honorHide);
+int setXinetdService(struct service s, int on);
 
 #endif

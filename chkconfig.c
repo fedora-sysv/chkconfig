@@ -51,14 +51,15 @@ static int delService(char * name) {
 	readServiceError(rc, name);
 	return 1;
     }
-    for (level = 0; level < 7; level++) {
-	if (!findServiceEntries(name, level, &globres)) {
-	    for (i = 0; i < globres.gl_pathc; i++)
-		unlink(globres.gl_pathv[i]);
-	    if (globres.gl_pathc) globfree(&globres);
-	}
-    }
+    if (s.type == TYPE_XINETD) return 0;
 
+    for (level = 0; level < 7; level++) {
+	    if (!findServiceEntries(name, level, &globres)) {
+		    for (i = 0; i < globres.gl_pathc; i++)
+		      unlink(globres.gl_pathv[i]);
+		    if (globres.gl_pathc) globfree(&globres);
+	    }
+    }
     return 0;
 }
 
@@ -70,7 +71,9 @@ static int addService(char * name) {
 	readServiceError(rc, name);
 	return 1;
     }
-
+	
+    if (s.type == TYPE_XINETD) return 0;
+    
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i)) {
 	    if ((1 << i) & s.levels)
@@ -95,6 +98,10 @@ static int showServiceInfo(char * name, int forgiving) {
     }
 
     printf("%-15s", s.name);
+    if (s.type == TYPE_XINETD) {
+	    printf("\t%s\n", s.levels ? _("on") : _("off"));
+	    return 0;
+    }
 
     for (i = 0; i < 7; i++) {
 	printf("\t%d:%s", i, isOn(s.name, i) ? _("on") : _("off"));
@@ -103,6 +110,21 @@ static int showServiceInfo(char * name, int forgiving) {
 
     return 0;
 }
+
+static int isXinetdEnabled() {
+	int i;
+	struct service s;
+	
+	if (readServiceInfo("xinetd", &s, 0)) {
+		return 0;
+	}
+	for (i = 0; i < 7; i++) {
+		if (isOn("xinetd", i))
+		  return 1;
+	}
+	return 0;
+}
+	
 
 static int listService(char * item) {
     DIR * dir;
@@ -154,7 +176,35 @@ static int listService(char * item) {
     }
 
     closedir(dir);
+	
+    if (isXinetdEnabled()) {
+	    printf(_("xinetd based services:\n"));
+	    if (!(dir = opendir(XINETDDIR))) {
+		    fprintf(stderr, _("failed to open directory %s: %s"),
+			    XINETDDIR, strerror(err));
+		    return 1;
+	    }
+	    while ((ent = readdir(dir))) {
+		    const char *dn;
+		    struct service s;
 
+		    /* Skip any file starting with a . */
+		    if (ent->d_name[0] == '.')	continue;
+
+		    /* Skip files with known bad extensions */
+		    if ((dn = strrchr(ent->d_name, '.')) != NULL &&
+			(!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+		      continue;
+
+		    dn = ent->d_name + strlen(ent->d_name) - 1;
+		    if (*dn == '~' || *dn == ',')
+		      continue;
+	    
+		    readXinetdServiceInfo(ent->d_name, &s, 0);
+		    printf("\t%s:\t%s\n", s.name, s.levels ? _("on") : _("off"));
+	    }
+	    closedir(dir);
+    }
     return 0;
 }
 
@@ -176,17 +226,21 @@ int setService(char * name, int where, int state) {
 	return 1;
     }
 
-    for (i = 0; i < 7; i++) {
-	if (!((1 << i) & where)) continue;
+    if (s.type == TYPE_INIT_D) {
+	    for (i = 0; i < 7; i++) {
+		    if (!((1 << i) & where)) continue;
 
-	if (state == 1 || state == 0)
-	    what = state;
-	else if (s.levels & (1 << i))
-	    what = 1;
-	else
-	    what = 0;
-
-	doSetService(s, i, what);
+		    if (state == 1 || state == 0)
+		      what = state;
+		    else if (s.levels & (1 << i))
+		      what = 1;
+		    else
+		      what = 0;
+		    doSetService(s, i, what);
+	    }
+    } else if (s.type == TYPE_XINETD) {
+	    setXinetdService(s, state);
+	    system("/etc/init.d/xinetd reload >/dev/null 2>&1");
     }
 
     return 0;
@@ -241,27 +295,27 @@ int main(int argc, char ** argv) {
     }
 
     if (addItem) {
-	char * name = poptGetArg(optCon);
+	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) 
 	    usage();
 
 	return addService(name);
     } else if (delItem) {
-	char * name = poptGetArg(optCon);
+	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	return delService(name);
     } else if (listItem) {
-	char * item = poptGetArg(optCon);
+	char * item = (char *)poptGetArg(optCon);
 
 	if (item && poptGetArg(optCon)) usage();
 
 	return listService(item);
     } else {
-	char * name = poptGetArg(optCon);
-	char * state = poptGetArg(optCon);
+	char * name = (char *)poptGetArg(optCon);
+	char * state = (char *)poptGetArg(optCon);
 	int where = 0, level = -1;
 
 	if (levels) {

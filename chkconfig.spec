@@ -1,7 +1,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.1.5
-Release: 2
+Version: 1.2.0
+Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sun Jul  2 2000 Bill Nottingham <notting@redhat.com>
+- add xinetd support
+
 * Tue Jun 27 2000 Matt Wilson <msw@redhat.com>
 - changed Prereq: initscripts >= 5.18 to Conflicts: initscripts < 5.18
 - fixed sumary and description where a global string replace nuked them

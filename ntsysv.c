@@ -40,14 +40,20 @@ static int servicesWindow(struct service * services, int numServices,
     states = alloca(sizeof(*states) * numServices);
     
     for (i = 0; i < numServices; i++) {
-	for (j = 0; j < 7; j++) {
-	    if (levels & (1 << j)) {
-		if (isOn(services[i].name, j)) break;
-	    }
-	}
-	checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
-				     (j != 7) ? '*' : ' ', NULL, 
+	if (services[i].type == TYPE_XINETD) {
+		checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
+				     services[i].levels ? '*' : ' ', NULL, 
 				     states + i);
+	} else {
+		for (j = 0; j < 7; j++) {
+			if (levels & (1 << j)) {
+				if (isOn(services[i].name, j)) break;
+			}
+		}
+		checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
+					     (j != 7) ? '*' : ' ', NULL, 
+					     states + i);
+	}
 	newtFormAddComponent(subform, checkboxes[i]);
     }
 
@@ -89,7 +95,7 @@ static int servicesWindow(struct service * services, int numServices,
 		for (i = 0; i < numServices; i++)
 		    if (curr == checkboxes[i]) break;
 
-		if (i < numServices) 
+		if (i < numServices && services[i].desc) 
 		    newtWinMessage(services[i].name, _("Ok"), services[i].desc);
 	    }
 	} else {
@@ -104,9 +110,13 @@ static int servicesWindow(struct service * services, int numServices,
     if (!update) return 1;
 
     for (i = 0; i < numServices; i++) {
-      for (j = 0; j < 7; j++) {
-	if (levels & (1 << j))
-	  doSetService(services[i], j, states[i] == '*');
+      if (services[i].type == TYPE_XINETD)
+	      setXinetdService(services[i], states[i] == '*');
+      else {
+	      for (j = 0; j < 7; j++) {
+		      if (levels & (1 << j))
+			doSetService(services[i], j, states[i] == '*');
+	      }
       }
     }
 
@@ -176,6 +186,47 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     }
 
     closedir(dir);
+
+    if (!(dir = opendir(XINETDDIR))) {
+	fprintf(stderr, "failed to open " XINETDDIR ": %s\n",
+		strerror(errno));
+        return 2;
+    }
+
+    while ((ent = readdir(dir))) {
+	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
+	    strchr(ent->d_name, '.')) continue;
+
+	sprintf(fn, "%s/%s", XINETDDIR, ent->d_name);
+	if (stat(fn, &sb))
+	{
+		err = errno;
+		continue;
+	}
+	if (!S_ISREG(sb.st_mode)) continue;
+
+	if (numServices == numServicesAlloced) {
+	    numServicesAlloced += 10;
+	    services = realloc(services, 
+				numServicesAlloced * sizeof(*services));
+	}
+
+	rc = readServiceInfo(ent->d_name, services + numServices, honorHide);
+	
+	if (rc == -1) {
+	    fprintf(stderr, _("error reading info for service %s: %s\n"),
+			ent->d_name, strerror(errno));
+	    closedir(dir);
+	    return 2;
+	} else if (!rc)
+	    numServices++;
+    }
+
+    if (err) {
+	fprintf(stderr, _("error reading from directory %s: %s\n"),
+		XINETDDIR, strerror(err));
+        return 1;
+    }
 
     qsort(services, numServices, sizeof(*services), serviceNameCmp);
 
