@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: et\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-07-15 00:44+0300\n"
+"PO-Revision-Date: 2005-02-03 19:19+0200\n"
 "Last-Translator: Allan Sims <allsi@eau.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,7 @@ msgstr "%s versioon %s - Autoriõigus (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Seda võib vabalt taaslevitada GNU avaliku litsentsi järgi.\n"
 
 #: ../chkconfig.c:25
@@ -50,12 +49,8 @@ msgstr "         %s [--level <tase>] <nimi> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"teenus %s toetab chkconfig-i, kuid ei ole viidatud ühelegi käivitustasemele "
-"(käivita 'chkconfig --add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "teenus %s toetab chkconfig-i, kuid ei ole viidatud ühelegi käivitustasemele (käivita 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -67,20 +62,28 @@ msgstr "teenus %s ei toeta chkconfig-i\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "viga teenuse %s info lugemisel: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98
+#: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d avamine ebaõnnestus: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:308
 msgid "on"
 msgstr "peal"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:308
 msgid "off"
 msgstr "ära"
 
-#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:270
+#: ../ntsysv.c:166
+#: ../ntsysv.c:193
+#: ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "viga teenuse %s info lugemisel: %s\n"
@@ -103,8 +106,7 @@ msgstr "%s versioon %s\n"
 #: ../chkconfig.c:409
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
-"ainult ühte järgnevatest --list, --add või --del võib korraga kasutada\n"
+msgstr "ainult ühte järgnevatest --list, --add või --del võib korraga kasutada\n"
 
 #: ../chkconfig.c:461
 #, c-format
@@ -115,7 +117,8 @@ msgstr "ainult ühte käivitustaset võib chkconfig-iga korraga pärida\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Vajuta <F1> teenuse kohta täpsema info saamiseks."
 
-#: ../ntsysv.c:68 ../ntsysv.c:105
+#: ../ntsysv.c:68
+#: ../ntsysv.c:105
 msgid "Ok"
 msgstr "Olgu"
 
@@ -319,22 +322,27 @@ msgstr "link viitab puuduvale alternatiivile -- käsiviisile seadmine\n"
 msgid "link changed -- setting mode to manual\n"
 msgstr "link muudetud -- käsiviisile seadmine\n"
 
-#: ../alternatives.c:340 ../alternatives.c:347
+#: ../alternatives.c:340
+#: ../alternatives.c:347
 #, c-format
 msgid "would remove %s\n"
 msgstr "võiks eemaldada %s\n"
 
-#: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
+#: ../alternatives.c:342
+#: ../alternatives.c:349
+#: ../alternatives.c:380
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "lingi %s eemaldamine ebaõnnestus: %s\n"
 
-#: ../alternatives.c:365 ../alternatives.c:377
+#: ../alternatives.c:365
+#: ../alternatives.c:377
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "võiks linkide %s -> %s\n"
 
-#: ../alternatives.c:369 ../alternatives.c:386
+#: ../alternatives.c:369
+#: ../alternatives.c:386
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "ebaõnnestus %s linkimine -> %s: %s\n"
@@ -354,7 +362,8 @@ msgstr "%s loomine ebaõnnestus: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s asendamine %s-ga ebaõnnestus: %s\n"
 
-#: ../alternatives.c:477 ../alternatives.c:486
+#: ../alternatives.c:477
+#: ../alternatives.c:486
 #, c-format
 msgid "running %s\n"
 msgstr "%s käitamine\n"
@@ -400,9 +409,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Praegune 'parim' versioon on %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Seal on %d programmi, millised kindlustavad '%s'.\n"
+msgstr "Seal on %d programm, mis kindlustab '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -428,7 +437,8 @@ msgstr ""
 "\n"
 "viga valiku lugemisel\n"
 
-#: ../alternatives.c:705 ../alternatives.c:731
+#: ../alternatives.c:705
+#: ../alternatives.c:731
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ei ole seadistatud kui %s alternatiiv\n"
@@ -458,5 +468,3 @@ msgstr "adminkatal %s on vigane\n"
 msgid "alternatives version %s\n"
 msgstr "alternatiivne versioon %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "viga kataloogist %s/init.d lugemisel: %s\n"
