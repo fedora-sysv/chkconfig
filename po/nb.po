@@ -1,13 +1,8 @@
-# Norwegian translation of chkconfig (bokmål dialect).
-# Copyright (C) 1999 Free Software Foundation, Inc.
-# Erik Troan <ewt@mercury.redhat.com>,1998.
-# Kjartan Maraas <kmaraas@online.no>, 1999.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0.5\n"
 "POT-Creation-Date: 2000-07-18 00:53-0400\n"
-"PO-Revision-Date: 1999-09-14 21:24+02:00\n"
+"PO-Revision-Date: 2000-08-04 01:50+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -71,12 +66,12 @@ msgstr "klarte ikke å lese fra katalog %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd baserte tjenester:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "klarte ikke å åpne %s/init.d: %s\n"
+msgstr "klarte ikke å åpne katalog %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -126,9 +121,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "feil under lesing fra katalog %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "feil under lesing fra katalog %s/init.d: %s\n"
+msgstr "feil under lesing fra katalog %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
