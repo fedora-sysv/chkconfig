@@ -297,7 +297,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	start++;
 	if (!strncmp(start, "## BEGIN INIT INFO", 18)) {
 		    serv.isLSB = 1;
-		    serv.levels = -1;
+		    serv.sPriority = -1;
+		    serv.kPriority = -1;
 	}
 	if (!strncmp(start, "## END INIT INFO", 16) && serv.isLSB)
 		    break;
@@ -314,7 +315,9 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	    }
 	}
 
-	if (!strncmp(start, "chkconfig:", 10) && !serv.isLSB) {
+	if (!strncmp(start, "chkconfig:", 10)) {
+	    int spri, kpri;
+	     
 	    start += 10;
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end) {
@@ -324,16 +327,20 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	    }
 
 	    if ((sscanf(start, "%s %d %d%c", levelbuf,
-			&serv.sPriority, &serv.kPriority, &overflow) != 4) ||
+			&spri, &kpri, &overflow) != 4) ||
 		 !isspace(overflow)) {
 		if (serv.desc) free(serv.desc);
 		free(bufstart);
 		return 1;
 	    }
+	    if (!serv.isLSB) {
+		    serv.sPriority = spri;
+		    serv.kPriority = kpri;
+	    }
 
 	    if (!strcmp(levelbuf, "-"))
 		serv.levels = 0;
-	    else
+	    else if (serv.levels == -1)
 		serv.levels = parseLevels(levelbuf, 0);
 	    if (serv.levels == -1) {
 		if (serv.desc) free(serv.desc);
