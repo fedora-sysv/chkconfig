@@ -1,9 +1,13 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 1998-09-25 07:14-0400\n"
-"Content-Type: text/plain; charset=\n"
+"Last-Translator: Pavel Makovec <pavelm@terminal.cz>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
 "Date: 1998-03-23 18:26:20-0500\n"
 "From: Erik Troan <ewt@mercury.redhat.com>\n"
+"Original-Translator: Pavel Makovec <pavelm@terminal.cz>\n"
 "Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
 "--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
@@ -12,7 +16,7 @@ msgstr ""
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Toto lze volnì distribuovat znovu podle podmínek GPL (GNU Public License).\n"
+"Tento program lze volnì roz¹iøovat podle podmínek GPL (GNU Public License).\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
@@ -51,7 +55,7 @@ msgstr ""
 #: ../chkconfig.c:109
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "selhalo otevøení "
+msgstr "nelze otevøít "
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
@@ -68,7 +72,7 @@ msgstr "v dotazu chkconfig lze zadat jen jednu spou¹tìcí úroveò\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Stisk <F1> zobrazí o slu¾bì více informací."
+msgstr "Stisk <F1> zobrazí dal¹í informace o slu¾bì."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
@@ -101,7 +105,7 @@ msgstr ""
 #: ../leveldb.c:255
 #, c-format
 msgid "failed to glob pattern %s\n"
-msgstr "selhalo roz¹íøení vzorku %s\n"
+msgstr "nelze roz¹íøit vzorek %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
@@ -110,4 +114,4 @@ msgstr "nelze urèit aktuální spou¹tìcí úroveò\n"
 #: ../leveldb.c:319
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "vytvoøení symbolického propojení %s selhalo: %s\n"
+msgstr "nelze vytvoøit symbolický odkaz %s: %s\n"
