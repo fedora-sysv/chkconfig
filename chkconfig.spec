@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.6
+Version: 1.2.7
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -42,6 +42,10 @@ make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d
+for n in 0 1 2 3 4 5 6; do
+    mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
+    ln -s rc.d/rc${n}.d $RPM_BUILD_ROOT/etc/rc${n}.d
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,6 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig
 /etc/init.d
 /etc/rc.d/init.d
+/etc/rc[0-6].d
+/etc/rc.d/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
@@ -62,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Wed Jul 19 2000 Bill Nottingham <notting@redhat.com>
+- put links, rc[0-6].d dirs back, those are necessary
+
 * Tue Jul 18 2000 Bill Nottingham <notting@redhat.com>
 - add quick hack support for reading descriptions from xinetd files
 
