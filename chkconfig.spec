@@ -1,12 +1,18 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.9
+%define version 0.9.1
 Version: %{version}
 Release: 1
 Copyright: GPL
 Group: Utilities/System
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
+
+%changelog
+
+* Sun Mar 22 1998 Erik Troan <ewt@redhat.com>
+
+- added --back
 
 %description
 chkconfig provides a simple command-line  tool  for  maintaining  the

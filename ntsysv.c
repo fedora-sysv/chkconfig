@@ -14,7 +14,7 @@
 
 /* return 1 on cancel, 2 on error, 0 on success */
 static int servicesWindow(struct service * services, int numServices,
-			  int levels) {
+			  int levels, int backButton) {
     newtComponent label, subform, ok, cancel;
     newtComponent * checkboxes, form, curr;
     newtComponent sb = NULL;
@@ -57,7 +57,7 @@ static int servicesWindow(struct service * services, int numServices,
     newtFormSetWidth(subform, 20);
 
     ok = newtButton(10, height + 4, "Ok");
-    cancel = newtButton(25, height + 4, "Cancel");
+    cancel = newtButton(25, height + 4, backButton ? "Back" : "Cancel");
 
     form = newtForm(NULL, NULL, 0);
 
@@ -110,7 +110,8 @@ static int serviceNameCmp(const void * a, const void * b) {
     return strcmp(first->name, second->name);
 }
 
-static int getServices(struct service ** servicesPtr, int * numServicesPtr) {
+static int getServices(struct service ** servicesPtr, int * numServicesPtr,	
+		       int backButton) {
     DIR * dir;
     struct dirent * ent;
     struct stat sb;
@@ -174,8 +175,9 @@ int main(int argc, char ** argv) {
     int levels = (1 << 3) | (1 << 4) | (1 << 5);
     char * levelsStr = NULL;
     poptContext optCon;
-    int rc;
+    int rc, backButton = 0;
     struct poptOption optionsTable[] = {
+	    { "back", '\0', 0, &backButton, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levelsStr, 0 },
 	    { 0, 0, 0, 0, 0 } 
     };
@@ -198,7 +200,7 @@ int main(int argc, char ** argv) {
 	}
     }
 
-    if (getServices(&services, &numServices)) return 1;
+    if (getServices(&services, &numServices, backButton)) return 1;
     if (!numServices) {
 	fprintf(stderr, "No services may be managed by ntsysv!\n");
 	return 2;
@@ -211,7 +213,7 @@ int main(int argc, char ** argv) {
     newtDrawRootText(0, 0, "ntsysv " VERSION " - (C) 1997 Red Hat "
 			"Software");
 
-    rc = servicesWindow(services, numServices, levels);
+    rc = servicesWindow(services, numServices, levels, backButton);
 
     newtFinished();
 

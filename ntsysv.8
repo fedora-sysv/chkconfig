@@ -3,7 +3,7 @@
 .SH NAME
 ntsysv \- simple interface for configuring runlevels
 .SH SYNOPSIS
-\fBntsysv\fR [--level <levels>]
+\fBntsysv\fR [--back] [--level <levels>]
 .SH DESCRIPTION
 \fBntsysv\fR is a simple interface for configuring runlevel services which
 are also configurable through \fBchkconfig\fR. By default, it configures
@@ -15,10 +15,13 @@ after \fB--levels\fR, without any spaces. For example, the option
 A service is considered to be started in the runlevel set if it is started
 in any of the runlevels which are being edited.
 
+The \fBntsysv\fR window normally contains a \fBCancel\fR button. If
+\fB--back\fR is specified, a \fBBack\fR button appears instead.
+
 .PD
 .SH "RETURN CODES"
 \fBntsysv\fR returns 0 on success, 2 on error, and 1 if the user cancelled
-the program.
+(or backed out of) the program.
 
 .PD
 .SH "SEE ALSO"
