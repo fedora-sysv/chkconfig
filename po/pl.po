@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
-"POT-Creation-Date: 2000-10-19 02:48-0400\n"
+"POT-Creation-Date: 2000-12-29 23:24-0500\n"
 "PO-Revision-Date: 2000-07-03 00:00+CEST\n"
 "Last-Translator: Pawe³ Niewiadomski <lilo@free.poltronic.net>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -14,80 +14,85 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:23
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr ""
+
+#: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Program mo¿e byæ swobodnie rozprowadzany na warunkach Publicznej Licencji "
 "GNU.\n"
 
-#: ../chkconfig.c:26
+#: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr "u¿ycie:  %s --list [nazwa]\n"
 
-#: ../chkconfig.c:27
+#: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <nazwa>\n"
 
-#: ../chkconfig.c:28
+#: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <nazwa>\n"
 
-#: ../chkconfig.c:29
+#: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <poziomy>] <nazwa> %s)\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:35
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "us³uga %s nie wspiera chkconfig\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:37
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "b³±d podczas czytania informacji o us³udze %s: %s\n"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
 msgstr "***"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
 msgstr "---"
 
-#: ../chkconfig.c:139
+#: ../chkconfig.c:138
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
 
-#: ../chkconfig.c:173
+#: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "b³±d poczas czytania z katalogu %s/init.d: %s"
 
-#: ../chkconfig.c:181
+#: ../chkconfig.c:180
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:183
+#: ../chkconfig.c:182
 #, fuzzy, c-format
 msgid "failed to open directory %s: %s"
 msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s wersja %s\n"
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "tylko jedna z opcji --list, --add, lub --del mo¿e byæ podana\n"
 
-#: ../chkconfig.c:340
+#: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "tylko jeden poziom pracy mo¿e byæ podany dla zapytania chkconfig\n"
 

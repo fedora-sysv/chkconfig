@@ -7,7 +7,7 @@
 # First version.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2000-10-19 02:48-0400\n"
+"POT-Creation-Date: 2000-12-29 23:24-0500\n"
 "Last-Translator: Raimo Koski <rkoski@pp.weppi.fi>\n"
 "Language-Team: Finnish <linux@sot.com>\n"
 "Content-Type: text/plain; charset=\n"
@@ -17,78 +17,83 @@ msgstr ""
 "--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
-#: ../chkconfig.c:23
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr ""
+
+#: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "T‰t‰ ohjelmaa voi levitt‰‰ vapaasti GNU Public License:n puitteissa.\n"
 
-#: ../chkconfig.c:26
+#: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr ""
 
-#: ../chkconfig.c:27
+#: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:28
+#: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:29
+#: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr ""
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:35
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "palvelu %s ei tue chkconfig:a\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:37
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "virhe luettaessa tietoja palvelulta %s: %s\n"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:139
+#: ../chkconfig.c:138
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "en voinut avata  "
 
-#: ../chkconfig.c:173
+#: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "virhe luettaessa hakemistosta %s/init.d: %s"
 
-#: ../chkconfig.c:181
+#: ../chkconfig.c:180
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:183
+#: ../chkconfig.c:182
 #, fuzzy, c-format
 msgid "failed to open directory %s: %s"
 msgstr "en voinut avata  "
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "vain yht‰ joukosta --list, --add tai --del voidaan k‰ytt‰‰\n"
 
-#: ../chkconfig.c:340
+#: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "vain yksi ajotaso voidaan m‰‰ritell‰ chkconfig:n kyselylle\n"
 

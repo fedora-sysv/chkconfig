@@ -1,9 +1,9 @@
-# $Id: ro.po,v 1.46 2000/12/11 16:57:24 i18n Exp $
+# $Id: ro.po,v 1.47 2001/01/10 21:20:14 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
-"POT-Creation-Date: 2000-10-19 02:48-0400\n"
+"POT-Creation-Date: 2000-12-29 23:24-0500\n"
 "PO-Revision-Date: 199-04-10 12:00+EST\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -11,80 +11,85 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:23
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr ""
+
+#: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Acest program poate fi distribuit gratuit sub licenþa GNU Public License.\n"
 
-#: ../chkconfig.c:26
+#: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr "apel:   %s --list [name]\n"
 
-#: ../chkconfig.c:27
+#: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <name>\n"
 
-#: ../chkconfig.c:28
+#: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:29
+#: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <levels>] <name> %s>\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:35
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "serviciul %s nu suportã chkconfig\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:37
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:139
+#: ../chkconfig.c:138
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "eroare la deschiderea %s/init.d: %s\n"
 
-#: ../chkconfig.c:173
+#: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "eroare la citirea din directorul %s/init.d: %s"
 
-#: ../chkconfig.c:181
+#: ../chkconfig.c:180
 msgid "xinetd based services:\n"
 msgstr "servicii controlate de xinetd:\n"
 
-#: ../chkconfig.c:183
+#: ../chkconfig.c:182
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "eroare la deschiderea %s: %s"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versiunea %s\n"
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "numai una dintre opþiunile --list, --add, sau --del poate fi specificatã\n"
 
-#: ../chkconfig.c:340
+#: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "nu se poate edita decît un singur runlevel la fiecare execuþie\n"
 
