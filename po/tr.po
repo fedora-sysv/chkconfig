@@ -1,18 +1,18 @@
 # Turkish translations for chkconfig messages.
 # Copyright (C) 2002 Free Software Foundation, Inc.
-# Nilgün Belma Bugüner <nilgun@fide.org>, 2002
+# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig \n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-04-04 06:37+0300\n"
-"Last-Translator: Nilgün Belma Bugüner <nilgun@fide.org>\n"
+"PO-Revision-Date: 2002-07-25 10:44+0300\n"
+"Last-Translator: Nilgün Belma Bugüner <nilgun@superonline.com>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -20,10 +20,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2002 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -46,13 +44,13 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "             %s [--level <düzeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s chkconfig'i destekliyor, ama kayıtlı değil. ('chkconfig --add %s "
-"çalıştırın')\n"
+"%s chkconfig'i destekliyor, ama bir çalışma seviyesi ile bağlantısız. "
+"('chkconfig --add %s çalıştırın')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -102,8 +100,7 @@ msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -170,3 +167,4 @@ msgstr "çalışma düzeyi belirlenemiyor\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik bağı yapılamadı: %s\n"
+
