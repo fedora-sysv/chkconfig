@@ -17,19 +17,19 @@ msgstr ""
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr "bruk:   chkconfig --list [navn]\n"
+msgstr "bruk:    chkconfig --list [navn]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr "        chkconfig --add <navn>\n"
+msgstr "         chkconfig --add <navn>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr "        chkconfig --del <navn>\n"
+msgstr "         chkconfig --del <navn>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr "        chkconfig [--level <runlevel>] <navn> <on|off|reset>\n"
+msgstr "         chkconfig [--level <runlevel>] <navn> <on|off|reset>\n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -97,7 +97,7 @@ msgstr "galt argument til --levels\n"
 
 #: ../ntsysv.c:220
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Ingen tjenester kan styres av ntsysv!\n"
+msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 
 #: ../leveldb.c:255
 #, c-format
