@@ -3,12 +3,16 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <glob.h>
+#include <libintl.h> 
+#include <locale.h> 
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+
+#define _(String) gettext((String)) 
 
 #include "leveldb.h"
 
@@ -186,7 +190,7 @@ int findServiceEntries(char * name, int level, glob_t * globresptr) {
     rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
 
     if (rc && rc != GLOB_NOMATCH) {
-	fprintf(stderr, "failed to glob pattern %s\n", match);
+	fprintf(stderr, _("failed to glob pattern %s\n"), match);
 	return 1;
     } else if (rc == GLOB_NOMATCH) {
 	globresptr->gl_pathc = 0;
@@ -216,7 +220,7 @@ int isOn(char * name, int level) {
     if (level == -1) {
 	level = currentRunlevel();
 	if (level == -1) {
-	    fprintf(stderr, "cannot determine current run level\n");
+	    fprintf(stderr, _("cannot determine current run level\n"));
 	    return 0;
 	}
     }
@@ -250,7 +254,7 @@ int doSetService(struct service s, int level, int on) {
 
     unlink(linkname);	/* just in case */
     if (symlink(linkto, linkname)) {
-	fprintf(stderr, "failed to make symlink %s: %s\n", linkname,
+	fprintf(stderr, _("failed to make symlink %s: %s\n"), linkname,
 		strerror(errno));
 	return 1;
     }

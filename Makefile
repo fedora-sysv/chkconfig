@@ -8,11 +8,18 @@ PROG=chkconfig
 BINDIR = /sbin
 USRSBINDIR = /usr/sbin
 MANDIR = /usr/man
+SUBDIRS = po
 
 OBJS=chkconfig.o leveldb.o
 NTOBJS=ntsysv.o leveldb.o
 
-all: $(PROG) ntsysv
+all: subdirs $(PROG) ntsysv
+
+subdirs:
+	for d in $(SUBDIRS); do \
+	(cd $$d; $(MAKE)) \
+	|| case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\
+	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
 	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt
@@ -43,6 +50,10 @@ install:
 	for i in $(MAN); do \
 		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
+	for d in $(SUBDIRS); do \
+	(cd $$d; $(MAKE) install) \
+	    || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\
+	done && test -z "$$fail"
 
 archive:
 	cvs tag -F $(CVSTAG) .

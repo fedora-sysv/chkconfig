@@ -2,6 +2,8 @@
 #include <dirent.h>
 #include <errno.h>
 #include <glob.h>
+#include <libintl.h> 
+#include <locale.h> 
 #include <popt.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,13 +11,15 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+#define _(String) gettext((String)) 
+
 #include "leveldb.h"
 
 static void usage(void) {
     fprintf(stderr, "chkconfig version " VERSION 
 			" - Copyright (C) 1997 Red Hat Software\n");
-    fprintf(stderr, "This may be freely redistributed under the terms of "
-			"the GNU Public License.\n");
+    fprintf(stderr, _("This may be freely redistributed under the terms of "
+			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
     fprintf(stderr, "usage:   chkconfig --list [name]\n");
     fprintf(stderr, "         chkconfig --add <name>\n");
@@ -42,9 +46,9 @@ static int delService(char * name) {
 
 static void readServiceError(int rc, char * name) {
     if (rc == 1) {
-	fprintf(stderr, "service %s does not support chkconfig\n", name);
+	fprintf(stderr, _("service %s does not support chkconfig\n"), name);
     } else {
-	fprintf(stderr, "error reading information on service %s: %s\n",
+	fprintf(stderr, _("error reading information on service %s: %s\n"),
 		name, strerror(errno));
     }
 
@@ -102,7 +106,7 @@ static int listService(char * item) {
     if (item) return showServiceInfo(item, 0);
 
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-	fprintf(stderr, "failed to open " RUNLEVELS "/init.d: %s\n",
+	fprintf(stderr, _("failed to open " RUNLEVELS "/init.d: %s\n"),
 		strerror(errno));
         return 1;
     }
@@ -123,7 +127,8 @@ static int listService(char * item) {
     }
 
     if (errno) {
-        perror("error reading from directory " RUNLEVELS "/init.d");
+	fprintf(stderr, _("error reading from directory %s/init.d: %s"), 
+		RUNLEVELS, strerror(errno));
         return 1;
     }
 
@@ -179,6 +184,10 @@ int main(int argc, char ** argv) {
 	    { 0, 0, 0, 0, 0 } 
     };
 
+    setlocale(LC_ALL, ""); 
+    bindtextdomain("chkconfig","/usr/share/locale"); 
+    textdomain("chkconfig"); 
+
     if (argc == 1) usage();
 
     optCon = poptGetContext("chkconfig", argc, argv, optionsTable, 0);
@@ -192,8 +201,8 @@ int main(int argc, char ** argv) {
     }
 
     if ((listItem + addItem + delItem) > 1) {
-	fprintf(stderr, "only one of --list, --add, or --del may be "
-		"specified\n");
+	fprintf(stderr, _("only one of --list, --add, or --del may be "
+		"specified\n"));
 	exit(1);
     }
 
@@ -239,8 +248,8 @@ int main(int argc, char ** argv) {
 		}
 
 		if (rc > 1) {
-		    fprintf(stderr, "only one runlevel may be specfied for "
-			    "a chkconfig query\n");
+		    fprintf(stderr, _("only one runlevel may be specfied for "
+			    "a chkconfig query\n"));
 		    exit(1);
 		}
 	    } 

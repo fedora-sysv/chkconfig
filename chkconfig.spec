@@ -1,6 +1,6 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.9.1
+%define version 0.9.2
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -9,6 +9,10 @@ Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.
 BuildRoot: /var/tmp/chkconfig.root
 
 %changelog
+
+* Mon Mar 23 1998 Erik Troan <ewt@redhat.com>
+
+- added i18n support
 
 * Sun Mar 22 1998 Erik Troan <ewt@redhat.com>
 

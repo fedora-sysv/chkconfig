@@ -2,6 +2,8 @@
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
+#include <libintl.h> 
+#include <locale.h> 
 #include <newt.h>
 #include <popt.h>
 #include <stdio.h>
@@ -10,34 +12,29 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+#define _(String) gettext((String)) 
+
 #include "leveldb.h"
 
 /* return 1 on cancel, 2 on error, 0 on success */
 static int servicesWindow(struct service * services, int numServices,
 			  int levels, int backButton) {
     newtComponent label, subform, ok, cancel;
-    newtComponent * checkboxes, form, curr;
+    newtComponent * checkboxes, form, curr, blank;
     newtComponent sb = NULL;
+    newtGrid grid, subgrid, buttons;
     char * states;
     int i, done = 0, update = 0, j;
-    int height = numServices > 10 ? 10 : numServices;
     struct newtExitStruct e;
 
-    newtPushHelpLine("Press <F1> for more information on a service.");
+    newtPushHelpLine(_("Press <F1> for more information on a service."));
 
-    newtCenteredWindow(50, height + 8, "Services");
-
-    label = newtLabel(1, 1, "What services should be automatically "
-			"started?");
-
-    if (numServices > 10) {
-	sb = newtVerticalScrollbar(37, 3, 10, NEWT_COLORSET_CHECKBOX,
-					NEWT_COLORSET_ACTCHECKBOX);
-    }
+    sb = newtVerticalScrollbar(-1, -1, 8, NEWT_COLORSET_CHECKBOX,
+				    NEWT_COLORSET_ACTCHECKBOX);
 
     subform = newtForm(sb, NULL, 0);
     newtFormSetBackground(subform, NEWT_COLORSET_CHECKBOX);
-    newtFormSetHeight(subform, height);
+    newtFormSetHeight(subform, 8);
 
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
@@ -48,7 +45,7 @@ static int servicesWindow(struct service * services, int numServices,
 		if (isOn(services[i].name, j)) break;
 	    }
 	}
-	checkboxes[i] = newtCheckbox(15, i + 3, services[i].name, 
+	checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
 				     (j != 7) ? '*' : ' ', NULL, 
 				     states + i);
 	newtFormAddComponent(subform, checkboxes[i]);
@@ -56,13 +53,26 @@ static int servicesWindow(struct service * services, int numServices,
 
     newtFormSetWidth(subform, 20);
 
-    ok = newtButton(10, height + 4, "Ok");
-    cancel = newtButton(25, height + 4, backButton ? "Back" : "Cancel");
+    buttons = newtButtonBar(_("Ok"), &ok, backButton ? "Back" : "Cancel",
+			    &cancel, NULL);
+
+    blank = newtForm(NULL, NULL, 0);
+    newtFormSetWidth(blank, 2);
+    newtFormSetHeight(blank, 8);
+    newtFormSetBackground(blank, NEWT_COLORSET_CHECKBOX);
+
+    subgrid = newtGridHCloseStacked(NEWT_GRID_COMPONENT, subform,
+			            NEWT_GRID_COMPONENT, blank,
+			            NEWT_GRID_COMPONENT, sb, NULL);
+
+    label = newtTextboxReflowed(-1, -1,  _("What services should be "
+				"automatically started?"), 30, 0, 20, 0);
+    grid = newtGridBasicWindow(label, subgrid, buttons);
 
     form = newtForm(NULL, NULL, 0);
-
-    /* sb may be NULL, so keep it last */
-    newtFormAddComponents(form, label, subform, ok, cancel, sb, NULL);
+    newtGridAddComponentsToForm(grid, form, 1);
+    newtGridWrappedWindow(grid, _("Services"));
+    newtGridFree(grid, 1);
 
     newtFormAddHotKey(form, NEWT_KEY_F1);
 
@@ -80,7 +90,7 @@ static int servicesWindow(struct service * services, int numServices,
 		    if (curr == checkboxes[i]) break;
 
 		if (i < numServices) 
-		    newtWinMessage(services[i].name, "Ok", services[i].desc);
+		    newtWinMessage(services[i].name, _("Ok"), services[i].desc);
 	    }
 	} else {
 	    done = 1;
@@ -155,7 +165,8 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     }
 
     if (errno) {
-        perror("error reading from directory " RUNLEVELS "/init.d");
+	fprintf(stderr, _("error reading from directory %s/init.d: %s"),
+		RUNLEVELS, strerror(errno));
         return 1;
     }
 
@@ -181,6 +192,10 @@ int main(int argc, char ** argv) {
 	    { "level", '\0', POPT_ARG_STRING, &levelsStr, 0 },
 	    { 0, 0, 0, 0, 0 } 
     };
+
+    setlocale(LC_ALL, ""); 
+    bindtextdomain("ntsysv","/usr/share/locale"); 
+    textdomain("ntsysv"); 
 
     optCon = poptGetContext("ntsysv", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
