@@ -19,8 +19,8 @@ Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Group: System Environment/Base
 
 %description -n ntsysv
-Chkconfig updates and queries runlevel information for system
-services.  Chkconfig relieves system administrators of having to
+ntsysv updates and queries runlevel information for system
+services.  ntsysv relieves system administrators of having to
 directly manipulate the numerous symbolic links in /etc/rc.d.
 
 %prep
