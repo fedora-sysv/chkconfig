@@ -1,17 +1,19 @@
+# translation of pa.po to Punjabi
 # translation of pa2.po to Punjabi
 # Copyright (C) 2004 THE chkconfig'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the chkconfig package.
 # Automatically generated, 2004
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# Amanpreet Singh Alam <aalam@redhat.cpm>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pa2\n"
+"Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-07-22 15:41+0530\n"
-"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
-"Language-Team: Punjabi <pa@li.org>\n"
+"PO-Revision-Date: 2004-08-22 17:13+0530\n"
+"Last-Translator: Amanpreet Singh Alam <aalam@redhat.cpm>\n"
+"Language-Team: Punjabi <fedora-pa-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,7 +56,7 @@ msgid ""
 "'chkconfig --add %s')\n"
 msgstr ""
 "ਸੇਵਾ %s, chkconfig ਲਈ ਸਹਿਯੋਗੀ ਹੈ, ਪਰ ਕਿਸੇ ਚਾਲੂ-ਦਰਜੇ ਵਿੱਚ ਜਿਕਰ ਨਹੀ ਕੀਤਾ (ਚਲਾਓ "
-"'chkconfig --ਜੋਡ਼ੋ %s')\n"
+"'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -102,12 +104,12 @@ msgstr "%s ਵਰਜ਼ਨ %s\n"
 #: ../chkconfig.c:412
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--ਸੂਚੀ, --ਜੋਡ਼ੋ, ਜਾਂ --ਮਿਟਾਓ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ \n"
+msgstr " --list, --add, ਜਾਂ --del ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ \n"
 
 #: ../chkconfig.c:464
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig ਪ੍ਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਚਾਲੂ-ਦਰਜਾ ਨਿਰਧਾਰਿਤ ਹੋਵੇਗਾ\n"
+msgstr "chkconfig ਪ੍ਰਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਚਾਲੂ-ਦਰਜਾ ਨਿਰਧਾਰਿਤ ਹੋਵੇਗਾ\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -127,7 +129,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "ਕਿਹਡ਼ੀਆਂ ਸੇਵਾਵਾਂ ਆਪਣੇ-ਆਪ ਸ਼ੁਰੂ ਹੋਣੀਆਂ ਚਾਹਿਦੀਆਂ ਹਨ?"
+msgstr "ਕਿਹਡ਼ੀਆਂ ਸੇਵਾਵਾਂ ਆਪਣੇ-ਆਪ ਸ਼ੁਰੂ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ?"
 
 #: ../ntsysv.c:80
 msgid "Services"
@@ -146,7 +148,7 @@ msgstr "%s ਡਾਇਰੈਕਟਰੀ ਵਿੱਚੋ ਪੜਨ ਸਮੇ ਗ�
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s ਚਲਾਉਣ ਲਈ ਤੁਸੀ ਰੂਟ(root) ਹੋਵੋ ।\n"
+msgstr "%s ਚਲਾਉਣ ਲਈ ਤੁਸੀ ਪ੍ਰਬੰਧਕ(root) ਹੋਵੋ ।\n"
 
 #: ../ntsysv.c:292
 #, c-format
@@ -156,7 +158,7 @@ msgstr "--ਦਰਜੇ ਲਈ ਗਲਤ ਆਰਗੂਮਿੰਟ\n"
 #: ../ntsysv.c:299
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv ਦੁਆਰਾ ਕੋਈ ਸੇਵਾ ਪ੍ਬੰਧਨ ਨਹੀ ਕੀਤਾ ਗਿਆ!\n"
+msgstr "ntsysv ਦੁਆਰਾ ਕੋਈ ਸੇਵਾ ਪ੍ਰਬੰਧਨ ਨਹੀ ਕੀਤਾ ਗਿਆ!\n"
 
 #: ../leveldb.c:508
 #, c-format
@@ -176,7 +178,7 @@ msgstr "symlink %s ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ਅਨੁਸਾਰੀ ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C) ੨੦੦੧ ਰੈਡ-ਹੈਟ\n"
+msgstr "ਬਦਲਵਾਂ ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C) ੨੦੦੧ Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -190,7 +192,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ਉਪਯੋਗਤਾ: ਅਨੁਸਾਰੀ  --install<ਲਿੰਕ> <ਨਾਉ> <ਰਸਤਾ> <ਤਰਜੀਹ>\n"
+msgstr "ਉਪਯੋਗਤਾ: ਬਦਲਵਾਂ  --install<ਲਿੰਕ> <ਨਾਂ> <ਰਸਤਾ> <ਤਰਜੀਹ>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -200,32 +202,32 @@ msgstr "                    [--initscript <ਸੇਵਾ>]\n"
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <ਲਿੰਕ> <ਨਾਉ> <ਰਸਤਾ>]*\n"
+msgstr "                    [--slave <ਲਿੰਕ> <ਨਾਂ> <ਰਸਤਾ>]*\n"
 
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       ਅਨੁਸਾਰੀ --remove <ਨਾਉ> <ਰਸਤਾ>\n"
+msgstr "       ਬਦਲਵਾਂ --remove <ਨਾਂ> <ਰਸਤਾ>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --auto <ਨਾਉ>\n"
+msgstr "       ਬਦਲਵਾਂ --auto <ਨਾਂ>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --config <ਨਾਉ>\n"
+msgstr "       ਬਦਲਵਾਂ --config <ਨਾਂ>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --display <ਨਾਉ>\n"
+msgstr "       ਬਦਲਵਾਂ --display <ਨਾਂ>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       ਅਨੁਸਾਰੀ --set <ਨਾਉ> <ਰਸਤਾ>\n"
+msgstr "       ਬਦਲਵਾਂ --set <ਨਾਂ> <ਰਸਤਾ>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -405,7 +407,7 @@ msgstr "ਵਰਤਮਾਨ ਵਧੀਆ ਵਰਜ਼ਨ %s ਹੈ ।\n"
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "ਇੱਥੇ %d ਪ੍ੋਗਰਾਮ ਹਨ ਜੋ '%s' ਉਪਲੱਬਧ ਕਰਦੇ ਹਨ ।\n"
+msgstr "ਇੱਥੇ %d ਪ੍ਰੋਗਰਾਮ ਹਨ ਜੋ '%s' ਉਪਲੱਬਧ ਕਰਦੇ ਹਨ ।\n"
 
 #: ../alternatives.c:665
 #, c-format
@@ -449,7 +451,7 @@ msgstr "ਤਬਦੀਲ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 #: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "ਪ੍ਬੰਧ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
+msgstr "ਪ੍ਰਬੰਧ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 
 #: ../alternatives.c:886
 #, c-format
