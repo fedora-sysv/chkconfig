@@ -193,7 +193,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ਉਪਯੋਗਤਾ: ਬਦਲਵਾਂ  --install<ਲਿੰਕ> <ਨਾਂ> <ਰਸਤਾ> <ਤਰਜੀਹ>\n"
+msgstr "ਉਪਯੋਗਤਾ: ਬਦਲਵਾਂ  --install<ਲਿੰਕ> <ਨਾਂ> <ਮਾਰਗ> <ਤਰਜੀਹ>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -203,12 +203,12 @@ msgstr "                    [--initscript <ਸੇਵਾ>]\n"
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <ਲਿੰਕ> <ਨਾਂ> <ਰਸਤਾ>]*\n"
+msgstr "                    [--slave <ਲਿੰਕ> <ਨਾਂ> <ਮਾਰਗ>]*\n"
 
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       ਬਦਲਵਾਂ --remove <ਨਾਂ> <ਰਸਤਾ>\n"
+msgstr "       ਬਦਲਵਾਂ --remove <ਨਾਂ> <ਮਾਰਗ>\n"
 
 #: ../alternatives.c:54
 #, c-format
@@ -228,7 +228,7 @@ msgstr "       ਬਦਲਵਾਂ --display <ਨਾਂ>\n"
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       ਬਦਲਵਾਂ --set <ਨਾਂ> <ਰਸਤਾ>\n"
+msgstr "       ਬਦਲਵਾਂ --set <ਨਾਂ> <ਮਾਰਗ>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -278,12 +278,12 @@ msgstr "%s ਵਿੱਚ ਗਲਤ ਮੁੱਖ ਲਿੰਕ\n"
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "ਰਸਤਾ %s, %s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਹੈ\n"
+msgstr "ਮਾਰਗ %s, %s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਹੈ\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "%s ਸਲੇਵ ਲਈ %s ਵਿੱਚ ਰਸਤਾ ਗੁੰਮ ਹੈ\n"
+msgstr "%s ਸਲੇਵ ਲਈ %s ਵਿੱਚ ਮਾਰਗ ਗੁੰਮ ਹੈ\n"
 
 #: ../alternatives.c:226
 #, c-format
@@ -293,7 +293,7 @@ msgstr "%s ਵਿੱਚ ਫਾਇਲ ਦਾ ਆਸ਼ਾਵਿਪਰੀਤ ਅ�
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "ਤਬਦੀਲ ਕਰਨ ਲਈ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
+msgstr "ਤਬਦੀਲ ਕਰਨ ਲਈ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:255
 #, c-format
@@ -303,7 +303,7 @@ msgstr "ਅੰਕਾਂ ਵਾਲੀ ਤਰਜੀਹ %s ਵਿੱਚ ਹੋਣ �
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "ਸਲੇਵ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
+msgstr "ਸਲੇਵ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:296
 #, c-format
