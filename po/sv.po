@@ -1,13 +1,13 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.26 2003/10/24 13:26:39 notting Exp $
+# $Id: sv.po,v 1.27 2003/10/24 15:45:03 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-02-02 13:13+0100\n"
+"PO-Revision-Date: 2003-10-24 17:46+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,9 +31,9 @@ msgid "usage:   %s --list [name]\n"
 msgstr "användning:   %s --list [namn]\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "              %s --del <namn>\n"
+msgstr "              %s --add <namn>\n"
 
 #: ../chkconfig.c:27
 #, c-format
@@ -87,8 +87,11 @@ msgid "xinetd based services:\n"
 msgstr "xinetd-baserade tjänster:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
+msgstr "misslyckades med att öppna katalogen %s: %s\n"
+
+msgid "failed to open directory %s: %s"
 msgstr "misslyckades med att öppna katalogen %s: %s"
 
 #: ../chkconfig.c:405
