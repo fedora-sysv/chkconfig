@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.4
+Version: 1.2.5
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -40,9 +40,11 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
 rm -rf $RPM_BUILD_ROOT
 make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
-mkdir -p $RPM_BUILD_ROOT/etc/init.d
+mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
+ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d
 for n in 0 1 2 3 4 5 6; do
-    mkdir -p $RPM_BUILD_ROOT/etc/rc${n}.d
+    mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
+    ln -s rc.d/rc${n}.d $RPM_BUILD_ROOT/etc/rc${n}.d
 done
 
 %clean
@@ -52,7 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 /sbin/chkconfig
 /etc/init.d
+/etc/rc.d/init.d
 /etc/rc[0-6].d
+/etc/rc.d/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
@@ -64,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sat Jul 15 2000 Matt Wilson <msw@redhat.com>
+- move back to old file layout
+
 * Thu Jul 13 2000 Preston Brown <pbrown@redhat.com>
 - bump copyright date
 
