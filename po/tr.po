@@ -1,39 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 1998-09-25 07:14-0400\n"
-"Content-Type: text/plain; charset=\n"
-"Date: 1998-01-14 15:42:55+0200\n"
-"From: H. Turgut Uyar <uyar@cs.itu.edu.tr>\n"
-"Xgettext-Options: --default-domain=ntsysv --add-comments --keyword=_ "
-"--keyword=N_\n"
-"Files: ../ntsysv.c\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ahmet Takci <ahmet@cs.kou.edu.tr>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
 
 #: ../chkconfig.c:21
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Bu program GNU kamu lisansý koþullarý altýnda serbestçe daþýtýlabilir.\n"
+"Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr "kullaným:   chkconfig --list [isim]\n"
+msgstr "kullaným: chkconfig --list [isim]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr "            chkconfig --add <isim>\n"
+msgstr "          chkconfig --add <isim>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr "            chkconfig --del <isim>\n"
+msgstr "         chkconfig --del <isim>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr "            chkconfig [--level <düzeyler>] <isim> <on|off|reset>\n"
+msgstr "          chkconfig [--level <düzeyler>] <isim> <on|off|reset>\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "chkconfig %s hizmetini desteklemiyor\n"
+msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
 
 #: ../chkconfig.c:51
 #, c-format
@@ -51,30 +57,30 @@ msgstr "kapalý"
 #: ../chkconfig.c:109
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "eriþim sýrasýnda hata: %s\n"
+msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d dizininden okurken hata: %s"
+msgstr "%s/init.d dizininden okurken hata: %s\n"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
-"--list, --add ya da --del seçeneklerden yalnýzca birisi belirtilebilir\n"
+msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:251
+#, fuzzy
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
-"chkconfig sorgulamasý için yalnýzca tek bir çalýþma düzeyi belirtilebilir\n"
+"chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Bir hizmet hakkýnda daha fazla bilgi almak için <F1> tuþuna basýn."
+msgstr "Hizmet hakkýnda daha fazla bilgi almak için <F1> tuþuna basýn."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr "Peki"
+msgstr "Tamam"
 
 #: ../ntsysv.c:56
 msgid "Back"
@@ -82,7 +88,7 @@ msgstr "Geri"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr "Vazgeç"
+msgstr "Ýptal"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
@@ -94,28 +100,30 @@ msgstr "Hizmetler"
 
 #: ../ntsysv.c:213
 msgid "bad argument to --levels\n"
-msgstr "--levels için kötü argüman\n"
+msgstr "--levels için hatalý argüman\n"
 
 #: ../ntsysv.c:220
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsyvs ile yönetilebilecek hizmet yok!\n"
+msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 
 #: ../leveldb.c:255
-#, c-format
+#, fuzzy, c-format
 msgid "failed to glob pattern %s\n"
-msgstr "glob pattern hatasý %s\n"
+msgstr "glob pattern %s hatasý: %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
-msgstr "çalýþma düzeyi belirlenemiyor\n"
+msgstr "Çalýþma düzeyi belirlenemiyor\n"
 
 #: ../leveldb.c:319
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s sembolik baðlantýsý yaratýlamadý: %s\n"
+msgstr "%s sembolik link baðlantýsý yapýlamadý : %s\n"
 
-#~ msgid "error reading info for service %s: %s\n"
-#~ msgstr "%s hizmetinin bilgileri okunamýyor: %s\n"
+msgid "error reading info for service %s: %s\n"
+msgstr "%s hizmeti hakkýnda bilgi alýrken hata : %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "%s/init.d dizininden okuma yapýlamýyor: %s\n"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr ""
+"%s/init.d dizininden okurken hata: %s\n"
+" "
