@@ -1,12 +1,12 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.1
+Version: 1.2.2
 Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Conflicts: initscripts < 5.18
+Prereq: /etc/init.d
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -51,8 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
-%dir /etc/init.d
-%dir /etc/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
@@ -64,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Thu Jul  6 2000 Bill Nottingham <notting@redhat.com>
+- prereq /etc/init.d
+
 * Mon Jul  3 2000 Bill Nottingham <notting@redhat.com>
 - oops, if we don't prereq initscripts, we *need* to own /etc/rc[0-6].d
 
