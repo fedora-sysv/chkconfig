@@ -65,7 +65,7 @@ msgstr "невозможно открыть %s/init.d: %s\n"
 #: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "ошибка чтения из директории %s/init.d: %s"
+msgstr "ошибка чтения из каталога %s/init.d: %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
@@ -132,7 +132,7 @@ msgstr "ошибка чтения из директории %s: %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Для выполнения %s необходимы права root.\n"
 
 #: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
