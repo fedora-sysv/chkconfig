@@ -5,6 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.0 \n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: 1999-04-10 12:00 +0100 \n"
 "Last-Translator: Jeff Garner <jgarner@alpnet.com> \n"
 "Language-Team: German <de@li.org> \n"
@@ -12,61 +13,72 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1 \n"
 "Content-Transfer-Encoding: 8-bit \n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "Verwendung:   chkconfig --list [Name]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "         chkconfig --add <Name>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "         chkconfig --del <Name>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         chkconfig [--level <Ebenen>] <Name> <Ein|Aus|Reset>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "Dienst %s unterstützt chkconfig nicht\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "Fehler beim Lesen von Angaben zu Dienst %s: %s\n"
 
-#: ../chkconfig.c:97
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "Ein"
 
-#: ../chkconfig.c:97
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "Aus"
 
-#: ../chkconfig.c:114
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
 
-#: ../chkconfig.c:137
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
 
-#: ../chkconfig.c:211
-msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "Es darf jeweils nur einer der Parameter --list, --add oder --del angegeben werden\n"
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
 
-#: ../chkconfig.c:258
+#: ../chkconfig.c:238
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr ""
+"Es darf jeweils nur einer der Parameter --list, --add oder --del angegeben "
+"werden\n"
+
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "Bei einer chkconfig-Abfrage darf nur ein Runlevel angegeben werden\n"
 
@@ -104,25 +116,24 @@ msgstr "Fehler beim Lesen von Informationen zu Dienst %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
-#: ../ntsysv.c:218
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr "Ungültiges Argument bei --levels\n"
 
-#: ../ntsysv.c:225
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Von ntsysv können keine Dienste verwaltet werden!\n"
 
-#: ../leveldb.c:256
+#: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Fehler beim Mustervergleich von Muster %s: %s\n"
 
-#: ../leveldb.c:287
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "Aktueller Runlevel kann nicht ermittelt werden\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Fehler beim Herstellen der symbolischen Verknüpfung %s: %s\n"
-

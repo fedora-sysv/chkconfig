@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 1999-04-08 14:17-0400\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: 1999-04-09 10:00+0500\n"
 "Last-Translator: Alex Lobas <soft@cw.comizdat.com>\n"
 "Language-Team: Comizdat <soft@cw.comizdat.com>\n"
@@ -14,61 +14,70 @@ msgstr ""
 "Content-Type: text/plain; charset=koi8-u\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Програму можна в╕льно розповсюджувати в межах л╕ценз╕╖ GNU Public License.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "використання:   chkconfig --list [служба]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "         chkconfig --add <служба>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "         chkconfig --del <служба>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         chkconfig [--level <р╕вн╕>] <служба> <on|off|reset>\n"
 
-#: ../chkconfig.c:34
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "служба %s не п╕дтриму╓ chkconfig\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "помилка читання ╕нформац╕╖ у служб╕ %s: %s\n"
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:115
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "неможливо в╕дкрити %s/init.d: %s\n"
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "помилка читання з каталогу %s/init.d: %s"
 
-#: ../chkconfig.c:212
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "можна вказати лише один аргумент з --list, --add або --del\n"
 
-#: ../chkconfig.c:259
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "можна вказувати т╕льки один показник р╕вня для запиту chkconfig\n"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9.4\n"
-"POT-Creation-Date: 1998-09-27 19:20+0200\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: 1999-09-07 20:52+02:00\n"
 "Last-Translator: Stanislav Meduna <stano@eunet.sk>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -9,61 +9,70 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Program mô¾e by» voµne ¹írený za podmienok urèených GNU Public License.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "pou¾itie:   chkconfig --list [názov]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "            chkconfig --add <názov>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "            chkconfig --del <názov>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "            chkconfig [--level <úrovne>] <názov> <on|off|reset>\n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "slu¾ba %s nepodporuje chkconfig\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pri èítaní informácií o slu¾be %s: %s\n"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "zapnuté"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "vypnuté"
 
-#: ../chkconfig.c:109
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nepodarilo sa otvori» %s/init.d: %s\n"
 
-#: ../chkconfig.c:130
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "chyba pri èítaní z adresára %s/init.d: %s"
 
-#: ../chkconfig.c:204
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "mô¾e by» zadaná iba jedna z volieb --list, --add alebo --del\n"
 
-#: ../chkconfig.c:251
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "pre chkconfig otázku mô¾e by» zadaná iba jedna úroveò\n"
 
@@ -91,34 +100,34 @@ msgstr "Ktoré slu¾by majú by» automaticky spú¹»ané?"
 msgid "Services"
 msgstr "Slu¾by"
 
-#: ../ntsysv.c:163
+#: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pri èítaní informácií o slu¾be %s: %s\n"
 
-#: ../ntsysv.c:172
+#: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "chyba pri èítaní z adresára %s/init.d: %s\n"
 
-#: ../ntsysv.c:217
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr "chybný argument pre --levels\n"
 
-#: ../ntsysv.c:224
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr "®iadne slu¾by nemô¾u by» spravované ntsysv!\n"
 
-#: ../leveldb.c:255
-#, c-format
-msgid "failed to glob pattern %s\n"
+#: ../leveldb.c:265
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
 msgstr "nepodarilo sa nájs» zhodu so vzorom %s\n"
 
-#: ../leveldb.c:285
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "nie je mo¾né zisti» aktuálnu úroveò\n"
 
-#: ../leveldb.c:319
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nepodarilo sa vytvori» symbolický odkaz %s: %s\n"

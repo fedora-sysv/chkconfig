@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "Content-Type: text/plain; charset=\n"
 "Date: 1998-03-23 18:26:20-0500\n"
 "From: Erik Troan <ewt@mercury.redhat.com>\n"
@@ -8,61 +8,70 @@ msgstr ""
 "--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU javne licence.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
-
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
-msgstr ""
-
 #: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr ""
 
 #: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#, c-format
+msgid "         %s --add <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:29
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr ""
+
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "servis %s ne podr¾ava 'chkconfig'\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "gre¹ka kod èitanja informacija o servisu %s: %s\n"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:109
+#: ../chkconfig.c:117
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "neuspelo otvaranje "
 
-#: ../chkconfig.c:130 ../ntsysv.c:168
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "gre¹ka èitanja iz direktorijuma %s/init.d: %s"
 
-#: ../chkconfig.c:204
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "mo¾ete navesti samo --list, --add ili --del\n"
 
-#: ../chkconfig.c:251
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "samo jedan nivo izvr¹avanja (runlevel) mo¾e biti naveden u upitu\n"
 
@@ -90,24 +99,34 @@ msgstr "Koji servise treba automatski startovati?"
 msgid "Services"
 msgstr "Servisi"
 
-#: ../ntsysv.c:213
+#: ../ntsysv.c:164
+#, fuzzy, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "gre¹ka kod èitanja informacija o servisu %s: %s\n"
+
+#: ../ntsysv.c:173
+#, fuzzy, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "gre¹ka èitanja iz direktorijuma %s/init.d: %s"
+
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:220
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:255
-#, c-format
-msgid "failed to glob pattern %s\n"
+#: ../leveldb.c:265
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
 msgstr "neuspelo ? obrasca %s\n"
 
-#: ../leveldb.c:285
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "ne mogu da odredim tekuæi nivo izvr¹avanja\n"
 
-#: ../leveldb.c:319
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "kreiranje simbolièke veze %s nije uspelo: %s\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.0\n"
-"POT-Creation-Date: 1999-04-08 14:17-0400\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: 1999-09-08 02:25+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -14,60 +14,69 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "notkun:   chkconfig --list [nafn]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "         chkconfig --add <nafn>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "         chkconfig --del <nafn>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         chkconfig [--level <stig>] <nafn> <on|off|reset>\n"
 
-#: ../chkconfig.c:34
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "þjónusta %s styður ekki chkconfig\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "á"
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "af"
 
-#: ../chkconfig.c:115
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gat ekki opnað %s/init.d: %s\n"
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "villa við lestur úr möppu %s/init.d: %s"
 
-#: ../chkconfig.c:212
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "einungis má nefna eitt af --list, --add eða --del viðföngunum\n"
 
-#: ../chkconfig.c:259
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 

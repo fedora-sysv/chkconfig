@@ -5,43 +5,81 @@
 #
 # 1998-05-17 
 # First version.
-
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-05-17\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "Last-Translator: Raimo Koski <rkoski@pp.weppi.fi>\n"
 "Language-Team: Finnish <linux@sot.com>\n"
+"Content-Type: text/plain; charset=\n"
 "Date: 1998-03-23 18:26:20-0500\n"
 "From: Erik Troan <ewt@mercury.redhat.com>\n"
-"Content-Type: text/plain; charset=\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
-#: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+#: ../chkconfig.c:23
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "T‰t‰ ohjelmaa voi levitt‰‰ vapaasti GNU Public License:n puitteissa.\n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:26
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:29
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr ""
+
+#: ../chkconfig.c:36
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "palvelu %s ei tue chkconfig:a\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "virhe luettaessa tietoja palvelulta %s: %s\n"
 
-#: ../chkconfig.c:109
-msgid "failed to open "
+#: ../chkconfig.c:100
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:100
+msgid "off"
+msgstr ""
+
+#: ../chkconfig.c:117
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "en voinut avata  "
 
-#: ../chkconfig.c:130 ../ntsysv.c:168
+#: ../chkconfig.c:151
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "virhe luettaessa hakemistosta %s/init.d: %s"
 
-#: ../chkconfig.c:204
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "vain yht‰ joukosta --list, --add tai --del voidaan k‰ytt‰‰\n"
 
-#: ../chkconfig.c:251
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "vain yksi ajotaso voidaan m‰‰ritell‰ chkconfig:n kyselylle\n"
 
@@ -53,6 +91,14 @@ msgstr "Paina <F1> saadaksesi lis‰‰ tietoja palvelusta."
 msgid "Ok"
 msgstr "Ok"
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr ""
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr ""
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Mitk‰ palvelut haluat k‰ynnistett‰v‰n automaattisesti?"
@@ -61,14 +107,34 @@ msgstr "Mitk‰ palvelut haluat k‰ynnistett‰v‰n automaattisesti?"
 msgid "Services"
 msgstr "Palvelut"
 
-#: ../leveldb.c:193
-msgid "failed to glob pattern %s\n"
+#: ../ntsysv.c:164
+#, fuzzy, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "virhe luettaessa tietoja palvelulta %s: %s\n"
+
+#: ../ntsysv.c:173
+#, fuzzy, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "virhe luettaessa hakemistosta %s/init.d: %s"
+
+#: ../ntsysv.c:219
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:226
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:265
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
 msgstr "failed to glob pattern %s\n"
 
-#: ../leveldb.c:223
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "en voi m‰‰ritell‰ nykyist‰ ajotasoa\n"
 
-#: ../leveldb.c:257
+#: ../leveldb.c:330
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "en voinut luoda symbolista linkki‰ %s: %s\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-02-18 21:59-0500\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Elmer Joandi <elmer@ylenurme.ee>\n"
 "Language-Team: Estonian <linux-ee@eenet.ee>\n"
@@ -14,60 +14,69 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Seda wärki võib vabalt jagada GNU litsentsi piires\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "kasutus: chkconfig --list [nimi]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "\tchkconfig --add <nimi>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr " \tchkconfig --del <nimi>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "\tchkconfig [--level <tase>] <nimi> <on|off|reset>\n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "teenus %s ei toeta chkconfig'i\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "viga %s teenuse kohase info lugemisel: %s \n"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "ja"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "ei"
 
-#: ../chkconfig.c:110
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "ei õnnestunud avata %s/init.d: %s\n"
 
-#: ../chkconfig.c:133
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "miski viga kataloogi %s/init.d lugemisel: %s"
 
-#: ../chkconfig.c:207
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "ainult üks, kas  --list, --add, või --del võib olla korraga\n"
 
-#: ../chkconfig.c:254
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "ainult üht runlevel'it võib pärida korraga \n"
 
@@ -105,24 +114,24 @@ msgstr "viga teenuse %s info lugemisel : %s \n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "viga kataloogi %s/init.d lugemisel: %s \n"
 
-#: ../ntsysv.c:218
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr "paha parameeter --levels võtmele\n"
 
-#: ../ntsysv.c:225
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ei ühtki teenust mida ntsysv võiks opereerida!\n"
 
-#: ../leveldb.c:256
+#: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ei õnnestunud glob'ida?? pätternit ?? %s: %s \n"
 
-#: ../leveldb.c:287
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "Ei saa aru mis runlevelil me oleme\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ei saa tehtud sümlinki  %s: %s\n"

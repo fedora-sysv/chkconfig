@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"POT-Creation-Date: 1999-08-23 15:59-0400\n"
 "PO-Revision-Date: 1999-04-04 02:44+0200\n"
 "Last-Translator: Ahmet Takçý <ahmet@cs.kou.edu.tr>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -9,61 +9,70 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-9\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "kullaným: chkconfig --list [isim]\n"
 
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "          chkconfig --add <isim>\n"
 
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "         chkconfig --del <isim>\n"
 
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "          chkconfig [--level <düzeyler>] <isim> <on|off|reset>\n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata: %s\n"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "açýk"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "kapalý"
 
-#: ../chkconfig.c:109
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
 
-#: ../chkconfig.c:130 ../ntsysv.c:168
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d dizininden okurken hata: %s"
 
-#: ../chkconfig.c:204
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:251
+#: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 "chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
@@ -92,30 +101,34 @@ msgstr "Hangi hizmetler otomatik olarak çalýþtýrýlsýn?"
 msgid "Services"
 msgstr "Hizmetler"
 
-#: ../ntsysv.c:213
-msgid "bad argument to --levels\n"
-msgstr "--levels için hatalý argüman\n"
-
-#: ../ntsysv.c:220
-msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
-
-#: ../leveldb.c:255
+#: ../ntsysv.c:164
 #, c-format
-msgid "failed to glob pattern %s\n"
-msgstr "glob pattern %s hatasý: %s\n"
-
-#: ../leveldb.c:285
-msgid "cannot determine current run level\n"
-msgstr "çalýþma düzeyi belirlenemiyor\n"
-
-#: ../leveldb.c:319
-#, c-format
-msgid "failed to make symlink %s: %s\n"
-msgstr "%s sembolik baðlantýsý yapýlamadý : %s\n"
-
 msgid "error reading info for service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata : %s\n"
 
+#: ../ntsysv.c:173
+#, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d dizininden okurken hata: %s\n"
+
+#: ../ntsysv.c:219
+msgid "bad argument to --levels\n"
+msgstr "--levels için hatalý argüman\n"
+
+#: ../ntsysv.c:226
+msgid "No services may be managed by ntsysv!\n"
+msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
+
+#: ../leveldb.c:265
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "glob pattern %s hatasý: %s\n"
+
+#: ../leveldb.c:296
+msgid "cannot determine current run level\n"
+msgstr "çalýþma düzeyi belirlenemiyor\n"
+
+#: ../leveldb.c:330
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "%s sembolik baðlantýsý yapýlamadý : %s\n"
