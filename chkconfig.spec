@@ -11,17 +11,19 @@ BuildRoot: /var/tmp/chkconfig.root
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
-symbolic links in /etc/rc.d, so system administrators don't have to
-manually edit the symbolic links as often.
+symbolic links in /etc/rc.d, to relieve system administrators of some 
+of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
-Summary: A system tool for maintaining the /etc/rc.d hierarchy.
+Summary: A tool to set the stop/start of system services in a runlevel.
 Group: System Environment/Base
 
 %description -n ntsysv
-ntsysv updates and queries runlevel information for system
-services.  ntsysv relieves system administrators of having to
-directly manipulate the numerous symbolic links in /etc/rc.d.
+Ntsysv provides a simple interface for setting which system services
+are started or stopped in various runlevels (instead of directly
+manipulating the numerous symbolic links in /etc/rc.d). Unless you
+specify a runlevel or runlevels on the command line (see the man
+page), ntsysv configures the current runlevel (5 if you're using X).
 
 %prep
 %setup -q
