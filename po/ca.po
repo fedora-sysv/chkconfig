@@ -2,15 +2,15 @@
 # Copyright (C) 2004 Free Software Foundation
 # This file is distributed under the same license as the chkconfig package.
 # Jordi Barnés <jordi2@t-email.co.uk>, 2004.
-# Josep Puigdemont <baldrick@terra.es>, 2004.
+# Josep Puigdemont <josep@imatge-sintetica.com>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-06-11 02:35+0200\n"
-"Last-Translator: Josep Puigdemont <baldrick@terra.es>\n"
+"PO-Revision-Date: 2005-02-14 12:11+0100\n"
+"Last-Translator: Josep Puigdemont <josep@imatge-sintetica.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "ús:   %s --list [nom]\n"
+msgstr "forma d'ús:   %s --list [nom]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -55,18 +55,18 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"El servei %s és compatible amb el chkconfig, però no està referenciat en cap "
+"el servei %s és compatible amb el chkconfig, però no està referenciat en cap "
 "nivell d'execució (executeu 'chkconfig –add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "El servei %s no és compatible amb el chkconfig\n"
+msgstr "el servei %s no és compatible amb el chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "S'ha produït un error en llegir la informació del servei %s: %s\n"
+msgstr "s'ha produït un error en llegir la informació del servei %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
@@ -110,7 +110,7 @@ msgstr "només es pot especificar una opció --list, --add, o --del\n"
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"només es pot especificar un nivell d'execució per a una pregunta chkconfig\n"
+"només es pot especificar un nivell d'execució per a una consulta chkconfig\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -149,12 +149,12 @@ msgstr "Heu de ser el superusuari per executar %s.\n"
 #: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "l'argument a --levels no és vàlid\n"
+msgstr "l'argument de --levels no és vàlid\n"
 
 #: ../ntsysv.c:300
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "No hi ha cap servei que pugui ser gestionat per ntsysv\n"
+msgstr "No hi ha cap servei que ntsysv pugui gestionar.\n"
 
 #: ../leveldb.c:517
 #, c-format
@@ -169,7 +169,7 @@ msgstr "no es pot determinar l'actual nivell d'execució\n"
 #: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "no s'ha pogut fer un enllaç simbòlic %s: %s\n"
+msgstr "no s'ha pogut fer l'enllaç simbòlic %s: %s\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -188,7 +188,7 @@ msgstr ""
 #: ../alternatives.c:51
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ús: alternatives --install <enllaç> <nom> <camí> <prioriat>\n"
+msgstr "forma d'ús: alternatives --install <enllaç> <nom> <camí> <prioriat>\n"
 
 #: ../alternatives.c:52
 #, c-format
@@ -401,9 +401,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "La 'millor' versió actual és %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Hi ha %d programes que proveeixen '%s'.\n"
+msgstr "Hi ha %d programa que proveeix '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
