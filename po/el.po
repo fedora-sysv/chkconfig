@@ -1,50 +1,51 @@
 # Greek translation of chkconf.
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2004 Free Software Foundation, Inc.
 # Simos Xenitellis <simos@hellug.gr>, 2002.
-# 
+# Nikos Charonitakis <charosn@her.forthnet.gr>, 2004.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconf 1.0\n"
+"Project-Id-Version: el\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2002-03-29 11:19+0000\n"
-"Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
-"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"PO-Revision-Date: 2004-08-05 20:32+0300\n"
+"Last-Translator: Nikos Charonitakis <charosn@her.forthnet.gr>\n"
+"Language-Team:  <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-7\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s έκδοση %s - Πνευματικά Δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s Ξ­ΞΊΞ΄ΞΏΟƒΞ· %s - Ξ Ξ½ΞµΟ…ΞΌΞ±Ο„ΞΉΞΊΞ¬ Ξ”ΞΉΞΊΞ±ΞΉΟΞΌΞ±Ο„Ξ± (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Μπορείτε να το επαναδιανείμετε σύμφωνα με τους όρους της Δημόσιας ¶δειας "
+"ΞΟ€ΞΏΟΞµΞ―Ο„Ξµ Ξ½Ξ± Ο„ΞΏ ΞµΟ€Ξ±Ξ½Ξ±Ξ΄ΞΉΞ±Ξ½ΞµΞ―ΞΌΞµΟ„Ξµ ΟƒΟΞΌΟ†Ο‰Ξ½Ξ± ΞΌΞµ Ο„ΞΏΟ…Ο‚ ΟΟΞΏΟ…Ο‚ Ο„Ξ·Ο‚ Ξ”Ξ·ΞΌΟΟƒΞΉΞ±Ο‚ Ξ†Ξ΄ΞµΞΉΞ±Ο‚ "
 "GNU.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "χρήση:   %s --list [όνομα]\n"
+msgstr "Ο‡ΟΞ®ΟƒΞ·:   %s --list [ΟΞ½ΞΏΞΌΞ±]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <όνομα>\n"
+msgstr "         %s --add <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <όνομα>\n"
+msgstr "         %s --del <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <επίπεδα>] <όνομα> %s)\n"
+msgstr "         %s [--level <ΞµΟ€Ξ―Ο€ΞµΞ΄Ξ±>] <ΟΞ½ΞΏΞΌΞ±> %s)\n"
 
 #: ../chkconfig.c:35
 #, fuzzy, c-format
@@ -52,135 +53,135 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί (εκτελέστε "
+"Ξ· Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ± %s Ο…Ο€ΞΏΟƒΟ„Ξ·ΟΞ―Ξ¶ΞµΞΉ Ο„ΞΏ chkconfig Ξ±Ξ»Ξ»Ξ¬ Ξ΄ΞµΞ½ Ξ­Ο‡ΞµΞΉ ΞΊΞ±Ο„Ξ±Ο‡Ο‰ΟΞ·ΞΈΞµΞ― (ΞµΞΊΟ„ΞµΞ»Ξ­ΟƒΟ„Ξµ "
 "'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "η υπηρεσία %s δεν υποστηρίζει το chkconfig\n"
+msgstr "Ξ· Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ± %s Ξ΄ΞµΞ½ Ο…Ο€ΞΏΟƒΟ„Ξ·ΟΞ―Ξ¶ΞµΞΉ Ο„ΞΏ chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "σφάλμα ανάγνωσης πληροφοριών επί της υπηρεσίας %s: %s\n"
+msgstr "ΟƒΟ†Ξ¬Ξ»ΞΌΞ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ο€Ξ»Ξ·ΟΞΏΟ†ΞΏΟΞΉΟΞ½ ΞµΟ€Ξ― Ο„Ξ·Ο‚ Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ±Ο‚ %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½ΞΏΞ―Ξ³ΞΌΞ±Ο„ΞΏΟ‚ Ο„ΞΏΟ… %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "ενεργό"
+msgstr "ΞµΞ½ΞµΟΞ³Ο"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "ανενεργό"
+msgstr "Ξ±Ξ½ΞµΞ½ΞµΟΞ³Ο"
 
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
+msgstr "ΟƒΟ†Ξ¬Ξ»ΞΌΞ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ξ±Ο€Ο Ο„ΞΏΞ½ ΞΊΞ±Ο„Ξ¬Ξ»ΞΏΞ³ΞΏ %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "υπηρεσίες βασισμένες στο xinetd:\n"
+msgstr "Ο…Ο€Ξ·ΟΞµΟƒΞ―ΞµΟ‚ Ξ²Ξ±ΟƒΞΉΟƒΞΌΞ­Ξ½ΞµΟ‚ ΟƒΟ„ΞΏ xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½ΞΏΞ―Ξ³ΞΌΞ±Ο„ΞΏΟ‚ Ο„ΞΏΟ… ΞΊΞ±Ο„Ξ±Ξ»ΟΞ³ΞΏΟ… %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s έκδοση %s\n"
+msgstr "%s Ξ­ΞΊΞ΄ΞΏΟƒΞ· %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "μπορούν να καθοριστούς μόνο ένα από τα --list, --add ή --del\n"
+msgstr "ΞΌΟ€ΞΏΟΞΏΟΞ½ Ξ½Ξ± ΞΊΞ±ΞΈΞΏΟΞΉΟƒΟ„ΞΏΟΟ‚ ΞΌΟΞ½ΞΏ Ξ­Ξ½Ξ± Ξ±Ο€Ο Ο„Ξ± --list, --add Ξ® --del\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"μόνο ένα επίπεδο εκτέλεσης μπορεί να καθοριστεί σε \n"
-"κάθε χρήση του chkconfig\n"
+"ΞΌΟΞ½ΞΏ Ξ­Ξ½Ξ± ΞµΟ€Ξ―Ο€ΞµΞ΄ΞΏ ΞµΞΊΟ„Ξ­Ξ»ΞµΟƒΞ·Ο‚ ΞΌΟ€ΞΏΟΞµΞ― Ξ½Ξ± ΞΊΞ±ΞΈΞΏΟΞΉΟƒΟ„ΞµΞ― ΟƒΞµ \n"
+"ΞΊΞ¬ΞΈΞµ Ο‡ΟΞ®ΟƒΞ· Ο„ΞΏΟ… chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Πατήστε <F1> για περισσότερες πληροφορίες για μια υπηρεσία."
+msgstr "Ξ Ξ±Ο„Ξ®ΟƒΟ„Ξµ <F1> Ξ³ΞΉΞ± Ο€ΞµΟΞΉΟƒΟƒΟΟ„ΞµΟΞµΟ‚ Ο€Ξ»Ξ·ΟΞΏΟ†ΞΏΟΞ―ΞµΟ‚ Ξ³ΞΉΞ± ΞΌΞΉΞ± Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ±."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr "Εντάξει"
+msgstr "Ξ•Ξ½Ο„Ξ¬ΞΎΞµΞΉ"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Πίσω"
+msgstr "Ξ Ξ―ΟƒΟ‰"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Ακύρωση"
+msgstr "Ξ‘ΞΊΟΟΟ‰ΟƒΞ·"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Ποιές υπηρεσίες θέλετε να εκκινούνται αυτόματα;"
+msgstr "Ξ ΞΏΞΉΞ­Ο‚ Ο…Ο€Ξ·ΟΞµΟƒΞ―ΞµΟ‚ ΞΈΞ­Ξ»ΞµΟ„Ξµ Ξ½Ξ± ΞµΞΊΞΊΞΉΞ½ΞΏΟΞ½Ο„Ξ±ΞΉ Ξ±Ο…Ο„ΟΞΌΞ±Ο„Ξ±;"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Υπηρεσίες"
+msgstr "Ξ¥Ο€Ξ·ΟΞµΟƒΞ―ΞµΟ‚"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
+msgstr "ΟƒΟ†Ξ¬Ξ»ΞΌΞ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ο€Ξ»Ξ·ΟΞΏΟ†ΞΏΟΞΉΟΞ½ Ξ³ΞΉΞ± Ο„Ξ·Ξ½ Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ± %s: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s: %s\n"
+msgstr "ΟƒΟ†Ξ¬Ξ»ΞΌΞ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ξ±Ο€Ο Ο„ΞΏΞ½ ΞΊΞ±Ο„Ξ¬Ξ»ΞΏΞ³ΞΏ %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Πρέπει να είστε διαχειριστής (root) για να εκτελέσετε το %s.\n"
+msgstr "Ξ ΟΞ­Ο€ΞµΞΉ Ξ½Ξ± ΞµΞ―ΟƒΟ„Ξµ Ξ΄ΞΉΞ±Ο‡ΞµΞΉΟΞΉΟƒΟ„Ξ®Ο‚ (root) Ξ³ΞΉΞ± Ξ½Ξ± ΞµΞΊΟ„ΞµΞ»Ξ­ΟƒΞµΟ„Ξµ Ο„ΞΏ %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "εσφαλμένο όρισμα στο --levels\n"
+msgstr "ΞµΟƒΟ†Ξ±Ξ»ΞΌΞ­Ξ½ΞΏ ΟΟΞΉΟƒΞΌΞ± ΟƒΟ„ΞΏ --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Δεν υπάρχουν υπηρεσίες που μπορεί να διαχειριστεί το ntsysv!\n"
+msgstr "Ξ”ΞµΞ½ Ο…Ο€Ξ¬ΟΟ‡ΞΏΟ…Ξ½ Ο…Ο€Ξ·ΟΞµΟƒΞ―ΞµΟ‚ Ο€ΞΏΟ… ΞΌΟ€ΞΏΟΞµΞ― Ξ½Ξ± Ξ΄ΞΉΞ±Ο‡ΞµΞΉΟΞΉΟƒΟ„ΞµΞ― Ο„ΞΏ ntsysv!\n"
 
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "αποτυχία ανάπτυξης σχεδίου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½Ξ¬Ο€Ο„Ο…ΞΎΞ·Ο‚ ΟƒΟ‡ΞµΞ΄Ξ―ΞΏΟ… %s: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
+msgstr "Ξ±Ξ΄ΟΞ½Ξ±Ο„ΞΏΟ‚ ΞΏ ΞΊΞ±ΞΈΞΏΟΞΉΟƒΞΌΟΟ‚ Ο„ΞΏΟ… Ο„ΟΞ­Ο‡ΞΏΞ½Ο„ΞΏΟ‚ ΞµΟ€ΞΉΟ€Ξ­Ξ΄ΞΏΟ… ΞµΞΊΟ„Ξ­Ξ»ΞµΟƒΞ·Ο‚\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ΄Ξ·ΞΌΞΉΞΏΟ…ΟΞ³Ξ―Ξ±Ο‚ ΟƒΟ…ΞΌΞ²ΞΏΞ»ΞΉΞΊΞΏΟ ΟƒΟ…Ξ½Ξ΄Ξ­ΟƒΞΌΞΏΟ… %s: %s\n"
 
 #: ../alternatives.c:48
 #, fuzzy, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s έκδοση %s - Πνευματικά Δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s Ξ­ΞΊΞ΄ΞΏΟƒΞ· %s - Ξ Ξ½ΞµΟ…ΞΌΞ±Ο„ΞΉΞΊΞ¬ Ξ”ΞΉΞΊΞ±ΞΉΟΞΌΞ±Ο„Ξ± (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Μπορείτε να το επαναδιανείμετε σύμφωνα με τους όρους της Δημόσιας ¶δειας "
-"GNU.\n"
+"ΞΟ€ΞΏΟΞµΞ―Ο„Ξµ Ξ½Ξ± Ο„ΞΏ ΞµΟ€Ξ±Ξ½Ξ±Ξ΄ΞΉΞ±Ξ½ΞµΞ―ΞΌΞµΟ„Ξµ ΟƒΟΞΌΟ†Ο‰Ξ½Ξ± ΞΌΞµ Ο„ΞΏΟ…Ο‚ ΟΟΞΏΟ…Ο‚ Ο„Ξ·Ο‚ Ξ”Ξ·ΞΌΟΟƒΞΉΞ±Ο‚ Ξ†Ξ΄ΞµΞΉΞ±Ο‚ "
+"GNU Public Licence.\n"
+"\n"
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
@@ -193,7 +194,7 @@ msgstr ""
 #: ../alternatives.c:52
 #, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <επίπεδα>] <όνομα> %s)\n"
+msgstr "         %s [--level <ΞµΟ€Ξ―Ο€ΞµΞ΄Ξ±>] <ΟΞ½ΞΏΞΌΞ±> %s)\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --remove <name> <path>\n"
@@ -202,26 +203,26 @@ msgstr ""
 #: ../alternatives.c:54
 #, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <όνομα>\n"
+msgstr "         %s --add <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../alternatives.c:55
 #, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <όνομα>\n"
+msgstr "         %s --add <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../alternatives.c:56
 #, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <όνομα>\n"
+msgstr "         %s --del <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../alternatives.c:57
 #, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <όνομα>\n"
+msgstr "         %s --del <ΟΞ½ΞΏΞΌΞ±>\n"
 
 #: ../alternatives.c:58
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:59
 msgid "common options: --verbose --test --help --usage --version\n"
@@ -237,14 +238,14 @@ msgid "reading %s\n"
 msgstr ""
 
 #: ../alternatives.c:161
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½ΞΏΞ―Ξ³ΞΌΞ±Ο„ΞΏΟ‚ Ο„ΞΏΟ… %s: %s\n"
 
 #: ../alternatives.c:170
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ο„ΞΏΟ… %s: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
@@ -299,7 +300,7 @@ msgstr ""
 #: ../alternatives.c:304
 #, fuzzy, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½ΞΏΞ―Ξ³ΞΌΞ±Ο„ΞΏΟ‚ Ο„ΞΏΟ… %s/init.d: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -315,9 +316,9 @@ msgid "would remove %s\n"
 msgstr ""
 
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ΄ΞΉΞ±Ξ³ΟΞ±Ο†Ξ®Ο‚ ΟƒΟ…ΞΌΞ²ΞΏΞ»ΞΉΞΊΞΏΟ ΟƒΟ…Ξ½Ξ΄Ξ­ΟƒΞΌΞΏΟ… %s: %s\n"
 
 #: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
@@ -325,29 +326,29 @@ msgid "would link %s -> %s\n"
 msgstr ""
 
 #: ../alternatives.c:368 ../alternatives.c:385
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ΄Ξ·ΞΌΞΉΞΏΟ…ΟΞ³Ξ―Ξ±Ο‚ ΟƒΟ…ΞΌΞ²ΞΏΞ»ΞΉΞΊΞΏΟ ΟƒΟ…Ξ½Ξ΄Ξ­ΟƒΞΌΞΏΟ… %s -> %s: %s\n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "Ο„ΞΏ %s Ο…Ο€Ξ¬ΟΟ‡ΞµΞΉ Ξ®Ξ΄Ξ·\n"
 
 #: ../alternatives.c:419
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "αποτυχία ανάπτυξης σχεδίου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ΄Ξ·ΞΌΞΉΞΏΟ…ΟΞ³Ξ―Ξ±Ο‚ %s: %s\n"
 
 #: ../alternatives.c:450
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ±Ξ½Ο„ΞΉΞΊΞ±Ο„Ξ¬ΟƒΟ„Ξ±ΟƒΞ·Ο‚ %s ΞΌΞµ %s: %s\n"
 
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "ΞµΞΊΟ„ΞµΞ»ΞµΞ―Ο„Ξ±ΞΉ %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -377,7 +378,7 @@ msgstr ""
 #: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - Ο€ΟΞΏΟ„ΞµΟΞ±ΞΉΟΟ„Ξ·Ο„Ξ± %d\n"
 
 #: ../alternatives.c:628
 #, c-format
@@ -407,7 +408,7 @@ msgstr ""
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
+msgstr "ΟƒΟ†Ξ¬Ξ»ΞΌΞ± Ξ±Ξ½Ξ¬Ξ³Ξ½Ο‰ΟƒΞ·Ο‚ Ο€Ξ»Ξ·ΟΞΏΟ†ΞΏΟΞΉΟΞ½ Ξ³ΞΉΞ± Ο„Ξ·Ξ½ Ο…Ο€Ξ·ΟΞµΟƒΞ―Ξ± %s: %s\n"
 
 #: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
@@ -420,9 +421,9 @@ msgid "(would remove %s\n"
 msgstr ""
 
 #: ../alternatives.c:748
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "Ξ±Ο€ΞΏΟ„Ο…Ο‡Ξ―Ξ± Ξ΄ΞΉΞ±Ξ³ΟΞ±Ο†Ξ®Ο‚ Ο„ΞΏΟ… %s: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
@@ -437,7 +438,5 @@ msgstr ""
 #: ../alternatives.c:886
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
-msgstr "%s έκδοση %s\n"
+msgstr "%s Ξ­ΞΊΞ΄ΞΏΟƒΞ· %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s"
