@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-02 16:44-0500\n"
+"POT-Creation-Date: 2005-02-02 17:03-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,45 +64,45 @@ msgstr ""
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98 ../chkconfig.c:267
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:322
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:287
+#: ../chkconfig.c:324
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:403
+#: ../chkconfig.c:455
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:410
+#: ../chkconfig.c:462
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:514
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""

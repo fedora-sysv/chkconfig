@@ -81,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 - error out on invalid start/stop values (#109858)
 - some man page updates
 - fix return code of chkconfig for xinetd services (#63123)
+- sort chkconfig --list display (#61576, <shishz@alum.rpi.edu>)
 
 * Tue Jan 11 2005 Bill Nottingham <notting@redhat.com> 1.3.13-1
 - fix LSB comment parsing some more (#144739)

@@ -233,17 +233,36 @@ static int isXinetdEnabled() {
 	}
 	return 0;
 }
-	
+
+static int serviceNameCmp(const void * a, const void * b) {
+  return strcmp(* (char **)a, * (char **)b);
+}
+
+static int xinetdNameCmp(const void * a, const void * b) {
+    const struct service * first = a;
+    const struct service * second = b;
+
+    return strcmp(first->name, second->name);
+}
+
+
 
 static int listService(char * item) {
     DIR * dir;
     struct dirent * ent;
     struct stat sb;
     char fn[1024];
+    char **services;
+    int i;
+    int numServices = 0;
+    int numServicesAlloced;
     int err = 0;
 
     if (item) return showServiceInfo(item, 0);
 
+    numServicesAlloced = 10;
+    services = malloc(sizeof(*services) * numServicesAlloced);
+    
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 	fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 		strerror(errno));
@@ -273,24 +292,45 @@ static int listService(char * item) {
 	}
 	if (!S_ISREG(sb.st_mode)) continue;
 
-	if (showServiceInfo(ent->d_name, 1)) {
-	    closedir(dir);
-	    return 1;
-	}
+	if (numServices == numServicesAlloced) {
+	    numServicesAlloced += 10;
+	    services = realloc(services, numServicesAlloced * sizeof(*services));
+        }
+
+	services[numServices] = alloca(strlen(ent->d_name) + 1);
+	strncpy(services[numServices++], ent->d_name, strlen(ent->d_name) + 1);
     }
 
+    qsort(services, numServices, sizeof(*services), serviceNameCmp);
+	
+    for (i = 0; i < numServices ; i++) {
+	    if (showServiceInfo(services[i], 1)) {
+		    free(services);
+		    closedir(dir);
+		    return 1;
+	    }
+    }
+		    
+    free(services);
+	
     closedir(dir);
 	
     if (isXinetdEnabled()) {
+	    struct service *s, *t;
+	  
+	    printf("\n");
 	    printf(_("xinetd based services:\n"));
 	    if (!(dir = opendir(XINETDDIR))) {
 		    fprintf(stderr, _("failed to open directory %s: %s\n"),
 			    XINETDDIR, strerror(err));
 		    return 1;
 	    }
+	    numServices = 0;
+	    numServicesAlloced = 10;
+	    s = malloc(sizeof (*s) * numServicesAlloced);
+	    
 	    while ((ent = readdir(dir))) {
 		    const char *dn;
-		    struct service s;
 
 		    /* Skip any file starting with a . */
 		    if (ent->d_name[0] == '.')	continue;
@@ -304,11 +344,23 @@ static int listService(char * item) {
 		    if (*dn == '~' || *dn == ',')
 		      continue;
 	    
-		    if (readXinetdServiceInfo(ent->d_name, &s, 0) == 0){
-		       printf("\t%s:\t%s\n", s.name, s.levels ? _("on") : _("off"));
+		    if (numServices == numServicesAlloced) {
+			    numServicesAlloced += 10;
+			    s = realloc(s, numServicesAlloced * sizeof (*s));
 		    }
+		    readXinetdServiceInfo(ent->d_name, s + numServices, 0);
+		    numServices ++;
+	    }
+	    
+	    qsort(s, numServices, sizeof(*s), xinetdNameCmp);
+	    t = s;
+	    for (i = 0; i < numServices; i++, s++) {
+		    char *tmp = malloc(strlen(s->name) + 5);
+		    sprintf(tmp,"%s:",s->name);
+		    printf("\t%-15s\t%s\n", tmp,  s->levels ? _("on") : _("off"));
 	    }
 	    closedir(dir);
+	    free(t);
     }
     return 0;
 }
