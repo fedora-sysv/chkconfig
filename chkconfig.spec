@@ -41,6 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755, root, root) /usr/sbin/ntsysv
 %attr(0644, root, root) /usr/man/man8/chkconfig.8
 %attr(0644, root, root) /usr/man/man8/ntsysv.8
-%attr(0755, root, root) /etc/rc.d
-%attr(0755, root, root) /etc/rc.d/*
-
+%dir %attr(0755, root, root) /etc/rc.d
+%dir %attr(0755, root, root) /etc/rc.d/*
