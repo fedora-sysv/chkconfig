@@ -7,7 +7,7 @@
 # First version.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2000-08-15 15:39-0400\n"
+"POT-Creation-Date: 2000-10-19 02:48-0400\n"
 "Last-Translator: Raimo Koski <rkoski@pp.weppi.fi>\n"
 "Language-Team: Finnish <linux@sot.com>\n"
 "Content-Type: text/plain; charset=\n"

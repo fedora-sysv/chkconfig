@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.6\n"
-"POT-Creation-Date: 2000-08-15 15:39-0400\n"
+"POT-Creation-Date: 2000-10-19 02:48-0400\n"
 "PO-Revision-Date: 1999-09-13 21:42+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarang.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
