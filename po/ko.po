@@ -1,17 +1,18 @@
 #
-# 번 역 자: 류종훈(redhat4u@netian.com) 
-# 홈페이지: http://my.netian.com/~redhat4u 
-# 
+# 번 역 자: 류종훈(redhat4u@netian.com)
+# 홈페이지: http://my.netian.com/~redhat4u
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-06-12 11:42-0400\n"
-"PO-Revision-Date: 2001-10-14 00:58+0900\n"
-"Last-Translator: Jong-Hoon Ryu <redhat4u@netian.com>\n"
-"Language-Team: GNU Translation project <ko@li.org>\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-03-20 15:45GMT+10.00\n"
+"Last-Translator: Michelle Kim <mkim@brisbane.redhat.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-KR\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=euc-kr\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -19,10 +20,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s %s                       Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -46,56 +45,65 @@ msgstr "          %s [--level <레벨>] <이름> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
+msgstr ""
+"서비스 %s 는 chkconfig를 지원하지만 등록되지 않았습니다 ( 'chkconfig --add %"
+"s' 실행)\n"
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s 서비스는 chkconfig 를 지원하지 않습니다\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다: %s\n"
 
-##
-## 이곳을 '켜짐' 과 '꺼짐'으로 번역하면, 
-## 한글의 시각적 특성상 보기에 좀 헷갈립니다.
-## '끔' 과 '켬' 도 마찬가지 입니다.  :-)
-##
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "활성"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "해제"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d 를 여는데 실패했습니다: %s\n"
 
-#: ../chkconfig.c:172
+# #
+# # 이곳을 '켜짐' 과 '꺼짐'으로 번역하면,
+# # 한글의 시각적 특성상 보기에 좀 헷갈립니다.
+# # '끔' 과 '켬' 도 마찬가지 입니다.  :-)
+# #
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "활성"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "해제"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd 기반의 서비스:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "%s 디렉토리를 여는데 실패했습니다: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, --del 의 옵션 중 하나만 지정하셔야 합니다\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 질의시에는 하나의 실행 레벨만 지정하셔야 합니다\n"
 
@@ -123,44 +131,45 @@ msgstr "어떤 서비스를 자동으로 시작하도록 하시겠습니까?"
 msgid "Services"
 msgstr "서비스"
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생했습니다: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s는 root 계정으로 실행해야 합니다.\n"
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "--levels 옵션에 잘못된 인수값이 주어졌습니다\n"
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 명령에 의해 관리될 서비스가 없습니다!\n"
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s 심볼릭 링크 파일을 생성하는데 실패했습니다: %s\n"
+
