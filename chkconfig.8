@@ -88,7 +88,9 @@ is specified, information in only display about service \fIname\fR.
 Each service which should be manageable by \fBchkconfig\fR needs two
 or more commented lines added to its init.d script. The first line
 tells \fBchkconfig\fR what runlevels the service should be started in
-by default, as well as the start and stop priority levels. The second
+by default, as well as the start and stop priority levels. If the service
+should not, by default, be started in any runlevels, a \fB\-\fR should be
+used in place of the runlevels list.  The second
 line contains a description for the service, and may be extended across
 multiple lines with backslash continuation.
 

@@ -87,7 +87,10 @@ int readServiceInfo(char * name, struct service * service) {
 		return 1;
 	    }
 
-	    serv.levels = parseLevels(levelbuf, 0);
+	    if (!strcmp(levelbuf, "-"))
+		serv.levels = 0;
+	    else
+		serv.levels = parseLevels(levelbuf, 0);
 	    if (serv.levels == -1) {
 		if (serv.desc) free(serv.desc);
 		munmap(bufstart, sb.st_size);
