@@ -1,38 +1,44 @@
+# Chkconfig messages for Red Hat Linux.
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Zoltan Èala <zolika@sezampro.yu>, 1999.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: chkconfig 1.1\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"Content-Type: text/plain; charset=\n"
-"Date: 1998-03-23 18:26:20-0500\n"
-"From: Erik Troan <ewt@mercury.redhat.com>\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
-"--keyword=N_\n"
-"Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
+"PO-Revision-Date: 1999-09-09 10:00-0500\n"
+"Last-Translator: Zoltan Èala <zolika@sezampro.yu>\n"
+"Language-Team: Serbian <sr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU javne licence.\n"
+"Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU Op¹te javne "
+"licence.\n"
 
 #: ../chkconfig.c:26
-#, c-format
+#, fuzzy, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "kori¹æenje:  chkconfig --list [ime]\n"
 
 #: ../chkconfig.c:27
-#, c-format
+#, fuzzy, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         chkconfig --add <ime>\n"
 
 #: ../chkconfig.c:28
-#, c-format
+#, fuzzy, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         chkconfig --del <ime>\n"
 
 #: ../chkconfig.c:29
-#, c-format
+#, fuzzy, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "         chkconfig [--level <nivoi>] <ime> <on|off|reset>\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -46,16 +52,16 @@ msgstr "gre¹ka kod èitanja informacija o servisu %s: %s\n"
 
 #: ../chkconfig.c:100
 msgid "on"
-msgstr ""
+msgstr "ukljuèeno"
 
 #: ../chkconfig.c:100
 msgid "off"
-msgstr ""
+msgstr "iskljuèeno"
 
 #: ../chkconfig.c:117
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "neuspelo otvaranje "
+msgstr "neuspelo otvaranje %s/init.d: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
@@ -85,15 +91,15 @@ msgstr "U redu"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Natrag"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Obustavi"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Koji servise treba automatski startovati?"
+msgstr "Koji servise treba automatski pokrenuti?"
 
 #: ../ntsysv.c:74
 msgid "Services"
@@ -111,16 +117,16 @@ msgstr "gre¹ka èitanja iz direktorijuma %s/init.d: %s"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "lo¹ argument za --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Nijednim servisom ne mo¾e da upravlja ntsysv!\n"
 
 #: ../leveldb.c:265
 #, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "neuspelo ? obrasca %s\n"
+msgstr "neuspelo poklapanje obrasca %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
