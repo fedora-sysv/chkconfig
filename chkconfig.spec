@@ -20,6 +20,7 @@ directly manipulating the  numerous symbolic links in that directory.
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
+rm -rf $RPM_BUILD_ROOT
 make instroot=$RPM_BUILD_ROOT install
 
 %clean
