@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.49 2001/02/14 19:12:56 pbrown Exp $
+# $Id: ro.po,v 1.50 2002/04/15 21:32:56 gafton Exp $
 #
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s versiunea %s - Copyright (C) 1997-2002 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
@@ -135,7 +135,7 @@ msgstr "eroare la citirea din directorul %s: %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Trebuie sã rulaþi programul %s ca root.\n"
 
 #: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
