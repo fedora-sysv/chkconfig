@@ -334,6 +334,11 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		return 1;
 	    }
 	    if (!serv.isLSB) {
+		    if (spri > 99 || kpri > 99 || kpri < 0 || spri < 0) {
+			    if (serv.desc) free(serv.desc);
+			    free(bufstart);
+			    return 1;
+		    }
 		    serv.sPriority = spri;
 		    serv.kPriority = kpri;
 	    }
