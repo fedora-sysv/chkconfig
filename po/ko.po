@@ -69,7 +69,7 @@ msgstr "%s/init.d 디렉토리를 읽는 중 오류: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s 버젼 %s\bn"
+msgstr "%s 버젼 %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
