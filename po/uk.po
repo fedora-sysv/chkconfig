@@ -2,11 +2,11 @@
 # Copyright (C) Free Software Foundation
 # Dmytro Koval'ov <kov@tokyo.email.ne.jp>
 # Maxim Dzumanenko <mvd@mylinux.com.ua>, 2003
-
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 2003-07-15 23:43-0400\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-19 16:51-0400\n"
 "PO-Revision-Date: 2003-11-08 17:56+0200\n"
 "Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -20,10 +20,10 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s версія %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
+msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -83,6 +83,7 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "помилка читання з каталогу %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
+#, c-format
 msgid "xinetd based services:\n"
 msgstr "служби, що базуються на xinetd:\n"
 
@@ -97,10 +98,12 @@ msgid "%s version %s\n"
 msgstr "%s версія %s\n"
 
 #: ../chkconfig.c:412
+#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "можна вказувати лише один аргумент з --list, --add або --del\n"
 
 #: ../chkconfig.c:464
+#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "можна вказувати лише один рівень виконання для запиту chkconfig\n"
 
@@ -144,10 +147,12 @@ msgid "You must be root to run %s.\n"
 msgstr "Для виконання %s необхідні повноваження root.\n"
 
 #: ../ntsysv.c:292
+#, c-format
 msgid "bad argument to --levels\n"
 msgstr "неправильний аргумент в --levels\n"
 
 #: ../ntsysv.c:299
+#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Немає служб, які керуються ntsysv!\n"
 
@@ -157,6 +162,7 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "неможливо визначити шаблон %s: %s\n"
 
 #: ../leveldb.c:539
+#, c-format
 msgid "cannot determine current run level\n"
 msgstr "неможливо визначити поточний рівень виконання\n"
 
@@ -165,219 +171,252 @@ msgstr "неможливо визначити поточний рівень ви
 msgid "failed to make symlink %s: %s\n"
 msgstr "неможливо створити символічне посилання %s: %s\n"
 
-#: ../alternatives.c:46
+#: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives версія %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:47
+#: ../alternatives.c:49
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr ""
-"Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
+msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
 
-#: ../alternatives.c:48
+#: ../alternatives.c:50
+#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "використання: alternatives --install <посилання> <ім'я> <шлях> <пріоритет>\n"
+msgstr ""
+"використання: alternatives --install <посилання> <ім'я> <шлях> <пріоритет>\n"
 
-#: ../alternatives.c:49
+#: ../alternatives.c:51
+#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <служба>]\n"
 
-#: ../alternatives.c:50
+#: ../alternatives.c:52
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <посилання> <ім'я> <шлях>]*\n"
 
-#: ../alternatives.c:51
+#: ../alternatives.c:53
+#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <ім'я> <шлях>\n"
 
-#: ../alternatives.c:52
+#: ../alternatives.c:54
+#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <ім'я>\n"
 
-#: ../alternatives.c:53
+#: ../alternatives.c:55
+#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <ім'я>\n"
 
-#: ../alternatives.c:54
+#: ../alternatives.c:56
+#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <ім'я>\n"
 
-#: ../alternatives.c:55
+#: ../alternatives.c:57
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <ім'я> <шлях>\n"
 
-#: ../alternatives.c:56
+#: ../alternatives.c:58
+#, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:57
+#: ../alternatives.c:59
+#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "загальні параметри: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:60
+#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <каталог>\n"
 
-#: ../alternatives.c:159
+#: ../alternatives.c:157
+#, c-format
+msgid "reading %s\n"
+msgstr ""
+
+#: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "неможливо відкрити %s: %s\n"
 
-#: ../alternatives.c:168
+#: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "неможливо прочитати %s: %s\n"
 
-#: ../alternatives.c:177
+#: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s порожній!\n"
 
-#: ../alternatives.c:186
+#: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "неправильний режим у рядку 1 %s\n"
 
-#: ../alternatives.c:193
+#: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "неправильне основне посилання %s\n"
 
-#: ../alternatives.c:205
+#: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "неочікуваний шлях %s у %s\n"
 
-#: ../alternatives.c:214
+#: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "відсутній шлях до slave %s у %s\n"
 
-#: ../alternatives.c:224
+#: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "неочікуваний кінець файла у %s\n"
 
-#: ../alternatives.c:233
+#: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "шлях до альтернативи очікується у %s\n"
 
-#: ../alternatives.c:253
+#: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s повинен бути числовим пріоритетом\n"
 
-#: ../alternatives.c:275
+#: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "у %s очікувався шлях до slave\n"
 
-#: ../alternatives.c:294
+#: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "неочікуваний рядок у %s: %s\n"
 
-#: ../alternatives.c:316
-msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "посилання вказує на безальтернативний елемент - встановлюється ручний режим\n"
+#: ../alternatives.c:304
+#, fuzzy, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "неможливо прочитати %s: %s\n"
 
-#: ../alternatives.c:321
+#: ../alternatives.c:318
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr ""
+"посилання вказує на безальтернативний елемент - встановлюється ручний режим\n"
+
+#: ../alternatives.c:323
+#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "посилання змінено -- встановлюється ручний режим\n"
 
-#: ../alternatives.c:337 ../alternatives.c:344
+#: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
 msgstr "буде видалено %s\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
+#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "неможливо видалити посилання %s: %s\n"
 
-#: ../alternatives.c:362 ../alternatives.c:374
+#: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "буде створено посилання %s -> %s\n"
 
-#: ../alternatives.c:366 ../alternatives.c:383
+#: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "неможливо створити посилання %s -> %s: %s\n"
 
-#: ../alternatives.c:415
+#: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s вже існує\n"
 
-#: ../alternatives.c:417
+#: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "неможливо створити %s: %s\n"
 
-#: ../alternatives.c:448
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "неможливо замінити %s на %s: %s\n"
 
-#: ../alternatives.c:510
+#: ../alternatives.c:476 ../alternatives.c:485
+#, c-format
+msgid "running %s\n"
+msgstr ""
+
+#: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "основним посиланням на %s має бути %s\n"
 
-#: ../alternatives.c:574
+#: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "посилання %s неправильне для %s (%s %s)\n"
 
-#: ../alternatives.c:616
+#: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - стан \"авто\".\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - стан \"вручну\".\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:622
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " посилання наразі вказує на %s\n"
 
-#: ../alternatives.c:623
+#: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - пріоритет %d\n"
 
-#: ../alternatives.c:626
+#: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slave %s: %s\n"
 
-#: ../alternatives.c:631
+#: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Поточна \"найкраща\" версія - %s.\n"
 
-#: ../alternatives.c:661
+#: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Є %d програм, які забезпечують '%s'.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:665
+#, c-format
 msgid "  Selection    Command\n"
 msgstr "   Вибір    Команда\n"
 
-#: ../alternatives.c:672
+#: ../alternatives.c:674
+#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter - зберегти поточний вибір[+], або вкажіть номер: "
 
-#: ../alternatives.c:675
+#: ../alternatives.c:677
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
@@ -385,32 +424,32 @@ msgstr ""
 "\n"
 "помилка читання вибору\n"
 
-#: ../alternatives.c:702 ../alternatives.c:728
+#: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s не було налаштовано як альтернативу для %s\n"
 
-#: ../alternatives.c:744
+#: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
 msgstr "( буде видалено %s\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "неможливо видалити %s: %s\n"
 
-#: ../alternatives.c:864
+#: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "каталог altdir %s неправильний\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "каталог admindir %s неправильний\n"
 
-#: ../alternatives.c:880
+#: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives версія %s\n"

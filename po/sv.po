@@ -1,12 +1,13 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.28 2004/03/11 06:37:11 sarahs Exp $
+# $Id: sv.po,v 1.29 2004/05/19 20:51:29 notting Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-07-15 23:43-0400\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-19 16:51-0400\n"
 "PO-Revision-Date: 2003-10-24 17:46+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -20,6 +21,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -83,6 +85,7 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
+#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-baserade tjänster:\n"
 
@@ -97,10 +100,12 @@ msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
 #: ../chkconfig.c:412
+#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "endast en av --list, --add eller --del kan anges\n"
 
 #: ../chkconfig.c:464
+#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
@@ -144,10 +149,12 @@ msgid "You must be root to run %s.\n"
 msgstr "Du måste vara root för att kunna köra %s.\n"
 
 #: ../ntsysv.c:292
+#, c-format
 msgid "bad argument to --levels\n"
 msgstr "felaktigt argument till --levels\n"
 
 #: ../ntsysv.c:299
+#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
@@ -157,6 +164,7 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
 #: ../leveldb.c:539
+#, c-format
 msgid "cannot determine current run level\n"
 msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
@@ -165,12 +173,13 @@ msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
 
-#: ../alternatives.c:46
+#: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives version %s - Copyright © 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:47
+#: ../alternatives.c:49
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -178,210 +187,241 @@ msgstr ""
 "Detta kan distribueras fritt under villkoren i GNU Public License.\n"
 "\n"
 
-#: ../alternatives.c:48
+#: ../alternatives.c:50
+#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 "användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
 
-#: ../alternatives.c:49
+#: ../alternatives.c:51
+#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                         [--initscript <tjänst>]\n"
 
-#: ../alternatives.c:50
+#: ../alternatives.c:52
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                         [--slave <länk> <namn> <sökväg>]*\n"
 
 # Ska vara vänsterjusterat i förhållande till "usage: "/"användning: " ovan
-#: ../alternatives.c:51
+#: ../alternatives.c:53
+#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "            alternatives --remove <namn> <sökväg>\n"
 
-#: ../alternatives.c:52
+#: ../alternatives.c:54
+#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "            alternatives --auto <namn>\n"
 
-#: ../alternatives.c:53
+#: ../alternatives.c:55
+#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "            alternatives --config <namn>\n"
 
-#: ../alternatives.c:54
+#: ../alternatives.c:56
+#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "            alternatives --display <namn>\n"
 
-#: ../alternatives.c:55
+#: ../alternatives.c:57
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "            alternatives --set <namn> <sökväg>\n"
 
-#: ../alternatives.c:56
+#: ../alternatives.c:58
+#, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:57
+#: ../alternatives.c:59
+#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "gemensamma flaggor: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:60
+#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                    --altdir <katalog> --admindir <katalog>\n"
 
-#: ../alternatives.c:159
+#: ../alternatives.c:157
+#, c-format
+msgid "reading %s\n"
+msgstr ""
+
+#: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "misslyckades med att öppna %s: %s\n"
 
-#: ../alternatives.c:168
+#: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "misslyckades med att läsa %s: %s\n"
 
-#: ../alternatives.c:177
+#: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s är tom!\n"
 
-#: ../alternatives.c:186
+#: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "felaktigt läge på rad 1 i %s\n"
 
-#: ../alternatives.c:193
+#: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "felaktig primär länk i %s\n"
 
-#: ../alternatives.c:205
+#: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "sökvägen %s oväntad i %s\n"
 
-#: ../alternatives.c:214
+#: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "sökväg saknas för slaven %s i %s\n"
 
-#: ../alternatives.c:224
+#: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "oväntat filslut i %s\n"
 
-#: ../alternatives.c:233
+#: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "sökväg till alternativ förväntades i %s\n"
 
-#: ../alternatives.c:253
+#: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "numerisk prioritet förväntades i %s\n"
 
-#: ../alternatives.c:275
+#: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "slavsökväg förväntades i %s\n"
 
-#: ../alternatives.c:294
+#: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "oväntad rad i %s: %s\n"
 
-#: ../alternatives.c:316
+#: ../alternatives.c:304
+#, fuzzy, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "misslyckades med att läsa %s: %s\n"
+
+#: ../alternatives.c:318
+#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "länken pekar inte till något alternativ -- ställer in läge till manuellt\n"
 
-#: ../alternatives.c:321
+#: ../alternatives.c:323
+#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "länken ändrad -- ställer in läge till manuellt\n"
 
-#: ../alternatives.c:337 ../alternatives.c:344
+#: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
 msgstr "skulle ta bort %s\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
+#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "misslyckades med att ta bort länken %s: %s\n"
 
-#: ../alternatives.c:362 ../alternatives.c:374
+#: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "skulle länka %s -> %s\n"
 
-#: ../alternatives.c:366 ../alternatives.c:383
+#: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "misslyckades med att länka %s -> %s: %s\n"
 
-#: ../alternatives.c:415
+#: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s finns redan\n"
 
-#: ../alternatives.c:417
+#: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "misslyckades med att skapa %s: %s\n"
 
-#: ../alternatives.c:448
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "misslyckades med att ersätta %s med %s: %s\n"
 
-#: ../alternatives.c:510
+#: ../alternatives.c:476 ../alternatives.c:485
+#, c-format
+msgid "running %s\n"
+msgstr ""
+
+#: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "primära länken för %s måste vara %s\n"
 
-#: ../alternatives.c:574
+#: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "länken %s är felaktig för slaven %s (%s %s)\n"
 
-#: ../alternatives.c:616
+#: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - statusen är automatisk.\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - statusen är manuell.\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:622
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " länk pekar för tillfället på %s\n"
 
-#: ../alternatives.c:623
+#: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - prioritet %d\n"
 
-#: ../alternatives.c:626
+#: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slav %s: %s\n"
 
-#: ../alternatives.c:631
+#: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Den för tillfället \"bästa\" versionen är %s.\n"
 
-#: ../alternatives.c:661
+#: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Det finns %d program som tillhandahåller \"%s\".\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:665
+#, c-format
 msgid "  Selection    Command\n"
 msgstr "  Val          Kommando\n"
 
-#: ../alternatives.c:672
+#: ../alternatives.c:674
+#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Retur för att behålla det aktuella valet[+], eller ange valnummer: "
 
-#: ../alternatives.c:675
+#: ../alternatives.c:677
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
@@ -389,32 +429,32 @@ msgstr ""
 "\n"
 "fel vid läsning av val\n"
 
-#: ../alternatives.c:702 ../alternatives.c:728
+#: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s har inte konfigurerats som ett alternativ för %s\n"
 
-#: ../alternatives.c:744
+#: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(skulle ta bort %s\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "misslyckades med att ta bort %s: %s\n"
 
-#: ../alternatives.c:864
+#: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "alternativa katalogen %s är ogiltig\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "administrationskatalogen %s är ogiltig\n"
 
-#: ../alternatives.c:880
+#: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives version %s\n"

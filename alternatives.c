@@ -1,6 +1,8 @@
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <locale.h>
+#include <libintl.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -14,7 +16,7 @@
 #define FL_TEST(flags)	    ((flags) & FLAGS_TEST)
 #define FL_VERBOSE(flags)   ((flags) & FLAGS_VERBOSE)
 
-#define _(foo) (foo)
+#define _(foo) gettext(foo)
 
 struct linkSet {
     char * title;			/* print */
@@ -152,7 +154,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
     sprintf(path, "%s/%s", stateDir, title);
 
     if (FL_VERBOSE(flags))
-	printf("reading %s\n", path);
+	printf(_("reading %s\n"), path);
 
     if ((fd = open(path, O_RDONLY)) < 0) {
 	if (errno == ENOENT) return 3;
@@ -299,7 +301,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
     sprintf(path, "%s/%s", altDir, set->alts[0].master.title);
 
     if (((i = readlink(path, linkBuf, sizeof(linkBuf) - 1)) < 0)) {
-	fprintf(stderr, "failed to read link %s: %s\n", 
+	fprintf(stderr, _("failed to read link %s: %s\n"),
 		set->alts[0].master.facility, strerror(errno));
 	return 2;
     }
@@ -471,7 +473,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 		    path = alloca(strlen("/sbin/chkconfig --add ") + strlen(alt->initscript) + 1);
 		    sprintf(path, "/sbin/chkconfig --add %s", alt->initscript);
 		    if (FL_VERBOSE(flags))
-			    printf("running %s\n", path);
+			    printf(_("running %s\n"), path);
 		    system(path);
 	    }
 	    for (i = 0; i < set->numAlts ; i++) {
@@ -480,7 +482,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 			    path = alloca(strlen("/sbin/chkconfig --del ") + strlen(tmpalt->initscript) + 1);
 			    sprintf(path, "/sbin/chkconfig --del %s", tmpalt->initscript);
 			    if (FL_VERBOSE(flags))
-				    printf("running %s\n", path);
+				    printf(_("running %s\n"), path);
 			    system(path);
 		    }
 	    }
@@ -786,6 +788,10 @@ int main(int argc, const char ** argv) {
     char * altDir = "/etc/alternatives";
     char * stateDir = "/var/lib/alternatives";
     struct stat sb;
+
+    setlocale(LC_ALL, ""); 
+    bindtextdomain("chkconfig","/usr/share/locale"); 
+    textdomain("chkconfig"); 
 
     if (!argv[1])
 	return usage(2);
