@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.35 1999/04/13 00:55:19 gafton Exp $
+# $Id: ro.po,v 1.36 1999/04/13 01:02:52 gafton Exp $
 #
 msgid ""
 msgstr ""
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "apel:   chkconfig --list [name]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "         chkconfig --add <name>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "         chkconfig --del <name>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 
 #: ../chkconfig.c:34
 #, c-format
@@ -45,16 +45,15 @@ msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
-msgstr ""
+msgstr "on"
 
 #: ../chkconfig.c:98
 msgid "off"
-msgstr ""
+msgstr "off"
 
 #: ../chkconfig.c:115
-#, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "eroare la deschidere"
+msgstr "eroare la deschiderea %s/init.d: %s\n"
 
 #: ../chkconfig.c:138
 #, c-format
@@ -76,7 +75,7 @@ msgstr "<F1> pentru extra informaþii despre un serviciu."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
@@ -95,27 +94,24 @@ msgid "Services"
 msgstr "Servicii"
 
 #: ../ntsysv.c:164
-#, fuzzy, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
 
 #: ../ntsysv.c:173
-#, fuzzy, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "eroare la citirea din directorul %s/init.d: %s"
+msgstr "eroare la citirea din directorul %s/init.d: %s\n"
 
 #: ../ntsysv.c:218
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "argument invalid pentru --levels\n"
 
 #: ../ntsysv.c:225
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Nu s-a gãsit nici un serviciu care poate fi operat de cãtre ntsysv!\n"
 
 #: ../leveldb.c:256
-#, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "eroare modificare %s\n"
+msgstr "eroare la identificarea soluþiilor patternului %s: %s\n"
 
 #: ../leveldb.c:287
 msgid "cannot determine current run level\n"
