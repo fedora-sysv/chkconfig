@@ -30,13 +30,13 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Verwendung:   %s --Liste [Name]\n"
+msgstr "Verwendung:   %s --list [Name]\n"
 
 # ../chkconfig.c:27
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --hinzufügen <Name>\n"
+msgstr "         %s --add <Name>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:27
@@ -48,7 +48,7 @@ msgstr "         %s --del <Name>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <Level>] <Name> %s)\n"
+msgstr "         %s [--level <Levels>] <Name> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -56,20 +56,20 @@ msgid ""
 "service %s supports chkconfig, but is not registered (run 'chkconfig --add "
 "%s')\n"
 msgstr ""
-"Service %s unterstützt chkconfig, ist aber nicht registriert ('chkconfig "
-"ausführen --%s' hinzufügen)\n"
+"Dienst %s unterstützt chkconfig, ist aber nicht registriert (Führen Sie 'chkconfig "
+"--add %s' um ihn zu registrieren)\n"
 
 # ../chkconfig.c:36
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "Service %s unterstützt chkconfig nicht\n"
+msgstr "Dienst %s unterstützt chkconfig nicht\n"
 
 # ../chkconfig.c:38
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "Fehler beim Lesen der Informationen über den Service %s: %s\n"
+msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
 
 # ../chkconfig.c:117
 #: ../chkconfig.c:98 ../chkconfig.c:248
@@ -95,7 +95,7 @@ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd-basierte Service:\n"
+msgstr "xinetd-basierende Dienste:\n"
 
 # ../chkconfig.c:117
 #: ../chkconfig.c:292
@@ -123,7 +123,7 @@ msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Weitere Informationen zu einem Service erhalten Sie mit <F1>."
+msgstr "Weitere Informationen zu einem Dienst erhalten Sie mit <F1>."
 
 # ../ntsysv.c:56 ../ntsysv.c:93
 #: ../ntsysv.c:62 ../ntsysv.c:99
@@ -143,18 +143,18 @@ msgstr "Abbrechen"
 # ../ntsysv.c:68
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Welche Service sollen automatisch gestartet werden?"
+msgstr "Welche Dienste sollen automatisch gestartet werden?"
 
 # ../ntsysv.c:74
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Service"
+msgstr "Dienste"
 
 # ../ntsysv.c:164
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "Fehler beim Lesen von Informationen des Services %s: %s\n"
+msgstr "Fehler beim Lesen von Informationen des Dienstes %s: %s\n"
 
 # ../ntsysv.c:173
 #: ../ntsysv.c:195
@@ -181,7 +181,7 @@ msgstr "Ungültiges Argument bei --levels\n"
 # ../ntsysv.c:226
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Mit ntsysv dürfen keine Service verwaltet werden!\n"
+msgstr "Mit ntsysv können keine Dienste verwaltet werden!\n"
 
 # ../leveldb.c:265
 #: ../leveldb.c:507
