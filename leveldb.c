@@ -340,10 +340,12 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 			    serv.kPriority = kpri;
 	    }
 
-	    if (!strcmp(levelbuf, "-"))
-		serv.levels = 0;
-	    else if (serv.levels == -1)
-		serv.levels = parseLevels(levelbuf, 0);
+	    if (serv.levels == -1) {
+		    if (!strcmp(levelbuf, "-"))
+			    serv.levels = 0;
+		    else
+			    serv.levels = parseLevels(levelbuf, 0);
+	    }
 	    if (serv.levels == -1) {
 		if (serv.desc) free(serv.desc);
 		free(bufstart);
@@ -367,6 +369,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 				start = t;
 			else
 				break;
+			if (serv.levels == -1)
+				serv.levels = 0;
 			serv.levels |= 1 << lev;
 		}
 	} else if (!strncmp(start, "Default-Stop:", 13)) {
@@ -381,6 +385,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 				start = t;
 			else
 				break;
+			if (serv.levels == -1)
+				serv.levels = 0;
 			serv.levels &= ~(1 << lev);
 		}
 	} else if (!strncmp(start, "Required-Start:", 15)) {
