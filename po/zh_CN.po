@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-09-04 09:17GMT+10:00\n"
+"PO-Revision-Date: 2002-11-04 15:05GMT+10:00\n"
 "Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
-"Language-Team: Simplified Chinese <zh@li.org>\n"
+"Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,7 +48,7 @@ msgstr "        %s [--level <levels>] <name> %s)\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s 服务支持 chkconfig，但它在任何级别中都没有被引用（运行“chkconfig --add %s”）\n"
+msgstr "%s 服务支持 chkconfig，但它在任何级别中都没有被引用(运行“chkconfig --add %s”)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -58,34 +58,34 @@ msgstr "%s 服务不支持 chkconfig\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "在 %s 服务中读取信息时出错： %s\n"
+msgstr "在 %s 服务中读取信息时出错：%s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "打开 %s/init.d 失败： %s\n"
+msgstr "打开 %s/init.d 失败：%s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "开"
+msgstr "启用"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "关"
+msgstr "关闭"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "从 %s/init.d 目录中读取时出错： %s"
+msgstr "从 %s/init.d 目录中读取时出错：%s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "基于 xinetd 的服务： \n"
+msgstr "基于 xinetd 的服务：\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "打开目录 %s 失败： %s"
+msgstr "打开目录 %s 失败：%s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -94,7 +94,7 @@ msgstr "%s 版本 %s \n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--list、--add、和 --del 中只需指定其中之一\n"
+msgstr "--list、--add、和 --del 中只能指定其中之一\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
@@ -127,17 +127,17 @@ msgstr "服务"
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "从 %s 服务中读取信息时出错： %s\n"
+msgstr "在读取关于 %s 服务的信息时出错：%s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "从 %s/init.d 目录中读取时出错： %s\n"
+msgstr "从 %s/init.d 目录中读取时出错：%s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "从 %s 目录中读取时出错： %s\n"
+msgstr "从 %s 目录中读取时出错：%s\n"
 
 #: ../ntsysv.c:275
 #, c-format
@@ -155,7 +155,7 @@ msgstr "ntsysv 不能管理任何服务！\n"
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob 图案 %s 失败： %s\n"
+msgstr "glob 图案 %s 失败：%s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
@@ -164,5 +164,5 @@ msgstr "无法判定目前的运行级别\n"
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "制作 syslink %s 失败： %s\n"
+msgstr "制作 %s 的符号链接失败：%s\n"
 
