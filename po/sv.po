@@ -1,7 +1,7 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.27 2003/10/24 15:45:03 menthos Exp $
+# $Id: sv.po,v 1.28 2004/03/11 06:37:11 sarahs Exp $
 #
 msgid ""
 msgstr ""
@@ -90,9 +90,6 @@ msgstr "xinetd-baserade tjänster:\n"
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "misslyckades med att öppna katalogen %s: %s\n"
-
-msgid "failed to open directory %s: %s"
-msgstr "misslyckades med att öppna katalogen %s: %s"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -421,6 +418,9 @@ msgstr "administrationskatalogen %s är ogiltig\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives version %s\n"
+
+#~ msgid "failed to open directory %s: %s"
+#~ msgstr "misslyckades med att öppna katalogen %s: %s"
 
 #~ msgid "               %s --add <name>\n"
 #~ msgstr "              %s --add <namn>\n"
