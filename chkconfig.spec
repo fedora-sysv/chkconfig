@@ -57,10 +57,11 @@ if [ -d /etc/rc.d -a ! -L /etc/rc.d ]; then
    mv -f /etc/rc.d/* /etc && rm -rf /etc/rc.d && ln -snf . /etc/rc.d
 fi
 
-
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
+%dir /etc/init.d
+%dir /etc/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
@@ -73,7 +74,7 @@ fi
 
 %changelog
 * Thu Jul  6 2000 Bill Nottingham <notting@redhat.com>
-- prereq /etc/init.d
+- put initscripts %pre here too
 
 * Mon Jul  3 2000 Bill Nottingham <notting@redhat.com>
 - oops, if we don't prereq initscripts, we *need* to own /etc/rc[0-6].d
