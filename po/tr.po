@@ -101,7 +101,7 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 
 #: ../leveldb.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "glob pattern %s hatasý: %s\n"
 
