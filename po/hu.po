@@ -2,42 +2,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2000-08-03 18:25+0200\n"
-"Last-Translator: L�szl� N�meth <nemeth@qwertynet.hu>\n"
+"PO-Revision-Date: 2003-02-08 11:11+0100\n"
+"Last-Translator: Tamas Szanto <tszanto@mol.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s %s - Copyright (c) Red Hat, Inc., 1997-2000.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ez a szoftver szabadon terjeszthet� a GNU Public License szerint.\n"
+msgstr "Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "usage:   %s --list [n�v]\n"
+msgstr "Használat:   %s --list [név]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <n�v>\n"
+msgstr "         %s --add <név>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <n�v>\n"
+msgstr "         %s --del <név>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <levels>] <n�v> %s)\n"
+msgstr "         %s [--level <levels>] <név> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -45,21 +45,23 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"A(z) %s szolgáltatás támogatja a chkconfigot, de egyik futási szinten sem szerepel (adja ki "
+"a 'chkconfig --add %s' parancsot)\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "a %s szolg�ltat�s nem t�mogatja a chkconfig haszn�lat�t\n"
+msgstr "a(z) %s szolgáltatás nem támogatja a chkconfigot\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "inform�ci� olvas�si hiba a(z) %s szolg�ltat�sn�l: %s\n"
+msgstr "hiba történt a(z) %s szolgáltatás adatainak beolvasásakor: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d nem megnyithat�: %s\n"
+msgstr "%s/init.d megnyitása nem sikerült: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -72,37 +74,37 @@ msgstr "ki"
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d k�nyvt�r nem olvashat�: %s"
+msgstr "hiba történt a(z) %s/init.d könyvtár olvasásakor: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd alap� szolg�tat�sok:\n"
+msgstr "xinetd-alapú szolgátatások:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "%s k�nyvt�r nem megnyithat�: %s"
+msgstr "a(z) %s könyvtár megnyitása nem sikerült: %s"
 
 #: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s verzi�: %s\n"
+msgstr "%s %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "a --list, --add �s --del opci�k k�z�l csak egyet lehet megadni\n"
+msgstr "a --list, --add és --del közül csak egyet lehet megadni\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "csak egy runlevel-t lehet megadni egy chkconfig lek�rdez�shez\n"
+msgstr "csak egy futási szintet lehet megadni egy chkconfig lekérdezésben\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Nyomja meg az <F1>-et tov�bbi inform�ci�k�rt a szolg�ltat�sr�l."
+msgstr "Nyomja meg az <F1>-et egy szolgáltatás jellemzőinek lekérdezéséhez."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../ntsysv.c:62
 msgid "Back"
@@ -110,308 +112,305 @@ msgstr "Vissza"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "M�gsem"
+msgstr "Mégsem"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Milyen szolg�ltat�sok induljanak automatikusan?"
+msgstr "Mely szolgáltatások induljanak el automatikusan?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Szolg�ltat�sok"
+msgstr "Szolgáltatások"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s szolg�ltat�s inform�ci� olvas�si hiba: %s\n"
+msgstr "hiba történt a(z) %s szolgáltatás adatainak beolvasásakor: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d k�nyvt�r nem olvashat�: %s\n"
+msgstr "hiba történt a(z) %s/init.d könyvtár olvasása közben: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "hiba %s k�nyvt�rb�l val� olvas�skor: %s\n"
+msgstr "hiba történt a(z) %s könyvtár olvasása közben: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "%s futtatása csak rendszergazdai jogosultsággal lehetséges.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "hib�s --levels argumentum\n"
+msgstr "hibás --levels argumentum\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Az ntsysv semmilyen szolg�ltat�st nem kezel!\n"
+msgstr "Egy szolgáltatás sem kezelhető az ntsysv programmal!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nem lehet kibontani %s: %s\n"
+msgstr "nem sikerült értelmezni a(z) %s mintát: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "az aktu�lis runlevel nem meg�llap�that�\n"
+msgstr "az aktuális futási szintet nem sikerült megállapítani\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s szimbolikus link nem hozhat� l�tre: %s\n"
+msgstr "a(z) %s szimbolikus link létrehozása nem sikerült: %s\n"
 
 #: ../alternatives.c:46
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "alternatives %s - Copyright (c) Red Hat Inc., 2001.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Ez a szoftver szabadon terjeszthet� a GNU Public License szerint.\n"
+msgstr ""
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "Használat: alternatives --install <link> <név> <elérési út> <prioritás>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <szolgáltatás>]\n"
 
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <levels>] <n�v> %s)\n"
+msgstr "                    [--slave <link> <név> <elérési út>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <név> <elérési út>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <n�v>\n"
+msgstr "       alternatives --auto <név>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <n�v>\n"
+msgstr "       alternatives --config <név>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <n�v>\n"
+msgstr "       alternatives --display <név>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <n�v>\n"
+msgstr "       alternatives --set <név> <elérési út>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "általános parancsok: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <könyvtár> --admindir <könyvtár>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "%s/init.d nem megnyithat�: %s\n"
+msgstr "%s megnyitása nem sikerült: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s/init.d nem megnyithat�: %s\n"
+msgstr "%s olvasása nem sikerült: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s üres.\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "hibás mód %s első sorában\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "hibás elsődleges link: %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "nem várt elérési út (%s): %s\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "hiányzó elérési út (slave %s): %s\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "nem várt fájlvége: %s\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "az alternatíva elérési útja hiányzik: %s\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "hiányzó numerikus prioritás: %s\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "hiányzó slave elérési út: %s\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "nem várt sor (%s): %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "a link nem alternatívra mutat -- átállítás kézi módra\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "a link megváltozott -- átállítás kézi módra\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "eltávolítja: %s\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "%s szimbolikus link nem hozhat� l�tre: %s\n"
+msgstr "a(z) %s szimbolikus link eltávolítása nem sikerült: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "link: %s -> %s\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "%s szimbolikus link nem hozhat� l�tre: %s\n"
+msgstr "a(z) %s -> %s szimbolikus link létrehozása nem sikerült: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s már létezik\n"
 
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "nem lehet kibontani %s: %s\n"
+msgstr "%s létrehozása nem sikerült: %s\n"
 
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%s szimbolikus link nem hozhat� l�tre: %s\n"
+msgstr "%s -> %s csere nem sikerült: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%s elsődleges linkje csak ez lehet: %s\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "a(z) %s link nem megfelelő ennek: slave %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - automatikus módban.\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - kézi módban.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " link jelenleg ide mutat: %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - prioritás: %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " %s slave: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "A jelenlegi 'legjobb' verzió: %s\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "%d program képes ezt nyújtani: '%s'.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Kiválasztási   parancs\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "A kiválasztás [+] megőrzése: Enter, vagy adjon meg egy kiválasztási számot: "
 
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "%s szolg�ltat�s inform�ci� olvas�si hiba: %s\n"
+msgstr 
+"\n"
+"hiba történt a választás beolvasásakor\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s nincs beállítva %s alternatívájának\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(eltávolítja: %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s/init.d nem megnyithat�: %s\n"
+msgstr "%s eltávolítása nem sikerült: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s érvénytelen\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s érvénytelen\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s verzi�: %s\n"
+msgstr "alternatives %s\n"
