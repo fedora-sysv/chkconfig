@@ -1,20 +1,21 @@
+# translation of pt_BR.po to Portuguese
 # Brazilian Portuguese localization of Red Hat Linux
-# David Barzilay <barzilay@redhat.com>, 2003
 # Originated from the Portuguese translation by
 # Pedro Morais <morais@kde.org>
 # José Nuno Pires <jncp@netcabo.pt>
+# David Barzilay <barzilay@redhat.com>, 2003,2004
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-19 16:51-0400\n"
-"PO-Revision-Date: 2004-01-13 22:36+1000\n"
-"Last-Translator: Daniel Brooke Peig <daniel@brookepeig.com>\n"
-"Language-Team: Portuguese <pt@li.org> e Equipe Fedora Brasil\n"
+"PO-Revision-Date: 2004-05-20 09:52+1000\n"
+"Last-Translator: David Barzilay <barzilay@redhat.com>\n"
+"Language-Team: Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -23,8 +24,7 @@ msgstr "%s versão %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Este pode ser redistribuído livremente sob os termos da Licença Pública "
 "GNU.\n"
@@ -109,8 +109,7 @@ msgstr "apenas uma dessas pode ser especificada --list, --add, ou --del\n"
 #: ../chkconfig.c:464
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
+msgstr "só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -194,8 +193,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
+msgstr "uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -250,7 +248,7 @@ msgstr "                --altdir <diretório> --admindir <diretório>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "acessando %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -313,9 +311,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "linha inesperada em %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "não foi possível ler %s: %s\n"
+msgstr "falha ao acessar a ligação %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -365,7 +363,7 @@ msgstr "não foi possível substituir %s por %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "rodando %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -463,3 +461,4 @@ msgstr "versão alternativa %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "erro ao ler do diretório %s/init.d: %s"
+
