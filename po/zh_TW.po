@@ -1,4 +1,4 @@
-# Translation of zh_TW.po to Chinese (traditional)
+# Translation of chkconfig to Chinese (traditional)
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Ben Wu <hpwu@redhat.com>, 2002.
 #
@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-08-22 11:44+1000\n"
+"PO-Revision-Date: 2003-02-03 11:31+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
 "Language-Team: Chinese (Traditional) <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0beta1\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -20,8 +20,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版權 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在遵守 GNU Public License 的條款下，可以自由的散佈這個程式。\n"
 
 #: ../chkconfig.c:25
@@ -49,8 +48,7 @@ msgstr "         %s [--level <levels>] <name> %s)\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"%s 服務支援 chkconfig，但未向任何執行等級註冊 (請執行 'chkconfig --add %s')\n"
+msgstr "%s 服務支援 chkconfig，但未向任何執行等級註冊 (請執行 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -169,255 +167,251 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "建立 %s 符號連結失敗: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s 版本 %s - 版權 (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "另一版本 %s - 版權 (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在遵守 GNU Public License 的條款下，可以自由的散佈這個程式。\n"
+msgstr "在遵守 GNU 通用公共許可證的條款下，可以自由的散佈這個程式。\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "用法: alternatives --install <連結> <名稱> <路徑> <優先順序>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <服務名稱>]\n"
 
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <levels>] <name> %s)\n"
+msgstr "                    [--slave <連結> <名稱> <路徑>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <名稱> <路徑>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "       alternatives --auto <名稱>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "       alternatives --config <名稱>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "       alternatives --display <名稱>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <name>\n"
+msgstr "       alternatives --set <名稱> <路徑>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "共同選項: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <目錄> --admindir <目錄>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "無法開啟 %s/init.d: %s\n"
+msgstr "無法開啟 %s: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "無法開啟 %s/init.d: %s\n"
+msgstr "無法讀取 %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s 是空的!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "%s 的第一行有不當的模式\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "%s 有不當的主要連結\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "%s 路徑是錯誤的在 %s 中\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "遺失從屬裝置 %s 的路徑在 %s 中\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "在 %s 中的檔案結尾有錯誤\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "在 %s 中請輸入至 alternate 的路徑\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "請輸入數值的優先順序到 %s\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "請輸入從屬裝置路徑到 %s\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "%s 中有錯誤的行列: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "連結未指向任何 alternative -- 設定為手動模式\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "連結已改變 -- 設定為手動模式\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "將移除 %s\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "建立 %s 符號連結失敗: %s\n"
+msgstr "移除 %s 的連結失敗: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "將連結 %s -> %s\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "建立 %s 符號連結失敗: %s\n"
+msgstr "建立 %s -> %s 的連結失敗: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s 已經存在\n"
 
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "glob pattern %s 失敗: %s\n"
+msgstr "建立 %s 失敗: %s\n"
 
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "建立 %s 符號連結失敗: %s\n"
+msgstr "取代 %s 以 %s 失敗: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%s 的主要連結必須是 %s\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "%s 連結在從屬裝置 %s 上是錯誤的 (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - 狀態是自動的。\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - 狀態是手動的。\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " 目前連結指向 %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - 優先順序 %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " 從屬裝置 %s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "目前 `最好的' 版本是 %s。\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "有 %d 程式提供 '%s'。\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  選擇        指令\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼:"
 
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "讀取 %s 服務的資訊錯誤: %s\n"
+msgstr ""
+"\n"
+"讀取選擇發生錯誤\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s 尚未被設定為 %s 的另一選擇\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(將移除 %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "無法開啟 %s/init.d: %s\n"
+msgstr "無法移除 %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s 無效\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s 無效\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s version %s\n"
+msgstr "另一版本 %s\n"
+
