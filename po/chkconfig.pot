@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-06-04 16:57-0400\n"
+"POT-Creation-Date: 2005-01-11 17:01-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,17 +92,17 @@ msgstr ""
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:405
+#: ../chkconfig.c:407
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:412
+#: ../chkconfig.c:414
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:464
+#: ../chkconfig.c:466
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -156,17 +156,17 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:508
+#: ../leveldb.c:510
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:539
+#: ../leveldb.c:541
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:627
+#: ../leveldb.c:629
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

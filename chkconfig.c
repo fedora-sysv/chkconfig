@@ -337,6 +337,8 @@ int setService(char * name, int where, int state) {
     }
 
     if (s.type == TYPE_INIT_D) {
+	    if (s.isLSB && (s.sPriority == -1) && (s.kPriority == -1))
+		    frobDependencies(&s);
 	    for (i = 0; i < 7; i++) {
 		    if (!((1 << i) & where)) continue;
 
