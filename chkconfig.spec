@@ -2,39 +2,24 @@ Summary: Updates and queries runlevel information for system services
 Name: chkconfig
 %define version 0.9.6
 Version: %{version}
-Release: 2
+Release: 3
 Copyright: GPL
 Group: Utilities/System
-Group(pt_BR): Utilitários/Sistema
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Summary(pt_BR): Ferramenta para atualizar e listar serviços do sistema, pelo nível de execução (runlevel)
-
-%package -n ntsysv
-Summary: Full-screen interface for configurating runlevel information
-Summary(pt_BR): Interface com menus para configuração de informações de níveis de execução
-Group: Utilities/System
-Group(pt_BR): Utilitários/Sistema
 
 %description
 chkconfig provides a simple command-line  tool  for  maintaining  the
 /etc/rc.d  directory  hierarchy by relieving system administrators of
 directly manipulating the  numerous symbolic links in that directory.
 
+%package -n ntsysv
+Summary: Full-screen interface for configurating runlevel information
+Group: Utilities/System
+
 %description -n ntsysv
 ntsysv provides a full-screen tool for updating the /etc/rc.d directory
 hierarchy, which controls the starting and stopping of system services.
-
-%description -l pt_BR
-Chkconfig provê uma ferramenta simples na linha de comando
-para manter a hierarquia de diretórios /etc/rc.d, aliviando os
-administradores do sistema da manipulação direta de numerosos
-links simbólicos.
-
-%description -n ntsysv -l pt_BR
-O ntsysv fornece uma ferramenta baseada em menus para atualizar a
-hierarquia de diretórios /etc/rc.d, que controla a inicialização e a
-terminação de serviços do sistema.
 
 %prep
 %setup -q
@@ -73,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Tue Dec 15 1998 Jeff Johnson <jbj@redhat.com>
+- add ru.po.
+
 * Thu Oct 22 1998 Bill Nottingham <notting@redhat.com>
 - build for Raw Hide (slang-1.2.2)
 
