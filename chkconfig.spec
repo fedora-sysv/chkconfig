@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
-* Tue Jan 11 2004 Bill Nottingham <notting@redhat.com> 1.3.12-0.4
+* Tue Jan 11 2005 Bill Nottingham <notting@redhat.com> 1.3.12-0.4
 - fix LSB comment parsing some more (#144739)
 
 * Thu Oct 28 2004 Bill Nottingham <notting@redhat.com> 1.3.11.2-1
