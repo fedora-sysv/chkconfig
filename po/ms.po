@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2004-06-04 12:22-0400\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-02-02 16:19-0500\n"
 "PO-Revision-Date: 2004-06-23 22:50+0800\n"
 "Last-Translator: Mohd Nawawi Mohamad Jamili <nawawi@ronggeng.net>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
@@ -23,6 +23,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versi %s - Hakcipta (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -44,6 +45,7 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <nama>\n"
 
 #: ../chkconfig.c:28
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <tahap>] <nama> %s)\n"
 
@@ -71,108 +73,110 @@ msgstr "ralat membaca meklumat pada khidmat %s: %s\n"
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gagal untuk membuka %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:282 ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "ralat membaca daripada direktori %s/init.d: %s\n"
-
-#: ../chkconfig.c:290
-msgid "xinetd based services:\n"
-msgstr "perkhidmatan berasaskan xinetd:\n"
-
-#: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s\n"
-msgstr "gagal untuk membuka direktori %s: %s\n"
-
-#: ../chkconfig.c:405
-#, c-format
-msgid "%s version %s\n"
-msgstr "%s versi %s\n"
-
-#: ../chkconfig.c:412
-msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "hanya satu daripada --list, --add, atau --del boleh digunakan\n"
-
-#: ../chkconfig.c:464
-msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "hanya satu runlevel boleh digunakan dengan chkconfig\n"
-
-#: ../ntsysv.c:30
-msgid "Press <F1> for more information on a service."
-msgstr "Tekan <F1> untuk lebih maklumat berkenaan sesuatu khidmat."
-
-#: ../ntsysv.c:62 ../ntsysv.c:99
-msgid "Ok"
-msgstr "Ok"
-
-#: ../ntsysv.c:62
-msgid "Back"
-msgstr "Undur"
-
-#: ../ntsysv.c:62
-msgid "Cancel"
-msgstr "Batal"
-
-#: ../ntsysv.c:74
-msgid "What services should be automatically started?"
-msgstr "Khidmat apa yang seharusnya dimulakan secara automatik?"
-
-#: ../ntsysv.c:80
-msgid "Services"
-msgstr "Perkhidmatan"
-
-#: ../ntsysv.c:186 ../ntsysv.c:230
+#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "ralat membaca maklumat untuk khidmat %s: %s\n"
 
-#: ../ntsysv.c:239
+#: ../chkconfig.c:285
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "perkhidmatan berasaskan xinetd:\n"
+
+#: ../chkconfig.c:287
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "gagal untuk membuka direktori %s: %s\n"
+
+#: ../chkconfig.c:402
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s versi %s\n"
+
+#: ../chkconfig.c:409
+#, c-format
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "hanya satu daripada --list, --add, atau --del boleh digunakan\n"
+
+#: ../chkconfig.c:461
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "hanya satu runlevel boleh digunakan dengan chkconfig\n"
+
+#: ../ntsysv.c:31
+msgid "Press <F1> for more information on a service."
+msgstr "Tekan <F1> untuk lebih maklumat berkenaan sesuatu khidmat."
+
+#: ../ntsysv.c:68 ../ntsysv.c:105
+msgid "Ok"
+msgstr "Ok"
+
+#: ../ntsysv.c:68
+msgid "Back"
+msgstr "Undur"
+
+#: ../ntsysv.c:68
+msgid "Cancel"
+msgstr "Batal"
+
+#: ../ntsysv.c:80
+msgid "What services should be automatically started?"
+msgstr "Khidmat apa yang seharusnya dimulakan secara automatik?"
+
+#: ../ntsysv.c:86
+msgid "Services"
+msgstr "Perkhidmatan"
+
+#: ../ntsysv.c:240
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "ralat membaca daripada direktori %s: %s\n"
 
-#: ../ntsysv.c:275
+#: ../ntsysv.c:276
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Anda mesti sebagai root untuk melaksanakan %s.\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:293
+#, c-format
 msgid "bad argument to --levels\n"
 msgstr "hujah tidak sah kepada --levels\n"
 
-#: ../ntsysv.c:299
+#: ../ntsysv.c:300
+#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Tiada khidmat yang boleh diurus oleh ntsysv!\n"
 
-#: ../leveldb.c:508
+#: ../leveldb.c:517
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gagal untuk glob corak %s: %s\n"
 
-#: ../leveldb.c:539
+#: ../leveldb.c:548
+#, c-format
 msgid "cannot determine current run level\n"
 msgstr "tidak dapat menentukan run level sekarang\n"
 
-#: ../leveldb.c:627
+#: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "gagal untuk membuat symlink %s: %s\n"
 
-#: ../alternatives.c:48
+#: ../alternatives.c:49
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "versi alternatif %s - Hakcipta (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:49
+#: ../alternatives.c:50
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -180,222 +184,244 @@ msgstr ""
 "Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
 "\n"
 
-#: ../alternatives.c:50
+#: ../alternatives.c:51
+#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "penggunaan: alternatives --install <link> <nama> <path> <priority>\n"
 
-#: ../alternatives.c:51
+#: ../alternatives.c:52
+#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
-#: ../alternatives.c:52
+#: ../alternatives.c:53
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <link> <nama> <path>]*\n"
 
-#: ../alternatives.c:53
+#: ../alternatives.c:54
+#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <nama> <path>\n"
 
-#: ../alternatives.c:54
+#: ../alternatives.c:55
+#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <nama>\n"
 
-#: ../alternatives.c:55
+#: ../alternatives.c:56
+#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <nama>\n"
 
-#: ../alternatives.c:56
+#: ../alternatives.c:57
+#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <nama>\n"
 
-#: ../alternatives.c:57
+#: ../alternatives.c:58
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <nama> <path>\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:59
+#, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:59
+#: ../alternatives.c:60
+#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "pilihan biasa: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:60
+#: ../alternatives.c:61
+#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:157
+#: ../alternatives.c:158
 #, c-format
 msgid "reading %s\n"
 msgstr "sedang membaca %s\n"
 
-#: ../alternatives.c:161
+#: ../alternatives.c:162
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "Gagal untuk membuka %s: %s\n"
 
-#: ../alternatives.c:170
+#: ../alternatives.c:171
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "gagal untuk membaca %s: %s\n"
 
-#: ../alternatives.c:179
+#: ../alternatives.c:180
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s kosong!\n"
 
-#: ../alternatives.c:188
+#: ../alternatives.c:189
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "mod tidak sah pada baris 1 daripada %s\n"
 
-#: ../alternatives.c:195
+#: ../alternatives.c:196
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "pautan utama tidak sah dalam %s\n"
 
-#: ../alternatives.c:207
+#: ../alternatives.c:208
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "path %s tidak dijangka dalam %s\n"
 
-#: ../alternatives.c:216
+#: ../alternatives.c:217
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "path tiada untuk slave %s dalam %s\n"
 
-#: ../alternatives.c:226
+#: ../alternatives.c:227
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "akhir fail tidak dijangka dalam %s\n"
 
-#: ../alternatives.c:235
+#: ../alternatives.c:236
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "path untuk selang seli dijangka dalam %s\n"
 
-#: ../alternatives.c:255
+#: ../alternatives.c:256
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "keutamaan bernombor dijangka dalam %s\n"
 
-#: ../alternatives.c:277
+#: ../alternatives.c:278
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "path slave dijangka dalam %s\n"
 
-#: ../alternatives.c:296
+#: ../alternatives.c:297
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "baris tidak dijangka dalam %s: %s\n"
 
-#: ../alternatives.c:304
+#: ../alternatives.c:305
+#, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "gagal untuk membaca %s: %s\n"
 
-#: ../alternatives.c:318
+#: ../alternatives.c:319
+#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "pautan merujuk kepada tiada alternatif -- menetapkan mod kepada manual\n"
 
-#: ../alternatives.c:323
+#: ../alternatives.c:324
+#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "pautan berubah -- menetapkan mod kepada manual\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346
+#: ../alternatives.c:340 ../alternatives.c:347
 #, c-format
 msgid "would remove %s\n"
 msgstr "akan membuang %s\n"
 
-#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
+#: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "gagal untuk membuang pautan %s: %s\n"
 
-#: ../alternatives.c:364 ../alternatives.c:376
+#: ../alternatives.c:365 ../alternatives.c:377
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "akan mempaut %s -> %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:385
+#: ../alternatives.c:369 ../alternatives.c:386
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "gagal untuk mempaut %s -> %s: %s\n"
 
-#: ../alternatives.c:417
+#: ../alternatives.c:418
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s telah wujud\n"
 
-#: ../alternatives.c:419
+#: ../alternatives.c:420
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "gagal untuk mencipta %s: %s\n"
 
-#: ../alternatives.c:450
+#: ../alternatives.c:451
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "gagal untuk menggantikan %s dengan %s: %s\n"
 
-#: ../alternatives.c:476 ../alternatives.c:485
+#: ../alternatives.c:477 ../alternatives.c:486
 #, c-format
 msgid "running %s\n"
 msgstr "melaksanakan %s\n"
 
-#: ../alternatives.c:512
+#: ../alternatives.c:513
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "pautan utama bagi %s mestilah %s\n"
 
-#: ../alternatives.c:576
+#: ../alternatives.c:577
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "pautan %s tidak betul untuk slave %s (%s %s)\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:619
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - status adalah auto.\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:621
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - status adalah manual.\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:623
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " pautan merujuk kepada %s\n"
 
-#: ../alternatives.c:625
+#: ../alternatives.c:626
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - keutamaan %d\n"
 
-#: ../alternatives.c:628
+#: ../alternatives.c:629
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slave %s: %s\n"
 
-#: ../alternatives.c:633
+#: ../alternatives.c:634
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Versi 'terbaik' semasa ialah %s.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:664
+#, fuzzy, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr "Terdapat %d program yang menyediakan '%s'.\n"
+
+#: ../alternatives.c:664
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Terdapat %d program yang menyediakan '%s'.\n"
 
-#: ../alternatives.c:665
+#: ../alternatives.c:666
+#, c-format
 msgid "  Selection    Command\n"
 msgstr "  Pilihan    Arahan\n"
 
-#: ../alternatives.c:674
+#: ../alternatives.c:675
+#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter untuk menyimpan pilihan semasa[+], atau taip nombor pilihan: "
 
-#: ../alternatives.c:677
+#: ../alternatives.c:678
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
@@ -403,32 +429,35 @@ msgstr ""
 "\n"
 "ralat membaca pilihan\n"
 
-#: ../alternatives.c:704 ../alternatives.c:730
+#: ../alternatives.c:705 ../alternatives.c:731
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s tidak ditentutetap sebagai alternatif untuk %s\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:747
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(akan membuang %s\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:749
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "gagal untuk membuang %s: %s\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:871
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s tidak sah\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:877
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s tidak sah\n"
 
-#: ../alternatives.c:886
+#: ../alternatives.c:887
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "versi alternatif %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s\n"
+#~ msgstr "ralat membaca daripada direktori %s/init.d: %s\n"

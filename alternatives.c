@@ -660,7 +660,7 @@ static int configService(char * title, const char * altDir,
 
     do {
 	printf("\n");
-	printf(_("There are %d programs which provide '%s'.\n"), set.numAlts, set.alts[0].master.title),
+	printf(ngettext(_("There is %d program that provides '%s'.\n"), _("There are %d programs which provide '%s'.\n"), set.numAlts), set.numAlts, set.alts[0].master.title);
 	printf("\n");
 	printf(_("  Selection    Command\n"));
 	printf("-----------------------------------------------\n");
