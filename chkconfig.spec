@@ -1,7 +1,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.13
-Release: 2
+Version: 1.2.14
+Release: 1
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -58,17 +58,20 @@ rm -rf $RPM_BUILD_ROOT
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
-%{_mandir}/*/*
+%{_mandir}/*/chkconfig*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
 %files -n ntsysv
 %defattr(-,root,root)
 /usr/sbin/ntsysv
-%{_mandir}/man8/ntsysv.8*
+%{_mandir}/*/ntsysv.8*
 
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sun Aug 20 2000 Bill Nottingham <notting@redhat.com>
+- get man pages in proper packages
+
 * Sun Aug 20 2000 Matt Wilson <msw@redhat.com>
 - new translations
 
