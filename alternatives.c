@@ -144,6 +144,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
     set->numAlts = 0;
     set->mode = AUTO;
     set->best = 0;
+    set->current = -1;
 
     path = alloca(strlen(stateDir) + strlen(title) + 2);
     sprintf(path, "%s/%s", stateDir, title);
@@ -329,11 +330,25 @@ static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
 
 static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
     char * sl;
+    struct stat sb;
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
+    if (stat(l->facility, &sb)) {
+	    if (FL_TEST(flags)) {
+		    printf(_("would link %s -> %s\n"), l->facility, sl);
+	    } else {
+
+		    if (symlink(sl, l->facility)) {
+			    fprintf(stderr, _("failed to link %s -> %s: %s\n"),
+				    l->facility, sl, strerror(errno));
+			    return 1;
+		    }
+	    }
+    }
+	
     if (FL_TEST(flags)) {
-	printf("(would link %s -> %s\n", sl, l->target);
+	printf(_("would link %s -> %s\n"), sl, l->target);
     } else {
 	if (unlink(sl) && errno != ENOENT){
 	    fprintf(stderr, _("failed to remove link %s: %s\n"),
@@ -342,7 +357,7 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 	} 
 	
 	if (symlink(l->target, sl)) {
-	    fprintf(stderr, "_(failed to link %s -> %s: %s\n",
+	    fprintf(stderr, _("failed to link %s -> %s: %s\n"),
 		    sl, l->target, strerror(errno));
 	    return 1;
 	}
@@ -408,7 +423,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
 
     if (forceLinks || set->mode == AUTO) {
-	struct alternative * alt = set->alts + set->current;
+	struct alternative * alt = set->alts + ( set->current > 0 ? set->current : 0);
 
 	rc |= makeLinks(&alt->master, altDir, flags);
 	for (i = 0; i < alt->numSlaves; i++)
