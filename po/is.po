@@ -26,22 +26,22 @@ msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "notkun:   %s --list [nafn]\n"
+msgstr "notkun:   %s --list [heiti]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <nafn>\n"
+msgstr "         %s --add <heiti>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <nafn>\n"
+msgstr "         %s --del <heiti>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <stig>] <nafn> %s)\n"
+msgstr "         %s [--level <stig>] <heiti> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -55,7 +55,7 @@ msgstr ""
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "þjónusta %s styður ekki chkconfig\n"
+msgstr "þjónustan %s styður ekki chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
