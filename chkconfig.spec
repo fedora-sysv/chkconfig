@@ -1,8 +1,8 @@
 # [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.6
-Release: 3
+Version: 1.3.7
+Release: 1
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Dec 12 2002 Elliot Lee <sopwith@redhat.com> 1.3.7-1
+- Link to libpopt in a multilib-safe fashion.
+
 * Thu Aug 29 2002 Trond Eivind Glomsrød <teg@redhat.com> 1.3.6-3
 - bump
 

@@ -25,7 +25,7 @@ subdirs:
 	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
-	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) /usr/lib/libpopt.a
+	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -Wl,-Bstatic -lpopt -Wl,-Bdynamic
 
 alternativs: alternatives.o
 
