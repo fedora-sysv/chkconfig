@@ -256,15 +256,15 @@ different from the default.
 .\" The names of the arguments should be identical with the ones
 .\" in SYNOPSIS section.
 .TP
-\fB--install\fR \fIlink gen path pri\fR [\fB--slave\fR \fIslink sgen spath\fR] [\fB--initscript\fR \fIservice\fR]...
+\fB--install\fR \fIlink name path pri\fR [\fB--slave\fR \fIslink sname spath\fR] [\fB--initscript\fR \fIservice\fR]...
 Add a group of alternatives to the system.
-.I gen
+.I name
 is the generic name for the master link,
 .I link
 is the name of its symlink, and
 .I path
 is the alternative being introduced for the master link.
-.IR sgen ,
+.IR sname ,
 .I slink
 and
 .I spath
@@ -328,16 +328,16 @@ The symbolic link and slaves for link group \fIname\fR set to those
 configured for \fIpath\fR, and the link group is set to manual mode.
 This option is not in the original Debian implementation.
 .TP
-\fB--auto\fR \fIlink\fR
+\fB--auto\fR \fIname\fR
 Switch the master symlink
-.I link
+.I name
 to automatic mode.
 In the process, this symlink and its slaves are updated
 to point to the highest priority installed alternatives.
 .TP
-\fB--display\fR \fIlink\fR
+\fB--display\fR \fIname\fR
 Display information about the link group of which
-.I link
+.I name
 is the master link.
 Information displayed includes the group's mode
 (auto or manual),
