@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-06-22 12:35+0900\n"
+"PO-Revision-Date: 2004-08-18 16:18+0900\n"
 "Last-Translator: Tadashi Jokagi <fedora@elf.no-ip.org>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -84,12 +84,12 @@ msgstr "%s/init.d を開くことができませんでした: %s\n"
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "オン"
+msgstr "on"
 
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "オフ"
+msgstr "off"
 
 # ../ntsysv.c:183
 #: ../chkconfig.c:282 ../ntsysv.c:195
@@ -202,7 +202,7 @@ msgstr "シンボリックリンク %s をつくるのに失敗しました: %s\
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives バージョン%s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives バージョン %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../alternatives.c:49
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
+msgstr "使用法: alternatives --install <リンク> <名前> <パス> <優先度>\n"
 
 #: ../alternatives.c:51
 msgid "                    [--initscript <service>]\n"
@@ -273,63 +273,63 @@ msgstr "%s 読み込み中\n"
 #: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "%sを開くのに失敗: %s\n"
+msgstr "%s を開くのに失敗しました: %s\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%sの読み込みに失敗: %s\n"
+msgstr "%s の読み込みに失敗しました: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s 空です!\n"
+msgstr "%s は空です!\n"
 
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%sの1行目は不正なモードです。\n"
+msgstr "%s の 1 行目は不正なモードです。\n"
 
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%sに不正な主要リンクがあります。\n"
+msgstr "%s に不正な主要リンクがあります。\n"
 
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%sに予想外のパス%sがあります。\n"
+msgstr "%s に予想外のパス %s があります。\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "%sにスレーブ%sのパスが欠如しています。\n"
+msgstr "%s にスレーブ %s のパスが欠如しています。\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%sが予想外なファイル終結をしています。\n"
+msgstr "%s が予想外なファイル終結をしています。\n"
 
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%sに交替のパスが予想されます。\n"
+msgstr "%s に交替のパスが予想されます。\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%sに数値の優先が予想されます。\n"
+msgstr "%s に数値の優先が予想されます。\n"
 
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "%sにスレーブパスを予想されます。\n"
+msgstr "%s にスレーブパスを予想されます。\n"
 
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%sに予想外の行があります: %s\n"
+msgstr "%s に予想外の行があります: %s\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:304
@@ -354,23 +354,23 @@ msgstr "%sを削除する。\n"
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "リンク %s の削除に失敗:  %s\n"
+msgstr "リンク %s の削除に失敗: %s\n"
 
 #: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "%s から %sへリンク\n"
+msgstr "%s から %s へリンク\n"
 
 # ../leveldb.c:474
 #: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "%s から%sへのリンク失敗: %s\n"
+msgstr "%s から %s へのリンク失敗: %s\n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s は既に存在します\n"
+msgstr "%s は既に存在します。\n"
 
 # ../leveldb.c:355
 #: ../alternatives.c:419
@@ -382,7 +382,7 @@ msgstr "%s の作成に失敗です: %s\n"
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%sを%sへの交換に失敗しました: %s\n"
+msgstr "%s を %s への交換に失敗しました: %s\n"
 
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
@@ -392,27 +392,27 @@ msgstr "%s 実行中\n"
 #: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "%sの主要リンクは %sとします\n"
+msgstr "%s の主要リンクは %s とします\n"
 
 #: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "リンク%sはスレーブ%s(%s %s)に不適切です。\n"
+msgstr "リンク %s はスレーブ %s(%s %s)に不適切です。\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s -ステータスは自動。\n"
+msgstr "%s -ステータスは自動です。\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - ステータスは手動。\n"
+msgstr "%s - ステータスは手動です。\n"
 
 #: ../alternatives.c:622
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "リンクは現在%sを指しています\n"
+msgstr "リンクは現在 %s を指しています。\n"
 
 #: ../alternatives.c:625
 #, c-format
@@ -422,17 +422,17 @@ msgstr "%s - 優先項目 %d\n"
 #: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " スレーブ%s: %s\n"
+msgstr " スレーブ %s: %s\n"
 
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "現在の「最適」バージョンは%s。\n"
+msgstr "現在の「最適」バージョンは %s です。\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d プログラムがあり'%s'を提供します。\n"
+msgstr "%d プログラムがあり '%s'を提供します。\n"
 
 #: ../alternatives.c:665
 msgid "  Selection    Command\n"
@@ -454,28 +454,28 @@ msgstr ""
 #: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%sは%sの為の互換用として設定されていません\n"
+msgstr "%s は %s の為の互換用として設定されていません\n"
 
 #: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
-msgstr "%sを削除する。\n"
+msgstr "%s を削除する。\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%sの削除に失敗しました: %s\n"
+msgstr "%s の削除に失敗しました: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir %sは無効です。\n"
+msgstr "altdir %s は無効です。\n"
 
 #: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir %sは無効です。\n"
+msgstr "admindir %s は無効です。\n"
 
 # ../chkconfig.c:284
 #: ../alternatives.c:886
