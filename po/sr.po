@@ -59,7 +59,7 @@ msgid "off"
 msgstr "iskljuèeno"
 
 #: ../chkconfig.c:117
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "neuspelo otvaranje %s/init.d: %s\n"
 
