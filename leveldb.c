@@ -35,6 +35,7 @@ int readServiceInfo(char * name, struct service * service) {
     char * bufstart, * bufstop, * start, * end, * next;
     struct service serv = { name, -1, -1, -1, NULL };
     char overflow;
+    char levelbuf[20];
 
     sprintf(filename, RUNLEVELS "/init.d/%s", name);
 
@@ -78,9 +79,16 @@ int readServiceInfo(char * name, struct service * service) {
 		return 1;
 	    }
 
-	    if ((sscanf(start, "%d %d %d%c", &serv.levels,
+	    if ((sscanf(start, "%s %d %d%c", levelbuf,
 			&serv.sPriority, &serv.kPriority, &overflow) != 4) ||
 		 overflow != '\n') {
+		if (serv.desc) free(serv.desc);
+		munmap(bufstart, sb.st_size);
+		return 1;
+	    }
+
+	    serv.levels = parseLevels(levelbuf, 0);
+	    if (serv.levels == -1) {
 		if (serv.desc) free(serv.desc);
 		munmap(bufstart, sb.st_size);
 		return 1;
