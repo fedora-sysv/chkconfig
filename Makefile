@@ -1,4 +1,4 @@
-VERSION=0.1
+VERSION=0.2
 CVSTAG = r$(subst .,-,$(VERSION))
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
