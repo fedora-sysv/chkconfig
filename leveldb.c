@@ -104,7 +104,7 @@ int readServiceInfo(char * name, struct service * service) {
 		return 1;
 	    }
 
-	    serv.desc = malloc(end - start);
+	    serv.desc = malloc(end - start + 1);
 	    strncpy(serv.desc, start, end - start);
 	    serv.desc[end - start] = '\0';
 
