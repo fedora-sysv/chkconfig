@@ -2,7 +2,7 @@ Summary: Updates and queries runlevel information for system services
 Name: chkconfig
 %define version 0.9.6
 Version: %{version}
-Release: 3
+Release: 4
 Copyright: GPL
 Group: Utilities/System
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -58,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Sun Jan 10 1999 Matt Wilson <msw@redhat.com>
+- rebuilt for newt 0.40 (ntsysv)
+
 * Tue Dec 15 1998 Jeff Johnson <jbj@redhat.com>
 - add ru.po.
 
