@@ -22,7 +22,7 @@ subdirs:
 	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
-	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt
+	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) /usr/lib/libpopt.a
 
 ntsysv: $(NTOBJS)
 	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
