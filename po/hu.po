@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 1999-03-18 19:49-0500\n"
-"PO-Revision-Date: 1999-04-09 22:01+0200\n"
+"PO-Revision-Date: 1999-09-08 17:44+0200\n"
 "Last-Translator: László Németh <nemeth@qwertynet.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "Nyomja meg az <F1>-et további információkért a szolgáltatásról."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
