@@ -104,10 +104,10 @@ static int servicesWindow(struct service * services, int numServices,
     if (!update) return 1;
 
     for (i = 0; i < numServices; i++) {
-	for (j = 0; j < 7; j++) {
-	    if ((1 << j) & levels)
-		doSetService(services[i], j, states[i] == '*');
-	}
+      for (j = 0; j < 7; j++) {
+	if (services[i].levels & (1 << j))
+	  doSetService(services[i], j, states[i] == '*');
+      }
     }
 
     return 0;
@@ -130,6 +130,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     int numServices = 0;
     int numServicesAlloced, rc;
     int err = 0;
+    int j;
 
     numServicesAlloced = 10;
     services = malloc(sizeof(*services) * numServicesAlloced);
@@ -159,6 +160,15 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	}
 
 	rc = readServiceInfo(ent->d_name, services + numServices);
+	fprintf(stderr, "got service %s, runlevels ",
+		services[numServices].name);
+	for (j = 0; j < 7; j++) {
+	    if (services[numServices].levels & (1 << j)) {
+	      fprintf(stderr,"%d ",j);
+	    }
+	}
+	fprintf(stderr,"\n");
+
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));

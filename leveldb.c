@@ -181,7 +181,7 @@ int readServiceInfo(char * name, struct service * service) {
 		start = next;
 	    }
 
-	    if (desc)
+	    if (desc) {
 	      if (my_lang_loaded) {
                   free(desc);
               } else if (is_my_lang) {
@@ -199,6 +199,7 @@ int readServiceInfo(char * name, struct service * service) {
 
                 english_desc = desc;
               } else free (desc);
+	    }
 	  }
 	}
     }
