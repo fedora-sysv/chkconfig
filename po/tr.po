@@ -16,24 +16,24 @@ msgstr ""
 "Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "kullaným: chkconfig --list [isim]\n"
+msgstr "kullaným:   %s --list [isim]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "          chkconfig --add <isim>\n"
+msgstr "          %s --add <isim>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <isim>\n"
+msgstr "         %s --del <isim>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "          chkconfig [--level <düzeyler>] <isim> <on|off|reset>\n"
+msgstr "          %s [--level <düzeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -120,7 +120,7 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 
 #: ../leveldb.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "glob pattern %s hatasý: %s\n"
 
