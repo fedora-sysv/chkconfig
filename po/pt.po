@@ -4,9 +4,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-02-18 18:32+00:00\n"
-"Last-Translator: José Nuno Coelho Sanarra Pires <jncp@rnl.ist.utl.pt>\n"
+"POT-Creation-Date: 2002-03-08 02:01-0500\n"
+"PO-Revision-Date: 2002-03-08 19:40+0000\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -46,51 +46,58 @@ msgstr "         %s [--level <níveis>] <nome> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
+msgstr "o serviço %s suporta o chkconfig, mas não está registado (execute 'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "o serviço %s não suporta o chkconfig\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "erro ao ler informação sobre o serviço %s: %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "on"
 msgstr "ligado"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "off"
 msgstr "desligado"
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:152
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "impossível abrir %s/init.d: %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:186
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "erro ao ler da directoria %s/init.d: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:194
 msgid "xinetd based services:\n"
 msgstr "servidos baseados no xinetd:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:196
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "impossível abrir a directoria %s: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:299
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versão %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:306
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "só um de --list, --add, ou --del pode ser especificado\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:354
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "só um 'runlevel' pode ser indicado para uma pesquisa do chkconfig\n"
 
@@ -118,44 +125,44 @@ msgstr "Que serviços devem ser automaticamente iniciados?"
 msgid "Services"
 msgstr "Serviços"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "erro ao ler informação para o serviço %s: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "erro ao ler da directoria %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "erro ao ler da directoria %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Tem de ser root para executar %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "argumento inválido para --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nenhuns serviços podem ser geridos pelo ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossível definir o padrão %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
 msgstr "impossível determinar o 'run level' actual\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "impossível criar o 'link' simbólico %s: %s\n"
