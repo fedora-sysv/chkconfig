@@ -407,9 +407,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Nykyinen \"paras\" versio on %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "%d ohjelma(a) tarjoaa sovelluksen \"%s\".\n"
+msgstr "%.0dYksi ohjelma tarjoaa sovelluksen \"%s\".\n"
 
 #: ../alternatives.c:664
 #, c-format
