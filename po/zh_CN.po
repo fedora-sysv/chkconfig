@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-02-03 10:32GMT+10:00\n"
+"PO-Revision-Date: 2003-02-06 09:44GMT+10:00\n"
 "Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "确定"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "返回"
+msgstr "后退"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
