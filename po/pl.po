@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-02-08 19:07+0100\n"
-"Last-Translator: Radosław Zawartko <radzaw@radzaw.one.pl>\n"
+"PO-Revision-Date: 2004-03-14 15:40+0100\n"
+"Last-Translator: Pawel Szopinski <pawel@szopinski.co.uk>\n"
 "Language-Team: POLISH <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,7 +90,7 @@ msgstr "usługi uruchamiane przez xinetd:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "failed to open directory %s: %s\n"
+msgstr "nie powiodło się otwarcie katalogu %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -171,7 +171,7 @@ msgstr "nie powiodła się próba stworzenia symlinka %s: %s\n"
 #: ../alternatives.c:46
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatywne wersje %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
 msgid ""
@@ -183,35 +183,35 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "użycie: alternatywy: --install <link> <nazwa> <ścieżka> <priorytet>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <usługa>]\n"
 
 #: ../alternatives.c:50
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <link> <nazwa> <ścieżka>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatywy --remove <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <nazwa>\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <name>\n"
+msgstr "       alternatives --config <nazwa>\n"
 
 #: ../alternatives.c:54
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <name>\n"
+msgstr "       alternatives --display <nazwa>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
@@ -423,5 +423,5 @@ msgstr "admindir %s niepoprawny\n"
 #: ../alternatives.c:880
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "alternatives wersja %s\n"
+msgstr "alternatywne wersje %s\n"
 
