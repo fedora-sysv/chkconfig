@@ -1,12 +1,12 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.2
+Version: 1.2.3
 Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Prereq: bash fileutils
+Prereq: /etc/init.d
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -48,20 +48,9 @@ done
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%pre
-if [ ! -L /etc/rc.d -a -d /etc/init.d ]; then
-   echo "can't move /etc/rc.d/init.d -> /etc/init.d - bailing"
-   exit 1
-fi
-if [ -d /etc/rc.d -a ! -L /etc/rc.d ]; then
-   mv -f /etc/rc.d/* /etc && rm -rf /etc/rc.d && ln -snf . /etc/rc.d
-fi
-
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
-%dir /etc/init.d
-%dir /etc/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
@@ -73,6 +62,9 @@ fi
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Tue Jul 11 2000 Bill Nottingham <notting@redhat.com>
+- no %pre today. Maybe tomorrow.
+
 * Thu Jul  6 2000 Bill Nottingham <notting@redhat.com>
 - put initscripts %pre here too
 
