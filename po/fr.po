@@ -5,13 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2001-06-12 11:42-0400\n"
-"PO-Revision-Date: 2001-07-25 15:39+0100\n"
-"Last-Translator: Bettina De Monti <bdemonti@redhat.it>\n"
-"Language-Team: French <fr@li.org>\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-03-11 12:17GMT\n"
+"Last-Translator:  <bettina@srldev.it>\n"
+"Language-Team:  <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -47,51 +48,60 @@ msgstr "              %s [--level <niveaux>] <nom> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
+"%s')\n"
+msgstr ""
+"le service %s prend en charge chkconfig, mais il n'est pas enregistré "
+"(exécutez 'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "Le service %s n'est pas pris en charge par chkconfig\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "Marche"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "Arrêt"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Impossible d'ouvrir %s/init.d : %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "Marche"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "Arrêt"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "Services basés sur xinetd : \n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "Impossible d'ouvrir le répertoire %s : %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "spécifiez --list, --add OU --del\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "Vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête "
@@ -99,7 +109,7 @@ msgstr ""
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Appuyez sur <F1> pour plus d'informations sur un service."
+msgstr "Appuyer sur <F1> pour plus d'informations sur un service."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -121,44 +131,44 @@ msgstr "Quels services doivent être démarrés automatiquement ?"
 msgid "Services"
 msgstr "Services"
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s\n"
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "Erreur lors de la lecture à partir du répertoire %s : %s\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Vous devez être root pour pouvoir exécuter %s.\n"
+msgstr "Vous devez être connecté en tant que root pour exécuter %s.\n"
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "Argument incorrect pour --levels\n"
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Aucun service ne peut être administré par ntsysv !\n"
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Echec d'interprétation du motif %s : %s\n"
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Impossible de créer le lien symbolique %s : %s\n"

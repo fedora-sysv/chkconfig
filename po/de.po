@@ -5,18 +5,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2001-06-12 11:42-0400\n"
-"PO-Revision-Date: 2001-07-24 13:05+0100\n"
-"Last-Translator: Claudia Krug <fhonig@redhat.it>\n"
-"Language-Team: German <de@li.org>\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-03-08 10:08GMT\n"
+"Last-Translator: Frigga <frigga@interna.redhat.it>\n"
+"Language-Team: german <C@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s Version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:23
 #: ../chkconfig.c:22
@@ -29,13 +30,13 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Verwendung:   %s --list [Name]\n"
+msgstr "Verwendung:   %s --Liste [Name]\n"
 
 # ../chkconfig.c:27
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <Name>\n"
+msgstr "         %s --hinzufügen <Name>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:27
@@ -49,71 +50,80 @@ msgstr "         %s --del <Name>\n"
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <Level>] <Name> %s)\n"
 
-# ../chkconfig.c:36
 #: ../chkconfig.c:35
 #, c-format
-msgid "service %s does not support chkconfig\n"
-msgstr "Dienst %s unterstützt nicht chkconfig\n"
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
+"%s')\n"
+msgstr ""
+"Service %s unterstützt chkconfig, ist aber nicht registriert ('chkconfig "
+"ausführen --%s' hinzufügen)\n"
 
-# ../chkconfig.c:38
+# ../chkconfig.c:36
 #: ../chkconfig.c:37
 #, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "Service %s unterstützt chkconfig nicht\n"
+
+# ../chkconfig.c:38
+#: ../chkconfig.c:39
+#, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "Fehler beim Lesen von Angaben zu Dienst %s: %s\n"
-
-# ../chkconfig.c:100
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "Ein"
-
-# ../chkconfig.c:100
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "Aus"
+msgstr "Fehler beim Lesen der Informationen über den Service %s: %s\n"
 
 # ../chkconfig.c:117
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
 
+# ../chkconfig.c:100
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "Ein"
+
+# ../chkconfig.c:100
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "Aus"
+
 # ../chkconfig.c:151
-#: ../chkconfig.c:172
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd-Dienst:\n"
+msgstr "xinetd-basierte Service:\n"
 
 # ../chkconfig.c:117
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "Fehler beim Öffnen von %s: %s"
+msgstr "Fehler beim Öffnen des Verzeichnisses %s: %s"
 
 # ../chkconfig.c:231
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s Version %s\n"
 
 # ../chkconfig.c:238
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
 
 # ../chkconfig.c:286
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "nur ein Runlevel darf für eine chkconfig-Anfrage angegeben werden\n"
+msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Weitere Informationen zu einem Dienst erhalten Sie mit <F1>."
+msgstr "Weitere Informationen zu einem Service erhalten Sie mit <F1>."
 
 # ../ntsysv.c:56 ../ntsysv.c:93
 #: ../ntsysv.c:62 ../ntsysv.c:99
@@ -133,59 +143,59 @@ msgstr "Abbrechen"
 # ../ntsysv.c:68
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Welche Dienste sollen automatisch gestartet werden?"
+msgstr "Welche Service sollen automatisch gestartet werden?"
 
 # ../ntsysv.c:74
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Dienste"
+msgstr "Service"
 
 # ../ntsysv.c:164
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "Fehler beim Lesen von Informationen zu Dienst %s: %s\n"
+msgstr "Fehler beim Lesen von Informationen des Services %s: %s\n"
 
 # ../ntsysv.c:173
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
 # ../ntsysv.c:173
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s: %s\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Sie müssen als Root angemeldet sein, um %s auszuführen.\n"
 
 # ../ntsysv.c:219
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "Ungültiges Argument bei --levels\n"
 
 # ../ntsysv.c:226
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Durch ntsysv dürfen keine Dienste verwaltet werden!\n"
+msgstr "Mit ntsysv dürfen keine Service verwaltet werden!\n"
 
 # ../leveldb.c:265
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "Fehler beim Mustervergleich von Muster %s: %s\n"
+msgstr "Fehler beim Mustervergleich des Musters %s: %s\n"
 
 # ../leveldb.c:296
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "aktueller Runlevel kann nicht bestimmt werden\n"
+msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
 # ../leveldb.c:330
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "Fehler beim Herstellen der symbolischen Verknüpfung %s: %s\n"
+msgstr "Fehler beim Erstellen der symbolischen Verknüpfung %s: %s\n"
