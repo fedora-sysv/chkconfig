@@ -110,9 +110,9 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "®iadne slu¾by nemô¾u by» spravované ntsysv!\n"
 
 #: ../leveldb.c:255
-#, c-format
+#, fuzzy, c-format
 msgid "failed to glob pattern %s\n"
-msgstr "nie je mo¾né vyhodnoti» zhodu s maskou %s\n"
+msgstr "nepodarilo sa nájs» zhodu so vzorom %s: %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
