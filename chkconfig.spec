@@ -1,8 +1,8 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.0.1
+%define version 1.0.2
 Version: %{version}
-Release: 3
+Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Mon Mar 15 1999 Bill Nottingham <notting@redhat.com>
+- don't remove scripts that don't support chkconfig
+
 * Tue Mar 09 1999 Erik Troan <ewt@redhat.com>
 - made glob a bit more specific so xinetd and inetd don't cause improper matches
 
