@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-03-15 18:58-0500\n"
+"POT-Creation-Date: 1999-03-18 19:23-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,39 +35,39 @@ msgstr ""
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 msgstr ""
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:34
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:36
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:97
+#: ../chkconfig.c:98
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:97
+#: ../chkconfig.c:98
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:114
+#: ../chkconfig.c:115
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:137
+#: ../chkconfig.c:138
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr ""
 
-#: ../chkconfig.c:211
+#: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:258
+#: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 

@@ -105,7 +105,7 @@ static int servicesWindow(struct service * services, int numServices,
 
     for (i = 0; i < numServices; i++) {
       for (j = 0; j < 7; j++) {
-	if (services[i].levels & (1 << j))
+	if (levels & (1 << j))
 	  doSetService(services[i], j, states[i] == '*');
       }
     }
