@@ -1,0 +1,174 @@
+# Greek translation of chkconf.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Simos Xenitellis <simos@hellug.gr>, 2002.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: chkconf 1.0\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-03-29 11:19+0000\n"
+"Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-7\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s έκδοση %s - Πνευματικά Δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:22
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Μπορείτε να το επαναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας "
+"GNU.\n"
+
+#: ../chkconfig.c:25
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr "χρήση:   %s --list [όνομα]\n"
+
+#: ../chkconfig.c:26
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <όνομα>\n"
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <όνομα>\n"
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--level <επίπεδα>] <όνομα> %s)\n"
+
+#: ../chkconfig.c:35
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
+"%s')\n"
+msgstr ""
+"η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί (εκτελέστε "
+"'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "η υπηρεσία %s δεν υποστηρίζει το chkconfig\n"
+
+#: ../chkconfig.c:39
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "σφάλμα ανάγνωσης πληροφοριών επί της υπηρεσίας %s: %s\n"
+
+#: ../chkconfig.c:98 ../chkconfig.c:248
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "ενεργό"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "ανενεργό"
+
+#: ../chkconfig.c:282
+#, c-format
+msgid "error reading from directory %s/init.d: %s"
+msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s"
+
+#: ../chkconfig.c:290
+msgid "xinetd based services:\n"
+msgstr "υπηρεσίες βασισμένες στο xinetd:\n"
+
+#: ../chkconfig.c:292
+#, c-format
+msgid "failed to open directory %s: %s"
+msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s"
+
+#: ../chkconfig.c:404
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s έκδοση %s\n"
+
+#: ../chkconfig.c:411
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "μπορούν να καθοριστούς μόνο ένα από τα --list, --add ή --del\n"
+
+#: ../chkconfig.c:463
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr ""
+"μόνο ένα επίπεδο εκτέλεσης μπορεί να καθοριστεί σε \n"
+"κάθε χρήση του chkconfig\n"
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "Πατήστε <F1> για περισσότερες πληροφορίες για μια υπηρεσία."
+
+#: ../ntsysv.c:62 ../ntsysv.c:99
+msgid "Ok"
+msgstr "Εντάξει"
+
+#: ../ntsysv.c:62
+msgid "Back"
+msgstr "Πίσω"
+
+#: ../ntsysv.c:62
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ../ntsysv.c:74
+msgid "What services should be automatically started?"
+msgstr "Ποιές υπηρεσίες θέλετε να εκκινούνται αυτόματα;"
+
+#: ../ntsysv.c:80
+msgid "Services"
+msgstr "Υπηρεσίες"
+
+#: ../ntsysv.c:186 ../ntsysv.c:230
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
+
+#: ../ntsysv.c:195
+#, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
+
+#: ../ntsysv.c:239
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s: %s\n"
+
+#: ../ntsysv.c:275
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "Πρέπει να είστε διαχειριστής (root) για να εκτελέσετε το %s.\n"
+
+#: ../ntsysv.c:292
+msgid "bad argument to --levels\n"
+msgstr "εσφαλμένο όρισμα στο --levels\n"
+
+#: ../ntsysv.c:299
+msgid "No services may be managed by ntsysv!\n"
+msgstr "Δεν υπάρχουν υπηρεσίες που μπορεί να διαχειριστεί το ntsysv!\n"
+
+#: ../leveldb.c:507
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "αποτυχία ανάπτυξης σχεδίου %s: %s\n"
+
+#: ../leveldb.c:538
+msgid "cannot determine current run level\n"
+msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
+
+#: ../leveldb.c:626
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
+
