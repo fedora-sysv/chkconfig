@@ -1,12 +1,12 @@
 # Stanislav Meduna <stano@eunet.sk>, 1999.
-# Marcel Telka <marcel@telka.sk>, 2003, 2004.
+# Marcel Telka <marcel@telka.sk>, 2003, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-06-13 09:06+0200\n"
+"PO-Revision-Date: 2005-02-18 18:41+0100\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -396,9 +396,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Aktuálna 'najlepšia' verzia je %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Existuje %d programov, ktoré poskytujú '%s'.\n"
+msgstr "Existuje %d program, ktorý poskytuje '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -454,6 +454,3 @@ msgstr "admindir %s je neplatný\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verzia %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "chyba pri čítaní z adresára %s/init.d: %s\n"
