@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.23
+Version: 1.2.24
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Mon Aug 27 2001 Trond Eivind Glomsrød <teg@redhat.com>
+- Update translations
+
 * Tue Jun 12 2001 Bill Nottingham <notting@redhat.com>
 - don't segfault on files that are exactly the length of a page size
   (#44199, <kmori@redhat.com>)
