@@ -2,13 +2,21 @@ Summary: Updates and queries runlevel information for system services
 Name: chkconfig
 %define version 0.9.3
 Version: %{version}
-Release: 1
+Release: 2
 Copyright: GPL
 Group: Utilities/System
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
 
+%package -n ntsysv
+Summary: Full-screen interface for configurating runlevel information
+
 %changelog
+
+* Sun Aug 02 1998 Erik Troan <ewt@redhat.com>
+
+- built against newt 0.30
+- split ntsysv into a separate package
 
 * Thu May 07 1998 Erik Troan <ewt@redhat.com>
 
@@ -26,6 +34,10 @@ BuildRoot: /var/tmp/chkconfig.root
 chkconfig provides a simple command-line  tool  for  maintaining  the
 /etc/rc.d  directory  hierarchy by relieving system administrators of
 directly manipulating the  numerous symbolic links in that directory.
+
+%description -n ntsysv
+ntsysv provides a full-screen tool for updating the /etc/rc.d directory
+hierarchy, which controls the starting and stopping of system services.
 
 %prep
 %setup
@@ -52,9 +64,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %attr(0755, root, root) /sbin/chkconfig
-%attr(0755, root, root) /usr/sbin/ntsysv
 %attr(0644, root, root) /usr/man/man8/chkconfig.8
-%attr(0644, root, root) /usr/man/man8/ntsysv.8
 %dir %attr(0755, root, root) /etc/rc.d
 %dir %attr(0755, root, root) /etc/rc.d/*
 %attr(0644, root, root) /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
+
+%files -n ntsysv
+%attr(0755, root, root) /usr/sbin/ntsysv
+%attr(0644, root, root) /usr/man/man8/ntsysv.8
