@@ -1,79 +1,75 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Hungarian translation by László Németh <nemeth@qwertynet.hu>,
+# with great help from Andrea Vida <vidaa@bibl.u-szeged.hu> :-)
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 1999-03-18 19:49-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1999-03-20 14:50+0100\n"
+"Last-Translator: L\341szl\363 N\351meth <nemeth@qwertynet.hu>\n"
+"Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ez a szoftver szabadon terjeszthet\365 a GNU Public License szerint.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "usage:   chkconfig --list [n\351v]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "         chkconfig --add <n\351v>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "         chkconfig --del <n\351v>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "         chkconfig [--level <levels>] <n\351v> <on|off|reset>\n"
 
+# , c-format
 #: ../chkconfig.c:34
-#, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "a %s szolg\341ltat\341s nem t\341mogatja a chkconfig haszn\341lat\341t\n"
 
+# , c-format
 #: ../chkconfig.c:36
-#, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "inform\341ci\363 olvas\341si hiba a(z) %s szolg\341ltat\341sn\341l: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
-msgstr ""
+msgstr "be"
 
 #: ../chkconfig.c:98
 msgid "off"
-msgstr ""
+msgstr "ki"
 
+# , c-format
 #: ../chkconfig.c:115
-#, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d nem megnyithat\363: %s\n"
 
+# , c-format
 #: ../chkconfig.c:138
-#, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "%s/init.d k\366nyvt\341r nem olvashat\363: %s"
 
 #: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "a --list, --add \351s --del opci\363k k\366z\374l csak egyet lehet megadni\n"
 
 #: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "csak egy runlevel-t lehet megadni egy chkconfig lek\351rdez\351shez\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Nyomja meg az <F1>-et tov\341bbi inform\341ci\363k\351rt a szolg\341ltat\341sr\363l."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
@@ -81,48 +77,48 @@ msgstr ""
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "M\351gsem"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Milyen szolg\341ltat\341sok induljanak automatikusan?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Szolg\341ltat\341sok"
 
+# , c-format
 #: ../ntsysv.c:164
-#, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "%s szolg\341ltat\341s inform\341ci\363 olvas\341si hiba: %s\n"
 
+# , c-format
 #: ../ntsysv.c:173
-#, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d k\366nyvt\341r nem olvashat\363: %s\n"
 
 #: ../ntsysv.c:218
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "hib\341s --levels argumentum\n"
 
 #: ../ntsysv.c:225
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Az ntsysv semmilyen szolg\341ltat\341st nem kezel!\n"
 
+# , c-format
 #: ../leveldb.c:256
-#, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "nem lehet kibontani %s: %s\n"
 
 #: ../leveldb.c:287
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "az aktu\341lis runlevel nem meg\341llap\355that\363\n"
 
+# , c-format
 #: ../leveldb.c:321
-#, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "%s szimbolikus link nem hozhat\363 l\351tre: %s\n"
