@@ -334,7 +334,7 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
-    if (stat(l->facility, &sb)) {
+    if (lstat(l->facility, &sb)) {
 	    if (FL_TEST(flags)) {
 		    printf(_("would link %s -> %s\n"), l->facility, sl);
 	    } else {
