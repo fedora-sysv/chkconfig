@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-06-28 16:20GMT+10:00\n"
+"PO-Revision-Date: 2002-09-04 09:17GMT+10:00\n"
 "Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr "取消"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "你想自动启动哪些服务？"
+msgstr "您想自动启动哪些服务？"
 
 #: ../ntsysv.c:80
 msgid "Services"
@@ -142,7 +142,7 @@ msgstr "从 %s 目录中读取时出错： %s\n"
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "你必须是根用户才能运行 %s。\n"
+msgstr "您必须是根用户才能运行 %s。\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
