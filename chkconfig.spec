@@ -1,8 +1,8 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.9.3
+%define version 0.9.4
 Version: %{version}
-Release: 2
+Release: 1
 Copyright: GPL
 Group: Utilities/System
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
