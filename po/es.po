@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
+"POT-Creation-Date: 2001-06-12 11:42-0400\n"
 "PO-Revision-Date: 2001-01-30 10:15+1\n"
 "Last-Translator: Nuria Soriano <nsoriano@redhat.it>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -22,7 +22,7 @@ msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Este programa puede ser libremente distribuido bajo los términos de la\n"
+"Este programa se distribuirá libremente distribuido con la\n"
 "licencia pública de GNU.\n"
 
 #: ../chkconfig.c:25
@@ -108,7 +108,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Atrás"
+msgstr "Anterior"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -116,13 +116,13 @@ msgstr "Cancelar"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "¿Qué servicios deben ser ejecutados automáticamente?"
+msgstr "¿Qué servicios se deben ejecutar automáticamente?"
 
 #: ../ntsysv.c:80
 msgid "Services"
 msgstr "Servicios"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "error al leer información para el servicio %s: %s\n"
@@ -132,34 +132,33 @@ msgstr "error al leer información para el servicio %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
-#: ../ntsysv.c:261
-#, c-format
+#: ../ntsysv.c:263
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr " Tiene que ser root para poder ejecutar el programa %s\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "argumento incorrecto para --niveles\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "¡ntsysv no puede gestionar ningún servicio!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "error al incorporar el patrón %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
 msgstr "No se puede determinar el nivel de ejecución actual\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "no se pudo crear el enlace simbólico %s: %s\n"

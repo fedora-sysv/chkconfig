@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-01-29 15:39+0100\n"
+"POT-Creation-Date: 2001-06-12 11:42-0400\n"
+"PO-Revision-Date: 2001-07-25 15:39+0100\n"
 "Last-Translator: Bettina De Monti <bdemonti@redhat.it>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "Quels services doivent être démarrés automatiquement ?"
 msgid "Services"
 msgstr "Services"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
@@ -131,34 +131,34 @@ msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "Erreur lors de la lecture à partir du répertoire %s : %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Vous devez être root pour pouvoir exécuter %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "Argument incorrect pour --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Aucun service ne peut être administré par ntsysv !\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Echec d'interprétation du motif %s : %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
 msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Impossible de créer le lien symbolique %s : %s\n"

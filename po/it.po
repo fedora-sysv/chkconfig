@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-01-29 16:15+1\n"
+"POT-Creation-Date: 2001-06-12 11:42-0400\n"
+"PO-Revision-Date: 2001-07-24 15:50+1\n"
 "Last-Translator: Bettina De Monti <bdemonti@redhat.it>\n"
 "Language-Team: ITALIAN <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +80,7 @@ msgstr "servizi basati su xinetd:\n"
 #: ../chkconfig.c:182
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "impossibile aprire %s: %s"
+msgstr "impossibile aprire la directory %s: %s"
 
 #: ../chkconfig.c:284
 #, c-format
@@ -119,7 +119,7 @@ msgstr "Quale servizio dovrebbe essere automaticamente attivato?"
 msgid "Services"
 msgstr "Servizi"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "errore durante la lettura di informazioni per il servizio %s: %s\n"
@@ -129,34 +129,34 @@ msgstr "errore durante la lettura di informazioni per il servizio %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "errore durante la lettura dalla directory %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "errore durante la lettura dalla directory %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "E' necessario essere collegati come root per eseguire %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "argomento errato a --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "I servizi potrebbero non essere gestiti da ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossibile inglobare il modello %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
-msgstr "non posso determinare l'attuale run level\n"
+msgstr "impossibile determinare l'attuale livello di esecuzione\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "impossibile creare il link simbolico %s: %s\n"
