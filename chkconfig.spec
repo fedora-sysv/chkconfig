@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-Version: 1.1.3
+Version: 1.1.4
 Release: 1
 Copyright: GPL
 Group: System Environment/Base
@@ -37,7 +37,7 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make instroot=$RPM_BUILD_ROOT install
+make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 for n in 0 1 2 3 4 5 6; do
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
-/usr/man/man8/chkconfig.8*
+%{_mandir}/man8/chkconfig.8*
 %dir /etc/rc.d
 %dir /etc/rc.d/*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -n ntsysv
 %defattr(-,root,root)
 /usr/sbin/ntsysv
-/usr/man/man8/ntsysv.8*
+%{_mandir}/man8/ntsysv.8*
 
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
