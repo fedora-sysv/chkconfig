@@ -74,7 +74,7 @@ static int addService(char * name) {
 
 static int showServiceInfo(char * name, int forgiving) {
     int rc;
-    int where, i;
+    int i;
     struct service s;
 
     if ((rc = readServiceInfo(name, &s))) {
@@ -85,10 +85,8 @@ static int showServiceInfo(char * name, int forgiving) {
 
     printf("%s", s.name);
 
-    where = 1;
     for (i = 0; i < 7; i++) {
-	printf(" %d:%s", i, isOn(s.name, where) ? "on" : "off");
-	where <<= 1;
+	printf(" %d:%s", i, isOn(s.name, i) ? "on" : "off");
     }
     printf("\n");
 
@@ -183,7 +181,7 @@ int main(int argc, char ** argv) {
 
     if (argc == 1) usage();
 
-    optCon = poptGetContext("whiptail", argc, argv, optionsTable, 0);
+    optCon = poptGetContext("chkconfig", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
 
     if ((rc = poptGetNextOpt(optCon)) < -1) {
@@ -221,7 +219,7 @@ int main(int argc, char ** argv) {
     } else {
 	char * name = poptGetArg(optCon);
 	char * state = poptGetArg(optCon);
-	int where = 0;
+	int where = 0, level;
 
 	if (levels) {
 	    where = parseLevels(levels, 0);
@@ -233,7 +231,10 @@ int main(int argc, char ** argv) {
 		rc = 0;
 		i = where;
 		while (i) {
-		    if (i & 1) rc++;
+		    if (i & 1) {
+			rc++;
+			level = i;
+		    }
 		    i >>= 1;
 		}
 
@@ -242,9 +243,9 @@ int main(int argc, char ** argv) {
 			    "a chkconfig query\n");
 		    exit(1);
 		}
-	    }
+	    } 
 
-	    return isOn(name, where) ? 0 : 1;
+	    return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
 	    return setService(name, where, 1);
 	else if (!strcmp(state, "off"))

@@ -1,6 +1,6 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.3
+%define version 0.4
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -27,4 +27,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %attr(0755, root, root) /sbin/chkconfig
+%attr(0755, root, root) /usr/sbin/ntsysv
 %attr(0644, root, root) /usr/man/man8/chkconfig.8
+%attr(0644, root, root) /usr/man/man8/ntsysv.8

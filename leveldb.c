@@ -33,7 +33,7 @@ int readServiceInfo(char * name, struct service * service) {
     int fd, i;
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next;
-    struct service serv = { name, -1, -1, -1, NULL };
+    struct service serv = { NULL, -1, -1, -1, NULL };
     char overflow;
     char levelbuf[20];
 
@@ -146,6 +146,8 @@ int readServiceInfo(char * name, struct service * service) {
 	return 1;
     } 
 
+    serv.name = strdup(name);
+
     *service = serv;
     return 0;
 }
@@ -205,14 +207,10 @@ int isConfigured(char * name, int level) {
     return 1;
 }
 
-int isOn(char * name, int where) {
+int isOn(char * name, int level) {
     glob_t globres;
-    int level;
 
-    if (where) {
-	for (level = 0; level < 7; level++)
-	    if (where & (1 << level)) break;
-    } else {
+    if (!level) {
 	level = currentRunlevel();
 	if (level == -1) {
 	    fprintf(stderr, "cannot determine current run level\n");

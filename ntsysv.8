@@ -1,0 +1,26 @@
+.TH NTSYSV 8 "Mon Oct 13 1997"
+.UC 4
+.SH NAME
+ntsysv \- simple interface for configuring runlevels
+.SH SYNOPSIS
+\fBntsysv\fR [--levels <levels>]
+.SH DESCRIPTION
+\fBntsysv\fR is a simple interface for configuring runlevel services which
+are also configurable through \fBchkconfig\fR. By default, it configures
+runlevels 3, 4, and 5. If the user would like to configure other runlevels,
+those levels can be specified on the command line by listing the levels
+after \fB--levels\fR, without any spaces. For example, the option
+\fI--levels 016\fR edits runlevels 0, 1, and 6.
+
+A service is considered to be started in the runlevel set if it is started
+in any of the runlevels which are being edited.
+
+.PD
+.SH "SEE ALSO"
+.BR chkconfig (8),
+.BR tksysv (8)
+
+.SH AUTHOR
+.nf
+Erik Troan <ewt@redhat.com>
+.fi
