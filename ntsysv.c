@@ -121,7 +121,7 @@ static int serviceNameCmp(const void * a, const void * b) {
 }
 
 static int getServices(struct service ** servicesPtr, int * numServicesPtr,
-		       int backButton, char *hidePtr) {
+		       int backButton, int honorHide) {
     DIR * dir;
     struct dirent * ent;
     struct stat sb;
@@ -158,10 +158,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 				numServicesAlloced * sizeof(*services));
 	}
 
-	if (hidePtr && !strcmp(ent->d_name, hidePtr))
-	    continue;
-
-	rc = readServiceInfo(ent->d_name, services + numServices);
+	rc = readServiceInfo(ent->d_name, services + numServices, honorHide);
 	
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
@@ -193,13 +190,12 @@ int main(int argc, char ** argv) {
     int numServices;
     int levels = -1;
     char * levelsStr = NULL;
-    char * hideStr = NULL;
     poptContext optCon;
-    int rc, backButton = 0;
+    int rc, backButton = 0, hide = 0;
     struct poptOption optionsTable[] = {
 	    { "back", '\0', 0, &backButton, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levelsStr, 0 },
-	    { "hide", '\0', POPT_ARG_STRING, &hideStr, 0 },
+	    { "hide", '\0', 0, &hide, 0 },
 	    { 0, 0, 0, 0, 0 } 
     };
 
@@ -225,7 +221,7 @@ int main(int argc, char ** argv) {
 	}
     }
 
-    if (getServices(&services, &numServices, backButton, hideStr)) return 1;
+    if (getServices(&services, &numServices, backButton, hide)) return 1;
     if (!numServices) {
 	fprintf(stderr, _("No services may be managed by ntsysv!\n"));
 	return 2;

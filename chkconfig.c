@@ -45,7 +45,7 @@ static int delService(char * name) {
     glob_t globres;
     struct service s;
 
-    if ((rc = readServiceInfo(name, &s))) {
+    if ((rc = readServiceInfo(name, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }
@@ -64,7 +64,7 @@ static int addService(char * name) {
     int i, rc;
     struct service s;
 
-    if ((rc = readServiceInfo(name, &s))) {
+    if ((rc = readServiceInfo(name, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }
@@ -86,7 +86,7 @@ static int showServiceInfo(char * name, int forgiving) {
     int i;
     struct service s;
 
-    if ((rc = readServiceInfo(name, &s))) {
+    if ((rc = readServiceInfo(name, &s, 0))) {
 	if (!forgiving)
 	    readServiceError(rc, name);
 	return forgiving ? 0 : 1;
@@ -158,7 +158,7 @@ int setService(char * name, int where, int state) {
 	        (1 << 3) | (1 << 4) | (1 << 5) | (1 << 6);
     }
 
-    if ((rc = readServiceInfo(name, &s))) {
+    if ((rc = readServiceInfo(name, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }

@@ -38,7 +38,7 @@ int parseLevels(char * str, int emptyOk) {
     return rc;
 }
 
-int readServiceInfo(char * name, struct service * service) {
+int readServiceInfo(char * name, struct service * service, int honorHide) {
     char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
     int fd, i;
     struct stat sb;
@@ -85,6 +85,15 @@ int readServiceInfo(char * name, struct service * service) {
 	start++;	
 	while (isspace(*start) && start < end) start++;
 	if (start == end) continue;
+	if (honorHide && !strncmp(start, "hide:", 5)) {
+	    start += 5;
+	    while (isspace(*start) && start < end) start++;
+	    if (start == end || !strncmp(start, "true", 4)) {
+		if (serv.desc) free(serv.desc);
+		munmap(bufstart, sb.st_size);
+		return 1;
+	    }
+	}
 
 	if (!strncmp(start, "chkconfig:", 10)) {
 	    start += 10;
