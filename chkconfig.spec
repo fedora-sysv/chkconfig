@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.22
+Version: 1.2.23
 Release: 1
 License: GPL
 Group: System Environment/Base
