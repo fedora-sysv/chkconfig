@@ -2,7 +2,7 @@ Summary: Updates and queries runlevel information for system services
 Name: chkconfig
 %define version 0.9.4
 Version: %{version}
-Release: 3
+Release: 4
 Copyright: GPL
 Group: Utilities/System
 Group(pt_BR): Utilitários/Sistema
