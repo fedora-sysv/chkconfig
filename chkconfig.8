@@ -70,7 +70,9 @@ This option adds a new service for management by \fBchkconfig\fR.
 When a new service is added, \fBchkconfig\fR ensures that the service
 has either a start or a kill entry in every runlevel. If any runlevel
 is missing such an entry, \fBchkconfig\fR creates the appropriate entry
-as specified by the default values in the init script.
+as specified by the default values in the init script. Note that
+default entries in LSB-delimited 'INIT INFO' sections take precedence
+over the default runlevels in the initscript.
 
 .TP
 \fB-\-del\fR \fIname\fR
