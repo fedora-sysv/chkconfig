@@ -1,72 +1,68 @@
-# Portuguese messages for chkconfig
-# Copyright (C) 1998 Free Software Foundation, Inc.
-# Wanderlei Antonio Cavassin <cavassin@conectiva.com.br>, 1998.
-# Thiago Vinhas de Moraes <thiago@vinhas.com.br>, 2001.
-#
+# Portuguese localization of Red Hat Linux
+# Pedro Morais <morais@kde.org>
+# Jos√© Nuno Pires <jncp@netcabo.pt>
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 0.9\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2001-08-14 23:42-03:00\n"
-"Last-Translator: Thiago Vinhas de Moraes <thiago@vinhas.com.br>\n"
-"Language-Team: Portuguese <pt@li.org>\n"
+"PO-Revision-Date: 2002-06-12 11:56+0100\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s vers√£o %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Este programa pode ser livremente redistribuido de acordo com os temos da "
-"licenÁa p˙blica GNU.\n"
+msgstr "Pode ser redistribu√≠do livremente sob os termos da Licen√ßa P√∫blica GNU.\n"
 
 #: ../chkconfig.c:25
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "uso:  chkconfig --list [nome]\n"
+msgstr "utiliza√ß√£o: %s --list [nome]\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "       %s --add <nome>\n"
+msgstr "            %s --add <nome>\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "      chkconfig --del <nome>\n"
+msgstr "            %s --del <nome>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "      chkconfig [--level <nÌveis>] <nome> <on|off|reset>\n"
+msgstr "            %s [--level <n√≠veis de execu√ß√£o>] <nome> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
+msgstr "o servi√ßo %s suporta o chkconfig, mas n√£o est√° registado em qualquer n√≠vel de execu√ß√£o (execute 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "O serviÁo %s n„o tem suporte ao chkconfig\n"
+msgstr "o servi√ßo %s n√£o suporta o chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "erro durante leitura de informaÁıes sobre o serviÁo %s: %s\n"
+msgstr "erro ao ler informa√ß√£o sobre o servi√ßo %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "falha na abertura de %s /init.d: %s\n"
+msgstr "n√£o foi poss√≠vel abrir %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -74,40 +70,38 @@ msgstr "sim"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "n„o"
+msgstr "n√£o"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "erro durante leitura do diretÛrio %s/init.d: %s"
+msgstr "erro ao ler da directoria %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "servidos baseados no xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "falha na abertura de %s /init.d: %s\n"
+msgstr "n√£o foi poss√≠vel abrir a directoria %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s vers√£o %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "somente um entre --list, --add ou --del pode ser especificado\n"
+msgstr "s√≥ pode ser dada uma das op√ß√µes --list, --add, ou --del\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"somente um nÌvel de execuÁ„o pode ser especificado para uma pergunta ao "
-"chkconfig\n"
+msgstr "s√≥ pode ser indicado um n√≠vel de execu√ß√£o para uma pesquisa do chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Pressione <F1> para mais informaÁıes sobre um serviÁo"
+msgstr "Carregue em <F1> para mais informa√ß√µes sobre um servi√ßo."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -123,50 +117,50 @@ msgstr "Cancelar"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Quais serviÁos devem ser iniciados automaticamente?"
+msgstr "Que servi√ßos devem ser automaticamente iniciados?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "ServiÁos"
+msgstr "Servi√ßos"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
-#, fuzzy, c-format
+#, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "erro durante leitura de informaÁıes sobre o serviÁo %s: %s\n"
+msgstr "erro ao ler informa√ß√£o para o servi√ßo %s: %s\n"
 
 #: ../ntsysv.c:195
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "erro durante leitura do diretÛrio %s/init.d: %s"
+msgstr "erro ao ler da directoria %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "erro durante leitura do diretÛrio %s/init.d: %s"
+msgstr "erro ao ler da directoria %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Apenas o utilizador 'root' pode executar %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "argumento inv·lido para --levels\n"
+msgstr "argumento inv√°lido para --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Nenhum serviÁo pode ser gerenciado pelo ntsysv!\n"
+msgstr "N√£o h√° nenhum servi√ßo que possa ser gerido pelo ntsysv!\n"
 
 #: ../leveldb.c:507
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "Falha na expans„o do padr„o %s\n"
+msgstr "imposs√≠vel definir o padr√£o %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "n„o foi possÌvel descobrir o nÌvel de execuÁ„o corrente\n"
+msgstr "n√£o foi poss√≠vel determinar o n√≠vel de execu√ß√£o actual\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "n„o foi possivel criar o link simbÛlico %s: %s\n"
+msgstr "n√£o foi poss√≠vel criar a liga√ß√£o simb√≥lica %s: %s\n"
