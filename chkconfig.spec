@@ -10,6 +10,7 @@ BuildRoot: /var/tmp/chkconfig.root
 
 %package -n ntsysv
 Summary: Full-screen interface for configurating runlevel information
+Group: Utilities/System
 
 %changelog
 
