@@ -7,7 +7,7 @@ MSGMERGE = msgmerge
 
 NLSPACKAGE = chkconfig
 
-CATALOGS = $(shell ls *.po | sed 's/\.mo/\.po/')
+CATALOGS = $(shell ls *.po | sed 's/\.po/\.mo/')
 
 POTFILES  = ../chkconfig.c ../ntsysv.c ../leveldb.c
 

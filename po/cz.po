@@ -8,58 +8,57 @@ msgstr ""
 
 #: ../chkconfig.c:21
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Ceci peut etre librement distribué selon les termes \n"
-"de la licence publique GNU (GPL).\n"
+msgstr "Toto lze volnì distribuovat znovu podle podmínek GPL (GNU Public License).\n"
 
 #: ../chkconfig.c:49
 msgid "service %s does not support chkconfig\n"
-msgstr "le service %s ne supporte pas chkconfig\n"
+msgstr "slu¾ba %s nepodporuje chkconfig\n"
 
 #: ../chkconfig.c:51
 msgid "error reading information on service %s: %s\n"
-msgstr "erreur de lecture d'information sur le service"
+msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
 
 #: ../chkconfig.c:109
 msgid "failed to open "
-msgstr "erreur d'ouverture"
+msgstr "selhalo otevøení "
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 msgid "error reading from directory %s/init.d: %s"
-msgstr "erreur de lecture depuis le répertoire %s/init.d: %s"
+msgstr "chyba pøi ètení z adresáøe %s/init.d: %s"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "un seul de --list, --add, ou --del doit etre spécifié\n"
+msgstr "zadat lze jen jeden z prvkù --list, --add nebo --del\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "Un seul niveau d'éxécution doit etre spécifié pour une requéte chkconfig\n"
+msgstr "v dotazu chkconfig lze zadat jen jednu spou¹tìcí úroveò\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Appuyez sy <F1> pour plus d'informations sur un service."
+msgstr "Stisk <F1> zobrazí o slu¾bì více informací."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Quel servies doivent etre démarré automatiquement ?"
+msgstr "Které slu¾by se mají spou¹tìt automaticky?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr "Services"
+msgstr "Slu¾by"
 
 #: ../leveldb.c:193
 msgid "failed to glob pattern %s\n"
-msgstr "A échoué pour \"*\" %s\n"
+msgstr "selhalo roz¹íøení vzorku %s\n"
 
 #: ../leveldb.c:223
 msgid "cannot determine current run level\n"
-msgstr "Impossible de détérminer le niveau d'éxécution actuel\n"
+msgstr "nelze urèit aktuální spou¹tìcí úroveò\n"
 
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
-msgstr "Echec lors de la création du lien sysmbolique %s: %s\n"
+msgstr "vytvoøení symbolického propojení %s selhalo: %s\n"
+
