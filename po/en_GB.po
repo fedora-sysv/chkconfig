@@ -398,9 +398,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Current `best' version is %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "There are %d programs which provide '%s'.\n"
+msgstr "There is %d program which provides '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
