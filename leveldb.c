@@ -190,9 +190,11 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 		}
 		while (isspace(*buf) && buf < ptr) buf++;
 		if (!strncmp(buf,"disable", 7)) {
-			buf = strstr(buf,"=")+1;
-			if (buf)
-			  while (isspace(*buf)) buf++;
+			buf = strstr(buf,"=");
+			if (buf) 
+			  do {
+				  buf++;
+			  } while(isspace(*buf));
 
 			if (buf && strncmp(buf,"yes",3)) {
 				serv.levels = parseLevels("0123456",0);
