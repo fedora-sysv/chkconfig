@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-01-13 17:32+0100\n"
+"PO-Revision-Date: 2001-02-19 22:45+0100\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgstr "erro lendo do directorio %s: %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Ten que ser root para executar %s.\n"
 
 #: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
