@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2000-08-09 23:24+09:00\n"
 "Last-Translator: Dmytro Koval'ov <kov@tokyo.email.ne.jp>\n"
 "Language-Team: Comizdat <soft@cw.comizdat.com>\n"
@@ -42,51 +42,58 @@ msgstr "         %s [--level <р╕вн╕>] <служба> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "служба %s не п╕дтриму╓ chkconfig\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "помилка читання ╕нформац╕╖ у служб╕ %s: %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "on"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "off"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "неможливо в╕дкрити %s/init.d: %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "on"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "off"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "помилка читання з каталогу %s/init.d: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "серв╕си, що базуються на xinetd:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "неможливо в╕дкрити директор╕ю %s: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s верс╕я %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "можна вказати лише один аргумент з --list, --add або --del\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "можна вказувати т╕льки один показник р╕вня для запиту chkconfig\n"
 
@@ -114,44 +121,44 @@ msgstr "Як╕ служби треба запускати автоматично?"
 msgid "Services"
 msgstr "Служби"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "помилка читання даних для служби %s: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "помилка читання з каталогу %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "помилка читання з каталогу %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "нев╕рний аргумент в --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Не ╕сну╓ служб, керованих ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "неможливо визначити дан╕ для %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr "неможливо визначити поточний показник\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "неможливо створити символ╕чне посилання %s: %s\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
-"POT-Creation-Date: 2002-03-06 22:12+0100\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2001-02-28 13:19+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -43,51 +43,58 @@ msgstr "         %s [--level <levels>] <navn> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "tjeneste %s støtter ikke chkconfig\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "klarte ikke å finne informasjon om tjeneste %s: %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "på"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "av"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "klarte ikke å åpne %s/init.d: %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "på"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "av"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "klarte ikke å lese fra katalog %s/init.d: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd baserte tjenester:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "klarte ikke å åpne katalog %s: %s"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versjon %s\n"
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "du kan bare bruke ett av flaggene --list, --add og --del\n"
 
-#: ../chkconfig.c:340
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "du kan bare spesifisere ett kjøringsnivå for en chkconfig spørring\n"
 
@@ -115,44 +122,44 @@ msgstr "Hvilke tjenester skal startes automatisk?"
 msgid "Services"
 msgstr "Tjenester"
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "feil under lesing av informasjon for tjeneste %s: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "feil under lesing fra katalog %s/init.d: %s\n"
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "feil under lesing fra katalog %s: %s\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Du må være root for å kjøre %s.\n"
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "galt argument til --levels\n"
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "klarte ikke å finne treff til mønsteret %s: %s\n"
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr "klarer ikke å bestemme nåværende runlevel\n"
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "klarte ikke å lage symlinken %s: %s\n"

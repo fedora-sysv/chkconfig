@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2002-03-21 11:51GMT+10.00\n"
 "Last-Translator: Michelle Kim <mkim@brisbane.redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -19,8 +19,10 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s %s                       Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -43,10 +45,10 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "          %s [--level <레벨>] <이름> %s)\n"
 
 #: ../chkconfig.c:35
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
-"s')\n"
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
 "서비스 %s 는 chkconfig를 지원하지만 등록되지 않았습니다 ( 'chkconfig --add %"
 "s' 실행)\n"
@@ -171,4 +173,3 @@ msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s 심볼릭 링크 파일을 생성하는데 실패했습니다: %s\n"
-

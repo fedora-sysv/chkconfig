@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2002-03-08 10:08GMT\n"
 "Last-Translator: Frigga <frigga@redhat.it>\n"
 "Language-Team: german <C@li.org>\n"
@@ -51,13 +51,13 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <Levels>] <Name> %s)\n"
 
 #: ../chkconfig.c:35
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
-"%s')\n"
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
-"Dienst %s unterstützt chkconfig, ist aber nicht registriert (Führen Sie 'chkconfig "
-"--add %s' um ihn zu registrieren)\n"
+"Dienst %s unterstützt chkconfig, ist aber nicht registriert (Führen Sie "
+"'chkconfig --add %s' um ihn zu registrieren)\n"
 
 # ../chkconfig.c:36
 #: ../chkconfig.c:37

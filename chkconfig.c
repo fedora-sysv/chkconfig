@@ -32,7 +32,7 @@ static void usage(void) {
 
 static void readServiceError(int rc, char * name) {
     if (rc == 2) {
-	fprintf(stderr, _("service %s supports chkconfig, but is not registered (run 'chkconfig --add %s')\n"), name, name);
+	fprintf(stderr, _("service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"), name, name);
     } else if (rc == 1) {
 	fprintf(stderr, _("service %s does not support chkconfig\n"), name);
     } else {

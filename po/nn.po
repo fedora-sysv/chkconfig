@@ -2,11 +2,10 @@
 # Copyright (C) 2000 Gaute Hvoslef Kvalnes.
 # Gaute Hvoslef Kvalnes <ai98ghk@stud.hib.no>, 2000
 # Kjartan Maraas <kmaraas@gnome.org>, 2001.
-
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-06-12 11:42-0400\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2001-06-25 18:55+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian (Nynorsk)\n"
@@ -47,52 +46,59 @@ msgstr ""
 
 #: ../chkconfig.c:35
 #, c-format
-msgid "service %s does not support chkconfig\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
 
 #: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr ""
+
+#: ../chkconfig.c:39
 #, fuzzy, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "feil ved lesing frå fila %1\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "på"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "av"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "på"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "av"
+
+#: ../chkconfig.c:282
 #, fuzzy, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "feil ved lesing frå fila %1"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 #, fuzzy
 msgid "xinetd based services:\n"
 msgstr "&Peikar til teneste:"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, fuzzy, c-format
 msgid "failed to open directory %s: %s"
 msgstr "Standard opningskatalog"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, fuzzy, c-format
 msgid "%s version %s\n"
 msgstr " Versjon "
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
@@ -121,46 +127,45 @@ msgstr ""
 msgid "Services"
 msgstr "Tenester"
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, fuzzy, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "feil ved lesing frå fila %1\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, fuzzy, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "feil ved lesing frå fila %1\n"
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, fuzzy, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "feil ved lesing frå fila %1\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, fuzzy, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Orsak, du må vera rot for å montera denne disken"
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Kunne ikkje lasta biletet '%1'\n"
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 #, fuzzy
 msgid "cannot determine current run level\n"
 msgstr "Finn ikkje ut skrivartypen"
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
-

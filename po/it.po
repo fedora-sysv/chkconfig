@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2002-03-08 17:07GMT\n"
 "Last-Translator:  <marisa@redhat.it>\n"
 "Language-Team:  <en@li.org>\n"
@@ -47,10 +47,10 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s  [--level] <livelli>] <nome> %s)\n"
 
 #: ../chkconfig.c:35
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
-"%s')\n"
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
 "il servizio %s supporta chkconfig, ma non è registrato (eseguire 'chkconfig "
 "--add %s')\n"

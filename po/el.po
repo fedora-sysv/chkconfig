@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconf 1.0\n"
-"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2002-03-29 11:19+0000\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -46,10 +46,10 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <επίπεδα>] <όνομα> %s)\n"
 
 #: ../chkconfig.c:35
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"service %s supports chkconfig, but is not registered (run 'chkconfig --add "
-"%s')\n"
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
 "η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί (εκτελέστε "
 "'chkconfig --add %s')\n"
@@ -171,4 +171,3 @@ msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
-

@@ -1,12 +1,12 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.19 2002/03/09 00:45:49 menthos Exp $
+# $Id: sv.po,v 1.20 2002/06/12 05:14:15 notting Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2002-03-08 02:01-0500\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
 "PO-Revision-Date: 2002-03-09 01:44+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -46,13 +46,13 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "              %s [--level <nivåer>] <namn> %s)\n"
 
 #: ../chkconfig.c:35
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
-"s')\n"
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
-"tjänsten %s stöder chkconfig men är inte registrerad (kör \"chkconfig "
-"--add %s\")\n"
+"tjänsten %s stöder chkconfig men är inte registrerad (kör \"chkconfig --add %"
+"s\")\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -64,43 +64,43 @@ msgstr "tjänsten %s stöder inte chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
-#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
-msgid "on"
-msgstr "på"
-
-#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
-msgid "off"
-msgstr "av"
-
-#: ../chkconfig.c:152
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "misslyckades med att öppna %s/init.d: %s\n"
 
-#: ../chkconfig.c:186
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "på"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "av"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "fel vid läsning från katalogen %s/init.d: %s"
 
-#: ../chkconfig.c:194
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd-baserade tjänster:\n"
 
-#: ../chkconfig.c:196
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "misslyckades med att öppna katalogen %s: %s"
 
-#: ../chkconfig.c:299
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:306
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "endast en av --list, --add eller --del kan anges\n"
 
-#: ../chkconfig.c:354
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
@@ -156,16 +156,16 @@ msgstr "felaktigt argument till --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
