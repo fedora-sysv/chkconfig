@@ -1,13 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# Richard Allen <ra@hp.is>, 1999.
-#
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 1.9\n"
+"Project-Id-Version: chkconfig 1.11\n"
 "POT-Creation-Date: 2000-07-18 00:53-0400\n"
-"PO-Revision-Date: 2000-01-31 03:31+0000\n"
+"PO-Revision-Date: 2000-07-31 16:30+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -69,12 +64,12 @@ msgstr "villa við lestur úr möppu %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "þjónustur úr xinetd:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "gat ekki opnað %s/init.d: %s\n"
+msgstr "gat ekki opnað möppuna %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -124,9 +119,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "villa við lestur úr möppu %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "villa við lestur úr möppu %s/init.d: %s\n"
+msgstr "villa við lestur úr möppunni %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
