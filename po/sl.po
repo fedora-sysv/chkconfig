@@ -1,14 +1,14 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Roman Maurer <roman@lugos.si>, 2001.
-# $Id: sl.po,v 1.18 2003/10/24 13:26:39 notting Exp $
+# $Id: sl.po,v 1.19 2004/01/11 17:36:28 romanm Exp $
 # $Source: /home/notting/prog/cvs-fu/chkconfig/po/Attic/sl.po,v $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 9.1\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-07-13 18:25+0200\n"
+"PO-Revision-Date: 2004-01-11 18:41+0100\n"
 "Last-Translator: Roman Maurer <roman@lugos.si>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -87,9 +87,9 @@ msgid "xinetd based services:\n"
 msgstr "Storitve, osnovane z xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "ni moč odpreti imenika %s: %s"
+msgstr "ni moč odpreti imenika %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -415,6 +415,3 @@ msgstr "admindir %s neveljaven\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives različice %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "napaka pri branju iz imenika %s/init.d: %s"
