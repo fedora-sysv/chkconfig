@@ -62,4 +62,4 @@ archive:
 	@mv /tmp/chkconfig /tmp/chkconfig-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/chkconfig-$(VERSION).tar.gz chkconfig-$(VERSION)
 	@rm -rf /tmp/chkconfig-$(VERSION)
-	@echo "The archive is in chkconfig-$(VERSION)"
+	@echo "The archive is in chkconfig-$(VERSION).tar.gz"
