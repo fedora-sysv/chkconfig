@@ -4,19 +4,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Hariram Aatreya <hari@localhost.localdomain>, 2003.
 # Jayaradha N <jaya@pune.redhat.com>, 2004.
+# Jayaradha <njaya@redhat.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "POT-Creation-Date: 2005-02-10 17:54-0500\n"
-"PO-Revision-Date: 2004-09-22 15:32+0530\n"
-"Last-Translator: Jayaradha N <jaya@pune.redhat.com>\n"
+"PO-Revision-Date: 2005-03-22 12:09+0530\n"
+"Last-Translator: Jayaradha <njaya@redhat.com>\n"
 "Language-Team: Tamil <zhakanini@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
@@ -27,8 +28,7 @@ msgstr "%s பதிப்பு %s - காப்புரிமை (C) 1997-20
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "இதை GNU பொது உரிமத்தின் கீழ் இலவசமாக விநியோகிக்கலாம் \n"
 
 #: ../chkconfig.c:25
@@ -410,11 +410,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "தற்போதிய சிறந்த பதிப்பு %s.\n"
 
 #: ../alternatives.c:663
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
-"%d நிரல்கள் '%s' ஐ கொடுக்கும்.\n"
-"\n"
+msgstr "%d நிரல்கள் '%s' ஐ கொடுக்கும்.\n"
 
 #: ../alternatives.c:663
 #, c-format
@@ -472,7 +470,3 @@ msgstr "admindir %s செல்லாது\n"
 msgid "alternatives version %s\n"
 msgstr "மாற்று பதிப்பு %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr ""
-#~ "அடைவு %s/init.d: %s\n"
-#~ "-லிருந்து படித்தலில் பிழை\n"
