@@ -6,6 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.6\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"PO-Revision-Date: 1999-09-12 21:20+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarang.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,24 +19,24 @@ msgid ""
 msgstr "이 프로그램은 GNU Public License하에서 자유롭게 재배포가 가능합니다.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "사용법:  chkconfig --list [이름]\n"
+msgstr "사용법:  %s --list [이름]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <이름>\n"
+msgstr "         %s --add <이름>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <이름>\n"
+msgstr "         %s --del <이름>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <런레벨>] <이름> <on|off|reset>\n"
+msgstr "         %s [--level <런레벨>] <이름> %s\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -68,11 +69,11 @@ msgstr "%s/init.d 디렉토리를 읽는 중 오류: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s 버젼 %s"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "--list, --add, --del 중에 하나만을 사용해야 함\n"
 
 #: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
