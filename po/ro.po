@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.22 1999/03/17 06:20:48 i18n Exp $
+# $Id: ro.po,v 1.23 1999/03/17 07:30:33 gafton Exp $
 #
 msgid ""
 msgstr ""
@@ -50,7 +50,7 @@ msgstr ""
 # , fuzzy, c-format
 #: ../chkconfig.c:109
 msgid "failed to open %s/init.d: %s\n"
-msgstr "eroare la deschidere"
+msgstr "eroare la deschidere\n"
 
 # , c-format
 #: ../chkconfig.c:130 ../ntsysv.c:168
