@@ -1,7 +1,7 @@
 #ifndef H_LEVELDB
 #define H_LEVELDB
 
-#define RUNLEVELS "/etc/rc.d"
+#define RUNLEVELS "/etc"
 
 #include <glob.h>
 

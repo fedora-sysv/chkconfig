@@ -17,14 +17,14 @@ chkconfig \- updates and queries runlevel information for system services
 
 .SH DESCRIPTION
 \fBchkconfig\fR provides a simple command-line tool for maintaining the
-/etc/rc.d directory hierarchy by relieving system administrators of
+/etc/rc[0-6].d directory hierarchy by relieving system administrators of
 the task of directly manipulating the numerous symbolic links in those
 directories.
 
 This implementation of \fBchkconfig\fR was inspired by the \fBchkconfig\fR
 command present in the IRIX operating system. Rather than maintaining 
-configuration information outside of the /etc/rc.d hierarchy, however,
-this version directly manages the symlinks in /etc/rc.d. This leaves all
+configuration information outside of the /etc/rc[0-6].d hierarchy, however,
+this version directly manages the symlinks in /etc/rc[0-6].d. This leaves all
 of the configuration information regarding what services \fIinit\fR
 starts in a single location.
 
@@ -75,7 +75,7 @@ as specified by the default values in the init script.
 .TP
 \fB-\-del\fR \fIname\fR
 The service is removed from \fBchkconfig\fR management, and any symbolic
-links in /etc/rc.d which pertain to it are removed.
+links in /etc/rc[0-6].d which pertain to it are removed.
 
 .TP
 \fB-\-list\fR \fIname\fR
