@@ -29,4 +29,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755, root, root) /sbin/chkconfig
 %attr(0644, root, root) /usr/man/man8/chkconfig.8
 %attr(0644, root, root) /usr/man/man5/chkconfigtab.5
-%ghost /var/lib/chkconfigtab
+#%ghost /var/lib/chkconfigtab
