@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-03-08 19:40+0000\n"
+"PO-Revision-Date: 2002-06-12 11:56+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,38 +20,34 @@ msgstr "%s versão %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Isto pode ser redistribuído sem custos sob os termos da Licença Pública "
-"GNU.\n"
+msgstr "Pode ser redistribuído livremente sob os termos da Licença Pública GNU.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "uso:   %s --list [nome]\n"
+msgstr "utilização: %s --list [nome]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <nome>\n"
+msgstr "            %s --add <nome>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <nome>\n"
+msgstr "            %s --del <nome>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <níveis>] <nome> %s)\n"
+msgstr "            %s [--level <níveis de execução>] <nome> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"o serviço %s suporta o chkconfig, mas não está registado (execute 'chkconfig "
-"--add %s')\n"
+msgstr "o serviço %s suporta o chkconfig, mas não está registado em qualquer nível de execução (execute 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -66,15 +62,15 @@ msgstr "erro ao ler informação sobre o serviço %s: %s\n"
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "impossível abrir %s/init.d: %s\n"
+msgstr "não foi possível abrir %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "ligado"
+msgstr "sim"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "desligado"
+msgstr "não"
 
 #: ../chkconfig.c:282
 #, c-format
@@ -88,7 +84,7 @@ msgstr "servidos baseados no xinetd:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "impossível abrir a directoria %s: %s"
+msgstr "não foi possível abrir a directoria %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -97,15 +93,15 @@ msgstr "%s versão %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "só um de --list, --add, ou --del pode ser especificado\n"
+msgstr "só pode ser dada uma das opções --list, --add, ou --del\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "só um 'runlevel' pode ser indicado para uma pesquisa do chkconfig\n"
+msgstr "só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Carregue <F1> para mais informação sobre um serviço."
+msgstr "Carregue em <F1> para mais informações sobre um serviço."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -113,7 +109,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Atrás"
+msgstr "Voltar"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -145,7 +141,7 @@ msgstr "erro ao ler da directoria %s: %s\n"
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Tem de ser root para executar %s.\n"
+msgstr "Apenas o utilizador 'root' pode executar %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -153,7 +149,7 @@ msgstr "argumento inválido para --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Nenhuns serviços podem ser geridos pelo ntsysv!\n"
+msgstr "Não há nenhum serviço que possa ser gerido pelo ntsysv!\n"
 
 #: ../leveldb.c:507
 #, c-format
@@ -162,9 +158,9 @@ msgstr "impossível definir o padrão %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "impossível determinar o 'run level' actual\n"
+msgstr "não foi possível determinar o nível de execução actual\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "impossível criar o 'link' simbólico %s: %s\n"
+msgstr "não foi possível criar a ligação simbólica %s: %s\n"
