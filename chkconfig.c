@@ -17,12 +17,33 @@ static void usage(void) {
     fprintf(stderr, "This may be freely redistributed under the terms of "
 			"the GNU Public License.\n");
     fprintf(stderr, "\n");
-    fprintf(stderr, "usage:   chkconfig {--list} [name]\n");
-    fprintf(stderr, "         chkconfig {--add} <name> <levels> <startpri> <killpri> <desc>\n");
-    fprintf(stderr, "         chkconfig {--del} <name>\n");
-    fprintf(stderr, "         chkconfig [--level <levels> <name> [on|off|reset]\n");
+    fprintf(stderr, "usage:   chkconfig --list [name]\n");
+    fprintf(stderr, "         chkconfig --add <name> <levels> <startpri> <killpri> <desc>\n");
+    fprintf(stderr, "         chkconfig --del <name>\n");
+    fprintf(stderr, "         chkconfig [--level <levels>] <name> <on|off|reset>\n");
 
     exit(1);
+}
+
+/* returns -1 on error */
+static int currentRunlevel(void) {
+    FILE * p;
+    char response[50];
+
+    p = popen("/sbin/runlevel", "r");
+    if (!p) return -1;
+
+    if (!fgets(response, sizeof(response), p)) {
+	pclose(p);
+	return -1;
+    }
+
+    pclose(p);
+
+    if (response[1] != ' ' || !isdigit(response[2]) || response[3] != '\n') 
+	return -1;
+
+    return response[2] - '0';
 }
 
 int findMatches(char * name, int level, glob_t * globresptr) {
@@ -67,7 +88,11 @@ static int isOn(char * name, int where) {
 	for (level = 0; level < 7; level++)
 	    if (where & (1 << level)) break;
     } else {
-	level = 3;
+	level = currentRunlevel();
+	if (level == -1) {
+	    fprintf(stderr, "cannot determine current run level\n");
+	    return 0;
+	}
     }
 
     if (findMatches(name, level, &globres))

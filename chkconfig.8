@@ -1,0 +1,108 @@
+.TH CHKCONFIG 8 "Wed Oct 8 1997"
+.UC 4
+.SH NAME
+chkconfig \- updates and queries runlevel information for system services
+
+.SH SYNOPSIS
+\fBchkconfig\fR \fB--list\fR [\fIname\fR]
+.br
+\fBchkconfig\fR \fB--add\fR \fIname\fR \fIlevels\fR \fIstartpri\fR \fIkillpri\fR \fIdesc\fR
+.br
+\fBchkconfig\fR \fB--del\fR \fIname\fR
+.br
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR>
+.br
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR 
+.br
+
+.SH DESCRIPTION
+\fBchkconfig\fR provides a simple command-line tool for maintaining the
+/etc/rc.d directory hierarchy by relieving system administrators of
+directly manipulating the numerous symbolic links in that directory.
+
+This implementation of \fBchkconfig\fR was inspired by the \fBchkconfig\fR
+command present in the Irix operating system. Rather then maintaining 
+configuration information outside of the /etc/rc.d hierarchy, however,
+this version directly manages the symlinks in /etc/rc.d. This leaves all
+of the configuration information regarding what services \fIinit\fR
+starts in a single location.
+
+\fBchkconfig\fR has five distinct functions: adding new services for
+management, removing services from management, listing the current
+startup information for services, changing the startup information
+for services, and checking the startup state of a particular service.
+
+When \fBchkconfig\fR is run without any options, it displays usage information.
+If only a service name is given, it checks to see if the service is
+configured to by started in the current runlevel. If it is, \fBchkconfig\fR
+returns 0, otherwise is returns 1. The \fB--level\fR may be used to 
+have \fBchkconfig\fR query an alternate runlevel rather then the current
+one.
+
+If one of \fBon\fR, \fBoff\fR, or \fRreset\fR is specified after the
+service name, \fBchkconfig\fR changes the startup information for the
+specified service. By default, \fBon\fR and \fBoff\fR only affect runlevels
+3, 4, and 5, while \fBreset\fR affects all of the runlevels. The \fBon\fR
+and \fBoff\fR flags cause the service to be started or stopped, while
+\fBreset\fR resets the startup information for the service to whatever
+was initially specified when the service was added to the \fBchkconfig\fR
+service database. Again, the \fB--level\fR option may be used to specify
+which runlevels are affected.
+
+.SH OPTIONS
+.TP
+\fB-\-levels \fIlevels\fR
+Specifies the run levels an operation should pertain to. It is given as
+a string of numbers from 0 to 7. For example, \fB--levels 35\fR specifies
+runlevels 3 and 5.
+
+.TP
+\fB-\-add\fR \fIname\fR \fIlevels\fR \fIstartpri\fR \fIkillpri\fR \fIdesc\fR
+
+This option adds a new service for management by \fBchkconfig\fR. The
+\fIlevels\fR specify which runlevels the service should be started in
+by default, the \fIstartpri\fR is the numeric priority which defines
+when the service should be started, the \fIkillpri\fR is the priorty
+for stopping the service, and \fIdesc\fR is a description of the service.
+Both priorities are used when naming the symlinks created in /etc/rc.d.
+
+When a new service is added, \fBchkconfig\fR insures that the service
+has either a start or a kill entry in every runlevel. If any runlevel
+is missing such an entry, \fBchkconfig\fR creates the appropriate entry
+as specified by the default levels specification.
+
+.TP
+\fB-\-del\fR \fIname\fR
+The service is removed from \fBchkconfig\fR management, and any symbolic
+links in /etc/rc.d which pertain to it are removed.
+
+.TP
+\fB-\-list\fR \fIname\fR\
+This option lists all of the services which \fBchkconfig\fR knows about,
+and whether they are stopped or started in each runlevel. If \fIname\fR
+is specified, information in only display about service \fIname\fR.
+
+.SH DATABASE FILE
+
+While /etc/rc.d is the only location which stores information on what
+services are started in a particular runlevel, \fBchkconfig\fR maintains
+an ancillary database of service information in \fB/etc/chkconfig.db\fR. This
+database consists of service names, default runlevels which the service runs
+in, the start and kill priorities for the service, and a description of
+the service. 
+
+.SH FILES
+
+.PD 0
+.TP 20
+\fI/etc/chkconfig.db\fR
+List of services maintained by \fBchkconfig\fR
+
+.SH SEE ALSO
+.IR init (8)
+.IR tksysv (8)
+
+.SH AUTHOR
+.nf
+Erik Troan <ewt@redhat.com>
+.fi
