@@ -10,12 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:23
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Dette program må distribueres frit under vilkårene i GPL - GNU offentlig "
-"licens.\n"
+"Dette program må distribueres frit under vilkårene i GNU Public license.\n"
 
 #: ../chkconfig.c:26
 #, c-format
