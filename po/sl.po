@@ -1,12 +1,12 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Roman Maurer <roman.maurer@hermes.si>, 1999.
-# $Id: sl.po,v 1.2 1999/09/18 16:22:50 i18n Exp $
+# $Id: sl.po,v 1.3 1999/12/03 19:33:00 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-09-18 18:20+0200\n"
 "Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -76,7 +76,7 @@ msgstr "%s razlièice %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "doloèite lahko le eno od izbir --list, --add ali --del\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "v posamezni zahtevi chkconfig lahko doloèite le eno raven teka\n"
 

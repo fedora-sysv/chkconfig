@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.8\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-09-18 00:33+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -76,7 +76,7 @@ msgstr "%s útgáfa %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "einungis má nefna eitt af --list, --add eða --del viðföngunum\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 

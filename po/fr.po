@@ -5,6 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.1\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-09-03\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -20,68 +21,79 @@ msgstr ""
 "publique GNU (GPL).\n"
 
 # ../chkconfig.c:24
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
+#: ../chkconfig.c:26
+#, fuzzy, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr "Utilisation :   chkconfig --list [nom]\n"
 
 # ../chkconfig.c:25
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
+#: ../chkconfig.c:27
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
 msgstr "         chkconfig --add <nom>\n"
 
 # ../chkconfig.c:26
-#: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#: ../chkconfig.c:28
+#, fuzzy, c-format
+msgid "         %s --del <name>\n"
 msgstr "         chkconfig --del <nom>\n"
 
 # ../chkconfig.c:27
-#: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#: ../chkconfig.c:29
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         chkconfig [--level <niveaux>] <nom> <on|off|reset>\n"
 
 # ../chkconfig.c:49
-#: ../chkconfig.c:49
+#: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "Le service %s ne gère pas chkconfig\n"
 
 # ../chkconfig.c:51
-#: ../chkconfig.c:51
+#: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 
 # ../chkconfig.c:93
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "Marche"
 
 # ../chkconfig.c:93
-#: ../chkconfig.c:93
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "Arrêt"
 
 # ../chkconfig.c:109
-#: ../chkconfig.c:109
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Impossible d'ouvrir %s/init.d : %s\n"
 
 # ../chkconfig.c:130 ../ntsysv.c:168
-#: ../chkconfig.c:130 ../ntsysv.c:168
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s"
 
+#: ../chkconfig.c:231
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
 # ../chkconfig.c:204
-#: ../chkconfig.c:204
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "Spécifiez --list, --add OU --del.\n"
 
 # ../chkconfig.c:251
-#: ../chkconfig.c:251
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "Vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête chkconfig\n"
+msgstr ""
+"Vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête "
+"chkconfig\n"
 
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
@@ -113,29 +125,41 @@ msgstr "Quels services doivent être démarrés automatiquement ?"
 msgid "Services"
 msgstr "Services"
 
+# ../chkconfig.c:51
+#: ../ntsysv.c:164
+#, fuzzy, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
+
+# ../chkconfig.c:130 ../ntsysv.c:168
+#: ../ntsysv.c:173
+#, fuzzy, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "Erreur lors de la lecture à partir du répertoire %s/init.d : %s"
+
 # ../ntsysv.c:213
-#: ../ntsysv.c:213
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr "Argument incorrect pour --levels\n"
 
 # ../ntsysv.c:220
-#: ../ntsysv.c:220
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Aucun service ne peut être administré par ntsysv!\n"
 
 # ../leveldb.c:255
-#: ../leveldb.c:255
-#, c-format
-msgid "failed to glob pattern %s\n"
+#: ../leveldb.c:265
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
 msgstr "Echec de commutation du mode pour l'expression %s\n"
 
 # ../leveldb.c:285
-#: ../leveldb.c:285
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "Impossible de déterminer le niveau d'exécution actuel\n"
 
 # ../leveldb.c:319
-#: ../leveldb.c:319
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Impossible de créer le lien symbolique %s : %s\n"

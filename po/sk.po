@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9.4\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-09-12 17:08+02:00\n"
 "Last-Translator: Stanislav Meduna <stano@eunet.sk>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
@@ -72,7 +72,7 @@ msgstr "%s verzia %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "mô¾e by» zadaná iba jedna z volieb --list, --add alebo --del\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "pre chkconfig otázku mô¾e by» zadaná iba jedna úroveò\n"
 

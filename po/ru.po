@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1998-11-28 12:50+0200\n"
 "Last-Translator: Leon Kanter <leon@geon.donetsk.ua>\n"
 "Language-Team: DonLUG <donlug@geon.donetsk.ua>\n"
@@ -75,7 +75,7 @@ msgstr "%s версия %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "может быть указана лишь одна команда: --list, --add, или --del\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 "Только один уровень выполнения может быть указан для запроса chkconfig\n"

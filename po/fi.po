@@ -7,7 +7,7 @@
 # First version.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "Last-Translator: Raimo Koski <rkoski@pp.weppi.fi>\n"
 "Language-Team: Finnish <linux@sot.com>\n"
 "Content-Type: text/plain; charset=\n"
@@ -79,7 +79,7 @@ msgstr ""
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "vain yht‰ joukosta --list, --add tai --del voidaan k‰ytt‰‰\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "vain yksi ajotaso voidaan m‰‰ritell‰ chkconfig:n kyselylle\n"
 

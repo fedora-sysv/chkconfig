@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-04-04 02:44+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Gelecek A.Þ <gorkem@gelecek.com.tr>\n"
@@ -72,7 +72,7 @@ msgstr "%s surum %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 "chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"

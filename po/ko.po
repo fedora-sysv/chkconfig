@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.6\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-09-13 21:42+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarang.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -75,7 +75,7 @@ msgstr "%s 버젼 %s\n"
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, --del 중에 하나만을 사용해야 함\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "chkconfig 질의에서는 하나의 런레벨만 지정할 수 있음\n"
 

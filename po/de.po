@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.0 \n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 1999-04-10 12:00 +0100 \n"
 "Last-Translator: Jeff Garner <jgarner@alpnet.com> \n"
 "Language-Team: German <de@li.org> \n"
@@ -78,7 +78,7 @@ msgstr ""
 "Es darf jeweils nur einer der Parameter --list, --add oder --del angegeben "
 "werden\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "Bei einer chkconfig-Abfrage darf nur ein Runlevel angegeben werden\n"
 

@@ -1,9 +1,9 @@
-# $Id: ro.po,v 1.39 1999/09/12 04:29:31 gafton Exp $
+# $Id: ro.po,v 1.40 1999/12/03 19:33:00 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
-"POT-Creation-Date: 1999-08-23 15:59-0400\n"
+"POT-Creation-Date: 1999-10-18 15:09-0400\n"
 "PO-Revision-Date: 199-04-10 12:00+EST\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -75,7 +75,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "numai una dintre opþiunile --list, --add, sau --del poate fi specificatã\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "nu se poate edita decît un singur runlevel la fiecare execuþie\n"
 
