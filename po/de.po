@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Drucken Sie <F1> zu mehr Information uber einen Systemdienste"
+msgstr "Drucken Sie <F1> um mehr Information uber einen Systemdienste zu kreigen"
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
@@ -44,7 +44,7 @@ msgstr "OK"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Welche Systemdienste sollten automatisch bestarten werden?"
+msgstr "Welche Systemdienste sollten automatisch gestarten werden?"
 
 #: ../ntsysv.c:74
 msgid "Services"

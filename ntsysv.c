@@ -53,7 +53,7 @@ static int servicesWindow(struct service * services, int numServices,
 
     newtFormSetWidth(subform, 20);
 
-    buttons = newtButtonBar(_("Ok"), &ok, backButton ? "Back" : "Cancel",
+    buttons = newtButtonBar(_("Ok"), &ok, backButton ? _("Back") : _("Cancel"),
 			    &cancel, NULL);
 
     blank = newtForm(NULL, NULL, 0);
