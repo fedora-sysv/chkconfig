@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.15
+Version: 1.3.16
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -74,6 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Feb 10 2005 Bill Nottingham <notting@redhat.com> 1.3.16-1
+- prefer chkconfig: start/stop priorities in LSB mode unless
+  Required-Start/Stop are used
+
 * Mon Feb  7 2005 Bill Nottingham <notting@redhat.com> 1.3.15-1
 - print usage when various invalid args are passed (#147393)
 

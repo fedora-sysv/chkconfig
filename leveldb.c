@@ -237,8 +237,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     struct service serv = { 
 	    	    name: NULL, 
 		    levels: -1, 
-		    kPriority: -1, 
-		    sPriority: -1, 
+		    kPriority: -2, 
+		    sPriority: -2, 
 		    desc: NULL, 
 		    startDeps: NULL, 
 		    stopDeps: NULL,
@@ -295,13 +295,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	if (*start != '#') continue;
 
 	start++;
-	if (!strncmp(start, "## BEGIN INIT INFO", 18)) {
+	if (!strncmp(start, "## BEGIN INIT INFO", 18))
 		    serv.isLSB = 1;
-		    serv.sPriority = -1;
-		    serv.kPriority = -1;
-	}
-	if (!strncmp(start, "## END INIT INFO", 16) && serv.isLSB)
-		    break;
 		
 	while (isspace(*start) && start < end) start++;
 	if (start == end) continue;
@@ -333,14 +328,16 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		free(bufstart);
 		return 1;
 	    }
-	    if (!serv.isLSB) {
+	    if (serv.sPriority == -2 || serv.kPriority == -2) {
 		    if (spri > 99 || kpri > 99 || kpri < 0 || spri < 0) {
 			    if (serv.desc) free(serv.desc);
 			    free(bufstart);
 			    return 1;
 		    }
-		    serv.sPriority = spri;
-		    serv.kPriority = kpri;
+		    if (serv.sPriority == -2)
+			    serv.sPriority = spri;
+		    if (serv.kPriority == -2)
+			    serv.kPriority = kpri;
 	    }
 
 	    if (!strcmp(levelbuf, "-"))
@@ -390,6 +387,8 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		char *t;
 		int numdeps = 0;
 		
+
+		serv.sPriority = -1;
 		start+=15;
 		while (1) {
 			while (*start && isspace(*start) && start < end) start++;
@@ -415,6 +414,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		char *t;
 		int numdeps = 0;
 		
+		serv.kPriority = -1;
 		start+=14;
 		while (1) {
 			while (*start && isspace(*start) && start < end) start++;
