@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1998-12-15 16:42-0500\n"
+"POT-Creation-Date: 1999-02-16 20:41-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,16 +113,16 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:255
+#: ../leveldb.c:256
 #, c-format
-msgid "failed to glob pattern %s\n"
+msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:285
+#: ../leveldb.c:287
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:319
+#: ../leveldb.c:321
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

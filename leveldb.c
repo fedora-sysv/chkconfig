@@ -252,7 +252,8 @@ int findServiceEntries(char * name, int level, glob_t * globresptr) {
     rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
 
     if (rc && rc != GLOB_NOMATCH) {
-	fprintf(stderr, _("failed to glob pattern %s\n"), match);
+	fprintf(stderr, _("failed to glob pattern %s: %s\n"), match,
+		strerror(errno));
 	return 1;
     } else if (rc == GLOB_NOMATCH) {
 	globresptr->gl_pathc = 0;
