@@ -1,13 +1,13 @@
 # Chkconfig RedHat Bahasa Melayu (Malay) (ms).
 # Copyright (C) 2003 RedHat Inc.
 # This file is distributed under the same license as the chkconfig package.
-# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2003.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2003,2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-07-28 18:40+0800\n"
+"PO-Revision-Date: 2004-02-28 13:39+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -21,10 +21,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versi %s - Hakcipta (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -88,9 +86,9 @@ msgid "xinetd based services:\n"
 msgstr "perkhidmatan berasaskan xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "gagal untuk membuka direktori %s: %s"
+msgstr "gagal untuk membuka direktori %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -285,8 +283,7 @@ msgstr "baris tidak dijangka dalam %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"pautan merujuk kepada tiada alternatif -- menetaokan mod kepada manual\n"
+msgstr "pautan merujuk kepada tiada alternatif -- menetaokan mod kepada manual\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -418,5 +415,3 @@ msgstr "admindir %s tidak sah\n"
 msgid "alternatives version %s\n"
 msgstr "versi alternatif %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "ralat membaca daripada direktori %s/init.d: %s"
