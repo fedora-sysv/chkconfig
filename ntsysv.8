@@ -16,6 +16,11 @@ A service is considered to be started in the runlevel set if it is started
 in any of the runlevels which are being edited.
 
 .PD
+.SH "RETURN CODES"
+\fBntsysv\fR returns 0 on success, 1 on error, and 2 if the user cancelled
+the program.
+
+.PD
 .SH "SEE ALSO"
 .BR chkconfig (8),
 .BR tksysv (8)
