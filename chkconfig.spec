@@ -4,7 +4,7 @@ Version: 1.2.6
 Release: 1
 License: GPL
 Group: System Environment/Base
-Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.bz2
+Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 Conflicts: initscripts <= 5.30-1
 
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Tue Jul 18 2000 Bill Nottingham <notting@redhat.com>
+- add quick hack support for reading descriptions from xinetd files
+
 * Mon Jul 17 2000 Bernhard Rosenkraenzer <bero@redhat.com>
 - don't own the /etc/rc[0-6].d symlinks; they're owned by initscripts
 
