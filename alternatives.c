@@ -669,7 +669,7 @@ static int configService(char * title, const char * altDir,
 		   i == set.current ? '+' : ' ',
 		   i + 1, set.alts[i].master.target);
 	printf("\n");
-	printf(_("Enter to keep the default[*], or type selection number: "));
+	printf(_("Enter to keep the current selection[+], or type selection number: "));
 
 	if (!fgets(choice, sizeof(choice), stdin)) {
 	    fprintf(stderr, _("\nerror reading choice\n"));

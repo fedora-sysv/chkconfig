@@ -9,7 +9,7 @@ NLSPACKAGE = chkconfig
 
 CATALOGS = $(shell ls *.po | sed 's/\.po/\.mo/')
 
-POTFILES  = ../chkconfig.c ../ntsysv.c ../leveldb.c
+POTFILES  = ../chkconfig.c ../ntsysv.c ../leveldb.c ../alternatives.c
 
 all: $(NLSPACKAGE).pot $(CATALOGS)
 
