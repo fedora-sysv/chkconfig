@@ -17,19 +17,19 @@ msgstr ""
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "bruk:   chkconfig --list [navn]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "        chkconfig --add <navn>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "        chkconfig --del <navn>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "        chkconfig [--level <runlevel>] <navn> <on|off|reset>\n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -43,16 +43,16 @@ msgstr "Klarte ikke å finne informasjon om tjeneste %s: %s\n"
 
 #: ../chkconfig.c:93
 msgid "on"
-msgstr ""
+msgstr "på"
 
 #: ../chkconfig.c:93
 msgid "off"
-msgstr ""
+msgstr "av"
 
 #: ../chkconfig.c:109
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "Klarte ikke å åpne "
+msgstr "Klarte ikke å åpne %s/init.d: %s\n"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
@@ -77,7 +77,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Tilbake"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
@@ -93,11 +93,11 @@ msgstr "Tjenester"
 
 #: ../ntsysv.c:213
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "galt argument til --levels\n"
 
 #: ../ntsysv.c:220
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Ingen tjenester kan styres av ntsysv!\n"
 
 #: ../leveldb.c:255
 #, c-format
@@ -106,7 +106,7 @@ msgstr "Klarte ikke å matche mønsteret %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
-msgstr "Klarer ikke å bestemme kjørende runlevel\n"
+msgstr "Klarer ikke å bestemme nåværende runlevel\n"
 
 #: ../leveldb.c:319
 #, c-format
