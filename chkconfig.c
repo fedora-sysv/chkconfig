@@ -233,36 +233,17 @@ static int isXinetdEnabled() {
 	}
 	return 0;
 }
-
-static int serviceNameCmp(const void * a, const void * b) {
-  return strcmp(* (char **)a, * (char **)b);
-}
-
-static int xinetdNameCmp(const void * a, const void * b) {
-    const struct service * first = a;
-    const struct service * second = b;
-
-    return strcmp(first->name, second->name);
-}
-
-
+	
 
 static int listService(char * item) {
     DIR * dir;
     struct dirent * ent;
     struct stat sb;
     char fn[1024];
-    char **services;
-    int i;
-    int numServices = 0;
-    int numServicesAlloced;
     int err = 0;
 
     if (item) return showServiceInfo(item, 0);
 
-    numServicesAlloced = 10;
-    services = malloc(sizeof(*services) * numServicesAlloced);
-    
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 	fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 		strerror(errno));
@@ -286,51 +267,35 @@ static int listService(char * item) {
 	
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb)) {
-	    fprintf(stderr, _("error reading info for service %s: %s\n"), 
-		ent->d_name, strerror(errno));
+	    err = errno;
 	    continue;
 	}
 	if (!S_ISREG(sb.st_mode)) continue;
 
-	if (numServices == numServicesAlloced) {
-	    numServicesAlloced += 10;
-	    services = realloc(services, numServicesAlloced * sizeof(*services));
-        }
-
-	services[numServices] = alloca(strlen(ent->d_name) + 1);
-	strncpy(services[numServices++], ent->d_name, strlen(ent->d_name) + 1);
+	if (showServiceInfo(ent->d_name, 1)) {
+	    closedir(dir);
+	    return 1;
+	}
     }
 
-    qsort(services, numServices, sizeof(*services), serviceNameCmp);
-	
-    for (i = 0; i < numServices ; i++) {
-	    if (showServiceInfo(services[i], 1)) {
-		    free(services);
-		    closedir(dir);
-		    return 1;
-	    }
+    if (err) {
+	fprintf(stderr, _("error reading from directory %s/init.d: %s\n"), 
+		RUNLEVELS, strerror(err));
+        return 1;
     }
-		    
-    free(services);
-	
+
     closedir(dir);
 	
     if (isXinetdEnabled()) {
-	    struct service *s, *t;
-	  
-	    printf("\n");
 	    printf(_("xinetd based services:\n"));
 	    if (!(dir = opendir(XINETDDIR))) {
 		    fprintf(stderr, _("failed to open directory %s: %s\n"),
 			    XINETDDIR, strerror(err));
 		    return 1;
 	    }
-	    numServices = 0;
-	    numServicesAlloced = 10;
-	    s = malloc(sizeof (*s) * numServicesAlloced);
-	    
 	    while ((ent = readdir(dir))) {
 		    const char *dn;
+		    struct service s;
 
 		    /* Skip any file starting with a . */
 		    if (ent->d_name[0] == '.')	continue;
@@ -344,23 +309,11 @@ static int listService(char * item) {
 		    if (*dn == '~' || *dn == ',')
 		      continue;
 	    
-		    if (numServices == numServicesAlloced) {
-			    numServicesAlloced += 10;
-			    s = realloc(s, numServicesAlloced * sizeof (*s));
+		    if (readXinetdServiceInfo(ent->d_name, &s, 0) == 0){
+		       printf("\t%s:\t%s\n", s.name, s.levels ? _("on") : _("off"));
 		    }
-		    readXinetdServiceInfo(ent->d_name, s + numServices, 0);
-		    numServices ++;
-	    }
-	    
-	    qsort(s, numServices, sizeof(*s), xinetdNameCmp);
-	    t = s;
-	    for (i = 0; i < numServices; i++, s++) {
-		    char *tmp = malloc(strlen(s->name) + 5);
-		    sprintf(tmp,"%s:",s->name);
-		    printf("\t%-15s\t%s\n", tmp,  s->levels ? _("on") : _("off"));
 	    }
 	    closedir(dir);
-	    free(t);
     }
     return 0;
 }
@@ -411,7 +364,6 @@ int main(int argc, char ** argv) {
     int LSB = 0;
     char * levels = NULL;
     int help=0, version=0;
-    struct service s;
     poptContext optCon;
     struct poptOption optionsTable[] = {
 	    { "add", '\0', 0, &addItem, 0 },
@@ -492,9 +444,6 @@ int main(int argc, char ** argv) {
 	char * state = (char *)poptGetArg(optCon);
 	int where = 0, level = -1;
 
-	if (!name) {
-		usage();
-	}
 	if (levels) {
 	    where = parseLevels(levels, 0);
 	    if (where == -1) usage();
@@ -519,16 +468,8 @@ int main(int argc, char ** argv) {
 		    exit(1);
 		}
 	    } 
-	    rc = readServiceInfo(name, &s, 0);
-	    if (rc)
-	       usage();
-	    if (s.type == TYPE_XINETD) {
-	       if (isOn("xinetd",level))
-		       return !s.levels;
-	       else
-		       return 1;
-	    } else	
-	       return isOn(name, level) ? 0 : 1;
+
+	    return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
 	    return setService(name, where, 1);
 	else if (!strcmp(state, "off"))

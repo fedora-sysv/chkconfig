@@ -1,6 +1,7 @@
+# [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.16
+Version: 1.3.13.1
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -74,21 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
-* Thu Feb 10 2005 Bill Nottingham <notting@redhat.com> 1.3.16-1
-- prefer chkconfig: start/stop priorities in LSB mode unless
-  Required-Start/Stop are used
-
-* Mon Feb  7 2005 Bill Nottingham <notting@redhat.com> 1.3.15-1
-- print usage when various invalid args are passed (#147393)
-
-* Wed Feb  2 2005 Bill Nottingham <notting@redhat.com> 1.3.14-1
-- resize reasonably with larger screens (#74156)
-- don't error out completely on bad symlink (#74324)
-- use ngettext (#106176)
-- error out on invalid start/stop values (#109858)
-- some man page updates
-- fix return code of chkconfig for xinetd services (#63123)
-- sort chkconfig --list display (#61576, <shishz@alum.rpi.edu>)
+* Thu Feb 10 2005 Bill Nottingham <notting@redhat.com> 1.3.13.1-1
+- fix: prefer chkconfig: priorities if Required-Start/Required-Stop
+  aren't set
 
 * Tue Jan 11 2005 Bill Nottingham <notting@redhat.com> 1.3.13-1
 - fix LSB comment parsing some more (#144739)
