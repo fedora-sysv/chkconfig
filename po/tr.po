@@ -3,7 +3,7 @@
 #
 # Turkish translations for chkconfig messages.
 # Copyright (C) 2002,2003, 2004 Free Software Foundation, Inc.
-# $Id: tr.po,v 1.35 2004/05/19 20:51:29 notting Exp $
+# $Id: tr.po,v 1.36 2004/06/04 16:21:23 notting Exp $
 # Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003.
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003.
 # Hasan Umit Ezerce <humit@tr.net>, 2004.
@@ -13,14 +13,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-03-15 23:17+0200\n"
 "Last-Translator: Hasan Umit Ezerce <humit@linuxmail.org>\n"
 "Language-Team: Turkish <fedora-trans-tr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.3\n"
 
 #: ../chkconfig.c:21
@@ -29,7 +29,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -51,8 +50,8 @@ msgid "         %s --del <name>\n"
 msgstr "             %s --del <isim>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <düzeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:35
@@ -93,7 +92,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d dizininden okurken hata: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd tabanlı hizmetler:\n"
 
@@ -108,12 +106,10 @@ msgid "%s version %s\n"
 msgstr "%s sürüm %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
@@ -158,12 +154,10 @@ msgid "You must be root to run %s.\n"
 msgstr "%s in çalıştırılabilmesi için root yetkileri gerekiyor.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels için hatalı argüman\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafından yönetilebilecek hizmet yok!\n"
 
@@ -173,7 +167,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "kalıp %s genelleştirilemedi: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "şu anki çalışma düzeyi belirlenemiyor\n"
 
@@ -188,7 +181,6 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives sürüm %s - Telif Hakkı © 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -197,57 +189,46 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "kullanımı: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <servis>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                   [--slave <bağlantı> <isim> <yol>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <isim> <yol>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <isim>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <isim>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <isim>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <isim> <yol>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "ortak seçenekler: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <dizin> --admindir <dizin>\n"
 
@@ -322,13 +303,11 @@ msgid "failed to read link %s: %s\n"
 msgstr "%s okunamıyor: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "bağlantı değiştirildi-- elle ayarlama moduna geçiliyor\n"
 
@@ -418,19 +397,16 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d program %s sağlıyor.\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  Seçim        Komut\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını "
 "girin:"
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

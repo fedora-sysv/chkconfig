@@ -5,14 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: desktop files\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 31.07.2002. 10:38\n"
 "Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 0.9.6\n"
 
 # ../chkconfig.c:21
@@ -23,7 +23,6 @@ msgstr "%s verzija %s - Autorska prava (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Ovo možete slobodno redistribuirati pod uslovima GNU javne licence.\n"
@@ -48,8 +47,8 @@ msgstr "         %s --del <ime>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <nivoi>] <ime> %s)\n"
 
 #: ../chkconfig.c:35
@@ -97,7 +96,6 @@ msgstr "greška prilikom čitanja iz direktorija %s/init.d: %s\n"
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd bazirani servisi:\n"
 
@@ -115,13 +113,11 @@ msgstr "%s verzija %s\n"
 
 # ../chkconfig.c:291
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "samo jedan od --list, --add ili --del može biti naznačen\n"
 
 # ../chkconfig.c:339
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "samo jedan nivo može biti naznačen za chkconfig upit\n"
 
@@ -175,13 +171,11 @@ msgstr "Morate biti root da pokrenete %s.\n"
 
 # ../ntsysv.c:280
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "pogrešan argument za --levels\n"
 
 # ../ntsysv.c:287
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nijedan servis ne može biti upravljan od strane ntsysv!\n"
 
@@ -193,7 +187,6 @@ msgstr "nije uspjeo da glob-uje uzorak %s: %s\n"
 
 # ../leveldb.c:398
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "ne može odrediti trenutni nivo\n"
 
@@ -211,69 +204,63 @@ msgstr "%s verzija %s - Autorska prava (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../alternatives.c:49
-#, fuzzy, c-format
+#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr "Ovo možete slobodno redistribuirati pod uslovima GNU javne licence.\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr ""
 
 # ../chkconfig.c:28
 #: ../alternatives.c:52
-#, fuzzy, c-format
+#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "         %s [--level <nivoi>] <ime> %s)\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr ""
 
 # ../chkconfig.c:26
 #: ../alternatives.c:54
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --auto <name>\n"
 msgstr "         %s --add <ime>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:55
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --config <name>\n"
 msgstr "         %s --add <ime>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:56
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --display <name>\n"
 msgstr "         %s --del <ime>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:57
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
 msgstr "         %s --del <ime>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr ""
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr ""
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr ""
 
@@ -351,12 +338,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "nije uspjeo da otvori %s/init.d: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
 
@@ -450,18 +435,16 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr ""
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr ""
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
 # ../ntsysv.c:174 ../ntsysv.c:218
 #: ../alternatives.c:677
-#, fuzzy, c-format
+#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"

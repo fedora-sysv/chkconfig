@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2003-11-15 15:54+0530\n"
 "Last-Translator: \n"
 "Language-Team: Tamil <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
@@ -22,7 +22,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s பதிப்பு %s - உரிமை (C) 1997-2000 சிவப்பு Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "இதை GNU பொது சட்டத்தின் கீழ்  இலவசமாக வழங்கலாம் \n"
@@ -43,8 +42,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --நீக்கு <பெயர்>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--மட்டம் <மட்டம்>] <பெயர்> %s)\n"
 
 #: ../chkconfig.c:35
@@ -87,7 +86,6 @@ msgstr ""
 "-லிருந்து படித்தலில் பிழை\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd சார்ந்த சேவை:\n"
 
@@ -104,12 +102,10 @@ msgid "%s version %s\n"
 msgstr "%s பதிப்பு %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "ஒரே ஒரு --பட்டியல், --சேர் அல்லது --நீக்குl குறிப்பிடப்பட்டிருக்கலாம்\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "ஒரே ஒரு runlevel, chkconfig கேள்விக்காக குறிப்பிடப்பட்டிருக்கலாம்\n"
 
@@ -153,12 +149,10 @@ msgid "You must be root to run %s.\n"
 msgstr "இயக்கு %s-ற்கு நீ  ஆதாரம்.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels -ற்கு தீய தருமதிப்பு\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "எந்த சேவையும் ntsysv மேற்பார்வையிடஇல்லை!\n"
 
@@ -168,7 +162,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "glob முன்வடிவப்புலத்தில் பிழை் %s: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "தற்பொழுதைய run level -ஐ தீர்மானிக்க இயலவில்லை்\n"
 
@@ -183,64 +176,52 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "மாற்று பதிப்பு %s - உரிமை (C) 2001 சிவப்பு Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr "இதை GNU பொது சட்டத்தின் கீழ் இலவசமாக வவழங்கலாம் \n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "பயன்பாடு: மாற்றுகள் --நிறுவு <தொடர்பு> <பெயர்> <வழி> <முக்கியமான>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <சேவை>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <link> <பெயர்> <பாதை>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       மாற்றுகளை --நீக்கு <பெயர்> <பாதை>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "  மாற்றுகளை  -தன்னாலே<பெயர்>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "மாற்றுகளை --config <பெயர்>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "மாற்றுகளை --அறிக்கை காட்டு <பெயர்>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "மாற்றுகளை --அமைப்பு <பெயர்> <பாதை>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "பொது தேர்வுகள்: --verbose --சோதி -- உதவி --பயன்பாடு --பதிப்பு\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <அடைவு> --admindir <அடைவு>\n"
 
@@ -319,12 +300,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "%s: %s படிப்பதில்  பிழை\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "இணைப்பு புள்ளிகள் மாற்றுகளுக்கு இல்லை-- கைம்முறைக்கான பாங்கு அமைப்பு \n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "இணைப்பு மாற்றப்ப்பட்டதுl -- கைம்முறைக்கான பாங்கு அமைப்பு \n"
 
@@ -414,17 +393,14 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "அங்கே %d தரும் நிரல்'%s'. உள்ளது\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  தேர்ந்தெடுப்பு    கட்டளை\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "நடப்பில் உள்ளதை தேர்தெடுக்க [+] உள்ளீடு, அல்லது தேர்ந்தெடுத்த எண்ணை தட்டச்சு செய்: "
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

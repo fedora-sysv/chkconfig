@@ -8,14 +8,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-01-24 16:30+0100\n"
 "Last-Translator: Bernd Bartmann <Bernd.Bartmann@sohanet.de>\n"
 "Language-Team: Deutsch <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0.2\n"
 
 #: ../chkconfig.c:21
@@ -25,7 +25,6 @@ msgstr "%s Version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:23
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -51,8 +50,8 @@ msgstr "         %s --del <Name>\n"
 
 # ../chkconfig.c:29
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <Levels>] <Name> %s)\n"
 
 #: ../chkconfig.c:35
@@ -99,7 +98,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-basierende Dienste:\n"
 
@@ -117,14 +115,12 @@ msgstr "%s Version %s\n"
 
 # ../chkconfig.c:238
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
 
 # ../chkconfig.c:286
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 
@@ -177,13 +173,11 @@ msgstr "Sie müssen als Root angemeldet sein, um %s auszuführen.\n"
 
 # ../ntsysv.c:219
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "Ungültiges Argument bei --levels\n"
 
 # ../ntsysv.c:226
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Mit ntsysv können keine Dienste verwaltet werden!\n"
 
@@ -195,7 +189,6 @@ msgstr "Fehler beim Mustervergleich des Musters %s: %s\n"
 
 # ../leveldb.c:296
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
@@ -212,7 +205,6 @@ msgstr "alternatives Version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 # ../chkconfig.c:23
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -221,62 +213,51 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "Verwendung: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
 # ../chkconfig.c:29
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <name>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <name>\n"
 
 # ../chkconfig.c:28
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 # ../chkconfig.c:28
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "Allgemeine Optionen: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
@@ -354,12 +335,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "Fehler beim Lesen von %s: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "Link zeigt zu keiner Alternative -- setze Modus auf manuell\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "Link geändert -- setze Modus auf manuell\n"
 
@@ -453,12 +432,10 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "Es gibt %d Programme, welche '%s' zur Verfügung stellen.\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  Auswahl    Befehl\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Eingabe um die vorgegebene Auswahl[+] zu behalten, oder geben Sie die Nummer "
@@ -466,7 +443,6 @@ msgstr ""
 
 # ../ntsysv.c:164
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

@@ -5,14 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-05-20 10:38+1000\n"
 "Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
 "Language-Team:  <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
@@ -21,9 +21,10 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -41,8 +42,8 @@ msgid "         %s --del <name>\n"
 msgstr "          %s --del <이름>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "          %s [--level <레벨>] <이름> %s)\n"
 
 #: ../chkconfig.c:35
@@ -88,7 +89,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd 기반의 서비스:\n"
 
@@ -103,12 +103,10 @@ msgid "%s version %s\n"
 msgstr "%s %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, --del 의 옵션 중 하나만 지정하셔야 합니다\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 질의시에는 하나의 실행 레벨만 지정하셔야 합니다\n"
 
@@ -152,12 +150,10 @@ msgid "You must be root to run %s.\n"
 msgstr "%s는 root 계정으로 실행해야 합니다.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels 옵션에 잘못된 인수값이 주어졌습니다\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 명령에 의해 관리될 서비스가 없습니다!\n"
 
@@ -167,7 +163,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 
@@ -182,7 +177,6 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "대체 버전 %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -191,57 +185,46 @@ msgstr ""
 "자유롭게 재배포하실 수 있습니다.\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "사용법: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "일반 옵션들: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
@@ -316,12 +299,11 @@ msgid "failed to read link %s: %s\n"
 msgstr "%s 링크를 읽기에 실패했습니다: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
+msgstr ""
+"링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "링크가 변경되었습니다 -- 수동으로 모드를 설정합니다\n"
 
@@ -411,19 +393,16 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d 개의 프로그램이 '%s'를 제공합니다.\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  선택    명령\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "현재 선택[+]을 유지하시려면 엔터키를 누르십시오. 그렇지 않으면,  선택 번호를 "
 "입력해 주십시오:"
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
@@ -463,4 +442,3 @@ msgstr "대체 버전 %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"
-

@@ -25,7 +25,7 @@ static void usage(void) {
     fprintf(stderr, _("usage:   %s --list [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
-    fprintf(stderr, _("         %s [--level <levels>] <name> %s)\n"), progname, "<on|off|reset>");
+    fprintf(stderr, _("         %s [--level <levels>] <name> %s\n"), progname, "<on|off|reset>");
 
     exit(1);
 }

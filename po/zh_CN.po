@@ -5,14 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-05-24 10:06+1000\n"
 "Last-Translator: Sarah Wang <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
@@ -21,8 +21,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:25
@@ -41,8 +41,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "        %s [--level <levels>] <name> %s)\n"
 
 #: ../chkconfig.c:35
@@ -83,7 +83,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "从 %s/init.d 目录中读取时出错：%s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "基于 xinetd 的服务：\n"
 
@@ -98,12 +97,10 @@ msgid "%s version %s\n"
 msgstr "%s 版本 %s \n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list、--add、和 --del 中只能指定其中之一\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 查询只能指定一个运行级别\n"
 
@@ -147,12 +144,10 @@ msgid "You must be root to run %s.\n"
 msgstr "您必须是根用户才能运行 %s。\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels 参数不对\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 不能管理任何服务！\n"
 
@@ -162,7 +157,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "glob 图案 %s 失败：%s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "无法判定目前的运行级别\n"
 
@@ -177,7 +171,6 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "替换选择(alternatives)的版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -186,57 +179,46 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "用法：alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "公用选项：--verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
@@ -311,12 +293,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "读取链接 %s 失败：%s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "链接没有指向任何替换选择 -- 把模式设置为手工\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "链接已改变 -- 把模式设置为手工\n"
 
@@ -406,17 +386,14 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "共有 %d 个程序提供“%s”。\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  选择    命令\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "按 Enter 来保存当前选择[+]，或键入选择号码："
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
@@ -453,4 +430,3 @@ msgstr "admindir %s 无效\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "替换选择(alternatives)的版本 %s \n"
-

@@ -5,14 +5,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2003-11-08 17:56+0200\n"
 "Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -20,7 +20,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s версія %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
@@ -41,8 +40,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <служба>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <рівні>] <служба> %s)\n"
 
 #: ../chkconfig.c:35
@@ -83,7 +82,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "помилка читання з каталогу %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "служби, що базуються на xinetd:\n"
 
@@ -98,12 +96,10 @@ msgid "%s version %s\n"
 msgstr "%s версія %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "можна вказувати лише один аргумент з --list, --add або --del\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "можна вказувати лише один рівень виконання для запиту chkconfig\n"
 
@@ -147,12 +143,10 @@ msgid "You must be root to run %s.\n"
 msgstr "Для виконання %s необхідні повноваження root.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "неправильний аргумент в --levels\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Немає служб, які керуються ntsysv!\n"
 
@@ -162,7 +156,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "неможливо визначити шаблон %s: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "неможливо визначити поточний рівень виконання\n"
 
@@ -177,65 +170,53 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives версія %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 "використання: alternatives --install <посилання> <ім'я> <шлях> <пріоритет>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <служба>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <посилання> <ім'я> <шлях>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <ім'я> <шлях>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <ім'я>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <ім'я>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <ім'я>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <ім'я> <шлях>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "загальні параметри: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <каталог>\n"
 
@@ -310,13 +291,11 @@ msgid "failed to read link %s: %s\n"
 msgstr "неможливо прочитати %s: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "посилання вказує на безальтернативний елемент - встановлюється ручний режим\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "посилання змінено -- встановлюється ручний режим\n"
 
@@ -406,17 +385,14 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "Є %d програм, які забезпечують '%s'.\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "   Вибір    Команда\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter - зберегти поточний вибір[+], або вкажіть номер: "
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

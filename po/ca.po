@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-03-07 04:14+0100\n"
 "Last-Translator: Josep Puigdemont <baldrick@terra.es>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -22,7 +22,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versió %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -45,8 +44,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s –-del <nom>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <nivells>] <nom>%s)\n"
 
 #: ../chkconfig.c:35
@@ -87,7 +86,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "S'ha produït un error en llegir el directori %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "serveis basats en xinetd:\n"
 
@@ -102,12 +100,10 @@ msgid "%s version %s\n"
 msgstr "%s versió %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "només es pot especificar una opció --list, --add, o --del\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "només es pot especificar un nivell d'execució per a una pregunta chkconfig\n"
@@ -152,12 +148,10 @@ msgid "You must be root to run %s.\n"
 msgstr "Heu de ser el superusuari per executar %s.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "l'argument a --levels no és vàlid\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "No hi ha cap servei que pugui ser gestionat per ntsysv\n"
 
@@ -167,7 +161,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "no s'ha pogut globalitzar el patró %s: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "no es pot determinar l'actual nivell d'execució\n"
 
@@ -182,7 +175,6 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives versió %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -191,57 +183,46 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "ús: alternatives --install <enllaç> <nom> <camí> <prioriat>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <servei>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <enllaç> <nom> <camí>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <nom> <camí>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <nom>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <nom>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "        alternatives  --display <nom>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "        alternatives --set <nom> <camí>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "opcions comunes: --verbose –-test –-help –-usage -–version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directori> --admindir <directori>\n"
 
@@ -316,12 +297,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "no s'ha pogut llegir %s: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "l'enllaç no assenyala a cap alternativa -- es canviarà a mode manual\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "l'enllaç ha canviat –- es canviarà a mode manual\n"
 
@@ -411,19 +390,16 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "Hi ha %d programes que proveeixen '%s'.\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  Selecció     Ordre\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Premeu la tecla de retorn per mantenir la selecció actual[+], o teclegeu el "
 "número de la selecció: "
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2003-09-13 10:37+0530\n"
 "Last-Translator: Jatin Nansi <jnansi@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -21,7 +21,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s संस्करण %s - प्रतिलिपि अधिकार १९९७-२००० रेड हेट, निगमन\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
@@ -42,8 +41,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <नाम>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <स्तर>] <नाम> %s)\n"
 
 #: ../chkconfig.c:35
@@ -83,7 +82,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d निर्देशिका से पढ़ने में दोष: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd आधारित सेवाएँ:\n"
 
@@ -98,12 +96,10 @@ msgid "%s version %s\n"
 msgstr "%s संस्करण %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, या --del में से सिर्फ एक को विशिष्ट करें\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "एक chkconfig प्रश्न के लिए सिर्फ एक धावस्तर विशिष्ट करना है\n"
 
@@ -147,12 +143,10 @@ msgid "You must be root to run %s.\n"
 msgstr "%s को चलाने के लिए आपको root होना आवश्यक है।\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels को बरा तर्क\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv से सेवाओं का प्रबंध न हो सकेगा!\n"
 
@@ -162,7 +156,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "%s प्रतिरूप को सार्वञिक करने में असफल थे: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "वर्तमान धावस्तर निर्णय नहीं कर सकता\n"
 
@@ -177,7 +170,6 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "%s वैकल्पिक संस्करण - प्रतिलिपि-अधिकार (C) २००१ रेड़ हेट, निगमन\n"
 
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -186,57 +178,46 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "प्रयोग: alternatives --install <संकलन> <नाम> <पथ> <प्राथमिकता>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <सेवा>]\n"
 
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <संकलन> <नाम> <पथ>]* \n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <नाम> <पथ>\n"
 
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <नाम>\n"
 
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <नाम>\n"
 
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <नाम>\n"
 
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <नाम> <पथ>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "सामान्य विकल्प: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <निर्देशिका> --admindir <निर्देशिका>\n"
 
@@ -311,12 +292,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "%s पढ़ने में असफल: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "कोई वैकल्पिक के लिए संकलन नहीं है -- प्रकार को मानवीय बना रहा है\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "संकलन बदला गया -- प्रकार को मानवीय बना रहा है\n"
 
@@ -406,17 +385,14 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d कार्यक्रम हैं '%s' को प्रदान करने वाले ।\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  चुनित    निर्देश\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "[+] वर्तमानिय चुनित को रखने के लिए Enter दबाएँ, या चुनित अंक मुद्रित करें:"
 
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"

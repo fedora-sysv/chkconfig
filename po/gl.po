@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2001-02-19 22:45+0100\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -16,7 +16,6 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -39,8 +38,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <nome>\n"
 
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <niveis>] <nome> %s)\n"
 
 #: ../chkconfig.c:35
@@ -79,7 +78,6 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "erro lendo do directorio %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "servicios baseados en xinetd:\n"
 
@@ -94,12 +92,10 @@ msgid "%s version %s\n"
 msgstr "%s versión %s\n"
 
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "só se pode indicar unha das opcións --list, --add, ou --del\n"
 
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "só se pode indicar un nivel de execución para unha consulta de chkconfig\n"
@@ -144,12 +140,10 @@ msgid "You must be root to run %s.\n"
 msgstr "Ten que ser root para executar %s.\n"
 
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "argumento erróneo de --levels\n"
 
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "¡Ningún servicio pode ser xestionado polo ntsysv!\n"
 
@@ -159,7 +153,6 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "imposible facer coincidir o patrón %s: %s\n"
 
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "non se pode determinar o nivel de execución actual\n"
 
@@ -174,7 +167,7 @@ msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
-#, fuzzy, c-format
+#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -183,57 +176,51 @@ msgstr ""
 "GNU.\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr ""
 
 #: ../alternatives.c:52
-#, fuzzy, c-format
+#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "         %s [--level <niveis>] <nome> %s)\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr ""
 
 #: ../alternatives.c:54
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --auto <name>\n"
 msgstr "         %s --add <nome>\n"
 
 #: ../alternatives.c:55
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --config <name>\n"
 msgstr "         %s --add <nome>\n"
 
 #: ../alternatives.c:56
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --display <name>\n"
 msgstr "         %s --del <nome>\n"
 
 #: ../alternatives.c:57
-#, fuzzy, c-format
+#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
 msgstr "         %s --del <nome>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr ""
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr ""
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr ""
 
@@ -308,12 +295,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "erro ó abrir %s/init.d: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
 
@@ -403,17 +388,15 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr ""
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr ""
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
 #: ../alternatives.c:677
-#, fuzzy, c-format
+#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"

@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-05-19 16:51-0400\n"
+"POT-Creation-Date: 2004-06-04 12:22-0400\n"
 "PO-Revision-Date: 2004-03-04 14:36+0900\n"
 "Last-Translator: Tadashi Jokagi <fedora@elf.no-ip.org>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0.2\n"
 
 # ../chkconfig.c:21
@@ -25,7 +25,6 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../chkconfig.c:22
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
@@ -52,8 +51,8 @@ msgstr "         %s --del <名前>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:28
-#, c-format
-msgid "         %s [--level <levels>] <name> %s)\n"
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <レベル>] <名前> %s)\n"
 
 #: ../chkconfig.c:35
@@ -101,7 +100,6 @@ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発�
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
-#, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ベースのサービス:\n"
 
@@ -119,13 +117,11 @@ msgstr "%s バージョン %s\n"
 
 # ../chkconfig.c:291
 #: ../chkconfig.c:412
-#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです。\n"
 
 # ../chkconfig.c:339
 #: ../chkconfig.c:464
-#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです。\n"
 
@@ -178,13 +174,11 @@ msgstr "%sを実行する為にルートでなければなりません。\n"
 
 # ../ntsysv.c:270
 #: ../ntsysv.c:292
-#, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels の引数が不適当です。\n"
 
 # ../ntsysv.c:277
 #: ../ntsysv.c:299
-#, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv によって管理できるサービスがありません。\n"
 
@@ -196,7 +190,6 @@ msgstr "パターン %s の解析に失敗しました: %s\n"
 
 # ../leveldb.c:386
 #: ../leveldb.c:539
-#, c-format
 msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません。\n"
 
@@ -214,7 +207,6 @@ msgstr "alternatives バージョン%s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../alternatives.c:49
-#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
@@ -223,13 +215,11 @@ msgstr ""
 "\n"
 
 #: ../alternatives.c:50
-#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 "使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
 
 #: ../alternatives.c:51
-#, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr ""
 "                    [--initscript <サービス>]\n"
@@ -237,51 +227,42 @@ msgstr ""
 
 # ../chkconfig.c:28
 #: ../alternatives.c:52
-#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
 
 #: ../alternatives.c:53
-#, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <名前> <パス>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:54
-#, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <名前>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:55
-#, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <名前>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:56
-#, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <名前>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:57
-#, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <名前> <パス>\n"
 
 #: ../alternatives.c:58
-#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
-#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "共通のオプション: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
-#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <ディレクトリ> --admindir <ディレクトリ>\n"
 
@@ -359,12 +340,10 @@ msgid "failed to read link %s: %s\n"
 msgstr "%sの読み込みに失敗: %s\n"
 
 #: ../alternatives.c:318
-#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "リンクはどの代替も指定していません--手動に設定します。\n"
 
 #: ../alternatives.c:323
-#, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "リンクの変更-- 手動に設定します。\n"
 
@@ -458,18 +437,15 @@ msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d プログラムがあり'%s'を提供します。\n"
 
 #: ../alternatives.c:665
-#, c-format
 msgid "  Selection    Command\n"
 msgstr "  選択       コマンド\n"
 
 #: ../alternatives.c:674
-#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enterを押して現在の選択[+]を保持するか、選択番号を入力します:"
 
 # ../ntsysv.c:174 ../ntsysv.c:217
 #: ../alternatives.c:677
-#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
