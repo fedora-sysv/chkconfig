@@ -1,0 +1,38 @@
+.TH CHKCONFIGTAB 5 "Wed Oct 8 1997"
+.UC 4
+.SH NAME
+chkconfigtab \- status information for the chkconfig program
+
+.SH DESCRIPTION
+\fI/var/lib/chkconfig.db\fR is a colon-delimited file used by the
+.IR chkconfig(8)
+program, one line per entry, in the format
+.br
+.I service:level:start:stop:desc
+.br
+where the fields are defined as:
+.TP 1.0in
+.I service
+the service name, as present in /etc/rc.d/init.d/
+.TP
+.I level
+the default levels in which to start
+.TP
+.I start
+the start priority
+.TP
+.I stop
+the stop priority
+.TP
+.I desc
+a short description of the service
+
+.SH SEE ALSO
+.IR init (8)
+.IR tksysv (8)
+.IR chkconfig (8)
+
+.SH AUTHOR
+.nf
+Michael K. Johnson <johnsonm@redhat.com>
+.fi
