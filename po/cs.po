@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
-"PO-Revision-Date: 2000-08-23 22:23+0100\n"
-"Last-Translator: Milan Kerslager <milan.kerslager@spsselib.hiedu.cz>\n"
+"POT-Creation-Date: 2001-02-02 12:49-0500\n"
+"PO-Revision-Date: 2001-02-08 00:05+0100\n"
+"Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
@@ -12,7 +12,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s verze %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
