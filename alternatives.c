@@ -655,8 +655,6 @@ static int configService(char * title, const char * altDir,
     char * end;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
-    set.current = set.best;
-    set.mode = AUTO;
 
     do {
 	printf("\n");
@@ -667,8 +665,8 @@ static int configService(char * title, const char * altDir,
 
 	for (i = 0; i < set.numAlts; i++)
 	    printf("%c%c %-4d        %s\n",
-		   i == set.current ? '*' : ' ',
-		   i == set.best ? '+' : ' ',
+		   i == set.best ? '*' : ' ',
+		   i == set.current ? '+' : ' ',
 		   i + 1, set.alts[i].master.target);
 	printf("\n");
 	printf(_("Enter to keep the default[*], or type selection number: "));
