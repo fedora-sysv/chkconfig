@@ -47,7 +47,7 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"tjenesten %s understøtter chkconfig, men referes ikke fra noget kørselsniveau (kør "
+"tjenesten %s understøtter chkconfig, men refereres ikke fra noget kørselsniveau (kør "
 "'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
