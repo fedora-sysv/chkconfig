@@ -120,9 +120,20 @@ static int listService(char * item) {
     }
 
     while ((ent = readdir(dir))) {
-	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
-	    strchr(ent->d_name, '.')) continue;
+	const char *dn;
 
+	/* Skip any file starting with a . */
+	if (ent->d_name[0] == '.')	continue;
+
+	/* Skip files with known bad extensions */
+	if ((dn = strrchr(ent->d_name, '.')) != NULL &&
+    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+	    continue;
+
+	dn = ent->d_name + strlen(ent->d_name) - 1;
+	if (*dn == '~' || *dn == ',')
+	    continue;
+	
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb)) {
 	    err = errno;
