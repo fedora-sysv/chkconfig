@@ -2,11 +2,10 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
+"POT-Creation-Date: 2000-12-29 23:24-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +16,19 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"このソフトウェアは、GNU "
-"国際ライセンスの条項に従って無償で再配布することができます。\n"
+"このソフトウェアは GNU 一般公共使用許諾契約書に従って"
+"無償で再配布することができます。\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "使用法:%s --list [name]\n"
+msgstr "使用法:  %s --list [name]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -76,12 +75,12 @@ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd ベースのサービス:\n"
 
 #: ../chkconfig.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "%s/init.d を開くことができませんでした: %s\n"
+msgstr "ディレクトリ %s を開くことができませんでした: %s"
 
 #: ../chkconfig.c:284
 #, c-format
@@ -90,11 +89,11 @@ msgstr "%s バージョン %s\n"
 
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "指定できるのは、--list、--add、--del の中から1つだけです\n"
+msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです\n"
 
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig クエリに対して指定できるランレベルは1つだけです\n"
+msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -110,7 +109,7 @@ msgstr "戻る"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "キャンセル"
+msgstr "取り消し"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
@@ -131,9 +130,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
+msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました： %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
