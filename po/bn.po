@@ -154,7 +154,7 @@ msgstr "ntsysv র দ্বারা কোন পরিসেবা পরি�
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "glob pattern %s: %s করতে ব্যর্থ হয়েছে\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
@@ -271,7 +271,7 @@ msgstr "%s এ বিকল্পের পাথটি প্রত্যাশ
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%s এ numeric priority প্রত্যাশিত\n"
 
 #: ../alternatives.c:275
 #, c-format
@@ -304,12 +304,12 @@ msgstr "%s লিঙ্কটি সরানো সম্ভব হতনি: %
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "%s -> %s লিঙ্ক করবে\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "%s -> %s: %s লিঙ্কটি করতে ব্যর্থ হয়েছে\n"
 
 #: ../alternatives.c:415
 #, c-format
@@ -354,7 +354,7 @@ msgstr " লিঙ্কটি বর্তমানে %s কে চিহ্�
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - জরুরী %d\n"
 
 #: ../alternatives.c:626
 #, c-format
@@ -377,7 +377,7 @@ msgstr "  নির্বাচন    কমান্ড\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Enter to keep the current selection[+], or type selection number: "
 
 #: ../alternatives.c:675
 msgid ""
