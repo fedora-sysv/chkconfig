@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-05-29 16:19GMT+10:00\n"
+"PO-Revision-Date: 2002-06-12 16:30GMT+10:00\n"
 "Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:25
@@ -45,11 +44,11 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "        %s [--level <levels>] <name> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s 服务支持 chkconfig，但它还没有注册（运行 'chkconfig --add %s'）\n"
+msgstr "%s 服务支持 chkconfig，但它在任何级别中都没有被引用（运行“chkconfig --add %s”）\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -166,3 +165,4 @@ msgstr "无法判定目前的运行级别\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "制作 syslink %s 失败： %s\n"
+
