@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: mk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-07-20 20:04+0200\n"
+"PO-Revision-Date: 2004-07-20 21:08+0200\n"
 "Last-Translator: Tomislav Markovski <herrera@users.sourceforge.net>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "лош параметар на --levels\n"
 #: ../ntsysv.c:299
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsysv не може да уредува ниту еден сервис!\n"
 
 #: ../leveldb.c:508
 #, c-format
@@ -234,57 +234,57 @@ msgstr "\n"
 #: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "опции: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <директориум> --admindir <директориум>\n"
 
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "читам %s\n"
 
 #: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr ""
+msgstr "не можам да прочитам од %s: %s\n"
 
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr ""
+msgstr "не можам да прочитам %s: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s е празно!\n"
 
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "погрешен режим на линија 1 од %s\n"
 
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "погрешна примарна врска во %s\n"
 
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "патеката %s не е очекувана во %s\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "missing path for slave %s in %s\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "неочекуван крај на датотеката %s\n"
 
 #: ../alternatives.c:235
 #, c-format
@@ -294,7 +294,7 @@ msgstr ""
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "се очекува нумерички приоритет во %s\n"
 
 #: ../alternatives.c:277
 #, c-format
@@ -304,57 +304,57 @@ msgstr ""
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "неочекувана линија во %s: %s\n"
 
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr ""
+msgstr "не можам да ја прочитам врската %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "врската не покажува кон алтернатива -- подесувам рачен режим\n"
 
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "врската е променета -- подесувам рачен режим\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "ќе отстранам %s\n"
 
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "не можам да ја отстранам врската %s: %s\n"
 
 #: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "ќе врзам %s -> %s\n"
 
 #: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "не можам да врзам %s -> %s: %s\n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s веќе постои\n"
 
 #: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr ""
+msgstr "не можам да креирам %s: %s\n"
 
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "не можам да заменам %s со %s: %s\n"
 
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
@@ -364,27 +364,27 @@ msgstr "работи %s\n"
 #: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "основната врска за %s мора да биде %s\n"
 
 #: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "врската %s е погрешна за slave %s (%s %s)\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - статусот е автоматски.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - статусот е рачно.\n"
 
 #: ../alternatives.c:622
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " врската покажува кон %s\n"
 
 #: ../alternatives.c:625
 #, c-format
@@ -399,17 +399,17 @@ msgstr ""
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Најдобра тековна верзија е %s.\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Има %d програми кои што обезбедуваат '%s'.\n"
 
 #: ../alternatives.c:665
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Избор    Команда\n"
 
 #: ../alternatives.c:674
 #, c-format
@@ -422,34 +422,36 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"не можам да го прочитам избраното\n"
 
 #: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s е конфигуриран како алтернатива за %s\n"
 
 #: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(ја отстранува %s\n"
 
 #: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "не можам да отстранам %s: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s невалидно\n"
 
 #: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s невалидно\n"
 
 #: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "верзија на алтернативи %s\n"
 
