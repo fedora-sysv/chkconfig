@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-11-26 12:55+0100\n"
+"PO-Revision-Date: 2004-03-31 16:19+0200\n"
 "Last-Translator: Jean-Paul Aubry <jpaubry@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0\n"
 
@@ -23,7 +23,7 @@ msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:22
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Ce produit peut être librement distribué selon les termes de la licence "
+"Ce produit peut Ãªtre librement distribuÃ© selon les termes de la licence "
 "publique GNU (GPL).\n"
 
 #: ../chkconfig.c:25
@@ -52,8 +52,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"le service %s prend en charge chkconfig, mais il n''estpas enregistré"
-"(exécutez 'chkconfig --add %s')\n"
+"le service %s prend en charge chkconfig, mais il n''estpas enregistrÃ©"
+"(exÃ©cutez 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -76,21 +76,21 @@ msgstr "Marche"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "Arrêt"
+msgstr "ArrÃªt"
 
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s\n"
+msgstr "Erreur lors de la lecture depuis le rÃ©pertoire %s/init.d : %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "Services basés sur xinetd : \n"
+msgstr "Services basÃ©s sur xinetd : \n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "impossible d'ouvrir le répertoire %s : %s\n"
+msgstr "impossible d'ouvrir le rÃ©pertoire %s : %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -99,12 +99,12 @@ msgstr "%s version %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "spécifiez --list, --add OU --del\n"
+msgstr "spÃ©cifiez --list, --add OU --del\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"Vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête "
+"Vous ne pouvez spÃ©cifier qu'un seul niveau d'exÃ©cution pour une requÃªte "
 "chkconfig\n"
 
 #: ../ntsysv.c:30
@@ -117,7 +117,7 @@ msgstr "OK"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Précédent"
+msgstr "PrÃ©cÃ©dent"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -125,7 +125,7 @@ msgstr "Annuler"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Quels services doivent être démarrés automatiquement ?"
+msgstr "Quels services doivent Ãªtre dÃ©marrÃ©s automatiquement ?"
 
 #: ../ntsysv.c:80
 msgid "Services"
@@ -139,12 +139,12 @@ msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "Erreur lors de la lecture depuis le répertoire %s : %s\n"
+msgstr "Erreur lors de la lecture depuis le rÃ©pertoire %s : %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Vous devez être connecté en tant que root pour exécuter %s.\n"
+msgstr "Vous devez Ãªtre connectÃ© en tant que root pour exÃ©cuter %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -152,21 +152,21 @@ msgstr "Argument incorrect pour --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Aucun service ne peut être administré par ntsysv !\n"
+msgstr "Aucun service ne peut Ãªtre administrÃ© par ntsysv !\n"
 
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "Échec d'interprétation du motif %s : %s\n"
+msgstr "Ã‰chec d'interprÃ©tation du motif %s : %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
+msgstr "Impossible de dÃ©terminer le niveau d'exÃ©cution en cours\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "Impossible de créer le lien symbolique %s : %s\n"
+msgstr "Impossible de crÃ©er le lien symbolique %s : %s\n"
 
 #: ../alternatives.c:46
 #, c-format
@@ -178,13 +178,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Ce produit peut être librement distribué selon les termes de la licence "
+"Ce produit peut Ãªtre librement distribuÃ© selon les termes de la licence "
 "publique GNU (GPL).\n"
 "\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <prioritÃ©>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -224,7 +224,7 @@ msgstr "options communes : --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <répertoire> --admindir <répertoire>\n"
+msgstr "                --altdir <rÃ©pertoire> --admindir <rÃ©pertoire>\n"
 
 #: ../alternatives.c:159
 #, c-format
@@ -274,7 +274,7 @@ msgstr "chemin de l'alternative attendu dans %s\n"
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "priorité numérique attendue dans %s\n"
+msgstr "prioritÃ© numÃ©rique attendue dans %s\n"
 
 #: ../alternatives.c:275
 #, c-format
@@ -292,7 +292,7 @@ msgstr "le lien ne pointe pas sur une alternative -- passage sur mode manuel\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "lien changé -- passage sur mode manuel\n"
+msgstr "lien changÃ© -- passage sur mode manuel\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
@@ -317,12 +317,12 @@ msgstr "Impossible de lier %s -> %s : %s\n"
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s existe déjà\n"
+msgstr "%s existe dÃ©jÃ \n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "Impossible de créer %s : %s\n"
+msgstr "Impossible de crÃ©er %s : %s\n"
 
 #: ../alternatives.c:448
 #, c-format
@@ -332,7 +332,7 @@ msgstr "Impossible de remplacer %s avec %s : %s\n"
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "le lien primaire pour %s doit être %s\n"
+msgstr "le lien primaire pour %s doit Ãªtre %s\n"
 
 #: ../alternatives.c:574
 #, c-format
@@ -357,7 +357,7 @@ msgstr "le lien pointe actuellement sur %s\n"
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr "%s - priorité %d\n"
+msgstr "%s - prioritÃ© %d\n"
 
 #: ../alternatives.c:626
 #, c-format
@@ -376,13 +376,13 @@ msgstr "Il existe %d programmes qui fournissent '%s'.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr "  Sélection    Commande\n"
+msgstr "  SÃ©lection    Commande\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Entrez [+] pour garder la sélection courante ou tapez le numéro de type de "
-"sélection :"
+"Entrez [+] pour garder la sÃ©lection courante ou tapez le numÃ©ro de type de "
+"sÃ©lection :"
 
 #: ../alternatives.c:675
 msgid ""
@@ -395,7 +395,7 @@ msgstr ""
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s n'a pas encore été configuré en tant qu'une alternative pour %s\n"
+msgstr "%s n'a pas encore Ã©tÃ© configurÃ© en tant qu'une alternative pour %s\n"
 
 #: ../alternatives.c:744
 #, c-format
@@ -423,5 +423,5 @@ msgid "alternatives version %s\n"
 msgstr "version des alternatives %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s"
+#~ msgstr "Erreur lors de la lecture depuis le rÃ©pertoire %s/init.d : %s"
 
