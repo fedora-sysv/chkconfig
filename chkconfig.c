@@ -149,7 +149,7 @@ static int listService(char * item) {
 
 	/* Skip files with known bad extensions */
 	if ((dn = strrchr(ent->d_name, '.')) != NULL &&
-    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
 	    continue;
 
 	dn = ent->d_name + strlen(ent->d_name) - 1;
@@ -193,7 +193,7 @@ static int listService(char * item) {
 
 		    /* Skip files with known bad extensions */
 		    if ((dn = strrchr(ent->d_name, '.')) != NULL &&
-			(!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+			(!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
 		      continue;
 
 		    dn = ent->d_name + strlen(ent->d_name) - 1;
@@ -337,7 +337,7 @@ int main(int argc, char ** argv) {
 		}
 
 		if (rc > 1) {
-		    fprintf(stderr, _("only one runlevel may be specfied for "
+		    fprintf(stderr, _("only one runlevel may be specified for "
 			    "a chkconfig query\n"));
 		    exit(1);
 		}

@@ -83,7 +83,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "só se pode indicar unha das opcións --list, --add, ou --del\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "só se pode indicar un nivel de execución para unha consulta de chkconfig\n"
 

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2000-08-30 17:35-0400\n"
+"POT-Creation-Date: 2000-10-19 02:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
 #: ../ntsysv.c:30

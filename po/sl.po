@@ -81,7 +81,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "doloèite lahko le eno od izbir --list, --add ali --del\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "v posamezni zahtevi chkconfig lahko doloèite le eno raven teka\n"
 
 #: ../ntsysv.c:30

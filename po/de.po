@@ -102,7 +102,7 @@ msgstr ""
 
 # ../chkconfig.c:286
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "nur ein Runlevel darf für eine chkconfig-Anfrage angegeben werden\n"
 
 # ../ntsysv.c:30

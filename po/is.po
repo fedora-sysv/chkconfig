@@ -81,7 +81,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "einungis má nefna eitt af --list, --add eða --del viðföngunum\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 
 #: ../ntsysv.c:30

@@ -85,7 +85,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, --del 중에 하나만을 사용해야 함\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 질의에서는 하나의 런레벨만 지정할 수 있음\n"
 
 #: ../ntsysv.c:30

@@ -88,7 +88,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "tylko jedna z opcji --list, --add, lub --del mo¿e byæ podana\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "tylko jeden poziom pracy mo¿e byæ podany dla zapytania chkconfig\n"
 
 #: ../ntsysv.c:30

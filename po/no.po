@@ -83,7 +83,7 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "du kan bare bruke ett av flaggene --list, --add og --del\n"
 
 #: ../chkconfig.c:340
-msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "du kan bare spesifisere ett kjøringsnivå for en chkconfig spørring\n"
 
 #: ../ntsysv.c:30
