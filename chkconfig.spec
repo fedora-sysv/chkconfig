@@ -51,7 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig
 /etc/init.d
 /etc/rc.d/init.d
-/etc/rc.d/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
