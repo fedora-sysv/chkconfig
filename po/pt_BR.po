@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-20 09:52+1000\n"
+"PO-Revision-Date: 2004-06-15 11:43+1000\n"
 "Last-Translator: David Barzilay <barzilay@redhat.com>\n"
 "Language-Team: Portuguese <gnome-l10n-br@listas.cipsga.org.br>\n"
 "MIME-Version: 1.0\n"
@@ -23,8 +23,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versão %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Este pode ser redistribuído livremente sob os termos da Licença Pública "
 "GNU.\n"
@@ -45,9 +44,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <nome>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <níveis de execução>] <nome> %s)\n"
+msgstr "         %s [--level <níveis>] <nome> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -106,8 +105,7 @@ msgstr "apenas uma dessas pode ser especificada --list, --add, ou --del\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
+msgstr "só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -186,8 +184,7 @@ msgstr ""
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
+msgstr "uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
 
 #: ../alternatives.c:51
 msgid "                    [--initscript <service>]\n"
@@ -440,3 +437,4 @@ msgstr "versão alternativa %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "erro ao ler do diretório %s/init.d: %s"
+
