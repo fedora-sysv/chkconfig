@@ -42,9 +42,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <enw>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <lefelau>] <enw> %s)\n"
+msgstr "         %s [--level <lefelau>] <enw> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -291,9 +290,8 @@ msgid "unexpected line in %s: %s\n"
 msgstr "llinell annisgwyl yn %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "methwyd darllen %s: %s\n"
+msgstr "methwyd darllen cyswllt %s: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
