@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0.5\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-04-11 00:07+0100\n"
+"PO-Revision-Date: 1999-09-14 21:24+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,24 +22,24 @@ msgstr ""
 "License\".\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "bruk:    chkconfig --list [navn]\n"
+msgstr "bruk:    %s  --list [navn]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <navn>\n"
+msgstr "         %s --add <navn>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <navn>\n"
+msgstr "         %s --del <navn>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <levels>] <navn> <on|off|reset>\n"
+msgstr "         %s [--level <levels>] <navn> %s\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -72,7 +72,7 @@ msgstr "klarte ikke å lese fra katalog %s/init.d: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s versjon %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -107,14 +107,14 @@ msgid "Services"
 msgstr "Tjenester"
 
 #: ../ntsysv.c:164
-#, fuzzy, c-format
+#, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "klarte ikke å finne informasjon om tjeneste %s: %s\n"
+msgstr "feil under lesing av informasjon for tjeneste %s: %s\n"
 
 #: ../ntsysv.c:173
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "klarte ikke å lese fra katalog %s/init.d: %s"
+msgstr "feil under lesing fra katalog %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
@@ -125,9 +125,9 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 
 #: ../leveldb.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "klarte ikke å finne treff til mønsteret %s\n"
+msgstr "klarte ikke å finne treff til mønsteret %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
