@@ -1,4 +1,4 @@
-# Íslensk şığing chkconfig
+# Ãslensk Ã¾Ã½Ã°ing chkconfig
 # Copyright (C) 2003 Red Hat, Inc.
 # Richard Allen (ra@ra.is), 2003
 msgid ""
@@ -9,18 +9,18 @@ msgstr ""
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s útgáfa %s - Höfundarréttur (C) 1997-2000 Red Hat HF.\n"
+msgstr "%s ÃºtgÃ¡fa %s - HÃ¶fundarrÃ©ttur (C) 1997-2000 Red Hat HF.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Şessu má dreifa samkvæmt skilmálum GNU Public License.\n"
+msgstr "Ãessu mÃ¡ dreifa samkvÃ¦mt skilmÃ¡lum GNU Public License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -48,23 +48,23 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"Şjónustan %s er studd af chkconfig en şağ er engin tílvísun í hana í "
-"keyslustigunum (keyrğu chkconfig --add %s')\n"
+"ÃjÃ³nustan %s er studd af chkconfig en Ã¾aÃ° er engin tÃ­lvÃ­sun Ã­ hana Ã­ "
+"keyslustigunum (keyrÃ°u chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "şjónusta %s styğur ekki chkconfig\n"
+msgstr "Ã¾jÃ³nusta %s styÃ°ur ekki chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "villa viğ lestur upplısinga um şjónustu %s: %s\n"
+msgstr "villa viÃ° lestur upplÃ½singa um Ã¾jÃ³nustu %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "gat ekki opnağ %s/init.d: %s\n"
+msgstr "gat ekki opnaÃ° %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -72,42 +72,42 @@ msgstr "virk"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "óvirk"
+msgstr "Ã³virk"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "villa viğ lestur úr möppu %s/init.d: %s"
+msgstr "villa viÃ° lestur Ãºr mÃ¶ppu %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "şjónustur úr xinetd:\n"
+msgstr "Ã¾jÃ³nustur Ãºr xinetd:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "gat ekki opnağ möppuna %s: %s"
+msgstr "gat ekki opnaÃ° mÃ¶ppuna %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s útgáfa %s\n"
+msgstr "%s ÃºtgÃ¡fa %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "einungis má nefna eitt af --list, --add eğa --del viğföngunum\n"
+msgstr "einungis mÃ¡ nefna eitt af --list, --add eÃ°a --del viÃ°fÃ¶ngunum\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
+msgstr "einungis mÃ¡ nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Sláiğ á <F1> fyrir frekari upplısingar um şjónustu."
+msgstr "SlÃ¡iÃ° Ã¡ <F1> fyrir frekari upplÃ½singar um Ã¾jÃ³nustu."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr "Í lagi"
+msgstr "Ã lagi"
 
 #: ../ntsysv.c:62
 msgid "Back"
@@ -115,86 +115,86 @@ msgstr "Til baka"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Hætta viğ"
+msgstr "HÃ¦tta viÃ°"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Hvağa şjónustur viltu ræsa sjálfvirkt?"
+msgstr "HvaÃ°a Ã¾jÃ³nustur viltu rÃ¦sa sjÃ¡lfvirkt?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Şjónustur"
+msgstr "ÃjÃ³nustur"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "villa viğ lestur upplısinga um şjónustu %s: %s\n"
+msgstr "villa viÃ° lestur upplÃ½singa um Ã¾jÃ³nustu %s: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "villa viğ lestur úr möppu %s/init.d: %s\n"
+msgstr "villa viÃ° lestur Ãºr mÃ¶ppu %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "villa viğ lestur úr möppunni %s: %s\n"
+msgstr "villa viÃ° lestur Ãºr mÃ¶ppunni %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Şú şarf ağ vera rót til ağ keyra %s.\n"
+msgstr "ÃÃº Ã¾arf aÃ° vera rÃ³t til aÃ° keyra %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "óleyfilegt viğfang viğ --levels\n"
+msgstr "Ã³leyfilegt viÃ°fang viÃ° --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Engum şjónustum er hægt ağ stjórna meğ ntsysv!\n"
+msgstr "Engum Ã¾jÃ³nustum er hÃ¦gt aÃ° stjÃ³rna meÃ° ntsysv!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "gat ekki mátağ mynstriğ %s: %s\n"
+msgstr "gat ekki mÃ¡taÃ° mynstriÃ° %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "get ekki ákvarğağ núverandi keyrslustig\n"
+msgstr "get ekki Ã¡kvarÃ°aÃ° nÃºverandi keyrslustig\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "gat ekki búiğ til tákntengiğ %s: %s\n"
+msgstr "gat ekki bÃºiÃ° til tÃ¡kntengiÃ° %s: %s\n"
 
 #: ../alternatives.c:46
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives útgáfa %s - Höfundarréttur (C) 1997-2000 Red Hat HF.\n"
+msgstr "alternatives ÃºtgÃ¡fa %s - HÃ¶fundarrÃ©ttur (C) 1997-2000 Red Hat HF.\n"
 
 #: ../alternatives.c:47
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Şessu má dreifa samkvæmt skilmálum GNU Public License.\n"
+"Ãessu mÃ¡ dreifa samkvÃ¦mt skilmÃ¡lum GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "notkun: alternatives --install <tengill> <heiti> <slóğ> <forgangur>\n"
+msgstr "notkun: alternatives --install <tengill> <heiti> <slÃ³Ã°> <forgangur>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <şjónusta>]\n"
+msgstr "                    [--initscript <Ã¾jÃ³nusta>]\n"
 
 #: ../alternatives.c:50
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <tengill> <heiti> <slóğ>]*\n"
+msgstr "                    [--slave <tengill> <heiti> <slÃ³Ã°>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <heiti> <slóğ>\n"
+msgstr "       alternatives --remove <heiti> <slÃ³Ã°>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
@@ -210,7 +210,7 @@ msgstr "       alternatives --display <heiti>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <heiti> <slóğ>\n"
+msgstr "       alternatives --set <heiti> <slÃ³Ã°>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
@@ -227,80 +227,80 @@ msgstr "                     --altdir <mappa> --admindir <mappa>\n"
 #: ../alternatives.c:159
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "gat ekki opnağ %s: %s\n"
+msgstr "gat ekki opnaÃ° %s: %s\n"
 
 #: ../alternatives.c:168
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "gat ekki lesiğ %s: %s\n"
+msgstr "gat ekki lesiÃ° %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s er tómt!\n"
+msgstr "%s er tÃ³mt!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "ógildur hamur á línu 1 í %s\n"
+msgstr "Ã³gildur hamur Ã¡ lÃ­nu 1 Ã­ %s\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "ógildur tengill í %s\n"
+msgstr "Ã³gildur tengill Ã­ %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "slóğin %s á ekki viğ %s\n"
+msgstr "slÃ³Ã°in %s Ã¡ ekki viÃ° %s\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "vantar slóğ fyrir 'slave' %s í %s\n"
+msgstr "vantar slÃ³Ã° fyrir 'slave' %s Ã­ %s\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "skráin %s endar óvænt\n"
+msgstr "skrÃ¡in %s endar Ã³vÃ¦nt\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "slóğ í 'alternate' vantar í %s\n"
+msgstr "slÃ³Ã° Ã­ 'alternate' vantar Ã­ %s\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "tölulegt forgildi vantar í %s\n"
+msgstr "tÃ¶lulegt forgildi vantar Ã­ %s\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "'slave' slóğ vantar í %s\n"
+msgstr "'slave' slÃ³Ã° vantar Ã­ %s\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "ógild lína í %s: %s\n"
+msgstr "Ã³gild lÃ­na Ã­ %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "tengiğ vísar ekki í stağgengil -- set haminn á handvirkt\n"
+msgstr "tengiÃ° vÃ­sar ekki Ã­ staÃ°gengil -- set haminn Ã¡ handvirkt\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "tengiğ er breytt -- set haminn á handvirkt\n"
+msgstr "tengiÃ° er breytt -- set haminn Ã¡ handvirkt\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr "myndi eyğa %s\n"
+msgstr "myndi eyÃ°a %s\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "gat ekki eytt tákntenginu %s: %s\n"
+msgstr "gat ekki eytt tÃ¡kntenginu %s: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
@@ -310,47 +310,47 @@ msgstr "myndi tengja %s -> %s\n"
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "gat ekki búiğ til tengiğ %s -> %s: %s\n"
+msgstr "gat ekki bÃºiÃ° til tengiÃ° %s -> %s: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s er şegar til\n"
+msgstr "%s er Ã¾egar til\n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "gat ekki búiğ til %s: %s\n"
+msgstr "gat ekki bÃºiÃ° til %s: %s\n"
 
 #: ../alternatives.c:448
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "gat ekki skipt út %s meğ %s: %s\n"
+msgstr "gat ekki skipt Ãºt %s meÃ° %s: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "ağaltengiğ fyrir %s verğur ağ vera %s\n"
+msgstr "aÃ°altengiÃ° fyrir %s verÃ°ur aÃ° vera %s\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "tengiğ %s er ógilt fyrir %s (%s %s)\n"
+msgstr "tengiÃ° %s er Ã³gilt fyrir %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - er í sjálfvirkum ham.\n"
+msgstr "%s - er Ã­ sjÃ¡lfvirkum ham.\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - er í handvirkum ham.\n"
+msgstr "%s - er Ã­ handvirkum ham.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr " tengiğ vísar nú í %s\n"
+msgstr " tengiÃ° vÃ­sar nÃº Ã­ %s\n"
 
 #: ../alternatives.c:623
 #, c-format
@@ -365,12 +365,12 @@ msgstr " slave %s: %s\n"
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "Núvarandi 'besta' útgáfa er %s.\n"
+msgstr "NÃºvarandi 'besta' ÃºtgÃ¡fa er %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Şağ eru %d forrit sem veita '%s'.\n"
+msgstr "ÃaÃ° eru %d forrit sem veita '%s'.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -378,7 +378,7 @@ msgstr "  Val          Skipun\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "'Enter' til ağ halda núverandi vali[+] eğa sláğu inn númer: "
+msgstr "'Enter' til aÃ° halda nÃºverandi vali[+] eÃ°a slÃ¡Ã°u inn nÃºmer: "
 
 #: ../alternatives.c:675
 msgid ""
@@ -386,34 +386,34 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"villa viğ lestur vals\n"
+"villa viÃ° lestur vals\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s hefur ekki veriğ stillt sem stağgengill %s\n"
+msgstr "%s hefur ekki veriÃ° stillt sem staÃ°gengill %s\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(mun fjarlægja %s\n"
+msgstr "(mun fjarlÃ¦gja %s\n"
 
 #: ../alternatives.c:746
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "gat ekki fjarlægt %s: %s\n"
+msgstr "gat ekki fjarlÃ¦gt %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "mappan %s er ógild\n"
+msgstr "mappan %s er Ã³gild\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "mappan %s er ógild\n"
+msgstr "mappan %s er Ã³gild\n"
 
 #: ../alternatives.c:880
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "alternatives útgáfa %s\n"
+msgstr "alternatives ÃºtgÃ¡fa %s\n"
