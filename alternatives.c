@@ -652,7 +652,7 @@ static int configService(char * title, const char * altDir,
     struct alternativeSet set;
     int i;
     char choice[200];
-    char * end;
+    char * end = NULL;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
 
@@ -675,7 +675,6 @@ static int configService(char * title, const char * altDir,
 	    fprintf(stderr, _("\nerror reading choice\n"));
 	    return 2;
 	}
-
 	i = strtol(choice, &end, 0);
 	if ((*end == '\n') && (end != choice)) {
 	  set.current = i - 1;
