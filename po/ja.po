@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-01-06 18:47+0900\n"
-"Last-Translator: James Hashida <khashida@redhat.com>\n"
+"PO-Revision-Date: 2004-01-08 13:51+0900\n"
+"Last-Translator: Tadashi Jokagi <fedora@elf.no-ip.org>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "使用法:  %s --list [name]\n"
+msgstr "使用法:  %s --list [名前]\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:26
@@ -92,7 +92,7 @@ msgstr "オフ"
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
+msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました: %s\n"
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
@@ -114,12 +114,12 @@ msgstr "%s バージョン %s\n"
 # ../chkconfig.c:291
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです\n"
+msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです。\n"
 
 # ../chkconfig.c:339
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです\n"
+msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです。\n"
 
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
@@ -171,12 +171,12 @@ msgstr "%sを実行する為にルートでなければなりません。\n"
 # ../ntsysv.c:270
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "--levels の引数が不適当です\n"
+msgstr "--levels の引数が不適当です。\n"
 
 # ../ntsysv.c:277
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv によって管理できるサービスがありません\n"
+msgstr "ntsysv によって管理できるサービスがありません。\n"
 
 # ../leveldb.c:355
 #: ../leveldb.c:508
@@ -187,19 +187,19 @@ msgstr "パターン %s の解析に失敗しました: %s\n"
 # ../leveldb.c:386
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "現在のランレベルを識別できません\n"
+msgstr "現在のランレベルを識別できません。\n"
 
 # ../leveldb.c:474
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "シンボリックリンク %s をつくるのに失敗しました。 %s\n"
+msgstr "シンボリックリンク %s をつくるのに失敗しました: %s\n"
 
 # ../chkconfig.c:21
 #: ../alternatives.c:46
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives のバージョン%s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives バージョン%s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../alternatives.c:47
@@ -212,7 +212,7 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "使用法: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -279,60 +279,60 @@ msgstr "%s 空です!\n"
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%sの1行目は不正なモード\n"
+msgstr "%sの1行目は不正なモードです。\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%sに不正な主要リンク\n"
+msgstr "%sに不正な主要リンクがあります。\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%sに予想外のパス%s有り\n"
+msgstr "%sに予想外のパス%sがあります。\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "%sにスレーブ%sのパスが欠如\n"
+msgstr "%sにスレーブ%sのパスが欠如しています。\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%sに予想外のファイル終結\n"
+msgstr "%sが予想外なファイル終結をしています。\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%sに交替のパスが予想されます\n"
+msgstr "%sに交替のパスが予想されます。\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%sに数値の優先が予想されます\n"
+msgstr "%sに数値の優先が予想されます。\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "%sにスレーブパスを予想\n"
+msgstr "%sにスレーブパスを予想されます。\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%sに予想外の行有り: %s\n"
+msgstr "%sに予想外の行があります: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "リンクはどの代替も指定していません--手動に設定します\n"
+msgstr "リンクはどの代替も指定していません--手動に設定します。\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "リンクの変更-- 手動に設定します\n"
+msgstr "リンクの変更-- 手動に設定します。\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr "%sを削除する\n"
+msgstr "%sを削除する。\n"
 
 # ../leveldb.c:474
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
@@ -376,7 +376,7 @@ msgstr "%sの主要リンクは %sとします\n"
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "リンク%sはスレーブ%s(%s %s)に不適切\n"
+msgstr "リンク%sはスレーブ%s(%s %s)に不適切です。\n"
 
 #: ../alternatives.c:616
 #, c-format
@@ -438,7 +438,7 @@ msgstr "%sは%sの為の互換用として設定されていません\n"
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr "%sを削除する\n"
+msgstr "%sを削除する。\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:746
@@ -449,18 +449,18 @@ msgstr "%sの削除に失敗しました: %s\n"
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir %sは無効\n"
+msgstr "altdir %sは無効です。\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir %sは無効\n"
+msgstr "admindir %sは無効です。\n"
 
 # ../chkconfig.c:284
 #: ../alternatives.c:880
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "alternativesのバージョン %s\n"
+msgstr "alternatives バージョン %s\n"
 
 # ../chkconfig.c:172
 #~ msgid "error reading from directory %s/init.d: %s"
