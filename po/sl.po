@@ -1,14 +1,14 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Roman Maurer <roman@lugos.si>, 2001.
-# $Id: sl.po,v 1.21 2004/06/04 16:21:23 notting Exp $
+# $Id: sl.po,v 1.22 2004/09/12 17:41:46 romanm Exp $
 # $Source: /home/notting/prog/cvs-fu/chkconfig/po/Attic/sl.po,v $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 9.1\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-01-11 18:41+0100\n"
+"PO-Revision-Date: 2004-09-12 19:37+0200\n"
 "Last-Translator: Roman Maurer <roman@lugos.si>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -226,7 +226,7 @@ msgstr "                --altdir <imenik> --admindir <imenik>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "berem %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -339,7 +339,7 @@ msgstr "ni moč nadomestiti %s z %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "poganjam %s\n"
 
 #: ../alternatives.c:512
 #, c-format
