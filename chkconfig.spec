@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.5
+Version: 1.2.6
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -42,10 +42,6 @@ make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d
-for n in 0 1 2 3 4 5 6; do
-    mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
-    ln -s rc.d/rc${n}.d $RPM_BUILD_ROOT/etc/rc${n}.d
-done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,7 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig
 /etc/init.d
 /etc/rc.d/init.d
-/etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
@@ -68,6 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Mon Jul 17 2000 Bernhard Rosenkraenzer <bero@redhat.com>
+- don't own the /etc/rc[0-6].d symlinks; they're owned by initscripts
+
 * Sat Jul 15 2000 Matt Wilson <msw@redhat.com>
 - move back to old file layout
 
