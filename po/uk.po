@@ -1,14 +1,9 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
 "POT-Creation-Date: 2000-07-18 00:53-0400\n"
-"PO-Revision-Date: 1999-04-09 10:00+0500\n"
-"Last-Translator: Alex Lobas <soft@cw.comizdat.com>\n"
+"PO-Revision-Date: 2000-08-09 23:24+09:00\n"
+"Last-Translator: Dmytro Koval'ov <kov@tokyo.email.ne.jp>\n"
 "Language-Team: Comizdat <soft@cw.comizdat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=koi8-u\n"
@@ -38,7 +33,7 @@ msgstr "         %s --del <служба>\n"
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <р╕вн╕>] <служба> <on|off|reset>\n"
+msgstr "         %s [--level <р╕вн╕>] <служба> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -70,12 +65,12 @@ msgstr "помилка читання з каталогу %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "серв╕си, що базуються на xinetd:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "неможливо в╕дкрити %s/init.d: %s\n"
+msgstr "неможливо в╕дкрити директор╕ю %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -125,9 +120,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "помилка читання з каталогу %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "помилка читання з каталогу %s/init.d: %s\n"
+msgstr "помилка читання з каталогу %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
