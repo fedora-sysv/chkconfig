@@ -58,8 +58,8 @@ install:
 
 	install -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
 	install -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
-	install -m 755 alternatives $(instroot)/$(BINDIR)/alternatives
-	ln -s alternatives $(instroot)/$(BINDIR)/update-alternatives
+	install -m 755 alternatives $(instroot)/$(USRSBINDIR)/alternatives
+	ln -s alternatives $(instroot)/$(USRSBINDIR)/update-alternatives
 	
 	for i in $(MAN); do \
 		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
