@@ -244,7 +244,7 @@ int doSetService(struct service s, int level, int on) {
 	if (globres.gl_pathc) globfree(&globres);
     }
 
-    sprintf(linkname, "%s/rc%d.d/%c%d%s", RUNLEVELS, level,
+    sprintf(linkname, "%s/rc%d.d/%c%02d%s", RUNLEVELS, level,
 			on ? 'S' : 'K', priority, s.name);
     sprintf(linkto, "../init.d/%s", s.name);
 
