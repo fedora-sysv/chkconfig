@@ -102,7 +102,7 @@ msgstr "Aceptar"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Atrás"
+msgstr "Anterior"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
