@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 7.0\n"
-"POT-Creation-Date: 2001-01-11 11:33-0500\n"
-"PO-Revision-Date: 2000-09-05 22:50+0200\n"
+"Project-Id-Version: chkconfig 7.1\n"
+"POT-Creation-Date: 2001-01-25 15:49-0500\n"
+"PO-Revision-Date: 2001-02-02 17:40+0200\n"
 "Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s razlièice %s - Pravna za¹èita (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
