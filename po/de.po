@@ -1,8 +1,14 @@
+# $Id: de.po,v 1.4 1998/05/07 08:15:54 gafton Exp $
+#
+# $Log: de.po,v $
+# Revision 1.4  1998/05/07 08:15:54  gafton
+# use german diacritics in the translations
+#
 msgid ""
 msgstr ""
 "Date: 1998-05-07 01:21:04-0400\n"
 "From: root <root@mercury.redhat.com>\n"
-"Content-Type: text/plain; charset=\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
@@ -36,7 +42,7 @@ msgstr ""
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Drucken Sie <F1> um mehr Information uber einen Systemdienste zu kreigen"
+msgstr "Drücken Sie <F1> für weitere Informationen über einen Dienst."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
@@ -44,11 +50,11 @@ msgstr "OK"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Welche Systemdienste sollten automatisch gestarten werden?"
+msgstr "Welche Dienste sollen automatisch gestartet werden?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr "Systemdienste"
+msgstr "Dienste"
 
 #: ../leveldb.c:193
 msgid "failed to glob pattern %s\n"
