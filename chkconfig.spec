@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.1.0
+%define version 1.1.1
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8*
 
 %changelog
+* Fri Feb 11 2000 Bill Nottingham <notting@redhat.com>
+- typo in man page
+
 * Wed Feb 02 2000 Cristian Gafton <gafton@redhat.com>
 - fix description
 
