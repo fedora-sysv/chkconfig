@@ -210,14 +210,14 @@ int main(int argc, char ** argv) {
     if (levelsStr) {
 	levels = parseLevels(levelsStr, 0);
 	if (levels == -1) {
-	    fprintf(stderr, "bad argument to --levels\n");
+	    fprintf(stderr, _("bad argument to --levels\n"));
 	    exit(2);
 	}
     }
 
     if (getServices(&services, &numServices, backButton)) return 1;
     if (!numServices) {
-	fprintf(stderr, "No services may be managed by ntsysv!\n");
+	fprintf(stderr, _("No services may be managed by ntsysv!\n"));
 	return 2;
     }
 

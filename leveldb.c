@@ -12,6 +12,12 @@
 #include <string.h>
 #include <unistd.h>
 
+/* Changes
+   1998-09-22 - Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+                i18n for init.d scripts (eg.: description(pt_BR) is a brazilian
+		portuguese description for the package) 
+*/
+
 #define _(String) gettext((String)) 
 
 #include "leveldb.h"
@@ -39,7 +45,13 @@ int readServiceInfo(char * name, struct service * service) {
     char * bufstart, * bufstop, * start, * end, * next;
     struct service serv = { NULL, -1, -1, -1, NULL };
     char overflow;
+    char english;
+    char is_my_lang = 0;
     char levelbuf[20];
+    char * lang = getenv ("LANG"),
+	 * final_parenthesis,
+         * english_desc = NULL;
+    char my_lang_loaded = 0;
 
     sprintf(filename, RUNLEVELS "/init.d/%s", name);
 
@@ -100,21 +112,45 @@ int readServiceInfo(char * name, struct service * service) {
 		munmap(bufstart, sb.st_size);
 		return 1;
 	    }
-	} else if (!strncmp(start, "description:", 12)) {
-	    start += 12;
+	} else if (!strncmp(start, "description", 11)) {
+	    start += 11;
+
+	    english = *start == ':';
+
+            if (!english) {
+		if (*start != '(') {
+		    if (serv.desc) free(serv.desc);
+		    munmap(bufstart, sb.st_size);
+		    return 1;
+		}
+
+                ++start;
+		final_parenthesis = strchr (start, ')');
+
+		if (final_parenthesis == NULL || final_parenthesis - start > 5) {
+		    if (serv.desc) free(serv.desc);
+		    munmap(bufstart, sb.st_size);
+		    return 1;
+		}
+
+		is_my_lang = lang ? strncmp (lang, start, strlen (lang)) == 0 : 0;
+		start = final_parenthesis + 2;
+	    } else ++start;
+
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end) {
 		munmap(bufstart, sb.st_size);
 		return 1;
 	    }
-
-	    serv.desc = malloc(end - start + 1);
-	    strncpy(serv.desc, start, end - start);
-	    serv.desc[end - start] = '\0';
+          {
+	    char* desc = malloc(end - start + 1);
+	    strncpy(desc, start, end - start);
+	    desc[end - start] = '\0';
 
 	    start = next;
-	    while (serv.desc[strlen(serv.desc) - 1] == '\\') {
-		serv.desc[strlen(serv.desc) - 1] = '\0';
+
+	    while (desc[strlen(desc) - 1] == '\\') {
+		desc[strlen(desc) - 1] = '\0';
 		start = next;
 		
 		while (isspace(*start) && start < bufstop) start++;
@@ -137,17 +173,43 @@ int readServiceInfo(char * name, struct service * service) {
 		else
 		    next = end + 1;
 
-		i = strlen(serv.desc);
-		serv.desc = realloc(serv.desc, i + end - start + 1);
-		strncat(serv.desc, start, end - start);
-		serv.desc[i + end - start] = '\0';
+		i = strlen(desc);
+		desc = realloc(desc, i + end - start + 1);
+		strncat(desc, start, end - start);
+		desc[i + end - start] = '\0';
 
 		start = next;
 	    }
+
+	    if (desc)
+	      if (my_lang_loaded) {
+                  free(desc);
+              } else if (is_my_lang) {
+                if (serv.desc)
+                  free(serv.desc);
+
+                serv.desc = desc;
+                break;
+              } else if (english) {
+                if (serv.desc)
+                  free(serv.desc);
+
+		if (english_desc)
+                  free (english_desc);
+
+                english_desc = desc;
+              } else free (desc);
+	  }
 	}
     }
 
     munmap(bufstart, sb.st_size);
+
+    if (!serv.desc) {
+      if (english_desc)
+	serv.desc = english_desc;
+    } else if (english_desc)
+	free (english_desc);
 
     if ((serv.levels == -1 ) || !serv.desc) {
 	return 1;

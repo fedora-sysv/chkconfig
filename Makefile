@@ -37,6 +37,7 @@ leveldb.o: leveldb.c leveldb.h
 
 clean:
 	rm -f chkconfig $(OBJS) $(NTOBJS)
+	make -C po clean
 
 install:
 	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(BINDIR)

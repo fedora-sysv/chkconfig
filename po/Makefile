@@ -27,7 +27,7 @@ update-po: Makefile
 	$(MAKE) $(NLSPACKAGE).pot
 	catalogs='$(CATALOGS)'; \
 	for cat in $$catalogs; do \
-		lang=`basename $$cat .po`; \
+		lang=`basename $$cat .mo`; \
 		if tupdate $(NLSPACKAGE).pot $$lang.po > $$lang.pot ; then \
 			echo "tupdate of $$lang succeeded" ; \
 		else \

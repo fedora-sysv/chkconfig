@@ -21,10 +21,10 @@ static void usage(void) {
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
-    fprintf(stderr, "usage:   chkconfig --list [name]\n");
-    fprintf(stderr, "         chkconfig --add <name>\n");
-    fprintf(stderr, "         chkconfig --del <name>\n");
-    fprintf(stderr, "         chkconfig [--level <levels>] <name> <on|off|reset>\n");
+    fprintf(stderr, _("usage:   chkconfig --list [name]\n"));
+    fprintf(stderr, _("         chkconfig --add <name>\n"));
+    fprintf(stderr, _("         chkconfig --del <name>\n"));
+    fprintf(stderr, _("         chkconfig [--level <levels>] <name> <on|off|reset>\n"));
 
     exit(1);
 }
@@ -90,7 +90,7 @@ static int showServiceInfo(char * name, int forgiving) {
     printf("%s", s.name);
 
     for (i = 0; i < 7; i++) {
-	printf(" %d:%s", i, isOn(s.name, i) ? "on" : "off");
+	printf(" %d:%s", i, isOn(s.name, i) ? _("on") : _("off"));
     }
     printf("\n");
 
@@ -106,7 +106,7 @@ static int listService(char * item) {
     if (item) return showServiceInfo(item, 0);
 
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-	fprintf(stderr, _("failed to open " RUNLEVELS "/init.d: %s\n"),
+	fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 		strerror(errno));
         return 1;
     }
