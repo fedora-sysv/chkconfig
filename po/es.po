@@ -1,136 +1,139 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Tullio Dovera <tdovera@redhat.it>, 2000.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0 \n"
-"POT-Creation-Date: 2000-02-09 17:26-0500 \n"
-"PO-Revision-Date: 1999-04-08 18:15+1 \n"
-"Last-Translator: Federico Musto <federico@redhat.it> \n"
-"Language-Team: ITALIAN <it@li.org> \n"
-"MIME-Version: 1.0 \n"
-"Content-Type: text/plain; charset=ISO-8959-1 \n"
-"Content-Transfer-Encoding: ascii \n"
+"Project-Id-Version: 1.0\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
+"PO-Revision-Date: 2000-03-09 10:15+1\n"
+"Last-Translator: Tullio Dovera <tdovera@redhat.it>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8959-1\n"
+"Content-Transfer-Encoding: ascii\n"
 
 #: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Este programa puede ser libremente distribuido bajo los términos de la "
+"licencia pública de GNU.\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "uso:   %s --list [nombre]\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <nombre>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <nombre>\n"
 
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "         %s [--level <levels>] <nombre> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "el servicio %s no soporta chkconfig\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "error leyendo la información del servicio %s: %s\n"
 
 #: ../chkconfig.c:100
 msgid "on"
-msgstr ""
+msgstr "on"
 
 #: ../chkconfig.c:100
 msgid "off"
-msgstr ""
+msgstr "off"
 
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "falló abriendo %s/init.d: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "error leyendo del directorio %s/init.d: %s"
 
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s version %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "solo uno de --list, --add, o --del puede ser especificado\n"
 
 #: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "solo un runlevel puede ser especificado para una consulta de "
+"chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Pulse <F1> para más información sobre el servicio."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "¿Qué servicios deben ser ejecutados automáticamente?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Servicios"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "error leyendo información para el servicio %s: %s.\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "error leyendo del directorio %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "mal argumento para --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "¡Ningún servicio debe ser manejado por ntsysv!\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "fallo al buscar el patrón %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "No se puede determinar el runlevel actual\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "fallo al hacer el symlink %s: %s\n"
