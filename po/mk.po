@@ -1,19 +1,22 @@
+# translation of mk.po to Macedonian
 # Macedonian translations for PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Automatically generated, 2004.
+# Tomislav Markovski <herrera@users.sourceforge.net>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: mk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-06-04 16:57-0400\n"
-"Last-Translator: Tomislav Markovski\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2004-07-20 20:04+0200\n"
+"Last-Translator: Tomislav Markovski <herrera@users.sourceforge.net>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -22,10 +25,8 @@ msgstr "%s верзија %s - Сите права задржани 1997-2000 Re
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Може да биде слободно дистрибурано под условите во ГНУ Јавната Лиценца (GPL).\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Може да биде слободно дистрибурано под условите во GNU Public License (GPL).\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -35,39 +36,39 @@ msgstr "употреба:   %s --list [име]\n"
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <име>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <име>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <нивоа>] <име> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
+msgstr "сервисот %s поддржува chkconfig, но не е референциран во ниту еден runlevel (откуцајте 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "сервисот %s не поддржува chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "грешка при читање на податоците за сервисот %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "не можам да отворам %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -80,36 +81,36 @@ msgstr "исклучено"
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "грешка при читање од директориумот %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 #, c-format
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "сервиси базирани на xinetd:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr ""
+msgstr "не можам да прочитам од директориумот %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s верзија %s\n"
 
 #: ../chkconfig.c:412
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "само еден параметар од --list, --add, или --del може да биде наведен\n"
 
 #: ../chkconfig.c:464
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "само еден runlevel може да биде наведен во слогот на  chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Притиснете <F1> за повеќе податоци за овој сервис."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -134,22 +135,22 @@ msgstr "Сервиси"
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "грешка при читање на податоците за сервисот %s: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "грешка при читање од директориумот %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Мора да бидете root за да извршите %s.\n"
 
 #: ../ntsysv.c:292
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "лош параметар на --levels\n"
 
 #: ../ntsysv.c:299
 #, c-format
@@ -164,12 +165,12 @@ msgstr ""
 #: ../leveldb.c:539
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "не можам да го одредам тековниот runlevel\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "не можам да креирам врска (symlink) %s: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
@@ -182,21 +183,23 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
+"Може да биде слободно дистрибуирано под условите во GNU Public License.\n"
+"\n"
 
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "употреба: алтернативи --install <врска> <име> <патека> <приоритет>\n"
 
 #: ../alternatives.c:51
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <сервис>]\n"
 
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr ""
+msgstr "                    [--slave <врска> <име> <патека>]*\n"
 
 #: ../alternatives.c:53
 #, c-format
@@ -226,7 +229,7 @@ msgstr ""
 #: ../alternatives.c:58
 #, c-format
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -449,3 +452,4 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
+
