@@ -2,7 +2,6 @@
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Mohammad DAMT <mdamt@linux.or.id>, 1999.
 #
-# , fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ID-chkconfig 1.0\n"
@@ -11,8 +10,8 @@ msgstr ""
 "Last-Translator: Mohammad DAMT <mdamt@ldp.linux.or.id>\n"
 "Language-Team: LDP Indonesia <http://ldp.linux.or.id>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain\n"
-"Content-Transfer-Encoding: ISO-8859-1\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
