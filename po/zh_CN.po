@@ -414,6 +414,4 @@ msgstr "admindir %s 无效\n"
 msgid "alternatives version %s\n"
 msgstr "替换选择(alternatives)的版本 %s \n"
 
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "从 %s/init.d 目录中读取时出错：%s"
 
