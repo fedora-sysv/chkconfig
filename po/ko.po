@@ -12,13 +12,13 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 버전 %s - 저작권 (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s %s                       Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"이 프로그램은 GNU Public License 하에서 무료로 게재 배포할 수 있습니다.\n"
+"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -50,13 +50,18 @@ msgstr "%s 서비스는 chkconfig 를 지원하지 않습니다\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다: %s\n"
 
+##
+## 이곳을 '켜짐' 과 '꺼짐'으로 번역하면, 
+## 한글의 시각적 특성상 보기에 좀 헷갈립니다.
+## '끔' 과 '켬' 도 마찬가지 입니다.  :-)
+##
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
-msgstr "켜짐"
+msgstr "활성"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
-msgstr "꺼짐"
+msgstr "해제"
 
 #: ../chkconfig.c:138
 #, c-format
@@ -80,7 +85,7 @@ msgstr "%s 디렉토리를 여는데 실패했습니다: %s"
 #: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s 버전 %s\n"
+msgstr "%s %s\n"
 
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -88,7 +93,7 @@ msgstr "--list, --add, --del 의 옵션 중 하나만 지정하셔야 합니다\n"
 
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig 질의시에는 하나의 런레벨만 지정하셔야 합니다\n"
+msgstr "chkconfig 질의시에는 하나의 실행 레벨만 지정하셔야 합니다\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -132,7 +137,7 @@ msgstr "%s 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
 #: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s 는 root 만이 실행할 수 있습니다.\n"
+msgstr "%s는 root 계정으로 실행해야 합니다.\n"
 
 #: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
@@ -149,7 +154,7 @@ msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
-msgstr "현재의 런레벨을 확인할 수 없습니다\n"
+msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 
 #: ../leveldb.c:474
 #, c-format
