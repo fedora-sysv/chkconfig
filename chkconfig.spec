@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.20
+Version: 1.2.21
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -70,6 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Wed Feb 14 2001 Preston Brown <pbrown@redhat.com>
+- final translation update.
+
 * Tue Feb 13 2001 Preston Brown <pbrown@redhat.com>
 - warn in ntsysv if not running as root.
 
