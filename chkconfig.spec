@@ -77,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Wed Feb  2 2005 Bill Nottingham <notting@redhat.com> 1.3.14-1
 - resize reasonably with larger screens (#74156)
+- don't error out completely on bad symlink (#74324)
 
 * Tue Jan 11 2005 Bill Nottingham <notting@redhat.com> 1.3.13-1
 - fix LSB comment parsing some more (#144739)

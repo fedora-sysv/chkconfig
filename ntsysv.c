@@ -163,7 +163,8 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb))
 	{
-		err = errno;
+		fprintf(stderr, _("error reading info for service %s: %s\n"),
+			ent->d_name, strerror(errno));
 		continue;
 	}
 	if (!S_ISREG(sb.st_mode)) continue;
@@ -195,12 +196,6 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	    return 2;
 	} else if (!rc)
 	    numServices++;
-    }
-
-    if (err) {
-	fprintf(stderr, _("error reading from directory %s/init.d: %s\n"),
-		RUNLEVELS, strerror(err));
-        return 1;
     }
 
     closedir(dir);

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-02 15:49-0500\n"
+"POT-Creation-Date: 2005-02-02 15:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,40 +69,40 @@ msgstr ""
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:282 ../ntsysv.c:201
+#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
 #, c-format
-msgid "error reading from directory %s/init.d: %s\n"
+msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:290
+#: ../chkconfig.c:285
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:287
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:407
+#: ../chkconfig.c:402
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:414
+#: ../chkconfig.c:409
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:466
+#: ../chkconfig.c:461
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -131,27 +131,22 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:192 ../ntsysv.c:236
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr ""
-
-#: ../ntsysv.c:245
+#: ../ntsysv.c:240
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:281
+#: ../ntsysv.c:276
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:298
+#: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:305
+#: ../ntsysv.c:300
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
