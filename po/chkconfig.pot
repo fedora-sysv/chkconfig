@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-03-08 02:01-0500\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,43 +61,43 @@ msgstr ""
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
-msgid "on"
-msgstr ""
-
-#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
-msgid "off"
-msgstr ""
-
-#: ../chkconfig.c:152
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:186
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr ""
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr ""
 
-#: ../chkconfig.c:194
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:196
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr ""
 
-#: ../chkconfig.c:299
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:306
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:354
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
@@ -153,16 +153,16 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:367
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:398
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:486
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

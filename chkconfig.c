@@ -168,7 +168,7 @@ static int addService(char * name) {
     }
 	
     if (s.type == TYPE_XINETD) return 0;
-    if (s.isLSB)
+    if (s.isLSB && (s.sPriority == s.kPriority == -1))
 		frobDependencies(&s);
     
     for (i = 0; i < 7; i++) {
