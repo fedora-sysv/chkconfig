@@ -112,7 +112,7 @@ msgstr "tylko jedna z opcji --list, --add lub --del może być podana\n"
 #: ../chkconfig.c:461
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "tylko jeden poziom pracy może być podany dla zapytania chkconfig\n"
+msgstr "tylko jeden runlevel może być podany dla zapytania chkconfig\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -166,7 +166,7 @@ msgstr "nie można dopasować do wzoru %s: %s\n"
 #: ../leveldb.c:548
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "nie można ustalić aktualnego poziomu pracy\n"
+msgstr "nie można ustalić aktualnego runlevelu\n"
 
 #: ../leveldb.c:636
 #, c-format
@@ -184,8 +184,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Program może być swobodnie rozprowadzany na warunkach Publicznej Licencji "
-"GNU.\n"
+"Program może być swobodnie rozprowadzany na warunkach Publicznej Licencji GNU.\n"
 "\n"
 
 #: ../alternatives.c:51
@@ -341,7 +340,7 @@ msgstr "dowiąże %s -> %s\n"
 #: ../alternatives.c:369 ../alternatives.c:386
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "Nie można dowiązać %s -> %s: %s\n"
+msgstr "nie można dowiązać %s -> %s: %s\n"
 
 #: ../alternatives.c:418
 #, c-format
@@ -406,7 +405,7 @@ msgstr "Obecnie 'najlepszą' wersją jest %s.\n"
 #: ../alternatives.c:664
 #, fuzzy, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Jest %d programów dostarczających '%s'.\n"
+msgstr "Jest %d program dostarczający '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -416,7 +415,7 @@ msgstr "Jest %d programów dostarczających '%s'.\n"
 #: ../alternatives.c:666
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  Zaznaczenie  Komenda\n"
+msgstr "  Zaznaczenie    Komenda\n"
 
 #: ../alternatives.c:675
 #, c-format
@@ -451,12 +450,12 @@ msgstr "nie można usunąć %s: %s\n"
 #: ../alternatives.c:871
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir %s niepoprawny\n"
+msgstr "altdir %s jest niepoprawny\n"
 
 #: ../alternatives.c:877
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir %s niepoprawny\n"
+msgstr "admindir %s jest niepoprawny\n"
 
 #: ../alternatives.c:887
 #, c-format
