@@ -282,7 +282,7 @@ int main(int argc, char ** argv) {
     newtCls();
 
     newtPushHelpLine(NULL);
-    newtDrawRootText(0, 0, "ntsysv " VERSION " - (C) 1999 Red Hat "
+    newtDrawRootText(0, 0, "ntsysv " VERSION " - (C) 2000 Red Hat "
 			"Software");
    
     if (levels==-1) 
