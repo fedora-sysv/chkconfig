@@ -1,12 +1,11 @@
 #
-# 번 역 자: 류종훈(redhat4u@netian.com)
-# 홈페이지: http://my.netian.com/~redhat4u
+# 번 역 자: Michelle Kim 김지은 (mkim@redhat.com)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-03-14 22:28-0500\n"
-"PO-Revision-Date: 2002-03-20 15:45GMT+10.00\n"
+"PO-Revision-Date: 2002-03-21 11:51GMT+10.00\n"
 "Last-Translator: Michelle Kim <mkim@brisbane.redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
