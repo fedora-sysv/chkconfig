@@ -1,44 +1,47 @@
+# Stanislav Meduna <stano@eunet.sk>, 1999.
+# Marcel Telka <marcel@telka.sk>, 2003.
+
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 0.9.4\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 1999-09-12 17:08+02:00\n"
-"Last-Translator: Stanislav Meduna <stano@eunet.sk>\n"
-"Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"
+"PO-Revision-Date: 2003-01-27 20:27+0100\n"
+"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s verzia %s - Autorsk√© pr√°va ¬© 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Program mÙæe byª voµne πÌren˝ za podmienok urËen˝ch GNU Public License.\n"
+"Program m√¥≈æe by≈• voƒæne ≈°√≠ren√Ω za podmienok urƒçen√Ωch GNU Public License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "pouæitie:   %s --list [n·zov]\n"
+msgstr "pou≈æitie:   %s --list [n√°zov]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "            %s --add <n·zov>\n"
+msgstr "            %s --add <n√°zov>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "            %s --del <n·zov>\n"
+msgstr "            %s --del <n√°zov>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "            %s [--level <˙rovne>] <n·zov> %s)\n"
+msgstr "            %s [--level <√∫rovne>] <n√°zov> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -46,43 +49,45 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"slu≈æba %s podporuje chkconfig, ale nie je na ≈àu odkazovan√© zo ≈æiadnej √∫rovne "
+"(spustite 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "sluæba %s nepodporuje chkconfig\n"
+msgstr "slu≈æba %s nepodporuje chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "chyba pri ËÌtanÌ inform·ciÌ o sluæbe %s: %s\n"
+msgstr "chyba pri ƒç√≠tan√≠ inform√°ci√≠ o slu≈æbe %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "nepodarilo sa otvoriª %s/init.d: %s\n"
+msgstr "nepodarilo sa otvori≈• %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "zapnutÈ"
+msgstr "zapnut√©"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "vypnutÈ"
+msgstr "vypnut√©"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "chyba pri ËÌtanÌ z adres·ra %s/init.d: %s"
+msgstr "chyba pri ƒç√≠tan√≠ z adres√°ra %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "slu≈æby sp√∫≈°≈•an√© pomocou xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "nepodarilo sa otvoriª %s/init.d: %s\n"
+msgstr "nepodarilo sa otvori≈• adres√°r %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -91,74 +96,74 @@ msgstr "%s verzia %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "mÙæe byª zadan· iba jedna z volieb --list, --add alebo --del\n"
+msgstr "m√¥≈æe by≈• zadan√° iba jedna z volieb --list, --add alebo --del\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "pre chkconfig ot·zku mÙæe byª zadan· iba jedna ˙roveÚ\n"
+msgstr "pre chkconfig ot√°zku m√¥≈æe by≈• zadan√° iba jedna √∫rove≈à\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "StlaËenÌm <F1> zÌskate viac inform·ciÌ o sluæbe."
+msgstr "Stlaƒçen√≠m <F1> z√≠skate viac inform√°ci√≠ o slu≈æbe."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr "OK"
+msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Sp‰ª"
+msgstr "Sp√§≈•"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Zruπiª"
+msgstr "Zru≈°i≈•"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "KtorÈ sluæby maj˙ byª automaticky sp˙πªanÈ?"
+msgstr "Ktor√© slu≈æby maj√∫ by≈• automaticky sp√∫≈°≈•an√©?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Sluæby"
+msgstr "Slu≈æby"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "chyba pri ËÌtanÌ inform·ciÌ o sluæbe %s: %s\n"
+msgstr "chyba pri ƒç√≠tan√≠ inform√°ci√≠ o slu≈æbe %s: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "chyba pri ËÌtanÌ z adres·ra %s/init.d: %s\n"
+msgstr "chyba pri ƒç√≠tan√≠ z adres√°ra %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "chyba pri ËÌtanÌ z adres·ra %s/init.d: %s\n"
+msgstr "chyba pri ƒç√≠tan√≠ z adres√°ra %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Mus√≠te by≈• spr√°vca, aby ste mohli spusti≈• %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "chybn˝ argument pre --levels\n"
+msgstr "chybn√Ω argument pre --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Æiadne sluæby nemÙæu byª spravovanÈ ntsysv!\n"
+msgstr "≈Ωiadne slu≈æby nem√¥≈æu by≈• spravovan√© ntsysv!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nepodarilo sa n·jsª zhodu so vzorom %s: %s\n"
+msgstr "nepodarilo sa n√°js≈• zhodu so vzorom %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "nie je moænÈ zistiª aktu·lnu ˙roveÚ\n"
+msgstr "nie je mo≈æn√© zisti≈• aktu√°lnu √∫rove≈à\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nepodarilo sa vytvoriª symbolick˝ odkaz %s: %s\n"
+msgstr "nepodarilo sa vytvori≈• symbolick√Ω odkaz %s: %s\n"
