@@ -1,0 +1,417 @@
+# translation of chkconfig.po to Tamil
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Hariram Aatreya <hari@localhost.localdomain>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: chkconfig\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
+"PO-Revision-Date: 2003-11-15 15:54+0530\n"
+"Last-Translator: \n"
+"Language-Team: Tamil <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0\n"
+
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s பதிப்பு %s - உரிமை (C) 1997-2000 சிவப்பு Hat, Inc.\n"
+
+#: ../chkconfig.c:22
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "இதை GNU பொது சட்டத்தின் கீழ்  இலவசமாக வழங்கலாம் \n"
+
+#: ../chkconfig.c:25
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr "பயன்பாடு:   %s --பட்டியல் [பெயர்]\n"
+
+#: ../chkconfig.c:26
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --சேர்<பெயர்>\n"
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --நீக்கு <பெயர்>\n"
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--மட்டம் <மட்டம்>] <பெயர்> %s)\n"
+
+#: ../chkconfig.c:35
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"சேவை %s chkconfig-ஐ ஆதரிக்கும்,ஆனால் எந்த runlevel-இல் குறிப்பிடப்படவில்லை (run "
+"'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "சேவை %s chkconfig-ஐ ஆதரிக்கவில்லை\n"
+
+#: ../chkconfig.c:39
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "சேவை %s: %s தகவலைப் படிப்பதில் வறு\n"
+
+#: ../chkconfig.c:98 ../chkconfig.c:248
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "%s/init.d: %s திறப்பதில் பிழை\n"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "இயக்கிய"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "நீக்கு"
+
+#: ../chkconfig.c:282 ../ntsysv.c:195
+#, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "அடைவு %s/init.d: %s\n-லிருந்து படித்தலில் பிழை\n"
+
+#: ../chkconfig.c:290
+msgid "xinetd based services:\n"
+msgstr "xinetd சார்ந்த சேவை:\n"
+
+#: ../chkconfig.c:292
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "அடைவு %s: %s\n-ஐ திறக்க முடியவில்லை\n"
+
+#: ../chkconfig.c:405
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s பதிப்பு %s\n"
+
+#: ../chkconfig.c:412
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "ஒரே ஒரு --பட்டியல், --சேர் அல்லது --நீக்குl குறிப்பிடப்பட்டிருக்கலாம்\n"
+
+#: ../chkconfig.c:464
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "ஒரே ஒரு runlevel, chkconfig கேள்விக்காக குறிப்பிடப்பட்டிருக்கலாம்\n"
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "சேவையின் அதிக தகவலிற்கு <F1>-ஐ  அழுத்துce."
+
+#: ../ntsysv.c:62 ../ntsysv.c:99
+msgid "Ok"
+msgstr "சரி"
+
+#: ../ntsysv.c:62
+msgid "Back"
+msgstr "மறுபடி"
+
+#: ../ntsysv.c:62
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+#: ../ntsysv.c:74
+msgid "What services should be automatically started?"
+msgstr "எந்த சேவையை, தானாக தொடங்க வேண்டும்?வை"
+
+#: ../ntsysv.c:80
+msgid "Services"
+msgstr "சேவைகள்"
+
+#: ../ntsysv.c:186 ../ntsysv.c:230
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "%s: %s சேவைக்காகப் படிப்பதில் பிழை\n"
+
+#: ../ntsysv.c:239
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "அடைவு %s: %s படிப்பதில் தவறு\n"
+
+#: ../ntsysv.c:275
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "இயக்கு %s-ற்கு நீ  ஆதாரம்.\n"
+
+#: ../ntsysv.c:292
+msgid "bad argument to --levels\n"
+msgstr "--levels -ற்கு தீய தருமதிப்பு\n"
+
+#: ../ntsysv.c:299
+msgid "No services may be managed by ntsysv!\n"
+msgstr "எந்த சேவையும் ntsysv மேற்பார்வையிடஇல்லை!\n"
+
+#: ../leveldb.c:508
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "glob முன்வடிவப்புலத்தில் பிழை் %s: %s\n"
+
+#: ../leveldb.c:539
+msgid "cannot determine current run level\n"
+msgstr "தற்பொழுதைய run level -ஐ தீர்மானிக்க இயலவில்லை்\n"
+
+#: ../leveldb.c:627
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "symlink %s: %s உருவாக்குவதில் பிழை\n"
+
+#: ../alternatives.c:46
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "மாற்று பதிப்பு %s - உரிமை (C) 2001 சிவப்பு Hat, Inc.\n"
+
+#: ../alternatives.c:47
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr "இதை GNU பொது சட்டத்தின் கீழ் இலவசமாக வவழங்கலாம் \n"
+
+#: ../alternatives.c:48
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "பயன்பாடு: மாற்றுகள் --நிறுவு <தொடர்பு> <பெயர்> <வழி> <முக்கியமான>\n"
+
+#: ../alternatives.c:49
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <சேவை>]\n"
+
+#: ../alternatives.c:50
+msgid "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <link> <பெயர்> <பாதை>]*\n"
+
+#: ../alternatives.c:51
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "       மாற்றுகளை --நீக்கு <பெயர்> <பாதை>\n"
+
+#: ../alternatives.c:52
+msgid "       alternatives --auto <name>\n"
+msgstr "  மாற்றுகளை  -தன்னாலே<பெயர்>\n"
+
+#: ../alternatives.c:53
+msgid "       alternatives --config <name>\n"
+msgstr "மாற்றுகளை --config <பெயர்>\n"
+
+#: ../alternatives.c:54
+msgid "       alternatives --display <name>\n"
+msgstr "மாற்றுகளை --அறிக்கை காட்டு <பெயர்>\n"
+
+#: ../alternatives.c:55
+msgid "       alternatives --set <name> <path>\n"
+msgstr "மாற்றுகளை --அமைப்பு <பெயர்> <பாதை>\n"
+
+#: ../alternatives.c:56
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:57
+msgid "common options: --verbose --test --help --usage --version\n"
+msgstr "பொது தேர்வுகள்: --verbose --சோதி -- உதவி --பயன்பாடு --பதிப்பு\n"
+
+#: ../alternatives.c:58
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <அடைவு> --admindir <அடைவு>\n"
+
+#: ../alternatives.c:159
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "%s: %s திறப்பதில் பிழை\n"
+
+#: ../alternatives.c:168
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "%s: %s படிப்பதில்  பிழை\n"
+
+#: ../alternatives.c:177
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s காலி!\n"
+
+#: ../alternatives.c:186
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr ""
+" %s\n முதல் வரியில் தீய பாங்கு "
+"s\n"
+
+#: ../alternatives.c:193
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr "தீய முதல் தொடர்பு in %s\n"
+
+#: ../alternatives.c:205
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "பாதை %s எதிர்பாராத %s\n"
+
+#: ../alternatives.c:214
+#, c-format
+msgid "missing path for slave %s in %s\n"
+msgstr "slave %s in %s\n வழி இல்லை\n"
+
+#: ../alternatives.c:224
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "எதிர்பாராத கோப்பு முடிவு %s\n"
+
+#: ../alternatives.c:233
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr "alternate expected in %s வழி\n"
+
+#: ../alternatives.c:253
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "எண் வடிவ முக்கியமான தேவைப்படுகிறது %s\n"
+
+#: ../alternatives.c:275
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "அடிமை வழி தேவைப்படுகிறது in %s\n"
+
+#: ../alternatives.c:294
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "%s: %s-ல் எதிர்பாரா கோடு \n"
+
+#: ../alternatives.c:316
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr "இணைப்பு புள்ளிகள் மாற்றுகளுக்கு இல்லை-- கைம்முறைக்கான பாங்கு அமைப்பு \n"
+
+#: ../alternatives.c:321
+msgid "link changed -- setting mode to manual\n"
+msgstr "இணைப்பு மாற்றப்ப்பட்டதுl -- கைம்முறைக்கான பாங்கு அமைப்பு \n"
+
+#: ../alternatives.c:337 ../alternatives.c:344
+#, c-format
+msgid "would remove %s\n"
+msgstr "would நீக்கு %s\n"
+
+#: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "%s: %s இணைப்பை நீக்குவதில் பிழை\n"
+
+#: ../alternatives.c:362 ../alternatives.c:374
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "would இணைப்பு %s -> %s\n"
+
+#: ../alternatives.c:366 ../alternatives.c:383
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "இணைப்பு வதில் பிழை %s -> %s: %s\n"
+
+#: ../alternatives.c:415
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s ஏற்கெனவே உள்ளது\n"
+
+#: ../alternatives.c:417
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "%s: %s உருவாக்குவதில் பிழை\n"
+
+#: ../alternatives.c:448
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "%s with %s: %s மாற்றுவதில் பிழை\n"
+
+#: ../alternatives.c:510
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "முதல் இணைப்ப for %s must be %s\n"
+
+#: ../alternatives.c:574
+#, c-format
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr "இணைப்பு %s incorrect for slave %s (%s %s)\n"
+
+#: ../alternatives.c:616
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s - சுய நிலை .\n"
+
+#: ../alternatives.c:618
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%s - கைம்முறை நிலை.\n"
+
+#: ../alternatives.c:620
+#, c-format
+msgid " link currently points to %s\n"
+msgstr "இணைப்பு தற்பொழுதுள் to-ஐ சுட்டுகிறது %s\n"
+
+#: ../alternatives.c:623
+#, c-format
+msgid "%s - priority %d\n"
+msgstr "%s - முக்கியமான %d\n"
+
+#: ../alternatives.c:626
+#, c-format
+msgid " slave %s: %s\n"
+msgstr "அடிமை %s: %s\n"
+
+#: ../alternatives.c:631
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "நடப்பு பதிப்பு %s.\n"
+
+#: ../alternatives.c:661
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr "அங்கே %d தரும் நிரல்'%s'. உள்ளது\n"
+
+#: ../alternatives.c:663
+msgid "  Selection    Command\n"
+msgstr "  தேர்ந்தெடுப்பு    கட்டளை\n"
+
+#: ../alternatives.c:672
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr "நடப்பில் உள்ளதை தேர்தெடுக்க [+] உள்ளீடு, அல்லது தேர்ந்தெடுத்த எண்ணை தட்டச்சு செய்: "
+
+#: ../alternatives.c:675
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"மாற்றியை வாசிப்பதில்டும்போது பிழை\n"
+
+#: ../alternatives.c:702 ../alternatives.c:728
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "%s மாற்றியாக வடிவமைக்கப்படவில்லை %s\n"
+
+#: ../alternatives.c:744
+#, c-format
+msgid "(would remove %s\n"
+msgstr "(would நீக்கு %s\n"
+
+#: ../alternatives.c:746
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr " %s: %s  நீக்குவதில் பிழை\n"
+
+#: ../alternatives.c:864
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "altdir %s செல்லாது\n"
+
+#: ../alternatives.c:870
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "admindir %s செல்லாது\n"
+
+#: ../alternatives.c:880
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "மாற்று பதிப்பு %s\nுs\n"
+
