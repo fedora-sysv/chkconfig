@@ -1,5 +1,4 @@
 Summary: Updates and queries runlevel information for system services
-Summary(pt_BR): Ferramenta para atualizar e listar serviços do sistema, pelo nível de execução (runlevel)
 Name: chkconfig
 %define version 0.9.4
 Version: %{version}
@@ -9,6 +8,7 @@ Group: Utilities/System
 Group(pt_BR): Utilitários/Sistema
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
+Summary(pt_BR): Ferramenta para atualizar e listar serviços do sistema, pelo nível de execução (runlevel)
 
 %package -n ntsysv
 Summary: Full-screen interface for configurating runlevel information
