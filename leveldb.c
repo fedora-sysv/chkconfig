@@ -63,6 +63,9 @@ int readServiceInfo(char * name, struct service * service) {
 	else
 	    next = end + 1;
 
+	while (isspace(*end) || (*end == '\n')) end--;
+	end++;
+
 	if (*start != '#') continue;
 
 	start++;	
