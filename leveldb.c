@@ -38,12 +38,109 @@ int parseLevels(char * str, int emptyOk) {
     return rc;
 }
 
+int readDescription(char *start, char *bufstop, char **english_desc, char **serv_desc) { 
+	char english;
+	char my_lang_loaded = 0;
+	char is_my_lang = 0;
+	char * lang = getenv ("LANG");
+	char * final_parenthesis;
+	char * end, *next;
+	int i;
+	
+	english = *start == ':';
+	end = strchr(start, '\n');
+	if (!end) 
+	    next = end = bufstop;
+	else
+	    next = end + 1;
+
+	if (!english) {
+		if (*start != '(') {
+		    return 1;
+		}
+
+                ++start;
+		final_parenthesis = strchr (start, ')');
+
+		if (final_parenthesis == NULL || final_parenthesis - start > 5) {
+		    return 1;
+		}
+
+		is_my_lang = lang ? strncmp (lang, start, strlen (lang)) == 0 : 0;
+		start = final_parenthesis + 2;
+	    } else ++start;
+
+	    while (isspace(*start) && start < end) start++;
+	    if (start == end) {
+		return 1;
+	    }
+          {
+	    char* desc = malloc(end - start + 1);
+	    strncpy(desc, start, end - start);
+	    desc[end - start] = '\0';
+
+	    start = next;
+
+	    while (desc[strlen(desc) - 1] == '\\') {
+		desc[strlen(desc) - 1] = '\0';
+		start = next;
+		
+		while (isspace(*start) && start < bufstop) start++;
+		if (start == bufstop || *start != '#') {
+		    return 1;
+		}
+
+		start++;
+
+		while (isspace(*start) && start < bufstop) start++;
+		if (start == bufstop) {
+		    return 1;
+		}
+
+		end = strchr(start, '\n');
+		if (!end) 
+		    next = end = bufstop;
+		else
+		    next = end + 1;
+
+		i = strlen(desc);
+		desc = realloc(desc, i + end - start + 1);
+		strncat(desc, start, end - start);
+		desc[i + end - start] = '\0';
+
+		start = next;
+	    }
+
+	    if (desc) {
+		    if (my_lang_loaded) {
+			    free(desc);
+		    } else if (is_my_lang) {
+			    if (*serv_desc)
+			      free(*serv_desc);
+
+			    *serv_desc = desc;
+			    return 0;
+		    } else if (english) {
+			    if (*serv_desc)
+			      free(*serv_desc);
+
+			    if (*english_desc)
+			      free (*english_desc);
+
+			    *english_desc = desc;
+		    } else free (desc);
+	    }
+	  }
+	return 0;
+}
+
 int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	char * filename = alloca(strlen(name) + strlen(XINETDDIR) + 50);
 	int fd;
 	struct service serv = { NULL, -1, -1, -1, NULL, 1, -1 };
 	struct stat sb;
 	char * buf, *ptr;
+	char * eng_desc = NULL, *start;
 	
 	snprintf(filename, strlen(name)+strlen(XINETDDIR)+50, XINETDDIR "/%s", name);
 	
@@ -58,26 +155,39 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	close(fd);
         serv.name = strdup(name);
 	buf[sb.st_size] = '\0';
+	start = buf;
 	while (buf) {
 		ptr = strchr(buf,'\n');
-		if (ptr) {
-			*ptr = '\0';
-			ptr++;
-		} 
 		if (*buf == '#') {
 			buf++;
-			while (isspace(*buf)) buf++;
-			if (!strncmp(buf,"default ", 8)) {
-				if (!strncmp(buf+8,"on",2)) {
+			while (isspace(*buf) && buf < ptr) buf++;
+			if (!strncmp(buf,"default:", 9)) {
+				buf+=8;
+				while(isspace(*buf)) buf++;
+				if (!strncmp(buf+9,"on",2)) {
 					serv.enabled = 1;
-				} else {
-					serv.enabled = 0;
+				} else {					serv.enabled = 0;
 				}
+			} else if (!strncmp(buf,"description:",12)) {
+				buf+=11;
+				if (readDescription(buf,start+sb.st_size,
+						    &serv.desc,&eng_desc)) {
+					if (serv.desc) free(serv.desc);
+				}
+				if (!serv.desc) {
+					if (eng_desc)
+					  serv.desc = eng_desc;
+				} else if (eng_desc)
+					  free (eng_desc);
 			}
+			if (ptr) {
+				*ptr = '\0';
+				ptr++;
+			} 
 			buf = ptr;
 			continue;
 		}
-		while (isspace(*buf)) buf++;
+		while (isspace(*buf) && buf < ptr) buf++;
 		if (!strncmp(buf,"disable", 7)) {
 			buf = strstr(buf,"=")+1;
 			while (isspace(*buf)) buf++;
@@ -91,6 +201,10 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 				  serv.enabled = 0;
 			}
 		}
+		if (ptr) {
+			*ptr = '\0';
+			ptr++;
+		} 
 		buf = ptr;
 	}
 	*service = serv;
@@ -99,18 +213,13 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 
 int readServiceInfo(char * name, struct service * service, int honorHide) {
     char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
-    int fd, i;
+    int fd;
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next;
     struct service serv = { NULL, -1, -1, -1, NULL, 0, 0 };
     char overflow;
-    char english;
-    char is_my_lang = 0;
     char levelbuf[20];
-    char * lang = getenv ("LANG"),
-	 * final_parenthesis,
-         * english_desc = NULL;
-    char my_lang_loaded = 0;
+    char * english_desc = NULL;
 
     sprintf(filename, RUNLEVELS "/init.d/%s", name);
 
@@ -183,94 +292,9 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		return 1;
 	    }
 	} else if (!strncmp(start, "description", 11)) {
-	    start += 11;
-
-	    english = *start == ':';
-
-            if (!english) {
-		if (*start != '(') {
-		    if (serv.desc) free(serv.desc);
-		    munmap(bufstart, sb.st_size);
-		    return 1;
+		if (readDescription(start+11, bufstop, &english_desc, &serv.desc)) {
+			if (serv.desc) free(serv.desc);
 		}
-
-                ++start;
-		final_parenthesis = strchr (start, ')');
-
-		if (final_parenthesis == NULL || final_parenthesis - start > 5) {
-		    if (serv.desc) free(serv.desc);
-		    munmap(bufstart, sb.st_size);
-		    return 1;
-		}
-
-		is_my_lang = lang ? strncmp (lang, start, strlen (lang)) == 0 : 0;
-		start = final_parenthesis + 2;
-	    } else ++start;
-
-	    while (isspace(*start) && start < end) start++;
-	    if (start == end) {
-		munmap(bufstart, sb.st_size);
-		return 1;
-	    }
-          {
-	    char* desc = malloc(end - start + 1);
-	    strncpy(desc, start, end - start);
-	    desc[end - start] = '\0';
-
-	    start = next;
-
-	    while (desc[strlen(desc) - 1] == '\\') {
-		desc[strlen(desc) - 1] = '\0';
-		start = next;
-		
-		while (isspace(*start) && start < bufstop) start++;
-		if (start == bufstop || *start != '#') {
-		    munmap(bufstart, sb.st_size);
-		    return 1;
-		}
-
-		start++;
-
-		while (isspace(*start) && start < bufstop) start++;
-		if (start == bufstop) {
-		    munmap(bufstart, sb.st_size);
-		    return 1;
-		}
-
-		end = strchr(start, '\n');
-		if (!end) 
-		    next = end = bufstop;
-		else
-		    next = end + 1;
-
-		i = strlen(desc);
-		desc = realloc(desc, i + end - start + 1);
-		strncat(desc, start, end - start);
-		desc[i + end - start] = '\0';
-
-		start = next;
-	    }
-
-	    if (desc) {
-	      if (my_lang_loaded) {
-                  free(desc);
-              } else if (is_my_lang) {
-                if (serv.desc)
-                  free(serv.desc);
-
-                serv.desc = desc;
-                break;
-              } else if (english) {
-                if (serv.desc)
-                  free(serv.desc);
-
-		if (english_desc)
-                  free (english_desc);
-
-                english_desc = desc;
-              } else free (desc);
-	    }
-	  }
 	}
     }
 
