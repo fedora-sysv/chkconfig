@@ -1,137 +1,133 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 1999-12-06 14:42-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2000-02-21 18:55+0100\n"
+"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Detta program kan distribueras fritt under villkoren i GNU Public License.\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "användning:   %s --list [namn]\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "              %s --add <namn>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "              %s --del <namn>\n"
 
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "              %s [--level <nivåer>] <namn> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "tjänsten %s verkar inte stöda chkconfig\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "fel vid läsning av information på tjänst %s: %s\n"
 
 #: ../chkconfig.c:100
 msgid "on"
-msgstr ""
+msgstr "på"
 
 #: ../chkconfig.c:100
 msgid "off"
-msgstr ""
+msgstr "av"
 
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "misslyckades med att öppna %s/init.d: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "fel vid läsning från katalog %s/init.d: %s"
 
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s version %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "endast en av --list, --add eller --del kan anges\n"
 
 #: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Tryck <F1> för mer information om en tjänst."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Tillbaka"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Vilka tjänster ska startas automatiskt?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Tjänster"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "fel vid läsning av information för tjänsten %s: %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "fel vid läsning från katalog %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "felaktigt argument till --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Inga tjänster kan skötas av ntsysv!\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "misslyckades att matcha mönstret %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "misslyckades med att skapa symbolisk länk %s: %s\n"
