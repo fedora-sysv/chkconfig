@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.11\n"
 "POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-01-23 01:17+0000\n"
+"PO-Revision-Date: 2001-02-15 01:17+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "villa við lestur úr möppunni %s: %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Þú þarf að vera rót til að keyra %s.\n"
 
 #: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
