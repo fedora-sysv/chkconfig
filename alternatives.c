@@ -153,7 +153,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	printf("reading %s\n", path);
 
     if ((fd = open(path, O_RDONLY)) < 0) {
-	if (errno == ENOENT) return 0;
+	if (errno == ENOENT) return 3;
 	fprintf(stderr, _("failed to open %s: %s\n"), path,
 	        strerror(errno));
 	return 1;
@@ -318,10 +318,17 @@ static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
     if (FL_TEST(flags)) {
-	printf("(would remove %ss\n", sl);
+	printf(_("would remove %s\n"), sl);
     } else if (unlink(sl) && errno != ENOENT) {
 	fprintf(stderr, _("failed to remove link %s: %s\n"),
 		sl, strerror(errno));
+	return 1;
+    }
+    if (FL_TEST(flags)) {
+	printf(_("would remove %s\n"), l->facility);
+    } else if (unlink(l->facility) && errno != ENOENT) {
+	fprintf(stderr, _("failed to remove link %s: %s\n"),
+		l->facility, strerror(errno));
 	return 1;
     }
     
@@ -437,9 +444,9 @@ static int addService(struct alternative newAlt, const char * altDir,
 		      const char * stateDir, int flags) {
     struct alternativeSet set;
     struct linkSet * newLinks;
-    int i, j;
+    int i, j, rc;
 
-    if (readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) 
+    if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2) 
 	return 2;
 
     if (set.numAlts) {
