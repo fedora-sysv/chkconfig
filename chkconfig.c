@@ -359,6 +359,7 @@ int main(int argc, char ** argv) {
     int LSB = 0;
     char * levels = NULL;
     int help=0, version=0;
+    struct service s;
     poptContext optCon;
     struct poptOption optionsTable[] = {
 	    { "add", '\0', 0, &addItem, 0 },
@@ -463,8 +464,14 @@ int main(int argc, char ** argv) {
 		    exit(1);
 		}
 	    } 
-
-	    return isOn(name, level) ? 0 : 1;
+	    rc = readServiceInfo(name, &s, 0);
+	    if (s.type == TYPE_XINETD) {
+	       if (isOn("xinetd",level))
+		       return !s.levels;
+	       else
+		       return 1;
+	    } else	
+	       return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
 	    return setService(name, where, 1);
 	else if (!strcmp(state, "off"))

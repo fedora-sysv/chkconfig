@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-02 16:23-0500\n"
+"POT-Creation-Date: 2005-02-02 16:44-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,17 +92,17 @@ msgstr ""
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:402
+#: ../chkconfig.c:403
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:409
+#: ../chkconfig.c:410
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:461
+#: ../chkconfig.c:462
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
