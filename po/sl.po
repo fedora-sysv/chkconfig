@@ -1,137 +1,137 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SLOVENIAN TRANSLATION OF CHKCONFIG.
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Roman Maurer <roman.maurer@hermes.si>, 1999.
+# $Id: sl.po,v 1.2 1999/09/18 16:22:50 i18n Exp $
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1999-09-18 18:20+0200\n"
+"Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgstr "To lahko prosto raz¹irjate pod pogoji GNU Public License.\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "uporaba: %s --list [ime]\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <ime>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <ime>\n"
 
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "         %s [--level <ravni>] <ime> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "storitev %s ni podprta v chkconfig\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "napaka pri branju podatkov o storitvi %s: %s\n"
 
 #: ../chkconfig.c:100
 msgid "on"
-msgstr ""
+msgstr "vklopljeno"
 
 #: ../chkconfig.c:100
 msgid "off"
-msgstr ""
+msgstr "izklopljeno"
 
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "ne morem odpreti %s/init.d: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "napaka pri branju iz imenika %s/init.d: %s"
 
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s razlièice %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "doloèite lahko le eno od izbir --list, --add ali --del\n"
 
 #: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "v posamezni zahtevi chkconfig lahko doloèite le eno raven teka\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Pritisnite <F1> za veè informacij o storitvi."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "V redu"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Nazaj"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Preklic"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Katere storitve naj bi se samodejno zagnale?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Storitve"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "napaka pri branju informacij o storitvi %s: %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "slab argument izbire --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Storitve ne more upravljati ntsysv!\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "ne morem razre¹iti vzorca %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "ne morem ugotoviti trenutne ravni teka\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "ni mi uspelo narediti simbolne povezave %s: %s\n"
