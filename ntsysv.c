@@ -169,7 +169,19 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	}
 
 	rc = readServiceInfo(ent->d_name, services + numServices, honorHide);
-	
+        
+	if (!rc) {
+		int i;
+		
+		rc = -2;
+		for (i = 0 ; i < 7 ; i++) {
+			if (isConfigured(ent->d_name, i)) {
+				rc = 0;
+				break;
+			}
+		}
+	}
+	 
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));

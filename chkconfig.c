@@ -31,7 +31,9 @@ static void usage(void) {
 }
 
 static void readServiceError(int rc, char * name) {
-    if (rc == 1) {
+    if (rc == 2) {
+	fprintf(stderr, _("service %s supports chkconfig, but is not registered (run 'chkconfig --add %s')\n"), name, name);
+    } else if (rc == 1) {
 	fprintf(stderr, _("service %s does not support chkconfig\n"), name);
     } else {
 	fprintf(stderr, _("error reading information on service %s: %s\n"),
@@ -90,7 +92,19 @@ static int showServiceInfo(char * name, int forgiving) {
     int i;
     struct service s;
 
-    if ((rc = readServiceInfo(name, &s, 0))) {
+    rc = readServiceInfo(name, &s, 0);
+    
+    if (!rc) {
+	    rc = 2;
+	    for (i = 0 ; i < 7 ; i++) {
+		    if (isConfigured(name, i)) {
+			    rc = 0;
+			    break;
+		    }
+	    }
+    }
+
+    if (rc) {
 	if (!forgiving)
 	    readServiceError(rc, name);
 	return forgiving ? 0 : 1;

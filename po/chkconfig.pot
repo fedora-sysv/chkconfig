@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2002-01-30 15:25-0500\n"
+"POT-Creation-Date: 2002-03-07 18:07-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,51 +46,58 @@ msgstr ""
 
 #: ../chkconfig.c:35
 #, c-format
-msgid "service %s does not support chkconfig\n"
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
 msgstr ""
 
 #: ../chkconfig.c:37
 #, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr ""
+
+#: ../chkconfig.c:39
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:152
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:186
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr ""
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:194
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:196
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr ""
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:299
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:306
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:354
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
@@ -118,31 +125,31 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
