@@ -1,24 +1,28 @@
+#
+# 번 역 자: 류종훈(redhat4u@netian.com)
+# 홈페이지: http://my.netian.com/~redhat4u
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 1.2.21\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2001-03-05 00:42-0500\n"
-"PO-Revision-Date: 2001-05-13 15:17+0900\n"
-"Last-Translator: Jong-Hoon Ryu <queenrjh@chollian.net>\n"
-"Language-Team: Korean Linux Extension project <kle@kldp.org>\n"
+"PO-Revision-Date: 2001-08-10 08:18+0900\n"
+"Last-Translator: Jong-Hoon Ryu <redhat4u@netian.com>\n"
+"Language-Team: GNU Translation project <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=EUC-KR\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 버전 %s - 저작권 (C) 1997-2000 레드햇 사.\n"
+msgstr "%s %s                                    (C) 1997-2000 레드햇 사.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"이 프로그램은 GNU Public License 하에서 자유롭게 재 배포할 수 있습니다.\n"
+"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -52,11 +56,11 @@ msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다: %s\n"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
-msgstr "on"
+msgstr "활성"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
-msgstr "off"
+msgstr "해제"
 
 #: ../chkconfig.c:138
 #, c-format
@@ -80,7 +84,7 @@ msgstr "%s 디렉토리를 여는데 실패했습니다: %s"
 #: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s 버전 %s\n"
+msgstr "%s %s\n"
 
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
