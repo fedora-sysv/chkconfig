@@ -2,7 +2,7 @@ Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
 %define version 1.0.1
 Version: %{version}
-Release: 2
+Release: 3
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
