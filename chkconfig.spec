@@ -58,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Thu Feb 18 1999 Matt Wilson <msw@redhat.com>
+- removed debugging output when starting ntsysv
+
 * Thu Feb 18 1999 Preston Brown <pbrown@redhat.com>
 - fixed globbing error
 - fixed ntsysv running services not at their specified levels.
