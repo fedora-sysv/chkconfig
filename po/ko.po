@@ -50,11 +50,11 @@ msgstr "%s 서비스는 chkconfig 를 지원하지 않습니다\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다: %s\n"
 
-# #
-# # 이곳을 '켜짐' 과 '꺼짐'으로 번역하면, 
-# # 한글의 시각적 특성상 보기에 좀 헷갈립니다.
-# # '끔' 과 '켬' 도 마찬가지 입니다.  :-)
-# #
+##
+## 이곳을 '켜짐' 과 '꺼짐'으로 번역하면, 
+## 한글의 시각적 특성상 보기에 좀 헷갈립니다.
+## '끔' 과 '켬' 도 마찬가지 입니다.  :-)
+##
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
 msgstr "활성"
