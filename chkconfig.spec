@@ -1,7 +1,8 @@
+# [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.3.6
-Release: 2
+Release: 3
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -73,19 +74,20 @@ rm -rf $RPM_BUILD_ROOT
 /usr/sbin/ntsysv
 %{_mandir}/*/ntsysv.8*
 
-%define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
-
 %changelog
+* Thu Aug 29 2002 Trond Eivind GlomsrÃ¸d <teg@redhat.com> 1.3.6-3
+- bump
+
 * Thu Aug 15 2002 Bill Nottingham <notting@redhat.com> 1.3.6-2
 - rebuild against new newt
 
 * Mon Aug 12 2002 Bill Nottingham <notting@redhat.com> 1.3.6-1
 - make on and off handle runlevel 2 too (#70766)
 
-* Mon Apr 15 2002 Trond Eivind Glomsrød <teg@redhat.com> 1.3.5-3
+* Mon Apr 15 2002 Trond Eivind GlomsrÃ¸d <teg@redhat.com> 1.3.5-3
 - Update translations
 
-* Mon Apr 15 2002 Trond Eivind Glomsrød <teg@redhat.com> 1.3.5-2
+* Mon Apr 15 2002 Trond Eivind GlomsrÃ¸d <teg@redhat.com> 1.3.5-2
 - Update translations
 
 * Sun Apr  7 2002 Jeremy Katz <katzj@redhat.com> 1.3.5-1
@@ -123,7 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 * Thu Jan 25 2002 Bill Nottingham <notting@redhat.com>
 - add in update-alternatives stuff (perl ATM)
 
-* Mon Aug 27 2001 Trond Eivind Glomsrød <teg@redhat.com>
+* Mon Aug 27 2001 Trond Eivind GlomsrÃ¸d <teg@redhat.com>
 - Update translations
 
 * Tue Jun 12 2001 Bill Nottingham <notting@redhat.com>
@@ -168,7 +170,7 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Aug 16 2000 Nalin Dahyabhai <nalin@redhat.com>
 - don't worry about extra whitespace on chkconfig: lines (#16150)
 
-* Wed Aug 10 2000 Trond Eivind Glomsrød <teg@redhat.com>
+* Wed Aug 10 2000 Trond Eivind GlomsrÃ¸d <teg@redhat.com>
 - i18n merge
 
 * Wed Jul 26 2000 Matt Wilson <msw@redhat.com>
