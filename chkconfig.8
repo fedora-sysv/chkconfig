@@ -79,6 +79,10 @@ over the default runlevels in the initscript.
 The service is removed from \fBchkconfig\fR management, and any symbolic
 links in /etc/rc[0-6].d which pertain to it are removed.
 
+Note that future package installs for this service may run
+\fBchkconfig \-\-add\fR, which will re-add such links. To disable a
+service, run \fBchkconfig \fIname\fR \fBoff\fR.
+
 .TP
 \fB-\-list\fR \fIname\fR
 This option lists all of the services which \fBchkconfig\fR knows about,
