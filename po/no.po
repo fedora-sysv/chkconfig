@@ -61,3 +61,9 @@ msgstr "Klarer ikke å bestemme kjørende runlevel\n"
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
 msgstr "Klarte ikke å lage symlinken %s: %s\n"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Back"
+msgstr ""

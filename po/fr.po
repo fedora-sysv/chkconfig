@@ -63,3 +63,9 @@ msgstr "Impossible de détérminer le niveau d'éxécution actuel\n"
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
 msgstr "Echec lors de la création du lien sysmbolique %s: %s\n"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Back"
+msgstr "Retour"

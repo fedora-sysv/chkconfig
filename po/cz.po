@@ -62,3 +62,8 @@ msgstr "nelze urèit aktuální spou¹tìcí úroveò\n"
 msgid "failed to make symlink %s: %s\n"
 msgstr "vytvoøení symbolického propojení %s selhalo: %s\n"
 
+msgid "Cancel"
+msgstr "Storno"
+
+msgid "Back"
+msgstr ""

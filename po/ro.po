@@ -1,6 +1,9 @@
-# $Id: ro.po,v 1.3 1998/05/03 10:09:55 gafton Exp $
+# $Id: ro.po,v 1.4 1998/05/07 06:05:16 ewt Exp $
 #
 # $Log: ro.po,v $
+# Revision 1.4  1998/05/07 06:05:16  ewt
+# added Cancel/Back
+#
 # Revision 1.3  1998/05/03 10:09:55  gafton
 # Updated charset to ISO-8859-2
 #
@@ -70,3 +73,9 @@ msgstr "nu se poate determina current runlevel\n"
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
 msgstr "nu s-a putut crea %s: %s\n"
+
+msgid "Cancel"
+msgstr "Abandon"
+
+msgid "Back"
+msgstr "Inapoi"

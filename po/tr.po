@@ -61,3 +61,9 @@ msgstr "çalýþma seviyesi belirlenemiyor\n"
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik baðlantýsý yapýlamadý: %s\n"
+
+msgid "Cancel"
+msgstr "Vazgeç"
+
+msgid "Back"
+msgstr "Geri"
