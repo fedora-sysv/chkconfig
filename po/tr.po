@@ -1,21 +1,24 @@
-# 
+# translation of tr.po to TURKISH
+#
 # Turkish translations for chkconfig messages.
-# Copyright (C) 2002,2003 Free Software Foundation, Inc.
-# $Id: tr.po,v 1.32 2003/10/24 13:26:39 notting Exp $
-# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003
-# Devrim GUNDUZ <devrim@gunduz.org>, 2003
+# Copyright (C) 2002,2003, 2004 Free Software Foundation, Inc.
+# $Id: tr.po,v 1.33 2004/01/31 08:17:55 byagan Exp $
+# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003.
+# Devrim GUNDUZ <devrim@gunduz.org>, 2003.
+# Hasan Umit Ezerce <humit@tr.net>, 2004.
+# Hasan Umit Ezerce <humit@linuxmail.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig \n"
+"Project-Id-Version: tr\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-08-03 13:51+0300\n"
-"Last-Translator: Nilgün Belma Bugüner <nilgun@superonline.com>\n"
-"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2004-01-27 13:21-0500\n"
+"Last-Translator: Hasan Umit Ezerce <humit@linuxmail.org>\n"
+"Language-Team: TURKISH <@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -23,10 +26,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -54,18 +55,18 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s chkconfig'i destekliyor, ama bir çalışma seviyesi ile bağlantısız. "
+"%s chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden çağırılmıyor "
 "('chkconfig --add %s çalıştırın')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
+msgstr "%s servisi chkconfig'i desteklemiyor\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s hizmeti hakkında bilgi alınırken hata: %s\n"
+msgstr "%s servisi hakkında bilgi alınırken hata: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
@@ -90,9 +91,9 @@ msgid "xinetd based services:\n"
 msgstr "xinetd tabanlı hizmetler:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "%s dizini açılamıyor: %s"
+msgstr "%s dizini açılamıyor: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -105,12 +106,11 @@ msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Hizmet hakkında daha fazla bilgi almak için <F1> tuşuna basın."
+msgstr "Servis hakkında daha fazla bilgi almak için <F1> tuşuna basın."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -126,16 +126,16 @@ msgstr "İptal"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Hangi hizmetler otomatik olarak çalıştırılsın?"
+msgstr "Hangi servisler otomatik olarak çalıştırılsın?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Hizmetler"
+msgstr "Servisler"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s hizmeti hakkında bilgi alırken hata : %s\n"
+msgstr "%s servisi hakkında bilgi alırken hata : %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
@@ -162,7 +162,7 @@ msgstr "kalıp %s genelleştirilemedi: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "çalışma düzeyi belirlenemiyor\n"
+msgstr "şu anki çalışma düzeyi belirlenemiyor\n"
 
 #: ../leveldb.c:627
 #, c-format
@@ -184,7 +184,7 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "Kullanımı: alternatives --install <bağlantı> <ad> <yol> <öncelik>\n"
+msgstr "kullanımı: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -196,23 +196,23 @@ msgstr "                   [--slave <bağlantı> <isim> <yol>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <ad> <yol>\n"
+msgstr "       alternatives --remove <isim> <yol>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <ad>\n"
+msgstr "       alternatives --auto <isim>\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <ad>\n"
+msgstr "       alternatives --config <isim>\n"
 
 #: ../alternatives.c:54
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <ad>\n"
+msgstr "       alternatives --display <isim>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <ad> <yol>\n"
+msgstr "       alternatives --set <isim> <yol>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
@@ -249,17 +249,17 @@ msgstr "%s'nin 1.satırında kötü kip\n"
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%s'nin içinde kötü birincil bağlantı\n"
+msgstr "%s içinde kötü birincil bağlantı\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%2$s içinde beklenmeyen yol %1$s\n"
+msgstr "%s yolu %s içinde beklenmiyordu\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "yardımcı %2$s için %1$s içinde yol eksik\n"
+msgstr "yardımcı %s için %s içinde yol eksik\n"
 
 #: ../alternatives.c:224
 #, c-format
@@ -269,7 +269,7 @@ msgstr "%s içinde beklenmeyen dosya sonu\n"
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%s içinde alternatife bir yol bekleniyor \n"
+msgstr "%s içinde alternatif bir yol bekleniyor \n"
 
 #: ../alternatives.c:253
 #, c-format
@@ -288,16 +288,16 @@ msgstr "%s içinde beklenmeyen satır: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "link points to no alternative -- setting mode to manual\n"
+msgstr "bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "bağlantı değiştirildi-- setting mode to manual\n"
+msgstr "bağlantı değiştirildi-- elle ayarlama moduna geçiliyor\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr "%s silinsin mi\n"
+msgstr "%s silinecektir\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
 #, c-format
@@ -307,7 +307,7 @@ msgstr "sembolik bağ kaldırılamadı %s: %s\n"
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "%s -> %s bağı kurulsun mu\n"
+msgstr "%s -> %s bağı kurulacaktır\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
@@ -372,7 +372,7 @@ msgstr "Mevcut 'en iyi' sürüm: %s.\n"
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "'%2$s', %1$d program tarafından sağlanıyor.\n"
+msgstr "%d program %s sağlıyor.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -400,7 +400,7 @@ msgstr "%s, %s için bir alternatif olarak yapılandırılmadı\n"
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(%s silinsin mi\n"
+msgstr "(%s silinecek\n"
 
 #: ../alternatives.c:746
 #, c-format
@@ -424,3 +424,4 @@ msgstr "alternatives %s sürümü\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "%s/init.d dizininden okunurken hata: %s"
+
