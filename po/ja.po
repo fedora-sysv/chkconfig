@@ -212,11 +212,14 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
+msgstr ""
+"使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <サービス>]\n\n"
+msgstr ""
+"                    [--initscript <サービス>]\n"
+"\n"
 
 # ../chkconfig.c:28
 #: ../alternatives.c:50
