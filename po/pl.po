@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-03-14 15:53+0100\n"
+"PO-Revision-Date: 2004-03-14 16:00+0100\n"
 "Last-Translator: Pawel Szopinski <pawel@szopinski.co.uk>\n"
 "Language-Team: POLISH <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -199,19 +199,19 @@ msgstr "       alternatywy --remove <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <nazwa>\n"
+msgstr "       alternatywy --auto <nazwa>\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <nazwa>\n"
+msgstr "       alternatywy --config <nazwa>\n"
 
 #: ../alternatives.c:54
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <nazwa>\n"
+msgstr "       alternatywy --display <nazwa>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <nazwa> <ścieżka>\n"
+msgstr "       alternatywy--set <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
