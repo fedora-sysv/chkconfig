@@ -1,13 +1,13 @@
 # translation of chkconfig.po to Simplified Chinese
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# Sarah Wang <sarahs@redhat.com>, 2003
+# Copyright (C) 2003,2004 Free Software Foundation, Inc.
+# Sarah Wang <sarahs@redhat.com>, 2003,2004
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-19 16:51-0400\n"
-"PO-Revision-Date: 2003-11-21 15:25+1000\n"
+"PO-Revision-Date: 2004-05-24 10:06+1000\n"
 "Last-Translator: Sarah Wang <sarahs@redhat.com>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,8 +22,7 @@ msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:25
@@ -244,7 +243,7 @@ msgstr "                --altdir <directory> --admindir <directory>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "读取 %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -307,9 +306,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "%s 中有异常行：%s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "读取 %s 失败：%s\n"
+msgstr "读取链接 %s 失败：%s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -359,7 +358,7 @@ msgstr "把 %s 替换为 %s 失败：%s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "运行 %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -454,3 +453,4 @@ msgstr "admindir %s 无效\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "替换选择(alternatives)的版本 %s \n"
+
