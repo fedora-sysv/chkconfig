@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-08-23 20:04+0530\n"
+"PO-Revision-Date: 2004-09-29 12:32+0530\n"
 "Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +23,12 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C)੧੯੯੭-੨੦੦੦ ਲਈ Red Hat ਕੋਲ\n"
+msgstr "%s ਵਰਜ਼ਨ %s - (C)੧੯੯੭-੨੦੦੦ ਲਈ Red Hat ਕੋਲ ਹੱਕ ਰਾਖਵੇ ਹਨ।\n"
 
 #: ../chkconfig.c:22
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ\n"
+msgstr "ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ।\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -105,7 +105,7 @@ msgstr "%s ਵਰਜ਼ਨ %s\n"
 #: ../chkconfig.c:412
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr " --list, --add, ਜਾਂ --del ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ \n"
+msgstr " --list, --add, ਜਾਂ --del ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ\n"
 
 #: ../chkconfig.c:464
 #, c-format
@@ -114,7 +114,7 @@ msgstr "chkconfig ਪ੍ਰਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਚ�
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "ਸੇਵਾ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ <F1> ਦਬਾਓ ।"
+msgstr "ਸੇਵਾ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ <F1> ਦਬਾਓ।"
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -149,7 +149,7 @@ msgstr "%s ਡਾਇਰੈਕਟਰੀ ਵਿੱਚੋ ਪੜਨ ਸਮੇ ਗ�
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s ਚਲਾਉਣ ਲਈ ਤੁਸੀ ਪ੍ਰਬੰਧਕ(root) ਹੋਵੋ ।\n"
+msgstr "%s ਚਲਾਉਣ ਲਈ ਤੁਸੀ ਪ੍ਰਬੰਧਕ(root) ਹੋਵੋ।\n"
 
 #: ../ntsysv.c:292
 #, c-format
@@ -179,7 +179,7 @@ msgstr "symlink %s ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ਬਦਲਵਾਂ ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C) ੨੦੦੧ Red Hat, Inc.\n"
+msgstr "ਬਦਲਵਾਂ ਵਰਜ਼ਨ %s - (C) ੨੦੦੧ Red Hat, Inc ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -187,7 +187,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ ।\n"
+"ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ।\n"
 "\n"
 
 #: ../alternatives.c:50
@@ -248,7 +248,7 @@ msgstr "                --altdir <ਡਾਇਰੈਕਟਰੀ> --admindir <ਡ�
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr "ਪੜਿਆ ਜਾ ਰਿਹਾ ਹੈ %s\n"
+msgstr "%s ਨੂੰ ਵੇਖਿਆ ਜਾ ਰਿਹਾ ਹੈ\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -363,7 +363,7 @@ msgstr "%s ਨੂੰ %s ਨਾਲ ਵਿਸਥਾਪਿਤ ਕਰਨ ਵਿੱ�
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr "%s ਚੱਲ ਰਿਹਾ ਹੈ\n"
+msgstr "%s ਜਾਰੀ ਹੈ\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -378,12 +378,12 @@ msgstr "ਸਲੇਵ %s (%s %s) ਲਈ ਗਲਤ ਲਿੰਕ %s\n"
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - ਦਰਜਾ ਸਵੈ ਹੈ ।\n"
+msgstr "%s - ਦਰਜਾ ਸਵੈ ਹੈ।\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - ਦਰਜਾ ਦਸਤਾਵੇਜ਼ੀ ਹੈ ।\n"
+msgstr "%s - ਦਰਜਾ ਦਸਤਾਵੇਜ਼ੀ ਹੈ।\n"
 
 #: ../alternatives.c:622
 #, c-format
@@ -398,17 +398,17 @@ msgstr "%s - ਤਰਜੀਹ %d\n"
 #: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
-msgstr "ਸਲੇਵ %s: %s\n"
+msgstr " ਸਲੇਵ %s: %s\n"
 
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "ਵਰਤਮਾਨ ਵਧੀਆ ਵਰਜ਼ਨ %s ਹੈ ।\n"
+msgstr "ਵਰਤਮਾਨ ਵਧੀਆ ਵਰਜ਼ਨ %s ਹੈ।\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "ਇੱਥੇ %d ਪ੍ਰੋਗਰਾਮ ਹਨ ਜੋ '%s' ਉਪਲੱਬਧ ਕਰਦੇ ਹਨ ।\n"
+msgstr "ਇੱਥੇ %d ਪ੍ਰੋਗਰਾਮ ਹਨ, ਜੋ '%s' ਉਪਲੱਬਧ ਕਰਦੇ ਹਨ।\n"
 
 #: ../alternatives.c:665
 #, c-format
