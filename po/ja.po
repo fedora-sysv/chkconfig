@@ -5,11 +5,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-06-17 12:12GMT+10:00\n"
+"PO-Revision-Date: 2003-02-01 15:24GMT+10:00\n"
 "Last-Translator: James Hashida <khashida@redhat.com>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
@@ -17,39 +17,38 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s ¥Ğ¡¼¥¸¥ç¥ó %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s ãƒãƒ¼ã‚¸ãƒ§ãƒ³ %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"¤³¤Î¥½¥Õ¥È¥¦¥§¥¢¤Ï GNU °ìÈÌ¸ø¶¦»ÈÍÑµöÂú·ÀÌó½ñ¤Ë½¾¤Ã¤ÆÌµ½ş¤ÇºÆÇÛÉÛ¤¹¤ë¤³¤È¤¬¤Ç"
-"¤­¤Ş¤¹¡£\n"
+"ã“ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã¯ GNU ä¸€èˆ¬å…¬å…±ä½¿ç”¨è¨±è«¾å¥‘ç´„æ›¸ã«å¾“ã£ã¦ç„¡å„Ÿã§å†é…å¸ƒã™ã‚‹ã“ã¨ãŒã§"
+"ãã¾ã™ã€‚\n"
 
 # ../chkconfig.c:25
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "»ÈÍÑË¡:  %s --list [name]\n"
+msgstr "ä½¿ç”¨æ³•:  %s --list [name]\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <Ì¾Á°>\n"
+msgstr "         %s --add <åå‰>\n"
 
 # ../chkconfig.c:27
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <Ì¾Á°>\n"
+msgstr "         %s --del <åå‰>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <¥ì¥Ù¥ë>] <Ì¾Á°> %s)\n"
+msgstr "         %s [--level <ãƒ¬ãƒ™ãƒ«>] <åå‰> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -57,74 +56,74 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"¥µ¡¼¥Ó¥¹%s¤Ïchkconfig¤ò¥µ¥İ¡¼¥È¤·¤Ş¤¹¤¬¼Â¹Ô¥ì¥Ù¥ë¤Ç»²¾È¤µ¤ì¤Æ¤¤¤Ş¤»¤ó (run "
+"ã‚µãƒ¼ãƒ“ã‚¹%sã¯chkconfigã‚’ã‚µãƒãƒ¼ãƒˆã—ã¾ã™ãŒå®Ÿè¡Œãƒ¬ãƒ™ãƒ«ã§å‚ç…§ã•ã‚Œã¦ã„ã¾ã›ã‚“ (run "
 "'chkconfig --add %s')\n"
 
 # ../chkconfig.c:35
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "¥µ¡¼¥Ó¥¹ %s ¤Ï¡¢chkconfig ¤ò¥µ¥İ¡¼¥È¤·¤Æ¤¤¤Ş¤»¤ó\n"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹ %s ã¯ã€chkconfig ã‚’ã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã›ã‚“\n"
 
 # ../chkconfig.c:37
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "¥µ¡¼¥Ó¥¹ %s ¤Ë´Ø¤¹¤ë¾ğÊó¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s\n"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹ %s ã«é–¢ã™ã‚‹æƒ…å ±ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s\n"
 
 # ../chkconfig.c:138
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d ¤ò³«¤¯¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·¤¿: %s\n"
+msgstr "%s/init.d ã‚’é–‹ãã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ: %s\n"
 
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "¥ª¥ó"
+msgstr "ã‚ªãƒ³"
 
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "¥ª¥Õ"
+msgstr "ã‚ªãƒ•"
 
 # ../chkconfig.c:172
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d ¥Ç¥£¥ì¥¯¥È¥ê¤«¤é¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s"
+msgstr "%s/init.d ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s"
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd ¥Ù¡¼¥¹¤Î¥µ¡¼¥Ó¥¹:\n"
+msgstr "xinetd ãƒ™ãƒ¼ã‚¹ã®ã‚µãƒ¼ãƒ“ã‚¹:\n"
 
 # ../chkconfig.c:182
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "¥Ç¥£¥ì¥¯¥È¥ê %s ¤ò³«¤¯¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·¤¿: %s"
+msgstr "ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª %s ã‚’é–‹ãã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ: %s"
 
 # ../chkconfig.c:284
 #: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s ¥Ğ¡¼¥¸¥ç¥ó %s\n"
+msgstr "%s ãƒãƒ¼ã‚¸ãƒ§ãƒ³ %s\n"
 
 # ../chkconfig.c:291
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "»ØÄê¤Ç¤­¤ë¤Î¤Ï¡¢--list¡¢--add¡¢--del ¤ÎÃæ¤«¤é 1 ¤Ä¤À¤±¤Ç¤¹\n"
+msgstr "æŒ‡å®šã§ãã‚‹ã®ã¯ã€--listã€--addã€--del ã®ä¸­ã‹ã‚‰ 1 ã¤ã ã‘ã§ã™\n"
 
 # ../chkconfig.c:339
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig ¥¯¥¨¥ê¤ËÂĞ¤·¤Æ»ØÄê¤Ç¤­¤ë¥é¥ó¥ì¥Ù¥ë¤Ï 1 ¤Ä¤À¤±¤Ç¤¹\n"
+msgstr "chkconfig ã‚¯ã‚¨ãƒªã«å¯¾ã—ã¦æŒ‡å®šã§ãã‚‹ãƒ©ãƒ³ãƒ¬ãƒ™ãƒ«ã¯ 1 ã¤ã ã‘ã§ã™\n"
 
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "¥µ¡¼¥Ó¥¹¤Ë´Ø¤¹¤ë¾ÜºÙ¤Ë¤Ä¤¤¤Æ¤Ï¡¢<F1> ¤ò²¡¤·¤Æ¤¯¤À¤µ¤¤¡£"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹ã«é–¢ã™ã‚‹è©³ç´°ã«ã¤ã„ã¦ã¯ã€<F1> ã‚’æŠ¼ã—ã¦ãã ã•ã„ã€‚"
 
 # ../ntsysv.c:62 ../ntsysv.c:99
 #: ../ntsysv.c:62 ../ntsysv.c:99
@@ -134,266 +133,260 @@ msgstr "OK"
 # ../ntsysv.c:62
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Ìá¤ë"
+msgstr "æˆ»ã‚‹"
 
 # ../ntsysv.c:62
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "¼è¤ê¾Ã¤·"
+msgstr "å–ã‚Šæ¶ˆã—"
 
 # ../ntsysv.c:74
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "¼«Æ°Åª¤Ëµ¯Æ°¤µ¤»¤ë¥µ¡¼¥Ó¥¹¤ò»ØÄê¤·¤Æ¤¯¤À¤µ¤¤¡£"
+msgstr "è‡ªå‹•çš„ã«èµ·å‹•ã•ã›ã‚‹ã‚µãƒ¼ãƒ“ã‚¹ã‚’æŒ‡å®šã—ã¦ãã ã•ã„ã€‚"
 
 # ../ntsysv.c:80
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "¥µ¡¼¥Ó¥¹"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹"
 
 # ../ntsysv.c:174 ../ntsysv.c:217
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "¥µ¡¼¥Ó¥¹ %s ¤Ë´Ø¤¹¤ë¾ğÊó¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s\n"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹ %s ã«é–¢ã™ã‚‹æƒ…å ±ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s\n"
 
 # ../ntsysv.c:183
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d ¥Ç¥£¥ì¥¯¥È¥ê¤«¤é¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s\n"
+msgstr "%s/init.d ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s\n"
 
 # ../ntsysv.c:226
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "¥Ç¥£¥ì¥¯¥È¥ê %s ¤«¤é¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s\n"
+msgstr "ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª %s ã‹ã‚‰ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s¤ò¼Â¹Ô¤¹¤ë°Ù¤Ë¥ë¡¼¥È¤Ç¤Ê¤±¤ì¤Ğ¤Ê¤ê¤Ş¤»¤ó¡£\n"
+msgstr "%sã‚’å®Ÿè¡Œã™ã‚‹ç‚ºã«ãƒ«ãƒ¼ãƒˆã§ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚\n"
 
 # ../ntsysv.c:270
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "--level ¤Î°ú¿ô¤¬ÉÔÅ¬Åö¤Ç¤¹\n"
+msgstr "--level ã®å¼•æ•°ãŒä¸é©å½“ã§ã™\n"
 
 # ../ntsysv.c:277
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv ¤Ë¤è¤Ã¤Æ´ÉÍı¤Ç¤­¤ë¥µ¡¼¥Ó¥¹¤¬¤¢¤ê¤Ş¤»¤ó\n"
+msgstr "ntsysv ã«ã‚ˆã£ã¦ç®¡ç†ã§ãã‚‹ã‚µãƒ¼ãƒ“ã‚¹ãŒã‚ã‚Šã¾ã›ã‚“\n"
 
 # ../leveldb.c:355
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "¥Ñ¥¿¡¼¥ó %s ¤Î²òÀÏ¤Ë¼ºÇÔ¤·¤Ş¤·¤¿: %s\n"
+msgstr "ãƒ‘ã‚¿ãƒ¼ãƒ³ %s ã®è§£æã«å¤±æ•—ã—ã¾ã—ãŸ: %s\n"
 
 # ../leveldb.c:386
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "¸½ºß¤Î¥é¥ó¥ì¥Ù¥ë¤ò¼±ÊÌ¤Ç¤­¤Ş¤»¤ó\n"
+msgstr "ç¾åœ¨ã®ãƒ©ãƒ³ãƒ¬ãƒ™ãƒ«ã‚’è­˜åˆ¥ã§ãã¾ã›ã‚“\n"
 
 # ../leveldb.c:474
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "¥·¥ó¥Ü¥ê¥Ã¥¯¥ê¥ó¥¯ %s ¤ò¤Ä¤¯¤ë¤Î¤Ë¼ºÇÔ¤·¤Ş¤·¤¿¡£ %s\n"
+msgstr "ã‚·ãƒ³ãƒœãƒªãƒƒã‚¯ãƒªãƒ³ã‚¯ %s ã‚’ã¤ãã‚‹ã®ã«å¤±æ•—ã—ã¾ã—ãŸã€‚ %s\n"
 
 # ../chkconfig.c:21
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s ¥Ğ¡¼¥¸¥ç¥ó %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³%s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"¤³¤Î¥½¥Õ¥È¥¦¥§¥¢¤Ï GNU °ìÈÌ¸ø¶¦»ÈÍÑµöÂú·ÀÌó½ñ¤Ë½¾¤Ã¤ÆÌµ½ş¤ÇºÆÇÛÉÛ¤¹¤ë¤³¤È¤¬¤Ç"
-"¤­¤Ş¤¹¡£\n"
+"ã“ã‚Œã¯ GNU ä¸€èˆ¬å…¬æœ‰ä½¿ç”¨è¨±è«¾æ›¸ã®è¦å®šã®å…ƒã§è‡ªç”±ã«å†é…å¸ƒã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "ä½¿ç”¨æ³•: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <service>]\n"
 
 # ../chkconfig.c:28
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <¥ì¥Ù¥ë>] <Ì¾Á°> %s)\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <name> <path>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <Ì¾Á°>\n"
+msgstr "       alternatives --auto <name>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <Ì¾Á°>\n"
+msgstr "       alternatives --config <name>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <Ì¾Á°>\n"
+msgstr "       alternatives --display <name>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <Ì¾Á°>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "å…±é€šã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "%s/init.d ¤ò³«¤¯¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·¤¿: %s\n"
+msgstr "%sã‚’é–‹ãã®ã«å¤±æ•—: %s\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s/init.d ¤ò³«¤¯¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·¤¿: %s\n"
+msgstr "%sã®èª­ã¿è¾¼ã¿ã«å¤±æ•—: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s ç©ºã§ã™!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "%sã®1è¡Œç›®ã¯ä¸æ­£ãªãƒ¢ãƒ¼ãƒ‰\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "%sã«ä¸æ­£ãªä¸»è¦ãƒªãƒ³ã‚¯\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "%sã«äºˆæƒ³å¤–ã®ãƒ‘ã‚¹%sæœ‰ã‚Š\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "%sã«ã‚¹ãƒ¬ãƒ¼ãƒ–%sã®ãƒ‘ã‚¹ãŒæ¬ å¦‚\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "%sã«äºˆæƒ³å¤–ã®ãƒ•ã‚¡ã‚¤ãƒ«çµ‚çµ\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "%sã«äº¤æ›¿ã®ãƒ‘ã‚¹ãŒäºˆæƒ³ã•ã‚Œã¾ã™\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%sã«æ•°å€¤ã®å„ªå…ˆãŒäºˆæƒ³ã•ã‚Œã¾ã™\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "%sã«ã‚¹ãƒ¬ãƒ¼ãƒ–ãƒ‘ã‚¹ã‚’äºˆæƒ³\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "%sã«äºˆæƒ³å¤–ã®è¡Œæœ‰ã‚Š: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "ãƒªãƒ³ã‚¯ã¯ã©ã®ä»£æ›¿ã‚‚æŒ‡å®šã—ã¦ã„ã¾ã›ã‚“--æ‰‹å‹•ã«è¨­å®šã—ã¾ã™\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "ãƒªãƒ³ã‚¯ã®å¤‰æ›´-- æ‰‹å‹•ã«è¨­å®šã—ã¾ã™\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "%sã‚’å‰Šé™¤ã™ã‚‹\n"
 
 # ../leveldb.c:474
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "¥·¥ó¥Ü¥ê¥Ã¥¯¥ê¥ó¥¯ %s ¤ò¤Ä¤¯¤ë¤Î¤Ë¼ºÇÔ¤·¤Ş¤·¤¿¡£ %s\n"
+msgstr "ãƒªãƒ³ã‚¯ %s ã®å‰Šé™¤ã«å¤±æ•—:  %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "%s ã‹ã‚‰ %sã¸ãƒªãƒ³ã‚¯\n"
 
 # ../leveldb.c:474
 #: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "¥·¥ó¥Ü¥ê¥Ã¥¯¥ê¥ó¥¯ %s ¤ò¤Ä¤¯¤ë¤Î¤Ë¼ºÇÔ¤·¤Ş¤·¤¿¡£ %s\n"
+msgstr "%s ã‹ã‚‰%sã¸ã®ãƒªãƒ³ã‚¯å¤±æ•—: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s ã¯æ—¢ã«å­˜åœ¨ã—ã¾ã™\n"
 
 # ../leveldb.c:355
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "¥Ñ¥¿¡¼¥ó %s ¤Î²òÀÏ¤Ë¼ºÇÔ¤·¤Ş¤·¤¿: %s\n"
+msgstr "%s ã®ä½œæˆã«å¤±æ•—ã§ã™: %s\n"
 
 # ../leveldb.c:474
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "¥·¥ó¥Ü¥ê¥Ã¥¯¥ê¥ó¥¯ %s ¤ò¤Ä¤¯¤ë¤Î¤Ë¼ºÇÔ¤·¤Ş¤·¤¿¡£ %s\n"
+msgstr "%sã‚’%sã¸ã®äº¤æ›ã«å¤±æ•—ã—ã¾ã—ãŸ: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%sã®ä¸»è¦ãƒªãƒ³ã‚¯ã¯ %sã¨ã—ã¾ã™\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "ãƒªãƒ³ã‚¯%sã¯ã‚¹ãƒ¬ãƒ¼ãƒ–%s(%s %s)ã«ä¸é©åˆ‡\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s -ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã¯è‡ªå‹•ã€‚\n"
 
 #: ../alternatives.c:618
 #, c-format
@@ -439,7 +432,7 @@ msgstr ""
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "¥µ¡¼¥Ó¥¹ %s ¤Ë´Ø¤¹¤ë¾ğÊó¤ÎÆÉ¤ß¹ş¤ßÃæ¤Ë¥¨¥é¡¼¤¬È¯À¸¤·¤Ş¤·¤¿¡§ %s\n"
+msgstr "ã‚µãƒ¼ãƒ“ã‚¹ %s ã«é–¢ã™ã‚‹æƒ…å ±ã®èª­ã¿è¾¼ã¿ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸï¼š %s\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
@@ -455,7 +448,7 @@ msgstr ""
 #: ../alternatives.c:746
 #, fuzzy, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s/init.d ¤ò³«¤¯¤³¤È¤¬¤Ç¤­¤Ş¤»¤ó¤Ç¤·¤¿: %s\n"
+msgstr "%s/init.d ã‚’é–‹ãã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
@@ -471,4 +464,5 @@ msgstr ""
 #: ../alternatives.c:880
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
-msgstr "%s ¥Ğ¡¼¥¸¥ç¥ó %s\n"
+msgstr "%s ãƒãƒ¼ã‚¸ãƒ§ãƒ³ %s\n"
+
