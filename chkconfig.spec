@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.18
+Version: 1.2.19
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -69,6 +69,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Fri Feb  2 2001 Bill Nottingham <notting@redhat.com>
+- finally fix the bug Nalin keeps complaining about :)
+
 * Wed Jan 24 2001 Preston Brown <pbrown@redhat.com>
 - final i18n update before Beta.
 

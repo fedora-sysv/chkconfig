@@ -435,7 +435,7 @@ int setXinetdService(struct service s, int on) {
 			ptr++;
 		} 
 		while (isspace(*buf)) buf++;
-		if (strncmp(buf,"disable", 7)) {
+		if (strncmp(buf,"disable", 7) && strlen(buf)) {
 			write(newfd,tmp,strlen(tmp));
 			write(newfd,"\n",1);
 			if (buf[0] == '{') {
