@@ -6,21 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2000-07-03 00:00+CEST\n"
-"Last-Translator: Pawe³ Niewiadomski <lilo@free.poltronic.net>\n"
-"Language-Team: POLISH <pl@li.org>\n"
+"PO-Revision-Date: 2002-10-08 21:08+0200\n"
+"Last-Translator: Bartosz Sapijaszko <bartosz@sapek.net>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Program mo¿e byæ swobodnie rozprowadzany na warunkach Publicznej Licencji "
 "GNU.\n"
@@ -51,6 +51,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"us³uga %s wspiera chkconfig, lecz nie jest przypisana do ¿adnego runlevelu (uruchom "
+"'chkconfig -add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -69,11 +71,11 @@ msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "***"
+msgstr "on"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "---"
+msgstr "off"
 
 #: ../chkconfig.c:282
 #, c-format
@@ -82,12 +84,12 @@ msgstr "b³±d poczas czytania z katalogu %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "us³ugi uruchamiane przez xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
+msgstr "nie mog³em otworzyæ foldera %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -108,7 +110,7 @@ msgstr "Naci¶nij <F1> aby dowiedzieæ siê wiêcej o us³udze."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
@@ -137,14 +139,14 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "b³±d podczas czytania z katalogu %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "b³±d podczas czytania z katalogu %s/init.d: %s\n"
+msgstr "b³±d podczas czytania z katalogu %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Musisz byæ u¿ytkownikiem root aby uruchomiæ %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -167,3 +169,4 @@ msgstr "nie mogê ustaliæ aktualnego poziomu pracy\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
+
