@@ -33,7 +33,7 @@ clean:
 
 install:
 	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(BINDIR)
-	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(USRSBINDIR)
+	[ -d $(instroot)/$(USRSBINDIR) ] || mkdir -p $(instroot)/$(USRSBINDIR)
 	[ -d $(instroot)/$(MANDIR) ] || mkdir -p $(instroot)/$(MANDIR)
 	[ -d $(instroot)/$(MANDIR)/man8 ] || mkdir -p $(instroot)/$(MANDIR)/man8
 	[ -d $(instroot)/$(MANDIR)/man5 ] || mkdir -p $(instroot)/$(MANDIR)/man5
