@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: no\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-07-14 01:29+0200\n"
+"PO-Revision-Date: 2005-02-21 15:53+0100\n"
 "Last-Translator: Per Øyvind Karlsen <peroyvind@sintrax.net>\n"
 "Language-Team: Norwegian Bokmål <nb@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -399,9 +399,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Nåværende «beste» versjon er %s\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Det finnes %d programmer som har «%s».\n"
+msgstr "Det finnes %d programmer som gir «%s».\n"
 
 #: ../alternatives.c:664
 #, c-format
