@@ -1,17 +1,18 @@
 # translation of ko.po to Korean
 # Michelle Kim <mkim@redhat.com>, 2002
+# Michelle J Kim <mkim@redhat.com>, 2003
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-02-03 13:45+1000\n"
-"Last-Translator: Michelle Kim <mkim@redhat.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2003-12-08 15:13+1000\n"
+"Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
+"Language-Team:  <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -19,10 +20,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -91,9 +90,9 @@ msgid "xinetd based services:\n"
 msgstr "xinetd 기반의 서비스:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "%s 디렉토리를 여는데 실패했습니다: %s"
+msgstr "%s 디렉토리를 여는데 실패했습니다: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -288,8 +287,7 @@ msgstr "%s에 잘못된 줄이 있습니다: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
+msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -425,3 +423,4 @@ msgstr "대체 버전 %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"
+
