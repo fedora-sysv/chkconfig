@@ -116,7 +116,7 @@ msgstr "tylko jeden poziom uruchamiania może być podany dla zapytania chkconfi
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
-msgstr "Naciśnij <F1> aby dowiedzieć się więcej o usłudze."
+msgstr "Naciśnij <F1>, aby dowiedzieć się więcej o usłudze."
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
@@ -146,7 +146,7 @@ msgstr "błąd podczas czytania z folderu %s: %s\n"
 #: ../ntsysv.c:276
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Musisz być rootem aby uruchomić %s.\n"
+msgstr "Musisz być rootem, aby uruchomić %s.\n"
 
 #: ../ntsysv.c:293
 #, c-format
