@@ -1,19 +1,22 @@
+# translation of pl.po to Polish
 # translation of pl.po to POLISH
 # tłumaczenie dla lpl.
 # Copyright (C) 2000, 2004 Free Software Foundation, Inc.
 # Paweł Niewiadomski <lilo@free.poltronic.net>, 2000.
 # Radosław Zawartko <radzaw@radzaw.one.pl>, 2004.
+# Grzegorz Rajda <marius@w9.pl>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-03-14 16:00+0100\n"
-"Last-Translator: Pawel Szopinski <pawel@szopinski.co.uk>\n"
-"Language-Team: POLISH <pl@li.org>\n"
+"PO-Revision-Date: 2004-03-15 13:04+0100\n"
+"Last-Translator: Grzegorz Rajda <marius@w9.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -47,7 +50,7 @@ msgstr "         %s [--level <poziomy>] <nazwa> %s)\n"
 #: ../chkconfig.c:35
 #, c-format
 msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "usługa %s wspiera chkconfig, lecz nie jest przypisana do żadnego runlevelu (uruchom 'chkconfig -add %s')\n"
+msgstr "usługa %s wspiera chkconfig, lecz nie jest przypisana do żadnego poziomu uruchamiania (uruchom 'chkconfig -add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -63,19 +66,19 @@ msgstr "błąd podczas czytania informacji o usłudze %s: %s\n"
 #: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "nie mogłem otworzyć %s/init.d: %s\n"
+msgstr "nie powiodło się otwierani %s/init.d: %s\n"
 
 #: ../chkconfig.c:211
 #: ../chkconfig.c:216
 #: ../chkconfig.c:313
 msgid "on"
-msgstr "on"
+msgstr "włączone"
 
 #: ../chkconfig.c:211
 #: ../chkconfig.c:216
 #: ../chkconfig.c:313
 msgid "off"
-msgstr "off"
+msgstr "wyłączone"
 
 #: ../chkconfig.c:282
 #: ../ntsysv.c:195
@@ -166,7 +169,7 @@ msgstr "nie mogę ustalić aktualnego poziomu pracy\n"
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nie powiodła się próba stworzenia symlinka %s: %s\n"
+msgstr "nie powiodła się próba stworzenia dowiązania symbolicznego %s: %s\n"
 
 #: ../alternatives.c:46
 #, c-format
@@ -183,7 +186,7 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "użycie: alternatywy: --install <link> <nazwa> <ścieżka> <priorytet>\n"
+msgstr "użycie: alternatywy --install <link> <nazwa> <ścieżka> <priorytet>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
