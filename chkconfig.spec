@@ -1,7 +1,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.5
-Release: 3
+Version: 1.3.6
+Release: 1
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Mon Aug 12 2002 Bill Nottingham <notting@redhat.com> 1.3.6-1
+- make on and off handle runlevel 2 too (#70766)
+
 * Mon Apr 15 2002 Trond Eivind Glomsrød <teg@redhat.com> 1.3.5-3
 - Update translations
 
