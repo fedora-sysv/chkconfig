@@ -64,7 +64,9 @@ install:
 	    l=`basename $$n .mo`; \
 	    $(INSTALL) -m 755 -d $(INSTALLNLSDIR)/$$l; \
 	    $(INSTALL) -m 755 -d $(INSTALLNLSDIR)/$$l/LC_MESSAGES; \
-	    $(INSTALL) -m 644 $$n $(INSTALLNLSDIR)/$$l/LC_MESSAGES/$(NLSPACKAGE).mo; \
+	    if [ -f $$n ]; then \
+	        $(INSTALL) -m 644 $$n $(INSTALLNLSDIR)/$$l/LC_MESSAGES/$(NLSPACKAGE).mo; \
+	    fi \
 	done
 
 %.mo: %.po
