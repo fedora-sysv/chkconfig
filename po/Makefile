@@ -15,7 +15,7 @@ all: $(NLSPACKAGE).pot $(CATALOGS)
 
 $(NLSPACKAGE).pot: $(POTFILES)
 	xgettext --default-domain=$(NLSPACKAGE) \
-       	  --add-comments --keyword=_ --keyword=N_ $(POTFILES)
+	       	  --add-comments --keyword=_ --keyword=N_ $(POTFILES)
 	if cmp -s $(NLSPACKAGE).po $(NLSPACKAGE).pot; then \
 	    rm -f $(NLSPACKAGE).po; \
 	else \
@@ -25,6 +25,19 @@ $(NLSPACKAGE).pot: $(POTFILES)
 
 update-po: Makefile
 	$(MAKE) $(NLSPACKAGE).pot
+	catalogs='$(CATALOGS)'; \
+	for cat in $$catalogs; do \
+		lang=`basename $$cat .mo`; \
+		if msgmerge $$lang.po $(NLSPACKAGE).pot > $$lang.pox ; then \
+			echo "msgmerge of $$lang succeeded" ; \
+			mv $$lang.pox $$lang.o ; \
+		else \
+			echo "msgmerge of $$lang failed" ; \
+			rm -f $$lang.pox ; \
+		fi \
+	done
+
+refresh-po: Makefile
 	catalogs='$(CATALOGS)'; \
 	for cat in $$catalogs; do \
 		lang=`basename $$cat .mo`; \
