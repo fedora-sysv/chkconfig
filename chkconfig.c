@@ -94,7 +94,7 @@ static int showServiceInfo(char * name, int forgiving) {
 
     rc = readServiceInfo(name, &s, 0);
     
-    if (!rc) {
+    if (!rc && s.type == TYPE_INIT_D) {
 	    rc = 2;
 	    for (i = 0 ; i < 7 ; i++) {
 		    if (isConfigured(name, i)) {
