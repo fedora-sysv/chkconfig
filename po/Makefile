@@ -7,7 +7,7 @@ MSGMERGE = msgmerge
 
 NLSPACKAGE = chkconfig
 
-CATALOGS = 
+CATALOGS = $(shell ls *.po | sed 's/\.mo/\.po/')
 
 POTFILES  = ../chkconfig.c ../ntsysv.c ../leveldb.c
 
@@ -27,7 +27,7 @@ update-po: Makefile
 	$(MAKE) $(NLSPACKAGE).pot
 	catalogs='$(CATALOGS)'; \
 	for cat in $$catalogs; do \
-		lang=`echo $$cat | sed 's/.mo//'`; \
+		lang=`basename $$cat .po`; \
 		if tupdate $(NLSPACKAGE).pot $$lang.po > $$lang.pot ; then \
 			echo "tupdate of $$lang succeeded" ; \
 		else \
