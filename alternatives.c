@@ -394,6 +394,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
     FILE * f;
     int i, j;
     int rc = 0;
+    struct alternative * alt;
     
     path = alloca(strlen(stateDir) + strlen(set->alts[0].master.title) + 6);
     sprintf(path, "%s/%s.new", stateDir, set->alts[0].master.title);
@@ -449,10 +450,10 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     if (set->mode == AUTO)
 		set->current = set->best;
+    
+    alt = set->alts + ( set->current > 0 ? set->current : 0);
 
     if (forceLinks || set->mode == AUTO) {
-	struct alternative * alt = set->alts + ( set->current > 0 ? set->current : 0);
-
 	rc |= makeLinks(&alt->master, altDir, flags);
 	for (i = 0; i < alt->numSlaves; i++) {
 	        if (alt->slaves[i].target)
@@ -460,25 +461,26 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 		else
 			rc |= removeLinks(alt->slaves + i, altDir, flags);
 	}
-	if (!FL_TEST(flags)) {
-		if (alt->initscript) {
-			path = alloca(strlen("/sbin/chkconfig --add ") + strlen(alt->initscript) + 1);
-			sprintf(path, "/sbin/chkconfig --add %s", alt->initscript);
-			if (FL_VERBOSE(flags))
-				printf("running %s\n", path);
-			system(path);
-		}
-		for (i = 0; i < set->numAlts ; i++) {
-			struct alternative * tmpalt = set->alts + i;
-			if (tmpalt != alt && tmpalt->initscript) {
-				path = alloca(strlen("/sbin/chkconfig --del ") + strlen(tmpalt->initscript) + 1);
-				sprintf(path, "/sbin/chkconfig --del %s", tmpalt->initscript);
-				if (FL_VERBOSE(flags))
-					printf("running %s\n", path);
-				system(path);
-			}
-		}
-	}
+    }
+
+    if (!FL_TEST(flags)) {
+	    if (alt->initscript) {
+		    path = alloca(strlen("/sbin/chkconfig --add ") + strlen(alt->initscript) + 1);
+		    sprintf(path, "/sbin/chkconfig --add %s", alt->initscript);
+		    if (FL_VERBOSE(flags))
+			    printf("running %s\n", path);
+		    system(path);
+	    }
+	    for (i = 0; i < set->numAlts ; i++) {
+		    struct alternative * tmpalt = set->alts + i;
+		    if (tmpalt != alt && tmpalt->initscript) {
+			    path = alloca(strlen("/sbin/chkconfig --del ") + strlen(tmpalt->initscript) + 1);
+			    sprintf(path, "/sbin/chkconfig --del %s", tmpalt->initscript);
+			    if (FL_VERBOSE(flags))
+				    printf("running %s\n", path);
+			    system(path);
+		    }
+	    }
     }
 
     return rc;
@@ -538,8 +540,11 @@ static int addService(struct alternative newAlt, const char * altDir,
 	    
 	/* Insert new set into the set of alternatives */
 	for (i = 0 ; i < set.numAlts ; i++) {
-		if (!strcmp(set.alts[i].master.target, newAlt.master.target))
+		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
 			set.alts[i] = newAlt;
+			break;
+		}
+		
 	}
 	if (i == set.numAlts) {
 		set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
