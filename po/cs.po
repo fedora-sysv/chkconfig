@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "POT-Creation-Date: 2000-07-18 00:53-0400\n"
-"PO-Revision-Date: 2000-07-26 21:01+0100\n"
+"PO-Revision-Date: 2000-07-26 22:49+0100\n"
 "Last-Translator: Milan Kerslager <milan.kerslager@spsselib.hiedu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,12 +65,12 @@ msgstr "chyba pøi ètení z adresáøe %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "slu¾by zalo¾ené na xinetd:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "nelze otevøít %s/init.d: %s\n"
+msgstr "otevøení adresáøe selhalo %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -120,9 +120,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
+msgstr "chyba pøi ètení z adresáøe %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
