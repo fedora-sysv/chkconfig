@@ -38,6 +38,7 @@ leveldb.o: leveldb.c leveldb.h
 clean:
 	rm -f chkconfig ntsysv $(OBJS) $(NTOBJS)
 	make -C po clean
+	rm -f chkconfig-*.tar.gz *~ *.old
 
 install:
 	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(BINDIR)
