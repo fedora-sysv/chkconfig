@@ -1,6 +1,6 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.5
+%define version 0.6
 Version: %{version}
 Release: 1
 Copyright: GPL
