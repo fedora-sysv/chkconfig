@@ -1,17 +1,17 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.1.5
-Release: 1
+Release: 2
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Prereq: initscripts >= 5.18
+Conflicts: initscripts < 5.18
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
-symbolic links in /etc/rc*.d, to relieve system administrators of some 
+symbolic links in /etc/rc.d, to relieve system administrators of some 
 of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
@@ -21,7 +21,7 @@ Group: System Environment/Base
 %description -n ntsysv
 Ntsysv provides a simple interface for setting which system services
 are started or stopped in various runlevels (instead of directly
-manipulating the numerous symbolic links in /etc/rc*.d). Unless you
+manipulating the numerous symbolic links in /etc/rc.d). Unless you
 specify a runlevel or runlevels on the command line (see the man
 page), ntsysv configures the current runlevel (5 if you're using X).
 
@@ -62,6 +62,10 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Tue Jun 27 2000 Matt Wilson <msw@redhat.com>
+- changed Prereq: initscripts >= 5.18 to Conflicts: initscripts < 5.18
+- fixed sumary and description where a global string replace nuked them
+
 * Mon Jun 26 2000 Matt Wilson <msw@redhat.com>
 - what Bill said, but actually build this version
 
