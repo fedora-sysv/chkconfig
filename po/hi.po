@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "POT-Creation-Date: 2005-02-10 17:54-0500\n"
-"PO-Revision-Date: 2005-03-21 10:59+0530\n"
+"PO-Revision-Date: 2005-03-29 19:36+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "%s संस्करण %s - कॉपीराइट (C) 1997-2000 Red
 #: ../chkconfig.c:22
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
+msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त रूप में इसको पुन:बाँट कर सकते हैं.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -34,24 +34,24 @@ msgstr "प्रयोग:   %s --list [नाम]\n"
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "        %s --add <नाम>\n"
+msgstr "         %s --जोड़ें <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <नाम>\n"
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <स्तर>] <नाम> %s)\n"
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s सेवा chkconfig को मदद करते हैं, मगर किसी धावस्तर('chkconfig --add %s' चलाएँ)\n"
+msgstr "%s सेवा chkconfig को मदद करता है, मगर किसी रनलेवल ('chkconfig --add %s' चलाएँ)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -61,12 +61,12 @@ msgstr "%s सेवा chkconfig को मदद करते हैं\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s सेवा पर जानकारी पढ़ने में दोष: %s\n"
+msgstr "%s सेवा पर जानकारी पढ़ने में त्रुटि: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:267
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d खोलने में असफल थे: %s\n"
+msgstr "%s/init.d खोलने में असफल था: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
 msgid "on"
@@ -99,12 +99,12 @@ msgstr "%s संस्करण %s\n"
 #: ../chkconfig.c:462
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--list, --add, या --del में से सिर्फ एक को विशिष्ट करें\n"
+msgstr "--list, --add, या --del में से सिर्फ एक को निर्दिष्ट करें\n"
 
 #: ../chkconfig.c:517
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "एक chkconfig प्रश्न के लिए सिर्फ एक धावस्तर विशिष्ट करना है\n"
+msgstr "एक chkconfig प्रश्न के लिए सिर्फ एक रनलेवल निर्दिष्ट करना है\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -112,7 +112,7 @@ msgstr "सेवा पर अधिक जानकारी के लिए 
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
-msgstr "सही"
+msgstr "ठीक"
 
 #: ../ntsysv.c:68
 msgid "Back"
@@ -120,7 +120,7 @@ msgstr "पीछे"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
-msgstr "निरस्त"
+msgstr "रद्द"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
@@ -128,7 +128,7 @@ msgstr "किन सेवाओं को स्वत: रूप से आ�
 
 #: ../ntsysv.c:86
 msgid "Services"
-msgstr "सेवाओं"
+msgstr "सेवा"
 
 #: ../ntsysv.c:240
 #, c-format
@@ -138,12 +138,12 @@ msgstr "%s निर्देशिका के लिए जानकारी
 #: ../ntsysv.c:276
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s को चलाने के लिए आपको root होना आवश्यक है।\n"
+msgstr "%s को चलाने के लिए आपको रूट होना आवश्यक है.\n"
 
 #: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "--levels को बरा तर्क\n"
+msgstr "--levels में गलत तर्क\n"
 
 #: ../ntsysv.c:300
 #, c-format
@@ -153,12 +153,12 @@ msgstr "ntsysv से सेवाओं का प्रबंध न हो �
 #: ../leveldb.c:522
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "%s प्रतिरूप को सार्वञिक करने में असफल थे: %s\n"
+msgstr "%s प्रतिरूप को इकट्ठा करने में असफल: %s\n"
 
 #: ../leveldb.c:553
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "वर्तमान धावस्तर निर्णय नहीं कर सकता\n"
+msgstr "वर्तमान रनलेवल निर्णय नहीं कर सकता\n"
 
 #: ../leveldb.c:641
 #, c-format
@@ -168,7 +168,7 @@ msgstr "%s संकलन बनाने में असफल था: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s वैकल्पिक संस्करण - प्रतिलिपि-अधिकार (C) २००१ रेड़ हेट, निगमन\n"
+msgstr "वैकल्पिक संस्करण %s - कॉपीराइट (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -176,48 +176,48 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
+"जीएनयू जन लाइसेन्स के नियमानुसार मुक्त रूप में इसको पुन:बाँट कर सकते हैं.\n"
 "\n"
 
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "प्रयोग: alternatives --install <संकलन> <नाम> <पथ> <प्राथमिकता>\n"
+msgstr "प्रयोग: विकल्प --अधिष्ठापित करें <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <सेवा>]\n"
+msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <संकलन> <नाम> <पथ>]* \n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <नाम> <पथ>\n"
+msgstr "       विकल्प --हटायें <name> <path>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <नाम>\n"
+msgstr "       विकल्प --auto <name>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <नाम>\n"
+msgstr "       विकल्प --config <name>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <नाम>\n"
+msgstr "       विकल्प --प्रदर्शित करें <name>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <नाम> <पथ>\n"
+msgstr "       विकल्प --सेट करें <name> <path>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -232,7 +232,7 @@ msgstr "सामान्य विकल्प: --verbose --test --help --usag
 #: ../alternatives.c:60
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <निर्देशिका> --admindir <निर्देशिका>\n"
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:157
 #, c-format
@@ -257,7 +257,7 @@ msgstr "%s खाली!\n"
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s के लाइन १ पर बुरा प्रकार\n"
+msgstr "%s के लाइन 1 पर बुरा प्रकार\n"
 
 #: ../alternatives.c:195
 #, c-format
@@ -267,7 +267,7 @@ msgstr "%s में बुरा प्राथमिक संकलन\n"
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%s में %s पथ अप्रतिक्षारत है\n"
+msgstr "%s में %s पथ अप्रत्याशित है\n"
 
 #: ../alternatives.c:216
 #, c-format
@@ -277,17 +277,17 @@ msgstr "%s में %s अधीन के लिए अप्राप्त�
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s में अप्रतिक्षारत संचिका का अंत\n"
+msgstr "%s में अप्रत्याशित फाइल का अंत\n"
 
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%s में वैकल्पिक को प्रतिक्षारत है\n"
+msgstr "%s में विकल्प को प्रतीक्षारत है\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%s में संख्यांक प्राथमिकता प्रतिक्षारत है\n"
+msgstr "%s में संख्यांक प्राथमिकता प्रतीक्षारत है\n"
 
 #: ../alternatives.c:277
 #, c-format
@@ -297,7 +297,7 @@ msgstr "%s में अधीन पथ प्रतीक्षारत ह�
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s में अप्रतीक्षारत लाइन: %s\n"
+msgstr "%s में अप्रत्याशित लाइन: %s\n"
 
 #: ../alternatives.c:304
 #, c-format
@@ -307,17 +307,17 @@ msgstr "%s पढ़ने में असफल: %s\n"
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "कोई वैकल्पिक के लिए संकलन नहीं है -- प्रकार को मानवीय बना रहा है\n"
+msgstr "कोई वैकल्पिक के लिए संकलन नहीं है -- मैनुअल में मोड को सेट कर रहा है\n"
 
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "संकलन बदला गया -- प्रकार को मानवीय बना रहा है\n"
+msgstr "संकलन बदला गया -- मैनुअल में मोड को सेट कर रहा है\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
-msgstr "%s हटाया जा सकता है\n"
+msgstr "%s को हटायेगा\n"
 
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
@@ -367,12 +367,12 @@ msgstr "%s अधीन  (%s %s) के लिए  %s संकलन सही 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - स्थिति स्वत: है।\n"
+msgstr "%s - स्थिति स्वत: है.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - स्थिति मानवीय है।\n"
+msgstr "%s - स्थिति मैनुअल है.\n"
 
 #: ../alternatives.c:622
 #, c-format
@@ -387,12 +387,12 @@ msgstr "%s - %d प्राथमिकता\n"
 #: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
-msgstr "%s अधीन: %s\n"
+msgstr "%s अधीनस्थ: %s\n"
 
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "%s वर्तमान में `सर्वोत्तम' संसकरण है।\n"
+msgstr "%s वर्तमान में `सर्वोत्तम' संस्करण है.\n"
 
 #: ../alternatives.c:663
 #, c-format
@@ -402,17 +402,17 @@ msgstr "एक %d प्रोग्राम है जो '%s' को उप�
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d कार्यक्रम हैं '%s' को प्रदान करने वाले ।\n"
+msgstr "%d कार्यक्रम हैं '%s' को प्रदान करने वाला .\n"
 
 #: ../alternatives.c:665
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  चुनित    निर्देश\n"
+msgstr "  चयनित    समादेश\n"
 
 #: ../alternatives.c:674
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "[+] वर्तमानिय चुनित को रखने के लिए Enter दबाएँ, या चुनित अंक मुद्रित करें:"
+msgstr "[+] वर्तमान चयनित को रखने के लिए Enter दबाएँ, या चयनित अंक मुद्रित करें:"
 
 #: ../alternatives.c:677
 #, c-format
