@@ -57,3 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0644, root, root) /usr/man/man8/ntsysv.8
 %dir %attr(0755, root, root) /etc/rc.d
 %dir %attr(0755, root, root) /etc/rc.d/*
+%attr(0644, root, root) /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
