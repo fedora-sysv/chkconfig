@@ -1,49 +1,51 @@
-# Punjabi translations for chkconfig package.
+# translation of pa2.po to Punjabi
 # Copyright (C) 2004 THE chkconfig'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the chkconfig package.
 # Automatically generated, 2004
-# 
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: pa VERSION\n"
-"POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-03-31 17:36+0530\n"
-"Last-Translator: Punjab Linux Technology <punjablinux@netscape.net>\n"
-"Language-Team: Punjabi\n"
+"Project-Id-Version: pa2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-06-04 16:57-0400\n"
+"PO-Revision-Date: 2004-07-22 15:41+0530\n"
+"Last-Translator: Amanpreet Singh Alam <aalam@redhat.com>\n"
+"Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C)੧੯੯੭-੨੦੦੦ ਲੲੀਰੈਗ-ਹੈਟ ਕੋਲ\n"
+msgstr "%s ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C)੧੯੯੭-੨੦੦੦ ਲਈ Red Hat ਕੋਲ\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "ੲਿਹ GNU ਪਬਲਿਕ ਲਾੲਿਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁੜ ਪ੍ਸਾਰਿਤ ਕੀਤਾ ਹੈ ੤\n"
+#, c-format
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "ੳੁਪਯੋਗਤਾ:   %s --ਸੂਚੀ [ਨਾੳੁ]\n"
+msgstr "ਵਰਤੋਂ   %s --list [ਨਾਂ]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --ਜੋੜੋ <ਨਾੳੁ>\n"
+msgstr "         %s --add <ਨਾਂ>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --ਮਿਟਾਓ <ਨਾੳੁ>\n"
+msgstr "         %s --del <ਨਾਂ>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--ਦਰਜਾ <ਦਰਜੇ>] <ਨਾੳੁ> %s)\n"
+msgstr "         %s [--level <ਪੱਧਰ>] <ਨਾਂ> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -51,8 +53,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ਸੇਵਾ %s, chkconfig ਲੲੀ ਸਹਿਯੋਗੀ ਹੈ, ਪਰ ਕਿਸੇ ਚਾਲੂ-ਦਰਜੇ ਵਿੱਚ ਜਿਕਰ ਨਹੀ ਕੀਤਾ (ਚਲਾਓ "
-"'chkconfig --ਜੋੜੋ %s')\n"
+"ਸੇਵਾ %s, chkconfig ਲਈ ਸਹਿਯੋਗੀ ਹੈ, ਪਰ ਕਿਸੇ ਚਾਲੂ-ਦਰਜੇ ਵਿੱਚ ਜਿਕਰ ਨਹੀ ਕੀਤਾ (ਚਲਾਓ "
+"'chkconfig --ਜੋਡ਼ੋ %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -62,7 +64,7 @@ msgstr "ਸੇਵਾ %s chkconfig ਨੂੰ ਸਹਿਯੋਗ ਨਹੀ ਦਿ�
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s ਸੇਵਾ ਦੀ ਜਾਣਕਾਰੀ ਪੜ੏ਨ ਸਮੇ ਗਲਤੀ: %s\n"
+msgstr "%s ਸੇਵਾ ਦੀ ਜਾਣਕਾਰੀ ਪੜਨ ਸਮੇ ਗਲਤੀ: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
@@ -80,33 +82,36 @@ msgstr "ਬੰਦ"
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d ਡਾੲਿਰੈਕਟਰੀ ਵਿਚੋਂ ਪੜ੏ਨ ਵਿੱਚ ਗਲਤੀ: %s\n"
+msgstr "%s/init.d ਡਾਇਰੈਕਟਰੀ ਵਿਚੋਂ ਪੜਨ ਵਿੱਚ ਗਲਤੀ: %s\n"
 
 #: ../chkconfig.c:290
+#, c-format
 msgid "xinetd based services:\n"
-msgstr "xinetd ਤੇ ਅਧਾਰਿਤ ਸੇਵਾਵ੾:\n"
+msgstr "xinetd ਤੇ ਅਧਾਰਿਤ ਸੇਵਾਵਾਂ:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "%s ਡਾੲਿਰੈਕਟਰੀ ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਡਾਇਰੈਕਟਰੀ ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s ਵਰਜ਼ਨ %s\n"
+msgstr "%s ਵਰਜ਼ਨ %s\n"
 
 #: ../chkconfig.c:412
+#, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--ਸੂਚੀ, --ਜੋੜੋ, ਜ੾ --ਮਿਟਾਓ ਵਿੱਚੋਂ ਸਿਰਫ ੲਿੱਕ ਦਰਸਾੲਿਅਾ ਹੋਵੇਗਾ \n"
+msgstr "--ਸੂਚੀ, --ਜੋਡ਼ੋ, ਜਾਂ --ਮਿਟਾਓ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ \n"
 
 #: ../chkconfig.c:464
+#, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig ਪ੍ਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ੲਿੱਕ ਚਾਲੂ-ਦਰਜਾ ਨਿਰਧਾਰਿਤ ਹੋਵੇਗਾ\n"
+msgstr "chkconfig ਪ੍ਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਚਾਲੂ-ਦਰਜਾ ਨਿਰਧਾਰਿਤ ਹੋਵੇਗਾ\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "ਸੇਵਾ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲੲੀ <F1> ਦਬਾਓ ੤"
+msgstr "ਸੇਵਾ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ <F1> ਦਬਾਓ ।"
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -122,34 +127,36 @@ msgstr "ਰੱਦ ਕਰੋ"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "ਕਿਹੜੀਅ੾ ਸੇਵਾਵ੾ ਅਾਪਣੇ-ਅਾਪ ਸ਼ੁਰੂ ਹੋਣੀਅ੾ ਚਾਹਿਦੀਅ੾ ਹਨ?"
+msgstr "ਕਿਹਡ਼ੀਆਂ ਸੇਵਾਵਾਂ ਆਪਣੇ-ਆਪ ਸ਼ੁਰੂ ਹੋਣੀਆਂ ਚਾਹਿਦੀਆਂ ਹਨ?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "ਸੇਵਾਵ੾"
+msgstr "ਸੇਵਾਵਾਂ"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s ਸੇਵਾ ਲੲੀ ਜਾਣਕਾਰੀ ਪੜ੏ਨ ਸਮੇ ਗਲਤੀ: %s\n"
+msgstr "%s ਸੇਵਾ ਲਈ ਜਾਣਕਾਰੀ ਪੜਨ ਸਮੇ ਗਲਤੀ: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "%s ਡਾੲਿਰੈਕਟਰੀ ਵਿੱਚੋ ਪੜ੏ਨ ਸਮੇ ਗਲਤੀ: %s\n"
+msgstr "%s ਡਾਇਰੈਕਟਰੀ ਵਿੱਚੋ ਪੜਨ ਸਮੇ ਗਲਤੀ: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s ਚਲਾੳੁਣ ਲੲੀ ਤੁਸੀ ਰੂਟ(root) ਹੋਵੋ ੤\n"
+msgstr "%s ਚਲਾਉਣ ਲਈ ਤੁਸੀ ਰੂਟ(root) ਹੋਵੋ ।\n"
 
 #: ../ntsysv.c:292
+#, c-format
 msgid "bad argument to --levels\n"
-msgstr "--ਦਰਜੇ ਲੲੀ ਗਲਤ ਅਾਰਗੂਮਿੰਟ\n"
+msgstr "--ਦਰਜੇ ਲਈ ਗਲਤ ਆਰਗੂਮਿੰਟ\n"
 
 #: ../ntsysv.c:299
+#, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv ਦੁਅਾਰਾ ਕੋੲੀ ਸੇਵਾ ਪ੍ਬੰਧਨ ਨਹੀ ਕੀਤਾ ਗਿਅਾ!\n"
+msgstr "ntsysv ਦੁਆਰਾ ਕੋਈ ਸੇਵਾ ਪ੍ਬੰਧਨ ਨਹੀ ਕੀਤਾ ਗਿਆ!\n"
 
 #: ../leveldb.c:508
 #, c-format
@@ -157,75 +164,88 @@ msgid "failed to glob pattern %s: %s\n"
 msgstr "%s ਨਮੂਨੇ ਨੂੰ ਗਲੋਬ ਕਰਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../leveldb.c:539
+#, c-format
 msgid "cannot determine current run level\n"
-msgstr "ਵਰਤਮਾਨ ਚਾਲੂ-ਦਰਜੇ ਦਾ ਪਤਾ ਨਹੀ ਲਗਾ ਸਕਿਅਾ\n"
+msgstr "ਵਰਤਮਾਨ ਚਾਲੂ-ਦਰਜੇ ਦਾ ਪਤਾ ਨਹੀ ਲਗਾ ਸਕਿਆ\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "symlink %s ਬਣਾੳੁਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "symlink %s ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ਅਨੁਸਾਰੀ ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C) ੨੦੦੧ ਰੈਡ-ਹੈਟ\n"
+msgstr "ਅਨੁਸਾਰੀ ਵਰਜ਼ਨ %s - ਹੱਕ ਰਾਖਵੇਂ ਹਨ (C) ੨੦੦੧ ਰੈਡ-ਹੈਟ\n"
 
 #: ../alternatives.c:49
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"ੲਿਹ GNU ਪਬਲਿਕ ਲਾੲਿਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁੜ ਪ੍ਸਾਰਿਤ ਕੀਤਾ ਹੈ ੤\n"
+"ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸਿੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ ।\n"
 "\n"
 
 #: ../alternatives.c:50
+#, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ੳੁਪਯੋਗਤਾ: ਅਨੁਸਾਰੀ --ੲਿੰਸਟਾਲ <ਲਿੰਕ> <ਨਾੳੁ> <ਰਸਤਾ> <ਤਰਜੀਹ>\n"
+msgstr "ਉਪਯੋਗਤਾ: ਅਨੁਸਾਰੀ  --install<ਲਿੰਕ> <ਨਾਉ> <ਰਸਤਾ> <ਤਰਜੀਹ>\n"
 
 #: ../alternatives.c:51
+#, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--ਸ਼ੁਰੂਅਾਤੀ-ਸਕਰਿਪਟ <ਸੇਵਾ>]\n"
+msgstr "                    [--initscript <ਸੇਵਾ>]\n"
 
 #: ../alternatives.c:52
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--ਸਲੇਵ <ਲਿੰਕ> <ਨਾੳੁ> <ਰਸਤਾ>]*\n"
+msgstr "                    [--slave <ਲਿੰਕ> <ਨਾਉ> <ਰਸਤਾ>]*\n"
 
 #: ../alternatives.c:53
+#, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       ਅਨੁਸਾਰੀ --ਹਟਾਓ <ਨਾੳੁ> <ਰਸਤਾ>\n"
+msgstr "       ਅਨੁਸਾਰੀ --remove <ਨਾਉ> <ਰਸਤਾ>\n"
 
 #: ../alternatives.c:54
+#, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --ਸਵੈ <ਨਾੳੁ>\n"
+msgstr "       ਅਨੁਸਾਰੀ --auto <ਨਾਉ>\n"
 
 #: ../alternatives.c:55
+#, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --ਸੰਰਚਨਾ <ਨਾੳੁ>\n"
+msgstr "       ਅਨੁਸਾਰੀ --config <ਨਾਉ>\n"
 
 #: ../alternatives.c:56
+#, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       ਅਨੁਸਾਰੀ --ਵਿਖਾਵਾ <ਨਾੳੁ>\n"
+msgstr "       ਅਨੁਸਾਰੀ --display <ਨਾਉ>\n"
 
 #: ../alternatives.c:57
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       ਅਨੁਸਾਰੀ --ਨਿਰਧਾਰਿਤ ਕਰੋ <ਨਾੳੁ> <ਰਸਤਾ>\n"
+msgstr "       ਅਨੁਸਾਰੀ --set <ਨਾਉ> <ਰਸਤਾ>\n"
 
 #: ../alternatives.c:58
+#, c-format
 msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:59
+#, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "ਅਾਮ ਚੋਣ੾: --ਵਰਬੋਸ --ਜ੾ਚ --ਸਹਾੲਿਤਾ --ੳੁਪਯੋਗਤਾ --ਵਰਜ਼ਨ\n"
+msgstr "ਆਮ ਚੋਂਣ: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
+#, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --ਡਾੲਿਰੈ-ਬਦਲੋ <ਡਾੲਿਰੈਕਟਰੀ> --ਪ੍ਬੰਧਕ-ਡਾੲਿਰੈ <ਡਾੲਿਰੈਕਟਰੀ>\n"
+msgstr "                --altdir <ਡਾਇਰੈਕਟਰੀ> --admindir <ਡਾਇਰੈਕਟਰੀ>\n"
 
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "ਪੜਿਆ ਜਾ ਰਿਹਾ ਹੈ %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -235,7 +255,7 @@ msgstr "%s ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s ਨੂੰ ਪੜ੏ਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਨੂੰ ਪਡ਼ਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
@@ -245,7 +265,7 @@ msgstr "%s ਖਾਲੀ ਹੈ!\n"
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s ਦੀ ਲਾੲੀਨ 1 ੳੁੱਪਰ ਗਲਤ ਰੂਪ\n"
+msgstr "%s ਦੀ ਲਾਈਨ 1 ਉੱਪਰ ਗਲਤ ਰੂਪ\n"
 
 #: ../alternatives.c:195
 #, c-format
@@ -255,80 +275,82 @@ msgstr "%s ਵਿੱਚ ਗਲਤ ਮੁੱਖ ਲਿੰਕ\n"
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "ਰਸਤਾ %s, %s ਵਿੱਚ ਅਾਸ਼ਾਵਿਪਰੀਤ ਹੈ\n"
+msgstr "ਰਸਤਾ %s, %s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਹੈ\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "%s ਸਲੇਵ ਲੲੀ %s ਵਿੱਚ ਰਸਤਾ ਗੁੰਮ ਹੈ\n"
+msgstr "%s ਸਲੇਵ ਲਈ %s ਵਿੱਚ ਰਸਤਾ ਗੁੰਮ ਹੈ\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s ਵਿੱਚ ਫਾੲਿਲ ਦਾ ਅਾਸ਼ਾਵਿਪਰੀਤ ਅੰਤ\n"
+msgstr "%s ਵਿੱਚ ਫਾਇਲ ਦਾ ਆਸ਼ਾਵਿਪਰੀਤ ਅੰਤ\n"
 
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "ਤਬਦੀਲ ਕਰਨ ਲੲੀ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ੳੁਮੀਦ ਹੈ\n"
+msgstr "ਤਬਦੀਲ ਕਰਨ ਲਈ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "ਅੰਕ੾ ਵਾਲੀ ਤਰਜੀਹ %s ਵਿੱਚ ਹੋਣ ਦੀ ੳੁਮੀਦ ਹੈ\n"
+msgstr "ਅੰਕਾਂ ਵਾਲੀ ਤਰਜੀਹ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "ਸਲੇਵ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ੳੁਮੀਦ ਹੈ\n"
+msgstr "ਸਲੇਵ ਰਸਤਾ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s ਵਿੱਚ ਅਾਸ਼ਾਵਿਪਰੀਤ ਲਾੲੀਨ: %s\n"
+msgstr "%s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਲਾਈਨ: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "%s ਨੂੰ ਪੜ੏ਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਸੰਬੰਧ ਨੂੰ ਪੜਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:318
+#, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "ਲਿੰਕ ਕਿਸੇ ਵਿਕਲਪ ਵੱਲ ੲਿਸ਼ਾਰਾ ਨਹੀ ਕਰਦਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
+msgstr "ਲਿੰਕ ਕਿਸੇ ਵਿਕਲਪ ਵੱਲ ਇਸ਼ਾਰਾ ਨਹੀ ਕਰਦਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
 
 #: ../alternatives.c:323
+#, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "ਲਿੰਕ ਤਬਦੀਲ ਹੋ ਗਿਅਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
+msgstr "ਲਿੰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
-msgstr "%s ਨੂੰ ਹਟਾੲੇਗਾ\n"
+msgstr "%s ਨੂੰ ਹਟਾਏਗਾ\n"
 
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "%s ਲਿੰਕ ਨੂੰ ਹਟਾੳੁਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਲਿੰਕ ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "%s -> %s ਲਿੰਕ ਬਣਾੲੇਗਾ\n"
+msgstr "%s -> %s ਲਿੰਕ ਬਣਾਏਗਾ\n"
 
 #: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "%s -> %s ਵਿੱਚ ਲਿੰਕ ਬਣਾੳੁਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s -> %s ਵਿੱਚ ਲਿੰਕ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s ਪਹਿਲ੾ ਹੀ ਮੌਜੂਦ ਹੈ\n"
+msgstr "%s ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ\n"
 
 #: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "%s ਬਣਾੳੁ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਬਣਾਉ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:450
 #, c-format
@@ -338,27 +360,27 @@ msgstr "%s ਨੂੰ %s ਨਾਲ ਵਿਸਥਾਪਿਤ ਕਰਨ ਵਿੱ�
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s ਚੱਲ ਰਿਹਾ ਹੈ\n"
 
 #: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "%s ਲੲੀ ਮੁੱਖ ਲਿੰਕ %s ਹੋਣਾ ਜਰੂਰੀ ਹੈ\n"
+msgstr "%s ਲਈ ਮੁੱਖ ਲਿੰਕ %s ਹੋਣਾ ਜਰੂਰੀ ਹੈ\n"
 
 #: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "ਸਲੇਵ %s (%s %s) ਲੲੀ ਗਲਤ ਲਿੰਕ %s\n"
+msgstr "ਸਲੇਵ %s (%s %s) ਲਈ ਗਲਤ ਲਿੰਕ %s\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - ਦਰਜਾ ਸਵੈ ਹੈ ੤\n"
+msgstr "%s - ਦਰਜਾ ਸਵੈ ਹੈ ।\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - ਦਰਜਾ ਦਸਤਾਵੇਜ਼ੀ ਹੈ ੤\n"
+msgstr "%s - ਦਰਜਾ ਦਸਤਾਵੇਜ਼ੀ ਹੈ ।\n"
 
 #: ../alternatives.c:622
 #, c-format
@@ -378,55 +400,59 @@ msgstr "ਸਲੇਵ %s: %s\n"
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "ਵਰਤਮਾਨ ਵਧੀਅਾ ਵਰਜ਼ਨ %s ਹੈ ੤\n"
+msgstr "ਵਰਤਮਾਨ ਵਧੀਆ ਵਰਜ਼ਨ %s ਹੈ ।\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "ੲਿੱਥੇ %d ਪ੍ੋਗਰਾਮ ਹਨ ਜੋ '%s' ੳੁਪਲੱਬਧ ਕਰਦੇ ਹਨ ੤\n"
+msgstr "ਇੱਥੇ %d ਪ੍ੋਗਰਾਮ ਹਨ ਜੋ '%s' ਉਪਲੱਬਧ ਕਰਦੇ ਹਨ ।\n"
 
 #: ../alternatives.c:665
+#, c-format
 msgid "  Selection    Command\n"
-msgstr "  ਚੋਣ    ਕਮ੾ਡ\n"
+msgstr "  ਚੋਣ    ਕਮਾਂਡ\n"
 
 #: ../alternatives.c:674
+#, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "ਵਰਤਮਾਨ ਚੋਣ[+] ਜਾਰੀ ਰੱਖਣ ਵਿੱਚ ਗਲਤੀ, ਜ੾ ਚੋਣ ਨੰਬਰ ਦਿਓ:"
+msgstr "ਵਰਤਮਾਨ ਚੋਣ[+] ਜਾਰੀ ਰੱਖਣ ਵਿੱਚ ਗਲਤੀ, ਜਾਂ ਚੋਣ ਨੰਬਰ ਦਿਓ:"
 
 #: ../alternatives.c:677
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
 "\n"
-"ਪਸੰਦ ਪੜ੏ਨ ਵਿੱਚ ਗਲਤੀ\n"
+"ਪਸੰਦ ਪੜਨ ਵਿੱਚ ਗਲਤੀ\n"
 
 #: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s ਦੀ %s ਲੲੀ ਵਿਕਲਪ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹੀ ਕੀਤੀ\n"
+msgstr "%s ਦੀ %s ਲਈ ਵਿਕਲਪ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹੀ ਕੀਤੀ\n"
 
 #: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(%s ਨੂੰ ਹਟਾੲੇਗਾ\n"
+msgstr "(%s ਨੂੰ ਹਟਾਏਗਾ\n"
 
 #: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s ਨੂੰ ਹਟਾੳੁਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "ਤਬਦੀਲ-ਡਾੲਿਰੈ %s ਗਲਤ ਹੈ\n"
+msgstr "ਤਬਦੀਲ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 
 #: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "ਪ੍ਬੰਧ-ਡਾੲਿਰੈ %s ਗਲਤ ਹੈ\n"
+msgstr "ਪ੍ਬੰਧ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 
 #: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "ਵਿਕਲਪ ਵਰਜ਼ਨ %s\n"
+msgstr "ਵਿਕਲਪ ਵਰਜ਼ਨ %s\n"
+
