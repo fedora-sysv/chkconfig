@@ -84,9 +84,9 @@ msgid "xinetd based services:\n"
 msgstr "þjónustur úr xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "gat ekki opnað möppuna %s: %s"
+msgstr "gat ekki opnað möppuna %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -412,6 +412,3 @@ msgstr "mappan %s er ógild\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives útgáfa %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "villa við lestur úr möppu %s/init.d: %s"
