@@ -109,7 +109,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Voltar"
+msgstr "Anterior"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
