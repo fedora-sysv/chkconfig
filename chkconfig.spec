@@ -1,25 +1,27 @@
-Summary: Updates and queries runlevel information for system services
+Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
 %define version 1.0
 Version: %{version}
 Release: 2
 Copyright: GPL
-Group: Utilities/System
+Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
 
 %description
-chkconfig provides a simple command-line  tool  for  maintaining  the
-/etc/rc.d  directory  hierarchy by relieving system administrators of
-directly manipulating the  numerous symbolic links in that directory.
+Chkconfig is a basic system utility.  It updates and queries runlevel
+information for system services.  Chkconfig manipulates the numerous
+symbolic links in /etc/rc.d, so system administrators don't have to
+manually edit the symbolic links as often.
 
 %package -n ntsysv
-Summary: Full-screen interface for configurating runlevel information
-Group: Utilities/System
+Summary: A system tool for maintaining the /etc/rc.d hierarchy.
+Group: System Environment/Base
 
 %description -n ntsysv
-ntsysv provides a full-screen tool for updating the /etc/rc.d directory
-hierarchy, which controls the starting and stopping of system services.
+Chkconfig updates and queries runlevel information for system
+services.  Chkconfig relieves system administrators of having to
+directly manipulate the numerous symbolic links in /etc/rc.d.
 
 %prep
 %setup -q
