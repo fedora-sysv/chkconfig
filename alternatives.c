@@ -658,7 +658,7 @@ static int configService(char * title, const char * altDir,
 
     do {
 	printf("\n");
-	printf(_("There are 2 programs which provide '%s'.\n"), set.alts[0].master.title),
+	printf(_("There are %d programs which provide '%s'.\n"), set.numAlts, set.alts[0].master.title),
 	printf("\n");
 	printf(_("  Selection    Command\n"));
 	printf("-----------------------------------------------\n");
@@ -676,8 +676,11 @@ static int configService(char * title, const char * altDir,
 	    return 2;
 	}
 
-	set.current = strtol(choice, &end, 0) - 1;
-    } while (!end || *end != '\n' || (set.current < 0) || (set.current >= i));
+	i = strtol(choice, &end, 0);
+	if ((*end == '\n') && (end != choice)) {
+	  set.current = i - 1;
+	}
+    } while (!end || *end != '\n' || (set.current < 0) || (set.current >= set.numAlts));
 
     set.mode = MANUAL;
     if (writeState(&set, altDir, stateDir, 1, flags)) return 2;
