@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.0
+Version: 1.3.1
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -81,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 - chkconfig/ntsysv (and serviceconf, indirectly): services with
    *no* links in /etc/rc*.d are no longer displayed with --list, or
    available for configuration except via chkconfig command-line options
+- alternatives: fix trying to enable disable a null service
 
 * Tue Mar  5 2002 Bill Nottingham <notting@redhat.com>
 - alternatives: handle things with different numbers of slave links
