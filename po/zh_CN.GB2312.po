@@ -2,160 +2,169 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: chkconfig\n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-03-23 10:42GMT+10:00\n"
+"Last-Translator: Sarah Smith <sarahs@redhat.com>\n"
+"Language-Team: Simplified Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=GBK\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "在 GNU 公共许可的条件下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "用法：    %s --list [name]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "        %s [--level <levels>] <name> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid "service %s does not support chkconfig\n"
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
 msgstr ""
+"%s 服务支持 chkconfig，但它还没有登记（运行 'chkconfig --add %"
+"s'）\n"
 
 #: ../chkconfig.c:37
 #, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "%s 服务不支持 chkconfig\n"
+
+#: ../chkconfig.c:39
+#, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "在 %s 服务中读取信息时出错： %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr ""
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr ""
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "不能打开 %s/init.d： %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "开"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "关"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "从 %s/init.d 目录中读取时出错： %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "基于 xinetd 的服务： \n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr ""
+msgstr "不能打开目录 %s： %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s 版本 %s \n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "--list, --add, or --del 只需指定其中之一\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "chkconfig 查询只能指定一个运行级别\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "按 <F1> 可获取关于某项服务的详情。"
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr ""
+msgstr "确定"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "你想自动启动哪些服务？"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr ""
+msgstr "服务"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "从 %s 服务中读取信息时出错： %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "从 %s/init.d 目录中读取时出错： %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "从 %s 目录中读取时出错： %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "你必须是根用户才能运行 %s。\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "--levels 参数不对\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsysv 不能管理任何服务！\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "glob 图案 %s 失败： %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "无法判定目前的运行级别\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "制作 syslink %s 失败： %s\n"
+
