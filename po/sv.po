@@ -1,13 +1,13 @@
 # Swedish messages for chkconfig.
-# Copyright (C) 2001 Christian Rose <menthos@menthos.com>
+# Copyright (C) 2001, 2002 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.18 2001/08/15 10:42:38 menthos Exp $
+# $Id: sv.po,v 1.19 2002/03/09 00:45:49 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-06-12 11:42-0400\n"
-"PO-Revision-Date: 2001-08-15 12:41+0100\n"
+"POT-Creation-Date: 2002-03-08 02:01-0500\n"
+"PO-Revision-Date: 2002-03-09 01:44+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,51 +47,60 @@ msgstr "              %s [--level <nivåer>] <namn> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
+msgstr ""
+"tjänsten %s stöder chkconfig men är inte registrerad (kör \"chkconfig "
+"--add %s\")\n"
+
+#: ../chkconfig.c:37
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "tjänsten %s stöder inte chkconfig\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "on"
 msgstr "på"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
+#: ../chkconfig.c:115 ../chkconfig.c:120 ../chkconfig.c:217
 msgid "off"
 msgstr "av"
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:152
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "misslyckades med att öppna %s/init.d: %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:186
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "fel vid läsning från katalogen %s/init.d: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:194
 msgid "xinetd based services:\n"
 msgstr "xinetd-baserade tjänster:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:196
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "misslyckades med att öppna katalogen %s: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:299
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:306
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "endast en av --list, --add eller --del kan anges\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:354
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
@@ -119,31 +128,31 @@ msgstr "Vilka tjänster ska startas automatiskt?"
 msgid "Services"
 msgstr "Tjänster"
 
-#: ../ntsysv.c:174 ../ntsysv.c:218
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
 
-#: ../ntsysv.c:227
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "fel vid läsning från katalogen %s: %s\n"
 
-#: ../ntsysv.c:263
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Du måste vara root för att kunna köra %s.\n"
 
-#: ../ntsysv.c:280
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
 msgstr "felaktigt argument till --levels\n"
 
-#: ../ntsysv.c:287
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
