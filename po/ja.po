@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-12-06 14:42-0500\n"
+"POT-Creation-Date: 2000-06-30 14:42-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,120 +18,123 @@ msgstr ""
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"このソフトウェアは、GNU 国際ライセンスの条項に従って無償で再配布することが"
+"できます。\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "使用法:%s --list [name]\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <名前>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <名前>\n"
 
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr ""
+msgstr "         %s [--level <レベル>] <名前> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "サービス %s は、chkconfig をサポートしていません\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
 
 #: ../chkconfig.c:100
 msgid "on"
-msgstr ""
+msgstr "オン"
 
 #: ../chkconfig.c:100
 msgid "off"
-msgstr ""
+msgstr "オフ"
 
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d を開くことができませんでした: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"
 
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s バージョン %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "指定できるのは、--list、--add、--del の中から1つだけです\n"
 
 #: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "chkconfig クエリに対して指定できるランレベルは1つだけです\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "サービスに関する詳細については、<F1> を押してください。"
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "自動的に起動させるサービスを指定してください。"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "サービス"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "--level の引数が不適当です\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsysv によって管理できるサービスがありません\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "パターン %s の解析に失敗しました: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "現在のランレベルを識別できません\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "シンボリックリンク %s をつくるのに失敗しました。 %s\n"
+
