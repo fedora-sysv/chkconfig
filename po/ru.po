@@ -19,24 +19,24 @@ msgid ""
 msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "применение:   chkconfig --list [имя сервиса]\n"
+msgstr "применение:   %s --list [имя сервиса]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <имя сервиса>\n"
+msgstr "         %s --add <имя сервиса>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <имя сервиса>\n"
+msgstr "         %s --del <имя сервиса>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <уровни>] <имя сервиса> <on|off|reset>\n"
+msgstr "         %s [--level <уровни>] <имя сервиса> %s\n"
 
 #: ../chkconfig.c:36
 #, c-format
