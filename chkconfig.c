@@ -348,10 +348,12 @@ int setService(char * name, int where, int state) {
 		      what = 1;
 		    else
 		      what = 0;
-		    doSetService(s, i, what);
+		    return doSetService(s, i, what);
 	    }
     } else if (s.type == TYPE_XINETD) {
-	    setXinetdService(s, state);
+	    if (setXinetdService(s, state)) {
+		    return 1;
+	    }
 	    system("/etc/init.d/xinetd reload >/dev/null 2>&1");
     }
 

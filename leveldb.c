@@ -578,6 +578,8 @@ int setXinetdService(struct service s, int on) {
 	}
 	snprintf(oldfname,100,"%s/%s",XINETDDIR,s.name);
 	if ( (oldfd = open(oldfname,O_RDONLY)) == -1 ) {
+		fprintf(stderr, _("error reading info for service %s: %s\n"), s.name,
+			strerror(errno));
 		return -1;
 	}
 	fstat(oldfd,&sb);
@@ -585,6 +587,8 @@ int setXinetdService(struct service s, int on) {
 	if (read(oldfd,buf,sb.st_size)!=sb.st_size) {
 		close(oldfd);
 		free(buf);
+		fprintf(stderr, _("error reading info for service %s: %s\n"), s.name,
+			strerror(errno));
 		return -1;
 	}
 	close(oldfd);
@@ -593,6 +597,8 @@ int setXinetdService(struct service s, int on) {
 	newfd = mkstemp(newfname);
 	if (newfd == -1) {
 		free(buf);
+		fprintf(stderr, "failed to open " XINETDDIR "/%s: %s\n", s.name,
+			strerror(errno));
 		return -1;
 	}
 	while (buf) {
