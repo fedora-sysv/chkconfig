@@ -1,7 +1,7 @@
 # [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.10
+Version: 1.3.11
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Jun  4 2004 Bill Nottingham <notting@redhat.com> 1.3.11-1
+- fix LSB comment parsing (#85678)
+
 * Wed May 29 2004 Bill Nottingham <notting@redhat.com> 1.3.10-1
 - mark alternatives help output for translation (#110526)
 
