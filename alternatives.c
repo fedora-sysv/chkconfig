@@ -26,6 +26,7 @@ struct alternative {
     int priority;
     struct linkSet master;
     struct linkSet * slaves;
+    char *initscript;
     int numSlaves;
 };
 
@@ -45,6 +46,7 @@ static int usage(int rc) {
     printf(_("alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"), VERSION);
     printf(_("This may be freely redistributed under the terms of the GNU Public License.\n\n"));
     printf(_("usage: alternatives --install <link> <name> <path> <priority>\n"));
+    printf(_("                    [--initscript <service>]\n"));
     printf(_("                    [--slave <link> <name> <path>]*\n"));
     printf(_("       alternatives --remove <name> <path>\n"));
     printf(_("       alternatives --auto <name>\n"));
@@ -244,10 +246,21 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	    set->alts[set->numAlts].slaves = NULL;
 
 	line = parseLine(&buf);
+	set->alts[set->numAlts].priority = -1;
 	set->alts[set->numAlts].priority = strtol(line, &end, 0);
-	if (!end || *end) {
+	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
 	    return 1;
+	}
+	if (end) {
+		char tmppath[500];
+		struct stat sbuf;
+		
+		while (*end && isspace(*end)) end++;
+		snprintf(tmppath, 500, "/etc/init.d/%s", end);
+		if (!stat(tmppath, &sbuf)) {
+			set->alts[set->numAlts].initscript = strdup(end);
+		}
 	}
 
 	if (set->alts[set->numAlts].priority > set->alts[set->best].priority)
@@ -413,7 +426,10 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     for (i = 0; i < set->numAlts; i++) {
 	fprintf(f, "%s\n", set->alts[i].master.target);
-	fprintf(f, "%d\n", set->alts[i].priority);
+	if (set->alts[i].initscript)
+		    fprintf(f, "%d %s\n", set->alts[i].priority, set->alts[i].initscript);
+	else
+		    fprintf(f, "%d\n", set->alts[i].priority);
 
 	for (j = 0; j < set->alts[i].numSlaves; j++) {
 		if (set->alts[i].slaves[j].target)
@@ -431,6 +447,8 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 	return 1;
     }
 
+    if (set->mode == AUTO)
+		set->current = set->best;
 
     if (forceLinks || set->mode == AUTO) {
 	struct alternative * alt = set->alts + ( set->current > 0 ? set->current : 0);
@@ -441,6 +459,25 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 			rc |= makeLinks(alt->slaves + i, altDir, flags);
 		else
 			rc |= removeLinks(alt->slaves + i, altDir, flags);
+	}
+	if (!FL_TEST(flags)) {
+		if (alt->initscript) {
+			path = alloca(strlen("/sbin/chkconfig --add ") + strlen(alt->initscript) + 1);
+			sprintf(path, "/sbin/chkconfig --add %s", alt->initscript);
+			if (FL_VERBOSE(flags))
+				printf("running %s\n", path);
+			system(path);
+		}
+		for (i = 0; i < set->numAlts ; i++) {
+			struct alternative * tmpalt = set->alts + i;
+			if (tmpalt != alt && tmpalt->initscript) {
+				path = alloca(strlen("/sbin/chkconfig --del ") + strlen(tmpalt->initscript) + 1);
+				sprintf(path, "/sbin/chkconfig --del %s", tmpalt->initscript);
+				if (FL_VERBOSE(flags))
+					printf("running %s\n", path);
+				system(path);
+			}
+		}
 	}
     }
 
@@ -736,7 +773,7 @@ int main(int argc, const char ** argv) {
     char * end;
     char * title, * target;
     enum programModes mode = MODE_UNKNOWN;
-    struct alternative newAlt = { -1, { NULL, NULL, NULL }, NULL, 0 };
+    struct alternative newAlt = { -1, { NULL, NULL, NULL }, NULL, NULL, 0 };
     int flags = 0;
     char * altDir = "/etc/alternatives";
     char * stateDir = "/var/lib/alternatives";
@@ -767,6 +804,13 @@ int main(int argc, const char ** argv) {
 			     sizeof(*newAlt.slaves) * (newAlt.numSlaves + 1));
 	    setupLinkSet(newAlt.slaves + newAlt.numSlaves, &nextArg);
 	    newAlt.numSlaves++;
+	} else if (!strcmp(*nextArg, "--initscript")) {
+	    if (mode != MODE_UNKNOWN && mode != MODE_INSTALL) usage(2);
+	    nextArg++;
+	    
+	    if (!*nextArg) usage(2);
+	    newAlt.initscript = strdup(*nextArg);
+	    nextArg++;
 	} else if (!strcmp(*nextArg, "--remove")) {
 	    setupDoubleArg(&mode, &nextArg, MODE_REMOVE, &title, &target);
 	} else if (!strcmp(*nextArg, "--set")) {

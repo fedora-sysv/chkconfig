@@ -15,6 +15,8 @@ alternatives \- maintain symbolic links determining default commands
 .RB [ --slave
 .I link name
 .IR path ]...
+.RB [ --initscript
+.IR service ]
 .PP
 .B alternatives
 .RI [ options ]
@@ -254,7 +256,7 @@ different from the default.
 .\" The names of the arguments should be identical with the ones
 .\" in SYNOPSIS section.
 .TP
-\fB--install\fR \fIlink gen path pri\fR [\fB--slave\fR \fIslink sgen spath\fR] ...
+\fB--install\fR \fIlink gen path pri\fR [\fB--slave\fR \fIslink sgen spath\fR] [\fB--initscript\fR \fIservice\fR]...
 Add a group of alternatives to the system.
 .I gen
 is the generic name for the master link,
@@ -267,7 +269,12 @@ is the alternative being introduced for the master link.
 and
 .I spath
 are the generic name, symlink name and alternative
-for a slave link.
+for a slave link, and
+.I service
+is the name of any associated initscript for the alternative.
+.B NOTE:
+.B --initscript
+is a Red Hat Linux specific option.
 Zero or more
 .B --slave
 options, each followed by three arguments,
@@ -283,6 +290,18 @@ If the group is in automatic mode,
 and the newly added alternatives' priority is higher than
 any other installed alternatives for this group,
 the symlinks will be updated to point to the newly added alternatives.
+
+If
+.B --initscript
+is used, the alternatives system will manage the initscript
+associated with the alternative via
+.B chkconfig,
+registering and unregistering the init script depending on
+which alternative is active.
+
+.B NOTE:
+.B --initscript
+is a Red Hat Linux specific option.
 .TP
 \fB--remove\fR \fIname path\fR
 Remove an alternative and all of its associated slave links.

@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.31
+Version: 1.3.0
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -76,6 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Fri Mar  8 2002 Bill Nottingham <notting@redhat.com>
+- alternatives: handle initscripts too; --initscript command-line option
+- chkconfig/ntsysv (and serviceconf, indirectly): services with
+   *no* links in /etc/rc*.d are no longer displayed with --list, or
+   available for configuration except via chkconfig command-line options
+
 * Tue Mar  5 2002 Bill Nottingham <notting@redhat.com>
 - alternatives: handle things with different numbers of slave links
 
