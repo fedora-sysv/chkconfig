@@ -114,7 +114,7 @@ msgstr "Tidak ada layanan yang dapat diatur oleh ntsysv!\n"
 # , c-format
 #: ../leveldb.c:256
 msgid "failed to glob pattern %s: %s\n"
-msgstr "gagal untuk mengglob pola %s\n"
+msgstr "gagal untuk mengglob pola %s: %s\n"
 
 #: ../leveldb.c:287
 msgid "cannot determine current run level\n"
