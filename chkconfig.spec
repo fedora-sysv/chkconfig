@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.0.9
+%define version 1.1.0
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
-/usr/man/man8/chkconfig.8
+/usr/man/man8/chkconfig.8*
 %dir /etc/rc.d
 %dir /etc/rc.d/*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
@@ -59,9 +59,12 @@ rm -rf $RPM_BUILD_ROOT
 %files -n ntsysv
 %defattr(-,root,root)
 /usr/sbin/ntsysv
-/usr/man/man8/ntsysv.8
+/usr/man/man8/ntsysv.8*
 
 %changelog
+* Wed Feb 02 2000 Cristian Gafton <gafton@redhat.com>
+- fix description
+
 * Wed Jan 12 2000 Bill Nottingham <notting@redhat.com>
 - link chkconfig statically against popt
 
