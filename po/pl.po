@@ -97,7 +97,7 @@ msgstr "usługi uruchamiane przez xinetd:\n"
 #: ../chkconfig.c:287
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "nie powiodło się otwarcie katalogu %s: %s\n"
+msgstr "nie powiodło się otwarcie folderu %s: %s\n"
 
 #: ../chkconfig.c:402
 #, c-format
@@ -112,7 +112,7 @@ msgstr "tylko jedna z opcji --list, --add lub --del może być podana\n"
 #: ../chkconfig.c:461
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "tylko jeden runlevel może być podany dla zapytania chkconfig\n"
+msgstr "tylko jeden poziom uruchamiania może być podany dla zapytania chkconfig\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -120,7 +120,7 @@ msgstr "Naciśnij <F1> aby dowiedzieć się więcej o usłudze."
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../ntsysv.c:68
 msgid "Back"
@@ -141,7 +141,7 @@ msgstr "Usługi"
 #: ../ntsysv.c:240
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "błąd podczas czytania z katalogu %s: %s\n"
+msgstr "błąd podczas czytania z folderu %s: %s\n"
 
 #: ../ntsysv.c:276
 #, c-format
@@ -166,7 +166,7 @@ msgstr "nie można dopasować do wzoru %s: %s\n"
 #: ../leveldb.c:548
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "nie można ustalić aktualnego run level'u\n"
+msgstr "nie można ustalić aktualnego poziomu uruchamiania\n"
 
 #: ../leveldb.c:636
 #, c-format
@@ -240,22 +240,22 @@ msgstr "inne opcje: --verbose --test --help --usage --version\n"
 #: ../alternatives.c:61
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <katalog> --admindir <katalog>\n"
+msgstr "                --altdir <katalog> --admindir <folder>\n"
 
 #: ../alternatives.c:158
 #, c-format
 msgid "reading %s\n"
-msgstr "czytam %s\n"
+msgstr "czytanie %s\n"
 
 #: ../alternatives.c:162
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "nie mogę otworzyć %s: %s\n"
+msgstr "nie można otworzyć %s: %s\n"
 
 #: ../alternatives.c:171
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "nie mogę odczytać %s: %s\n"
+msgstr "nie można odczytać %s: %s\n"
 
 #: ../alternatives.c:180
 #, c-format
@@ -290,7 +290,7 @@ msgstr "nieoczekiwany koniec pliku w %s\n"
 #: ../alternatives.c:236
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "oczekiwana ścieżka do alternate w %s\n"
+msgstr "oczekiwana ścieżka do alternatywy w %s\n"
 
 #: ../alternatives.c:256
 #, c-format
@@ -310,17 +310,17 @@ msgstr "nieoczekiwana linia w %s: %s\n"
 #: ../alternatives.c:305
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "nie mogę odczytać łącza %s: %s\n"
+msgstr "nie można odczytać dowiązania %s: %s\n"
 
 #: ../alternatives.c:319
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "odnośnik nie wskazuje na alternatywę -- ustawiam tryb na ręczny\n"
+msgstr "dowiązanie nie wskazuje na alternatywę -- ustawianie trybu na ręczny\n"
 
 #: ../alternatives.c:324
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "odnośnik się zmienił -- ustawiam tryb na ręczny\n"
+msgstr "dowiązanie się zmieniło -- ustawianie trybu na ręczny\n"
 
 #: ../alternatives.c:340 ../alternatives.c:347
 #, c-format
@@ -330,7 +330,7 @@ msgstr "usunie %s\n"
 #: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "nie udało się usunąć odnośnika %s: %s\n"
+msgstr "nie udało się usunąć dowiązania %s: %s\n"
 
 #: ../alternatives.c:365 ../alternatives.c:377
 #, c-format
