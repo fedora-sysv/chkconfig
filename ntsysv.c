@@ -12,7 +12,7 @@
 
 #include "leveldb.h"
 
-/* return 2 on cancel, 1 on error, 0 on success */
+/* return 1 on cancel, 2 on error, 0 on success */
 static int servicesWindow(struct service * services, int numServices,
 			  int levels) {
     newtComponent label, subform, ok, cancel;
@@ -80,7 +80,7 @@ static int servicesWindow(struct service * services, int numServices,
     newtPopWindow();
     newtFormDestroy(form);
     
-    if (!update) return 2;
+    if (!update) return 1;
 
     for (i = 0; i < numServices; i++) {
 	for (j = 0; j < 7; j++) {
@@ -107,7 +107,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr) {
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 	fprintf(stderr, "failed to open " RUNLEVELS "/init.d: %s\n",
 		strerror(errno));
-        return 1;
+        return 2;
     }
 
     errno = 0;
@@ -130,7 +130,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr) {
 	    fprintf(stderr, "error reading info for service %s: %s\n",
 			ent->d_name, strerror(errno));
 	    closedir(dir);
-	    return 1;
+	    return 2;
 	} else if (!rc)
 	    numServices++;
     }
@@ -174,14 +174,14 @@ int main(int argc, char ** argv) {
 	levels = parseLevels(levelsStr, 0);
 	if (levels == -1) {
 	    fprintf(stderr, "bad argument to --levels\n");
-	    exit(1);
+	    exit(2);
 	}
     }
 
     if (getServices(&services, &numServices)) return 1;
     if (!numServices) {
 	fprintf(stderr, "No services may be managed by ntsysv!\n");
-	return 1;
+	return 2;
     }
 
     newtInit();
