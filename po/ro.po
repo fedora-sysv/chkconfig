@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.43 2000/08/16 18:04:43 i18n Exp $
+# $Id: ro.po,v 1.44 2000/08/20 01:58:32 gafton Exp $
 #
 msgid ""
 msgstr ""
@@ -35,7 +35,7 @@ msgstr "         %s --del <name>\n"
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <levels>] <name> <on|off|reset>\n"
+msgstr "         %s [--level <levels>] <name> %s>\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -67,12 +67,12 @@ msgstr "eroare la citirea din directorul %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "servicii controlate de xinetd:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
+msgstr "eroare la deschiderea %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -123,9 +123,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "eroare la citirea din directorul %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "eroare la citirea din directorul %s/init.d: %s\n"
+msgstr "eroare la citirea din directorul %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
