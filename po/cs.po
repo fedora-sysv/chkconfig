@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-02-18 22:17+0100\n"
+"POT-Creation-Date: 2001-03-05 00:42-0500\n"
+"PO-Revision-Date: 2001-04-02 02:48+0100\n"
 "Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,7 @@ msgstr "Které slu¾by mají být automaticky startovány?"
 msgid "Services"
 msgstr "Slu¾by"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
@@ -124,21 +124,21 @@ msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "chyba pøi ètení z adresáøe %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Musíte být root, abyste mohl spustit %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "chybný argument volby --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemù¾e spravovat ¾ádné slu¾by!\n"
 
