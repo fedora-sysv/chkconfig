@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.8
+Version: 1.2.9
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -68,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sun Jul 23 2000 Bill Nottingham <notting@redhat.com>
+- fix ntsysv's handling of xinetd/init files with the same name
+
 * Fri Jul 21 2000 Bill Nottingham <notting@redhat.com>
 - fix segv when reading malformed files
 

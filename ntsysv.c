@@ -211,7 +211,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 				numServicesAlloced * sizeof(*services));
 	}
 
-	rc = readServiceInfo(ent->d_name, services + numServices, honorHide);
+	rc = readXinetdServiceInfo(ent->d_name, services + numServices, honorHide);
 	
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
