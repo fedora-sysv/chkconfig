@@ -1,12 +1,11 @@
 # translation of ko.po to Korean
-# Michelle Kim <mkim@redhat.com>, 2002
 # Michelle J Kim <mkim@redhat.com>, 2003,2004
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-20 10:38+1000\n"
+"PO-Revision-Date: 2004-06-24 09:14+1000\n"
 "Last-Translator: Michelle J Kim <mkim@redhat.com>\n"
 "Language-Team:  <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -21,10 +20,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -42,9 +39,9 @@ msgid "         %s --del <name>\n"
 msgstr "          %s --del <이름>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "          %s [--level <레벨>] <이름> %s)\n"
+msgstr "         %s [--level <레벨>] <이름> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -300,8 +297,7 @@ msgstr "%s 링크를 읽기에 실패했습니다: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
+msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
 
 #: ../alternatives.c:323
 msgid "link changed -- setting mode to manual\n"
@@ -442,3 +438,4 @@ msgstr "대체 버전 %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"
+
