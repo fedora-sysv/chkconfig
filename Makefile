@@ -37,5 +37,5 @@ archive:
 	@rm -rf /tmp/chkconfig-$(VERSION)
 	@cd /tmp; cvs export -r$(CVSTAG) -d /tmp/chkconfig-$(VERSION) chkconfig
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/chkconfig-$(VERSION).tar.gz chkconfig-$(VERSION)
-	rm -rf /tmp/chkconfig-$(VERSION)
-	echo "The archive is in chkconfig-$(VERSION)"
+	@rm -rf /tmp/chkconfig-$(VERSION)
+	@echo "The archive is in chkconfig-$(VERSION)"
