@@ -417,6 +417,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
 	for (j = 0; j < set->alts[i].numSlaves; j++)
 	    fprintf(f, "%s\n", set->alts[i].slaves[j].target);
+	fprintf(f, "\n");
     }
     
     fclose(f);
@@ -456,6 +457,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 	    return 2;
 	}
 
+	/* FIXME: This actually isn't a bug, according to the original implementation. */
 	if (set.alts[0].numSlaves != newAlt.numSlaves) {
 	    fprintf(stderr, "%s requires %d slave links\n", newAlt.master.title,
 		    set.alts[0].numSlaves);
@@ -483,7 +485,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 		newLinks[j] = newAlt.slaves[i];
 	    } else {
 		fprintf(stderr, 
-		    _("slave %s not configured for other alternatives\n"),
+		    _("warning: slave %s not configured for other alternatives\n"),
 		    newAlt.slaves[i].title);
 		return 2;
 	    }
@@ -508,6 +510,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 static int displayService(char * title, const char * altDir,
 		          const char * stateDir, int flags) {
     struct alternativeSet set;
+	
     int alt;
     int slave;
 
