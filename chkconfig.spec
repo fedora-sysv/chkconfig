@@ -2,7 +2,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.3.8
-Release: 1
+Release: 2
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -75,6 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu May 8 2003 Dan Walsh <dwalsh@redhat.com> 1.3.8-2
+- Fix readXinetdServiceInfo to return error on not regular files
+- Fix chkconfig to not write messages if readXinetdServiceInfo gets an error
+
 * Fri Jan 31 2003 Bill Nottingham <notting@redhat.com> 1.3.8-1
 - fix some wording in alternatives (#76213)
 - actually mark alternatives for translation

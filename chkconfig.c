@@ -309,8 +309,9 @@ static int listService(char * item) {
 		    if (*dn == '~' || *dn == ',')
 		      continue;
 	    
-		    readXinetdServiceInfo(ent->d_name, &s, 0);
-		    printf("\t%s:\t%s\n", s.name, s.levels ? _("on") : _("off"));
+		    if (readXinetdServiceInfo(ent->d_name, &s, 0) == 0){
+		       printf("\t%s:\t%s\n", s.name, s.levels ? _("on") : _("off"));
+		    }
 	    }
 	    closedir(dir);
     }

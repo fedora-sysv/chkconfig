@@ -158,6 +158,7 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	
 	if ((fd = open(filename, O_RDONLY)) < 0) return -1;
 	fstat(fd,&sb);
+	if (! S_ISREG(sb.st_mode)) return -1;
 	buf = malloc(sb.st_size+1);
 	if (read(fd,buf,sb.st_size)!=sb.st_size) {
 		close(fd);
