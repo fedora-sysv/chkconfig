@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.6\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-09-12 21:47+0900\n"
+"PO-Revision-Date: 1999-09-13 16:17+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarang.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "%s/init.d 디렉토리를 읽는 중 오류: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s 버젼 %s\n"
+msgstr "%s 버젼 %s\bn"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -77,7 +77,7 @@ msgstr "--list, --add, --del 중에 하나만을 사용해야 함\n"
 
 #: ../chkconfig.c:285
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "chkconfig 질의에서는 하나의 런레벨만 지정할 수 있음\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -124,7 +124,7 @@ msgstr "ntsysv로 관리할 수 있는 서비스가 없는 것 같군요!\n"
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "glob 패턴 %s에 실패함: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
