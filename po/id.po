@@ -38,7 +38,7 @@ msgstr "           %s --del <name>\n"
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "          %s [--level <levels>] <name> <on|off|reset>\n"
+msgstr "          %s [--level <levels>] <name> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
