@@ -256,6 +256,7 @@ int main(int argc, char ** argv) {
 	    { "del", '\0', 0, &delItem, 0 },
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
+	    { "levels", '\0', POPT_ARG_STRING, &levels, 0 },
 	    { "help", 'h', POPT_ARG_NONE, &help, 0 },
 	    { "version", 'v', POPT_ARG_NONE, &version, 0 },
 	    { 0, 0, 0, 0, 0 } 
