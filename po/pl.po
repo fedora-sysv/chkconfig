@@ -240,7 +240,7 @@ msgstr "inne opcje: --verbose --test --help --usage --version\n"
 #: ../alternatives.c:61
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <katalog> --admindir <folder>\n"
+msgstr "                --altdir <folder> --admindir <folder>\n"
 
 #: ../alternatives.c:158
 #, c-format
