@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
 "POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-01-24 13:03-0500\n"
+"PO-Revision-Date: 2001-03-22 15:54+0900\n"
 "Last-Translator: Adrian Havill <havill@redhat.com>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -162,7 +162,7 @@ msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました： %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "%sを実行する為にルートでなければなりません。\n"
 
 # ../ntsysv.c:270
 #: ../ntsysv.c:278
