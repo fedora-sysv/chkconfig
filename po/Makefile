@@ -70,4 +70,4 @@ install:
 	done
 
 %.mo: %.po
-	msgfmt -v -o $@ $<
+	msgfmt -o $@ $<

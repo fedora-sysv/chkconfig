@@ -241,6 +241,7 @@ int main(int argc, char ** argv) {
     int numServices;
     int levels = -1;
     char * levelsStr = NULL;
+    char *progName;
     poptContext optCon;
     int rc, backButton = 0, hide = 0;
     struct poptOption optionsTable[] = {
@@ -254,7 +255,14 @@ int main(int argc, char ** argv) {
     bindtextdomain("chkconfig", "/usr/share/locale"); 
     textdomain("chkconfig"); 
 
-    optCon = poptGetContext("ntsysv", argc, argv, optionsTable, 0);
+    progName = argv[0];
+
+    if (getuid() != 0) {
+	fprintf(stderr, _("You must be root to run %s.\n"),progName);
+	exit(1);
+    }
+    
+    optCon = poptGetContext(progName, argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
 
     if ((rc = poptGetNextOpt(optCon)) < -1) {
@@ -282,8 +290,8 @@ int main(int argc, char ** argv) {
     newtCls();
 
     newtPushHelpLine(NULL);
-    newtDrawRootText(0, 0, "ntsysv " VERSION " - (C) 2000 Red Hat "
-			"Software");
+    newtDrawRootText(0, 0,
+		     "ntsysv " VERSION " - (C) 2000-2001 Red Hat, Inc. ");
    
     if (levels==-1) 
      levels=(1<<currentRunlevel());
