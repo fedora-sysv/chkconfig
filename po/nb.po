@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
+"POT-Creation-Date: 2002-03-06 22:12+0100\n"
 "PO-Revision-Date: 2001-02-28 13:19+01:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
@@ -78,16 +78,16 @@ msgstr "xinetd baserte tjenester:\n"
 msgid "failed to open directory %s: %s"
 msgstr "klarte ikke å åpne katalog %s: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versjon %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "du kan bare bruke ett av flaggene --list, --add og --del\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:340
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "du kan bare spesifisere ett kjøringsnivå for en chkconfig spørring\n"
 
@@ -115,7 +115,7 @@ msgstr "Hvilke tjenester skal startes automatisk?"
 msgid "Services"
 msgstr "Tjenester"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "feil under lesing av informasjon for tjeneste %s: %s\n"
@@ -125,34 +125,34 @@ msgstr "feil under lesing av informasjon for tjeneste %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "feil under lesing fra katalog %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "feil under lesing fra katalog %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Du må være root for å kjøre %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "galt argument til --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "klarte ikke å finne treff til mønsteret %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
 msgstr "klarer ikke å bestemme nåværende runlevel\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "klarte ikke å lage symlinken %s: %s\n"
