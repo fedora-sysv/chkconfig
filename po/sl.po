@@ -1,13 +1,8 @@
-# SLOVENIAN TRANSLATION OF CHKCONFIG.
-# Copyright (C) 1999 Free Software Foundation, Inc.
-# Roman Maurer <roman.maurer@hermes.si>, 1999.
-# $Id: sl.po,v 1.6 2000/08/16 18:04:43 i18n Exp $
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: chkconfig 7.0\n"
 "POT-Creation-Date: 2000-08-15 15:39-0400\n"
-"PO-Revision-Date: 1999-09-18 18:20+0200\n"
+"PO-Revision-Date: 2000-09-05 22:50+0200\n"
 "Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,12 +64,12 @@ msgstr "napaka pri branju iz imenika %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "Storitve, osnovane z xinetd:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "ne morem odpreti %s/init.d: %s\n"
+msgstr "ni moè odpreti imenika %s: %s"
 
 #: ../chkconfig.c:285
 #, c-format
@@ -124,9 +119,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
+msgstr "napaka pri branju iz imenika %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
@@ -148,4 +143,4 @@ msgstr "ne morem ugotoviti trenutne ravni teka\n"
 #: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "ni mi uspelo narediti simbolne povezave %s: %s\n"
+msgstr "ni moè narediti simbolne povezave %s: %s\n"
