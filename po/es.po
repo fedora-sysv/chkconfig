@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2000-08-15 15:39-0400\n"
+"POT-Creation-Date: 2000-06-30 14:51-0400\n"
 "PO-Revision-Date: 2000-03-09 10:15+1\n"
 "Last-Translator: Tullio Dovera <tdovera@redhat.it>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -50,43 +50,34 @@ msgstr "el servicio %s no soporta chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "error al leer la información del servicio %s: %s\n"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:100
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
+#: ../chkconfig.c:100
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:139
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "error al abrir %s/init.d: %s\n"
 
-#: ../chkconfig.c:173
+#: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "error al leer en el directorio %s/init.d: %s"
 
-#: ../chkconfig.c:181
-msgid "xinetd based services:\n"
-msgstr ""
-
-#: ../chkconfig.c:183
-#, fuzzy, c-format
-msgid "failed to open directory %s: %s"
-msgstr "error al abrir %s/init.d: %s\n"
-
-#: ../chkconfig.c:285
+#: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versión %s\n"
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "sólo uno de --list, --add, o --del puede ser especificado\n"
 
-#: ../chkconfig.c:340
+#: ../chkconfig.c:286
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 "sólo un nivel de ejecución puede ser especificado para\n"
@@ -96,59 +87,54 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr "Pulse <F1> para más información sobre el servicio."
 
-#: ../ntsysv.c:62 ../ntsysv.c:99
+#: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
 msgstr "Ok"
 
-#: ../ntsysv.c:62
+#: ../ntsysv.c:56
 msgid "Back"
 msgstr "Atrás"
 
-#: ../ntsysv.c:62
+#: ../ntsysv.c:56
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../ntsysv.c:74
+#: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "¿Qué servicios deben ser ejecutados automáticamente?"
 
-#: ../ntsysv.c:80
+#: ../ntsysv.c:74
 msgid "Services"
 msgstr "Servicios"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "error al leer información para el servicio %s: %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
-#, fuzzy, c-format
-msgid "error reading from directory %s: %s\n"
-msgstr "error al leer en el directorio %s/init.d: %s\n"
-
-#: ../ntsysv.c:270
+#: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
 msgstr "mal argumento para --levels\n"
 
-#: ../ntsysv.c:277
+#: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
 msgstr "¡Ningún servicio puede ser manejado por ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "error al expandir el patrón %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:296
 msgid "cannot determine current run level\n"
 msgstr "No se puede determinar el nivel de ejecución actual\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "no se pudo crear el enlace simbólico %s: %s\n"
