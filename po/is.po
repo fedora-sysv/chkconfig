@@ -1,127 +1,128 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Richard Allen <ra@hp.is>, 1999.
+#
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: chkconfig 6.0\n"
 "POT-Creation-Date: 1999-04-08 14:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1999-02-25 23:15+0000\n"
+"Last-Translator: Richard Allen <ra@hp.is>\n"
+"Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: ISO-8859-1\n"
 
 #: ../chkconfig.c:21
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "notkun:   chkconfig --list [nafn]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "         chkconfig --add <nafn>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "         chkconfig --del <nafn>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "         chkconfig [--level <stig>] <nafn> <on|off|reset>\n"
 
 #: ../chkconfig.c:34
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "þjónusta %s styður ekki chkconfig\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
-msgstr ""
+msgstr "á"
 
 #: ../chkconfig.c:98
 msgid "off"
-msgstr ""
+msgstr "af"
 
 #: ../chkconfig.c:115
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "gat ekki opnað %s/init.d: %s\n"
 
 #: ../chkconfig.c:138
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "villa við lestur úr möppu %s/init.d: %s"
 
 #: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "einungis má nefna eitt af --list, --add, eða --del viðföngunum\n"
 
 #: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Sláið á <F1> fyrir frekari upplýsingar um þjónustu."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Í lagi"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Til baka"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Hætta við"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Hvaða þjónustur viltu ræsa sjálfvirkt?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Þjónustur"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "villa við lestur úr möppu %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "ólöglegt viðfang við --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Þjónustum er ekki hægt að stjórna með ntsysv!\n"
 
 #: ../leveldb.c:265
-#, c-format
+#, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "gat ekki mátað mynstrið %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "get ekki ákvarðað núverandi keyrslustig\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "gat ekki búið til tákntengið %s: %s\n"
