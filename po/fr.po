@@ -6,13 +6,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-03-11 12:17GMT\n"
-"Last-Translator:  <bettina@redhat.it>\n"
-"Language-Team:  <fr@li.org>\n"
+"PO-Revision-Date: 2002-06-26 10:48+0200\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -20,8 +20,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Ce produit peut être librement distribué selon les termes de la licence "
 "publique GNU (GPL).\n"
@@ -47,13 +46,13 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "              %s [--level <niveaux>] <nom> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
 "le service %s prend en charge chkconfig, mais il n'est pas enregistré "
-"(exécutez 'chkconfig --add %s')\n"
+"(exécutez 'chkconfig --ajoutez %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -172,3 +171,4 @@ msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Impossible de créer le lien symbolique %s : %s\n"
+
