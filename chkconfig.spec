@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.24
+Version: 1.2.25
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -57,11 +57,14 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-,root,root)
 /sbin/chkconfig
+/sbin/update-alternatives
 /etc/init.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
+%dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
+%{_mandir}/*/update-alternatives*
 
 %files -n ntsysv
 %defattr(-,root,root)
@@ -71,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Thu Jan 25 2002 Bill Nottingham <notting@redhat.com>
+- add in update-alternatives stuff (perl ATM)
+
 * Mon Aug 27 2001 Trond Eivind Glomsrød <teg@redhat.com>
 - Update translations
 

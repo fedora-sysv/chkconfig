@@ -3,11 +3,12 @@ CVSTAG = r$(subst .,-,$(VERSION))
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
 LDFLAGS=-g
-MAN=chkconfig.8 ntsysv.8
+MAN=chkconfig.8 ntsysv.8 update-alternatives.8
 PROG=chkconfig
 BINDIR = /sbin
 USRSBINDIR = /usr/sbin
 MANDIR = /usr/man
+ALTDIR = /var/lib/alternatives
 SUBDIRS = po
 
 OBJS=chkconfig.o leveldb.o
@@ -46,9 +47,13 @@ install:
 	[ -d $(instroot)/$(MANDIR) ] || mkdir -p $(instroot)/$(MANDIR)
 	[ -d $(instroot)/$(MANDIR)/man8 ] || mkdir -p $(instroot)/$(MANDIR)/man8
 	[ -d $(instroot)/$(MANDIR)/man5 ] || mkdir -p $(instroot)/$(MANDIR)/man5
+	[ -d $(instroot)/$(ALTDIR) ] || mkdir -p $(instroot)/$(ALTDIR)
 
-	install -s -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
-	install -s -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
+	install -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
+	install -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
+	sed "s|@@VERSION@@|$(VERSION)|g" update-alternatives.pl > update-alternatives
+	install -m 755 update-alternatives $(instroot)/$(BINDIR)/update-alternatives
+	
 	for i in $(MAN); do \
 		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
