@@ -194,8 +194,8 @@ int main(int argc, char ** argv) {
     };
 
     setlocale(LC_ALL, ""); 
-    bindtextdomain("ntsysv","/usr/share/locale"); 
-    textdomain("ntsysv"); 
+    bindtextdomain("chkconfig", "/usr/share/locale"); 
+    textdomain("chkconfig"); 
 
     optCon = poptGetContext("ntsysv", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
