@@ -2,13 +2,13 @@
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Mohammad DAMT <mdamt@linux.or.id>, 1999.
 # Teguh DC <dheche@brawijaya.ac.id>, 2004
-# $Id: id.po,v 1.24 2005/02/02 21:19:50 notting Exp $
+# $Id: id.po,v 1.25 2005/02/22 14:51:25 dheche Exp $
 msgid ""
 msgstr ""
 "Project-Id-Version: ID-chkconfig 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-09-07 08:20-0500\n"
+"PO-Revision-Date: 2005-02-22 21:52+0700\n"
 "Last-Translator: Teguh DC <dheche@brawijaya.ac.id>\n"
 "Language-Team: LDP Indonesia <http://www.linux.or.id>\n"
 "MIME-Version: 1.0\n"
@@ -285,7 +285,7 @@ msgstr "akhir file yang tidak diharapkan di %s\n"
 #: ../alternatives.c:236
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "path to alternate expected in %s\n"
+msgstr "path ke alternate diharapkan pada %s\n"
 
 #: ../alternatives.c:256
 #, c-format
@@ -398,14 +398,14 @@ msgid "Current `best' version is %s.\n"
 msgstr "Versi `terbaik' saat ini adalah %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Ada %d program untuk kebutuhan '%s'.\n"
+msgstr "Ada %d program yang menyediakan '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Ada %d program untuk kebutuhan '%s'.\n"
+msgstr "Ada %d program yang menyediakan '%s'.\n"
 
 #: ../alternatives.c:666
 #, c-format
@@ -415,7 +415,7 @@ msgstr "  Perintah yang dipilih\n"
 #: ../alternatives.c:675
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter untuk mempertahankan pilihan[+] saat ini "
+msgstr "Enter untuk mempertahankan pilihan[+] saat ini, atau ketik nomer yang dipilih: "
 
 #: ../alternatives.c:678
 #, c-format
@@ -434,7 +434,7 @@ msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
 #: ../alternatives.c:747
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(akan menghapus %s\n"
+msgstr "(akan dihapus %s\n"
 
 #: ../alternatives.c:749
 #, c-format
@@ -454,7 +454,7 @@ msgstr "admindir %s tidak valid\n"
 #: ../alternatives.c:887
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "versi altenatif %s\n"
+msgstr "alternatives versi %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "gagal membaca direktori %s/init.d: %s\n"
