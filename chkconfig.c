@@ -64,6 +64,100 @@ static int delService(char * name) {
     return 0;
 }
 
+static inline int laterThan(int i, int j) {
+	if (i <= j) {
+		i = j+1;
+		if (i > 99)
+			i = 99;
+	}
+	return i;
+}
+
+static inline int earlierThan(int i, int j) {
+	if (i >= j) {
+		i = j -1;
+		if (i < 0)
+			i = 0;
+	}
+	return i;
+}
+
+/* LSB-style dependency frobber. Calculates a usable start priority
+ * and stop priority.
+ * This algorithm will almost certainly break horribly at some point. */
+static void frobDependencies(struct service *s) {
+	DIR * dir;
+	struct dirent * ent;
+	struct stat sb;
+	struct service *servs = NULL;
+	int numservs = 0;
+	char fn[1024];
+	int i, j, k;
+    
+	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
+		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
+			strerror(errno));
+		return;
+	}
+
+	while ((ent = readdir(dir))) {
+		const char *dn;
+
+		/* Skip any file starting with a . */
+		if (ent->d_name[0] == '.')	continue;
+
+		/* Skip files with known bad extensions */
+		if ((dn = strrchr(ent->d_name, '.')) != NULL &&
+		    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+			continue;
+		
+		dn = ent->d_name + strlen(ent->d_name) - 1;
+		if (*dn == '~' || *dn == ',')
+			continue;
+	
+		sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+		if (stat(fn, &sb)) {
+			continue;
+		}
+		if (!S_ISREG(sb.st_mode)) continue;
+		if (!strcmp(ent->d_name, s->name)) continue;
+		servs = realloc(servs, (numservs+1) * sizeof(struct service));
+		if (!readServiceInfo(ent->d_name, servs + numservs, 0))
+			numservs++;
+	}
+	
+	/* Sane defaults */
+	s->sPriority = 50;
+	s->kPriority = 50;
+	
+	for (i = 0; i < numservs ; i++) {
+		if (s->startDeps) {
+			for (j = 0; s->startDeps[j] ; j++) {
+				if (!strcmp(s->startDeps[j], servs[i].name))
+					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->startDeps[j], servs[i].provides[k]))
+							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+					}
+				}
+			}
+		}
+		if (s->stopDeps) {
+			for (j = 0; s->stopDeps[j] ; j++) {
+				if (!strcmp(s->stopDeps[j], servs[i].name))
+					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->stopDeps[j], servs[i].provides[k]))
+							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+					}
+				}
+			}
+		}
+	}
+}
+
 static int addService(char * name) {
     int i, rc;
     struct service s;
@@ -74,6 +168,8 @@ static int addService(char * name) {
     }
 	
     if (s.type == TYPE_XINETD) return 0;
+    if (s.isLSB)
+		frobDependencies(&s);
     
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i)) {
@@ -262,6 +358,7 @@ int setService(char * name, int where, int state) {
 int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0;
     int rc, i, x;
+    int LSB = 0;
     char * levels = NULL;
     int help=0, version=0;
     poptContext optCon;
@@ -280,6 +377,14 @@ int main(int argc, char ** argv) {
 	progname++;
     else
 	progname = argv[0];
+    if (!strcmp(progname,"install_initd")) {
+	    addItem++;
+	    LSB++;
+    }
+    if (!strcmp(progname,"remove_initd")) {
+	    delItem++;
+	    LSB++;
+    }
 
     setlocale(LC_ALL, ""); 
     bindtextdomain("chkconfig","/usr/share/locale"); 
@@ -313,13 +418,17 @@ int main(int argc, char ** argv) {
 
 	if (!name || !*name || poptGetArg(optCon)) 
 	    usage();
-
+	
+	if (LSB)
+		    name = basename(name);
 	return addService(name);
     } else if (delItem) {
 	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
+	if (LSB)
+		    name = basename(name);
 	return delService(name);
     } else if (listItem) {
 	char * item = (char *)poptGetArg(optCon);

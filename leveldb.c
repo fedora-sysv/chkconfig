@@ -137,7 +137,19 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	char * filename = alloca(strlen(name) + strlen(XINETDDIR) + 50);
 	int fd;
-	struct service serv = { NULL, -1, -1, -1, NULL, 1, -1 };
+	struct service serv = { 
+			name: NULL,
+			levels: -1,
+			kPriority: -1,
+			sPriority: -1, 
+			desc: NULL, 
+			startDeps: NULL, 
+			stopDeps: NULL,
+		        provides: NULL,
+			type: TYPE_XINETD, 
+			isLSB: 0, 
+			enabled: -1
+	};
 	struct stat sb;
 	char * buf, *ptr;
 	char * eng_desc = NULL, *start;
@@ -221,7 +233,19 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     int fd;
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next, *tmpbufstart;
-    struct service serv = { NULL, -1, -1, -1, NULL, 0, 0 };
+    struct service serv = { 
+	    	    name: NULL, 
+		    levels: -1, 
+		    kPriority: -1, 
+		    sPriority: -1, 
+		    desc: NULL, 
+		    startDeps: NULL, 
+		    stopDeps: NULL,
+		    provides: NULL,
+		    type: TYPE_INIT_D, 
+		    isLSB: 0, 
+		    enabled: 0
+    };
     char overflow;
     char levelbuf[20];
     char * english_desc = NULL;
@@ -269,7 +293,12 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 
 	if (*start != '#') continue;
 
-	start++;	
+	start++;
+	if (!strncmp(start, "## BEGIN INIT INFO", 18))
+		    serv.isLSB = 1;
+	if (!strncmp(start, "## END INIT INFO", 16) && serv.isLSB)
+		    break;
+		
 	while (isspace(*start) && start < end) start++;
 	if (start == end) continue;
 	if (honorHide && !strncmp(start, "hide:", 5)) {
@@ -308,10 +337,116 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		free(bufstart);
 		return 1;
 	    }
-	} else if (!strncmp(start, "description", 11)) {
+	} else if (!strncmp(start, "description", 11) ||
+		   !strncmp(start, "Description:", 12) ||
+		   !strncmp(start, "Short-Description:", 18)) {
 		if (readDescription(start+11, bufstop, &english_desc, &serv.desc)) {
 			if (serv.desc) free(serv.desc);
 		}
+	} else if (!strncmp(start, "Default-Start:", 14)) {
+		char *t;
+		
+		start+=14;
+		while (1) {
+			int lev;
+			
+			lev = strtol(start, &t, 10);
+			if (t && t != start)
+				start = t;
+			else
+				break;
+			serv.levels |= 1 << lev;
+		}
+	} else if (!strncmp(start, "Default-Stop:", 13)) {
+		char *t;
+		
+		start+=13;
+		while (1) {
+			int lev;
+			
+			lev = strtol(start, &t, 10);
+			if (t && t != start)
+				start = t;
+			else
+				break;
+			serv.levels &= ~(1 << lev);
+		}
+	} else if (!strncmp(start, "Required-Start:", 15)) {
+		char *t;
+		int numdeps = 0;
+		
+		start+=15;
+		while (1) {
+			while (*start && isspace(*start) && start < end) start++;
+			if (start == end)
+				break;
+			t = start;
+			while (*t && !isspace(*t) && t < end) t++;
+			if (isspace(*t)) {
+				*t = '\0';
+				t++;
+			}
+			numdeps++;
+			serv.startDeps = realloc(serv.startDeps,
+						 (numdeps + 1) * sizeof(char *));
+			serv.startDeps[numdeps-1] = strdup(start);
+			serv.startDeps[numdeps] = NULL;
+			if (!t || t >= end)
+				break;
+			else
+				start = t;
+		}
+	} else if (!strncmp(start, "Required-Stop:", 14)) {
+		char *t;
+		int numdeps = 0;
+		
+		start+=14;
+		while (1) {
+			while (*start && isspace(*start) && start < end) start++;
+			if (start == end)
+				break;
+			t = start;
+			while (*t && !isspace(*t) && t < end) t++;
+			if (isspace(*t)) {
+				*t = '\0';
+				t++;
+			}
+			numdeps++;
+			serv.stopDeps = realloc(serv.stopDeps,
+						 (numdeps + 1) * sizeof(char *));
+			serv.stopDeps[numdeps-1] = strdup(start);
+			serv.stopDeps[numdeps] = NULL;
+			if (!t || t >= end)
+				break;
+			else
+				start = t;
+		}
+	} else if (!strncmp(start, "Provides:", 9)) {
+		char *t;
+		int numdeps = 0;
+		
+		start+=9;
+		while (1) {
+			while (*start && isspace(*start) && start < end) start++;
+			if (start == end)
+				break;
+			t = start;
+			while (*t && !isspace(*t) && t < end) t++;
+			if (isspace(*t)) {
+				*t = '\0';
+				t++;
+			}
+			numdeps++;
+			serv.provides = realloc(serv.provides,
+						 (numdeps + 1) * sizeof(char *));
+			serv.provides[numdeps-1] = strdup(start);
+			serv.provides[numdeps] = NULL;
+			if (!t || t >= end)
+				break;
+			else
+				start = t;
+		}
+		
 	}
     }
 
@@ -328,6 +463,11 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     } 
 
     serv.name = strdup(name);
+    if (!serv.provides) {
+	    serv.provides = malloc(2 * sizeof(char *));
+	    serv.provides[0] = strdup(name);
+	    serv.provides[1] = NULL;
+    }
 
     *service = serv;
     return 0;

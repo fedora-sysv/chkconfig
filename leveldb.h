@@ -13,7 +13,11 @@ struct service {
     char * name;
     int levels, kPriority, sPriority;
     char * desc;
+    char **startDeps;
+    char **stopDeps;
+    char **provides;
     int type;
+    int isLSB;
     int enabled;
 };
 

@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.1
+Version: 1.3.2
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Tue Mar 12 2002 Bill Nottingham <notting@redhat.com> 1.3.2-1
+- chkconfig: LSB support
+
 * Fri Mar  8 2002 Bill Nottingham <notting@redhat.com>
 - alternatives: handle initscripts too; --initscript command-line option
 - chkconfig/ntsysv (and serviceconf, indirectly): services with
