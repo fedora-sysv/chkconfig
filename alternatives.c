@@ -417,7 +417,6 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
 	for (j = 0; j < set->alts[i].numSlaves; j++)
 	    fprintf(f, "%s\n", set->alts[i].slaves[j].target);
-	fprintf(f, "\n");
     }
     
     fclose(f);
