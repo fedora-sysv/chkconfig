@@ -1,12 +1,26 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-09-25 07:14-0400\n"
-"Content-Type: text/plain; charset=\n"
-"Date: 1998-03-23 18:26:20-0500\n"
-"From: Erik Troan <ewt@mercury.redhat.com>\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
-"--keyword=N_\n"
-"Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
+"Project-Id-Version: chkconfig 6.1\n"
+"PO-Revision-Date: 1999-09-03\n"
+"Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
+"Language-Team: French <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#~ msgid ""
+#~ msgstr ""
+#~ "POT-Creation-Date: 1998-09-25 07:14-0400\n"
+#~ "Content-Type: text/plain; charset=\n"
+#~ "Date: 1998-03-23 18:26:20-0500\n"
+#~ "From: Erik Troan <ewt@mercury.redhat.com>\n"
+#~ "Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+#~ "--keyword=N_\n"
+#~ "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
 # ../chkconfig.c:21
 #: ../chkconfig.c:21
