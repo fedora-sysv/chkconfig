@@ -1,0 +1,171 @@
+# Chkconfig RedHat Bahasa Melayu (Malay) (ms).
+# Copyright (C) 2003 RedHat Inc.
+# This file is distributed under the same license as the chkconfig package.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: chkconfig\n"
+"POT-Creation-Date: 2002-06-12 01:15-0400\n"
+"PO-Revision-Date: 2003-01-15 01:02GMT+8\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s versi %s - Hakcipta (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:22
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
+
+#: ../chkconfig.c:25
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr "penggunaan:   %s --list [nama]\n"
+
+#: ../chkconfig.c:26
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <nama>\n"
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <nama>\n"
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--level <tahap>] <nama> %s)\n"
+
+#: ../chkconfig.c:35
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"khidmat %s menyokong chkconfig, tetapi tidak dirujuk didalam sebarang runlevel "
+"(laksanakan 'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "khidmat %s tidak menyokong chkconfig\n"
+
+#: ../chkconfig.c:39
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "ralat membaca meklumat pada khidmat %s: %s\n"
+
+#: ../chkconfig.c:98 ../chkconfig.c:248
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "gagal untuk membuka %s/init.d: %s\n"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "on"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "off"
+
+#: ../chkconfig.c:282
+#, c-format
+msgid "error reading from directory %s/init.d: %s"
+msgstr "ralat membaca daripada direktori %s/init.d: %s"
+
+#: ../chkconfig.c:290
+msgid "xinetd based services:\n"
+msgstr "perkhidmatan berasaskan xinetd:\n"
+
+#: ../chkconfig.c:292
+#, c-format
+msgid "failed to open directory %s: %s"
+msgstr "gagal untuk membuka direktori %s: %s"
+
+#: ../chkconfig.c:404
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s versi %s\n"
+
+#: ../chkconfig.c:411
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "hanya satu daripada --list, --add, atau --del boleh dinyatakan\n"
+
+#: ../chkconfig.c:463
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "hanya satu runlevel boleh dinyatakan untuk pertanyaan chkconfig\n"
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "Tekan <F1> untuk lebih maklumat berkenaan sesuatu khidmat."
+
+#: ../ntsysv.c:62 ../ntsysv.c:99
+msgid "Ok"
+msgstr "Ok"
+
+#: ../ntsysv.c:62
+msgid "Back"
+msgstr "Undur"
+
+#: ../ntsysv.c:62
+msgid "Cancel"
+msgstr "Batal"
+
+#: ../ntsysv.c:74
+msgid "What services should be automatically started?"
+msgstr "Khidmat apa yang seharusnya dimulakan secara automatik?"
+
+#: ../ntsysv.c:80
+msgid "Services"
+msgstr "Perkhidmatan"
+
+#: ../ntsysv.c:186 ../ntsysv.c:230
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "ralat membaca maklumat untuk khidmat %s: %s\n"
+
+#: ../ntsysv.c:195
+#, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "ralat membaca daripada direktori %s/init.d: %s\n"
+
+#: ../ntsysv.c:239
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "ralat membaca daripada direktori %s: %s\n"
+
+#: ../ntsysv.c:275
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "Anda mesti sebagai root untuk melaksanakan %s.\n"
+
+#: ../ntsysv.c:292
+msgid "bad argument to --levels\n"
+msgstr "hujah tidak sah kepada --levels\n"
+
+#: ../ntsysv.c:299
+msgid "No services may be managed by ntsysv!\n"
+msgstr "Tiada khidmat yang boleh diurus oleh ntsysv!\n"
+
+#: ../leveldb.c:507
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "gagal untuk glob corak %s: %s\n"
+
+#: ../leveldb.c:538
+msgid "cannot determine current run level\n"
+msgstr "tidak dapat menentukan run level sekarang\n"
+
+#: ../leveldb.c:626
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "gagal untuk membuat symlink %s: %s\n"
+
