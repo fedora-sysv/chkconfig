@@ -1,11 +1,11 @@
 # Chkconfig Japanese Translation
 # Copyright (C) 2001 Red Hat, Inc.
-#
+# James Hashida <khashida@redhat.com> 2002 2003
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-02-01 15:24GMT+10:00\n"
+"PO-Revision-Date: 2003-02-02 01:02GMT+10:00\n"
 "Last-Translator: James Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -176,7 +176,7 @@ msgstr "%sを実行する為にルートでなければなりません。\n"
 # ../ntsysv.c:270
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "--level の引数が不適当です\n"
+msgstr "--levels の引数が不適当です\n"
 
 # ../ntsysv.c:277
 #: ../ntsysv.c:299
@@ -391,78 +391,79 @@ msgstr "%s -ステータスは自動。\n"
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - ステータスは手動。\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "リンクは現在%sを指しています\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - 優先項目 %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " スレーブ%s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "現在の「最適」バージョンは%s。\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "%d プログラムがあり'%s'を提供します。\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  選択       コマンド\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Enterを押して現在の選択[+]を保持するか、選択番号を入力します："
 
 # ../ntsysv.c:174 ../ntsysv.c:217
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
+msgstr ""
+"\n"
+"選択の読み込みでエラー\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%sは%sの為の互換用として設定されていません\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "%sを削除する\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s/init.d を開くことができませんでした: %s\n"
+msgstr "%sの削除に失敗しました: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %sは無効\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %sは無効\n"
 
 # ../chkconfig.c:284
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s バージョン %s\n"
+msgstr "alternativesのバージョン %s\n"
 
