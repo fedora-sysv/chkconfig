@@ -248,6 +248,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	line = parseLine(&buf);
 	set->alts[set->numAlts].priority = -1;
 	set->alts[set->numAlts].priority = strtol(line, &end, 0);
+	set->alts[set->numAlts].initscript = NULL;
 	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
 	    return 1;
@@ -257,9 +258,11 @@ static int readConfig(struct alternativeSet * set, const char * title,
 		struct stat sbuf;
 		
 		while (*end && isspace(*end)) end++;
-		snprintf(tmppath, 500, "/etc/init.d/%s", end);
-		if (!stat(tmppath, &sbuf)) {
-			set->alts[set->numAlts].initscript = strdup(end);
+		if (strlen(end)) {
+			snprintf(tmppath, 500, "/etc/init.d/%s", end);
+			if (!stat(tmppath, &sbuf)) {
+				set->alts[set->numAlts].initscript = strdup(end);
+			}
 		}
 	}
 
