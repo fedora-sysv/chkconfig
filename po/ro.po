@@ -1,6 +1,9 @@
-# $Id: ro.po,v 1.4 1998/05/07 06:05:16 ewt Exp $
+# $Id: ro.po,v 1.5 1998/05/07 08:16:48 gafton Exp $
 #
 # $Log: ro.po,v $
+# Revision 1.5  1998/05/07 08:16:48  gafton
+# Fixed spelling done by Erik (anyway, I'm impressed, Erik :-)
+#
 # Revision 1.4  1998/05/07 06:05:16  ewt
 # added Cancel/Back
 #
@@ -78,4 +81,4 @@ msgid "Cancel"
 msgstr "Abandon"
 
 msgid "Back"
-msgstr "Inapoi"
+msgstr "Înapoi"
