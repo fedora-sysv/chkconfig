@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
 "POT-Creation-Date: 2001-03-05 00:42-0500\n"
-"PO-Revision-Date: 2001-03-21 21:14+0900\n"
+"PO-Revision-Date: 2001-05-13 15:17+0900\n"
 "Last-Translator: Jong-Hoon Ryu <queenrjh@chollian.net>\n"
 "Language-Team: Korean Linux Extension project <kle@kldp.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr "%s 버전 %s - 저작권 (C) 1997-2000 레드햇 사.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"이 프로그램은 GNU Public License 하에서 자유롭게 재 배포될 수 있습니다.\n"
+"이 프로그램은 GNU Public License 하에서 자유롭게 재 배포할 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
