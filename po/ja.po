@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-03-04 14:36+0900\n"
+"PO-Revision-Date: 2004-06-22 12:34+0900\n"
 "Last-Translator: Tadashi Jokagi <fedora@elf.no-ip.org>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,7 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
 "きます。\n"
@@ -51,9 +50,9 @@ msgstr "         %s --del <名前>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <レベル>] <名前> %s)\n"
+msgstr "         %s [--level <レベル>] <名前> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -216,8 +215,7 @@ msgstr ""
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
+msgstr "使用法: alternatives --install <リンク> <名前> <パス> <プライオリティ>\n"
 
 #: ../alternatives.c:51
 msgid "                    [--initscript <service>]\n"
@@ -269,7 +267,7 @@ msgstr "                --altdir <ディレクトリ> --admindir <ディレク�
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "%s 読み込み中\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:161
@@ -335,9 +333,9 @@ msgstr "%sに予想外の行があります: %s\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "%sの読み込みに失敗: %s\n"
+msgstr "リンク %s の読み込みに失敗: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -389,7 +387,7 @@ msgstr "%sを%sへの交換に失敗しました: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s 実行中\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -488,3 +486,4 @@ msgstr "alternatives バージョン %s\n"
 # ../chkconfig.c:172
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました: %s"
+
