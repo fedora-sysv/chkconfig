@@ -62,7 +62,7 @@ msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d dizininden okurken hata: %s\n"
+msgstr "%s/init.d dizininden okurken hata: %s"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -113,17 +113,15 @@ msgstr "glob pattern %s hatasý: %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
-msgstr "Çalýþma düzeyi belirlenemiyor\n"
+msgstr "çalýþma düzeyi belirlenemiyor\n"
 
 #: ../leveldb.c:319
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s sembolik link baðlantýsý yapýlamadý : %s\n"
+msgstr "%s sembolik baðlantýsý yapýlamadý : %s\n"
 
 msgid "error reading info for service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata : %s\n"
 
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
-"%s/init.d dizininden okurken hata: %s\n"
-" "
+msgstr "%s/init.d dizininden okurken hata: %s\n"
