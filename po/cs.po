@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-02-03 15:50+0100\n"
+"PO-Revision-Date: 2003-10-25 23:14+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>, 2003\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -83,9 +83,9 @@ msgid "xinetd based services:\n"
 msgstr "služby založené na xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "nemohu otevřít adresář %s: %s"
+msgstr "nemohu otevřít adresář %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
