@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 1.8\n"
-"POT-Creation-Date: 1999-10-18 15:09-0400\n"
-"PO-Revision-Date: 1999-09-18 00:33+0000\n"
+"Project-Id-Version: chkconfig 1.9\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
+"PO-Revision-Date: 2000-01-31 03:31+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +120,7 @@ msgstr "óleyfilegt viðfang við --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Þjónustum er ekki hægt að stjórna með ntsysv!\n"
+msgstr "Engum þjónustum er hægt að stjórna með ntsysv!\n"
 
 #: ../leveldb.c:265
 #, c-format
