@@ -1,19 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# translation of hi.po to Hindi
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Rajesh Ranjan <rranjan@redhat.com>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2003-09-13 10:37+0530\n"
-"Last-Translator: Jatin Nansi <jnansi@redhat.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2004-08-31 11:14+0530\n"
+"Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
+"Language-Team: Hindi <Indlinux-hindi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
+"X-Generator: KBabel 1.3.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -21,8 +22,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s संस्करण %s - प्रतिलिपि अधिकार १९९७-२००० रेड हेट, निगमन\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
 
 #: ../chkconfig.c:25
@@ -41,7 +41,7 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <नाम>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <स्तर>] <नाम> %s)\n"
 
@@ -50,8 +50,7 @@ msgstr "         %s [--level <स्तर>] <नाम> %s)\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"%s सेवा chkconfig को मदद करते हैं, मगर किसी धावस्तर('chkconfig --add %s' चलाएँ)\n"
+msgstr "%s सेवा chkconfig को मदद करते हैं, मगर किसी धावस्तर('chkconfig --add %s' चलाएँ)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -224,7 +223,7 @@ msgstr "                --altdir <निर्देशिका> --admindir <�
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "%s को पढ़ रहा है\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -287,7 +286,7 @@ msgid "unexpected line in %s: %s\n"
 msgstr "%s में अप्रतीक्षारत लाइन: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "%s पढ़ने में असफल: %s\n"
 
@@ -337,7 +336,7 @@ msgstr "%s को %s से स्थानांतरित करने म�
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s को चला रहा है\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -429,3 +428,4 @@ msgstr "admin %s अनुचित है\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "वैकल्पिक संस्करण %s\n"
+
