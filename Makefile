@@ -4,7 +4,7 @@ CVSROOT = $(shell cat CVS/Root 2>/dev/null || :)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
 LDFLAGS=-g
-MAN=chkconfig.8 ntsysv.8 update-alternatives.8
+MAN=chkconfig.8 ntsysv.8 alternatives.8
 PROG=chkconfig
 BINDIR = /sbin
 USRSBINDIR = /usr/sbin
@@ -15,7 +15,7 @@ SUBDIRS = po
 OBJS=chkconfig.o leveldb.o
 NTOBJS=ntsysv.o leveldb.o
 
-all: subdirs $(PROG) ntsysv
+all: subdirs $(PROG) ntsysv alternatives
 
 subdirs:
 	for d in $(SUBDIRS); do \
@@ -26,11 +26,16 @@ subdirs:
 chkconfig: $(OBJS)
 	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) /usr/lib/libpopt.a
 
+alternativs: alternatives.o
+
 ntsysv: $(NTOBJS)
 	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
 
 chkconfig.o: chkconfig.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c chkconfig.c
+
+alternatives.o: alternatives.c
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c alternatives.c
 
 ntsysv.o: ntsysv.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c ntsysv.c
@@ -39,6 +44,7 @@ leveldb.o: leveldb.c leveldb.h
 
 clean:
 	rm -f chkconfig ntsysv $(OBJS) $(NTOBJS)
+	rm -f alternatives alternatives.o
 	make -C po clean
 	rm -f chkconfig-*.tar.gz *~ *.old
 
@@ -52,12 +58,15 @@ install:
 
 	install -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
 	install -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
-	sed "s|@@VERSION@@|$(VERSION)|g" update-alternatives.pl > update-alternatives
-	install -m 755 update-alternatives $(instroot)/$(BINDIR)/update-alternatives
+	install -m 755 alternatives $(instroot)/$(USRSBINDIR)/alternatives
+	ln -s alternatives $(instroot)/$(USRSBINDIR)/update-alternatives
 	
 	for i in $(MAN); do \
 		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
+
+	ln -s alternatives.8 $(instroot)/$(MANDIR)/man8/update-alternatives.8
+
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) install) \
 	    || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\

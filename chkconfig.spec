@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sun Jan 27 2002 Erik Troan <ewt@redhat.com>
+- reimplemented update-alternatives as just alternatives
+
 * Thu Jan 25 2002 Bill Nottingham <notting@redhat.com>
 - add in update-alternatives stuff (perl ATM)
 
