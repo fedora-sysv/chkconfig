@@ -114,7 +114,7 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Нет сервисов, управляемых ntsysv!\n"
 
 #: ../leveldb.c:255
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "невозможно открыть %s/init.d: %s\n"
 
