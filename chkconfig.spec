@@ -1,8 +1,8 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.9.6
+%define version 1.0
 Version: %{version}
-Release: 5
+Release: 1
 Copyright: GPL
 Group: Utilities/System
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -58,6 +58,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Thu Feb 18 1999 Preston Brown <pbrown@redhat.com>
+- fixed globbing error
+- fixed ntsysv running services not at their specified levels.
+
 * Tue Feb 16 1999 Matt Wilson <msw@redhat.com>
 - print the value of errno on glob failures.
 
