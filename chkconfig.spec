@@ -7,7 +7,7 @@ License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
-BuildPrereq: newt newt-devel
+BuildPrereq: newt newt-devel gettext
 Conflicts: initscripts <= 5.30-1
 
 %description
