@@ -1,21 +1,20 @@
-# translation of chkconfig.po to
-# translation of de.po to Deutsch
 # Copyright (C) 2001 Red Hat, Inc.
 # Claudia Krug <fhonig@redhat.it>, 2001.
 # Bernd Groh <bgroh@redhat.com>, 2003,2004.
 # Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
+# Ronny Buchmann <ronny-vlug@vlugnet.org> 2005
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-10 17:54-0500\n"
 "PO-Revision-Date: 2004-06-23 12:43+1000\n"
-"Last-Translator: Bernd Groh <bgroh@redhat.com>\n"
+"Last-Translator: Ronny Buchmann <ronny-vlug@vlugnet.org>\n"
 "Language-Team: Deutsch <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
@@ -442,9 +441,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Zur Zeit ist die `best' Version %s.\n"
 
 #: ../alternatives.c:663
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Es gibt %d Programme, welche '%s' zur Verfügung stellen.\n"
+msgstr "Es gibt %d Programm, welches '%s' zur Verfügung stellen.\n"
 
 #: ../alternatives.c:663
 #, c-format
