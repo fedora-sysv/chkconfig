@@ -145,7 +145,7 @@ msgstr "ntsysv 명령에 의해 관리될 서비스가 없습니다!\n"
 #: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "failed to glob pattern %s: %s\n"
+msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
