@@ -21,24 +21,24 @@ msgstr ""
 "Програму можна в╕льно розповсюджувати в межах л╕ценз╕╖ GNU Public License.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "використання:   chkconfig --list [служба]\n"
+msgstr "використання:   %s --list [служба]\n"
 
 #: ../chkconfig.c:27
 #, fuzzy, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <служба>\n"
+msgstr "         %s --add <служба>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <служба>\n"
+msgstr "         %s --del <служба>\n"
 
 #: ../chkconfig.c:29
 #, fuzzy, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <р╕вн╕>] <служба> <on|off|reset>\n"
+msgstr "         %s [--level <р╕вн╕>] <служба> <on|off|reset>\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -71,7 +71,7 @@ msgstr "помилка читання з каталогу %s/init.d: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s верс╕я %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
