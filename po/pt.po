@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-06-07 10:10+0100\n"
+"PO-Revision-Date: 2005-02-03 09:33+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -399,9 +399,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "A 'melhor' versão actual é a %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Existem %d programas que oferecem o '%s'.\n"
+msgstr "Existe %d programa que oferece o '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
