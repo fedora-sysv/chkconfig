@@ -2,7 +2,7 @@ Summary: Updates and queries runlevel information for system services
 Name: chkconfig
 %define version 0.9.6
 Version: %{version}
-Release: 1
+Release: 2
 Copyright: GPL
 Group: Utilities/System
 Group(pt_BR): Utilitários/Sistema
@@ -73,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Thu Oct 22 1998 Bill Nottingham <notting@redhat.com>
+- build for Raw Hide (slang-1.2.2)
+
 * Wed Oct 14 1998 Cristian Gafton <gafton@redhat.com>
 - translation updates
 
