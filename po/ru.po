@@ -1,14 +1,16 @@
+# translation of ru.po to Russian
+# Leonid Kanter <leon@geon.donetsk.ua>, 2003
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.4\n"
+"Project-Id-Version: ru\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-07-09 18:52+0300\n"
-"Last-Translator: Alexandr Kanevskiy <kad@blackcatlinux.com>\n"
+"PO-Revision-Date: 2003-02-04 12:59+0200\n"
+"Last-Translator: Leonid Kanter <leon@geon.donetsk.ua>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -16,8 +18,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
 
 #: ../chkconfig.c:25
@@ -97,8 +98,7 @@ msgstr "может быть указана лишь одна команда: --l
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"Только один уровень выполнения может быть указан для запроса chkconfig\n"
+msgstr "Только один уровень выполнения может быть указан для запроса chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -167,20 +167,21 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "ошибка создания символической ссылки %s: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives версия %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
+msgstr ""
+"Может свободно распостраняться в рамках GNU Public License.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "прменение: alternatives --install <ссылка> <имя> <путь> <приоритет>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -193,31 +194,27 @@ msgstr "         %s [--level <уровни>] <имя сервиса> %s\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <имя> <путь>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <имя сервиса>\n"
+msgstr "       alternatives --auto <имя>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <имя сервиса>\n"
+msgstr "       alternatives --config <имя>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <имя сервиса>\n"
+msgstr "       alternatives --display <имя>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <имя сервиса>\n"
+msgstr "       alternatives --set <имя> <путь>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
@@ -225,37 +222,37 @@ msgstr ""
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <каталог> --admindir <каталог>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "невозможно открыть %s/init.d: %s\n"
+msgstr "не удается открыть %s: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "невозможно открыть %s/init.d: %s\n"
+msgstr "не удается прочитать %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s пуст!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "неверный режим в строке 1 %s\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "неверная первичная ссылка в %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "неожиданный путь %s в %s\n"
 
 #: ../alternatives.c:214
 #, c-format
@@ -265,7 +262,7 @@ msgstr ""
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "неожиданный конец файла в %s\n"
 
 #: ../alternatives.c:233
 #, c-format
@@ -275,7 +272,7 @@ msgstr ""
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%s должен быть числовым приоритетом\n"
 
 #: ../alternatives.c:275
 #, c-format
@@ -285,7 +282,7 @@ msgstr ""
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "неожиданная строка в %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -301,9 +298,9 @@ msgid "would remove %s\n"
 msgstr ""
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "ошибка создания символической ссылки %s: %s\n"
+msgstr "не удается удалить ссылку %s: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
@@ -311,24 +308,24 @@ msgid "would link %s -> %s\n"
 msgstr ""
 
 #: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "ошибка создания символической ссылки %s: %s\n"
+msgstr "ошибка создания ссылки %s -> %s: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s уже существует\n"
 
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "невозможно использовать шаблон %s: %s\n"
+msgstr "не удается создать %s: %s\n"
 
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "ошибка создания символической ссылки %s: %s\n"
+msgstr "не удается заменить %s на %s: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
@@ -353,12 +350,12 @@ msgstr ""
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " ссылка сейчас указывает на %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - приоритет %d\n"
 
 #: ../alternatives.c:626
 #, c-format
@@ -368,12 +365,12 @@ msgstr ""
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Текущая `лучшая' версия - %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Имеется %d программ, которые предоставляют '%s'.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -393,17 +390,17 @@ msgstr "ошибка чтения информации для сервиса %s:
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s был настроен как альтернатива для %s\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(будет удален %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "невозможно открыть %s/init.d: %s\n"
+msgstr "не удается удалить %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
@@ -416,6 +413,7 @@ msgid "admindir %s invalid\n"
 msgstr ""
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s версия %s\n"
+msgstr "alternatives версия %s\n"
+
