@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2001-06-25 18:55+02:00\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian (Nynorsk)\n"
@@ -74,10 +74,10 @@ msgstr "på"
 msgid "off"
 msgstr "av"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, fuzzy, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "feil ved lesing frå fila %1"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "feil ved lesing frå fila %1\n"
 
 #: ../chkconfig.c:290
 #, fuzzy
@@ -86,19 +86,19 @@ msgstr "&Peikar til teneste:"
 
 #: ../chkconfig.c:292
 #, fuzzy, c-format
-msgid "failed to open directory %s: %s"
+msgid "failed to open directory %s: %s\n"
 msgstr "Standard opningskatalog"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, fuzzy, c-format
 msgid "%s version %s\n"
 msgstr " Versjon "
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
@@ -132,11 +132,6 @@ msgstr "Tenester"
 msgid "error reading info for service %s: %s\n"
 msgstr "feil ved lesing frå fila %1\n"
 
-#: ../ntsysv.c:195
-#, fuzzy, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "feil ved lesing frå fila %1\n"
-
 #: ../ntsysv.c:239
 #, fuzzy, c-format
 msgid "error reading from directory %s: %s\n"
@@ -155,17 +150,17 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Kunne ikkje lasta biletet '%1'\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 #, fuzzy
 msgid "cannot determine current run level\n"
 msgstr "Finn ikkje ut skrivartypen"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
@@ -418,3 +413,7 @@ msgstr ""
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
 msgstr " Versjon "
+
+#, fuzzy
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "feil ved lesing frå fila %1"

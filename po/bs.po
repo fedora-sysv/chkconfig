@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: desktop files\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 31.07.2002. 10:38\n"
 "Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -87,11 +87,11 @@ msgstr "uključeno"
 msgid "off"
 msgstr "isključeno"
 
-# ../chkconfig.c:172
-#: ../chkconfig.c:282
+# ../ntsysv.c:183
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "greška prilikom čitanja iz direktorija %s/init.d %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "greška prilikom čitanja iz direktorija %s/init.d: %s\n"
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
@@ -100,23 +100,23 @@ msgstr "xinetd bazirani servisi:\n"
 
 # ../chkconfig.c:182
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "ne mogu otvoriti direktorij %s: %s"
 
 # ../chkconfig.c:284
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzija %s\n"
 
 # ../chkconfig.c:291
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "samo jedan od --list, --add ili --del može biti naznačen\n"
 
 # ../chkconfig.c:339
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "samo jedan nivo može biti naznačen za chkconfig upit\n"
 
@@ -156,12 +156,6 @@ msgstr "Servisi"
 msgid "error reading info for service %s: %s\n"
 msgstr "greka prilikom čitanja informacija za servis %s: %s\n"
 
-# ../ntsysv.c:183
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "greška prilikom čitanja iz direktorija %s/init.d: %s\n"
-
 # ../ntsysv.c:227
 #: ../ntsysv.c:239
 #, c-format
@@ -185,18 +179,18 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Nijedan servis ne može biti upravljan od strane ntsysv!\n"
 
 # ../leveldb.c:367
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nije uspjeo da glob-uje uzorak %s: %s\n"
 
 # ../leveldb.c:398
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "ne može odrediti trenutni nivo\n"
 
 # ../leveldb.c:486
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "greška prilikom pravljenja symlink %s: %s\n"
@@ -470,3 +464,7 @@ msgstr ""
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
 msgstr "%s verzija %s\n"
+
+# ../chkconfig.c:172
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "greška prilikom čitanja iz direktorija %s/init.d %s"

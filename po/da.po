@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-01 15:51+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@klid.dk>\n"
@@ -73,30 +73,30 @@ msgstr "til"
 msgid "off"
 msgstr "fra"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "fejl ved læsning fra mappe %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "fejl ved læsning fra mappe %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd baserede tjenester:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "lykkedes ikke at åbne %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "kun én af --list, --add eller --del må angives\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "kun ét kørselsniveau må angives for en chkconfig forespørgsel\n"
 
@@ -129,11 +129,6 @@ msgstr "Tjenester"
 msgid "error reading info for service %s: %s\n"
 msgstr "fejl ved læsning af info for tjeneste %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "fejl ved læsning fra mappe %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -152,16 +147,16 @@ msgstr "dårligt argument til --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ingen tjenester må håndteres af ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "kunne 'globbe' mønster %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "kan ikke afgøre nuværende kørselsniveau\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "kunne ikke lave symlænke %s: %s\n"
@@ -377,7 +372,9 @@ msgstr "  Valg         Kommando\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Tast retur for at beholde det nuværende valg[+], eller indtast nummer på valget: "
+msgstr ""
+"Tast retur for at beholde det nuværende valg[+], eller indtast nummer på "
+"valget: "
 
 #: ../alternatives.c:675
 msgid ""
@@ -416,3 +413,6 @@ msgstr "adminkat %s ugyldigt\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives version %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "fejl ved læsning fra mappe %s/init.d: %s"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-25 22:36+1000\n"
 "Last-Translator: David Barzilay <barzilay@redhat.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -21,8 +21,11 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versão %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Este pode ser redistribuído livremente sob os termos da Licença Pública GNU.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Este pode ser redistribuído livremente sob os termos da Licença Pública "
+"GNU.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -76,32 +79,33 @@ msgstr "ligado"
 msgid "off"
 msgstr "desligado"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "erro ao ler do diretório %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "erro ao ler do diretório %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "servidos baseados no xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "não foi possível abrir o diretório %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versão %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "apenas uma dessas pode ser especificada --list, --add, ou --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
+msgstr ""
+"só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -132,11 +136,6 @@ msgstr "Serviços"
 msgid "error reading info for service %s: %s\n"
 msgstr "erro ao ler informação para o serviço %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "erro ao ler do diretório %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -155,16 +154,16 @@ msgstr "argumento inválido para --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nenhum serviço pode ser gerenciado pelo ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossível definir o padrão %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "não foi possível determinar o nível de execução atual\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "não foi possível criar a ligação simbólica %s: %s\n"
@@ -179,12 +178,14 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Este pode ser redistribuído livremente sob os termos da Licença Pública GNU.\n"
+"Este pode ser redistribuído livremente sob os termos da Licença Pública "
+"GNU.\n"
 "\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
+msgstr ""
+"uso: alternativas --install <ligação> <nome> <localização> <prioridade>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -420,3 +421,5 @@ msgstr "admindir %s inválido\n"
 msgid "alternatives version %s\n"
 msgstr "versão alternativa %s\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "erro ao ler do diretório %s/init.d: %s"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-10-20 13:29+0300\n"
 "Last-Translator: Leonid Kanter <leon@geon.donetsk.ua>\n"
 "Language-Team:  <ru@li.org>\n"
@@ -19,7 +19,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
 
 #: ../chkconfig.c:25
@@ -74,32 +75,33 @@ msgstr "вкл"
 msgid "off"
 msgstr "выкл"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "ошибка чтения из каталога %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "ошибка чтения из директории %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "сервисы на основе xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "невозможно открыть каталог %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "может быть указана лишь одна команда: --list, --add, или --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "Только один уровень выполнения может быть указан для запроса chkconfig\n"
+msgstr ""
+"Только один уровень выполнения может быть указан для запроса chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -130,11 +132,6 @@ msgstr "Сервисы"
 msgid "error reading info for service %s: %s\n"
 msgstr "ошибка чтения информации для сервиса %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "ошибка чтения из директории %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -153,16 +150,16 @@ msgstr "неверный аргумент для --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Нет сервисов, управляемых ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "невозможно использовать шаблон %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "невозможно определить текущий уровень выполнения\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ошибка создания символической ссылки %s: %s\n"
@@ -286,7 +283,9 @@ msgstr "неожиданная строка в %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "ссылка указывает на безальтернативный элемент - устанавливается ручной режим\n"
+msgstr ""
+"ссылка указывает на безальтернативный элемент - устанавливается ручной "
+"режим\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -418,3 +417,5 @@ msgstr "admindir %s invalid\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives версия %s\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "ошибка чтения из каталога %s/init.d: %s"

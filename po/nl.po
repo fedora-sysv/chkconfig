@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig-1.3.8\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-07-20 13:48+0200\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@chello.nl>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -21,8 +21,11 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versie %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Dit mag vrijelijk worden verspreid onder de voorwaarden van de GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Dit mag vrijelijk worden verspreid onder de voorwaarden van de GNU Public "
+"License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -50,8 +53,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"service %s ondersteunt chkconfig, maar in geen enkel runlevel staat een verwijzing naar deze "
-"service (uitvoeren 'chkconfig --add %s')\n"
+"service %s ondersteunt chkconfig, maar in geen enkel runlevel staat een "
+"verwijzing naar deze service (uitvoeren 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -76,30 +79,30 @@ msgstr "on"
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "fout bij lezen van map %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "fout bij lezen uit map %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "services gebaseerd op xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "openen map %s mislukt: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versie %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "slechts een van --list, --add, of --del mag worden gegeven\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "slechts een runlevel mag worden gegeven voor een chkconfig zoekvraag\n"
 
@@ -132,11 +135,6 @@ msgstr "Services"
 msgid "error reading info for service %s: %s\n"
 msgstr "fout bij lezen informatie over service %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "fout bij lezen uit map %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -155,16 +153,16 @@ msgstr "verkeerd argument voor --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Er mogen geen services worden beheerd door ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "patroon %s 'globben' mislukt: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "kan het huidige runlevel niet bepalen\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "maken van symlink %s mislukt: %s\n"
@@ -179,7 +177,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Dit mag vrijelijk worden verspreid onder de voorwaarden van de GNU Public License.\n"
+"Dit mag vrijelijk worden verspreid onder de voorwaarden van de GNU Public "
+"License.\n"
 "\n"
 
 #: ../alternatives.c:48
@@ -288,7 +287,8 @@ msgstr "onverwachte regel in %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "link verwijst niet naar alternatief -- modus wordt op handmatig gezet\n"
+msgstr ""
+"link verwijst niet naar alternatief -- modus wordt op handmatig gezet\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -380,7 +380,8 @@ msgstr "  Selectie    Opdracht\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "<enter> om de huidige selectie te bewaren[+], of type een selectienummer: "
+msgstr ""
+"<enter> om de huidige selectie te bewaren[+], of type een selectienummer: "
 
 #: ../alternatives.c:675
 msgid ""
@@ -420,3 +421,5 @@ msgstr "admindir %s is ongeldig\n"
 msgid "alternatives version %s\n"
 msgstr "alternatieven-versie %s\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "fout bij lezen van map %s/init.d: %s"

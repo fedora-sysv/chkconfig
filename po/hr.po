@@ -16,8 +16,11 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s inačica %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ovo može biti slobodno ponovno distribuirano pod uvijetima GNU Public licence.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Ovo može biti slobodno ponovno distribuirano pod uvijetima GNU Public "
+"licence.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -96,7 +99,9 @@ msgstr "samo jedan od --list, --add ili --del mogu bili određeni\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "samo jedna razina pokretanja (runlevel) može biti određena za zahtjeve u chkconfig-u\n"
+msgstr ""
+"samo jedna razina pokretanja (runlevel) može biti određena za zahtjeve u "
+"chkconfig-u\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -168,7 +173,9 @@ msgstr "alternatives inačica %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Može biti slobodno ponovno distribuirano pod uvijetima GNU Public licence.\n\n"
+msgstr ""
+"Može biti slobodno ponovno distribuirano pod uvijetima GNU Public licence.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
@@ -407,4 +414,3 @@ msgstr "neispravni admindir %s\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternativna inačica %s\n"
-

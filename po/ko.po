@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ko\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-03 13:45+1000\n"
 "Last-Translator: Michelle Kim <mkim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -19,8 +19,10 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -79,30 +81,30 @@ msgstr "활성"
 msgid "off"
 msgstr "해제"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd 기반의 서비스:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "%s 디렉토리를 여는데 실패했습니다: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, --del 의 옵션 중 하나만 지정하셔야 합니다\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 질의시에는 하나의 실행 레벨만 지정하셔야 합니다\n"
 
@@ -135,11 +137,6 @@ msgstr "서비스"
 msgid "error reading info for service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생했습니다: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -158,16 +155,16 @@ msgstr "--levels 옵션에 잘못된 인수값이 주어졌습니다\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 명령에 의해 관리될 서비스가 없습니다!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s 심볼릭 링크 파일을 생성하는데 실패했습니다: %s\n"
@@ -291,7 +288,8 @@ msgstr "%s에 잘못된 줄이 있습니다: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
+msgstr ""
+"링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -384,8 +382,8 @@ msgstr "  선택    명령\n"
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"현재 선택[+]을 유지하시려면 엔터키를 누르십시오. 그렇지 않으면,  "
-"선택 번호를 입력해 주십시오:"
+"현재 선택[+]을 유지하시려면 엔터키를 누르십시오. 그렇지 않으면,  선택 번호를 "
+"입력해 주십시오:"
 
 #: ../alternatives.c:675
 msgid ""
@@ -425,3 +423,5 @@ msgstr "admindir %s가 올바르지 않습니다\n"
 msgid "alternatives version %s\n"
 msgstr "대체 버전 %s\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "%s/init.d 디렉토리를 읽는 도중 오류가 발생되었습니다: %s"

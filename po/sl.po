@@ -1,13 +1,13 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Roman Maurer <roman@lugos.si>, 2001.
-# $Id: sl.po,v 1.17 2003/07/13 16:30:05 romanm Exp $
+# $Id: sl.po,v 1.18 2003/10/24 13:26:39 notting Exp $
 # $Source: /home/notting/prog/cvs-fu/chkconfig/po/Attic/sl.po,v $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 9.1\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-07-13 18:25+0200\n"
 "Last-Translator: Roman Maurer <roman@lugos.si>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -51,8 +51,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"chkconfig podpira storitev %s, vendar se nanjo ne sklicujete v nobeni "
-"ravni teka (poženite 'chkconfig --add %s')\n"
+"chkconfig podpira storitev %s, vendar se nanjo ne sklicujete v nobeni ravni "
+"teka (poženite 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -77,30 +77,30 @@ msgstr "vklopljeno"
 msgid "off"
 msgstr "izklopljeno"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "napaka pri branju iz imenika %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "Storitve, osnovane z xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "ni moč odpreti imenika %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s različice %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "določite lahko le eno od izbir --list, --add ali --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "v posamezni zahtevi chkconfig lahko določite le eno raven teka\n"
 
@@ -133,11 +133,6 @@ msgstr "Storitve"
 msgid "error reading info for service %s: %s\n"
 msgstr "napaka pri branju informacij o storitvi %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -156,16 +151,16 @@ msgstr "slab argument izbire --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Storitve ne more upravljati ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ne morem razrešiti vzorca %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "ne morem ugotoviti trenutne ravni teka\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ni moč narediti simbolne povezave %s: %s\n"
@@ -179,7 +174,9 @@ msgstr "alternatives različice %s - Pravna zaščita (C) 2001 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "To lahko prosto razširjate pod pogoji GNU Public License.\n\n"
+msgstr ""
+"To lahko prosto razširjate pod pogoji GNU Public License.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
@@ -385,7 +382,9 @@ msgstr "Enter za ohranitev trenutne izbire[+], ali vpišite številko: "
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "\nnapaka pri branju izbire\n"
+msgstr ""
+"\n"
+"napaka pri branju izbire\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
@@ -416,3 +415,6 @@ msgstr "admindir %s neveljaven\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives različice %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "napaka pri branju iz imenika %s/init.d: %s"

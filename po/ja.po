@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-02 01:02GMT+10:00\n"
 "Last-Translator: James Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
@@ -21,7 +21,8 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:22
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
 "きます。\n"
@@ -87,11 +88,11 @@ msgstr "オン"
 msgid "off"
 msgstr "オフ"
 
-# ../chkconfig.c:172
-#: ../chkconfig.c:282
+# ../ntsysv.c:183
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
 
 # ../chkconfig.c:180
 #: ../chkconfig.c:290
@@ -100,23 +101,23 @@ msgstr "xinetd ベースのサービス:\n"
 
 # ../chkconfig.c:182
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "ディレクトリ %s を開くことができませんでした: %s"
 
 # ../chkconfig.c:284
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s バージョン %s\n"
 
 # ../chkconfig.c:291
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです\n"
 
 # ../chkconfig.c:339
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです\n"
 
@@ -156,12 +157,6 @@ msgstr "サービス"
 msgid "error reading info for service %s: %s\n"
 msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
 
-# ../ntsysv.c:183
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
-
 # ../ntsysv.c:226
 #: ../ntsysv.c:239
 #, c-format
@@ -184,18 +179,18 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv によって管理できるサービスがありません\n"
 
 # ../leveldb.c:355
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "パターン %s の解析に失敗しました: %s\n"
 
 # ../leveldb.c:386
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません\n"
 
 # ../leveldb.c:474
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "シンボリックリンク %s をつくるのに失敗しました。 %s\n"
@@ -467,3 +462,6 @@ msgstr "admindir %sは無効\n"
 msgid "alternatives version %s\n"
 msgstr "alternativesのバージョン %s\n"
 
+# ../chkconfig.c:172
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"

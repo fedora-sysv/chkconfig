@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconf 1.0\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2002-03-29 11:19+0000\n"
 "Last-Translator: Simos Xenitellis <simos@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -77,30 +77,30 @@ msgstr "ενεργό"
 msgid "off"
 msgstr "ανενεργό"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "υπηρεσίες βασισμένες στο xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s έκδοση %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "μπορούν να καθοριστούς μόνο ένα από τα --list, --add ή --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "μόνο ένα επίπεδο εκτέλεσης μπορεί να καθοριστεί σε \n"
@@ -135,11 +135,6 @@ msgstr "Υπηρεσίες"
 msgid "error reading info for service %s: %s\n"
 msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -158,16 +153,16 @@ msgstr "εσφαλμένο όρισμα στο --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Δεν υπάρχουν υπηρεσίες που μπορεί να διαχειριστεί το ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "αποτυχία ανάπτυξης σχεδίου %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
@@ -427,3 +422,6 @@ msgstr ""
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
 msgstr "%s έκδοση %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s"

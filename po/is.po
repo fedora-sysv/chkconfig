@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.11\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2001-02-15 01:17+0000\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
@@ -74,30 +74,30 @@ msgstr "virk"
 msgid "off"
 msgstr "óvirk"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "villa við lestur úr möppu %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "villa við lestur úr möppu %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "þjónustur úr xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "gat ekki opnað möppuna %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s útgáfa %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "einungis má nefna eitt af --list, --add eða --del viðföngunum\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
 
@@ -130,11 +130,6 @@ msgstr "Þjónustur"
 msgid "error reading info for service %s: %s\n"
 msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "villa við lestur úr möppu %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -153,16 +148,16 @@ msgstr "óleyfilegt viðfang við --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Engum þjónustum er hægt að stjórna með ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gat ekki mátað mynstrið %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "get ekki ákvarðað núverandi keyrslustig\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "gat ekki búið til tákntengið %s: %s\n"
@@ -417,3 +412,6 @@ msgstr "mappan %s er ógild\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives útgáfa %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "villa við lestur úr möppu %s/init.d: %s"

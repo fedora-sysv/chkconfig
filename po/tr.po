@@ -1,14 +1,14 @@
 # 
 # Turkish translations for chkconfig messages.
 # Copyright (C) 2002,2003 Free Software Foundation, Inc.
-# $Id: tr.po,v 1.31 2003/08/03 11:56:18 nilgun Exp $
+# $Id: tr.po,v 1.32 2003/10/24 13:26:39 notting Exp $
 # Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig \n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-08-03 13:51+0300\n"
 "Last-Translator: Nilgün Belma Bugüner <nilgun@superonline.com>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
@@ -23,8 +23,10 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -78,32 +80,33 @@ msgstr "açık"
 msgid "off"
 msgstr "kapalı"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d dizininden okunurken hata: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "%s/init.d dizininden okurken hata: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd tabanlı hizmetler:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "%s dizini açılamıyor: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s sürüm %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr ""
+"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -134,11 +137,6 @@ msgstr "Hizmetler"
 msgid "error reading info for service %s: %s\n"
 msgstr "%s hizmeti hakkında bilgi alırken hata : %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "%s/init.d dizininden okurken hata: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -157,16 +155,16 @@ msgstr "--levels için hatalı argüman\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafından yönetilebilecek hizmet yok!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "kalıp %s genelleştirilemedi: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "çalışma düzeyi belirlenemiyor\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik bağı yapılamadı: %s\n"
@@ -382,7 +380,9 @@ msgstr "  Seçim        Komut\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını girin:"
+msgstr ""
+"Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını "
+"girin:"
 
 #: ../alternatives.c:675
 msgid ""
@@ -422,3 +422,5 @@ msgstr "%s yönetici dizini geçersiz\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives %s sürümü\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "%s/init.d dizininden okunurken hata: %s"

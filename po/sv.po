@@ -1,12 +1,12 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.25 2003/02/02 12:02:57 menthos Exp $
+# $Id: sv.po,v 1.26 2003/10/24 13:26:39 notting Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-02 13:13+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -31,9 +31,9 @@ msgid "usage:   %s --list [name]\n"
 msgstr "användning:   %s --list [namn]\n"
 
 #: ../chkconfig.c:26
-#, c-format
-msgid "               %s --add <name>\n"
-msgstr "              %s --add <namn>\n"
+#, fuzzy, c-format
+msgid "         %s --add <name>\n"
+msgstr "              %s --del <namn>\n"
 
 #: ../chkconfig.c:27
 #, c-format
@@ -77,30 +77,30 @@ msgstr "på"
 msgid "off"
 msgstr "av"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "fel vid läsning från katalogen %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd-baserade tjänster:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "misslyckades med att öppna katalogen %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "endast en av --list, --add eller --del kan anges\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
@@ -133,11 +133,6 @@ msgstr "Tjänster"
 msgid "error reading info for service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -156,16 +151,16 @@ msgstr "felaktigt argument till --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
@@ -190,39 +185,32 @@ msgstr ""
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
-"                         [--initscript <tjänst>]\n"
+msgstr "                         [--initscript <tjänst>]\n"
 
 #: ../alternatives.c:50
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr ""
-"                         [--slave <länk> <namn> <sökväg>]*\n"
+msgstr "                         [--slave <länk> <namn> <sökväg>]*\n"
 
 # Ska vara vänsterjusterat i förhållande till "usage: "/"användning: " ovan
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
-"            alternatives --remove <namn> <sökväg>\n"
+msgstr "            alternatives --remove <namn> <sökväg>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
-msgstr ""
-"            alternatives --auto <namn>\n"
+msgstr "            alternatives --auto <namn>\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --config <name>\n"
-msgstr ""
-"            alternatives --config <namn>\n"
+msgstr "            alternatives --config <namn>\n"
 
 #: ../alternatives.c:54
 msgid "       alternatives --display <name>\n"
-msgstr ""
-"            alternatives --display <namn>\n"
+msgstr "            alternatives --display <namn>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
-"            alternatives --set <namn> <sökväg>\n"
+msgstr "            alternatives --set <namn> <sökväg>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
@@ -411,9 +399,6 @@ msgstr "%s har inte konfigurerats som ett alternativ för %s\n"
 msgid "(would remove %s\n"
 msgstr "(skulle ta bort %s\n"
 
-msgid "(would remove %s)\n"
-msgstr "(skulle ta bort %s)\n"
-
 #: ../alternatives.c:746
 #, c-format
 msgid "failed to remove %s: %s\n"
@@ -433,3 +418,12 @@ msgstr "administrationskatalogen %s är ogiltig\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives version %s\n"
+
+#~ msgid "               %s --add <name>\n"
+#~ msgstr "              %s --add <namn>\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "fel vid läsning från katalogen %s/init.d: %s"
+
+#~ msgid "(would remove %s)\n"
+#~ msgstr "(skulle ta bort %s)\n"

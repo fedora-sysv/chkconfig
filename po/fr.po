@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-03-25 14:47+0100\n"
 "Last-Translator: Audrey Simons <asimons@redhat.com>\n"
 "Language-Team: french <fr@li.org>\n"
@@ -20,7 +20,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Ce produit peut être librement distribué selon les termes de la licence "
 "publique GNU (GPL).\n"
@@ -77,30 +78,30 @@ msgstr "Marche"
 msgid "off"
 msgstr "Arrêt"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "Services basés sur xinetd : \n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "Impossible d'ouvrir le répertoire %s : %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "spécifiez --list, --add OU --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "Vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête "
@@ -135,11 +136,6 @@ msgstr "Services"
 msgid "error reading info for service %s: %s\n"
 msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -158,16 +154,16 @@ msgstr "Argument incorrect pour --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Aucun service ne peut être administré par ntsysv !\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Échec d'interprétation du motif %s : %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Impossible de créer le lien symbolique %s : %s\n"
@@ -188,7 +184,8 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr ""
+"utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -384,7 +381,9 @@ msgstr "  Sélection    Commande\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Entrez [+] pour garder la sélection courante ou tapez le numéro de type de sélection :"
+msgstr ""
+"Entrez [+] pour garder la sélection courante ou tapez le numéro de type de "
+"sélection :"
 
 #: ../alternatives.c:675
 msgid ""
@@ -424,3 +423,5 @@ msgstr "admindir %s invalide\n"
 msgid "alternatives version %s\n"
 msgstr "version des alternatives %s\n"
 
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-08 11:11+0100\n"
 "Last-Translator: Tamas Szanto <tszanto@mol.hu>\n"
 "Language-Team: Hungarian\n"
@@ -17,7 +17,9 @@ msgstr "%s %s - Copyright (c) Red Hat, Inc., 1997-2000.\n"
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint.\n"
+msgstr ""
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -45,8 +47,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"A(z) %s szolgáltatás támogatja a chkconfigot, de egyik futási szinten sem szerepel (adja ki "
-"a 'chkconfig --add %s' parancsot)\n"
+"A(z) %s szolgáltatás támogatja a chkconfigot, de egyik futási szinten sem "
+"szerepel (adja ki a 'chkconfig --add %s' parancsot)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -71,30 +73,30 @@ msgstr "be"
 msgid "off"
 msgstr "ki"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "hiba történt a(z) %s/init.d könyvtár olvasásakor: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "hiba történt a(z) %s/init.d könyvtár olvasása közben: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "xinetd-alapú szolgátatások:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "a(z) %s könyvtár megnyitása nem sikerült: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "a --list, --add és --del közül csak egyet lehet megadni\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "csak egy futási szintet lehet megadni egy chkconfig lekérdezésben\n"
 
@@ -127,11 +129,6 @@ msgstr "Szolgáltatások"
 msgid "error reading info for service %s: %s\n"
 msgstr "hiba történt a(z) %s szolgáltatás adatainak beolvasásakor: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "hiba történt a(z) %s/init.d könyvtár olvasása közben: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -150,16 +147,16 @@ msgstr "hibás --levels argumentum\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Egy szolgáltatás sem kezelhető az ntsysv programmal!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nem sikerült értelmezni a(z) %s mintát: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "az aktuális futási szintet nem sikerült megállapítani\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "a(z) %s szimbolikus link létrehozása nem sikerült: %s\n"
@@ -174,12 +171,14 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint.\n"
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 "\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "Használat: alternatives --install <link> <név> <elérési út> <prioritás>\n"
+msgstr ""
+"Használat: alternatives --install <link> <név> <elérési út> <prioritás>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -375,13 +374,14 @@ msgstr "  Kiválasztási   parancs\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "A kiválasztás [+] megőrzése: Enter, vagy adjon meg egy kiválasztási számot: "
+msgstr ""
+"A kiválasztás [+] megőrzése: Enter, vagy adjon meg egy kiválasztási számot: "
 
 #: ../alternatives.c:675
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr 
+msgstr ""
 "\n"
 "hiba történt a választás beolvasásakor\n"
 
@@ -414,3 +414,6 @@ msgstr "admindir %s érvénytelen\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "hiba történt a(z) %s/init.d könyvtár olvasásakor: %s"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-02 17:49+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
@@ -75,30 +75,30 @@ msgstr "sim"
 msgid "off"
 msgstr "não"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "erro ao ler da directoria %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "erro ao ler da directoria %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "servidos baseados no xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "não foi possível abrir a directoria %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versão %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "só pode ser dada uma das opções --list, --add, ou --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "só pode ser indicado um nível de execução para uma pesquisa do chkconfig\n"
@@ -132,11 +132,6 @@ msgstr "Serviços"
 msgid "error reading info for service %s: %s\n"
 msgstr "erro ao ler informação para o serviço %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "erro ao ler da directoria %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -155,16 +150,16 @@ msgstr "argumento inválido para --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Não há nenhum serviço que possa ser gerido pelo ntsysv!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossível definir o padrão %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "não foi possível determinar o nível de execução actual\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "não foi possível criar a ligação simbólica %s: %s\n"
@@ -183,7 +178,9 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "utilização: alternatives --install <ligação> <nome> <directoria> <prioridade>\n"
+msgstr ""
+"utilização: alternatives --install <ligação> <nome> <directoria> "
+"<prioridade>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -287,7 +284,8 @@ msgstr "linha inesperada em %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "a ligação não aponta para nenhuma alternativa -- a mudar para o modo manual\n"
+msgstr ""
+"a ligação não aponta para nenhuma alternativa -- a mudar para o modo manual\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
@@ -379,13 +377,16 @@ msgstr "  Selecção    Comando\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "'Enter' para manter a selecção actual[+], ou indique o número de selecção: "
+msgstr ""
+"'Enter' para manter a selecção actual[+], ou indique o número de selecção: "
 
 #: ../alternatives.c:675
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "\nerro ao ler a opção\n"
+msgstr ""
+"\n"
+"erro ao ler a opção\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
@@ -416,3 +417,6 @@ msgstr "a dir. admin. %s é inválida\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "versão alternativa %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "erro ao ler da directoria %s/init.d: %s"

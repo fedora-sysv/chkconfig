@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-06-17 12:35+1000\n"
 "Last-Translator: \n"
 "Language-Team:  <de@li.org>\n"
@@ -23,8 +23,10 @@ msgstr "%s Version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:23
 #: ../chkconfig.c:22
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:25
@@ -87,11 +89,11 @@ msgstr "Ein"
 msgid "off"
 msgstr "Aus"
 
-# ../chkconfig.c:151
-#: ../chkconfig.c:282
+# ../ntsysv.c:173
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
@@ -99,23 +101,24 @@ msgstr "xinetd-basierende Dienste:\n"
 
 # ../chkconfig.c:117
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "Fehler beim Öffnen des Verzeichnisses %s: %s"
 
 # ../chkconfig.c:231
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s Version %s\n"
 
 # ../chkconfig.c:238
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
+msgstr ""
+"nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
 
 # ../chkconfig.c:286
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 
@@ -156,12 +159,6 @@ msgid "error reading info for service %s: %s\n"
 msgstr "Fehler beim Lesen von Informationen des Dienstes %s: %s\n"
 
 # ../ntsysv.c:173
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
-
-# ../ntsysv.c:173
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -183,18 +180,18 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Mit ntsysv können keine Dienste verwaltet werden!\n"
 
 # ../leveldb.c:265
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Fehler beim Mustervergleich des Musters %s: %s\n"
 
 # ../leveldb.c:296
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
 # ../leveldb.c:330
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Fehler beim Erstellen der symbolischen Verknüpfung %s: %s\n"
@@ -422,7 +419,9 @@ msgstr "  Auswahl    Befehl\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Eingabe um die vorgegebene Auswahl[+] zu behalten, oder geben Sie die Nummer an:"
+msgstr ""
+"Eingabe um die vorgegebene Auswahl[+] zu behalten, oder geben Sie die Nummer "
+"an:"
 
 # ../ntsysv.c:164
 #: ../alternatives.c:675
@@ -465,3 +464,6 @@ msgstr "admindir %s ungültig\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives Version %s\n"
 
+# ../chkconfig.c:151
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
 "PO-Revision-Date: 2003-02-03 15:50+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>, 2003\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -73,30 +73,30 @@ msgstr "on"
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "chyba při čtení z adresáře %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "chyba při čtení z adresáře %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
 msgstr "služby založené na xinetd:\n"
 
 #: ../chkconfig.c:292
-#, c-format
-msgid "failed to open directory %s: %s"
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s\n"
 msgstr "nemohu otevřít adresář %s: %s"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verze %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "může být zadán pouze jeden z přepínačů --list, --add nebo --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "při dotazu může být zadán pouze jeden runlevel\n"
 
@@ -129,11 +129,6 @@ msgstr "Služby"
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba při čtení informací o službě %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "chyba při čtení z adresáře %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -152,16 +147,16 @@ msgstr "chybný argument volby --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemůže spravovat žádné služby!\n"
 
-#: ../leveldb.c:507
+#: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nemohu expandovat vzorek %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "nemohu určit aktuální runlevel\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nemohu vytvořit symbolický odkaz %s: %s\n"
@@ -416,3 +411,6 @@ msgstr "admindir %s neplatný\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verze %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "chyba při čtení z adresáře %s/init.d: %s"
