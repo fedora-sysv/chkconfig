@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.0
+%define version 1.0.1
 Version: %{version}
 Release: 2
 Copyright: GPL
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Tue Mar 09 1999 Erik Troan <ewt@redhat.com>
+- made glob a bit more specific so xinetd and inetd don't cause improper matches
+
 * Thu Feb 18 1999 Matt Wilson <msw@redhat.com>
 - removed debugging output when starting ntsysv
 
