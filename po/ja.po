@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2003-02-02 01:02GMT+10:00\n"
+"PO-Revision-Date: 2004-01-06 18:23+0900\n"
 "Last-Translator: James Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -216,12 +216,12 @@ msgstr "使用法: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <サービス>]\n\n"
 
 # ../chkconfig.c:28
 #: ../alternatives.c:50
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
@@ -230,22 +230,22 @@ msgstr "       alternatives --remove <name> <path>\n"
 # ../chkconfig.c:26
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <名前>\n"
 
 # ../chkconfig.c:26
 #: ../alternatives.c:53
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <name>\n"
+msgstr "       alternatives --config <名前>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:54
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <name>\n"
+msgstr "       alternatives --display <名前>\n"
 
 # ../chkconfig.c:27
 #: ../alternatives.c:55
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <名前> <パス>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
@@ -257,7 +257,7 @@ msgstr "共通のオプション: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <ディレクトリ> --admindir <ディレクトリ>\n"
 
 # ../chkconfig.c:138
 #: ../alternatives.c:159
