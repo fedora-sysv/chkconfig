@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-02-10 17:32+0100\n"
+"PO-Revision-Date: 2003-02-18 20:50+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -191,7 +191,7 @@ msgstr "                    [--slave <lenke> <navn> <sti>]*\n\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <navn> <sti>\n"
 
 #: ../alternatives.c:52
 msgid "       alternatives --auto <name>\n"
@@ -215,11 +215,11 @@ msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "vanlige flagg: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <katalog> --admindir <katalog>\n"
 
 #: ../alternatives.c:159
 #, c-format
@@ -283,11 +283,11 @@ msgstr "uventet linje i %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "lenken peker ikke til et alternativ -- setter modus til manuelt\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "lenke endret -- setter modus til manuelt\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
@@ -347,7 +347,7 @@ msgstr "%s - status manuell.\n"
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "lenken peker nå til %s\n"
 
 #: ../alternatives.c:623
 #, c-format
@@ -362,20 +362,20 @@ msgstr " slave %s: %s\n"
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Nåværende «beste» versjon er %s\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Det finnes %d programmer som har «%s».\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "      Valg    Kommando\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Linjeskift for å beholde nåværende valg[+] eller skriv inn nummer på valg: "
 
 #: ../alternatives.c:675
 msgid ""
