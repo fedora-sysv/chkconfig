@@ -45,6 +45,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"Þjónustan %s er studd af chkconfig en það er engin tílvísun í hana í keyslustigunum "
+"(keyrðu chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
