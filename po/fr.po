@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.1\n"
-"POT-Creation-Date: 1999-10-18 15:09-0400\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
 "PO-Revision-Date: 1999-09-03\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"

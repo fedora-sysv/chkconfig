@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-10-18 15:09-0400\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
 "PO-Revision-Date: 1999-04-04 02:44+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Gelecek A.Þ <gorkem@gelecek.com.tr>\n"

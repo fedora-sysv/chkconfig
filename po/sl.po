@@ -1,12 +1,12 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Roman Maurer <roman.maurer@hermes.si>, 1999.
-# $Id: sl.po,v 1.3 1999/12/03 19:33:00 i18n Exp $
+# $Id: sl.po,v 1.4 2000/02/02 07:10:05 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-10-18 15:09-0400\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
 "PO-Revision-Date: 1999-09-18 18:20+0200\n"
 "Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"

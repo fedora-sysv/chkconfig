@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 1999-10-18 15:09-0400\n"
+"POT-Creation-Date: 1999-12-06 14:42-0500\n"
 "PO-Revision-Date: 1999-04-09 10:00+0500\n"
 "Last-Translator: Alex Lobas <soft@cw.comizdat.com>\n"
 "Language-Team: Comizdat <soft@cw.comizdat.com>\n"
