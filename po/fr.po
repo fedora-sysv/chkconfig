@@ -28,7 +28,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Utilisation : %s --list [nom]\n"
+msgstr "utilisation : %s --list [nom]\n"
 
 #: ../chkconfig.c:26
 #, c-format
