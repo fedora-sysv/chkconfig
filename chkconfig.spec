@@ -1,16 +1,17 @@
-Summary: A system tool for maintaining the /etc/rc.d hierarchy.
+Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.1.4
+Version: 1.1.5
 Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
+Prereq: initscripts >= 5.18
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
-symbolic links in /etc/rc.d, to relieve system administrators of some 
+symbolic links in /etc/rc*.d, to relieve system administrators of some 
 of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
@@ -20,7 +21,7 @@ Group: System Environment/Base
 %description -n ntsysv
 Ntsysv provides a simple interface for setting which system services
 are started or stopped in various runlevels (instead of directly
-manipulating the numerous symbolic links in /etc/rc.d). Unless you
+manipulating the numerous symbolic links in /etc/rc*.d). Unless you
 specify a runlevel or runlevels on the command line (see the man
 page), ntsysv configures the current runlevel (5 if you're using X).
 
@@ -39,9 +40,9 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
 rm -rf $RPM_BUILD_ROOT
 make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
-mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
+mkdir -p $RPM_BUILD_ROOT/etc/init.d
 for n in 0 1 2 3 4 5 6; do
-    mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
+    mkdir -p $RPM_BUILD_ROOT/etc/rc${n}.d
 done
 
 %clean
@@ -51,8 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 /sbin/chkconfig
 %{_mandir}/man8/chkconfig.8*
-%dir /etc/rc.d
-%dir /etc/rc.d/*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
 %files -n ntsysv
@@ -63,8 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
-* %{date} Cristian Gafton <gafton@redhat.com>
-- rebuild for release
+* Thu Jun 15 2000 Bill Nottingham <notting@redhat.com>
+- don't own /etc/rc.*
 
 * Fri Feb 11 2000 Bill Nottingham <notting@redhat.com>
 - typo in man page
