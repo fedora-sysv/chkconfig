@@ -2,43 +2,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 1999-04-04 02:44+0200\n"
-"Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
-"Language-Team: Gelecek A.Þ <gorkem@gelecek.com.tr>\n"
+"PO-Revision-Date: 2001-09-06 17:27+300\n"
+"Last-Translator: Nilgün Belma Bugüner <nilgun@fide.org>\n"
+"Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-9\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s sürüm %s - Telif Hakký (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "kullaným:   %s --list [isim]\n"
+msgstr "kullanýmý:   %s --list [isim]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "          %s --add <isim>\n"
+msgstr "             %s --add <isim>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <isim>\n"
+msgstr "             %s --del <isim>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "          %s [--level <düzeyler>] <isim> %s)\n"
+msgstr "             %s [--level <düzeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -48,7 +47,7 @@ msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
 #: ../chkconfig.c:37
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s hizmeti hakkýnda bilgi alýrken hata: %s\n"
+msgstr "%s hizmeti hakkýnda bilgi alýnýrken hata: %s\n"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
@@ -61,12 +60,12 @@ msgstr "kapalý"
 #: ../chkconfig.c:138
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
+msgstr "%s/init.d açýlamýyor: %s\n"
 
 #: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "%s/init.d dizininden okurken hata: %s"
+msgstr "%s/init.d dizininden okunurken hata: %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
@@ -75,7 +74,7 @@ msgstr "xinetd temelli servisler:\n"
 #: ../chkconfig.c:182
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "%s dizinine eriþim sýrasýnda hata: %s"
+msgstr "%s dizini açýlamýyor: %s"
 
 #: ../chkconfig.c:284
 #, c-format
@@ -88,8 +87,7 @@ msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -133,7 +131,7 @@ msgstr "%s dizininden okurken hata: %s\n"
 #: ../ntsysv.c:261
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "%s in çalýþtýrýlabilmesi için root yetkileri gerekiyor.\n"
 
 #: ../ntsysv.c:278
 msgid "bad argument to --levels\n"
@@ -146,7 +144,7 @@ msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 #: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob pattern %s hatasý: %s\n"
+msgstr "kalýp %s genelleþtirilemedi: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
@@ -155,4 +153,5 @@ msgstr "çalýþma düzeyi belirlenemiyor\n"
 #: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s sembolik baðlantýsý yapýlamadý : %s\n"
+msgstr "%s sembolik baðlantýsý yapýlamadý: %s\n"
+
