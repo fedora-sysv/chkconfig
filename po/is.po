@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: chkconfig 1.11\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-19 16:51-0400\n"
-"PO-Revision-Date: 2001-02-15 01:17+0000\n"
+"PO-Revision-Date: 2004-05-21 01:17+0000\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -242,7 +242,7 @@ msgstr "                     --altdir <mappa> --admindir <mappa>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "les %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -305,9 +305,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "ógild lína í %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "gat ekki lesið %s: %s\n"
+msgstr "gat ekki lesið tengið %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -357,7 +357,7 @@ msgstr "gat ekki skipt út %s með %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "keyri %s\n"
 
 #: ../alternatives.c:512
 #, c-format
