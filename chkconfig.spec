@@ -31,7 +31,7 @@ make instroot=$RPM_BUILD_ROOT install
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 for n in 0 1 2 3 4 5 6; do
     mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
-fi
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
