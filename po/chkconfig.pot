@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-11 17:01-0500\n"
+"POT-Creation-Date: 2005-02-02 15:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:282 ../ntsysv.c:195
+#: ../chkconfig.c:282 ../ntsysv.c:201
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr ""
@@ -107,66 +107,66 @@ msgstr ""
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
-#: ../ntsysv.c:30
+#: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:62 ../ntsysv.c:99
+#: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
 msgstr ""
 
-#: ../ntsysv.c:62
+#: ../ntsysv.c:68
 msgid "Back"
 msgstr ""
 
-#: ../ntsysv.c:62
+#: ../ntsysv.c:68
 msgid "Cancel"
 msgstr ""
 
-#: ../ntsysv.c:74
+#: ../ntsysv.c:80
 msgid "What services should be automatically started?"
 msgstr ""
 
-#: ../ntsysv.c:80
+#: ../ntsysv.c:86
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:186 ../ntsysv.c:230
+#: ../ntsysv.c:192 ../ntsysv.c:236
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:239
+#: ../ntsysv.c:245
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:275
+#: ../ntsysv.c:281
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:298
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:299
+#: ../ntsysv.c:305
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:510
+#: ../leveldb.c:517
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:541
+#: ../leveldb.c:548
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:629
+#: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
