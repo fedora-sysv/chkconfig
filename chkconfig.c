@@ -102,6 +102,7 @@ static int listService(char * item) {
     struct dirent * ent;
     struct stat sb;
     char fn[1024];
+    int err = 0;
 
     if (item) return showServiceInfo(item, 0);
 
@@ -111,13 +112,15 @@ static int listService(char * item) {
         return 1;
     }
 
-    errno = 0;
     while ((ent = readdir(dir))) {
 	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
 	    strchr(ent->d_name, '.')) continue;
 
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
-	if (stat(fn, &sb)) continue;
+	if (stat(fn, &sb)) {
+	    err = errno;
+	    continue;
+	}
 	if (!S_ISREG(sb.st_mode)) continue;
 
 	if (showServiceInfo(ent->d_name, 1)) {
@@ -126,9 +129,9 @@ static int listService(char * item) {
 	}
     }
 
-    if (errno) {
+    if (err) {
 	fprintf(stderr, _("error reading from directory %s/init.d: %s"), 
-		RUNLEVELS, strerror(errno));
+		RUNLEVELS, strerror(err));
         return 1;
     }
 

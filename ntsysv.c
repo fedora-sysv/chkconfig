@@ -129,6 +129,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     struct service * services;
     int numServices = 0;
     int numServicesAlloced, rc;
+    int err = 0;
 
     numServicesAlloced = 10;
     services = malloc(sizeof(*services) * numServicesAlloced);
@@ -139,13 +140,16 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
         return 2;
     }
 
-    errno = 0;
     while ((ent = readdir(dir))) {
 	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
 	    strchr(ent->d_name, '.')) continue;
 
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
-	if (stat(fn, &sb)) continue;
+	if (stat(fn, &sb))
+	{
+		err = errno;
+		continue;
+	}
 	if (!S_ISREG(sb.st_mode)) continue;
 
 	if (numServices == numServicesAlloced) {
@@ -156,7 +160,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 
 	rc = readServiceInfo(ent->d_name, services + numServices);
 	if (rc == -1) {
-	    fprintf(stderr, "error reading info for service %s: %s\n",
+	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));
 	    closedir(dir);
 	    return 2;
@@ -164,9 +168,9 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	    numServices++;
     }
 
-    if (errno) {
-	fprintf(stderr, _("error reading from directory %s/init.d: %s"),
-		RUNLEVELS, strerror(errno));
+    if (err) {
+	fprintf(stderr, _("error reading from directory %s/init.d: %s\n"),
+		RUNLEVELS, strerror(err));
         return 1;
     }
 

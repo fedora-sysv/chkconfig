@@ -30,6 +30,7 @@ update-po: Makefile
 		lang=`basename $$cat .mo`; \
 		if msgmerge $$lang.po $(NLSPACKAGE).pot > $$lang.pox ; then \
 			echo "msgmerge of $$lang succeeded" ; \
+			mv $$lang.pox $$lang.o ; \
 		else \
 			echo "msgmerge of $$lang failed" ; \
 			rm -f $$lang.pox ; \

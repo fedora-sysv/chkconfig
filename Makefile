@@ -36,7 +36,7 @@ ntsysv.o: ntsysv.c leveldb.h
 leveldb.o: leveldb.c leveldb.h
 
 clean:
-	rm -f chkconfig $(OBJS) $(NTOBJS)
+	rm -f chkconfig ntsysv $(OBJS) $(NTOBJS)
 	make -C po clean
 
 install:
