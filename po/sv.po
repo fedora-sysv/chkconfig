@@ -1,8 +1,13 @@
+# Swedish messages for chkconfig.
+# Copyright (C) 2001 Christian Rose <menthos@menthos.com>
+#
+# $Id: sv.po,v 1.18 2001/08/15 10:42:38 menthos Exp $
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-02-19 18:50+0100\n"
+"POT-Creation-Date: 2001-06-12 11:42-0400\n"
+"PO-Revision-Date: 2001-08-15 12:41+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +119,7 @@ msgstr "Vilka tjänster ska startas automatiskt?"
 msgid "Services"
 msgstr "Tjänster"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
@@ -124,34 +129,34 @@ msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "fel vid läsning från katalogen %s: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Du måste vara root för att kunna köra %s.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr "felaktigt argument till --levels\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:367
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:398
 msgid "cannot determine current run level\n"
 msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:486
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
