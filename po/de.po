@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
-"POT-Creation-Date: 2000-06-30 14:42-0400\n"
+"POT-Creation-Date: 2000-07-18 00:53-0400\n"
 "PO-Revision-Date: 2000-07-21 13:00+0200\n"
 "Last-Translator: Jeff Garner <jgarner@us.alpnet.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -13,127 +13,169 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
+# ../chkconfig.c:23
 #: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
 
+# ../chkconfig.c:26
 #: ../chkconfig.c:26
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr "Verwendung: %s --list [Name]\n"
 
+# ../chkconfig.c:27
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <Name>\n"
 
+# ../chkconfig.c:28
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <Name>\n"
 
+# ../chkconfig.c:29
 #: ../chkconfig.c:29
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <Level>] <Name> %s)\n"
 
+# ../chkconfig.c:36
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "Dienst %s unterstützt nicht chkconfig\n"
 
+# ../chkconfig.c:38
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "Fehler beim Lesen von Angaben zu Dienst %s: %s\n"
 
-#: ../chkconfig.c:100
+# ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "on"
 msgstr "Ein"
 
-#: ../chkconfig.c:100
+# ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "off"
 msgstr "Aus"
 
-#: ../chkconfig.c:117
+# ../chkconfig.c:117
+#: ../chkconfig.c:139
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
 
-#: ../chkconfig.c:151
+# ../chkconfig.c:151
+#: ../chkconfig.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
 
-#: ../chkconfig.c:231
+#: ../chkconfig.c:181
+msgid "xinetd based services:\n"
+msgstr ""
+
+# ../chkconfig.c:117
+#: ../chkconfig.c:183
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s"
+msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
+
+# ../chkconfig.c:231
+#: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s Version %s\n"
 
-#: ../chkconfig.c:238
+# ../chkconfig.c:238
+#: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
 
-#: ../chkconfig.c:286
+# ../chkconfig.c:286
+#: ../chkconfig.c:340
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "nur ein Runlevel darf für eine chkconfig-Anfrage angegeben werden\n"
 
+# ../ntsysv.c:30
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
 msgstr "Weitere Informationen zu einem Dienst erhalten Sie mit <F1>."
 
-#: ../ntsysv.c:56 ../ntsysv.c:93
+# ../ntsysv.c:56 ../ntsysv.c:93
+#: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
 msgstr "OK"
 
-#: ../ntsysv.c:56
+# ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Back"
 msgstr "Zurück"
 
-#: ../ntsysv.c:56
+# ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../ntsysv.c:68
+# ../ntsysv.c:68
+#: ../ntsysv.c:74
 msgid "What services should be automatically started?"
 msgstr "Welche Dienste sollen automatisch gestartet werden?"
 
-#: ../ntsysv.c:74
+# ../ntsysv.c:74
+#: ../ntsysv.c:80
 msgid "Services"
 msgstr "Dienste"
 
-#: ../ntsysv.c:164
+# ../ntsysv.c:164
+#: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "Fehler beim Lesen von Informationen zu Dienst %s: %s\n"
 
-#: ../ntsysv.c:173
+# ../ntsysv.c:173
+#: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
-#: ../ntsysv.c:219
+# ../ntsysv.c:173
+#: ../ntsysv.c:226
+#, fuzzy, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
+
+# ../ntsysv.c:219
+#: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
 msgstr "Ungültiges Argument bei --levels\n"
 
-#: ../ntsysv.c:226
+# ../ntsysv.c:226
+#: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Durch ntsysv dürfen keine Dienste verwaltet werden!\n"
 
-#: ../leveldb.c:265
+# ../leveldb.c:265
+#: ../leveldb.c:350
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Fehler beim Mustervergleich von Muster %s: %s\n"
 
-#: ../leveldb.c:296
+# ../leveldb.c:296
+#: ../leveldb.c:381
 msgid "cannot determine current run level\n"
 msgstr "aktueller Runlevel kann nicht bestimmt werden\n"
 
-#: ../leveldb.c:330
+# ../leveldb.c:330
+#: ../leveldb.c:469
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Fehler beim Herstellen der symbolischen Verknüpfung %s: %s\n"
-

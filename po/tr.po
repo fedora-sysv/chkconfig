@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-12-06 14:42-0500\n"
+"POT-Creation-Date: 2000-07-18 00:53-0400\n"
 "PO-Revision-Date: 1999-04-04 02:44+0200\n"
 "Last-Translator: Görkem Çetin <gorkem@gelecek.com.tr>\n"
 "Language-Team: Gelecek A.Þ <gorkem@gelecek.com.tr>\n"
@@ -45,34 +45,43 @@ msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata: %s\n"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "on"
 msgstr "açýk"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "off"
 msgstr "kapalý"
 
-#: ../chkconfig.c:117
+#: ../chkconfig.c:139
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
 
-#: ../chkconfig.c:151
+#: ../chkconfig.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d dizininden okurken hata: %s"
 
-#: ../chkconfig.c:231
+#: ../chkconfig.c:181
+msgid "xinetd based services:\n"
+msgstr ""
+
+#: ../chkconfig.c:183
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s"
+msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
+
+#: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s surum %s\n"
 
-#: ../chkconfig.c:238
+#: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:286
+#: ../chkconfig.c:340
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 "chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
@@ -81,54 +90,59 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr "Hizmet hakkýnda daha fazla bilgi almak için <F1> tuþuna basýn."
 
-#: ../ntsysv.c:56 ../ntsysv.c:93
+#: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
 msgstr "Tamam"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Back"
 msgstr "Geri"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Cancel"
 msgstr "Ýptal"
 
-#: ../ntsysv.c:68
+#: ../ntsysv.c:74
 msgid "What services should be automatically started?"
 msgstr "Hangi hizmetler otomatik olarak çalýþtýrýlsýn?"
 
-#: ../ntsysv.c:74
+#: ../ntsysv.c:80
 msgid "Services"
 msgstr "Hizmetler"
 
-#: ../ntsysv.c:164
+#: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata : %s\n"
 
-#: ../ntsysv.c:173
+#: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d dizininden okurken hata: %s\n"
 
-#: ../ntsysv.c:219
+#: ../ntsysv.c:226
+#, fuzzy, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "%s/init.d dizininden okurken hata: %s\n"
+
+#: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
 msgstr "--levels için hatalý argüman\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
 
-#: ../leveldb.c:265
+#: ../leveldb.c:350
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "glob pattern %s hatasý: %s\n"
 
-#: ../leveldb.c:296
+#: ../leveldb.c:381
 msgid "cannot determine current run level\n"
 msgstr "çalýþma düzeyi belirlenemiyor\n"
 
-#: ../leveldb.c:330
+#: ../leveldb.c:469
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik baðlantýsý yapýlamadý : %s\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 1999-12-06 14:42-0500\n"
+"POT-Creation-Date: 2000-07-18 00:53-0400\n"
 "PO-Revision-Date: 2000-02-22 21:18+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -45,34 +45,43 @@ msgstr "tjänsten %s stöder inte chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "fel vid läsning av information om tjänst %s: %s\n"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "on"
 msgstr "på"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "off"
 msgstr "av"
 
-#: ../chkconfig.c:117
+#: ../chkconfig.c:139
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "misslyckades med att öppna %s/init.d: %s\n"
 
-#: ../chkconfig.c:151
+#: ../chkconfig.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "fel vid läsning från katalog %s/init.d: %s"
 
-#: ../chkconfig.c:231
+#: ../chkconfig.c:181
+msgid "xinetd based services:\n"
+msgstr ""
+
+#: ../chkconfig.c:183
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s"
+msgstr "misslyckades med att öppna %s/init.d: %s\n"
+
+#: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:238
+#: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "endast en av --list, --add eller --del kan anges\n"
 
-#: ../chkconfig.c:286
+#: ../chkconfig.c:340
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 
@@ -80,54 +89,59 @@ msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Tryck <F1> för mer information om en tjänst."
 
-#: ../ntsysv.c:56 ../ntsysv.c:93
+#: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
 msgstr "Ok"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Back"
 msgstr "Tillbaka"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: ../ntsysv.c:68
+#: ../ntsysv.c:74
 msgid "What services should be automatically started?"
 msgstr "Vilka tjänster ska startas automatiskt?"
 
-#: ../ntsysv.c:74
+#: ../ntsysv.c:80
 msgid "Services"
 msgstr "Tjänster"
 
-#: ../ntsysv.c:164
+#: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fel vid läsning av information för tjänsten %s: %s\n"
 
-#: ../ntsysv.c:173
+#: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "fel vid läsning från katalog %s/init.d: %s\n"
 
-#: ../ntsysv.c:219
+#: ../ntsysv.c:226
+#, fuzzy, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "fel vid läsning från katalog %s/init.d: %s\n"
+
+#: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
 msgstr "felaktigt argument till --levels\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Inga tjänster kan skötas av ntsysv!\n"
 
-#: ../leveldb.c:265
+#: ../leveldb.c:350
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
-#: ../leveldb.c:296
+#: ../leveldb.c:381
 msgid "cannot determine current run level\n"
 msgstr "kan inte avgöra nuvarande körnivå (runlevel)\n"
 
-#: ../leveldb.c:330
+#: ../leveldb.c:469
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa symbolisk länk %s: %s\n"
