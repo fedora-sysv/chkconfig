@@ -5,13 +5,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-03-21 11:51GMT+10.00\n"
+"PO-Revision-Date: 2002-06-13 09:08GMT+10.00\n"
 "Last-Translator: Michelle Kim <mkim@brisbane.redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=euc-kr\n"
+"Content-Type: text/plain; charset=EUC-KR\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -19,10 +19,8 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s %s                       Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -45,13 +43,11 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "          %s [--level <레벨>] <이름> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"서비스 %s 는 chkconfig를 지원하지만 등록되지 않았습니다 ( 'chkconfig --add %"
-"s' 실행)\n"
+msgstr "%s 서비스는 chkconfig를 지원하지만 어떠한 런레벨에도 등록되지 않았습니다 ( 'chkconfig --add %s' 실행)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -173,3 +169,4 @@ msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s 심볼릭 링크 파일을 생성하는데 실패했습니다: %s\n"
+
