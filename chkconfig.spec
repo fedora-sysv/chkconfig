@@ -58,13 +58,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 /sbin/chkconfig
 /sbin/update-alternatives
+/sbin/alternatives
 /etc/init.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
 %dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
-%{_mandir}/*/update-alternatives*
+%{_mandir}/*/alternatives*
 
 %files -n ntsysv
 %defattr(-,root,root)
