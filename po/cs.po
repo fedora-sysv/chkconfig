@@ -1,13 +1,9 @@
-# Czech messages for chkconfig
-# Copyright (C) 1999 Free Software Foundation, Inc.
-# Petr Kolar <Petr.Kolar@vslib.cz>, 1999.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 1999-12-06 14:42-0500\n"
-"PO-Revision-Date: 1999-09-10 11:01+0200\n"
-"Last-Translator: Petr Kolar <Petr.Kolar@vslib.cz>\n"
+"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"PO-Revision-Date: 2000-07-26 21:01+0100\n"
+"Last-Translator: Milan Kerslager <milan.kerslager@spsselib.hiedu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
@@ -49,34 +45,43 @@ msgstr "slu¾ba %s chkconfig nepodporuje\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:100
+#: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:117
+#: ../chkconfig.c:139
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nelze otevøít %s/init.d: %s\n"
 
-#: ../chkconfig.c:151
+#: ../chkconfig.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "chyba pøi ètení z adresáøe %s/init.d: %s"
 
-#: ../chkconfig.c:231
+#: ../chkconfig.c:181
+msgid "xinetd based services:\n"
+msgstr ""
+
+#: ../chkconfig.c:183
+#, fuzzy, c-format
+msgid "failed to open directory %s: %s"
+msgstr "nelze otevøít %s/init.d: %s\n"
+
+#: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verze %s\n"
 
-#: ../chkconfig.c:238
+#: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "mù¾e být zadán pouze jeden z pøepínaèù --list, --add nebo --del\n"
 
-#: ../chkconfig.c:286
+#: ../chkconfig.c:340
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "pøi dotazu mù¾e být zadána pouze jedna bìhová úroveò\n"
 
@@ -84,54 +89,59 @@ msgstr "pøi dotazu mù¾e být zadána pouze jedna bìhová úroveò\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Stisknìte <F1> pro dal¹í informace o slu¾bì."
 
-#: ../ntsysv.c:56 ../ntsysv.c:93
+#: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
 msgstr "OK"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Back"
 msgstr "Zpìt"
 
-#: ../ntsysv.c:56
+#: ../ntsysv.c:62
 msgid "Cancel"
 msgstr "Zru¹it"
 
-#: ../ntsysv.c:68
+#: ../ntsysv.c:74
 msgid "What services should be automatically started?"
 msgstr "Které slu¾by mají být automaticky startovány?"
 
-#: ../ntsysv.c:74
+#: ../ntsysv.c:80
 msgid "Services"
 msgstr "Slu¾by"
 
-#: ../ntsysv.c:164
+#: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
 
-#: ../ntsysv.c:173
+#: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
 
-#: ../ntsysv.c:219
+#: ../ntsysv.c:226
+#, fuzzy, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "chyba pøi ètení z adresáøe %s/init.d: %s\n"
+
+#: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
 msgstr "chybný argument volby --levels\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemù¾e spravovat ¾ádné slu¾by!\n"
 
-#: ../leveldb.c:265
+#: ../leveldb.c:350
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "chyba pøi expandování vzorku %s: %s\n"
 
-#: ../leveldb.c:296
+#: ../leveldb.c:381
 msgid "cannot determine current run level\n"
 msgstr "nelze urèit aktuální bìhovou úroveò\n"
 
-#: ../leveldb.c:330
+#: ../leveldb.c:469
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nelze vytvoøit symbolický odkaz %s: %s\n"
