@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-26 13:27+0200\n"
+"PO-Revision-Date: 2004-06-15 18:16+1000\n"
 "Last-Translator: Jean-Paul Aubry <jpaubry@redhat.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,8 +23,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Ce produit peut être librement distribué selon les termes de la licence "
 "publique GNU (GPL).\n"
@@ -45,9 +44,9 @@ msgid "         %s --del <name>\n"
 msgstr "              %s --del <nom>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "              %s [--level <niveaux>] <nom> %s)\n"
+msgstr "         %s [--level <niveaux>] <nom> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -187,8 +186,7 @@ msgstr ""
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:51
 msgid "                    [--initscript <service>]\n"
@@ -440,3 +438,4 @@ msgstr "admindir %s invalide\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "version des alternatives %s\n"
+
