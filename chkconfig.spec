@@ -1,6 +1,6 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.6
+%define version 0.7
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -17,7 +17,12 @@ directly manipulating the  numerous symbolic links in that directory.
 %setup
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+
+%ifarch sparc
+LIBMHACK=-lm
+%endif
+
+make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
 
 %install
 rm -rf $RPM_BUILD_ROOT

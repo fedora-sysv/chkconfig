@@ -18,7 +18,7 @@ chkconfig: $(OBJS)
 	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt
 
 ntsysv: $(NTOBJS)
-	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt
+	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
 
 chkconfig.o: chkconfig.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c chkconfig.c
