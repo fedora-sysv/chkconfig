@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Ossama M. Khayat <okhayat@yahoo.com>, 2004.
+# Youcef Rabah Rahal <rahal@arabeyes.org>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-05-01 20:47+0300\n"
-"Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
+"PO-Revision-Date: 2004-06-19 19:05+0200\n"
+"Last-Translator: Youcef Rabah Rahal <rahal@arabeyes.org>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.3\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -23,8 +24,7 @@ msgstr "%s النّسخة %s - حقوق النّسخ محفوظة لردهات �
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "يمكن إعادة توزيع هذا البرنامج مجّاناً ضمن بنود رخصة العموم GPL.\n"
 
 #: ../chkconfig.c:25
@@ -43,9 +43,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <الاسم>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <المستويات>] <الاسم> %s)\n"
+msgstr "         %s [--level <المستويات>] <الاسم> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -188,8 +188,7 @@ msgstr "يمكن إعادة توزيع هذا البرنامج مجّاناً ض
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"الاستخدام: alternatives --install <الرابط> <الاسم> <المسار> <الأولويّة>\n"
+msgstr "الاستخدام: alternatives --install <الرابط> <الاسم> <المسار> <الأولويّة>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -244,7 +243,7 @@ msgstr "                --altdir <الدّليل> --admindir <الدّليل>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "تجري قراءة %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -307,9 +306,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "سطر غير متوقّع في %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "فشلت قراءة %s: %s\n"
+msgstr "فشلت في قراءة الوصلة %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -359,7 +358,7 @@ msgstr "فشل استبدال %s مع %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "يجري تشغيل %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -454,3 +453,4 @@ msgstr "دليل الإدارة %s غير صالح\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives النّسخة %s\n"
+
