@@ -28,7 +28,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "utilisation : %s --list [nom]\n"
+msgstr "utilisation&nbsp;: %s --list [nom]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -62,12 +62,12 @@ msgstr "Le service %s ne prend pas en charge chkconfig\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
+msgstr "Erreur lors de la lecture d'informations sur le service %s&nbsp;: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "Impossible d'ouvrir %s/init.d : %s\n"
+msgstr "Impossible d'ouvrir %s/init.d&nbsp;: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -80,16 +80,16 @@ msgstr "Arrêt"
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s"
+msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d&nbsp;: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "Services basés sur xinetd : \n"
+msgstr "Services basés sur xinetd&nbsp;: \n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "Impossible d'ouvrir le répertoire %s : %s"
+msgstr "Impossible d'ouvrir le répertoire %s&nbsp;: %s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -124,7 +124,7 @@ msgstr "Annuler"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Quels services doivent être démarrés automatiquement?"
+msgstr "Quels services doivent être démarrés automatiquement&nbsp;?"
 
 #: ../ntsysv.c:80
 msgid "Services"
@@ -133,17 +133,17 @@ msgstr "Services"
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "Erreur lors de la lecture d'informations sur le service %s : %s\n"
+msgstr "Erreur lors de la lecture d'informations sur le service %s&nbsp;: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d : %s\n"
+msgstr "Erreur lors de la lecture depuis le répertoire %s/init.d&nbsp;: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "Erreur lors de la lecture depuis le répertoire %s : %s\n"
+msgstr "Erreur lors de la lecture depuis le répertoire %s&nbsp;: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
@@ -156,12 +156,12 @@ msgstr "Argument incorrect pour --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Aucun service ne peut être administré par ntsysv!\n"
+msgstr "Aucun service ne peut être administré par ntsysv&nbsp;!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "Échec d'interprétation du motif %s : %s\n"
+msgstr "Échec d'interprétation du motif %s&nbsp;: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
@@ -170,7 +170,7 @@ msgstr "Impossible de déterminer le niveau d'exécution en cours\n"
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "Impossible de créer le lien symbolique %s : %s\n"
+msgstr "Impossible de créer le lien symbolique %s&nbsp;: %s\n"
 
 #: ../alternatives.c:46
 #, c-format
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "utilisation: alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr "utilisation&nbsp;: alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -224,7 +224,7 @@ msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "options communes: --verbose --test --help --usage --version\n"
+msgstr "options communes&nbsp;: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
@@ -233,17 +233,17 @@ msgstr "                --altdir <répertoire> --admindir <répertoire>\n"
 #: ../alternatives.c:159
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "Impossible d'ouvrir %s: %s\n"
+msgstr "Impossible d'ouvrir %s&nbsp;: %s\n"
 
 #: ../alternatives.c:168
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "Impossible de lire %s: %s\n"
+msgstr "Impossible de lire %s&nbsp;: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s vide!\n"
+msgstr "%s vide&nbsp;!\n"
 
 #: ../alternatives.c:186
 #, c-format
@@ -288,7 +288,7 @@ msgstr "chemin d'esclave attendu dans %s\n"
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "ligne inattendue dans %s: %s\n"
+msgstr "ligne inattendue dans %s&nbsp;: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -306,7 +306,7 @@ msgstr "supprimerait %s\n"
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "Impossible de supprimer le lien %s: %s\n"
+msgstr "Impossible de supprimer le lien %s&nbsp;: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
@@ -316,7 +316,7 @@ msgstr "lierait %s -> %s\n"
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "Impossible de lier %s -> %s: %s\n"
+msgstr "Impossible de lier %s -> %s&nbsp;: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
@@ -326,12 +326,12 @@ msgstr "%s existe déjà\n"
 #: ../alternatives.c:417
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "Impossible de créer %s: %s\n"
+msgstr "Impossible de créer %s&nbsp;: %s\n"
 
 #: ../alternatives.c:448
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "Impossible de remplacer %s avec %s: %s\n"
+msgstr "Impossible de remplacer %s avec %s&nbsp;: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
@@ -366,7 +366,7 @@ msgstr "%s - priorité %d\n"
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " esclave %s: %s\n"
+msgstr " esclave %s&nbsp;: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
@@ -384,7 +384,7 @@ msgstr "  Sélection    Commande\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Entrez [+] pour garder la sélection courante ou tapez le numéro de type de sélection:"
+msgstr "Entrez [+] pour garder la sélection courante ou tapez le numéro de type de sélection&nbsp;:"
 
 #: ../alternatives.c:675
 msgid ""
@@ -407,7 +407,7 @@ msgstr "(supprimerait %s\n"
 #: ../alternatives.c:746
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "Impossible de supprimer %s: %s\n"
+msgstr "Impossible de supprimer %s&nbsp;: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
