@@ -1,7 +1,7 @@
 INSTALL= /usr/bin/install -c
 INSTALL_PROGRAM= ${INSTALL}
 INSTALL_DATA= ${INSTALL} -m 644
-INSTALLNLSDIR=/usr/share/locale
+INSTALLNLSDIR=$(instroot)/usr/share/locale
 
 MSGMERGE = msgmerge
 
@@ -45,6 +45,7 @@ distclean: clean
 depend:
 
 install:
+	mkdir -p $(INSTALLNLSDIR)
 	for n in $(CATALOGS); do \
 	    l=`basename $$n .mo`; \
 	    $(INSTALL) -m 755 -d $(INSTALLNLSDIR)/$$l; \
