@@ -1,5 +1,3 @@
-# Hungarian translation by László Németh <nemeth@qwertynet.hu>,
-# with great help from Andrea Vida <vidaa@bibl.u-szeged.hu> :-)
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
@@ -36,13 +34,11 @@ msgstr "         %s --del <név>\n"
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <levels>] <név> %s)\n"
 
-# , c-format
 #: ../chkconfig.c:36
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "a %s szolgáltatás nem támogatja a chkconfig használatát\n"
 
-# , c-format
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
@@ -56,13 +52,11 @@ msgstr "be"
 msgid "off"
 msgstr "ki"
 
-# , c-format
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d nem megnyitható: %s\n"
 
-# , c-format
 #: ../chkconfig.c:151
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
@@ -105,13 +99,11 @@ msgstr "Milyen szolgáltatások induljanak automatikusan?"
 msgid "Services"
 msgstr "Szolgáltatások"
 
-# , c-format
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s szolgáltatás információ olvasási hiba: %s\n"
 
-# , c-format
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
@@ -125,7 +117,6 @@ msgstr "hibás --levels argumentum\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Az ntsysv semmilyen szolgáltatást nem kezel!\n"
 
-# , c-format
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
@@ -135,7 +126,6 @@ msgstr "nem lehet kibontani %s: %s\n"
 msgid "cannot determine current run level\n"
 msgstr "az aktuális runlevel nem megállapítható\n"
 
-# , c-format
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
