@@ -6,7 +6,7 @@ Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Prereq: bash sh-utils fileutils
+Prereq: bash fileutils
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
