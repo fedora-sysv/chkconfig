@@ -1,29 +1,30 @@
+# 
 # Turkish translations for chkconfig messages.
-# Copyright (C) 2002 Free Software Foundation, Inc.
-# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002
+# Copyright (C) 2002,2003 Free Software Foundation, Inc.
+# $Id: tr.po,v 1.31 2003/08/03 11:56:18 nilgun Exp $
+# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003
+# Devrim GUNDUZ <devrim@gunduz.org>, 2003
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig \n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-07-25 10:44+0300\n"
+"PO-Revision-Date: 2003-08-03 13:51+0300\n"
 "Last-Translator: Nilgün Belma Bugüner <nilgun@superonline.com>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2002 Red Hat, Inc.\n"
+msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -43,7 +44,7 @@ msgstr "             %s --del <isim>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "             %s [--level <düzeyler>] <isim> %s)\n"
+msgstr "         %s [--level <düzeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -102,8 +103,7 @@ msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -172,256 +172,253 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik bağı yapılamadı: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2002 Red Hat, Inc.\n"
+msgstr "alternatives sürüm %s - Telif Hakkı © 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Bu program GNU kamu lisansı koşulları altında serbestçe dağıtılabilir.\n"
+"Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "Kullanımı: alternatives --install <bağlantı> <ad> <yol> <öncelik>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <servis>]\n"
 
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "             %s [--level <düzeyler>] <isim> %s)\n"
+msgstr "                   [--slave <bağlantı> <isim> <yol>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <ad> <yol>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "             %s --add <isim>\n"
+msgstr "       alternatives --auto <ad>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "             %s --add <isim>\n"
+msgstr "       alternatives --config <ad>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "             %s --del <isim>\n"
+msgstr "       alternatives --display <ad>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "             %s --del <isim>\n"
+msgstr "       alternatives --set <ad> <yol>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "ortak seçenekler: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <dizin> --admindir <dizin>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "%s/init.d açılamıyor: %s\n"
+msgstr "%s açılamıyor: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s/init.d açılamıyor: %s\n"
+msgstr "%s okunamıyor: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s boş!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "%s'nin 1.satırında kötü kip\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "%s'nin içinde kötü birincil bağlantı\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "%2$s içinde beklenmeyen yol %1$s\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "yardımcı %2$s için %1$s içinde yol eksik\n"
 
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "%s içinde beklenmeyen dosya sonu\n"
 
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "%s içinde alternatife bir yol bekleniyor \n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%s içinde sayısal öncelik bekleniyor.\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "%s içinde ikincil yol bekleniyor\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "%s içinde beklenmeyen satır: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "link points to no alternative -- setting mode to manual\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "bağlantı değiştirildi-- setting mode to manual\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "%s silinsin mi\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "%s sembolik bağı yapılamadı: %s\n"
+msgstr "sembolik bağ kaldırılamadı %s: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "%s -> %s bağı kurulsun mu\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "%s sembolik bağı yapılamadı: %s\n"
+msgstr "%s->%s sembolik bağı yapılamadı: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s zaten var\n"
 
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "kalıp %s genelleştirilemedi: %s\n"
+msgstr "%s yaratılamadı: %s\n"
 
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%s sembolik bağı yapılamadı: %s\n"
+msgstr "%s'nin yerine %s konamadı: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%s için birincil bağlantı %s olmalıdır\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "%s bağlantısı %s için geçerli değil (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s -durumu auto.\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - durumu manual.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "bağlantı %s'yi gösteriyor.\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s öncelik %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr "ikincil %s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Mevcut 'en iyi' sürüm: %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "'%2$s', %1$d program tarafından sağlanıyor.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Seçim        Komut\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını girin:"
 
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "%s hizmeti hakkında bilgi alırken hata : %s\n"
+msgstr ""
+"\n"
+"seçimi okumada hata\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s, %s için bir alternatif olarak yapılandırılmadı\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(%s silinsin mi\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s/init.d açılamıyor: %s\n"
+msgstr "%s kaldırılamadı: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "%s alternatif dizini geçersiz\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "%s yönetici dizini geçersiz\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s sürüm %s\n"
+msgstr "alternatives %s sürümü\n"
+
