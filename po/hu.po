@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-19 16:51-0400\n"
-"PO-Revision-Date: 2004-02-10 11:11+0100\n"
+"PO-Revision-Date: 2004-05-27 11:11+0100\n"
 "Last-Translator: Tamas Szanto <tszanto@mol.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -243,7 +243,7 @@ msgstr "                --altdir <könyvtár> --admindir <könyvtár>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "%s olvasása\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -306,9 +306,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "nem várt sor (%s): %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "%s olvasása nem sikerült: %s\n"
+msgstr "a(z) %s link olvasása nem sikerült: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -358,7 +358,7 @@ msgstr "%s -> %s csere nem sikerült: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s futtatása\n"
 
 #: ../alternatives.c:512
 #, c-format
