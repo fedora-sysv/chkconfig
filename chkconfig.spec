@@ -6,7 +6,7 @@ Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Prereq: /etc/init.d
+Conflicts: initscripts <= 5.30-1
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -51,6 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 /sbin/chkconfig
+/etc/init.d
+/etc/rc[0-6].d
 %{_mandir}/man8/chkconfig.8*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
