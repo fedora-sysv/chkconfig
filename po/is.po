@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 6.0\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-09-08 02:25+0000\n"
+"PO-Revision-Date: 1999-09-12 03:24+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -20,24 +20,24 @@ msgid ""
 msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "notkun:   chkconfig --list [nafn]\n"
+msgstr "notkun:   %s --list [nafn]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <nafn>\n"
+msgstr "         %s --add <nafn>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <nafn>\n"
+msgstr "         %s --del <nafn>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <stig>] <nafn> <on|off|reset>\n"
+msgstr "         %s [--level <stig>] <nafn> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -70,7 +70,7 @@ msgstr "villa við lestur úr möppu %s/init.d: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s útgáfa %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
