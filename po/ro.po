@@ -1,3 +1,9 @@
+# $Id: ro.po,v 1.2 1998/05/03 09:14:53 gafton Exp $
+#
+# $Log: ro.po,v $
+# Revision 1.2  1998/05/03 09:14:53  gafton
+# fixed some spelling mistakes
+#
 msgid ""
 msgstr ""
 "Date: 1998-05-03 02:33:35-0400\n"
