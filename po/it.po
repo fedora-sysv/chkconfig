@@ -10,8 +10,8 @@ msgstr ""
 "Last-Translator: Bettina De Monti <bdemonti@redhat.it>\n"
 "Language-Team: ITALIAN <it@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8959-1\n"
-"Content-Transfer-Encoding: ascii\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
