@@ -1,8 +1,8 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.9.4
+%define version 0.9.5
 Version: %{version}
-Release: 4
+Release: 1
 Copyright: GPL
 Group: Utilities/System
 Group(pt_BR): Utilitários/Sistema
@@ -73,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Thu Oct 08 1998 Cristian Gafton <gafton@redhat.com>
+- updated czech translation (and use cs instead of cz)
+
 * Tue Sep 22 1998 Arnaldo Carvalho de Melo <acme@conectiva.com.br>
 - added pt_BR translations
 - added more translatable strings
