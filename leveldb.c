@@ -295,8 +295,10 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	if (*start != '#') continue;
 
 	start++;
-	if (!strncmp(start, "## BEGIN INIT INFO", 18))
+	if (!strncmp(start, "## BEGIN INIT INFO", 18)) {
 		    serv.isLSB = 1;
+		    serv.levels = -1;
+	}
 	if (!strncmp(start, "## END INIT INFO", 16) && serv.isLSB)
 		    break;
 		
@@ -312,7 +314,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	    }
 	}
 
-	if (!strncmp(start, "chkconfig:", 10)) {
+	if (!strncmp(start, "chkconfig:", 10) && !serv.isLSB) {
 	    start += 10;
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end) {
