@@ -1,28 +1,32 @@
+# Turkish translations for chkconfig messages.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# NilgÃ¼n Belma BugÃ¼ner <nilgun@fide.org>, 2002
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
-"PO-Revision-Date: 2001-09-06 17:27+300\n"
-"Last-Translator: Nilgün Belma Bugüner <nilgun@fide.org>\n"
+"Project-Id-Version: chkconfig \n"
+"POT-Creation-Date: 2002-03-14 22:28-0500\n"
+"PO-Revision-Date: 2002-04-04 06:37+0300\n"
+"Last-Translator: NilgÃ¼n Belma BugÃ¼ner <nilgun@fide.org>\n"
 "Language-Team: Turkish <gnu-tr-u12a@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-9\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.5\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s sürüm %s - Telif Hakký (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s sÃ¼rÃ¼m %s - Telif HakkÄ± (C) 1997-2002 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Bu program GNU kamu lisansý koþullarý altýnda serbestçe daðýtýlabilir.\n"
+msgstr "Bu program GNU kamu lisansÄ± koÅŸullarÄ± altÄ±nda serbestÃ§e daÄŸÄ±tÄ±labilir.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "kullanýmý:   %s --list [isim]\n"
+msgstr "kullanÄ±mÄ±:   %s --list [isim]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -37,61 +41,70 @@ msgstr "             %s --del <isim>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "             %s [--level <düzeyler>] <isim> %s)\n"
+msgstr "             %s [--level <dÃ¼zeyler>] <isim> %s)\n"
 
 #: ../chkconfig.c:35
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not registered (run 'chkconfig --add %"
+"s')\n"
+msgstr ""
+"%s chkconfig'i destekliyor, ama kayÄ±tlÄ± deÄŸil. ('chkconfig --add %s "
+"Ã§alÄ±ÅŸtÄ±rÄ±n')\n"
+
+#: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s hizmeti, chkconfig'i desteklemiyor\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s hizmeti hakkýnda bilgi alýnýrken hata: %s\n"
+msgstr "%s hizmeti hakkÄ±nda bilgi alÄ±nÄ±rken hata: %s\n"
 
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "on"
-msgstr "açýk"
-
-#: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-msgid "off"
-msgstr "kapalý"
-
-#: ../chkconfig.c:138
+#: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d açýlamýyor: %s\n"
+msgstr "%s/init.d aÃ§Ä±lamÄ±yor: %s\n"
 
-#: ../chkconfig.c:172
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "on"
+msgstr "aÃ§Ä±k"
+
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+msgid "off"
+msgstr "kapalÄ±"
+
+#: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d dizininden okunurken hata: %s"
 
-#: ../chkconfig.c:180
+#: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd temelli servisler:\n"
+msgstr "xinetd tabanlÄ± hizmetler:\n"
 
-#: ../chkconfig.c:182
+#: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "%s dizini açýlamýyor: %s"
+msgstr "%s dizini aÃ§Ä±lamÄ±yor: %s"
 
-#: ../chkconfig.c:284
+#: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s sürüm %s\n"
+msgstr "%s sÃ¼rÃ¼m %s\n"
 
-#: ../chkconfig.c:291
+#: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
+msgstr "--list, --add veya --del seÃ§eneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:339
+#: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig sorgulamasý için sadece tek bir çalýþma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulamasÄ± iÃ§in sadece tek bir Ã§alÄ±ÅŸma dÃ¼zeyi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Hizmet hakkýnda daha fazla bilgi almak için <F1> tuþuna basýn."
+msgstr "Hizmet hakkÄ±nda daha fazla bilgi almak iÃ§in <F1> tuÅŸuna basÄ±n."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -103,55 +116,55 @@ msgstr "Geri"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Ýptal"
+msgstr "Ä°ptal"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Hangi hizmetler otomatik olarak çalýþtýrýlsýn?"
+msgstr "Hangi hizmetler otomatik olarak Ã§alÄ±ÅŸtÄ±rÄ±lsÄ±n?"
 
 #: ../ntsysv.c:80
 msgid "Services"
 msgstr "Hizmetler"
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s hizmeti hakkýnda bilgi alýrken hata : %s\n"
+msgstr "%s hizmeti hakkÄ±nda bilgi alÄ±rken hata : %s\n"
 
-#: ../ntsysv.c:183
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d dizininden okurken hata: %s\n"
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s dizininden okurken hata: %s\n"
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s in çalýþtýrýlabilmesi için root yetkileri gerekiyor.\n"
+msgstr "%s in Ã§alÄ±ÅŸtÄ±rÄ±labilmesi iÃ§in root yetkileri gerekiyor.\n"
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "--levels için hatalý argüman\n"
+msgstr "--levels iÃ§in hatalÄ± argÃ¼man\n"
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv tarafýndan yönetilebilecek hizmet yok!\n"
+msgstr "ntsysv tarafÄ±ndan yÃ¶netilebilecek hizmet yok!\n"
 
-#: ../leveldb.c:355
+#: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "kalýp %s genelleþtirilemedi: %s\n"
+msgstr "kalÄ±p %s genelleÅŸtirilemedi: %s\n"
 
-#: ../leveldb.c:386
+#: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "çalýþma düzeyi belirlenemiyor\n"
+msgstr "Ã§alÄ±ÅŸma dÃ¼zeyi belirlenemiyor\n"
 
-#: ../leveldb.c:474
+#: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "%s sembolik baðlantýsý yapýlamadý: %s\n"
+msgstr "%s sembolik baÄŸÄ± yapÄ±lamadÄ±: %s\n"
 
