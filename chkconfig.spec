@@ -62,6 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Mar 18 1999 Bill Nottingham <notting@redhat.com>
 - revert fix for services@levels, it's broken
+- change default to only edit the current runlevel
 
 * Mon Mar 15 1999 Bill Nottingham <notting@redhat.com>
 - don't remove scripts that don't support chkconfig

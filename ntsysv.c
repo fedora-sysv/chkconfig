@@ -188,7 +188,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 int main(int argc, char ** argv) {
     struct service * services;
     int numServices;
-    int levels = (1 << 3) | (1 << 4) | (1 << 5);
+    int levels = -1;
     char * levelsStr = NULL;
     poptContext optCon;
     int rc, backButton = 0;
@@ -232,6 +232,9 @@ int main(int argc, char ** argv) {
     newtPushHelpLine(NULL);
     newtDrawRootText(0, 0, "ntsysv " VERSION " - (C) 1999 Red Hat "
 			"Software");
+   
+    if (levels==-1) 
+     levels=(1<<currentRunlevel());
 
     rc = servicesWindow(services, numServices, levels, backButton);
 
