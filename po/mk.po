@@ -5,31 +5,32 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
 "PO-Revision-Date: 2004-06-04 16:57-0400\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Tomislav Markovski\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s верзија %s - Сите права задржани 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Може да биде слободно дистрибурано под условите во ГНУ Јавната Лиценца (GPL).\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "употреба:   %s --list [име]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -70,11 +71,11 @@ msgstr ""
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr ""
+msgstr "вклучено"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr ""
+msgstr "исклучено"
 
 #: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
@@ -112,23 +113,23 @@ msgstr ""
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr ""
+msgstr "Во ред"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr ""
+msgstr "Откажи"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Кои сервиси ќе бидат автоматски извршени?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr ""
+msgstr "Сервиси"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
@@ -355,7 +356,7 @@ msgstr ""
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "работи %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -385,7 +386,7 @@ msgstr ""
 #: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - приоритет %d\n"
 
 #: ../alternatives.c:628
 #, c-format
