@@ -17,9 +17,9 @@
 #define _(foo) (foo)
 
 struct linkSet {
-    char * title;			/* editor */
-    char * facility;			/* /usr/bin/editor */
-    char * target;			/* /usr/bin/vi */
+    char * title;			/* print */
+    char * facility;			/* /usr/bin/lpr */
+    char * target;			/* /usr/bin/lpr.LPRng */
 };
 
 struct alternative {
@@ -255,7 +255,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 
 	for (i = 1; i < numGroups; i++) {
 	    line = parseLine(&buf);
-	    if (!line || *line != '/') {
+	    if (line && strlen(line) && *line != '/') {
 		fprintf(stderr, _("slave path expected in %s\n"), path);
 		return 1;
 	    }
@@ -264,7 +264,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 			strdup(groups[i].title);
 	    set->alts[set->numAlts].slaves[i - 1].facility = 
 			strdup(groups[i].facility);
-	    set->alts[set->numAlts].slaves[i - 1].target = line;
+		set->alts[set->numAlts].slaves[i - 1].target = (line && strlen(line)) ? line : NULL;
 	}
 
 	set->numAlts++;
@@ -415,8 +415,11 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 	fprintf(f, "%s\n", set->alts[i].master.target);
 	fprintf(f, "%d\n", set->alts[i].priority);
 
-	for (j = 0; j < set->alts[i].numSlaves; j++)
-	    fprintf(f, "%s\n", set->alts[i].slaves[j].target);
+	for (j = 0; j < set->alts[i].numSlaves; j++) {
+		if (set->alts[i].slaves[j].target)
+			fprintf(f, "%s", set->alts[i].slaves[j].target);
+		fprintf(f,"\n");
+	}
     }
     
     fclose(f);
@@ -433,18 +436,29 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 	struct alternative * alt = set->alts + ( set->current > 0 ? set->current : 0);
 
 	rc |= makeLinks(&alt->master, altDir, flags);
-	for (i = 0; i < alt->numSlaves; i++)
-	    rc |= makeLinks(alt->slaves + i, altDir, flags);
+	for (i = 0; i < alt->numSlaves; i++) {
+	        if (alt->slaves[i].target)
+			rc |= makeLinks(alt->slaves + i, altDir, flags);
+		else
+			rc |= removeLinks(alt->slaves + i, altDir, flags);
+	}
     }
 
     return rc;
 }
 
+static int linkCmp(const void *a, const void *b) {
+	struct linkSet *one = (struct linkSet *)a, *two = (struct linkSet *)b;
+	
+	return strcmp(one->facility, two->facility);
+}
+
 static int addService(struct alternative newAlt, const char * altDir,
 		      const char * stateDir, int flags) {
     struct alternativeSet set;
+    struct alternative base;
     struct linkSet * newLinks;
-    int i, j, rc;
+    int i, j, k, rc;
 
     if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2) 
 	return 2;
@@ -455,62 +469,90 @@ static int addService(struct alternative newAlt, const char * altDir,
 		    set.alts[0].master.title, set.alts[0].master.facility);
 	    return 2;
 	}
+	/* Extreme case */
+	if (set.numAlts == 1 && !strcmp(set.alts[0].master.target,
+					newAlt.master.target)) {
+		set.alts[0] = newAlt;
+		goto out;
+	}
 	
-	/* FIXME: We should be merging any changes here. */
-	for (i = 0; i < set.numAlts; i++) {
-		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
-			if (FL_VERBOSE(flags))
-				printf(_("%s already installed, skipping\n"), 
-				       newAlt.master.target);
-			return 0;
+        /* Determine the maximal set of slave links. */
+        base.numSlaves = set.alts[0].numSlaves;
+	base.slaves = malloc(set.alts[0].numSlaves * sizeof(struct linkSet));
+	memcpy(base.slaves, set.alts[0].slaves, 
+	       set.alts[0].numSlaves * sizeof(struct linkSet));
+
+	for (i = 0; i < newAlt.numSlaves; i++) {
+		for (j = 0; j < base.numSlaves; j++) {
+			if (!strcmp(newAlt.slaves[i].facility, base.slaves[j].facility))
+				break;
+		}
+		if (j == base.numSlaves) {
+			base.slaves = realloc(base.slaves, (base.numSlaves+1) * sizeof (*newLinks));
+			base.slaves[base.numSlaves].facility = newAlt.slaves[i].facility;
+			base.slaves[base.numSlaves].title = newAlt.slaves[i].title;
+			base.slaves[base.numSlaves].target = NULL;
+			base.numSlaves++;
 		}
 	}
-
-	/* FIXME: This actually isn't a bug, according to the original implementation. */
-	if (set.alts[0].numSlaves != newAlt.numSlaves) {
-	    fprintf(stderr, "%s requires %d slave links\n", newAlt.master.title,
-		    set.alts[0].numSlaves);
-	    return 2;
+	
+	/* Sort the list for file legibility */
+	qsort(base.slaves, base.numSlaves, sizeof(struct linkSet), linkCmp);
+	    
+	/* Insert new set into the set of alternatives */
+	for (i = 0 ; i < set.numAlts ; i++) {
+		if (!strcmp(set.alts[i].master.target, newAlt.master.target))
+			set.alts[i] = newAlt;
 	}
-
+	if (i == set.numAlts) {
+		set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
+		set.alts[set.numAlts] = newAlt;
+		if (set.alts[set.best].priority < newAlt.priority)
+			set.best = set.numAlts;
+		set.numAlts++;
+	}
+	
 	/* need to match the slaves up; newLinks will parallel the original
 	   ordering */
-	newLinks = alloca(sizeof(*newLinks) * newAlt.numSlaves);
-	newLinks = memset(newLinks, 0, sizeof(*newLinks) * newAlt.numSlaves);
-	for (i = 0; i < newAlt.numSlaves; i++) {
-	    for (j = 0; j < set.alts[0].numSlaves; j++)
-		if (!strcmp(newAlt.slaves[i].title,
-			    set.alts[0].slaves[j].title)) break;
-
-	    if (j < set.alts[0].numSlaves) {
-		if (strcmp(newAlt.slaves[i].facility,
-			   set.alts[0].slaves[j].facility)) {
-		    fprintf(stderr, _("link %s incorrect for slave %s\n"),
-			    newAlt.slaves[i].facility, 
-			    newAlt.slaves[i].title);
-		    return 2;
+	for (k = 0; k < set.numAlts ; k++) {
+		newLinks = alloca(sizeof(*newLinks) * base.numSlaves);
+		newLinks = memset(newLinks, 0, sizeof(*newLinks) * base.numSlaves);
+	        
+		for (j = 0; j < base.numSlaves; j++) {
+			for (i = 0; i < set.alts[k].numSlaves; i++) {
+				if (!strcmp(set.alts[k].slaves[i].title,
+					    base.slaves[j].title)) break;
+			}
+			if (i < set.alts[k].numSlaves) {
+				if (strcmp(set.alts[k].slaves[i].facility,
+					   base.slaves[j].facility)) {
+					fprintf(stderr, _("link %s incorrect for slave %s (%s %s)\n"),
+						set.alts[k].slaves[i].facility,
+						set.alts[k].slaves[i].title,
+						base.slaves[j].facility,
+						base.slaves[j].title);
+					return 2;
+				}
+				newLinks[j] = set.alts[k].slaves[i];
+			} else {
+				newLinks[j].title = base.slaves[j].title;
+				newLinks[j].facility = base.slaves[j].facility;
+				newLinks[j].target = NULL;
+			}
 		}
-
-		newLinks[j] = newAlt.slaves[i];
-	    } else {
-		fprintf(stderr, 
-		    _("warning: slave %s not configured for other alternatives\n"),
-		    newAlt.slaves[i].title);
-		return 2;
-	    }
+		/* memory link */
+		set.alts[k].slaves = newLinks;
+		set.alts[k].numSlaves = base.numSlaves;
 	}
-
-	/* memory link */
-	newAlt.slaves = newLinks;
+    } else {
+	    set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
+	    set.alts[set.numAlts] = newAlt;
+	    if (set.alts[set.best].priority < newAlt.priority)
+		    set.best = set.numAlts;
+	    set.numAlts++;
     }
     
-
-    set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
-    set.alts[set.numAlts] = newAlt;
-    if (set.alts[set.best].priority < newAlt.priority)
-	set.best = set.numAlts;
-    set.numAlts++;
-
+out:
     if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
 
     return 0;
@@ -527,7 +569,7 @@ static int displayService(char * title, const char * altDir,
 
     if (set.mode == AUTO)
 	printf(_("%s - status is auto.\n"), title);
-    else
+    else	
 	printf(_("%s - status is manual.\n"), title);
 
     printf(_(" link currently points to %s\n"), set.currentLink);
