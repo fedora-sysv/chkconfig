@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2004-03-14 15:40+0100\n"
+"PO-Revision-Date: 2004-03-14 15:53+0100\n"
 "Last-Translator: Pawel Szopinski <pawel@szopinski.co.uk>\n"
 "Language-Team: POLISH <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -384,7 +384,7 @@ msgstr "  Zaznaczenie  Komenda\n"
 
 #: ../alternatives.c:672
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Potwierdź w celu zachowania bierzącego wyboru[+], lub podaj numer wyboru: "
 
 #: ../alternatives.c:675
 msgid ""
