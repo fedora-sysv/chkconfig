@@ -50,9 +50,9 @@ msgid "off"
 msgstr "av"
 
 #: ../chkconfig.c:109
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "Klarte ikke å åpne %s/init.d: %s\n"
+msgstr "klarte ikke å åpne %s/init.d: %s\n"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
