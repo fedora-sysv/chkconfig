@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.0.5
+%define version 1.0.6
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Mon Apr 19 1999 Cristian Gafton <gafton@redhat.com>
+- release for Red Hat 6.0
+
 * Thu Apr  8 1999 Matt Wilson <msw@redhat.com>
 - added support for a "hide: true" tag in initscripts that will make
   services not appear in ntsysv when run with the "--hide" flag
