@@ -130,9 +130,9 @@ msgstr "impossibile inglobare il modello %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr "non posso determinare il livello di run\n"
+msgstr "non posso determinare l'attuale run-level\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "impossibile creare il symlink %s: %s\n"
+msgstr "impossibile creare il link simbolico %s: %s\n"
