@@ -1,4 +1,4 @@
-VERSION=$(shell awk '/define version/ { print $$3 }' chkconfig.spec)
+VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
 CVSTAG = r$(subst .,-,$(VERSION))
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
