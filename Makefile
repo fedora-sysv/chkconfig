@@ -62,6 +62,6 @@ archive:
 	@rm -rf /tmp/chkconfig-$(VERSION) /tmp/chkconfig
 	@cd /tmp; cvs export -r$(CVSTAG) chkconfig
 	@mv /tmp/chkconfig /tmp/chkconfig-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar cvzf $$dir/chkconfig-$(VERSION).tar.gz chkconfig-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar cvIf $$dir/chkconfig-$(VERSION).tar.bz2 chkconfig-$(VERSION)
 	@rm -rf /tmp/chkconfig-$(VERSION)
-	@echo "The archive is in chkconfig-$(VERSION).tar.gz"
+	@echo "The archive is in chkconfig-$(VERSION).tar.bz2"
