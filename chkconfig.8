@@ -6,7 +6,7 @@ chkconfig \- updates and queries runlevel information for system services
 .SH SYNOPSIS
 \fBchkconfig\fR \fB--list\fR [\fIname\fR]
 .br
-\fBchkconfig\fR \fB--add\fR \fIname\fR \fIlevels\fR \fIstartpri\fR \fIkillpri\fR \fIdesc\fR
+\fBchkconfig\fR \fB--add\fR \fIname\fR
 .br
 \fBchkconfig\fR \fB--del\fR \fIname\fR
 .br
@@ -88,24 +88,18 @@ This option lists all of the services which \fBchkconfig\fR knows about,
 and whether they are stopped or started in each runlevel. If \fIname\fR
 is specified, information in only display about service \fIname\fR.
 
-.SH DATABASE FILE
+.SH RUNLEVEL FILES
 
-Although /etc/rc.d is the only location which stores information on
-what services are started in a particular runlevel, \fBchkconfig\fR
-maintains an ancillary database of service information in
-\fB/var/lib/chkconfigtab\fR.  This database consists of service names,
-default runlevels which the service runs in, the start and kill priorities
-for the service, and a description of the service.
-
-.SH FILES
-
-.PD 0
-.TP 20
-\fI/var/lib/chkconfigtab\fR
-List of services maintained by \fBchkconfig\fR
+Each service which wants to be manageable by \fBchkconfig\fR must add
+two lines to its init.d script. The first tells \fBchkconfig\fR what
+runlevels the service should be started in by default as well as
+the start and stop priority levels. The other line contains a description
+for the service, and may be extended across multiple lines through
+backslash continuation.
 
 .SH SEE ALSO
 .IR init (8)
+.IR ntsysv (8)
 .IR tksysv (8)
 
 .SH AUTHOR

@@ -1,6 +1,8 @@
+#include <alloca.h>
 #include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <glob.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -26,158 +28,224 @@ int parseLevels(char * str, int emptyOk) {
     return rc;
 }
 
-int ldbLock(int rw) {
+int readServiceInfo(char * name, struct service * service) {
+    char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
     int fd, i;
-    struct flock lock = { 0, SEEK_SET, 0, 0, 0 };
-
-    /* we don't actually write to this file; we open in O_RDWR though just
-       to ensure we have enough permissions */
-
-    fd = open(LEVEL_DATABASE, O_RDWR | O_CREAT, 0644);
-    if (fd < 0)
-	return -1;
-
-    lock.l_type = rw ? F_WRLCK : F_RDLCK;
-	
-    if (!fcntl(fd, F_SETLK, &lock)) return fd; 
-
-    if (errno == EAGAIN) {
-	sleep(1);
-	if (!fcntl(fd, F_SETLK, &lock)) return fd; 
-    }
-
-    i = errno;
-    close(fd);
-    errno = i;
-
-    return -1;
-}
-
-/* this eats memory if it fails (shucks) */
-int ldbRead(int fd, struct service ** listptr, int * numServices) {
-    char * map, * end, * start, * chptr, * memend, * numEnd;
     struct stat sb;
-    struct service * list;
-    int i;
+    char * bufstart, * bufstop, * start, * end, * next;
+    struct service serv = { name, -1, -1, -1, NULL };
+    char overflow;
 
-    if (fstat(fd, &sb)) return -1;
+    sprintf(filename, RUNLEVELS "/init.d/%s", name);
 
-    map = mmap(0, sb.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
-    if (map == ((char *) -1)) return -1;
+    if ((fd = open(filename, O_RDONLY)) < 0) return -1;
+    fstat(fd, &sb);
 
-    memend = map + sb.st_size;
-
-    i = 0, start = map;
-    while (start < memend) {
-	if (*start == '\n') i++;
-	start++;
+    bufstart = mmap(NULL, sb.st_size, PROT_READ, MAP_SHARED, fd, 0);
+    if (bufstart == ((caddr_t) -1)) {
+	close(fd);	
+	return -1;
     }
 
-    list = malloc(sizeof(*list) * (i + 1));
-
-    i = 0, start = map;
-    while (start < memend) {
-	end = start;
-	while (end < memend && *end != '\n') end++;
-	if (*end != '\n') return 1;
-	*end = '\0';
-
-	/* name */
-	chptr = start;
-	while (*chptr && *chptr != ':') chptr++;
-	if (!*chptr) return 1;
-	*chptr = '\0';
-	list[i].name = strdup(start);
-
-	/* levels */
-	chptr = start = chptr + 1;
-	while (*chptr && *chptr != ':') chptr++;
-	if (!*chptr) return 1;
-	*chptr = '\0';
-	list[i].levels = parseLevels(start, 0);
-	if (list[i].levels == -1) return 1;
-
-	/* start priority */
-	start = chptr + 1;
-	list[i].sPriority = strtol(start, &numEnd, 0);
-	if (*numEnd != ':') return 1;
-	start = numEnd + 1;
-
-	/* kill priority */
-	list[i].kPriority = strtol(start, &numEnd, 0);
-	if (*numEnd != ':') return 1;
-	start = numEnd + 1;
-
-	/* description */
-	if (start >= end) return 1;
-
-	list[i++].desc = strdup(start);
-
-	start = end + 1;
-    }
-    
-    memset(list + i, 0, sizeof(*list));
-
-    munmap(map, sb.st_size);
-
-    *numServices = i;
-    *listptr = list;
-
-    return 0;
-}
-
-struct service * findService(struct service * list, char * name) {
-    struct service * res;
-
-    res = list;
-    while (res->name && strcmp(res->name, name)) res++;
-
-    return res->name ? res : NULL;
-}
-
-int ldbUnlock(int fd) {
+    bufstop = bufstart + sb.st_size;
     close(fd);
-    return 0;
-}
 
-/* last service has name NULL, list must be freed */
-int ldbWrite(int * fd, struct service * list) {
-    int newfd;
-    struct flock lock = { F_WRLCK, SEEK_SET, 0, 0, 0 };
-    char buf[4096];
-    struct service * s;
-    char levels[10];
-    int i, j;
+    next = bufstart;
+    while (next < bufstop && (serv.levels == -1 || !serv.desc)) {
+	start = next;
 
-    newfd = open(NEW_LEVEL_DATABASE, O_RDWR | O_CREAT | O_EXCL, 0644);
-    if (newfd < 0) return -1;
-	
-    if (fcntl(newfd, F_SETLK, &lock)) return -1;
+	while (isspace(*start) && start < bufstop) start++;
+	if (start == bufstop) break; 
 
-    for (s = list; s->name; s++) {
-	*levels = 0, j = 0;
-	for (i = 0; i < 7; i++) {
-	    if (s->levels & (1 << i)) {
-		levels[j++] = i + '0';
-		levels[j] = '\0';
+	end = strchr(start, '\n');
+	if (!end) 
+	    next = end = bufstop;
+	else
+	    next = end + 1;
+
+	if (*start != '#') continue;
+
+	start++;	
+	while (isspace(*start) && start < end) start++;
+	if (start == end) continue;
+
+	if (!strncmp(start, "chkconfig:", 10)) {
+	    start += 10;
+	    while (isspace(*start) && start < end) start++;
+	    if (start == end) {
+		if (serv.desc) free(serv.desc);
+		munmap(bufstart, sb.st_size);
+		return 1;
+	    }
+
+	    if ((sscanf(start, "%d %d %d%c", &serv.levels,
+			&serv.sPriority, &serv.kPriority, &overflow) != 4) ||
+		 overflow != '\n') {
+		if (serv.desc) free(serv.desc);
+		munmap(bufstart, sb.st_size);
+		return 1;
+	    }
+	} else if (!strncmp(start, "description:", 12)) {
+	    start += 12;
+	    while (isspace(*start) && start < end) start++;
+	    if (start == end) {
+		munmap(bufstart, sb.st_size);
+		return 1;
+	    }
+
+	    serv.desc = malloc(end - start);
+	    strncpy(serv.desc, start, end - start);
+	    serv.desc[end - start] = '\0';
+
+	    start = next;
+	    while (serv.desc[strlen(serv.desc) - 1] == '\\') {
+		serv.desc[strlen(serv.desc) - 1] = '\0';
+		start = next;
+		
+		while (isspace(*start) && start < bufstop) start++;
+		if (start == bufstop || *start != '#') {
+		    munmap(bufstart, sb.st_size);
+		    return 1;
+		}
+
+		start++;
+
+		while (isspace(*start) && start < bufstop) start++;
+		if (start == bufstop) {
+		    munmap(bufstart, sb.st_size);
+		    return 1;
+		}
+
+		end = strchr(start, '\n');
+		if (!end) 
+		    next = end = bufstop;
+		else
+		    next = end + 1;
+
+		i = strlen(serv.desc);
+		serv.desc = realloc(serv.desc, i + end - start + 1);
+		strncat(serv.desc, start, end - start);
+		serv.desc[i + end - start] = '\0';
+
+		start = next;
 	    }
 	}
-
-	sprintf(buf, "%s:%s:%d:%d:%s\n", s->name, levels, s->sPriority,
-		s->kPriority, s->desc);
-
-	write(newfd, buf, strlen(buf));
     }
 
-    if (rename(NEW_LEVEL_DATABASE, LEVEL_DATABASE)) {
-	i = errno;
-	close(newfd);
-	unlink(NEW_LEVEL_DATABASE);
-	errno = i;
-    }
+    munmap(bufstart, sb.st_size);
 
-    close(*fd);
-    *fd = newfd;
-   
+    if ((serv.levels == -1 ) || !serv.desc) {
+	return 1;
+    } 
+
+    *service = serv;
     return 0;
 }
+
+/* returns -1 on error */
+int currentRunlevel(void) {
+    FILE * p;
+    char response[50];
+
+    p = popen("/sbin/runlevel", "r");
+    if (!p) return -1;
+
+    if (!fgets(response, sizeof(response), p)) {
+	pclose(p);
+	return -1;
+    }
+
+    pclose(p);
+
+    if (response[1] != ' ' || !isdigit(response[2]) || response[3] != '\n') 
+	return -1;
+
+    return response[2] - '0';
+}
+
+int findServiceEntries(char * name, int level, glob_t * globresptr) {
+    char match[200];
+    glob_t globres;
+    int rc;
+
+    sprintf(match, "%s/rc%d.d/*%s*", RUNLEVELS, level, name);
+
+    rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
+
+    if (rc && rc != GLOB_NOMATCH) {
+	fprintf(stderr, "failed to glob pattern %s\n", match);
+	return 1;
+    } else if (rc == GLOB_NOMATCH) {
+	globresptr->gl_pathc = 0;
+	return 0;
+    }
+
+    *globresptr = globres;
+    return 0;
+}
+
+int isConfigured(char * name, int level) {
+    glob_t globres;
+
+    if (findServiceEntries(name, level, &globres))
+	exit(1);
+
+    if (!globres.gl_pathc)
+	return 0;
+
+    globfree(&globres);
+    return 1;
+}
+
+int isOn(char * name, int where) {
+    glob_t globres;
+    int level;
+
+    if (where) {
+	for (level = 0; level < 7; level++)
+	    if (where & (1 << level)) break;
+    } else {
+	level = currentRunlevel();
+	if (level == -1) {
+	    fprintf(stderr, "cannot determine current run level\n");
+	    return 0;
+	}
+    }
+
+    if (findServiceEntries(name, level, &globres))
+	exit(1);
+
+    if (!globres.gl_pathc || !strstr(globres.gl_pathv[0], "/S"))
+	return 0;
+
+    globfree(&globres);
+    return 1;
+}
+
+int doSetService(struct service s, int level, int on) {
+    int priority = on ? s.sPriority : s.kPriority;
+    char linkname[200];
+    char linkto[200];
+    glob_t globres;
+    int i;
+
+    if (!findServiceEntries(s.name, level, &globres)) {
+	for (i = 0; i < globres.gl_pathc; i++)
+	    unlink(globres.gl_pathv[i]);
+	if (globres.gl_pathc) globfree(&globres);
+    }
+
+    sprintf(linkname, "%s/rc%d.d/%c%d%s", RUNLEVELS, level,
+			on ? 'S' : 'K', priority, s.name);
+    sprintf(linkto, "../init.d/%s", s.name);
+
+    unlink(linkname);	/* just in case */
+    if (symlink(linkto, linkname)) {
+	fprintf(stderr, "failed to make symlink %s: %s\n", linkname,
+		strerror(errno));
+	return 1;
+    }
+
+    return 0; 
+}
+

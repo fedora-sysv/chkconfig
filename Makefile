@@ -1,10 +1,10 @@
-VERSION=0.2
+VERSION=0.3
 CVSTAG = r$(subst .,-,$(VERSION))
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
 LDFLAGS=-g
 LIBS=-lpopt
-MAN=chkconfig.8 chkconfigtab.5
+MAN=chkconfig.8
 PROG=chkconfig
 BINDIR = /sbin
 MANDIR = /usr/man

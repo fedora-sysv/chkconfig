@@ -1,15 +1,15 @@
 #include <ctype.h>
+#include <dirent.h>
 #include <errno.h>
 #include <glob.h>
 #include <popt.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <unistd.h>
 
 #include "leveldb.h"
-
-#define RUNLEVELS "/etc/rc.d"
 
 static void usage(void) {
     fprintf(stderr, "chkconfig version " VERSION 
@@ -18,156 +18,19 @@ static void usage(void) {
 			"the GNU Public License.\n");
     fprintf(stderr, "\n");
     fprintf(stderr, "usage:   chkconfig --list [name]\n");
-    fprintf(stderr, "         chkconfig --add <name> <levels> <startpri> <killpri> <desc>\n");
+    fprintf(stderr, "         chkconfig --add <name>\n");
     fprintf(stderr, "         chkconfig --del <name>\n");
     fprintf(stderr, "         chkconfig [--level <levels>] <name> <on|off|reset>\n");
 
     exit(1);
 }
 
-/* returns -1 on error */
-static int currentRunlevel(void) {
-    FILE * p;
-    char response[50];
-
-    p = popen("/sbin/runlevel", "r");
-    if (!p) return -1;
-
-    if (!fgets(response, sizeof(response), p)) {
-	pclose(p);
-	return -1;
-    }
-
-    pclose(p);
-
-    if (response[1] != ' ' || !isdigit(response[2]) || response[3] != '\n') 
-	return -1;
-
-    return response[2] - '0';
-}
-
-int findMatches(char * name, int level, glob_t * globresptr) {
-    char match[200];
-    glob_t globres;
-    int rc;
-
-    sprintf(match, "%s/rc%d.d/*%s*", RUNLEVELS, level, name);
-
-    rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
-
-    if (rc && rc != GLOB_NOMATCH) {
-	fprintf(stderr, "failed to glob pattern %s\n", match);
-	return 1;
-    } else if (rc == GLOB_NOMATCH) {
-	globresptr->gl_pathc = 0;
-	return 0;
-    }
-
-    *globresptr = globres;
-    return 0;
-}
-
-static int isConfigured(char * name, int level) {
-    glob_t globres;
-
-    if (findMatches(name, level, &globres))
-	exit(1);
-
-    if (!globres.gl_pathc)
-	return 0;
-
-    globfree(&globres);
-    return 1;
-}
-
-static int isOn(char * name, int where) {
-    glob_t globres;
-    int level;
-
-    if (where) {
-	for (level = 0; level < 7; level++)
-	    if (where & (1 << level)) break;
-    } else {
-	level = currentRunlevel();
-	if (level == -1) {
-	    fprintf(stderr, "cannot determine current run level\n");
-	    return 0;
-	}
-    }
-
-    if (findMatches(name, level, &globres))
-	exit(1);
-
-    if (!globres.gl_pathc || !strstr(globres.gl_pathv[0], "/S"))
-	return 0;
-
-    globfree(&globres);
-    return 1;
-}
-
-static int doSetService(struct service * s, int level, int on) {
-    int priority = on ? s->sPriority : s->kPriority;
-    char linkname[200];
-    char linkto[200];
-    glob_t globres;
-    int i;
-
-    if (!findMatches(s->name, level, &globres)) {
-	for (i = 0; i < globres.gl_pathc; i++)
-	    unlink(globres.gl_pathv[i]);
-	if (globres.gl_pathc) globfree(&globres);
-    }
-
-    sprintf(linkname, "%s/rc%d.d/%c%d%s", RUNLEVELS, level,
-			on ? 'S' : 'K', priority, s->name);
-    sprintf(linkto, "../init.d/%s", s->name);
-
-    unlink(linkname);	/* just in case */
-    if (symlink(linkto, linkname)) {
-	fprintf(stderr, "failed to make symlink %s: %s\n", linkname,
-		strerror(errno));
-	return 1;
-    }
-
-    return 0; 
-}
-
 static int delService(char * name) {
-    int db;
-    struct service * serviceList, * s, * newlist;
-    int numServices, level, i;
+    int level, i;
     glob_t globres;
-
-    if ((db = ldbLock(1)) < 0) {
-	fprintf(stderr, "failed to open chkconfig database: %s\n",
-		strerror(errno));
-	return 1;
-    }
-
-    if (ldbRead(db, &serviceList, &numServices)) {
-	fprintf(stderr, "failed to read chkconfig database\n");
-	return 1;
-    }
-
-    s = findService(serviceList, name);
-    if (!s) {
-	fprintf(stderr, "service %s is not configured in chkconfig\n", name);
-	return 1;
-    }
-
-    newlist = malloc(sizeof(*newlist) * numServices);
-    memcpy(newlist, serviceList, sizeof(*newlist) * (s - serviceList));
-    memcpy(newlist + (s - serviceList), serviceList + (s - serviceList + 1), 
-		sizeof(*newlist) * (numServices - (s - serviceList) - 1));
-
-    if (ldbWrite(&db, newlist)) {
-	fprintf(stderr, "failed to write database: %s\n", strerror(errno));
-    }
-    ldbUnlock(db);
-
 
     for (level = 0; level < 7; level++) {
-	if (!findMatches(s->name, level, &globres)) {
+	if (!findServiceEntries(name, level, &globres)) {
 	    for (i = 0; i < globres.gl_pathc; i++)
 		unlink(globres.gl_pathv[i]);
 	    if (globres.gl_pathc) globfree(&globres);
@@ -177,44 +40,29 @@ static int delService(char * name) {
     return 0;
 }
 
-static int addService(char * name, int levels, int sPriority, int kPriority,
-		      char * desc) {
-    int db, i;
-    struct service * serviceList, * s;
-    int numServices;
+static void readServiceError(int rc, char * name) {
+    if (rc == 1) {
+	fprintf(stderr, "service %s does not support chkconfig\n", name);
+    } else {
+	fprintf(stderr, "error reading information on service %s: %s\n",
+		name, strerror(errno));
+    }
 
-    if ((db = ldbLock(1)) < 0) {
-	fprintf(stderr, "failed to open chkconfig database: %s\n",
-		strerror(errno));
+    exit(1);
+}
+
+static int addService(char * name) {
+    int i, rc;
+    struct service s;
+
+    if ((rc = readServiceInfo(name, &s))) {
+	readServiceError(rc, name);
 	return 1;
     }
-
-    if (ldbRead(db, &serviceList, &numServices)) {
-	fprintf(stderr, "failed to read chkconfig database\n");
-	return 1;
-    }
-
-    s = findService(serviceList, name);
-    if (!s) {
-	serviceList = realloc(serviceList, sizeof(*s) * (numServices + 2));
-	serviceList[numServices + 1] = serviceList[numServices];
-	s = serviceList + numServices;
-    }
-	
-    s->name = name;
-    s->levels = levels;
-    s->sPriority = sPriority;
-    s->kPriority = kPriority;
-    s->desc = desc;
-
-    if (ldbWrite(&db, serviceList)) {
-	fprintf(stderr, "failed to write database: %s\n", strerror(errno));
-    }
-    ldbUnlock(db);
 
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i)) {
-	    if ((1 << i) & levels)
+	    if ((1 << i) & s.levels)
 		doSetService(s, i, 1);
 	    else
 		doSetService(s, i, 0);
@@ -224,65 +72,72 @@ static int addService(char * name, int levels, int sPriority, int kPriority,
     return 0;
 }
 
+static int showServiceInfo(char * name, int forgiving) {
+    int rc;
+    int where, i;
+    struct service s;
+
+    if ((rc = readServiceInfo(name, &s))) {
+	if (!forgiving)
+	    readServiceError(rc, name);
+	return forgiving ? 0 : 1;
+    }
+
+    printf("%s", s.name);
+
+    where = 1;
+    for (i = 0; i < 7; i++) {
+	printf(" %d:%s", i, isOn(s.name, where) ? "on" : "off");
+	where <<= 1;
+    }
+    printf("\n");
+
+    return 0;
+}
+
 static int listService(char * item) {
-    int db, where;
-    struct service * serviceList, * s;
-    int numServices;
-    int i;
+    DIR * dir;
+    struct dirent * ent;
+    struct stat sb;
+    char fn[1024];
 
-    if ((db = ldbLock(0)) < 0) {
-	fprintf(stderr, "failed to open chkconfig database: %s\n",
+    if (item) return showServiceInfo(item, 0);
+
+    if (!(dir = opendir(RUNLEVELS "/init.d"))) {
+	fprintf(stderr, "failed to open " RUNLEVELS "/init.d: %s\n",
 		strerror(errno));
-	return 1;
+        return 1;
     }
 
-    if (ldbRead(db, &serviceList, &numServices)) {
-	fprintf(stderr, "failed to read chkconfig database\n");
-	return 1;
-    }
+    errno = 0;
+    while ((ent = readdir(dir))) {
+	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
+	    strchr(ent->d_name, '.')) continue;
 
-    if (!item) {
-	s = serviceList;
-	while (s->name) {
-	    printf("%s", s->name);
+	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+	if (stat(fn, &sb)) continue;
+	if (!S_ISREG(sb.st_mode)) continue;
 
-	    where = 1;
-	    for (i = 0; i < 7; i++) {
-		printf(" %d:%s", i, isOn(s->name, where) ? "on" : "off");
-		where <<= 1;
-	    }
-	    printf("\n");
-
-	    s++;
-	}
-    } else {
-	s = findService(serviceList, item);
-	if (!s) {
-	    fprintf(stderr, "unknown service %s\n", item);
+	if (showServiceInfo(ent->d_name, 1)) {
+	    closedir(dir);
 	    return 1;
 	}
-
-	printf("%s", item);
-
-	where = 1;
-	for (i = 0; i < 7; i++) {
-	    printf(" %d:%s", i, isOn(s->name, where) ? "on" : "off");
-	    where <<= 1;
-	}
-	printf("\n");
     }
 
-    ldbUnlock(db);
+    if (errno) {
+        perror("error reading from directory " RUNLEVELS "/init.d");
+        return 1;
+    }
+
+    closedir(dir);
 
     return 0;
 }
 
 int setService(char * name, int where, int state) {
-    int i;
+    int i, rc;
     int what;
-    int db;
-    struct service * serviceList, * s;
-    int numServices;
+    struct service s;
     
     if (!where && state != -1) {
 	/* levels 3, 4, 5 */
@@ -292,20 +147,8 @@ int setService(char * name, int where, int state) {
 	        (1 << 3) | (1 << 4) | (1 << 5) | (1 << 6);
     }
 
-    if ((db = ldbLock(0)) < 0) {
-	fprintf(stderr, "failed to open chkconfig database: %s\n",
-		strerror(errno));
-	return 1;
-    }
-
-    if (ldbRead(db, &serviceList, &numServices)) {
-	fprintf(stderr, "failed to read chkconfig database\n");
-	return 1;
-    }
-
-    s = findService(serviceList, name);
-    if (!s) {
-	fprintf(stderr, "unknown service %s\n", name);
+    if ((rc = readServiceInfo(name, &s))) {
+	readServiceError(rc, name);
 	return 1;
     }
 
@@ -314,7 +157,7 @@ int setService(char * name, int where, int state) {
 
 	if (state == 1 || state == 0)
 	    what = state;
-	else if (s->levels & (1 << i))
+	else if (s.levels & (1 << i))
 	    what = 1;
 	else
 	    what = 0;
@@ -358,30 +201,15 @@ int main(int argc, char ** argv) {
 
     if (addItem) {
 	char * name = poptGetArg(optCon);
-	int levels = parseLevels(poptGetArg(optCon), 0);
-	char * startpriStr = poptGetArg(optCon);
-	char * killpriStr = poptGetArg(optCon);
-	char * desc = poptGetArg(optCon);
-	char * end;
-	int startPri, killPri;
 
-	if (!desc || levels == -1 || !*name || !*desc || poptGetArg(optCon)) 
+	if (!name || !*name || poptGetArg(optCon)) 
 	    usage();
 
-	startPri = strtoul(startpriStr, &end, 10);
-	if (*end) 
-	    usage();
-	 
-	killPri = strtoul(killpriStr, &end, 10);
-	if (*end) 
-	    usage();
-	 
-	
-	return addService(name, levels, startPri, killPri, desc);
+	return addService(name);
     } else if (delItem) {
 	char * name = poptGetArg(optCon);
 
-	if (!name || poptGetArg(optCon)) usage();
+	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	return delService(name);
     } else if (listItem) {

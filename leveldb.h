@@ -1,8 +1,9 @@
 #ifndef H_LEVELDB
 #define H_LEVELDB
 
-#define LEVEL_DATABASE "/var/lib/chkconfigtab"
-#define NEW_LEVEL_DATABASE "/var/lib/.chkconfigtab.new"
+#define RUNLEVELS "/etc/rc.d"
+
+#include <glob.h>
 
 struct service {
     char * name;
@@ -11,12 +12,14 @@ struct service {
 };
 
 int parseLevels(char * str, int emptyOk);
-struct service * findService(struct service * list, char * name);
-/* returns filedescriptor */
-int ldbLock(int rw);
-int ldbUnlock(int fd);
-/* last service has name NULL, list must be freed */
-int ldbRead(int fd, struct service ** list, int * numServices);
-int ldbWrite(int * fd, struct service * list);
+
+/* returns 0 on success, 1 if the service is not chkconfig-able, -1 if an
+   I/O error occurs (in which case errno can be checked) */
+int readServiceInfo(char * name, struct service * service);
+int currentRunlevel(void);
+int isOn(char * name, int where);
+int isConfigured(char * name, int level);
+int doSetService(struct service s, int level, int on);
+int findServiceEntries(char * name, int level, glob_t * globresptr);
 
 #endif
