@@ -1,18 +1,20 @@
-# t³umaczenie dla lpl.
-# Copyright (C) 2000 Free Software Foundation, Inc.
-# Pawe³ Niewiadomski <lilo@free.poltronic.net>, 2000.
+# translation of pl.po to POLISH
+# tÅ‚umaczenie dla lpl.
+# Copyright (C) 2000, 2004 Free Software Foundation, Inc.
+# PaweÅ‚ Niewiadomski <lilo@free.poltronic.net>, 2000.
+# RadosÅ‚aw Zawartko <radzaw@radzaw.one.pl>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: pl\n"
 "POT-Creation-Date: 2003-07-15 23:43-0400\n"
-"PO-Revision-Date: 2002-10-08 21:08+0200\n"
-"Last-Translator: Bartosz Sapijaszko <bartosz@sapek.net>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"PO-Revision-Date: 2004-01-24 13:57+0100\n"
+"Last-Translator: RadosÅ‚aw Zawartko <radzaw@radzaw.one.pl>\n"
+"Language-Team: POLISH <pl@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -20,16 +22,13 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Program mo¿e byæ swobodnie rozprowadzany na warunkach Publicznej Licencji "
-"GNU.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Program moÅ¼e byÄ‡ swobodnie rozprowadzany na warunkach Publicznej Licencji GNU.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "u¿ycie:  %s --list [nazwa]\n"
+msgstr "uÅ¼ycie:  %s --list [nazwa]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -48,49 +47,51 @@ msgstr "         %s [--level <poziomy>] <nazwa> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"us³uga %s wspiera chkconfig, lecz nie jest przypisana do ¿adnego runlevelu "
-"(uruchom 'chkconfig -add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "usÅ‚uga %s wspiera chkconfig, lecz nie jest przypisana do Å¼adnego runlevelu (uruchom 'chkconfig -add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "us³uga %s nie wspiera chkconfig\n"
+msgstr "usÅ‚uga %s nie wspiera chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "b³±d podczas czytania informacji o us³udze %s: %s\n"
+msgstr "bÅ‚Ä…d podczas czytania informacji o usÅ‚udze %s: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98
+#: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
+msgstr "nie mogÅ‚em otworzyÄ‡ %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:282 ../ntsysv.c:195
+#: ../chkconfig.c:282
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "b³±d podczas czytania z katalogu %s/init.d: %s\n"
+msgstr "bÅ‚Ä…d podczas czytania z katalogu %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "us³ugi uruchamiane przez xinetd:\n"
+msgstr "usÅ‚ugi uruchamiane przez xinetd:\n"
 
 #: ../chkconfig.c:292
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "nie mog³em otworzyæ foldera %s: %s"
+msgstr "failed to open directory %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -99,17 +100,18 @@ msgstr "%s wersja %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "tylko jedna z opcji --list, --add, lub --del mo¿e byæ podana\n"
+msgstr "tylko jedna z opcji --list, --add, lub --del moÅ¼e byÄ‡ podana\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "tylko jeden poziom pracy mo¿e byæ podany dla zapytania chkconfig\n"
+msgstr "tylko jeden poziom pracy moÅ¼e byÄ‡ podany dla zapytania chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Naci¶nij <F1> aby dowiedzieæ siê wiêcej o us³udze."
+msgstr "NaciÅ›nij <F1> aby dowiedzieÄ‡ siÄ™ wiÄ™cej o usÅ‚udze."
 
-#: ../ntsysv.c:62 ../ntsysv.c:99
+#: ../ntsysv.c:62
+#: ../ntsysv.c:99
 msgid "Ok"
 msgstr "Ok"
 
@@ -123,141 +125,136 @@ msgstr "Anuluj"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Które z us³ug powinny byæ automatycznie uruchamiane?"
+msgstr "KtÃ³re z usÅ‚ug powinny byÄ‡ automatycznie uruchamiane?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Us³ugi"
+msgstr "UsÅ‚ugi"
 
-#: ../ntsysv.c:186 ../ntsysv.c:230
+#: ../ntsysv.c:186
+#: ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "b³±d podczas odczytywania informacji o %s: %s\n"
+msgstr "bÅ‚Ä…d podczas odczytywania informacji o %s: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "b³±d podczas czytania z katalogu %s: %s\n"
+msgstr "bÅ‚Ä…d podczas czytania z katalogu %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Musisz byæ u¿ytkownikiem root aby uruchomiæ %s.\n"
+msgstr "Musisz byÄ‡ uÅ¼ytkownikiem root aby uruchomiÄ‡ %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "nieprawid³owy argument dla --levels\n"
+msgstr "nieprawidÅ‚owy argument dla --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Brak us³ug, którymi ntsysv móg³by zarz±dzaæ!\n"
+msgstr "Brak usÅ‚ug, ktÃ³rymi ntsysv mÃ³gÅ‚by zarzÄ…dzaÄ‡!\n"
 
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nie mog³em dopasowaæ do wzoru %s: %s\n"
+msgstr "nie mogÅ‚em dopasowaÄ‡ do wzoru %s: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "nie mogê ustaliæ aktualnego poziomu pracy\n"
+msgstr "nie mogÄ™ ustaliÄ‡ aktualnego poziomu pracy\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
+msgstr "nie powiodÅ‚a siÄ™ prÃ³ba stworzenia symlinka %s: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Program mo¿e byæ swobodnie rozprowadzany na warunkach Publicznej Licencji "
-"GNU.\n"
+"Program moÅ¼e byÄ‡ swobodnie rozprowadzany na warunkach Publicznej Licencji GNU.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "usage: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <poziomy>] <nazwa> %s)\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <nazwa>\n"
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <nazwa>\n"
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <nazwa>\n"
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <nazwa>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "inne opcje: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <katalog> --admindir <katalog>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
+msgstr "nie mogÄ™ otworzyÄ‡ %s: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
+msgstr "nie mogÄ™ odczytaÄ‡ %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s pusty!\n"
 
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "zÅ‚y tryb w linii 1 %s\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "zÅ‚y gÅ‚Ã³wny link w %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "Å›cieÅ¼ka %s nieoczekiwana w %s\n"
 
 #: ../alternatives.c:214
 #, c-format
@@ -267,7 +264,7 @@ msgstr ""
 #: ../alternatives.c:224
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "nieoczekiwany koniec pliku w %s\n"
 
 #: ../alternatives.c:233
 #, c-format
@@ -277,7 +274,7 @@ msgstr ""
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "spodziewany priorytet liczbowy w %s\n"
 
 #: ../alternatives.c:275
 #, c-format
@@ -287,7 +284,7 @@ msgstr ""
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "nieoczekiwana linia w %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -297,50 +294,55 @@ msgstr ""
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
 
-#: ../alternatives.c:337 ../alternatives.c:344
+#: ../alternatives.c:337
+#: ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
+msgstr "usunie %s\n"
+
+#: ../alternatives.c:339
+#: ../alternatives.c:346
+#: ../alternatives.c:377
+#, c-format
+msgid "failed to remove link %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
-#, fuzzy, c-format
-msgid "failed to remove link %s: %s\n"
-msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
-
-#: ../alternatives.c:362 ../alternatives.c:374
+#: ../alternatives.c:362
+#: ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "dowiÄ…Å¼e %s -> %s\n"
 
-#: ../alternatives.c:366 ../alternatives.c:383
-#, fuzzy, c-format
+#: ../alternatives.c:366
+#: ../alternatives.c:383
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
+msgstr "Nie moÅ¼na dowiÄ…zaÄ‡ %s -> %s: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s juÅ¼ istnieje\n"
 
 #: ../alternatives.c:417
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "nie mog³em dopasowaæ do wzoru %s: %s\n"
+msgstr "utworzenie %s nie powiodÅ‚o siÄ™: %s\n"
 
 #: ../alternatives.c:448
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
+msgstr ""
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "gÅ‚Ã³wne dowiÄ…zanie dla %s musi byÄ‡ %s\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "niepoprawne dowiÄ…zanie %s dla slave %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
@@ -355,27 +357,27 @@ msgstr ""
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " dowiÄ…zanie wskazuje na %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - priorytet %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Obecnie 'najlepszÄ…' wersjÄ… jest %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Jest %d programÃ³w dostarczajÄ…cych '%s'.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -386,13 +388,15 @@ msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
 #: ../alternatives.c:675
-#, fuzzy
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "b³±d podczas odczytywania informacji o %s: %s\n"
+msgstr ""
+"\n"
+"bÅ‚Ä…d odczytu wyboru\n"
 
-#: ../alternatives.c:702 ../alternatives.c:728
+#: ../alternatives.c:702
+#: ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr ""
@@ -400,27 +404,25 @@ msgstr ""
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(usunie %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "nie mog³em otworzyæ %s/init.d: %s\n"
+msgstr "nie moÅ¼na usunÄ…Ä‡ %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s niepoprawny\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s niepoprawny\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s wersja %s\n"
+msgstr "alternatives wersja %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "b³±d poczas czytania z katalogu %s/init.d: %s"
