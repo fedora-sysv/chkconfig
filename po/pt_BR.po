@@ -1,11 +1,13 @@
-# Portuguese localization of Red Hat Linux
+# Brazilian Portuguese localization of Red Hat Linux
+# David Barzilay <barzilay@redhat.com>, 2003
+# Originated from the Portuguese translation by
 # Pedro Morais <morais@kde.org>
 # José Nuno Pires <jncp@netcabo.pt>
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-02-05 23:53+1000\n"
+"PO-Revision-Date: 2003-02-25 22:36+1000\n"
 "Last-Translator: David Barzilay <barzilay@redhat.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
