@@ -1,5 +1,6 @@
 VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
 CVSTAG = r$(subst .,-,$(VERSION))
+CVSROOT = $(shell cat CVS/Root 2>/dev/null || :)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS)
 LDFLAGS=-g
@@ -65,7 +66,7 @@ install:
 archive:
 	cvs tag -F $(CVSTAG) .
 	@rm -rf /tmp/chkconfig-$(VERSION) /tmp/chkconfig
-	@cd /tmp; cvs export -r$(CVSTAG) chkconfig
+	@cd /tmp; cvs -d $(CVSROOT) export -r$(CVSTAG) chkconfig
 	@mv /tmp/chkconfig /tmp/chkconfig-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/chkconfig-$(VERSION).tar.gz chkconfig-$(VERSION)
 	@rm -rf /tmp/chkconfig-$(VERSION)
