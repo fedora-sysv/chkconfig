@@ -2,7 +2,7 @@ Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
 %define version 1.0.6
 Version: %{version}
-Release: 1
+Release: 2
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -60,6 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Mon Aug  2 1999 Jeff Johnson <jbj@redhat.com>
+- fix i18n problem in usage message (#4233).
+- add --help and --version.
+
 * Mon Apr 19 1999 Cristian Gafton <gafton@redhat.com>
 - release for Red Hat 6.0
 

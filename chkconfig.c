@@ -11,20 +11,22 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+static char *progname;
+
 #define _(String) gettext((String)) 
 
 #include "leveldb.h"
 
 static void usage(void) {
-    fprintf(stderr, "chkconfig version " VERSION 
-			" - Copyright (C) 1997 Red Hat Software\n");
+    fprintf(stderr, "%s version " VERSION 
+			" - Copyright (C) 1997 Red Hat Software\n", progname);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
-    fprintf(stderr, _("usage:   chkconfig --list [name]\n"));
-    fprintf(stderr, _("         chkconfig --add <name>\n"));
-    fprintf(stderr, _("         chkconfig --del <name>\n"));
-    fprintf(stderr, _("         chkconfig [--level <levels>] <name> <on|off|reset>\n"));
+    fprintf(stderr, _("usage:   %s --list [name]\n"), progname);
+    fprintf(stderr, _("         %s --add <name>\n"), progname);
+    fprintf(stderr, _("         %s --del <name>\n"), progname);
+    fprintf(stderr, _("         %s [--level <levels>] <name> %s)\n"), progname, "<on|off|reset>");
 
     exit(1);
 }
@@ -183,20 +185,33 @@ int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0;
     int rc, i;
     char * levels = NULL;
+    int help, version;
     poptContext optCon;
     struct poptOption optionsTable[] = {
 	    { "add", '\0', 0, &addItem, 0 },
 	    { "del", '\0', 0, &delItem, 0 },
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
+	    { "help", 'h', 0 &help, 0 },
+	    { "version", 'v', 0 &version, 0 },
 	    { 0, 0, 0, 0, 0 } 
     };
+
+    if ((progname = strrchr(argv[0], '/')) != NULL)
+	progname++;
+    else
+	progname = argv[0];
 
     setlocale(LC_ALL, ""); 
     bindtextdomain("chkconfig","/usr/share/locale"); 
     textdomain("chkconfig"); 
 
-    if (argc == 1) usage();
+    if (version) {
+	fprintf(stdout, _("%s version %s\n"), progname, VERSION);
+	exit(0);
+    }
+
+    if (help || argc == 1) usage();
 
     optCon = poptGetContext("chkconfig", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);

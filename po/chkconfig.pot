@@ -2,10 +2,11 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 1999-04-08 14:17-0400\n"
+"POT-Creation-Date: 1999-08-02 11:57-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,60 +14,69 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING\n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:23
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 
-#: ../chkconfig.c:24
-msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
-
-#: ../chkconfig.c:25
-msgid "         chkconfig --add <name>\n"
-msgstr ""
-
 #: ../chkconfig.c:26
-msgid "         chkconfig --del <name>\n"
+#, c-format
+msgid "usage:   %s --list [name]\n"
 msgstr ""
 
 #: ../chkconfig.c:27
-msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+#, c-format
+msgid "         %s --add <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:34
+#: ../chkconfig.c:28
 #, c-format
-msgid "service %s does not support chkconfig\n"
+msgid "         %s --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:29
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr ""
 
 #: ../chkconfig.c:36
 #, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr ""
+
+#: ../chkconfig.c:38
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:98
+#: ../chkconfig.c:100
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:115
+#: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:138
+#: ../chkconfig.c:140
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr ""
 
-#: ../chkconfig.c:212
+#: ../chkconfig.c:210
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:227
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:259
+#: ../chkconfig.c:274
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr ""
 
