@@ -1,7 +1,7 @@
 # [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.13.1
+Version: 1.3.13.2
 Release: 0.2.1
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Feb 22 2005 Bill Nottingham <notting@redhat.com> 1.3.13.2-0.2.1
+- more LSB-related fixes (#149066)
+
 * Thu Feb 10 2005 Bill Nottingham <notting@redhat.com> 1.3.13.1-0.2.1
 - fix: prefer chkconfig: priorities if Required-Start/Required-Stop
   aren't set
