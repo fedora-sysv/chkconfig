@@ -1,0 +1,426 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
+"PO-Revision-Date: 2003-09-13 10:37+0530\n"
+"Last-Translator: Jatin Nansi <jnansi@redhat.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s संस्करण %s - प्रतिलिपि अधिकार १९९७-२००० रेड हेट, निगमन\n"
+
+#: ../chkconfig.c:22
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
+
+#: ../chkconfig.c:25
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr "प्रयोग:   %s --list [नाम]\n"
+
+#: ../chkconfig.c:26
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "        %s --add <नाम>\n"
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <नाम>\n"
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--level <स्तर>] <नाम> %s)\n"
+
+#: ../chkconfig.c:35
+#, c-format
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "%s सेवा chkconfig को मदद करते हैं, मगर किसी धावस्तर('chkconfig --add %s' चलाएँ)\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "%s सेवा chkconfig को मदद करते हैं\n"
+
+#: ../chkconfig.c:39
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "%s सेवा पर जानकारी पढ़ने में दोष: %s\n"
+
+#: ../chkconfig.c:98
+#: ../chkconfig.c:248
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "%s/init.d खोलने में असफल थे: %s\n"
+
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
+msgid "on"
+msgstr "चालू"
+
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
+msgid "off"
+msgstr "बन्द"
+
+#: ../chkconfig.c:282
+#: ../ntsysv.c:195
+#, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "%s/init.d निर्देशिका से पढ़ने में दोष: %s\n"
+
+#: ../chkconfig.c:290
+msgid "xinetd based services:\n"
+msgstr "xinetd आधारित सेवाएँ:\n"
+
+#: ../chkconfig.c:292
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "%s निर्देशिका खोलने में असफल था: %s\n"
+
+#: ../chkconfig.c:405
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s संस्करण %s\n"
+
+#: ../chkconfig.c:412
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "--list, --add, या --del में से सिर्फ एक को विशिष्ट करें\n"
+
+#: ../chkconfig.c:464
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "एक chkconfig प्रश्न के लिए सिर्फ एक धावस्तर विशिष्ट करना है\n"
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "सेवा पर अधिक जानकारी के लिए <F1> दबाएँ"
+
+#: ../ntsysv.c:62
+#: ../ntsysv.c:99
+msgid "Ok"
+msgstr "सही"
+
+#: ../ntsysv.c:62
+msgid "Back"
+msgstr "पीछे"
+
+#: ../ntsysv.c:62
+msgid "Cancel"
+msgstr "निरस्त"
+
+#: ../ntsysv.c:74
+msgid "What services should be automatically started?"
+msgstr "किन सेवाओं को स्वत: रूप से आरंभ करना है?"
+
+#: ../ntsysv.c:80
+msgid "Services"
+msgstr "सेवाओं"
+
+#: ../ntsysv.c:186
+#: ../ntsysv.c:230
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "%s सेवा के लिए जानकारी पढ़ने में दोष: %s\n"
+
+#: ../ntsysv.c:239
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "%s निर्देशिका के लिए जानकारी पढ़ने में दोष: %s\n"
+
+#: ../ntsysv.c:275
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "%s को चलाने के लिए आपको root होना आवश्यक है।\n"
+
+#: ../ntsysv.c:292
+msgid "bad argument to --levels\n"
+msgstr "--levels को बरा तर्क\n"
+
+#: ../ntsysv.c:299
+msgid "No services may be managed by ntsysv!\n"
+msgstr "ntsysv से सेवाओं का प्रबंध न हो सकेगा!\n"
+
+#: ../leveldb.c:508
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "%s प्रतिरूप को सार्वञिक करने में असफल थे: %s\n"
+
+#: ../leveldb.c:539
+msgid "cannot determine current run level\n"
+msgstr "वर्तमान धावस्तर निर्णय नहीं कर सकता\n"
+
+#: ../leveldb.c:627
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "%s संकलन बनाने में असफल था: %s\n"
+
+#: ../alternatives.c:46
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "%s वैकल्पिक संस्करण - प्रतिलिपि-अधिकार (C) २००१ रेड़ हेट, निगमन\n"
+
+#: ../alternatives.c:47
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr ""
+"जीएनयू जन लाइसेन्स के नियमानुसार मुक्त में इसको पुन:बाँट कर सकते हैं।\n"
+"\n"
+
+#: ../alternatives.c:48
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "प्रयोग: alternatives --install <संकलन> <नाम> <पथ> <प्राथमिकता>\n"
+
+#: ../alternatives.c:49
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <सेवा>]\n"
+
+#: ../alternatives.c:50
+msgid "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <संकलन> <नाम> <पथ>]* \n"
+
+#: ../alternatives.c:51
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove <नाम> <पथ>\n"
+
+#: ../alternatives.c:52
+msgid "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <नाम>\n"
+
+#: ../alternatives.c:53
+msgid "       alternatives --config <name>\n"
+msgstr "       alternatives --config <नाम>\n"
+
+#: ../alternatives.c:54
+msgid "       alternatives --display <name>\n"
+msgstr "       alternatives --display <नाम>\n"
+
+#: ../alternatives.c:55
+msgid "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <नाम> <पथ>\n"
+
+#: ../alternatives.c:56
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:57
+msgid "common options: --verbose --test --help --usage --version\n"
+msgstr "सामान्य विकल्प: --verbose --test --help --usage --version\n"
+
+#: ../alternatives.c:58
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <निर्देशिका> --admindir <निर्देशिका>\n"
+
+#: ../alternatives.c:159
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "%s खोलने में असफल: %s\n"
+
+#: ../alternatives.c:168
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "%s पढ़ने में असफल: %s\n"
+
+#: ../alternatives.c:177
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s खाली!\n"
+
+#: ../alternatives.c:186
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr "%s के लाइन १ पर बुरा प्रकार\n"
+
+#: ../alternatives.c:193
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr "%s में बुरा प्राथमिक संकलन\n"
+
+#: ../alternatives.c:205
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "%s में %s पथ अप्रतिक्षारत है\n"
+
+#: ../alternatives.c:214
+#, c-format
+msgid "missing path for slave %s in %s\n"
+msgstr "%s में %s अधीन के लिए अप्राप्ति पथ\n"
+
+#: ../alternatives.c:224
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "%s में अप्रतिक्षारत संचिका का अंत\n"
+
+#: ../alternatives.c:233
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr "%s में वैकल्पिक को प्रतिक्षारत है\n"
+
+#: ../alternatives.c:253
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "%s में संख्यांक प्राथमिकता प्रतिक्षारत है\n"
+
+#: ../alternatives.c:275
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "%s में अधीन पथ प्रतीक्षारत है\n"
+
+#: ../alternatives.c:294
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "%s में अप्रतीक्षारत लाइन: %s\n"
+
+#: ../alternatives.c:316
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr "कोई वैकल्पिक के लिए संकलन नहीं है -- प्रकार को मानवीय बना रहा है\n"
+
+#: ../alternatives.c:321
+msgid "link changed -- setting mode to manual\n"
+msgstr "संकलन बदला गया -- प्रकार को मानवीय बना रहा है\n"
+
+#: ../alternatives.c:337
+#: ../alternatives.c:344
+#, c-format
+msgid "would remove %s\n"
+msgstr "%s हटाया जा सकता है\n"
+
+#: ../alternatives.c:339
+#: ../alternatives.c:346
+#: ../alternatives.c:377
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "%s संकलन को हटाने में असफल थे: %s\n"
+
+#: ../alternatives.c:362
+#: ../alternatives.c:374
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "%s -> %s संकलित कर सकता है\n"
+
+#: ../alternatives.c:366
+#: ../alternatives.c:383
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "%s -> %s संकलित करने में असफल: %s\n"
+
+#: ../alternatives.c:415
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s पहले से है\n"
+
+#: ../alternatives.c:417
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "%s को बनाने में असफल था: %s\n"
+
+#: ../alternatives.c:448
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "%s को %s से स्थानांतरित करने में असफल था: %s\n"
+
+#: ../alternatives.c:510
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "%s के लिए प्राथमिक संकलन %s अवश्य होना है\n"
+
+#: ../alternatives.c:574
+#, c-format
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr "%s अधीन  (%s %s) के लिए  %s संकलन सही नहीं है\n"
+
+#: ../alternatives.c:616
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s - स्थिति स्वत: है।\n"
+
+#: ../alternatives.c:618
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%s - स्थिति मानवीय है।\n"
+
+#: ../alternatives.c:620
+#, c-format
+msgid " link currently points to %s\n"
+msgstr "संकलन वर्तमान में  %s को सूचित करता है\n"
+
+#: ../alternatives.c:623
+#, c-format
+msgid "%s - priority %d\n"
+msgstr "%s - %d प्राथमिकता\n"
+
+#: ../alternatives.c:626
+#, c-format
+msgid " slave %s: %s\n"
+msgstr "%s अधीन: %s\n"
+
+#: ../alternatives.c:631
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "%s वर्तमान में `सर्वोत्तम' संसकरण है।\n"
+
+#: ../alternatives.c:661
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr "%d कार्यक्रम हैं '%s' को प्रदान करने वाले ।\n"
+
+#: ../alternatives.c:663
+msgid "  Selection    Command\n"
+msgstr "  चुनित    निर्देश\n"
+
+#: ../alternatives.c:672
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr "[+] वर्तमानिय चुनित को रखने के लिए Enter दबाएँ, या चुनित अंक मुद्रित करें:"
+
+#: ../alternatives.c:675
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"चयन पढ़ने में दोष\n"
+
+#: ../alternatives.c:702
+#: ../alternatives.c:728
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "%s के लिए एक वैकल्पिक के रूप में %s विन्यासित नहीं है\n"
+
+#: ../alternatives.c:744
+#, c-format
+msgid "(would remove %s\n"
+msgstr "%s को हटाया जा सकता है\n"
+
+#: ../alternatives.c:746
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr "%s को हटाने में असफल था: %s\n"
+
+#: ../alternatives.c:864
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "altdir %s अनुचित है\n"
+
+#: ../alternatives.c:870
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "admin %s अनुचित है\n"
+
+#: ../alternatives.c:880
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "वैकल्पिक संस्करण %s\n"
+
