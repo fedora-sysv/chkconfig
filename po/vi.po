@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig VERSION\n"
-"POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-07-26 20:47+0700\n"
+"POT-Creation-Date: 2003-07-15 23:43-0400\n"
+"PO-Revision-Date: 2003-10-18 20:39+0700\n"
 "Last-Translator: pclouds <pclouds@gmx.net>\n"
 "Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -77,10 +77,10 @@ msgstr "bật"
 msgid "off"
 msgstr "tắt"
 
-#: ../chkconfig.c:282
+#: ../chkconfig.c:282 ../ntsysv.c:195
 #, c-format
-msgid "error reading from directory %s/init.d: %s"
-msgstr "lỗi đọc từ thư mục %s/init.d: %s"
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "lỗi đọc từ thư mục %s/init.d: %s\n"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
@@ -88,19 +88,19 @@ msgstr "dịch vụ dựa trên xinetd:\n"
 
 #: ../chkconfig.c:292
 #, c-format
-msgid "failed to open directory %s: %s"
-msgstr "lỗi mở thư mục %s: %s"
+msgid "failed to open directory %s: %s\n"
+msgstr "lỗi mở thư mục %s: %s\n"
 
-#: ../chkconfig.c:404
+#: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s phiên bản %s\n"
 
-#: ../chkconfig.c:411
+#: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "chỉ có thể dùng một trong --list, --add, --del\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chỉ có thể xác định một runlevel trong truy vấn chkconfig\n"
 
@@ -133,11 +133,6 @@ msgstr "Dịch vụ"
 msgid "error reading info for service %s: %s\n"
 msgstr "lỗi đọc thông tin dịch vụ %s: %s\n"
 
-#: ../ntsysv.c:195
-#, c-format
-msgid "error reading from directory %s/init.d: %s\n"
-msgstr "lỗi đọc từ thư mục %s/init.d: %s\n"
-
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -156,16 +151,16 @@ msgstr "tham số --levels sai\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Không có dịch vụ nào được quản lý bởi ntsysv!\n"
 
-#: ../leveldb.c:507
-#, fuzzy, c-format
+#: ../leveldb.c:508
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "lỗi glob mẫu %s: %s\n"
 
-#: ../leveldb.c:538
+#: ../leveldb.c:539
 msgid "cannot determine current run level\n"
 msgstr "không thể xác định runlevel hiện thời\n"
 
-#: ../leveldb.c:626
+#: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "lỗi tạo symlink %s: %s\n"
@@ -422,3 +417,6 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "phiên bản thay thế %s\n"
+
+#~ msgid "error reading from directory %s/init.d: %s"
+#~ msgstr "lỗi đọc từ thư mục %s/init.d: %s"
