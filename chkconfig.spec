@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.15
+Version: 1.2.16
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -69,6 +69,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Wed Aug 30 2000 Nalin Dahyabhai <nalin@redhat.com>
+- make xinetd config files mode 0644, not 644
+
 * Thu Aug 24 2000 Erik Troan <ewt@redhat.com>
 - updated it and es translations
 

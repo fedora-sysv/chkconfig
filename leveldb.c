@@ -447,7 +447,7 @@ int setXinetdService(struct service s, int on) {
 		buf = ptr;
 	}
 	close(newfd);
-	chmod(newfname,644);
+	chmod(newfname,0644);
 	unlink(oldfname);
 	return(rename(newfname,oldfname));
 }
