@@ -1,7 +1,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.2.19
-Release: 1
+Release: 2
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -48,10 +48,12 @@ for n in 0 1 2 3 4 5 6; do
     ln -s rc.d/rc${n}.d $RPM_BUILD_ROOT/etc/rc${n}.d
 done
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(-,root,root)
 /sbin/chkconfig
 /etc/init.d
@@ -59,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
 %{_mandir}/*/chkconfig*
-/usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
 %files -n ntsysv
 %defattr(-,root,root)
@@ -69,6 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Fri Feb  2 2001 Preston Brown <pbrown@redhat.com>
+- use lang finder script
+
 * Fri Feb  2 2001 Bill Nottingham <notting@redhat.com>
 - finally fix the bug Nalin keeps complaining about :)
 
