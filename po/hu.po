@@ -17,24 +17,24 @@ msgid ""
 msgstr "Ez a szoftver szabadon terjeszthetõ a GNU Public License szerint.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "usage:   chkconfig --list [név]\n"
+msgstr "usage:   %s --list [név]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <név>\n"
+msgstr "         %s --add <név>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <név>\n"
+msgstr "         %s --del <név>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <levels>] <név> <on|off|reset>\n"
+msgstr "         %s [--level <levels>] <név> %s)\n"
 
 # , c-format
 #: ../chkconfig.c:36
@@ -71,7 +71,7 @@ msgstr "%s/init.d könyvtár nem olvasható: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s verzió: %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
