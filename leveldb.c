@@ -220,7 +220,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
     int fd;
     struct stat sb;
-    char * bufstart, * bufstop, * start, * end, * next;
+    char * bufstart, * bufstop, * start, * end, * next, *tmpbufstart;
     struct service serv = { NULL, -1, -1, -1, NULL, 0, 0 };
     char overflow;
     char levelbuf[20];
@@ -239,7 +239,19 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	return -1;
     }
 
+    tmpbufstart = (char*)malloc(sb.st_size+1);
+    if (tmpbufstart == NULL) {
+	close(fd);	
+	return -1;
+    }
+
+    memcpy(tmpbufstart, bufstart, sb.st_size);
+    munmap(bufstart, sb.st_size);
+
+    bufstart = tmpbufstart;
     bufstop = bufstart + sb.st_size;
+    *bufstop = 0;
+
     close(fd);
 
     next = bufstart;
@@ -265,7 +277,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end || !strncmp(start, "true", 4)) {
 		if (serv.desc) free(serv.desc);
-		munmap(bufstart, sb.st_size);
+		free(bufstart);
 		return 1;
 	    }
 	}
@@ -275,7 +287,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end) {
 		if (serv.desc) free(serv.desc);
-		munmap(bufstart, sb.st_size);
+		free(bufstart);
 		return 1;
 	    }
 
@@ -283,7 +295,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 			&serv.sPriority, &serv.kPriority, &overflow) != 4) ||
 		 !isspace(overflow)) {
 		if (serv.desc) free(serv.desc);
-		munmap(bufstart, sb.st_size);
+		free(bufstart);
 		return 1;
 	    }
 
@@ -293,7 +305,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 		serv.levels = parseLevels(levelbuf, 0);
 	    if (serv.levels == -1) {
 		if (serv.desc) free(serv.desc);
-		munmap(bufstart, sb.st_size);
+		free(bufstart);
 		return 1;
 	    }
 	} else if (!strncmp(start, "description", 11)) {
@@ -303,7 +315,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 	}
     }
 
-    munmap(bufstart, sb.st_size);
+    free(bufstart);
 
     if (!serv.desc) {
       if (english_desc)

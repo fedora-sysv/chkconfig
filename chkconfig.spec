@@ -71,6 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Tue Jun 12 2001 Bill Nottingham <notting@redhat.com>
+- don't segfault on files that are exactly the length of a page size
+  (#44199, <kmori@redhat.com>)
+
 * Sun Mar  4 2001 Bill Nottingham <notting@redhat.com>
 - don't show xinetd services in ntsysv if xinetd doesn't appear to be
   installed (#30565)
