@@ -492,6 +492,9 @@ int main(int argc, char ** argv) {
 	char * state = (char *)poptGetArg(optCon);
 	int where = 0, level = -1;
 
+	if (!name) {
+		usage();
+	}
 	if (levels) {
 	    where = parseLevels(levels, 0);
 	    if (where == -1) usage();
@@ -517,6 +520,8 @@ int main(int argc, char ** argv) {
 		}
 	    } 
 	    rc = readServiceInfo(name, &s, 0);
+	    if (rc)
+	       usage();
 	    if (s.type == TYPE_XINETD) {
 	       if (isOn("xinetd",level))
 		       return !s.levels;

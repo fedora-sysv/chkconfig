@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-02 17:03-0500\n"
+"POT-Creation-Date: 2005-02-07 16:08-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,7 +102,7 @@ msgstr ""
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:514
+#: ../chkconfig.c:517
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""

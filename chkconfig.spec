@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.14
+Version: 1.3.15
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Feb  7 2005 Bill Nottingham <notting@redhat.com> 1.3.15-1
+- print usage when various invalid args are passed (#147393)
+
 * Wed Feb  2 2005 Bill Nottingham <notting@redhat.com> 1.3.14-1
 - resize reasonably with larger screens (#74156)
 - don't error out completely on bad symlink (#74324)
