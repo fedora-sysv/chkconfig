@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-04-13 15:30+0200\n"
+"PO-Revision-Date: 1999-09-10 11:01+0200\n"
 "Last-Translator: Petr Kolar <Petr.Kolar@vslib.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,24 +20,24 @@ msgstr ""
 "Tento program mù¾e být volnì ¹íøen podle podmínek GNU Public License.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Pou¾ití: chkconfig --list [jméno]\n"
+msgstr "pou¾ití: %s --list [jméno]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "         chkconfig --add <jméno>\n"
+msgstr "         %s --add <jméno>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "         chkconfig --del <jméno>\n"
+msgstr "         %s --del <jméno>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level <úrovnì>] <jméno> <on|off|reset>\n"
+msgstr "         %s [--level <úrovnì>] <jméno> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -70,7 +70,7 @@ msgstr "chyba pøi ètení z adresáøe %s/init.d: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s verze %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -123,9 +123,9 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemù¾e spravovat ¾ádné slu¾by!\n"
 
 #: ../leveldb.c:265
-#, fuzzy, c-format
+#, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nelze expandovat vzorek %s\n"
+msgstr "chyba pøi expandování vzorku %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
