@@ -12,6 +12,7 @@ msgstr ""
 "Language-Team: LDP Indonesia <http://ldp.linux.or.id>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain\n"
+"Content-Transfer-Encoding: ISO-8859-1\n"
 
 #: ../chkconfig.c:21
 msgid ""
