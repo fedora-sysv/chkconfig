@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
 "POT-Creation-Date: 2001-03-05 00:42-0500\n"
-"PO-Revision-Date: 2001-03-10 10:20+0900\n"
+"PO-Revision-Date: 2001-03-21 21:14+0900\n"
 "Last-Translator: Jong-Hoon Ryu <queenrjh@chollian.net>\n"
 "Language-Team: Korean Linux Extension project <kle@kldp.org>\n"
 "MIME-Version: 1.0\n"
@@ -52,11 +52,11 @@ msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다: %s\n"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
-msgstr "활성"
+msgstr "on"
 
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
-msgstr "비활성"
+msgstr "off"
 
 #: ../chkconfig.c:138
 #, c-format
