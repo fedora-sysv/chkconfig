@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2000-10-19 02:48-0400\n"
-"PO-Revision-Date: 2000-12-20 18:51+0100\n"
+"PO-Revision-Date: 2000-12-20 20:16+0100\n"
 "Last-Translator: Jesús Bravo Álvarez <jba@pobox.com>\n"
 "Language-Team: Galician <trasno@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,6 @@ msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "só se pode indicar unha das opcións --list, --add, ou --del\n"
 
 #: ../chkconfig.c:340
-#, fuzzy
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "só se pode indicar un nivel de execución para unha consulta de chkconfig\n"
