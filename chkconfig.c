@@ -279,7 +279,7 @@ static int listService(char * item) {
     }
 
     if (err) {
-	fprintf(stderr, _("error reading from directory %s/init.d: %s"), 
+	fprintf(stderr, _("error reading from directory %s/init.d: %s\n"), 
 		RUNLEVELS, strerror(err));
         return 1;
     }
@@ -289,7 +289,7 @@ static int listService(char * item) {
     if (isXinetdEnabled()) {
 	    printf(_("xinetd based services:\n"));
 	    if (!(dir = opendir(XINETDDIR))) {
-		    fprintf(stderr, _("failed to open directory %s: %s"),
+		    fprintf(stderr, _("failed to open directory %s: %s\n"),
 			    XINETDDIR, strerror(err));
 		    return 1;
 	    }
