@@ -1,8 +1,8 @@
 #ifndef H_LEVELDB
 #define H_LEVELDB
 
-#define LEVEL_DATABASE "./chkconfig.db"
-#define NEW_LEVEL_DATABASE "./.chkconfig.new"
+#define LEVEL_DATABASE "/var/lib/chkconfigtab"
+#define NEW_LEVEL_DATABASE "/var/lib/.chkconfigtab.new"
 
 struct service {
     char * name;
