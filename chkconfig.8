@@ -56,6 +56,11 @@ or a stop script.  When switching runlevels, init will not re-start
 an already-started service, and will not re-stop a service that is
 not running.
 
+\fBchkconfig\fR also can manage xinetd scripts via the means
+of xinetd.d configuration files. Note that only the
+\fBon\fR, \fBoff\fR, and \fB-\-list\fR commands are supported
+for xinetd.d services.
+
 .SH OPTIONS
 .TP
 \fB-\-level \fIlevels\fR
