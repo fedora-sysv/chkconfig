@@ -6,27 +6,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-06-12 16:20GMT+10:00\n"
+"PO-Revision-Date: 2002-07-01 08:56+1000\n"
 "Last-Translator: Ben Wu <hpwu@redhat.com>\n"
-"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"Language-Team: Chinese (traditional) <i18n-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=BIG5\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0beta1\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s ç‰ˆæœ¬ %s - ç‰ˆæ¬Š (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "¦b¿í¦u GNU Public License ªº±ø´Ú¤U, ¥i¥H¦Û¥Ñªº´²§G³o­Óµ{¦¡.\n"
+msgstr "åœ¨éµå®ˆ GNU Public License çš„æ¢æ¬¾ä¸‹, å¯ä»¥è‡ªç”±çš„æ•£ä½ˆé€™å€‹ç¨‹å¼.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "¥Îªk:   %s --list [name]\n"
+msgstr "ç”¨æ³•:   %s --list [name]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -48,44 +48,44 @@ msgstr "         %s [--level <levels>] <name> %s)\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s ªA°È¤ä´© chkconfig, ¦ı¥¼¦V¥ô¦ó°õ¦æµ¥¯Åµù¥U (½Ğ°õ¦æ 'chkconfig --add %s')\n"
+msgstr "%s æœå‹™æ”¯æ´ chkconfig, ä½†æœªå‘ä»»ä½•åŸ·è¡Œç­‰ç´šè¨»å†Š (è«‹åŸ·è¡Œ 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "%s ªA°È¤£¤ä´© chkconfig\n"
+msgstr "%s æœå‹™ä¸æ”¯æ´ chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "¦b %s: %s ªA°È¤WÅª¨ú°T®§¿ù»~\n"
+msgstr "åœ¨ %s: %s æœå‹™ä¸Šè®€å–è¨Šæ¯éŒ¯èª¤\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "µLªk¶}±Ò %s/init.d: %s\n"
+msgstr "ç„¡æ³•é–‹å•Ÿ %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "¶}±Ò"
+msgstr "é–‹å•Ÿ"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "Ãö³¬"
+msgstr "é—œé–‰"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "Åª¨ú %s/init.d: %s ¥Ø¿ı¿ù»~"
+msgstr "è®€å– %s/init.d: %s ç›®éŒ„éŒ¯èª¤"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "¥H xinetd ¬°¥DªºªA°È:\n"
+msgstr "ä»¥ xinetd ç‚ºä¸»çš„æœå‹™:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "µLªk¶}±Ò %s: %s ¥Ø¿ı"
+msgstr "ç„¡æ³•é–‹å•Ÿ %s: %s ç›®éŒ„"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -94,75 +94,75 @@ msgstr "%s version %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "¥u¯à«ü©w --list, --add, ©Î --del ¤¤ªº¨ä¤¤¤@­Ó\n"
+msgstr "åªèƒ½æŒ‡å®š --list, --add, æˆ– --del ä¸­çš„å…¶ä¸­ä¸€å€‹\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "¥u¯à¹ï chkconfig ¬d¸ß«ü©w¤@ºØ°õ¦æµ¥¯Å(runlevel)\n"
+msgstr "åªèƒ½å° chkconfig æŸ¥è©¢æŒ‡å®šä¸€ç¨®åŸ·è¡Œç­‰ç´š(runlevel)\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "½Ğ«ö <F1> ¬d¬İ¸Ó¶µªA°Èªº§ó¦h¸ê°T."
+msgstr "è«‹æŒ‰ <F1> æŸ¥çœ‹è©²é …æœå‹™çš„æ›´å¤šè³‡è¨Š."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
-msgstr "½T©w"
+msgstr "ç¢ºå®š"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "¤W¤@¨B"
+msgstr "ä¸Šä¸€æ­¥"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "¨ú®ø"
+msgstr "å–æ¶ˆ"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "¨º¨ÇªA°ÈÀ³³Q¦Û°Ê±Ò°Ê?"
+msgstr "é‚£äº›æœå‹™æ‡‰è¢«è‡ªå‹•å•Ÿå‹•?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "ªA°È"
+msgstr "æœå‹™"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "Åª¨ú %s: %s ªA°Èªº¸ê°T¿ù»~\n"
+msgstr "è®€å– %s: %s æœå‹™çš„è³‡è¨ŠéŒ¯èª¤\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "Åª¨ú %s/init.d: %s ¥Ø¿ı¿ù»~\n"
+msgstr "è®€å– %s/init.d: %s ç›®éŒ„éŒ¯èª¤\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "Åª¨ú %s: %s ¥Ø¿ı¿ù»~\n"
+msgstr "è®€å– %s: %s ç›®éŒ„éŒ¯èª¤\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "±z¥²¶·¬O¨t²ÎºŞ²z­û(root)¤~¯à°õ¦æ %s \n"
+msgstr "æ‚¨å¿…é ˆæ˜¯ç³»çµ±ç®¡ç†å“¡(root)æ‰èƒ½åŸ·è¡Œ %s \n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "¦b --levels ³B¦³¤£·í°Ñ¼Æ\n"
+msgstr "åœ¨ --levels è™•æœ‰ä¸ç•¶åƒæ•¸\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "µL¥ô¦óªA°È¥i³Q ntsysv ºŞ²z!\n"
+msgstr "ç„¡ä»»ä½•æœå‹™å¯è¢« ntsysv ç®¡ç†!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob pattern %s: %s ¥¢±Ñ\n"
+msgstr "glob pattern %s: %s å¤±æ•—\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "µLªk¨ú±o¥Ø«eªº°õ¦æµ¥¯Å(runlevel)\n"
+msgstr "ç„¡æ³•å–å¾—ç›®å‰çš„åŸ·è¡Œç­‰ç´š(runlevel)\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "«Ø¥ß %s: %s ²Å¸¹³sµ²(symlink)¥¢±Ñ\n"
+msgstr "å»ºç«‹ %s: %s ç¬¦è™Ÿé€£çµ(symlink)å¤±æ•—\n"
 
