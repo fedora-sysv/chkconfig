@@ -1,3 +1,4 @@
+# translation of chkconfig.po to 
 # translation of de.po to Deutsch
 # Copyright (C) 2001 Red Hat, Inc.
 # Claudia Krug <fhonig@redhat.it>, 2001.
@@ -5,15 +6,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: de\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-02-03 19:21+1000\n"
-"Last-Translator: Bernd Groh <bgroh@redhat.com>\n"
-"Language-Team: Deutsch <de@li.org>\n"
+"PO-Revision-Date: 2003-06-17 12:35+1000\n"
+"Last-Translator: \n"
+"Language-Team:  <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0beta2\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
