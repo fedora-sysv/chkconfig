@@ -43,6 +43,7 @@ msgid "Ok"
 msgstr "OK"
 
 #: ../ntsysv.c:68
+msgid "What services should be automatically started?"
 msgstr "Welche Systemdienste sollten automatisch bestarten werden?"
 
 #: ../ntsysv.c:74

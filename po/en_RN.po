@@ -66,4 +66,4 @@ msgid "Cancel"
 msgstr "fergit it!"
 
 msgid "Back"
-msgstr "back up!""
+msgstr "back up!"
