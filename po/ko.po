@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.6\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-09-13 16:17+0900\n"
+"PO-Revision-Date: 1999-09-13 21:42+0900\n"
 "Last-Translator: Byeong-Chan Kim <redhands@linux.sarang.net>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "끔"
 #: ../chkconfig.c:117
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d를 여는데 실패했습니다: %s\n"
+msgstr "%s/init.d를 여는데 실패함: %s\n"
 
 #: ../chkconfig.c:151
 #, c-format
