@@ -8,64 +8,56 @@ msgstr ""
 
 #: ../chkconfig.c:21
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Ceci peut etre librement distribué selon les termes \n"
-"de la licence publique GNU (GPL).\n"
+msgstr "Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU javne licence.\n"
 
 #: ../chkconfig.c:49
 msgid "service %s does not support chkconfig\n"
-msgstr "le service %s ne supporte pas chkconfig\n"
+msgstr "servis %s ne podr¾ava 'chkconfig'\n"
 
 #: ../chkconfig.c:51
 msgid "error reading information on service %s: %s\n"
-msgstr "erreur de lecture d'information sur le service\n"
+msgstr "gre¹ka kod èitanja informacija o servisu %s: %s\n"
 
 #: ../chkconfig.c:109
 msgid "failed to open "
-msgstr "erreur d'ouverture"
+msgstr "neuspelo otvaranje "
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 msgid "error reading from directory %s/init.d: %s"
-msgstr "erreur de lecture depuis le répertoire %s/init.d: %s"
+msgstr "gre¹ka èitanja iz direktorijuma %s/init.d: %s"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "un seul de --list, --add, ou --del doit etre spécifié\n"
+msgstr "mo¾ete navesti samo --list, --add ili --del\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "Un seul niveau d'éxécution doit etre spécifié pour une requéte chkconfig\n"
+msgstr "samo jedan nivo izvr¹avanja (runlevel) mo¾e biti naveden u upitu\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Appuyez sy <F1> pour plus d'informations sur un service."
+msgstr "Pritisnite <F1> da biste dobili vi¹e informacija o servisu."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr "Ok"
+msgstr "U redu"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr "Quel servies doivent etre démarré automatiquement ?"
+msgstr "Koji servise treba automatski startovati?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr "Services"
+msgstr "Servisi"
 
 #: ../leveldb.c:193
 msgid "failed to glob pattern %s\n"
-msgstr "A échoué pour \"*\" %s\n"
+msgstr "neuspelo ? obrasca %s\n"
 
 #: ../leveldb.c:223
 msgid "cannot determine current run level\n"
-msgstr "Impossible de détérminer le niveau d'éxécution actuel\n"
+msgstr "ne mogu da odredim tekuæi nivo izvr¹avanja\n"
 
 #: ../leveldb.c:257
 msgid "failed to make symlink %s: %s\n"
-msgstr "Echec lors de la création du lien sysmbolique %s: %s\n"
-
-msgid "Cancel"
-msgstr "Annuler"
-
-msgid "Back"
-msgstr "Retour"
+msgstr "kreiranje simbolièke veze %s nije uspelo: %s\n"
