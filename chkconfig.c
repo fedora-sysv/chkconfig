@@ -185,15 +185,15 @@ int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0;
     int rc, i;
     char * levels = NULL;
-    int help, version;
+    int help=0, version=0;
     poptContext optCon;
     struct poptOption optionsTable[] = {
 	    { "add", '\0', 0, &addItem, 0 },
 	    { "del", '\0', 0, &delItem, 0 },
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
-	    { "help", 'h', 0 &help, 0 },
-	    { "version", 'v', 0 &version, 0 },
+	    { "help", 'h', POPT_ARG_NONE, &help, 0 },
+	    { "version", 'v', POPT_ARG_NONE, &version, 0 },
 	    { 0, 0, 0, 0, 0 } 
     };
 
@@ -206,13 +206,6 @@ int main(int argc, char ** argv) {
     bindtextdomain("chkconfig","/usr/share/locale"); 
     textdomain("chkconfig"); 
 
-    if (version) {
-	fprintf(stdout, _("%s version %s\n"), progname, VERSION);
-	exit(0);
-    }
-
-    if (help || argc == 1) usage();
-
     optCon = poptGetContext("chkconfig", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
 
@@ -222,6 +215,13 @@ int main(int argc, char ** argv) {
 		poptStrerror(rc));
 	exit(1);
     }
+
+    if (version) {
+	fprintf(stdout, _("%s version %s\n"), progname, VERSION);
+	exit(0);
+    }
+
+    if (help || argc == 1) usage();
 
     if ((listItem + addItem + delItem) > 1) {
 	fprintf(stderr, _("only one of --list, --add, or --del may be "
