@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: Bernd Bartmann <Bernd.Bartmann@sohanet.de>\n"
 "Language-Team: Deutsch <de@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
@@ -57,26 +57,26 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"Dienst %s unterstützt chkconfig, besitzt aber keinen Bezug auf einen "
-"Runlevel (führen Sie 'chkconfig --add %s' aus)\n"
+"Dienst %s unterstÃ¼tzt chkconfig, besitzt aber keinen Bezug auf einen "
+"Runlevel (fÃ¼hren Sie 'chkconfig --add %s' aus)\n"
 
 # ../chkconfig.c:36
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "Dienst %s unterstützt chkconfig nicht\n"
+msgstr "Dienst %s unterstÃ¼tzt chkconfig nicht\n"
 
 # ../chkconfig.c:38
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
+msgstr "Fehler beim Lesen der Informationen Ã¼ber den Dienst %s: %s\n"
 
 # ../chkconfig.c:117
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
+msgstr "Fehler beim Ã–ffnen von %s/init.d: %s\n"
 
 # ../chkconfig.c:100
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
@@ -102,7 +102,7 @@ msgstr "xinetd-basierende Dienste:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "Fehler beim Öffnen des Verzeichnisses %s: %s\n"
+msgstr "Fehler beim Ã–ffnen des Verzeichnisses %s: %s\n"
 
 # ../chkconfig.c:231
 #: ../chkconfig.c:405
@@ -118,7 +118,7 @@ msgstr "nur eines der Argumente --list, --add oder --del darf angegeben werden\n
 # ../chkconfig.c:286
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
+msgstr "fÃ¼r eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 
 # ../ntsysv.c:30
 #: ../ntsysv.c:30
@@ -133,7 +133,7 @@ msgstr "OK"
 # ../ntsysv.c:56
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Zurück"
+msgstr "ZurÃ¼ck"
 
 # ../ntsysv.c:56
 #: ../ntsysv.c:62
@@ -165,17 +165,17 @@ msgstr "Fehler beim Lesen von Verzeichnis %s: %s\n"
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Sie müssen als Root angemeldet sein, um %s auszuführen.\n"
+msgstr "Sie mÃ¼ssen als Root angemeldet sein, um %s auszufÃ¼hren.\n"
 
 # ../ntsysv.c:219
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "Ungültiges Argument bei --levels\n"
+msgstr "UngÃ¼ltiges Argument bei --levels\n"
 
 # ../ntsysv.c:226
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Mit ntsysv können keine Dienste verwaltet werden!\n"
+msgstr "Mit ntsysv kÃ¶nnen keine Dienste verwaltet werden!\n"
 
 # ../leveldb.c:265
 #: ../leveldb.c:508
@@ -192,7 +192,7 @@ msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "Fehler beim Erstellen der symbolischen Verknüpfung %s: %s\n"
+msgstr "Fehler beim Erstellen der symbolischen VerknÃ¼pfung %s: %s\n"
 
 #: ../alternatives.c:46
 #, c-format
@@ -261,7 +261,7 @@ msgstr "                --altdir <directory> --admindir <directory>\n"
 #: ../alternatives.c:159
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "Fehler beim Öffnen von %s: %s\n"
+msgstr "Fehler beim Ã–ffnen von %s: %s\n"
 
 # ../chkconfig.c:117
 #: ../alternatives.c:168
@@ -282,7 +282,7 @@ msgstr "Schlechter Modus in Zeile 1 von %s\n"
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "Schlechter primärer Link in %s\n"
+msgstr "Schlechter primÃ¤rer Link in %s\n"
 
 #: ../alternatives.c:205
 #, c-format
@@ -292,7 +292,7 @@ msgstr "Pfad %s nicht erwartet in %s\n"
 #: ../alternatives.c:214
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "Pfad für Slave %s fehlt in %s\n"
+msgstr "Pfad fÃ¼r Slave %s fehlt in %s\n"
 
 #: ../alternatives.c:224
 #, c-format
@@ -307,7 +307,7 @@ msgstr "Pfad zum Wechseln in %s erwartet\n"
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "Numerische Priorität in %s erwartet\n"
+msgstr "Numerische PrioritÃ¤t in %s erwartet\n"
 
 #: ../alternatives.c:275
 #, c-format
@@ -325,12 +325,12 @@ msgstr "Link zeigt zu keiner Alternative -- setze Modus auf manuell\n"
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr "Link geändert -- setze Modus auf manuell\n"
+msgstr "Link geÃ¤ndert -- setze Modus auf manuell\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr "würde %s entfernen\n"
+msgstr "wÃ¼rde %s entfernen\n"
 
 # ../leveldb.c:330
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
@@ -341,7 +341,7 @@ msgstr "Fehler beim Entfernen des Link %s: %s\n"
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "würde Link %s -> %s erstellen\n"
+msgstr "wÃ¼rde Link %s -> %s erstellen\n"
 
 # ../leveldb.c:330
 #: ../alternatives.c:366 ../alternatives.c:383
@@ -369,12 +369,12 @@ msgstr "Fehler beim Ersetzen von %s mit %s: %s\n"
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "Der primäre Link für %s muss %s sein\n"
+msgstr "Der primÃ¤re Link fÃ¼r %s muss %s sein\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "Link %s nicht richtig für Slave %s (%s %s)\n"
+msgstr "Link %s nicht richtig fÃ¼r Slave %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
@@ -394,7 +394,7 @@ msgstr " Link verweist auf %s\n"
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr "%s - Priorität %d\n"
+msgstr "%s - PrioritÃ¤t %d\n"
 
 #: ../alternatives.c:626
 #, c-format
@@ -409,7 +409,7 @@ msgstr "Zur Zeit ist die `best' Version %s.\n"
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Es gibt %d Programme, welche '%s' zur Verfügung stellen.\n"
+msgstr "Es gibt %d Programme, welche '%s' zur VerfÃ¼gung stellen.\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -433,12 +433,12 @@ msgstr ""
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s wurde nicht als eine Alternative für %s konfiguriert\n"
+msgstr "%s wurde nicht als eine Alternative fÃ¼r %s konfiguriert\n"
 
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(würde %s entfernen\n"
+msgstr "(wÃ¼rde %s entfernen\n"
 
 # ../chkconfig.c:117
 #: ../alternatives.c:746
@@ -449,12 +449,12 @@ msgstr "Fehler beim Entfernen von %s: %s\n"
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir %s ungültig\n"
+msgstr "altdir %s ungÃ¼ltig\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir %s ungültig\n"
+msgstr "admindir %s ungÃ¼ltig\n"
 
 # ../chkconfig.c:231
 #: ../alternatives.c:880
