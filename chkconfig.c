@@ -194,7 +194,7 @@ int setService(char * name, int where, int state) {
 
 int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0;
-    int rc, i;
+    int rc, i, x;
     char * levels = NULL;
     int help=0, version=0;
     poptContext optCon;
@@ -271,14 +271,15 @@ int main(int argc, char ** argv) {
 
 	if (!state) {
 	    if (where) {
-		rc = 0;
+		rc = x = 0;
 		i = where;
 		while (i) {
 		    if (i & 1) {
 			rc++;
-			level = i;
+			level = x;
 		    }
 		    i >>= 1;
+		    x++;
 		}
 
 		if (rc > 1) {
