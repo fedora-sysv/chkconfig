@@ -1,5 +1,6 @@
 # translation of bg.po to 
 # translation of bg.po to
+# translation of bg.po to
 # translation of chkconfig.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
@@ -10,7 +11,7 @@ msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-07-28 17:11-0700\n"
+"PO-Revision-Date: 2004-08-31 20:57-0700\n"
 "Last-Translator: Николай Сърмаджиев,преносим <nikolayds@msn.com>\n"
 "Language-Team:  <bg@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +27,7 @@ msgstr "%s версия %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:22
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Програмта може да се разпространява свободно под условията на GPL.\n"
+msgstr "Програмата се разпространява свободно под условията на GPL.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -53,7 +54,7 @@ msgstr "         %s [--level <нива>] <име> %s\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "услугата %s поддържа chkconfig, но не е включена в някое runlevel (изпълнете chkconfig --add %s')\n"
+msgstr "услугата %s поддържа chkconfig, но не е включена в никое runlevel (изпълнете chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -63,12 +64,12 @@ msgstr "услугата %s не поддържа chkconfig\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "грешка при четенето на инвормацията за услугата %s: %s\n"
+msgstr "грешка при четенето на информацията за услугата %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "невъзможно отварянето на %s/init.d: %s\n"
+msgstr "невъзможно е отварянето на %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
@@ -91,7 +92,7 @@ msgstr "xinetd базирани услуги:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "невъзможно отварянето на директорията %s: %s\n"
+msgstr "невъзможно е отварянето на директорията %s: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
@@ -106,7 +107,7 @@ msgstr "само една от опциите --list, --add или --del мож�
 #: ../chkconfig.c:464
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "само едно runlevel може да бъде зададено за chkconfig допроса\n"
+msgstr "само едно runlevel може да бъде зададено за chkconfig обработка\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -145,7 +146,7 @@ msgstr "грешка при четенето от директорията %s: %
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Трябва да сте руут за да изпълните %s.\n"
+msgstr "За да изпълните %s трябва да бъдете root.\n"
 
 #: ../ntsysv.c:292
 #, c-format
@@ -155,22 +156,22 @@ msgstr "неправилен аргумент за --levels\n"
 #: ../ntsysv.c:299
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Няма услуги които биха могли да се управляват от ntsysv!\n"
+msgstr "Няма услуги, които биха могли да се управляват от ntsysv!\n"
 
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "невъзможно позването на шаблона %s: %s\n"
+msgstr "невъзможно е ползването на шаблона %s: %s\n"
 
 #: ../leveldb.c:539
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "неможе да определи текущото run level\n"
+msgstr "не може да се определи текущото run level\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "невъзможна направата на symlink %s: %s\n"
+msgstr "невъзможна е направата на symlink %s: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
@@ -183,13 +184,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Програмата може свободно да се разпространява под условията на GPL.\n"
+"Програмата се разпространява свободно под условията на GPL.\n"
 "\n"
 
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "употреба: алтернативи --install <връзка> <име> <път> <преоритет>\n"
+msgstr "употреба: алтернативи --install <връзка> <име> <път> <приоритет>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -224,7 +225,7 @@ msgstr "       алтернативи --display <име>\n"
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       алтернативиs --set <име> <път>\n"
+msgstr "       алтернативи --set <име> <път>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -234,7 +235,7 @@ msgstr "\n"
 #: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "общи параметру: --verbose --test --help --usage --version\n"
+msgstr "общи параметри: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
 #, c-format
@@ -249,12 +250,12 @@ msgstr "четене %s\n"
 #: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "невъзможно отварянето на %s: %s\n"
+msgstr "невъзможно е отварянето на %s: %s\n"
 
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "невъзможно четенето на %s: %s\n"
+msgstr "невъзможно е четенето на %s: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
@@ -264,7 +265,7 @@ msgstr "%s празен!\n"
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "неправилен режин в линия 1 на %s\n"
+msgstr "неправилен режим в линия 1 на %s\n"
 
 #: ../alternatives.c:195
 #, c-format
@@ -309,7 +310,7 @@ msgstr "неочаквана линия в %s: %s\n"
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "невъзможно четенето на връзката %s: %s\n"
+msgstr "невъзможно е четенето на връзката %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -329,7 +330,7 @@ msgstr "ще се премахне %s\n"
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "невъзможно премахването на връзката %s: %s\n"
+msgstr "невъзможно е премахването на връзката %s: %s\n"
 
 #: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
@@ -339,7 +340,7 @@ msgstr "ще бъде свързана %s -> %s\n"
 #: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "невъзможно свързването %s -> %s: %s\n"
+msgstr "невъзможно е свързването %s -> %s: %s\n"
 
 #: ../alternatives.c:417
 #, c-format
@@ -349,12 +350,12 @@ msgstr "%s вече съществува\n"
 #: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "невъзможно създаването на %s: %s\n"
+msgstr "невъзможно е създаването на %s: %s\n"
 
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "невъзможно заместването на %s с %s: %s\n"
+msgstr "невъзможно е заместването на %s с %s: %s\n"
 
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
@@ -443,12 +444,12 @@ msgstr "невъзможно премахването на %s: %s\n"
 #: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "алтдир %s невалидна\n"
+msgstr "altdir %s е невалидна\n"
 
 #: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "админдир %s невалидна\n"
+msgstr "admindir %s е невалидна\n"
 
 #: ../alternatives.c:886
 #, c-format
