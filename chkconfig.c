@@ -29,21 +29,6 @@ static void usage(void) {
     exit(1);
 }
 
-static int delService(char * name) {
-    int level, i;
-    glob_t globres;
-
-    for (level = 0; level < 7; level++) {
-	if (!findServiceEntries(name, level, &globres)) {
-	    for (i = 0; i < globres.gl_pathc; i++)
-		unlink(globres.gl_pathv[i]);
-	    if (globres.gl_pathc) globfree(&globres);
-	}
-    }
-
-    return 0;
-}
-
 static void readServiceError(int rc, char * name) {
     if (rc == 1) {
 	fprintf(stderr, _("service %s does not support chkconfig\n"), name);
@@ -53,6 +38,26 @@ static void readServiceError(int rc, char * name) {
     }
 
     exit(1);
+}
+
+static int delService(char * name) {
+    int level, i, rc;
+    glob_t globres;
+    struct service s;
+
+    if ((rc = readServiceInfo(name, &s))) {
+	readServiceError(rc, name);
+	return 1;
+    }
+    for (level = 0; level < 7; level++) {
+	if (!findServiceEntries(name, level, &globres)) {
+	    for (i = 0; i < globres.gl_pathc; i++)
+		unlink(globres.gl_pathv[i]);
+	    if (globres.gl_pathc) globfree(&globres);
+	}
+    }
+
+    return 0;
 }
 
 static int addService(char * name) {
