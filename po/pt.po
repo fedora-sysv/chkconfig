@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-05-19 16:51-0400\n"
-"PO-Revision-Date: 2003-10-24 16:31+0100\n"
+"PO-Revision-Date: 2004-05-20 10:57+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -245,7 +245,7 @@ msgstr "                --altdir <directoria> --admindir <directoria>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "a ler %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -308,9 +308,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "linha inesperada em %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "não foi possível ler o %s: %s\n"
+msgstr "não foi possível ler a ligação %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -361,7 +361,7 @@ msgstr "não foi possível substituir o %s por %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "a executar %s\n"
 
 #: ../alternatives.c:512
 #, c-format
