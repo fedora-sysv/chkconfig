@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Mon Jun 26 2000 Matt Wilson <msw@redhat.com>
+- what Bill said, but actually build this version
+
 * Thu Jun 15 2000 Bill Nottingham <notting@redhat.com>
 - don't own /etc/rc.*
 
