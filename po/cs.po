@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-06-07 10:53+0200\n"
+"PO-Revision-Date: 2004-09-05 14:41+0200\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>, 2003\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s verze %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s verze %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
@@ -149,7 +149,7 @@ msgstr "chybný argument volby --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Program ntsysv nemůže spravovat žádné služby!\n"
+msgstr "ntsysv nemůže spravovat žádné služby!\n"
 
 #: ../leveldb.c:508
 #, c-format
@@ -168,7 +168,7 @@ msgstr "nemohu vytvořit symbolický odkaz %s: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives verze %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives verze %s - Copyright © 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 msgid ""
