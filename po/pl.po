@@ -104,7 +104,7 @@ msgstr "%s wersja %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "tylko jedna z opcji --list, --add, lub --del może być podana\n"
+msgstr "tylko jedna z opcji --list, --add lub --del może być podana\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
@@ -120,7 +120,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Cofnij"
+msgstr "Wstecz"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -147,7 +147,7 @@ msgstr "błąd podczas czytania z katalogu %s: %s\n"
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Musisz być użytkownikiem root aby uruchomić %s.\n"
+msgstr "Musisz być rootem aby uruchomić %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -160,16 +160,16 @@ msgstr "Brak usług, którymi ntsysv mógłby zarządzać!\n"
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nie mogłem dopasować do wzoru %s: %s\n"
+msgstr "nie można dopasować do wzoru %s: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "nie mogę ustalić aktualnego poziomu pracy\n"
+msgstr "nie można ustalić aktualnego poziomu pracy\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nie powiodła się próba stworzenia dowiązania symbolicznego %s: %s\n"
+msgstr "nie powiodła się próba stworzenia dowiązania %s: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
@@ -257,7 +257,7 @@ msgstr "zły tryb w linii 1 %s\n"
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "zły główny link w %s\n"
+msgstr "złe główne dowiązanie w %s\n"
 
 #: ../alternatives.c:207
 #, c-format
