@@ -10,6 +10,7 @@ BINDIR = /sbin
 USRSBINDIR = /usr/sbin
 MANDIR = /usr/man
 ALTDIR = /var/lib/alternatives
+ALTDATADIR = /etc/alternatives
 SUBDIRS = po
 
 OBJS=chkconfig.o leveldb.o
@@ -54,7 +55,8 @@ install:
 	[ -d $(instroot)/$(MANDIR) ] || mkdir -p $(instroot)/$(MANDIR)
 	[ -d $(instroot)/$(MANDIR)/man8 ] || mkdir -p $(instroot)/$(MANDIR)/man8
 	[ -d $(instroot)/$(MANDIR)/man5 ] || mkdir -p $(instroot)/$(MANDIR)/man5
-	[ -d $(instroot)/$(ALTDIR) ] || mkdir -p $(instroot)/$(ALTDIR)
+	[ -d $(instroot)/$(ALTDIR) ] || mkdir -p -m 755 $(instroot)/$(ALTDIR)
+	[ -d $(instroot)/$(ALTDATADIR) ] || mkdir -p -m 755 $(instroot)/$(ALTDATADIR)
 
 	install -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
 	install -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv

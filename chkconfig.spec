@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.27
+Version: 1.2.28
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%dir /etc/alternatives
 /sbin/chkconfig
 /usr/sbin/update-alternatives
 /usr/sbin/alternatives
@@ -77,6 +78,8 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Wed Jan 30 2002 Bill Nottingham <notting@redhat.com>
 - actually, put the alternatives stuff back in /usr/sbin
+- ship /etc/alternatives dir
+- random alternatives fixes
 
 * Sun Jan 27 2002 Erik Troan <ewt@redhat.com>
 - reimplemented update-alternatives as just alternatives
