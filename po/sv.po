@@ -1,19 +1,20 @@
 # Swedish messages for chkconfig.
-# Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
+# Copyright © 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
+# Göran Uddeborg <goeran@uddeborg.se> 2004.
 #
-# $Id: sv.po,v 1.30 2004/06/04 16:21:23 notting Exp $
+# $Id: sv.po,v 1.31 2004/07/07 17:28:50 goeran Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2003-10-24 17:46+0200\n"
-"Last-Translator: Christian Rose <menthos@menthos.com>\n"
+"PO-Revision-Date: 2004-07-07 19:31+0200\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: sv@li.org\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -42,9 +43,9 @@ msgid "         %s --del <name>\n"
 msgstr "              %s --del <namn>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "              %s [--level <nivåer>] <namn> %s)\n"
+msgstr "              %s [--level <nivåer>] <namn> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -228,7 +229,7 @@ msgstr "                    --altdir <katalog> --admindir <katalog>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "läser %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -291,9 +292,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "oväntad rad i %s: %s\n"
 
 #: ../alternatives.c:304
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "misslyckades med att läsa %s: %s\n"
+msgstr "misslyckades med att läsa länken %s: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -342,7 +343,7 @@ msgstr "misslyckades med att ersätta %s med %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "kör %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -434,15 +435,3 @@ msgstr "administrationskatalogen %s är ogiltig\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives version %s\n"
-
-#~ msgid "failed to open directory %s: %s"
-#~ msgstr "misslyckades med att öppna katalogen %s: %s"
-
-#~ msgid "               %s --add <name>\n"
-#~ msgstr "              %s --add <namn>\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "fel vid läsning från katalogen %s/init.d: %s"
-
-#~ msgid "(would remove %s)\n"
-#~ msgstr "(skulle ta bort %s)\n"
