@@ -1,23 +1,23 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.21 2002/06/14 22:07:59 menthos Exp $
+# $Id: sv.po,v 1.22 2002/07/19 14:22:39 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-06-12 00:13+0200\n"
+"PO-Revision-Date: 2002-07-19 16:30+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright © 1997-2000 Red Hat, Inc.\n"
+msgstr "%s version %s - Copyright ¬© 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "anv‰ndning:   %s --list [namn]\n"
+msgstr "anv√§ndning:   %s --list [namn]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -43,7 +43,7 @@ msgstr "              %s --del <namn>\n"
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "              %s [--level <nivÂer>] <namn> %s)\n"
+msgstr "              %s [--level <niv√•er>] <namn> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -51,27 +51,27 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"tj‰nsten %s stˆder chkconfig men n‰mns inte i nÂgon kˆrnivÂ (kˆr "
+"tj√§nsten %s st√∂der chkconfig men n√§mns inte i n√•gon k√∂rniv√• (k√∂r "
 "\"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "tj‰nsten %s stˆder inte chkconfig\n"
+msgstr "tj√§nsten %s st√∂der inte chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "fel vid l‰sning av information om tj‰nsten %s: %s\n"
+msgstr "fel vid l√§sning av information om tj√§nsten %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "misslyckades med att ˆppna %s/init.d: %s\n"
+msgstr "misslyckades med att √∂ppna %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "pÂ"
+msgstr "p√•"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
@@ -80,16 +80,16 @@ msgstr "av"
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "fel vid l‰sning frÂn katalogen %s/init.d: %s"
+msgstr "fel vid l√§sning fr√•n katalogen %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "xinetd-baserade tj‰nster:\n"
+msgstr "xinetd-baserade tj√§nster:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "misslyckades med att ˆppna katalogen %s: %s"
+msgstr "misslyckades med att √∂ppna katalogen %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
@@ -102,11 +102,11 @@ msgstr "endast en av --list, --add eller --del kan anges\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "endast en kˆrnivÂ (runlevel) kan anges i en chkconfig-frÂga\n"
+msgstr "endast en k√∂rniv√• (runlevel) kan anges i en chkconfig-fr√•ga\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Tryck <F1> fˆr mer information om en tj‰nst."
+msgstr "Tryck <F1> f√∂r mer information om en tj√§nst."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -122,31 +122,31 @@ msgstr "Avbryt"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Vilka tj‰nster ska startas automatiskt?"
+msgstr "Vilka tj√§nster ska startas automatiskt?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Tj‰nster"
+msgstr "Tj√§nster"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "fel vid l‰sning av information om tj‰nsten %s: %s\n"
+msgstr "fel vid l√§sning av information om tj√§nsten %s: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "fel vid l‰sning frÂn katalogen %s/init.d: %s\n"
+msgstr "fel vid l√§sning fr√•n katalogen %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "fel vid l‰sning frÂn katalogen %s: %s\n"
+msgstr "fel vid l√§sning fr√•n katalogen %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Du mÂste vara root fˆr att kunna kˆra %s.\n"
+msgstr "Du m√•ste vara root f√∂r att kunna k√∂ra %s.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -154,18 +154,18 @@ msgstr "felaktigt argument till --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Inga tj‰nster kan hanteras av ntsysv!\n"
+msgstr "Inga tj√§nster kan hanteras av ntsysv!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "misslyckades med att matcha mˆnstret %s: %s\n"
+msgstr "misslyckades med att matcha m√∂nstret %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "kan inte best‰mma nuvarande kˆrnivÂ (runlevel)\n"
+msgstr "kan inte best√§mma nuvarande k√∂rniv√• (runlevel)\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "misslyckades med att skapa den symboliska l‰nken %s: %s\n"
+msgstr "misslyckades med att skapa den symboliska l√§nken %s: %s\n"
