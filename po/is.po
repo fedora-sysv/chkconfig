@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 6.0\n"
+"Project-Id-Version: chkconfig 1.8\n"
 "POT-Creation-Date: 1999-08-23 15:59-0400\n"
-"PO-Revision-Date: 1999-09-12 03:24+0000\n"
+"PO-Revision-Date: 1999-09-18 00:33+0000\n"
 "Last-Translator: Richard Allen <ra@hp.is>\n"
 "Language-Team: is <kde-isl@mmedia.is>\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,7 @@ msgstr "villa við lestur úr möppu %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr "ólöglegt viðfang við --levels\n"
+msgstr "óleyfilegt viðfang við --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
