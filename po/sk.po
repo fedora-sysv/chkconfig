@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-30 13:24+0200\n"
+"PO-Revision-Date: 2004-06-13 09:06+0200\n"
 "Last-Translator: Marcel Telka <marcel@telka.sk>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,9 @@ msgid "         %s --del <name>\n"
 msgstr "            %s --del <názov>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "            %s [--level <úrovne>] <názov> %s)\n"
+msgstr "            %s [--level <úrovne>] <názov> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
