@@ -1,13 +1,13 @@
-# Copyright (C) 2003, 2004 chkconfig's COPYRIGHT HOLDER
-# Copyright (C) 2004 Miloslav Trmac <mitr@volny.cz>
+# Copyright (C) 2003, 2004, 2005 chkconfig's COPYRIGHT HOLDER
+# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>
 #
-# Miloslav Trmac <mitr@volny.cz>, 2003, 2004
+# Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-09-05 14:41+0200\n"
+"PO-Revision-Date: 2005-02-03 13:25+0100\n"
 "Last-Translator: Miloslav Trmac <mitr@volny.cz>, 2003\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -397,9 +397,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Aktuální `nejlepší' verze je %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "%d programů poskytuje '%s'.\n"
+msgstr "%d program poskytuje '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
