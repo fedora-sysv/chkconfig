@@ -65,17 +65,17 @@ msgstr "%s/init.d dizininden okurken hata: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd temelli servisler:\n"
 
 #: ../chkconfig.c:183
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "%s/init.d ye eriþim sýrasýnda hata: %s\n"
+msgstr "%s dizinine eriþim sýrasýnda hata: %s"
 
 #: ../chkconfig.c:285
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s surum %s\n"
+msgstr "%s sürüm %s\n"
 
 #: ../chkconfig.c:292
 msgid "only one of --list, --add, or --del may be specified\n"
@@ -121,9 +121,9 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d dizininden okurken hata: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "%s/init.d dizininden okurken hata: %s\n"
+msgstr "%s dizininden okurken hata: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
