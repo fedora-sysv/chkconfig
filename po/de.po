@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 2001 Red Hat, Inc.
+# Claudia Krug <ckrug@redhat.it>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Installer 7.0\n"
 "POT-Creation-Date: 2001-01-11 11:33-0500\n"
-"PO-Revision-Date: 2000-07-21 13:00+0200\n"
-"Last-Translator: Jeff Garner <jgarner@us.alpnet.com>\n"
+"PO-Revision-Date: 2001-01-18 19:15+0100\n"
+"Last-Translator: Claudia Krug <ckrug@redhat.it>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
@@ -16,7 +16,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 # ../chkconfig.c:23
 #: ../chkconfig.c:22
@@ -29,7 +29,7 @@ msgstr ""
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "Verwendung: %s --list [Name]\n"
+msgstr "Verwendung:   %s --list [Name]\n"
 
 # ../chkconfig.c:27
 #: ../chkconfig.c:26
@@ -85,13 +85,13 @@ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd-Dienst:\n"
 
 # ../chkconfig.c:117
 #: ../chkconfig.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
+msgstr "Fehler beim Öffnen von %s: %s"
 
 # ../chkconfig.c:231
 #: ../chkconfig.c:284
@@ -154,9 +154,9 @@ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
 
 # ../ntsysv.c:173
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
+msgstr "Fehler beim Lesen von Verzeichnis %s: %s\n"
 
 # ../ntsysv.c:219
 #: ../ntsysv.c:270

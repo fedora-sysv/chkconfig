@@ -4,151 +4,183 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.17\n"
-"POT-Creation-Date: 2000-12-29 23:24-0500\n"
+"POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 2001-01-24 13:03-0500\n"
 "Last-Translator: Adrian Havill <havill@redhat.com>\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=euc-jp\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# ../chkconfig.c:21
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
+# ../chkconfig.c:22
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"このソフトウェアは GNU 一般公共使用許諾契約書に従って"
-"無償で再配布することができます。\n"
+"このソフトウェアは GNU "
+"一般公共使用許諾契約書に従って無償で再配布することができます。\n"
 
+# ../chkconfig.c:25
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr "使用法:  %s --list [name]\n"
 
+# ../chkconfig.c:26
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <名前>\n"
 
+# ../chkconfig.c:27
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <名前>\n"
 
+# ../chkconfig.c:28
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "         %s [--level <レベル>] <名前> %s)\n"
 
+# ../chkconfig.c:35
 #: ../chkconfig.c:35
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "サービス %s は、chkconfig をサポートしていません\n"
 
+# ../chkconfig.c:37
 #: ../chkconfig.c:37
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
 
+# ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "on"
 msgstr "オン"
 
+# ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 #: ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
 msgid "off"
 msgstr "オフ"
 
+# ../chkconfig.c:138
 #: ../chkconfig.c:138
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d を開くことができませんでした: %s\n"
 
+# ../chkconfig.c:172
 #: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s"
 
+# ../chkconfig.c:180
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
 msgstr "xinetd ベースのサービス:\n"
 
+# ../chkconfig.c:182
 #: ../chkconfig.c:182
 #, c-format
 msgid "failed to open directory %s: %s"
 msgstr "ディレクトリ %s を開くことができませんでした: %s"
 
+# ../chkconfig.c:284
 #: ../chkconfig.c:284
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s バージョン %s\n"
 
+# ../chkconfig.c:291
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "指定できるのは、--list、--add、--del の中から 1 つだけです\n"
 
+# ../chkconfig.c:339
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです\n"
 
+# ../ntsysv.c:30
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
 msgstr "サービスに関する詳細については、<F1> を押してください。"
 
+# ../ntsysv.c:62 ../ntsysv.c:99
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
 msgstr "OK"
 
+# ../ntsysv.c:62
 #: ../ntsysv.c:62
 msgid "Back"
 msgstr "戻る"
 
+# ../ntsysv.c:62
 #: ../ntsysv.c:62
 msgid "Cancel"
 msgstr "取り消し"
 
+# ../ntsysv.c:74
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
 msgstr "自動的に起動させるサービスを指定してください。"
 
+# ../ntsysv.c:80
 #: ../ntsysv.c:80
 msgid "Services"
 msgstr "サービス"
 
+# ../ntsysv.c:174 ../ntsysv.c:217
 #: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました： %s\n"
 
+# ../ntsysv.c:183
 #: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "%s/init.d ディレクトリからの読み込み中にエラーが発生しました： %s\n"
 
+# ../ntsysv.c:226
 #: ../ntsysv.c:226
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました： %s\n"
 
+# ../ntsysv.c:270
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
 msgstr "--level の引数が不適当です\n"
 
+# ../ntsysv.c:277
 #: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv によって管理できるサービスがありません\n"
 
+# ../leveldb.c:355
 #: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "パターン %s の解析に失敗しました: %s\n"
 
+# ../leveldb.c:386
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません\n"
 
+# ../leveldb.c:474
 #: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"

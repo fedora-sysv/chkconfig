@@ -2,10 +2,9 @@
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Pawe³ Niewiadomski <lilo@free.poltronic.net>, 2000.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 1\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 2000-07-03 00:00+CEST\n"
 "Last-Translator: Pawe³ Niewiadomski <lilo@free.poltronic.net>\n"

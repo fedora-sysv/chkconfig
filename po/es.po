@@ -16,7 +16,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
@@ -75,12 +75,12 @@ msgstr "error al leer en el directorio %s/init.d: %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "servicios basados en xinetd: \n"
 
 #: ../chkconfig.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "error al abrir %s/init.d: %s\n"
+msgstr "error al abrir el directorio %s: %s:"
 
 #: ../chkconfig.c:284
 #, c-format
@@ -89,7 +89,8 @@ msgstr "%s versión %s\n"
 
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "sólo uno de --list, --add, o --del puede ser especificado\n"
+msgstr ""
+"sólo una de las opciones --list, --add, o --del puede ser especificada\n"
 
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
@@ -132,22 +133,22 @@ msgid "error reading from directory %s/init.d: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "error al leer en el directorio %s/init.d: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
-msgstr "mal argumento para --levels\n"
+msgstr "argumento incorrecto para --niveles\n"
 
 #: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
-msgstr "¡Ningún servicio puede ser manejado por ntsysv!\n"
+msgstr "¡ntsysv no puede gestionar ningún servicio!\n"
 
 #: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "error al expandir el patrón %s: %s\n"
+msgstr "error al incorporar el patrón %s: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"

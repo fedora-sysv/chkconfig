@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 1999 Free Software Foundation, Inc.
+# Copyright (C) 2000 Free Software Foundation, Inc.
 # Tullio Dovera  <tdovera@redhat.it>, 2000.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "POT-Creation-Date: 2001-01-11 11:33-0500\n"
-"PO-Revision-Date: 2000-03-09 10:15+1\n"
+"PO-Revision-Date: 2001-01-19 10:15+1\n"
 "Last-Translator: Tullio Dovera <tdovera@redhat.it>\n"
 "Language-Team: ITALIAN <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,13 +16,13 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s versione %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Questo software puo' essere distribuito liberamente secondo la Licenza GNU "
+"Questo software può essere distribuito liberamente secondo la Licenza GNU "
 "Public.\n"
 
 #: ../chkconfig.c:25
@@ -71,16 +71,16 @@ msgstr "impossibile aprire %s/init.d: %s\n"
 #: ../chkconfig.c:172
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "errore durante la lettura dalla directory %s/init.s: %s"
+msgstr "errore durante la lettura dalla directory %s/init.d: %s"
 
 #: ../chkconfig.c:180
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "servizi basati su xinetd:\n"
 
 #: ../chkconfig.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s"
-msgstr "impossibile aprire %s/init.d: %s\n"
+msgstr "impossibile aprire %s: %s"
 
 #: ../chkconfig.c:284
 #, c-format
@@ -89,11 +89,11 @@ msgstr "%s versione %s\n"
 
 #: ../chkconfig.c:291
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "solo una delle opzioni --list, --add o --del puo' essere specificata\n"
+msgstr "solo una delle opzioni --list, --add o --del può essere specificata\n"
 
 #: ../chkconfig.c:339
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "solo un runlevel puo' essere specificato per una query chkconfig\n"
+msgstr "solo un runlevel può essere specificato per una query chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -127,20 +127,20 @@ msgstr "errore durante la lettura di informazioni per il servizio %s: %s\n"
 #: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "errore durante la lettura dalla directory %s/init.s: %s\n"
+msgstr "errore durante la lettura dalla directory %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
-#, fuzzy, c-format
+#, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "errore durante la lettura dalla directory %s/init.s: %s\n"
+msgstr "errore durante la lettura dalla directory %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
-msgstr "argomento errato per il livello\n"
+msgstr "argomento errato a --levels\n"
 
 #: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
-msgstr "I servizi potrebbero non essere gestiti da ntsys!\n"
+msgstr "I servizi potrebbero non essere gestiti da ntsysv!\n"
 
 #: ../leveldb.c:355
 #, c-format
@@ -149,7 +149,7 @@ msgstr "impossibile inglobare il modello %s: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
-msgstr "non posso determinare l'attuale run-level\n"
+msgstr "non posso determinare l'attuale run level\n"
 
 #: ../leveldb.c:474
 #, c-format
