@@ -1,23 +1,25 @@
-# Bangla Translation of chkconfig.pot.
+# Bangla Translation of chkconfig.po.
 # Copyright (C) 2004 Red Hat Inc.
-# This file is distributed under the same license as the PACKAGE package.
-# Runa Bhattacharjee <runa@bengalinux.org>, 2004.
+# This file is distributed under the same license as the chkconfig package.
+# Runa Bhattacharjee <runab@redhat.com>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-07-22 18:16+0600\n"
-"Last-Translator: Jamil Ahmed <jamil@bengalinux.org>\n"
-"Language-Team: Bangla <redhat-translation@bengalinux.org>\n"
+"PO-Revision-Date: 2004-09-06 16:40+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: bangla <redhat-translation@bengalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.3.1\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s ভারসান %s - কপিরাইট (C) ১৯৯৭-২০০০ রেড হ্যাট, ইনকর্পোরেশন।\n"
+msgstr "%s ভারসান %s - কপিরাইট (C) ১৯৯৭-২০০০ Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -26,27 +28,27 @@ msgstr "এটি GNU পাবলিক লাইসেন্সের শর�
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "ব্যবহার:    %s --list [নাম]\n"
+msgstr "ব্যবহার:   %s --list [name]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <নাম>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <নাম>\n"
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <লেভেল>] <নাম> %s)\n"
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "%s পরিসেবাটি chkconfig কে সমর্থন করে, কিন্তু কোন রান-লেভেল-এ উল্লেখিত হয়না ('chkconfig --add %s' চালাও)\n"
+msgstr "%s পরিসেবাটি chkconfig কে সমর্থন করে, কিন্তু কোন রান-লেভেলে উল্লেখিত হয়না ('chkconfig --add %s' চালাও)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -62,19 +64,19 @@ msgstr "%s পরিসেবা সম্বন্ধে তথ্য পড়ত
 #: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d খোলা সম্ভব হয়নি: %s\n"
+msgstr "%s/init.d খুলতে ব্যর্থ: %s\n"
 
 #: ../chkconfig.c:211
 #: ../chkconfig.c:216
 #: ../chkconfig.c:313
 msgid "on"
-msgstr "অন"
+msgstr "চালু"
 
 #: ../chkconfig.c:211
 #: ../chkconfig.c:216
 #: ../chkconfig.c:313
 msgid "off"
-msgstr "অফ"
+msgstr "বন্ধ"
 
 #: ../chkconfig.c:282
 #: ../ntsysv.c:195
@@ -89,16 +91,16 @@ msgstr "xinetd ভিত্তি পরিসেবা:\n"
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "%s ডিরেক্টরি খোলা সম্ভব হয়নি: %s\n"
+msgstr "%s ডিরেক্টরি খুলতে ব্যর্থ: %s\n"
 
 #: ../chkconfig.c:405
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s ভারসান %s\n"
+msgstr "%s ভার্সান %s\n"
 
 #: ../chkconfig.c:412
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--list, --add, অথবা --del এর মধ্যে যে কোনও একটি নির্দিষ্ট করা যাবে\n"
+msgstr "--list, --add, অথবা --del এর মধ্যে যে কোনও একটি উল্লেখ করা যাবে\n"
 
 #: ../chkconfig.c:464
 msgid "only one runlevel may be specified for a chkconfig query\n"
@@ -115,7 +117,7 @@ msgstr "ঠিক আছে"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "পিছিয়ে যাও"
+msgstr "পুর্বাবস্থান"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
@@ -143,7 +145,7 @@ msgstr "%s ডিরেক্টরি থেকে পড়তে সমস্য
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%s চালানোর জন্য আপনাকে রুট হতে হবে।\n"
+msgstr "%s চালানোর জন্য আপনাকে root পরিচয় ব্যবহার করতে হবে।\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
@@ -156,21 +158,21 @@ msgstr "ntsysv র দ্বারা কোন পরিসেবা পরি�
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob pattern %s: %s করতে ব্যর্থ হয়েছে\n"
+msgstr "glob pattern %s করতে ব্যর্থ: %s\n"
 
 #: ../leveldb.c:539
 msgid "cannot determine current run level\n"
-msgstr "বর্তমান রান লেভেল মীমাংসা করা সম্ভব হয়নি\n"
+msgstr "বর্তমান রান লেভেল মীমাংসা করা সম্ভব হয় নি\n"
 
 #: ../leveldb.c:627
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "symlink %s করা সম্ভব হয়নি: %s\n"
+msgstr "symlink %s করতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "বৈকল্পিক ভারসান %s - কপিরাইট (C) ২০০১ রেড হ্যাট ইনকর্পোরেশন।\n"
+msgstr "বৈকল্পিক ভার্সান %s - কপিরাইট (C) ২০০১ Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 msgid ""
@@ -182,7 +184,7 @@ msgstr ""
 
 #: ../alternatives.c:50
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ব্যবহার: বিকল্প --install <link> <name> <path> <priority>\n"
+msgstr "ব্যবহার: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
 msgid "                    [--initscript <service>]\n"
@@ -194,23 +196,23 @@ msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       বিকল্প --remove <name> <path>\n"
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
 msgid "       alternatives --auto <name>\n"
-msgstr "       বিকল্প --auto <name>\n"
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
 msgid "       alternatives --config <name>\n"
-msgstr "       বিকল্প --config <name>\n"
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
 msgid "       alternatives --display <name>\n"
-msgstr "       বিকল্প --display <name>\n"
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       বিকল্প --set <name> <path>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
 msgid "\n"
@@ -227,17 +229,17 @@ msgstr "                --altdir <directory> --admindir <directory>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr "%s পড়া হচ্ছে\n"
+msgstr "reading %s\n"
 
 #: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "%s খোলা সম্ভব হয়নি: %s\n"
+msgstr "%s খুলতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s পড়া সম্ভব হয়নি: %s\n"
+msgstr "%s পড়তে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
@@ -257,7 +259,7 @@ msgstr "%s এ ভূল প্রাইমারি লিঙ্ক\n"
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%s পাথটি %s এ অপ্রত্যাশিত\n"
+msgstr "%s পাথটি %s এ প্রত্যাশিত নয়\n"
 
 #: ../alternatives.c:216
 #, c-format
@@ -267,7 +269,7 @@ msgstr "%s স্লেভের পাথ %s এ উপস্থিত নে�
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s ফাইলের অপ্রত্যাশিত সমাপ্তি ঘটেছে\n"
+msgstr "%s ফাইলের অপ্রত্যাশিতভাবে সমাপ্তি ঘটেছে\n"
 
 #: ../alternatives.c:235
 #, c-format
@@ -277,7 +279,7 @@ msgstr "%s এ বিকল্পের পাথটি প্রত্যাশ
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%s এ numeric priority প্রত্যাশিত\n"
+msgstr "%s এ অগ্রগণ্যতার মান সংখ্যায় প্রত্যাশিত\n"
 
 #: ../alternatives.c:277
 #, c-format
@@ -292,15 +294,15 @@ msgstr "%s এ অপ্রত্যাশিত পংক্তি লেখা
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "%s লিংক পড়া সম্ভব হয়নি: %s\n"
+msgstr "%s লিঙ্ক পড়া সম্ভব হয় নি: %s\n"
 
 #: ../alternatives.c:318
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "লিঙ্কটি কোনও বিকল্পকে চিহ্নিত করে না -- মেনুয়েল মোডে সেট করা হচ্ছে\n"
+msgstr "লিঙ্কটি কোনও বিকল্পকে চিহ্নিত করে না -- ম্যানুয়েল মোডে নির্ধারণ করা হচ্ছে\n"
 
 #: ../alternatives.c:323
 msgid "link changed -- setting mode to manual\n"
-msgstr "লিঙ্ক পরিবর্তিত হয়েছে -- মেনুয়েল মোডে সেট করা হচ্ছে\n"
+msgstr "লিঙ্ক পরিবর্তিত হয়েছে -- ম্যানুয়েল মোডে নির্ধারণ করা হচ্ছে\n"
 
 #: ../alternatives.c:339
 #: ../alternatives.c:346
@@ -313,7 +315,7 @@ msgstr "%s সরিয়ে ফেলা হবে\n"
 #: ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "%s লিঙ্কটি সরানো সম্ভব হতনি: %s\n"
+msgstr "%s লিঙ্কটি সরাতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:364
 #: ../alternatives.c:376
@@ -335,12 +337,12 @@ msgstr "%s বর্তমানে উপস্থিত আছে\n"
 #: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "%s তৈরি করা সম্ভব হয়নি: %s\n"
+msgstr "%s তৈরি করতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%s কে %s দিয়ে পরিবর্তন করা সম্ভব হয়নি: %s\n"
+msgstr "%s কে %s দিয়ে পরিবর্তন করতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:476
 #: ../alternatives.c:485
@@ -356,7 +358,7 @@ msgstr "%s এর জন্য প্রাথমিক লিঙ্ক %s হ�
 #: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "%s লিঙ্কটি %s স্লেভের জন্য ভূল (%s %s)\n"
+msgstr "%s লিঙ্কটি %s স্লেভের জন্য সঠিক নয় (%s %s)\n"
 
 #: ../alternatives.c:618
 #, c-format
@@ -366,7 +368,7 @@ msgstr "%s - স্বয়ংক্রিয় অবস্থায় আছে।\n
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - মেনুয়েল অবস্থায় আছে।\n"
+msgstr "%s - ম্যানুয়েল অবস্থায় আছে।\n"
 
 #: ../alternatives.c:622
 #, c-format
@@ -376,7 +378,7 @@ msgstr " লিঙ্কটি বর্তমানে %s কে চিহ্�
 #: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
-msgstr "%s - জরুরী %d\n"
+msgstr "%s - অগ্রগণ্যতা %d\n"
 
 #: ../alternatives.c:628
 #, c-format
@@ -386,12 +388,12 @@ msgstr " স্লেভ %s: %s\n"
 #: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "বর্তমানের সর্বোত্তোম ভারসান হলো %s।\n"
+msgstr "বর্তমানের `সর্বোত্তোম' ভার্সান হলো %s।\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d প্রোগ্রাম এ '%s' উপলব্ধ আছে।\n"
+msgstr "%d-টি প্রোগ্রামে '%s' উপলব্ধ আছে।\n"
 
 #: ../alternatives.c:665
 msgid "  Selection    Command\n"
@@ -399,7 +401,7 @@ msgstr "  নির্বাচন    কমান্ড\n"
 
 #: ../alternatives.c:674
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter to keep the current selection[+], or type selection number: "
+msgstr "বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচনের সংখ্যা টাইপ করুন: "
 
 #: ../alternatives.c:677
 msgid ""
@@ -413,7 +415,7 @@ msgstr ""
 #: ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s কে %s এর বিকল্প হিসাবে কনফিগার করা হয়নি\n"
+msgstr "%s কে %s -এর বিকল্প হিসাবে কনফিগার করা হয় নি\n"
 
 #: ../alternatives.c:746
 #, c-format
@@ -423,7 +425,7 @@ msgstr "(%s কে সরিয়ে ফেলা হবে\n"
 #: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "%s কে সরিয়ে ফেলা সম্ভব হয়নি: %s\n"
+msgstr "%s কে সরিয়ে ফেলতে ব্যর্থ: %s\n"
 
 #: ../alternatives.c:870
 #, c-format
@@ -438,5 +440,5 @@ msgstr "admindir %s অবৈধ\n"
 #: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "বিকল্প ভারসান %s\n"
+msgstr "বিকল্প ভার্সান %s\n"
 
