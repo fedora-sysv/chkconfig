@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Federico Musto  <federico@redhat.it>, 1999.
 #
 #, fuzzy
 msgid ""
@@ -18,111 +18,113 @@ msgstr ""
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Questo software puo' essere distribuito liberamente nei termini della "
+"Licenza GNU Public.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "usare:   chkconfig --list [nome]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "\t chkconfig --add <nome>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "\t chkconfig --del <nome>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "         chkconfig [--level] <livelli>] <nome> <on|off|reset>\n"
 
 #: ../chkconfig.c:34
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "Il servizio %s non supporta chkconfig\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "errore leggendo informazioni sul servizio %s: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
-msgstr ""
+msgstr "on"
 
 #: ../chkconfig.c:98
 msgid "off"
-msgstr ""
+msgstr "off"
 
 #: ../chkconfig.c:115
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "impossibile aprire %s/init.d: %s\n"
 
 #: ../chkconfig.c:138
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "errore leggendo dalla directory %s/init.s: %s\n"
 
 #: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "solo un'opzione --list, --add o --del puo' essere specificata\n"
 
 #: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "solo un runlevel puo' essere specificato per una querry chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Premere <F1> per leggere piu' informazioni sul servizio."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Indietro"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Cancella"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Quale servizio dovrebbe essere automaticamente attivato?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Servizi"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "errore leggendo info per il servizio %s: %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "errore leggendo dalla directory %s/init.s: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "argomento errato per il livello\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Nessun servizio gestibile da ntsys!\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "impossibile inglobare il modello %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "non posso determinare il livello di run\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "impossibile creare il symlink %s: %s\n"
