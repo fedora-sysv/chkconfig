@@ -2,127 +2,128 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 1.1\n"
 "POT-Creation-Date: 1999-04-08 14:17-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 1999-04-09 10:00+0500\n"
+"Last-Translator: Alex Lobas <soft@cw.comizdat.com>\n"
+"Language-Team: Comizdat <soft@cw.comizdat.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
-"Content-Transfer-Encoding: ENCODING\n"
+"Content-Type: text/plain; charset=koi8-u\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Програму можна в╕льно розповсюджувати в межах л╕ценз╕╖ GNU Public License.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
+msgstr "використання:   chkconfig --list [служба]\n"
 
 #: ../chkconfig.c:25
 msgid "         chkconfig --add <name>\n"
-msgstr ""
+msgstr "         chkconfig --add <служба>\n"
 
 #: ../chkconfig.c:26
 msgid "         chkconfig --del <name>\n"
-msgstr ""
+msgstr "         chkconfig --del <служба>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr ""
+msgstr "         chkconfig [--level <р╕вн╕>] <служба> <on|off|reset>\n"
 
 #: ../chkconfig.c:34
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "служба %s не п╕дтриму╓ chkconfig\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "помилка читання ╕нформац╕╖ у служб╕ %s: %s\n"
 
 #: ../chkconfig.c:98
 msgid "on"
-msgstr ""
+msgstr "on"
 
 #: ../chkconfig.c:98
 msgid "off"
-msgstr ""
+msgstr "off"
 
 #: ../chkconfig.c:115
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "неможливо в╕дкрити %s/init.d: %s\n"
 
 #: ../chkconfig.c:138
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr ""
+msgstr "помилка читання з каталогу %s/init.d: %s"
 
 #: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "можна вказати лише один аргумент з --list, --add або --del\n"
 
 #: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr ""
+msgstr "можна вказувати т╕льки один показник р╕вня для запиту chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Натисн╕ть <F1> для докладн╕шо╖ ╕нформац╕╖ про службу."
 
 #: ../ntsysv.c:56 ../ntsysv.c:93
 msgid "Ok"
-msgstr ""
+msgstr "Так"
 
 #: ../ntsysv.c:56
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: ../ntsysv.c:56
 msgid "Cancel"
-msgstr ""
+msgstr "Скасувати"
 
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Як╕ служби треба запускати автоматично?"
 
 #: ../ntsysv.c:74
 msgid "Services"
-msgstr ""
+msgstr "Служби"
 
 #: ../ntsysv.c:164
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "помилка читання даних для служби %s: %s\n"
 
 #: ../ntsysv.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr ""
+msgstr "помилка читання з каталогу %s/init.d: %s\n"
 
 #: ../ntsysv.c:219
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "нев╕рний аргумент в --levels\n"
 
 #: ../ntsysv.c:226
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Не ╕сну╓ служб, керованих ntsysv!\n"
 
 #: ../leveldb.c:265
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "неможливо визначити дан╕ для %s: %s\n"
 
 #: ../leveldb.c:296
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "неможливо визначити поточний показник\n"
 
 #: ../leveldb.c:330
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "неможливо створити символ╕чне посилання %s: %s\n"
