@@ -1,6 +1,6 @@
 Summary: Updates and queries runlevel information for system services
 Name: chkconfig
-%define version 0.7
+%define version 0.8
 Version: %{version}
 Release: 1
 Copyright: GPL
@@ -28,6 +28,11 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
 rm -rf $RPM_BUILD_ROOT
 make instroot=$RPM_BUILD_ROOT install
 
+mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
+for n in 0 1 2 3 4 5 6; do
+    mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
+fi
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -36,3 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755, root, root) /usr/sbin/ntsysv
 %attr(0644, root, root) /usr/man/man8/chkconfig.8
 %attr(0644, root, root) /usr/man/man8/ntsysv.8
+%attr(0755, root, root) /etc/rc.d
+%attr(0755, root, root) /etc/rc.d/*
+
