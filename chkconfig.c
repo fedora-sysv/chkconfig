@@ -219,7 +219,7 @@ int main(int argc, char ** argv) {
     } else {
 	char * name = poptGetArg(optCon);
 	char * state = poptGetArg(optCon);
-	int where = 0, level;
+	int where = 0, level = -1;
 
 	if (levels) {
 	    where = parseLevels(levels, 0);

@@ -213,7 +213,7 @@ int isConfigured(char * name, int level) {
 int isOn(char * name, int level) {
     glob_t globres;
 
-    if (!level) {
+    if (level == -1) {
 	level = currentRunlevel();
 	if (level == -1) {
 	    fprintf(stderr, "cannot determine current run level\n");
