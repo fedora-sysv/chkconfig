@@ -1,28 +1,60 @@
 msgid ""
 msgstr ""
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"Content-Type: text/plain; charset=\n"
 "Date: 1998-03-23 18:26:20-0500\n"
 "From: Erik Troan <ewt@mercury.redhat.com>\n"
-"Content-Type: text/plain; charset=\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU javne licence.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Ovo mo¾ete dalje distribuirati u skladu sa odredbama GNU javne licence.\n"
+
+#: ../chkconfig.c:24
+msgid "usage:   chkconfig --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:25
+msgid "         chkconfig --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:26
+msgid "         chkconfig --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+msgstr ""
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "servis %s ne podr¾ava 'chkconfig'\n"
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "gre¹ka kod èitanja informacija o servisu %s: %s\n"
 
+#: ../chkconfig.c:93
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:93
+msgid "off"
+msgstr ""
+
 #: ../chkconfig.c:109
-msgid "failed to open "
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "neuspelo otvaranje "
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "gre¹ka èitanja iz direktorijuma %s/init.d: %s"
 
@@ -42,6 +74,14 @@ msgstr "Pritisnite <F1> da biste dobili vi¹e informacija o servisu."
 msgid "Ok"
 msgstr "U redu"
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr ""
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr ""
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Koji servise treba automatski startovati?"
@@ -50,14 +90,24 @@ msgstr "Koji servise treba automatski startovati?"
 msgid "Services"
 msgstr "Servisi"
 
-#: ../leveldb.c:193
+#: ../ntsysv.c:213
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:220
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "neuspelo ? obrasca %s\n"
 
-#: ../leveldb.c:223
+#: ../leveldb.c:285
 msgid "cannot determine current run level\n"
 msgstr "ne mogu da odredim tekuæi nivo izvr¹avanja\n"
 
-#: ../leveldb.c:257
+#: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "kreiranje simbolièke veze %s nije uspelo: %s\n"

@@ -1,28 +1,60 @@
 msgid ""
 msgstr ""
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"Content-Type: text/plain; charset=\n"
 "Date: 1998-01-14 15:42:55+0200\n"
 "From: Giray Devlet <giray@turkuaz.yeditepe.edu.tr>\n"
-"Content-Type: text/plain; charset=\n"
-"Xgettext-Options: --default-domain=ntsysv --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=ntsysv --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../ntsysv.c\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Bu program GNU kamu lisansý koþullarý altýnda serbestçe daþýtýlabilir.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Bu program GNU kamu lisansý koþullarý altýnda serbestçe daþýtýlabilir.\n"
+
+#: ../chkconfig.c:24
+msgid "usage:   chkconfig --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:25
+msgid "         chkconfig --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:26
+msgid "         chkconfig --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+msgstr ""
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s hizmeti chkconfig desteklemiyor\n"
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s hizmeti hakkýnda bilgi alýrken hata: %s\n"
 
+#: ../chkconfig.c:93
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:93
+msgid "off"
+msgstr ""
+
 #: ../chkconfig.c:109
-msgid "failed to open "
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "eriþim sýrasýnda hata"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "%s/init.d dizininde okurken hata: %s"
 
@@ -32,7 +64,8 @@ msgstr "--list, --add veya --del seçeneklerden sadece birisi verilebilir\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "chkconfig sorgulamasý için sadece tek bir çalýþma seviyesi belirtilebilir\n"
+msgstr ""
+"chkconfig sorgulamasý için sadece tek bir çalýþma seviyesi belirtilebilir\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -42,6 +75,14 @@ msgstr "Hizmet hakkýnda fazla bilgi için <F1> tuþuna basýn."
 msgid "Ok"
 msgstr "Peki"
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr "Geri"
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr "Vazgeç"
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Hangi hizmetler otomatik olarak çalýþtýrýlsýn?"
@@ -50,20 +91,24 @@ msgstr "Hangi hizmetler otomatik olarak çalýþtýrýlsýn?"
 msgid "Services"
 msgstr "Hizmetler"
 
-#: ../leveldb.c:193
+#: ../ntsysv.c:213
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:220
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "glob pattern hatasý %s\n"
 
-#: ../leveldb.c:223
+#: ../leveldb.c:285
 msgid "cannot determine current run level\n"
 msgstr "çalýþma seviyesi belirlenemiyor\n"
 
-#: ../leveldb.c:257
+#: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik baðlantýsý yapýlamadý: %s\n"
-
-msgid "Cancel"
-msgstr "Vazgeç"
-
-msgid "Back"
-msgstr "Geri"

@@ -1,34 +1,68 @@
-# $Id: de.po,v 1.4 1998/05/07 08:15:54 gafton Exp $
+# $Id: de.po,v 1.5 1998/09/25 11:37:09 jbj Exp $
 #
 # $Log: de.po,v $
+# Revision 1.5  1998/09/25 11:37:09  jbj
+# Update I18N.
+#
 # Revision 1.4  1998/05/07 08:15:54  gafton
 # use german diacritics in the translations
 #
 msgid ""
 msgstr ""
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
 "Date: 1998-05-07 01:21:04-0400\n"
 "From: root <root@mercury.redhat.com>\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+
+#: ../chkconfig.c:24
+msgid "usage:   chkconfig --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:25
+msgid "         chkconfig --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:26
+msgid "         chkconfig --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 msgstr ""
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
+#: ../chkconfig.c:93
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:93
+msgid "off"
+msgstr ""
+
 #: ../chkconfig.c:109
-msgid "failed to open "
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr ""
 
@@ -48,6 +82,14 @@ msgstr "Drücken Sie <F1> für weitere Informationen über einen Dienst."
 msgid "Ok"
 msgstr "OK"
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr "Zurück"
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr "Abbrechen"
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Welche Dienste sollen automatisch gestartet werden?"
@@ -56,20 +98,24 @@ msgstr "Welche Dienste sollen automatisch gestartet werden?"
 msgid "Services"
 msgstr "Dienste"
 
-#: ../leveldb.c:193
+#: ../ntsysv.c:213
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:220
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr ""
 
-#: ../leveldb.c:223
+#: ../leveldb.c:285
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:257
+#: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
-
-msgid "Cancel"
-msgstr "Abbrechen"
-
-msgid "Back"
-msgstr "Zurück"

@@ -1,6 +1,9 @@
-# $Id: ro.po,v 1.6 1998/09/25 10:45:56 jbj Exp $
+# $Id: ro.po,v 1.7 1998/09/25 11:37:09 jbj Exp $
 #
 # $Log: ro.po,v $
+# Revision 1.7  1998/09/25 11:37:09  jbj
+# Update I18N.
+#
 # Revision 1.6  1998/09/25 10:45:56  jbj
 # Add sr.po.
 #
@@ -18,35 +21,68 @@
 #
 msgid ""
 msgstr ""
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
 "Date: 1998-05-03 02:33:35-0400\n"
 "From: Cristian Gafton,Red Hat Software, <gafton@redhat.com>\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Acest program poate fi distribuit gratuit sub licenþa GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Acest program poate fi distribuit gratuit sub licenþa GNU Public License.\n"
+
+#: ../chkconfig.c:24
+msgid "usage:   chkconfig --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:25
+msgid "         chkconfig --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:26
+msgid "         chkconfig --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+msgstr ""
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "serviciul %s nu suportã chkconfig\n"
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
 
+#: ../chkconfig.c:93
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:93
+msgid "off"
+msgstr ""
+
 #: ../chkconfig.c:109
-msgid "failed to open "
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "eroare la deschidere"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "eroare la citirea din directorul %s/init.d: %s"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "numai una dintre opþiunile --list, --add, sau --del poate fi specificatã\n"
+msgstr ""
+"numai una dintre opþiunile --list, --add, sau --del poate fi specificatã\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
@@ -60,6 +96,14 @@ msgstr "<F1> pentru extra informaþii despre un serviciu."
 msgid "Ok"
 msgstr ""
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr "Înapoi"
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr "Abandon"
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Ce servicii trebuie pornite automat?"
@@ -68,20 +112,24 @@ msgstr "Ce servicii trebuie pornite automat?"
 msgid "Services"
 msgstr "Servicii"
 
-#: ../leveldb.c:193
+#: ../ntsysv.c:213
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:220
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "eroare modificare %s\n"
 
-#: ../leveldb.c:223
+#: ../leveldb.c:285
 msgid "cannot determine current run level\n"
 msgstr "nu se poate determina current runlevel\n"
 
-#: ../leveldb.c:257
+#: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nu s-a putut crea %s: %s\n"
-
-msgid "Cancel"
-msgstr "Abandon"
-
-msgid "Back"
-msgstr "Înapoi"

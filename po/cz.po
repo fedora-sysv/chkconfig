@@ -1,28 +1,60 @@
 msgid ""
 msgstr ""
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"Content-Type: text/plain; charset=\n"
 "Date: 1998-03-23 18:26:20-0500\n"
 "From: Erik Troan <ewt@mercury.redhat.com>\n"
-"Content-Type: text/plain; charset=\n"
-"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ "
+"--keyword=N_\n"
 "Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Toto lze volnì distribuovat znovu podle podmínek GPL (GNU Public License).\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Toto lze volnì distribuovat znovu podle podmínek GPL (GNU Public License).\n"
+
+#: ../chkconfig.c:24
+msgid "usage:   chkconfig --list [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:25
+msgid "         chkconfig --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:26
+msgid "         chkconfig --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:27
+msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
+msgstr ""
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "slu¾ba %s nepodporuje chkconfig\n"
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pøi ètení informací o slu¾bì %s: %s\n"
 
+#: ../chkconfig.c:93
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:93
+msgid "off"
+msgstr ""
+
 #: ../chkconfig.c:109
-msgid "failed to open "
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "selhalo otevøení "
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "chyba pøi ètení z adresáøe %s/init.d: %s"
 
@@ -42,6 +74,14 @@ msgstr "Stisk <F1> zobrazí o slu¾bì více informací."
 msgid "Ok"
 msgstr "OK"
 
+#: ../ntsysv.c:56
+msgid "Back"
+msgstr ""
+
+#: ../ntsysv.c:56
+msgid "Cancel"
+msgstr "Storno"
+
 #: ../ntsysv.c:68
 msgid "What services should be automatically started?"
 msgstr "Které slu¾by se mají spou¹tìt automaticky?"
@@ -50,20 +90,24 @@ msgstr "Které slu¾by se mají spou¹tìt automaticky?"
 msgid "Services"
 msgstr "Slu¾by"
 
-#: ../leveldb.c:193
+#: ../ntsysv.c:213
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:220
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "selhalo roz¹íøení vzorku %s\n"
 
-#: ../leveldb.c:223
+#: ../leveldb.c:285
 msgid "cannot determine current run level\n"
 msgstr "nelze urèit aktuální spou¹tìcí úroveò\n"
 
-#: ../leveldb.c:257
+#: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "vytvoøení symbolického propojení %s selhalo: %s\n"
-
-msgid "Cancel"
-msgstr "Storno"
-
-msgid "Back"
-msgstr ""

@@ -28,11 +28,11 @@ update-po: Makefile
 	catalogs='$(CATALOGS)'; \
 	for cat in $$catalogs; do \
 		lang=`basename $$cat .mo`; \
-		if tupdate $(NLSPACKAGE).pot $$lang.po > $$lang.pot ; then \
-			echo "tupdate of $$lang succeeded" ; \
+		if msgmerge $$lang.po $(NLSPACKAGE).pot > $$lang.pox ; then \
+			echo "msgmerge of $$lang succeeded" ; \
 		else \
-			echo "tupdate of $$lang failed" ; \
-			rm -f $$lang.pot ; \
+			echo "msgmerge of $$lang failed" ; \
+			rm -f $$lang.pox ; \
 		fi \
 	done
 

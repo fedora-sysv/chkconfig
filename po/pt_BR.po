@@ -5,6 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9\n"
+"POT-Creation-Date: 1998-09-25 07:14-0400\n"
 "PO-Revision-Date: 1998-04-22 14:29-03:00\n"
 "Last-Translator: Arnaldo Carvalho de Melo <acme@conectiva.com.br>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -13,8 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 
 #: ../chkconfig.c:21
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Este programa pode ser livremente redistribuido de acordo com os temos da licença pública GNU.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Este programa pode ser livremente redistribuido de acordo com os temos da "
+"licença pública GNU.\n"
 
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
@@ -33,10 +37,12 @@ msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 msgstr "      chkconfig [--level <níveis>] <nome> <on|off|reset>\n"
 
 #: ../chkconfig.c:49
+#, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "O serviço %s não tem suporte ao chkconfig\n"
 
 #: ../chkconfig.c:51
+#, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "erro durante leitura de informações sobre o serviço %s: %s\n"
 
@@ -49,10 +55,12 @@ msgid "off"
 msgstr "não"
 
 #: ../chkconfig.c:109
-msgid "failed to open %s /init.d: %s\n"
+#, fuzzy, c-format
+msgid "failed to open %s/init.d: %s\n"
 msgstr "falha na abertura de %s /init.d: %s\n"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
+#, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "erro durante leitura do diretório %s/init.d: %s"
 
@@ -62,7 +70,9 @@ msgstr "somente um entre --list, --add ou --del pode ser especificado\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "somente um nível de execução pode ser especificado para uma pergunta ao chkconfig\n"
+msgstr ""
+"somente um nível de execução pode ser especificado para uma pergunta ao "
+"chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -97,6 +107,7 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "Nenhum serviço pode ser gerenciado pelo ntsysv!\n"
 
 #: ../leveldb.c:255
+#, c-format
 msgid "failed to glob pattern %s\n"
 msgstr "Falha na expansão do padrão %s\n"
 
@@ -104,7 +115,7 @@ msgstr "Falha na expansão do padrão %s\n"
 msgid "cannot determine current run level\n"
 msgstr "não foi possível descobrir o nível de execução corrente\n"
 
-#. just in case
 #: ../leveldb.c:319
+#, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "não foi possivel criar o link simbólico %s: %s\n"
