@@ -18,8 +18,7 @@ static char *progname;
 #include "leveldb.h"
 
 static void usage(void) {
-    fprintf(stderr, "%s version " VERSION 
-			" - Copyright (C) 1997-2000 Red Hat, Inc.\n", progname);
+    fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
