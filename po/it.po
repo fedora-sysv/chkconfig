@@ -21,24 +21,24 @@ msgstr ""
 "Licenza GNU Public.\n"
 
 #: ../chkconfig.c:26
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "usare:   chkconfig --list [nome]\n"
+msgstr "usare:  %s --list [nome]\n"
 
 #: ../chkconfig.c:27
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --add <name>\n"
-msgstr "\t chkconfig --add <nome>\n"
+msgstr "         %s --add <nome>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --del <name>\n"
-msgstr "\t chkconfig --del <nome>\n"
+msgstr "         %s --del <nome>\n"
 
 #: ../chkconfig.c:29
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         chkconfig [--level] <livelli>] <nome> <on|off|reset>\n"
+msgstr "         %s  [--level] <livelli>] <nome> %s)\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -71,7 +71,7 @@ msgstr "errore leggendo dalla directory %s/init.s: %s"
 #: ../chkconfig.c:231
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s versione %s\n"
 
 #: ../chkconfig.c:238
 msgid "only one of --list, --add, or --del may be specified\n"
