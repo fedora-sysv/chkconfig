@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.0.5\n"
 "POT-Creation-Date: 1998-09-25 07:14-0400\n"
-"PO-Revision-Date: 1999-03-31 13:32+0100\n"
+"PO-Revision-Date: 1999-04-11 00:07+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@online.no>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -35,17 +35,17 @@ msgstr "         chkconfig --del <navn>\n"
 
 #: ../chkconfig.c:27
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
-msgstr "         chkconfig [--level <runlevel>] <navn> <on|off|reset>\n"
+msgstr "         chkconfig [--level <levels>] <navn> <on|off|reset>\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "Tjeneste %s støtter ikke chkconfig\n"
+msgstr "tjeneste %s støtter ikke chkconfig\n"
 
 #: ../chkconfig.c:51
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "Klarte ikke å finne informasjon om tjeneste %s: %s\n"
+msgstr "klarte ikke å finne informasjon om tjeneste %s: %s\n"
 
 #: ../chkconfig.c:93
 msgid "on"
@@ -63,15 +63,15 @@ msgstr "klarte ikke å åpne %s/init.d: %s\n"
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "Klarte ikke å lese fra katalog %s/init.d: %s"
+msgstr "klarte ikke å lese fra katalog %s/init.d: %s"
 
 #: ../chkconfig.c:204
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "Du kan bare bruke en av opsjonene --list, --add og --del\n"
+msgstr "du kan bare bruke ett av flaggene --list, --add og --del\n"
 
 #: ../chkconfig.c:251
 msgid "only one runlevel may be specfied for a chkconfig query\n"
-msgstr "Du kan bare spesifisere en runlevel for en rapport\n"
+msgstr "du kan bare spesifisere ett kjøringsnivå for en chkconfig spørring\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
@@ -108,13 +108,13 @@ msgstr "Ingen av tjenestene kan styres av ntsysv!\n"
 #: ../leveldb.c:255
 #, c-format
 msgid "failed to glob pattern %s\n"
-msgstr "Klarte ikke å matche mønsteret %s\n"
+msgstr "klarte ikke å finne treff til mønsteret %s\n"
 
 #: ../leveldb.c:285
 msgid "cannot determine current run level\n"
-msgstr "Klarer ikke å bestemme nåværende runlevel\n"
+msgstr "klarer ikke å bestemme nåværende runlevel\n"
 
 #: ../leveldb.c:319
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "Klarte ikke å lage symlinken %s: %s\n"
+msgstr "klarte ikke å lage symlinken %s: %s\n"
