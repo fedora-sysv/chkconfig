@@ -227,7 +227,7 @@ msgstr "                --altdir <cyfeiriadur> --admindir <cyfeiriadur>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "yn dechrau %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -339,7 +339,7 @@ msgstr "methwyd amnewid %s â %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "yn rhedeg %s\n"
 
 #: ../alternatives.c:512
 #, c-format
