@@ -1,4 +1,4 @@
-# $Id: ro.po,v 1.18 1999/03/17 06:09:05 i18n Exp $
+# $Id: ro.po,v 1.19 1999/03/17 06:11:03 i18n Exp $
 #
 msgid ""
 msgstr ""
