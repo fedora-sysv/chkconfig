@@ -1,8 +1,8 @@
 Summary: A system tool for maintaining the /etc/rc.d hierarchy.
 Name: chkconfig
-%define version 1.0.2
+%define version 1.0.3
 Version: %{version}
-Release: 2
+Release: 1
 Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man8/ntsysv.8
 
 %changelog
+* Mon Mar 22 1999 Bill Nottingham <notting@redhat.com>
+- fix glob, once and for all. Really. We mean it.
+
 * Thu Mar 18 1999 Bill Nottingham <notting@redhat.com>
 - revert fix for services@levels, it's broken
 - change default to only edit the current runlevel
