@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-02-14 13:53-0500\n"
+"POT-Creation-Date: 2001-03-05 00:42-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:174 ../ntsysv.c:217
+#: ../ntsysv.c:174 ../ntsysv.c:218
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
@@ -128,21 +128,21 @@ msgstr ""
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:226
+#: ../ntsysv.c:227
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:261
+#: ../ntsysv.c:263
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:278
+#: ../ntsysv.c:280
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:285
+#: ../ntsysv.c:287
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 

@@ -187,6 +187,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 
     closedir(dir);
 
+    if (!stat("/usr/sbin/xinetd",&sb)) {
     if (!(dir = opendir(XINETDDIR))) {
 	fprintf(stderr, "failed to open " XINETDDIR ": %s\n",
 		strerror(errno));
@@ -226,6 +227,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	fprintf(stderr, _("error reading from directory %s: %s\n"),
 		XINETDDIR, strerror(err));
         return 1;
+    }
     }
 
     qsort(services, numServices, sizeof(*services), serviceNameCmp);

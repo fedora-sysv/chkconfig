@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.21
+Version: 1.2.22
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -70,6 +70,10 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Sun Mar  4 2001 Bill Nottingham <notting@redhat.com>
+- don't show xinetd services in ntsysv if xinetd doesn't appear to be
+  installed (#30565)
+
 * Wed Feb 14 2001 Preston Brown <pbrown@redhat.com>
 - final translation update.
 
