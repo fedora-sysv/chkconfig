@@ -2,12 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 1998-11-28 12:50+0200\n"
-"Last-Translator: Leon Kanter <leon@blackcatlinux.com>\n"
-"Language-Team: Black Cat Linux Team <blackcat-support@blackcatlinux.com>\n"
+"PO-Revision-Date: 2002-07-09 18:52+0300\n"
+"Last-Translator: Alexandr Kanevskiy <kad@blackcatlinux.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -15,29 +16,28 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "п°п╬п╤п╣я┌ я│п╡п╬п╠п╬п╢п╫п╬ я─п╟я│п©п╬я│я┌я─п╟п╫я▐я┌я▄я│я▐ п╡ я─п╟п╪п╨п╟я┘ GNU Public License.\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "применение:   %s --list [имя сервиса]\n"
+msgstr "п©я─п╦п╪п╣п╫п╣п╫п╦п╣:   %s --list [п╦п╪я▐ я│п╣я─п╡п╦я│п╟]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <имя сервиса>\n"
+msgstr "         %s --add <п╦п╪я▐ я│п╣я─п╡п╦я│п╟>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <имя сервиса>\n"
+msgstr "         %s --del <п╦п╪я▐ я│п╣я─п╡п╦я│п╟>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s)\n"
-msgstr "         %s [--level <уровни>] <имя сервиса> %s\n"
+msgstr "         %s [--level <я┐я─п╬п╡п╫п╦>] <п╦п╪я▐ я│п╣я─п╡п╦я│п╟> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -45,61 +45,62 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"я│п╣я─п╡п╦я│ %s п©п╬п╢п╢п╣я─п╤п╦п╡п╟п╣я┌ chkconfig, п╫п╬ п╫п╣п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╫п╦ п╡ "
+"п╬п╢п╫п╬п╪ я┐я─п╬п╡п╫п╣ п╡я▀п©п╬п╩п╫п╣п╫п╦я▐ (п╥п╟п©я┐я│я┌п╦я┌п╣ 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "сервис %s не поддерживает chkconfig\n"
+msgstr "я│п╣я─п╡п╦я│ %s п╫п╣ п©п╬п╢п╢п╣я─п╤п╦п╡п╟п╣я┌ chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "ошибка чтения информации о сервисе %s: %s\n"
+msgstr "п╬я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п╦п╫я└п╬я─п╪п╟я├п╦п╦ п╬ я│п╣я─п╡п╦я│п╣ %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "невозможно открыть %s/init.d: %s\n"
+msgstr "п╫п╣п╡п╬п╥п╪п╬п╤п╫п╬ п╬я┌п╨я─я▀я┌я▄ %s/init.d: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "on"
-msgstr "вкл"
+msgstr "п╡п╨п╩"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
 msgid "off"
-msgstr "выкл"
+msgstr "п╡я▀п╨п╩"
 
 #: ../chkconfig.c:282
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "ошибка чтения из каталога %s/init.d: %s"
+msgstr "п╬я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п╦п╥ п╨п╟я┌п╟п╩п╬пЁп╟ %s/init.d: %s"
 
 #: ../chkconfig.c:290
 msgid "xinetd based services:\n"
-msgstr "сервисы на основе xinetd:\n"
+msgstr "я│п╣я─п╡п╦я│я▀ п╫п╟ п╬я│п╫п╬п╡п╣ xinetd:\n"
 
 #: ../chkconfig.c:292
 #, c-format
 msgid "failed to open directory %s: %s"
-msgstr "невозможно открыть каталог %s: %s"
+msgstr "п╫п╣п╡п╬п╥п╪п╬п╤п╫п╬ п╬я┌п╨я─я▀я┌я▄ п╨п╟я┌п╟п╩п╬пЁ %s: %s"
 
 #: ../chkconfig.c:404
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s версия %s\n"
+msgstr "%s п╡п╣я─я│п╦я▐ %s\n"
 
 #: ../chkconfig.c:411
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "может быть указана лишь одна команда: --list, --add, или --del\n"
+msgstr "п╪п╬п╤п╣я┌ п╠я▀я┌я▄ я┐п╨п╟п╥п╟п╫п╟ п╩п╦я┬я▄ п╬п╢п╫п╟ п╨п╬п╪п╟п╫п╢п╟: --list, --add, п╦п╩п╦ --del\n"
 
 #: ../chkconfig.c:463
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"Только один уровень выполнения может быть указан для запроса chkconfig\n"
+msgstr "п╒п╬п╩я▄п╨п╬ п╬п╢п╦п╫ я┐я─п╬п╡п╣п╫я▄ п╡я▀п©п╬п╩п╫п╣п╫п╦я▐ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ я┐п╨п╟п╥п╟п╫ п╢п╩я▐ п╥п╟п©я─п╬я│п╟ chkconfig\n"
 
 #: ../ntsysv.c:30
 msgid "Press <F1> for more information on a service."
-msgstr "Нажмите <F1> для просмотра информации о сервисе."
+msgstr "п²п╟п╤п╪п╦я┌п╣ <F1> п╢п╩я▐ п©я─п╬я│п╪п╬я┌я─п╟ п╦п╫я└п╬я─п╪п╟я├п╦п╦ п╬ я│п╣я─п╡п╦я│п╣."
 
 #: ../ntsysv.c:62 ../ntsysv.c:99
 msgid "Ok"
@@ -107,58 +108,59 @@ msgstr "OK"
 
 #: ../ntsysv.c:62
 msgid "Back"
-msgstr "Назад"
+msgstr "п²п╟п╥п╟п╢"
 
 #: ../ntsysv.c:62
 msgid "Cancel"
-msgstr "Отмена"
+msgstr "п·я┌п╪п╣п╫п╟"
 
 #: ../ntsysv.c:74
 msgid "What services should be automatically started?"
-msgstr "Какие сервисы должны запускаться автоматически?"
+msgstr "п п╟п╨п╦п╣ я│п╣я─п╡п╦я│я▀ п╢п╬п╩п╤п╫я▀ п╥п╟п©я┐я│п╨п╟я┌я▄я│я▐ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦?"
 
 #: ../ntsysv.c:80
 msgid "Services"
-msgstr "Сервисы"
+msgstr "п║п╣я─п╡п╦я│я▀"
 
 #: ../ntsysv.c:186 ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "ошибка чтения информации для сервиса %s: %s\n"
+msgstr "п╬я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п╦п╫я└п╬я─п╪п╟я├п╦п╦ п╢п╩я▐ я│п╣я─п╡п╦я│п╟ %s: %s\n"
 
 #: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "ошибка чтения из директории %s/init.d: %s\n"
+msgstr "п╬я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п╦п╥ п╢п╦я─п╣п╨я┌п╬я─п╦п╦ %s/init.d: %s\n"
 
 #: ../ntsysv.c:239
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "ошибка чтения из директории %s: %s\n"
+msgstr "п╬я┬п╦п╠п╨п╟ я┤я┌п╣п╫п╦я▐ п╦п╥ п╢п╦я─п╣п╨я┌п╬я─п╦п╦ %s: %s\n"
 
 #: ../ntsysv.c:275
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Для выполнения %s необходимы права root.\n"
+msgstr "п■п╩я▐ п╡я▀п©п╬п╩п╫п╣п╫п╦я▐ %s п╫п╣п╬п╠я┘п╬п╢п╦п╪я▀ п©я─п╟п╡п╟ root.\n"
 
 #: ../ntsysv.c:292
 msgid "bad argument to --levels\n"
-msgstr "неверный аргумент для --levels\n"
+msgstr "п╫п╣п╡п╣я─п╫я▀п╧ п╟я─пЁя┐п╪п╣п╫я┌ п╢п╩я▐ --levels\n"
 
 #: ../ntsysv.c:299
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Нет сервисов, управляемых ntsysv!\n"
+msgstr "п²п╣я┌ я│п╣я─п╡п╦я│п╬п╡, я┐п©я─п╟п╡п╩я▐п╣п╪я▀я┘ ntsysv!\n"
 
 #: ../leveldb.c:507
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "невозможно использовать шаблон %s: %s\n"
+msgstr "п╫п╣п╡п╬п╥п╪п╬п╤п╫п╬ п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ я┬п╟п╠п╩п╬п╫ %s: %s\n"
 
 #: ../leveldb.c:538
 msgid "cannot determine current run level\n"
-msgstr "невозможно определить текущий уровень выполнения\n"
+msgstr "п╫п╣п╡п╬п╥п╪п╬п╤п╫п╬ п╬п©я─п╣п╢п╣п╩п╦я┌я▄ я┌п╣п╨я┐я┴п╦п╧ я┐я─п╬п╡п╣п╫я▄ п╡я▀п©п╬п╩п╫п╣п╫п╦я▐\n"
 
 #: ../leveldb.c:626
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "ошибка создания символической ссылки %s: %s\n"
+msgstr "п╬я┬п╦п╠п╨п╟ я│п╬п╥п╢п╟п╫п╦я▐ я│п╦п╪п╡п╬п╩п╦я┤п╣я│п╨п╬п╧ я│я│я▀п╩п╨п╦ %s: %s\n"
+
