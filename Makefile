@@ -6,7 +6,7 @@ LDFLAGS=-g
 MAN=chkconfig.8 ntsysv.8
 PROG=chkconfig
 BINDIR = /sbin
-USRBINDIR = /usr/sbin
+USRSBINDIR = /usr/sbin
 MANDIR = /usr/man
 
 OBJS=chkconfig.o leveldb.o
@@ -33,13 +33,13 @@ clean:
 
 install:
 	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(BINDIR)
-	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(USRBINDIR)
+	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(USRSBINDIR)
 	[ -d $(instroot)/$(MANDIR) ] || mkdir -p $(instroot)/$(MANDIR)
 	[ -d $(instroot)/$(MANDIR)/man8 ] || mkdir -p $(instroot)/$(MANDIR)/man8
 	[ -d $(instroot)/$(MANDIR)/man5 ] || mkdir -p $(instroot)/$(MANDIR)/man5
 
-	install -s -m 755 $(PROG) $(instroot)/$(BINDIR)
-	install -s -m 755 ntsysv $(instroot)/$(USRBINDIR)
+	install -s -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
+	install -s -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
 	for i in $(MAN); do \
 		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
