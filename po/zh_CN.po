@@ -6,14 +6,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-24 10:06+1000\n"
-"Last-Translator: Sarah Wang <sarahs@redhat.com>\n"
+"PO-Revision-Date: 2004-06-07 22:38+0800\n"
+"Last-Translator: hutuworm <hutuworm@hutuworm.org>\n"
 "Language-Team: Simplified Chinese <i18n@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.0\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -21,8 +19,7 @@ msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:25
@@ -41,18 +38,14 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "        %s [--level <levels>] <name> %s)\n"
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"%s 服务支持 chkconfig，但它在任何级别中都没有被引用(运行“chkconfig --add %"
-"s”)\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "%s 服务支持 chkconfig，但它在任何级别中都没有被引用(运行“chkconfig --add %s”)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -64,20 +57,26 @@ msgstr "%s 服务不支持 chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "在 %s 服务中读取信息时出错：%s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98
+#: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "打开 %s/init.d 失败：%s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
 msgid "on"
 msgstr "启用"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:313
 msgid "off"
 msgstr "关闭"
 
-#: ../chkconfig.c:282 ../ntsysv.c:195
+#: ../chkconfig.c:282
+#: ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr "从 %s/init.d 目录中读取时出错：%s\n"
@@ -108,7 +107,8 @@ msgstr "chkconfig 查询只能指定一个运行级别\n"
 msgid "Press <F1> for more information on a service."
 msgstr "按 <F1> 可获取关于某项服务的详情。"
 
-#: ../ntsysv.c:62 ../ntsysv.c:99
+#: ../ntsysv.c:62
+#: ../ntsysv.c:99
 msgid "Ok"
 msgstr "确定"
 
@@ -128,7 +128,8 @@ msgstr "您想自动启动哪些服务？"
 msgid "Services"
 msgstr "服务"
 
-#: ../ntsysv.c:186 ../ntsysv.c:230
+#: ../ntsysv.c:186
+#: ../ntsysv.c:230
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "在读取关于 %s 服务的信息时出错：%s\n"
@@ -300,22 +301,27 @@ msgstr "链接没有指向任何替换选择 -- 把模式设置为手工\n"
 msgid "link changed -- setting mode to manual\n"
 msgstr "链接已改变 -- 把模式设置为手工\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346
+#: ../alternatives.c:339
+#: ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
 msgstr "将会删除 %s\n"
 
-#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
+#: ../alternatives.c:341
+#: ../alternatives.c:348
+#: ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "删除链接 %s 失败：%s\n"
 
-#: ../alternatives.c:364 ../alternatives.c:376
+#: ../alternatives.c:364
+#: ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "将会链接 %s -> %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:385
+#: ../alternatives.c:368
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "链接 %s -> %s 失败：%s\n"
@@ -335,7 +341,8 @@ msgstr "创建 %s 失败：%s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "把 %s 替换为 %s 失败：%s\n"
 
-#: ../alternatives.c:476 ../alternatives.c:485
+#: ../alternatives.c:476
+#: ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
 msgstr "运行 %s\n"
@@ -401,7 +408,8 @@ msgstr ""
 "\n"
 "在读取选择时出错\n"
 
-#: ../alternatives.c:704 ../alternatives.c:730
+#: ../alternatives.c:704
+#: ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s 没有被配置为 %s 的替换选择\n"
@@ -430,3 +438,4 @@ msgstr "admindir %s 无效\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "替换选择(alternatives)的版本 %s \n"
+
