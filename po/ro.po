@@ -1,9 +1,9 @@
-# $Id: ro.po,v 1.47 2001/01/10 21:20:14 i18n Exp $
+# $Id: ro.po,v 1.48 2001/01/14 13:47:28 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
-"POT-Creation-Date: 2000-12-29 23:24-0500\n"
+"POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 199-04-10 12:00+EST\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"

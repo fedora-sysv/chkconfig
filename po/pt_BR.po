@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9\n"
-"POT-Creation-Date: 2000-12-29 23:24-0500\n"
+"POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 1998-04-22 14:29-03:00\n"
 "Last-Translator: Arnaldo Carvalho de Melo <acme@conectiva.com.br>\n"
 "Language-Team: Portuguese <pt@li.org>\n"

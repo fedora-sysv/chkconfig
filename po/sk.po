@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9.4\n"
-"POT-Creation-Date: 2000-12-29 23:24-0500\n"
+"POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 1999-09-12 17:08+02:00\n"
 "Last-Translator: Stanislav Meduna <stano@eunet.sk>\n"
 "Language-Team: Slovak <sk-i18n@rak.isternet.sk>\n"

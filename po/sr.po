@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig $Revision 0.1$\n"
-"POT-Creation-Date: 2000-12-29 23:24-0500\n"
+"POT-Creation-Date: 2001-01-11 11:33-0500\n"
 "PO-Revision-Date: 1999-09-09 10:00-0500\n"
 "Last-Translator: Zoltan Èala <zolika@sezampro.yu>\n"
 "Language-Team: Serbian <sr@li.org>\n"
