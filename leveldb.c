@@ -281,7 +281,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
 
 	    if ((sscanf(start, "%s %d %d%c", levelbuf,
 			&serv.sPriority, &serv.kPriority, &overflow) != 4) ||
-		 overflow != '\n') {
+		 !isspace(overflow)) {
 		if (serv.desc) free(serv.desc);
 		munmap(bufstart, sb.st_size);
 		return 1;
