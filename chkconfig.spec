@@ -6,7 +6,7 @@ Copyright: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
 BuildRoot: /var/tmp/chkconfig.root
-Prereq: /etc/init.d
+Prereq: bash sh-utils fileutils
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -47,6 +47,16 @@ done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%pre
+if [ ! -L /etc/rc.d -a -d /etc/init.d ]; then
+   echo "can't move /etc/rc.d/init.d -> /etc/init.d - bailing"
+   exit 1
+fi
+if [ -d /etc/rc.d -a ! -L /etc/rc.d ]; then
+   mv -f /etc/rc.d/* /etc && rm -rf /etc/rc.d && ln -snf . /etc/rc.d
+fi
+
 
 %files
 %defattr(-,root,root)
