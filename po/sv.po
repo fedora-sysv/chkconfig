@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2000-10-19 02:48-0400\n"
-"PO-Revision-Date: 2000-07-27 23:30+0200\n"
+"PO-Revision-Date: 2000-12-30 05:16+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:23
@@ -43,7 +43,7 @@ msgstr "tjänsten %s stöder inte chkconfig\n"
 #: ../chkconfig.c:38
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "fel vid läsning av information om tjänst %s: %s\n"
+msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
 #: ../chkconfig.c:102 ../chkconfig.c:107 ../chkconfig.c:204
 msgid "on"
@@ -61,7 +61,7 @@ msgstr "misslyckades med att öppna %s/init.d: %s\n"
 #: ../chkconfig.c:173
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
-msgstr "fel vid läsning från katalog %s/init.d: %s"
+msgstr "fel vid läsning från katalogen %s/init.d: %s"
 
 #: ../chkconfig.c:181
 msgid "xinetd based services:\n"
@@ -112,17 +112,17 @@ msgstr "Tjänster"
 #: ../ntsysv.c:174 ../ntsysv.c:217
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "fel vid läsning av information för tjänsten %s: %s\n"
+msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
 #: ../ntsysv.c:183
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
-msgstr "fel vid läsning från katalog %s/init.d: %s\n"
+msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
 
 #: ../ntsysv.c:226
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "fel vid läsning från katalog %s: %s\n"
+msgstr "fel vid läsning från katalogen %s: %s\n"
 
 #: ../ntsysv.c:270
 msgid "bad argument to --levels\n"
@@ -130,7 +130,7 @@ msgstr "felaktigt argument till --levels\n"
 
 #: ../ntsysv.c:277
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Inga tjänster kan skötas av ntsysv!\n"
+msgstr "Inga tjänster kan hanteras av ntsysv!\n"
 
 #: ../leveldb.c:355
 #, c-format
@@ -139,9 +139,9 @@ msgstr "misslyckades med att matcha mönstret %s: %s\n"
 
 #: ../leveldb.c:386
 msgid "cannot determine current run level\n"
-msgstr "kan inte avgöra nuvarande körnivå (runlevel)\n"
+msgstr "kan inte bestämma nuvarande körnivå (runlevel)\n"
 
 #: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "misslyckades med att skapa symbolisk länk %s: %s\n"
+msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
