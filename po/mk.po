@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: mk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-06-04 16:57-0400\n"
-"PO-Revision-Date: 2004-07-20 21:08+0200\n"
+"PO-Revision-Date: 2004-08-01 22:10+0200\n"
 "Last-Translator: Tomislav Markovski <herrera@users.sourceforge.net>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +160,7 @@ msgstr "ntsysv не може да уредува ниту еден сервис!
 #: ../leveldb.c:508
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "failed to glob pattern %s: %s\n"
 
 #: ../leveldb.c:539
 #, c-format
@@ -175,7 +175,7 @@ msgstr "не можам да креирам врска (symlink) %s: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "alternatives верзија %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -204,27 +204,27 @@ msgstr "                    [--slave <врска> <име> <патека>]*\n"
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr ""
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr ""
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr ""
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -289,7 +289,7 @@ msgstr "неочекуван крај на датотеката %s\n"
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "патеката до alternate се очекува во %s\n"
 
 #: ../alternatives.c:255
 #, c-format
@@ -299,7 +299,7 @@ msgstr "се очекува нумерички приоритет во %s\n"
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "slave path expected in %s\n"
 
 #: ../alternatives.c:296
 #, c-format
@@ -394,7 +394,7 @@ msgstr "%s - приоритет %d\n"
 #: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:633
 #, c-format
@@ -414,7 +414,7 @@ msgstr "  Избор    Команда\n"
 #: ../alternatives.c:674
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Enter за да ја задржите тековнта селекција[+], или внесете го бројот на селекција: "
 
 #: ../alternatives.c:677
 #, c-format
