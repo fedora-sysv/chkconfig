@@ -1,8 +1,8 @@
-# $Id: ro.po,v 1.30 1999/03/22 18:55:39 i18n Exp $
+# $Id: ro.po,v 1.31 1999/03/22 18:57:27 gafton Exp $
 #
 msgid ""
 msgstr ""
-"POT-Creation-Date: 1998-09-25 07:14-0400\n"
+"POT-Creation-Date: 1999-03-18 19:49-0500\n"
 "Content-Type: text/plain; charset=ISO-8859-2\n"
 "Date: 1998-05-03 02:33:35-0400\n"
 "From: Cristian Gafton,Red Hat Software, <gafton@redhat.com>\n"
@@ -32,40 +32,40 @@ msgstr ""
 msgid "         chkconfig [--level <levels>] <name> <on|off|reset>\n"
 msgstr ""
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:34
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "serviciul %s nu suportã chkconfig\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:36
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:98
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:93
+#: ../chkconfig.c:98
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:109
+#: ../chkconfig.c:115
 #, fuzzy, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "eroare la deschidere"
 
-#: ../chkconfig.c:130 ../ntsysv.c:168
+#: ../chkconfig.c:138
 #, c-format
 msgid "error reading from directory %s/init.d: %s"
 msgstr "eroare la citirea din directorul %s/init.d: %s"
 
-#: ../chkconfig.c:204
+#: ../chkconfig.c:212
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 "numai una dintre opþiunile --list, --add, sau --del poate fi specificatã\n"
 
-#: ../chkconfig.c:251
+#: ../chkconfig.c:259
 msgid "only one runlevel may be specfied for a chkconfig query\n"
 msgstr "nu se poate edita decît un singur runlevel la fiecare execuþie\n"
 
@@ -93,24 +93,34 @@ msgstr "Ce servicii trebuie pornite automat?"
 msgid "Services"
 msgstr "Servicii"
 
-#: ../ntsysv.c:213
+#: ../ntsysv.c:164
+#, fuzzy, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "eroare la citirea informaþiilor pentru serviciul %s: %s\n"
+
+#: ../ntsysv.c:173
+#, fuzzy, c-format
+msgid "error reading from directory %s/init.d: %s\n"
+msgstr "eroare la citirea din directorul %s/init.d: %s"
+
+#: ../ntsysv.c:218
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:220
+#: ../ntsysv.c:225
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:255
-#, c-format
-msgid "failed to glob pattern %s\n"
+#: ../leveldb.c:256
+#, fuzzy, c-format
+msgid "failed to glob pattern %s: %s\n"
 msgstr "eroare modificare %s\n"
 
-#: ../leveldb.c:285
+#: ../leveldb.c:287
 msgid "cannot determine current run level\n"
 msgstr "nu se poate determina current runlevel\n"
 
-#: ../leveldb.c:319
+#: ../leveldb.c:321
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nu s-a putut crea %s: %s\n"
