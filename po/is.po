@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: chkconfig 1.11\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-05-21 01:17+0000\n"
+"PO-Revision-Date: 2005-02-15 01:17+0000\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
-"Language-Team: is <kde-isl@mmedia.is>\n"
+"Language-Team: is <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -395,7 +395,7 @@ msgid "Current `best' version is %s.\n"
 msgstr "Núvarandi 'besta' útgáfa er %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Það eru %d forrit sem veita '%s'.\n"
 
@@ -452,6 +452,3 @@ msgstr "mappan %s er ógild\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives útgáfa %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "villa við lestur úr möppu %s/init.d: %s\n"
