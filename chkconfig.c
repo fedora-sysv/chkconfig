@@ -9,7 +9,7 @@
 
 #include "leveldb.h"
 
-#define RUNLEVELS "./rc.d"
+#define RUNLEVELS "/etc/rc.d"
 
 static void usage(void) {
     fprintf(stderr, "chkconfig version " VERSION 
