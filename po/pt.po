@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2004-06-04 12:22-0400\n"
-"PO-Revision-Date: 2004-05-20 10:57+0100\n"
+"PO-Revision-Date: 2004-06-07 10:10+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <morais@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,9 @@ msgid "         %s --del <name>\n"
 msgstr "            %s --del <nome>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "            %s [--level <níveis de execução>] <nome> %s)\n"
+msgstr "            %s [--level <níveis>] <nome> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -433,6 +433,3 @@ msgstr "a dir. admin. %s é inválida\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "versão alternativa %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "erro ao ler da directoria %s/init.d: %s"
