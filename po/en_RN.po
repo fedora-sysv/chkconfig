@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Date: 1998-04-14 15:31:10-0400\n"
+"From: Donnie Barnes <djb@chef.redhat.com>\n"
+"Content-Type: text/plain; charset=\n"
+"Xgettext-Options: --default-domain=chkconfig --add-comments --keyword=_ --keyword=N_\n"
+"Files: ../chkconfig.c ../ntsysv.c ../leveldb.c\n"
+
+#: ../chkconfig.c:21
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "you-uns can pass this around under the terms of the GNU Public License.\n"
+
+#: ../chkconfig.c:49
+msgid "service %s does not support chkconfig\n"
+msgstr ""
+
+#: ../chkconfig.c:51
+msgid "error reading information on service %s: %s\n"
+msgstr ""
+
+#: ../chkconfig.c:109
+msgid "failed to open "
+msgstr ""
+
+#: ../chkconfig.c:130 ../ntsysv.c:168
+msgid "error reading from directory %s/init.d: %s"
+msgstr ""
+
+#: ../chkconfig.c:204
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr ""
+
+#: ../chkconfig.c:251
+msgid "only one runlevel may be specfied for a chkconfig query\n"
+msgstr ""
+
+#: ../ntsysv.c:30
+msgid "Press <F1> for more information on a service."
+msgstr "press <F1> if'n you wants more informashun on sumthin."
+
+#: ../ntsysv.c:56 ../ntsysv.c:93
+msgid "Ok"
+msgstr "yep"
+
+#: ../ntsysv.c:68
+msgid "What services should be automatically started?"
+msgstr "whatchu want to start automatically?"
+
+#: ../ntsysv.c:74
+msgid "Services"
+msgstr "services"
+
+#: ../leveldb.c:193
+msgid "failed to glob pattern %s\n"
+msgstr ""
+
+#: ../leveldb.c:223
+msgid "cannot determine current run level\n"
+msgstr ""
+
+#: ../leveldb.c:257
+msgid "failed to make symlink %s: %s\n"
+msgstr ""
