@@ -248,7 +248,7 @@ int findServiceEntries(char * name, int level, glob_t * globresptr) {
     glob_t globres;
     int rc;
 
-    sprintf(match, "%s/rc%d.d/*%s*", RUNLEVELS, level, name);
+    sprintf(match, "%s/rc%d.d/*%s", RUNLEVELS, level, name);
 
     rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
 
