@@ -1,13 +1,13 @@
 # Swedish messages for chkconfig.
-# Copyright (C) 2001, 2002 Christian Rose <menthos@menthos.com>
+# Copyright (C) 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.23 2003/01/31 20:58:22 notting Exp $
+# $Id: sv.po,v 1.24 2003/02/01 11:52:30 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-07-19 16:30+0200\n"
+"PO-Revision-Date: 2003-02-01 13:03+0100\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -171,81 +171,77 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright © 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives version %s - Copyright © 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Detta program kan distribueras fritt under villkoren i GNU Public License.\n"
+"Detta kan distribueras fritt under villkoren i GNU Public License.\n"
+"\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
+"användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <tjänst>]\n"
 
 #: ../alternatives.c:50
-#, fuzzy
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "              %s [--level <nivåer>] <namn> %s)\n"
+msgstr "                    [--slave <länk> <namn> <sökväg>]*\n"
 
 #: ../alternatives.c:51
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <namn> <sökväg>\n"
 
 #: ../alternatives.c:52
-#, fuzzy
 msgid "       alternatives --auto <name>\n"
-msgstr "              %s --add <namn>\n"
+msgstr "       alternatives --auto <namn>\n"
 
 #: ../alternatives.c:53
-#, fuzzy
 msgid "       alternatives --config <name>\n"
-msgstr "              %s --add <namn>\n"
+msgstr "       alternatives --config <namn>\n"
 
 #: ../alternatives.c:54
-#, fuzzy
 msgid "       alternatives --display <name>\n"
-msgstr "              %s --del <namn>\n"
+msgstr "       alternatives --display <namn>\n"
 
 #: ../alternatives.c:55
-#, fuzzy
 msgid "       alternatives --set <name> <path>\n"
-msgstr "              %s --del <namn>\n"
+msgstr "       alternatives --set <namn> <sökväg>\n"
 
 #: ../alternatives.c:56
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:57
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "gemensamma flaggor: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:58
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <katalog> --admindir <katalog>\n"
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "misslyckades med att öppna %s/init.d: %s\n"
+msgstr "misslyckades med att öppna %s: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "misslyckades med att öppna %s/init.d: %s\n"
+msgstr "misslyckades med att läsa %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s är tom!\n"
 
 #: ../alternatives.c:186
 #, c-format
@@ -323,7 +319,7 @@ msgstr "misslyckades med att skapa den symboliska länken %s: %s\n"
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s finns redan\n"
 
 #: ../alternatives.c:417
 #, fuzzy, c-format
