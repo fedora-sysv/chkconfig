@@ -94,10 +94,10 @@ static int showServiceInfo(char * name, int forgiving) {
 	return forgiving ? 0 : 1;
     }
 
-    printf("%s", s.name);
+    printf("%-15s", s.name);
 
     for (i = 0; i < 7; i++) {
-	printf(" %d:%s", i, isOn(s.name, i) ? _("on") : _("off"));
+	printf("\t%d:%s", i, isOn(s.name, i) ? _("on") : _("off"));
     }
     printf("\n");
 
