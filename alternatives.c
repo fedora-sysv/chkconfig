@@ -275,7 +275,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
     while (line) {
 	line = parseLine(&buf);
 	if (line && *line) {
-	    fprintf(stderr, _("unexpected line in %s\n"), path);
+	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
 	    return 1;
 	}
     }
@@ -455,6 +455,16 @@ static int addService(struct alternative newAlt, const char * altDir,
 		    set.alts[0].master.title, set.alts[0].master.facility);
 	    return 2;
 	}
+	
+	/* FIXME: We should be merging any changes here. */
+	for (i = 0; i < set.numAlts; i++) {
+		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
+			if (FL_VERBOSE(flags))
+				printf(_("%s already installed, skipping\n"), 
+				       newAlt.master.target);
+			return 0;
+		}
+	}
 
 	/* FIXME: This actually isn't a bug, according to the original implementation. */
 	if (set.alts[0].numSlaves != newAlt.numSlaves) {
@@ -563,7 +573,7 @@ static int configService(char * title, const char * altDir,
 
     do {
 	printf("\n");
-	printf(_("There are 2 programs which provide `editor'.\n")),
+	printf(_("There are 2 programs which provide '%s'.\n"), set.alts[0].master.title),
 	printf("\n");
 	printf(_("  Selection    Command\n"));
 	printf("-----------------------------------------------\n");
