@@ -1,5 +1,6 @@
 VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
-CVSTAG = r$(subst .,-,$(VERSION))
+RELEASE=$(shell awk '/Release:/ { print $$2 }' chkconfig.spec)
+CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
 CVSROOT = $(shell cat CVS/Root 2>/dev/null || :)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
