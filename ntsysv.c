@@ -17,6 +17,7 @@ static int servicesWindow(struct service * services, int numServices,
 			  int levels) {
     newtComponent label, subform, ok, cancel;
     newtComponent * checkboxes, form, curr;
+    newtComponent sb = NULL;
     char * states;
     int i, done = 0, update = 0, j;
     int height = numServices > 10 ? 10 : numServices;
@@ -29,8 +30,14 @@ static int servicesWindow(struct service * services, int numServices,
     label = newtLabel(1, 1, "What services should be automatically "
 			"started?");
 
-    subform = newtForm(NULL, NULL, 0);
+    if (numServices > 10) {
+	sb = newtVerticalScrollbar(37, 3, 10, NEWT_COLORSET_CHECKBOX,
+					NEWT_COLORSET_ACTCHECKBOX);
+    }
+
+    subform = newtForm(sb, NULL, 0);
     newtFormSetBackground(subform, NEWT_COLORSET_CHECKBOX);
+    newtFormSetHeight(subform, 10);
 
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
@@ -47,11 +54,15 @@ static int servicesWindow(struct service * services, int numServices,
 	newtFormAddComponent(subform, checkboxes[i]);
     }
 
+    newtFormSetWidth(subform, 20);
+
     ok = newtButton(10, height + 4, "Ok");
     cancel = newtButton(25, height + 4, "Cancel");
 
     form = newtForm(NULL, NULL, 0);
-    newtFormAddComponents(form, label, subform, ok, cancel, NULL);
+
+    /* sb may be NULL, so keep it last */
+    newtFormAddComponents(form, label, subform, ok, cancel, sb, NULL);
 
     newtFormAddHotKey(form, NEWT_KEY_F1);
 
