@@ -1,11 +1,11 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.2.3
+Version: 1.2.4
 Release: 1
-Copyright: GPL
+License: GPL
 Group: System Environment/Base
-Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/chkconfig-%{version}.tar.gz
-BuildRoot: /var/tmp/chkconfig.root
+Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
 Conflicts: initscripts <= 5.30-1
 
 %description
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 %define date    %(echo `LC_ALL="C" date +"%a %b %d %Y"`)
 
 %changelog
+* Thu Jul 13 2000 Preston Brown <pbrown@redhat.com>
+- bump copyright date
+
 * Tue Jul 11 2000 Bill Nottingham <notting@redhat.com>
 - no %pre today. Maybe tomorrow.
 

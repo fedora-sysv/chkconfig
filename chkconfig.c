@@ -19,7 +19,7 @@ static char *progname;
 
 static void usage(void) {
     fprintf(stderr, "%s version " VERSION 
-			" - Copyright (C) 1997 Red Hat Software\n", progname);
+			" - Copyright (C) 1997-2000 Red Hat, Inc.\n", progname);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
