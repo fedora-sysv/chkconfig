@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig VERSION\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2003-04-18 21:58+0700\n"
+"PO-Revision-Date: 2003-07-26 20:47+0700\n"
 "Last-Translator: pclouds <pclouds@gmx.net>\n"
 "Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -247,12 +247,12 @@ msgstr "%s rỗng!\n"
 #: ../alternatives.c:186
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "sai chế độ tại dòng 1 của %s\n"
 
 #: ../alternatives.c:193
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "liên kết chính sai trong %s\n"
 
 #: ../alternatives.c:205
 #, c-format
@@ -272,22 +272,22 @@ msgstr "kết thúc tập tin không mong đợi trong %s\n"
 #: ../alternatives.c:233
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "cần đường dẫn thay thế trong %s\n"
 
 #: ../alternatives.c:253
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "cần độ ưu tiên dạng số trong %s\n"
 
 #: ../alternatives.c:275
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "cần đường dẫn slave trong %s\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "dòng không mong đợi %s: %s\n"
 
 #: ../alternatives.c:316
 msgid "link points to no alternative -- setting mode to manual\n"
@@ -295,27 +295,27 @@ msgstr ""
 
 #: ../alternatives.c:321
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "liên kết đã thay đổi -- đặt chế độ thủ công\n"
 
 #: ../alternatives.c:337 ../alternatives.c:344
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "cần loại bỏ %s\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346 ../alternatives.c:377
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "lỗi loại bỏ liên kết %s: %s\n"
 
 #: ../alternatives.c:362 ../alternatives.c:374
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "liên kết %s -> %s\n"
 
 #: ../alternatives.c:366 ../alternatives.c:383
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "lỗi liên kết %s -> %s: %s\n"
 
 #: ../alternatives.c:415
 #, c-format
@@ -330,52 +330,52 @@ msgstr "lỗi tạo %s: %s\n"
 #: ../alternatives.c:448
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "lỗi thay thế liên kết %s bằng %s: %s\n"
 
 #: ../alternatives.c:510
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "liên kết chính cho %s phải là %s\n"
 
 #: ../alternatives.c:574
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "liên kết %s không đúng cho slave %s (%s %s)\n"
 
 #: ../alternatives.c:616
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - trạng thái tự động.\n"
 
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - trạng thái thủ công.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " liên kết hiện thời trỏ đến %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - độ ưu tiên %d\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:631
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Phiên bản `tốt nhất' hiện thời là %s.\n"
 
 #: ../alternatives.c:661
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Có %d chương trình cung cấp '%s\".\n"
 
 #: ../alternatives.c:663
 msgid "  Selection    Command\n"
@@ -390,6 +390,8 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"lỗi đọc lựa chọn\n"
 
 #: ../alternatives.c:702 ../alternatives.c:728
 #, c-format
@@ -399,12 +401,12 @@ msgstr ""
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(loại bỏ %s\n"
 
 #: ../alternatives.c:746
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "lỗi loại bỏ %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
@@ -419,4 +421,4 @@ msgstr ""
 #: ../alternatives.c:880
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "phiên bản thay thế %s\n"
