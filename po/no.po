@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 1.2.21\n"
 "POT-Creation-Date: 2003-01-31 16:09-0500\n"
-"PO-Revision-Date: 2002-06-28 23:27+0200\n"
+"PO-Revision-Date: 2003-01-31 20:46+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnu.org>\n"
 "Language-Team: Norwegian <no@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -167,22 +167,19 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "klarte ikke å lage symlinken %s: %s\n"
 
 #: ../alternatives.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s versjon %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives versjon %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:47
-#, fuzzy
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr ""
-"Dette programmet kan distribueres fritt under betingelsene i \"GNU Public "
-"License\".\n"
+msgstr "Dette programmet kan distribueres fritt under betingelsene gitt i «GNU Public License».\n"
 
 #: ../alternatives.c:48
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "bruk: alternatives --install <lenke> <navn> <sti> <prioritet>\n"
 
 #: ../alternatives.c:49
 msgid "                    [--initscript <service>]\n"
@@ -230,19 +227,19 @@ msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr ""
 
 #: ../alternatives.c:159
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "klarte ikke å åpne %s/init.d: %s\n"
+msgstr "kunne ikke åpne %s: %s\n"
 
 #: ../alternatives.c:168
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "klarte ikke å åpne %s/init.d: %s\n"
+msgstr "kunne ikke lese %s: %s\n"
 
 #: ../alternatives.c:177
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s er tom!\n"
 
 #: ../alternatives.c:186
 #, c-format
@@ -320,7 +317,7 @@ msgstr "klarte ikke å lage symlinken %s: %s\n"
 #: ../alternatives.c:415
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s eksisterer allerede\n"
 
 #: ../alternatives.c:417
 #, fuzzy, c-format
@@ -400,24 +397,24 @@ msgstr ""
 #: ../alternatives.c:744
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(vil fjerne %s\n"
 
 #: ../alternatives.c:746
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "klarte ikke å åpne %s/init.d: %s\n"
+msgstr "kunne ikke fjerne %s: %s\n"
 
 #: ../alternatives.c:864
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s er ugyldig\n"
 
 #: ../alternatives.c:870
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s er ugylig\n"
 
 #: ../alternatives.c:880
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s versjon %s\n"
+msgstr "alternatives versjon %s\n"
