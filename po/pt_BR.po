@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 0.9\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 1998-04-22 14:29-03:00\n"
 "Last-Translator: Arnaldo Carvalho de Melo <acme@conectiva.com.br>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -139,16 +139,16 @@ msgstr "argumento inválido para --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nenhum serviço pode ser gerenciado pelo ntsysv!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, fuzzy, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Falha na expansão do padrão %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "não foi possível descobrir o nível de execução corrente\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "não foi possivel criar o link simbólico %s: %s\n"

@@ -1,9 +1,9 @@
-# $Id: ro.po,v 1.42 2000/07/27 15:25:35 i18n Exp $
+# $Id: ro.po,v 1.43 2000/08/16 18:04:43 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 199-04-10 12:00+EST\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -135,16 +135,16 @@ msgstr "argument invalid pentru --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nu s-a gãsit nici un serviciu care poate fi operat de cãtre ntsysv!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "eroare la identificarea soluþiilor patternului %s: %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "nu se poate determina current runlevel\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nu s-a putut crea %s: %s\n"

@@ -1,12 +1,12 @@
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Roman Maurer <roman.maurer@hermes.si>, 1999.
-# $Id: sl.po,v 1.5 2000/07/27 15:25:35 i18n Exp $
+# $Id: sl.po,v 1.6 2000/08/16 18:04:43 i18n Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 1999-09-18 18:20+0200\n"
 "Last-Translator: Roman Maurer <roman.maurer@hermes.si>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -136,16 +136,16 @@ msgstr "slab argument izbire --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Storitve ne more upravljati ntsysv!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ne morem razre¹iti vzorca %s: %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "ne morem ugotoviti trenutne ravni teka\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ni mi uspelo narediti simbolne povezave %s: %s\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 2000-08-08 22:35+0100\n"
 "Last-Translator: Milan Kerslager <milan.kerslager@spsselib.hiedu.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -132,16 +132,16 @@ msgstr "chybný argument volby --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Program ntsysv nemù¾e spravovat ¾ádné slu¾by!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "chyba pøi expandování vzorku %s: %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "nelze urèit aktuální bìhovou úroveò\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nelze vytvoøit symbolický odkaz %s: %s\n"

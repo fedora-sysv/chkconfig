@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 2000-03-09 10:15+1\n"
 "Last-Translator: Tullio Dovera <tdovera@redhat.it>\n"
 "Language-Team: ITALIAN <it@li.org>\n"
@@ -137,16 +137,16 @@ msgstr "argomento errato per il livello\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "I servizi potrebbero non essere gestiti da ntsys!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossibile inglobare il modello %s: %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "non posso determinare l'attuale run-level\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "impossibile creare il link simbolico %s: %s\n"

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
-"POT-Creation-Date: 2000-07-18 00:53-0400\n"
+"POT-Creation-Date: 2000-08-15 15:39-0400\n"
 "PO-Revision-Date: 2000-07-03 00:00+CEST\n"
 "Last-Translator: Pawe³ Niewiadomski <lilo@free.poltronic.net>\n"
 "Language-Team: POLISH <pl@li.org>\n"
@@ -138,16 +138,16 @@ msgstr "nieprawid³owy argument dla --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Brak us³ug, którymi ntsysv móg³by zarz±dzaæ!\n"
 
-#: ../leveldb.c:350
+#: ../leveldb.c:355
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nie mog³em dopasowaæ do wzoru %s: %s\n"
 
-#: ../leveldb.c:381
+#: ../leveldb.c:386
 msgid "cannot determine current run level\n"
 msgstr "nie mogê ustaliæ aktualnego poziomu pracy\n"
 
-#: ../leveldb.c:469
+#: ../leveldb.c:474
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nie powiod³a siê próba stworzenia symlinka %s: %s\n"
