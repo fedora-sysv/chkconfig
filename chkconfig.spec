@@ -58,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
-%{_mandir}/man8/chkconfig.8*
+%{_mandir}/*/*
 /usr/share/locale/*/LC_MESSAGES/chkconfig.mo
 
 %files -n ntsysv
