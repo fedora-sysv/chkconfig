@@ -1,13 +1,13 @@
 # Swedish messages for chkconfig.
 # Copyright (C) 2001, 2002 Christian Rose <menthos@menthos.com>
 #
-# $Id: sv.po,v 1.20 2002/06/12 05:14:15 notting Exp $
+# $Id: sv.po,v 1.21 2002/06/14 22:07:59 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "POT-Creation-Date: 2002-06-12 01:15-0400\n"
-"PO-Revision-Date: 2002-03-09 01:44+0100\n"
+"PO-Revision-Date: 2002-06-12 00:13+0200\n"
 "Last-Translator: Christian Rose <menthos@menthos.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,13 +46,13 @@ msgid "         %s [--level <levels>] <name> %s)\n"
 msgstr "              %s [--level <nivåer>] <namn> %s)\n"
 
 #: ../chkconfig.c:35
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"tjänsten %s stöder chkconfig men är inte registrerad (kör \"chkconfig --add %"
-"s\")\n"
+"tjänsten %s stöder chkconfig men nämns inte i någon körnivå (kör "
+"\"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:37
 #, c-format
