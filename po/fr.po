@@ -19,9 +19,7 @@ msgstr ""
 # ../chkconfig.c:24
 #: ../chkconfig.c:24
 msgid "usage:   chkconfig --list [name]\n"
-msgstr ""
-"usage:   chkconfig --list [nom]\n"
-" "
+msgstr "usage:   chkconfig --list [nom]\n"
 
 # ../chkconfig.c:25
 #: ../chkconfig.c:25
@@ -121,7 +119,7 @@ msgstr "Mauvais argument pour --levels\n"
 # ../ntsysv.c:220
 #: ../ntsysv.c:220
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Aucun service à administrer par ntsysv!"
+msgstr "Aucun service à administrer par ntsysv!\n"
 
 # ../leveldb.c:255
 #: ../leveldb.c:255

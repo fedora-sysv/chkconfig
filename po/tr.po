@@ -51,7 +51,7 @@ msgstr "kapalý"
 #: ../chkconfig.c:109
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "eriþim sýrasýnda hata"
+msgstr "eriþim sýrasýnda hata: %s\n"
 
 #: ../chkconfig.c:130 ../ntsysv.c:168
 #, c-format
@@ -94,7 +94,7 @@ msgstr "Hizmetler"
 
 #: ../ntsysv.c:213
 msgid "bad argument to --levels\n"
-msgstr "--levels için kötü argüman"
+msgstr "--levels için kötü argüman\n"
 
 #: ../ntsysv.c:220
 msgid "No services may be managed by ntsysv!\n"
