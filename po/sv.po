@@ -1,15 +1,16 @@
 # Swedish messages for chkconfig.
-# Copyright © 2001, 2002, 2003 Christian Rose <menthos@menthos.com>
+# Copyright © 2001, 2002, 2003, 2005 Christian Rose <menthos@menthos.com>
+# Christian Rose <menthos@menthos.com>, 2005.
 # Göran Uddeborg <goeran@uddeborg.se> 2004.
 #
-# $Id: sv.po,v 1.32 2005/02/02 21:19:51 notting Exp $
+# $Id: sv.po,v 1.33 2005/04/09 17:57:42 menthos Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-07-07 19:31+0200\n"
+"PO-Revision-Date: 2005-04-09 20:02+0200\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -402,7 +403,7 @@ msgid "Current `best' version is %s.\n"
 msgstr "Den för tillfället \"bästa\" versionen är %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Det finns %d program som tillhandahåller \"%s\".\n"
 
