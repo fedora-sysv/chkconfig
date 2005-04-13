@@ -420,7 +420,7 @@ msgstr "  Zaznaczenie    Komenda\n"
 #: ../alternatives.c:675
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Potwierdź w celu zachowania bieżącego wyboru[+], lub podaj numer wyboru: "
+msgstr "Potwierdź w celu zachowania bieżącego wyboru[+] lub podaj numer wyboru: "
 
 #: ../alternatives.c:678
 #, c-format
