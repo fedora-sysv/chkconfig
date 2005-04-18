@@ -2,14 +2,15 @@
 # This file is distributed under the same license as the chkconfig package.
 # Copyright (C) 2004 Alan Cox
 # Translation by Owain Green <owaing@oceanfree.net>, 2004.
+# Updated by Rhys Jones <rhys@sgwarnog.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.cy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-02-24 12:25+0000\n"
-"Last-Translator: Owain Green <owaing@oceanfree.net>\n"
+"POT-Creation-Date: 2005-02-10 17:54-0500\n"
+"PO-Revision-Date: 2005-04-16 14:20+0100\n"
+"Last-Translator: Rhys Jones <rhys@sgwarnog.com>\n"
 "Language-Team: Cymraeg <Cy@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,58 +54,58 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"mae'r wasanaeth %s yn cynnal chkconfig, ond ni chyfeirir ato yn unrhyw lefel "
-"rhedeg (rhedwch 'chkconfig --add %s')\n"
+"mae'r gwasanaeth %s yn cynnal chkconfig, ond ni chyfeirir ato yn unrhyw "
+"lefel rhedeg (rhedwch 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "nid yw'r wasanaeth %s yn cynnal chkconfig\n"
+msgstr "nid yw'r gwasanaeth %s yn cynnal chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "gwall wrth ddarllen gwybodaeth ar wasanaeth %s: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98 ../chkconfig.c:267
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "methwyd agor %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
 msgid "on"
 msgstr "ynghyn"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
 msgid "off"
 msgstr "wedi'i ddiffodd"
 
-#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "gwall wrth ddarllen gwybodaeth ar gyfer y wasanaeth %s: %s\n"
+msgstr "gwall wrth ddarllen gwybodaeth ar gyfer y gwasanaeth %s: %s\n"
 
-#: ../chkconfig.c:285
+#: ../chkconfig.c:322
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "gwasanaethau sail xinetd:\n"
 
-#: ../chkconfig.c:287
+#: ../chkconfig.c:324
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "methwyd agor cyfeiriadur %s: %s\n"
 
-#: ../chkconfig.c:402
+#: ../chkconfig.c:455
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s fersiwn %s\n"
 
-#: ../chkconfig.c:409
+#: ../chkconfig.c:462
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "dim ond un o --list, --add, neu --del y ceir ei benodi\n"
 
-#: ../chkconfig.c:461
+#: ../chkconfig.c:517
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -152,274 +153,274 @@ msgstr "ymresymiad gwael i --levels\n"
 #: ../ntsysv.c:300
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Ni châ unrhyw wasanaethau eu trefnu gan ntsysv!\n"
+msgstr "Ni ellir trefnu unrhyw wasanaethau drwy ntsysv!\n"
 
-#: ../leveldb.c:517
+#: ../leveldb.c:522
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "methwyd globio'r patrwm %s: %s\n"
 
-#: ../leveldb.c:548
+#: ../leveldb.c:553
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "methu pennu'r lefel redeg gyfredol\n"
 
-#: ../leveldb.c:636
+#: ../leveldb.c:641
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "methwyd creu cyswllt symbolaidd %s: %s\n"
 
-#: ../alternatives.c:49
+#: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives fersiwn %s - Hawlfraint (h)(C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:50
+#: ../alternatives.c:49
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Gellir ailddosbarthu hwn yn rhydd o dan derma'r Drwydded Gyhoeddus GNU.\n"
+"Gellir ailddosbarthu hwn yn rhydd o dan dermau Trwydded Gyhoeddus GNU.\n"
 "\n"
 
-#: ../alternatives.c:51
+#: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 "defnydd: alternatives --install <cyswllt> <enw> <llwybr> <blaenoriaeth>\n"
 
-#: ../alternatives.c:52
+#: ../alternatives.c:51
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <gwasanaeth>]\n"
 
-#: ../alternatives.c:53
+#: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <cyswllt> <enw> <llwybr>]*\n"
 
-#: ../alternatives.c:54
+#: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <enw> <llwybr>\n"
 
-#: ../alternatives.c:55
+#: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <enw>\n"
 
-#: ../alternatives.c:56
+#: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <enw>\n"
 
-#: ../alternatives.c:57
+#: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <enw>\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <enw> <llwybr>\n"
 
-#: ../alternatives.c:59
+#: ../alternatives.c:58
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:60
+#: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "dewisiadau cyffredin: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:61
+#: ../alternatives.c:60
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <cyfeiriadur> --admindir <cyfeiriadur>\n"
 
-#: ../alternatives.c:158
+#: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
 msgstr "yn dechrau %s\n"
 
-#: ../alternatives.c:162
+#: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "methwyd agor %s: %s\n"
 
-#: ../alternatives.c:171
+#: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "methwyd darllen %s: %s\n"
 
-#: ../alternatives.c:180
+#: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s yn wag!\n"
 
-#: ../alternatives.c:189
+#: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "modd gwael ar linell 1 %s\n"
 
-#: ../alternatives.c:196
+#: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "cyswllt cynradd gwael yn %s\n"
 
-#: ../alternatives.c:208
+#: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "llwybr %s annisgwyl yn %s\n"
 
-#: ../alternatives.c:217
+#: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "llwybr ar goll ar gyfer gwas %s yn %s\n"
 
-#: ../alternatives.c:227
+#: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "diwedd ffeil annisgwyl yn %s\n"
 
-#: ../alternatives.c:236
+#: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "disgwylwyd llwybr at amgen yn %s\n"
+msgstr "disgwyliwyd llwybr at amgen yn %s\n"
 
-#: ../alternatives.c:256
+#: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "disgwylwyd blaenoriaeth rifol yn %s\n"
+msgstr "disgwyliwyd blaenoriaeth rifol yn %s\n"
 
-#: ../alternatives.c:278
+#: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "disgwylwyd llwybr gwas yn %s\n"
+msgstr "disgwyliwyd llwybr gwas yn %s\n"
 
-#: ../alternatives.c:297
+#: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "llinell annisgwyl yn %s: %s\n"
 
-#: ../alternatives.c:305
+#: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "methwyd darllen cyswllt %s: %s\n"
 
-#: ../alternatives.c:319
+#: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "cyswllt ddim yn pwyntio at amgen -- yn gosod y modd i 'â llaw'\n"
 
-#: ../alternatives.c:324
+#: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "newidiwyd cyswllt -- yn gosod y modd i 'â llaw'\n"
 
-#: ../alternatives.c:340 ../alternatives.c:347
+#: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
 msgstr "byddai'n gwaredu %s\n"
 
-#: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
+#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "methwyd gwaredu'r cyswllt %s: %s\n"
 
-#: ../alternatives.c:365 ../alternatives.c:377
+#: ../alternatives.c:364 ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "byddai'n cysylltu %s -> %s\n"
 
-#: ../alternatives.c:369 ../alternatives.c:386
+#: ../alternatives.c:368 ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "methwyd cysylltu %s -> %s: %s\n"
 
-#: ../alternatives.c:418
+#: ../alternatives.c:417
 #, c-format
 msgid "%s already exists\n"
 msgstr "Mae %s yn bodoli eisioes\n"
 
-#: ../alternatives.c:420
+#: ../alternatives.c:419
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "methwyd creu %s: %s\n"
 
-#: ../alternatives.c:451
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "methwyd amnewid %s â %s: %s\n"
 
-#: ../alternatives.c:477 ../alternatives.c:486
+#: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
 msgstr "yn rhedeg %s\n"
 
-#: ../alternatives.c:513
+#: ../alternatives.c:512
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "rhaid i gyswllt cynradd %s fod yn %s\n"
 
-#: ../alternatives.c:577
+#: ../alternatives.c:576
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "cyswllt %s yn anghywir ar gyfer gwas %s (%s %s)\n"
 
-#: ../alternatives.c:619
+#: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - awto yw'r statws.\n"
 
-#: ../alternatives.c:621
+#: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - 'â llaw' yw'r statws.\n"
 
-#: ../alternatives.c:623
+#: ../alternatives.c:622
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " mae'r cyswllt yn pwyntio at %s yn gyfredol\n"
 
-#: ../alternatives.c:626
+#: ../alternatives.c:625
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - blaenoriaeth %d\n"
 
-#: ../alternatives.c:629
+#: ../alternatives.c:628
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " gwas %s: %s\n"
 
-#: ../alternatives.c:634
+#: ../alternatives.c:633
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "%s yw'r fersiwn `gorau' cyfredol.\n"
+msgstr "%s yw'r fersiwn `orau' ar hyn o bryd.\n"
 
-#: ../alternatives.c:664
-#, fuzzy, c-format
+#: ../alternatives.c:663
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Mae %d rhaglen sy'n darparu '%s'.\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Mae %d rhaglen sy'n darparu '%s'.\n"
+msgstr "Mae %d o raglenni sy'n darparu '%s'.\n"
 
-#: ../alternatives.c:666
+#: ../alternatives.c:665
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Dewisiad    Gorchymyn\n"
 
-#: ../alternatives.c:675
+#: ../alternatives.c:674
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Dychwelydd i gadw'r dewisiad cyfredol[+], neu deipiwch rhif dewis. "
+msgstr "Dychwelydd i gadw'r dewisiad cyfredol[+], neu teipiwch rif dewis. "
 
-#: ../alternatives.c:678
+#: ../alternatives.c:677
 #, c-format
 msgid ""
 "\n"
@@ -428,32 +429,32 @@ msgstr ""
 "\n"
 "gwall wrth ddarllen dewis\n"
 
-#: ../alternatives.c:705 ../alternatives.c:731
+#: ../alternatives.c:704 ../alternatives.c:730
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "ni gyfluniwyd %s yn amgen ar gyfer %s\n"
+msgstr "ni chyfluniwyd %s yn amgen ar gyfer %s\n"
 
-#: ../alternatives.c:747
+#: ../alternatives.c:746
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(byddai'n gwaredu %s\n"
 
-#: ../alternatives.c:749
+#: ../alternatives.c:748
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "methwyd gwaredu %s: %s\n"
 
-#: ../alternatives.c:871
+#: ../alternatives.c:870
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "cyfeiriadur amgen %s annilys\n"
 
-#: ../alternatives.c:877
+#: ../alternatives.c:876
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "cyfeiriadur gweinyddol %s annilys\n"
 
-#: ../alternatives.c:887
+#: ../alternatives.c:886
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives fersiwn %s\n"
