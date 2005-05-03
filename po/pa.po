@@ -29,7 +29,8 @@ msgstr "%s ਵਰਜ਼ਨ %s - (C)1997-2000 ਲਈ Red Hat Inc. ਕੋਲ ਹ�
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ।\n"
 
 #: ../chkconfig.c:25
@@ -460,4 +461,3 @@ msgstr "ਪ੍ਰਬੰਧ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "ਵਿਕਲਪ ਵਰਜ਼ਨ %s\n"
-
