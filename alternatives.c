@@ -513,12 +513,6 @@ static int addService(struct alternative newAlt, const char * altDir,
 		    set.alts[0].master.title, set.alts[0].master.facility);
 	    return 2;
 	}
-	/* Extreme case */
-	if (set.numAlts == 1 && !strcmp(set.alts[0].master.target,
-					newAlt.master.target)) {
-		set.alts[0] = newAlt;
-		goto out;
-	}
 	
         /* Determine the maximal set of slave links. */
         base.numSlaves = set.alts[0].numSlaves;
@@ -540,9 +534,6 @@ static int addService(struct alternative newAlt, const char * altDir,
 		}
 	}
 	
-	/* Sort the list for file legibility */
-	qsort(base.slaves, base.numSlaves, sizeof(struct linkSet), linkCmp);
-	    
 	/* Insert new set into the set of alternatives */
 	for (i = 0 ; i < set.numAlts ; i++) {
 		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
@@ -557,8 +548,33 @@ static int addService(struct alternative newAlt, const char * altDir,
 		if (set.alts[set.best].priority < newAlt.priority)
 			set.best = set.numAlts;
 		set.numAlts++;
+	} else {
+		/* Check for slaves no alternative provides */
+		i = 0;
+		while (i < base.numSlaves) {
+			for (j = 0; j < set.numAlts; j++) {
+				for (k = 0; k < set.alts[j].numSlaves; k++) {
+					if (strcmp(set.alts[j].slaves[k].title,
+						   base.slaves[i].title) == 0
+					    && set.alts[j].slaves[k].target)
+						goto found;
+				}
+				
+			}
+			removeLinks(base.slaves + i, altDir, flags);
+			base.numSlaves--;
+			if (i != base.numSlaves)
+				base.slaves[i] = base.slaves[base.numSlaves];
+			continue;
+
+		found:
+			i++;
+		}
 	}
 	
+	/* Sort the list for file legibility */
+	qsort(base.slaves, base.numSlaves, sizeof(struct linkSet), linkCmp);
+	    
 	/* need to match the slaves up; newLinks will parallel the original
 	   ordering */
 	for (k = 0; k < set.numAlts ; k++) {
@@ -599,7 +615,6 @@ static int addService(struct alternative newAlt, const char * altDir,
 	    set.numAlts++;
     }
     
-out:
     if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
 
     return 0;

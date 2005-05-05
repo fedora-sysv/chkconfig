@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.19
+Version: 1.3.20
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -66,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/rc.d/rc[0-6].d
 %dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
+%{_mandir}/*/update-alternatives*
 %{_mandir}/*/alternatives*
 
 %files -n ntsysv
@@ -74,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu May  5 2005 Bill Nottingham <notting@redhat.com> 1.3.20-1
+- fix deletion of orphaned slave links (#131496, <mitr@redhat.com>)
+
 * Fri Apr 29 2005 Bill Nottingham <notting@redhat.com> 1.3.19-1
 - build with updated translations
 
