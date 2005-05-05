@@ -265,7 +265,7 @@ msgstr "%s pusty!\n"
 #: ../alternatives.c:189
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "zły tryb w linii 1 %s\n"
+msgstr "zły tryb w wierszu 1 %s\n"
 
 #: ../alternatives.c:196
 #, c-format
@@ -305,7 +305,7 @@ msgstr "oczekiwana ścieżka slave w %s\n"
 #: ../alternatives.c:297
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "nieoczekiwana linia w %s: %s\n"
+msgstr "nieoczekiwany wiersz w %s: %s\n"
 
 #: ../alternatives.c:305
 #, c-format
