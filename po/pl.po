@@ -69,7 +69,7 @@ msgstr "usługa %s nie wspiera chkconfig\n"
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "błąd podczas czytania informacji o usłudze %s: %s\n"
+msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
@@ -141,7 +141,7 @@ msgstr "Usługi"
 #: ../ntsysv.c:240
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "błąd podczas czytania z folderu %s: %s\n"
+msgstr "błąd podczas odczytywania z folderu %s: %s\n"
 
 #: ../ntsysv.c:276
 #, c-format
@@ -190,7 +190,7 @@ msgstr ""
 #: ../alternatives.c:51
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "użycie: alternatywy --install <link> <nazwa> <ścieżka> <priorytet>\n"
+msgstr "użycie: alternatives --install <dowiązanie> <nazwa> <ścieżka> <priorytet>\n"
 
 #: ../alternatives.c:52
 #, c-format
@@ -200,32 +200,32 @@ msgstr "                    [--initscript <usługa>]\n"
 #: ../alternatives.c:53
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <nazwa> <ścieżka>]*\n"
+msgstr "                    [--slave <dowiązanie> <nazwa> <ścieżka>]*\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatywy --remove <nazwa> <ścieżka>\n"
+msgstr "       alternatives --remove <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatywy --auto <nazwa>\n"
+msgstr "       alternatives --auto <nazwa>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatywy --config <nazwa>\n"
+msgstr "       alternatives --config <nazwa>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatywy --display <nazwa>\n"
+msgstr "       alternatives --display <nazwa>\n"
 
 #: ../alternatives.c:58
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatywy--set <nazwa> <ścieżka>\n"
+msgstr "       alternatives --set <nazwa> <ścieżka>\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -245,7 +245,7 @@ msgstr "                --altdir <folder> --admindir <folder>\n"
 #: ../alternatives.c:158
 #, c-format
 msgid "reading %s\n"
-msgstr "czytanie %s\n"
+msgstr "odczytywanie %s\n"
 
 #: ../alternatives.c:162
 #, c-format
@@ -320,7 +320,7 @@ msgstr "dowiązanie nie wskazuje na alternatywę -- ustawianie trybu na ręczny\
 #: ../alternatives.c:324
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "dowiązanie się zmieniło -- ustawianie trybu na ręczny\n"
+msgstr "dowiązanie zmieniło się -- ustawianie trybu na ręczny\n"
 
 #: ../alternatives.c:340 ../alternatives.c:347
 #, c-format
@@ -330,7 +330,7 @@ msgstr "usunie %s\n"
 #: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "nie udało się usunąć dowiązania %s: %s\n"
+msgstr "nie powiodło się usunąć dowiązania %s: %s\n"
 
 #: ../alternatives.c:365 ../alternatives.c:377
 #, c-format
@@ -355,7 +355,7 @@ msgstr "utworzenie %s nie powiodło się: %s\n"
 #: ../alternatives.c:451
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "nie udało się zamienić %s na %s: %s\n"
+msgstr "nie powiodło się zastąpić %s na %s: %s\n"
 
 #: ../alternatives.c:477 ../alternatives.c:486
 #, c-format
@@ -400,7 +400,7 @@ msgstr " slave %s: %s\n"
 #: ../alternatives.c:634
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "Obecnie 'najlepszą' wersją jest %s.\n"
+msgstr "Obecnie `najlepszą' wersją jest %s.\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -415,7 +415,7 @@ msgstr "Jest %d programów dostarczających '%s'.\n"
 #: ../alternatives.c:666
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  Zaznaczenie    Komenda\n"
+msgstr "  Zaznaczenie    Polecenie\n"
 
 #: ../alternatives.c:675
 #, c-format
