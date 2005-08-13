@@ -1,31 +1,32 @@
+# translation of ar.po to Arabic
 # translation of chkconfig.po to Arabic
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Ossama M. Khayat <okhayat@yahoo.com>, 2004.
 # Youcef Rabah Rahal <rahal@arabeyes.org>, 2004.
+# Munzir Taha <munzirtaha@newhorizons.com.sa>, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: ar\n"
 "POT-Creation-Date: 2005-02-10 17:54-0500\n"
-"PO-Revision-Date: 2004-06-19 19:05+0200\n"
-"Last-Translator: Youcef Rabah Rahal <rahal@arabeyes.org>\n"
-"Language-Team: Arabic <support@arabeyes.org>\n"
+"PO-Revision-Date: 2005-08-13 14:22+0300\n"
+"Last-Translator: Munzir Taha <munzirtaha@newhorizons.com.sa>\n"
+"Language-Team: Arabic <fedora-trans-ar@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s النّسخة %s - حقوق النّسخ محفوظة لردهات المتّحدة لسنة 1997-2000\n"
+msgstr "%s النّسخة %s - حقوق النّسخ محفوظة لـ Red Hat, Inc لسنة 1997-2000\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "يمكن إعادة توزيع هذا البرنامج مجّاناً ضمن بنود رخصة العموم GPL.\n"
 
 #: ../chkconfig.c:25
@@ -184,8 +185,7 @@ msgstr "يمكن إعادة توزيع هذا البرنامج مجّاناً ض
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"الاستخدام: alternatives --install <الرابط> <الاسم> <المسار> <الأولويّة>\n"
+msgstr "الاستخدام: alternatives --install <الرابط> <الاسم> <المسار> <الأولويّة>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -315,12 +315,12 @@ msgstr "الرّابط لا يشير إلى بديل -- جاري تحديد ال
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "تغيّر الرّابط -- جاري تحديد الوَضْع بيديوي\n"
+msgstr "تغيّر الرّابط -- جاري تحديد الوَضْع بيدوي\n"
 
 #: ../alternatives.c:339 ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
-msgstr "قد يزيل %s\n"
+msgstr "سوف يزيل %s\n"
 
 #: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
 #, c-format
@@ -355,7 +355,7 @@ msgstr "فشل استبدال %s مع %s: %s\n"
 #: ../alternatives.c:476 ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
-msgstr "يجري تشغيل %s\n"
+msgstr "جاري تشغيل %s\n"
 
 #: ../alternatives.c:512
 #, c-format
@@ -370,12 +370,12 @@ msgstr "الرّابط %s غير صحيح للثّانوي %s (%s %s)\n"
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - الحالة هي تلقائيّة.\n"
+msgstr "%s - الحالة تلقائيّة.\n"
 
 #: ../alternatives.c:620
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - الحالة هي يدويّة.\n"
+msgstr "%s - الحالة يدويّة.\n"
 
 #: ../alternatives.c:622
 #, c-format
@@ -398,14 +398,14 @@ msgid "Current `best' version is %s.\n"
 msgstr "النّسخة `الأفضل' الحاليّة هي %s.\n"
 
 #: ../alternatives.c:663
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "هناك %d برنامج يُوفّر '%s'.\n"
 
 #: ../alternatives.c:663
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "هناك %d برنامج يُوفّر '%s'.\n"
+msgstr "هناك %d برامج تُُوفّر '%s'.\n"
 
 #: ../alternatives.c:665
 #, c-format
@@ -456,5 +456,3 @@ msgstr "دليل الإدارة %s غير صالح\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives النّسخة %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "خطأ في القراءة من الدّليل %s/init.d: %s\n"
