@@ -1,7 +1,4 @@
 # translation of pl.po to Polish
-# translation of pl.po to POLISH
-# tłumaczenie dla lpl.
-# Copyright (C) 2000, 2004, 2005 Free Software Foundation, Inc.
 # Paweł Niewiadomski <lilo@free.poltronic.net>, 2000.
 # Radosław Zawartko <radzaw@radzaw.one.pl>, 2004.
 # Grzegorz Rajda <marius@w9.pl>, 2004.
@@ -12,7 +9,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2005-02-24 15:39+0100\n"
+"PO-Revision-Date: 2005-09-04 17:31+0200\n"
 "Last-Translator: Tom Berner <tom@lodz.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,8 +26,8 @@ msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Program może być swobodnie rozprowadzany na warunkach Publicznej Licencji "
-"GNU.\n"
+"Program może być swobodnie rozprowadzany na warunkach Powszechnej Licencji "
+"Publicznej GNU.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -58,13 +55,13 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"usługa %s wspiera chkconfig, lecz nie jest przypisana do żadnego poziomu "
-"uruchamiania (uruchom 'chkconfig -add %s')\n"
+"usługa %s obsługuje chkconfig, ale nie jest przypisana do żadnego poziomu "
+"uruchamiania (uruchom \"chkconfig -add %s\")\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "usługa %s nie wspiera chkconfig\n"
+msgstr "usługa %s nie obsługuje chkconfig\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -74,7 +71,7 @@ msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 #: ../chkconfig.c:98 ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "nie powiodło się otwarcie %s/init.d: %s\n"
+msgstr "otwarcie %s/init.d nie powiodło się: %s\n"
 
 #: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
 msgid "on"
@@ -112,7 +109,8 @@ msgstr "tylko jedna z opcji --list, --add lub --del może być podana\n"
 #: ../chkconfig.c:461
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "tylko jeden poziom uruchamiania może być podany dla zapytania chkconfig\n"
+msgstr ""
+"tylko jeden poziom uruchamiania może być podany dla zapytania chkconfig\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -151,7 +149,7 @@ msgstr "Musisz być rootem, aby uruchomić %s.\n"
 #: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "nieprawidłowy argument dla --levels\n"
+msgstr "błędny argument dla --levels\n"
 
 #: ../ntsysv.c:300
 #, c-format
@@ -171,7 +169,7 @@ msgstr "nie można ustalić aktualnego poziomu uruchamiania\n"
 #: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nie powiodła się próba stworzenia dowiązania %s: %s\n"
+msgstr "nie powiodła się próba utworzenia dowiązania %s: %s\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -184,7 +182,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Program może być swobodnie rozprowadzany na warunkach Publicznej Licencji GNU.\n"
+"Program może być swobodnie rozprowadzany na warunkach Powszechnej Licencji "
+"Publicznej GNU.\n"
 "\n"
 
 #: ../alternatives.c:51
@@ -235,7 +234,7 @@ msgstr "\n"
 #: ../alternatives.c:60
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "inne opcje: --verbose --test --help --usage --version\n"
+msgstr "wspólne opcje: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -260,17 +259,17 @@ msgstr "nie można odczytać %s: %s\n"
 #: ../alternatives.c:180
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s pusty!\n"
+msgstr "%s jest pusty!\n"
 
 #: ../alternatives.c:189
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "zły tryb w wierszu 1 %s\n"
+msgstr "błędny tryb w wierszu 1 %s\n"
 
 #: ../alternatives.c:196
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "złe główne dowiązanie w %s\n"
+msgstr "błędne podstawowe dowiązanie w %s\n"
 
 #: ../alternatives.c:208
 #, c-format
@@ -295,7 +294,7 @@ msgstr "oczekiwana ścieżka do alternatywy w %s\n"
 #: ../alternatives.c:256
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "spodziewany priorytet liczbowy w %s\n"
+msgstr "oczekiwany priorytet liczbowy w %s\n"
 
 #: ../alternatives.c:278
 #, c-format
@@ -310,7 +309,7 @@ msgstr "nieoczekiwany wiersz w %s: %s\n"
 #: ../alternatives.c:305
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "nie można odczytać dowiązania %s: %s\n"
+msgstr "odczytanie dowiązania %s nie powiodło się: %s\n"
 
 #: ../alternatives.c:319
 #, c-format
@@ -330,7 +329,7 @@ msgstr "usunie %s\n"
 #: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "nie powiodło się usunąć dowiązania %s: %s\n"
+msgstr "usuwanie dowiązania %s nie powiodło się: %s\n"
 
 #: ../alternatives.c:365 ../alternatives.c:377
 #, c-format
@@ -355,17 +354,17 @@ msgstr "utworzenie %s nie powiodło się: %s\n"
 #: ../alternatives.c:451
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "nie powiodło się zastąpić %s na %s: %s\n"
+msgstr "zastąpienie %s na %s nie powiodło się: %s\n"
 
 #: ../alternatives.c:477 ../alternatives.c:486
 #, c-format
 msgid "running %s\n"
-msgstr "uruchomiony %s\n"
+msgstr "uruchamianie %s\n"
 
 #: ../alternatives.c:513
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "główne dowiązanie dla %s musi być %s\n"
+msgstr "podstawowe dowiązanie dla %s musi być %s\n"
 
 #: ../alternatives.c:577
 #, c-format
@@ -375,12 +374,12 @@ msgstr "niepoprawne dowiązanie %s dla slave %s (%s %s)\n"
 #: ../alternatives.c:619
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - status: automatycznie.\n"
+msgstr "%s - stan: automatycznie.\n"
 
 #: ../alternatives.c:621
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - status: ręcznie.\n"
+msgstr "%s - stan: ręcznie.\n"
 
 #: ../alternatives.c:623
 #, c-format
@@ -400,17 +399,17 @@ msgstr " slave %s: %s\n"
 #: ../alternatives.c:634
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "Obecnie `najlepszą' wersją jest %s.\n"
+msgstr "Obecnie \"najlepszą\" wersją jest %s.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Jest %d program dostarczający '%s'.\n"
+msgstr "Jest %d program dostarczający \"%s\".\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Jest %d programów dostarczających '%s'.\n"
+msgstr "Jest %d programów dostarczających \"%s\".\n"
 
 #: ../alternatives.c:666
 #, c-format
@@ -420,7 +419,8 @@ msgstr "  Zaznaczenie    Polecenie\n"
 #: ../alternatives.c:675
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Potwierdź w celu zachowania bieżącego wyboru[+] lub podaj numer wyboru: "
+msgstr ""
+"Potwierdź w celu zachowania bieżącego wyboru[+] lub podaj numer wyboru: "
 
 #: ../alternatives.c:678
 #, c-format
@@ -429,7 +429,7 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"błąd odczytu wyboru\n"
+"błąd podczas odczytywania wyboru\n"
 
 #: ../alternatives.c:705 ../alternatives.c:731
 #, c-format
@@ -449,15 +449,14 @@ msgstr "nie można usunąć %s: %s\n"
 #: ../alternatives.c:871
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir %s jest niepoprawny\n"
+msgstr "altdir %s jest nieprawidłowy\n"
 
 #: ../alternatives.c:877
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir %s jest niepoprawny\n"
+msgstr "admindir %s jest nieprawidłowy\n"
 
 #: ../alternatives.c:887
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatywne wersje %s\n"
-
