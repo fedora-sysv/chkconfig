@@ -117,6 +117,8 @@ static int servicesWindow(struct service * services, int numServices,
 
     for (i = 0; i < numServices; i++) {
       if (services[i].type == TYPE_XINETD)
+        if ((services[i].enabled && states[i] != '*') ||
+	    (!services[i].enabled && states[i] == '*'))
 	      setXinetdService(services[i], states[i] == '*');
       else {
 	      for (j = 0; j < 7; j++) {
