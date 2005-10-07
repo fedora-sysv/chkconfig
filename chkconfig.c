@@ -348,8 +348,8 @@ static int listService(char * item) {
 			    numServicesAlloced += 10;
 			    s = realloc(s, numServicesAlloced * sizeof (*s));
 		    }
-		    readXinetdServiceInfo(ent->d_name, s + numServices, 0);
-		    numServices ++;
+		    if (readXinetdServiceInfo(ent->d_name, s + numServices, 0) != -1)
+			    numServices ++;
 	    }
 	    
 	    qsort(s, numServices, sizeof(*s), xinetdNameCmp);
