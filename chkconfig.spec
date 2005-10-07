@@ -77,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Fri Oct  7 2005 Bill Nottingham <notting@redhat.com>
 - fix segfault on directories in /etc/xinetd.d (#166385)
+- don't needlessly rewrite xinetd files (#81008)
 
 * Thu May  5 2005 Bill Nottingham <notting@redhat.com> 1.3.20-1
 - fix deletion of orphaned slave links (#131496, <mitr@redhat.com>)
