@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2005-09-04 17:31+0200\n"
+"PO-Revision-Date: 2005-10-07 23:52+0200\n"
 "Last-Translator: Tom Berner <tom@lodz.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -169,7 +169,7 @@ msgstr "nie można ustalić aktualnego poziomu uruchamiania\n"
 #: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "nie powiodła się próba utworzenia dowiązania %s: %s\n"
+msgstr "nie powiodła się próba utworzenia dowiązania symbolicznego %s: %s\n"
 
 #: ../alternatives.c:49
 #, c-format
