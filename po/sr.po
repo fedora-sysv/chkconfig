@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-10-07 15:23-0400\n"
-"PO-Revision-Date: 2005-10-07 22:40+0100\n"
+"PO-Revision-Date: 2005-10-12 19:32-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,10 +23,8 @@ msgstr "%s верзија %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Ово се сме слободно делити у складу са одредбама ГНУ Опште јавне лиценце.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ово се сме слободно делити у складу са одредбама ГНУ Опште јавне лиценце.\n"
 
 #: ../chkconfig.c:25
 #, c-format
@@ -50,12 +48,8 @@ msgstr "          %s [--level <нивои>] <име> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"сервис %s подржава chkconfig, али није познат ни у једном нивоу извршавања "
-"(извршите „chkconfig --add %s“)\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "сервис %s подржава chkconfig, али није познат ни у једном нивоу извршавања (извршите „chkconfig --add %s“)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -67,20 +61,28 @@ msgstr "сервис %s не подржава chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "грешка при читању података о сервису %s: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:267
+#: ../chkconfig.c:98
+#: ../chkconfig.c:267
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "неуспешно отварање %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:360
 msgid "on"
 msgstr "укључено"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:360
 msgid "off"
 msgstr "искључено"
 
-#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:289
+#: ../ntsysv.c:166
+#: ../ntsysv.c:193
+#: ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "грешка при читању података о сервису %s: %s\n"
@@ -114,7 +116,8 @@ msgstr "само један ниво извршавања сме бити нав
 msgid "Press <F1> for more information on a service."
 msgstr "Притисните <F1> за више података о сервису."
 
-#: ../ntsysv.c:68 ../ntsysv.c:105
+#: ../ntsysv.c:68
+#: ../ntsysv.c:105
 msgid "Ok"
 msgstr "У реду"
 
@@ -318,22 +321,27 @@ msgstr "веза не указује на алтернативу -- постав
 msgid "link changed -- setting mode to manual\n"
 msgstr "промењена веза -- постављам ручни режим\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346
+#: ../alternatives.c:339
+#: ../alternatives.c:346
 #, c-format
 msgid "would remove %s\n"
 msgstr "би уклонило %s\n"
 
-#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
+#: ../alternatives.c:341
+#: ../alternatives.c:348
+#: ../alternatives.c:379
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "неуспешно уклањање везе %s: %s\n"
 
-#: ../alternatives.c:364 ../alternatives.c:376
+#: ../alternatives.c:364
+#: ../alternatives.c:376
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "повезало би %s -> %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:385
+#: ../alternatives.c:368
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "неуспешно повезивање %s -> %s: %s\n"
@@ -353,7 +361,8 @@ msgstr "неуспешно стварање %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "неуспешна замена %s са %s: %s\n"
 
-#: ../alternatives.c:476 ../alternatives.c:485
+#: ../alternatives.c:476
+#: ../alternatives.c:485
 #, c-format
 msgid "running %s\n"
 msgstr "извршавам %s\n"
@@ -394,7 +403,7 @@ msgid " slave %s: %s\n"
 msgstr " подређени %s: %s\n"
 
 #: ../alternatives.c:648
-#, fuzzy, c-format
+#, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Тренутна „најбоља“ верзија је %s.\n"
 
@@ -416,7 +425,7 @@ msgstr "   Избор       Команда\n"
 #: ../alternatives.c:689
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter задржава тренутни избор[+], или укуцајте број избора: "
+msgstr "<Enter> задржава тренутни избор[+], или укуцајте број избора: "
 
 #: ../alternatives.c:692
 #, c-format
@@ -427,7 +436,8 @@ msgstr ""
 "\n"
 "грешка при читању избора\n"
 
-#: ../alternatives.c:719 ../alternatives.c:745
+#: ../alternatives.c:719
+#: ../alternatives.c:745
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s није подешено као алтернатива за %s\n"
@@ -456,3 +466,4 @@ msgstr "admindir %s неисправан\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives верзија %s\n"
+
