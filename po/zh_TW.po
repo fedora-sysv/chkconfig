@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-02-10 17:54-0500\n"
+"POT-Creation-Date: 2005-10-07 15:23-0400\n"
 "PO-Revision-Date: 2005-02-03 14:39+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese Traditional <zh_TW@li.org>\n"
@@ -156,17 +156,17 @@ msgstr "在 --levels 處有不當參數\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "無任何服務可被 ntsysv 管理！\n"
 
-#: ../leveldb.c:522
+#: ../leveldb.c:528
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "設定全域設定值 %s 失敗: %s\n"
 
-#: ../leveldb.c:553
+#: ../leveldb.c:559
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "無法取得目前的執行等級\n"
 
-#: ../leveldb.c:641
+#: ../leveldb.c:647
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "建立 %s 符號連結失敗: %s\n"
@@ -363,62 +363,62 @@ msgstr "執行中 %s\n"
 msgid "the primary link for %s must be %s\n"
 msgstr "%s 的主要連結必須是 %s\n"
 
-#: ../alternatives.c:576
+#: ../alternatives.c:592
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "%s 連結在從屬裝置 %s 上是錯誤的 (%s %s)\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:633
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - 狀態是自動的。\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:635
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - 狀態是手動的。\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:637
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " 目前連結指向 %s\n"
 
-#: ../alternatives.c:625
+#: ../alternatives.c:640
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - 優先順序 %d\n"
 
-#: ../alternatives.c:628
+#: ../alternatives.c:643
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " 從屬裝置 %s: %s\n"
 
-#: ../alternatives.c:633
+#: ../alternatives.c:648
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "目前 `最好的' 版本是 %s。\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:678
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "有 %d 程式提供 '%s'。\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:678
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "有 %d 程式提供 '%s'。\n"
 
-#: ../alternatives.c:665
+#: ../alternatives.c:680
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  選擇        指令\n"
 
-#: ../alternatives.c:674
+#: ../alternatives.c:689
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼:"
 
-#: ../alternatives.c:677
+#: ../alternatives.c:692
 #, c-format
 msgid ""
 "\n"
@@ -427,32 +427,32 @@ msgstr ""
 "\n"
 "讀取選擇發生錯誤\n"
 
-#: ../alternatives.c:704 ../alternatives.c:730
+#: ../alternatives.c:719 ../alternatives.c:745
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s 尚未被設定為 %s 的另一選擇\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:761
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(將移除 %s\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:763
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "無法移除 %s: %s\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:885
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s 無效\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:891
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s 無效\n"
 
-#: ../alternatives.c:886
+#: ../alternatives.c:901
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "另一版本 %s\n"
