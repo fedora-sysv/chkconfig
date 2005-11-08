@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.20
+Version: 1.3.21
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov  8 2005 Bill Nottingham <notting@redhat.com>
+- for LSB scripts, use any chkconfig: priorities as a basis,
+  instead of 50/50 (#172599)
+- fix LSB script dependency setting when no chkconfig: line
+  is present (#161870)
+- fix LSB script dependency setting when one of Required-Stop
+  or Required-Start: is missing (#168457)
+
 * Fri Oct  7 2005 Bill Nottingham <notting@redhat.com>
 - fix segfault on directories in /etc/xinetd.d (#166385)
 - don't needlessly rewrite xinetd files (#81008)
