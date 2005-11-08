@@ -79,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 - for LSB scripts, use any chkconfig: priorities as a basis,
   instead of 50/50 (#172599)
 - fix LSB script dependency setting when no chkconfig: line
-  is present (#161870)
+  is present (#161870, <jean-francois.larvoire@hp.com>)
 - fix LSB script dependency setting when one of Required-Stop
   or Required-Start: is missing (#168457)
 
