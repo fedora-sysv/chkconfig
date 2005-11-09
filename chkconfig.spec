@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.21
+Version: 1.3.22
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Nov  9 2005 Bill Nottingham <notting@redhat.com>
+- fix doSetService call in frobOneDependencies
+
 * Tue Nov  8 2005 Bill Nottingham <notting@redhat.com>
 - for LSB scripts, use any chkconfig: priorities as a basis,
   instead of 50/50 (#172599)

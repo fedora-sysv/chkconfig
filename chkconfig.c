@@ -140,7 +140,7 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 		for (i = 0; i < 7; i++) {
 			if (isConfigured(s->name, i) || target) {
 				delServiceOne(s->name,i);
-				doSetService(*s, i, ((i << i) & s->levels));
+				doSetService(*s, i, ((1 << i) & s->levels));
 			}
 		}
 		return 1; /* Resolved something */
