@@ -43,6 +43,26 @@ static void readServiceError(int rc, char * name) {
     exit(1);
 }
 
+static int delServiceOne(char *name, int level) {
+    int i, rc;
+    glob_t globres;
+    struct service s;
+
+    if ((rc = readServiceInfo(name, &s, 0))) {
+	readServiceError(rc, name);
+	return 1;
+    }
+    if (s.type == TYPE_XINETD) return 0;
+
+
+    if (!findServiceEntries(name, level, &globres)) {
+	    for (i = 0; i < globres.gl_pathc; i++)
+		    unlink(globres.gl_pathv[i]);
+	    if (globres.gl_pathc) globfree(&globres);
+    }
+    return 0;
+}
+
 static int delService(char * name) {
     int level, i, rc;
     glob_t globres;
@@ -82,6 +102,53 @@ static inline int earlierThan(int i, int j) {
 	return i;
 }
 
+static int frobOneDependencies(struct service *s, struct service *servs, int numservs, int target) {
+	int i, j, k;
+	int s0 = s->sPriority;
+	int k0 = s->kPriority;
+
+	if (s->sPriority < 0) s->sPriority = 50;
+	if (s->kPriority < 0) s->kPriority = 50;
+	for (i = 0; i < numservs ; i++) {
+		if (s->startDeps) {
+			for (j = 0; s->startDeps[j] ; j++) {
+				if (!strcmp(s->startDeps[j], servs[i].name))
+					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->startDeps[j], servs[i].provides[k]))
+							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+					}
+				}
+			}
+		}
+		if (s->stopDeps) {
+			for (j = 0; s->stopDeps[j] ; j++) {
+				if (!strcmp(s->stopDeps[j], servs[i].name))
+					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->stopDeps[j], servs[i].provides[k]))
+							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+					}
+				}
+			}
+		}
+	}
+
+	if (target || ((s0 != s->sPriority) || (k0 != s->kPriority))) {
+		for (i = 0; i < 7; i++) {
+			if (isConfigured(s->name, i) || target) {
+				delServiceOne(s->name,i);
+				doSetService(*s, i, ((1 << i) & s->levels));
+			}
+		}
+		return 1; /* Resolved something */
+	}
+	return 0; /* Didn't resolve anything */
+}
+
+
 /* LSB-style dependency frobber. Calculates a usable start priority
  * and stop priority.
  * This algorithm will almost certainly break horribly at some point. */
@@ -92,8 +159,8 @@ static void frobDependencies(struct service *s) {
 	struct service *servs = NULL;
 	int numservs = 0;
 	char fn[1024];
-	int i, j, k;
-    
+	int nResolved = 0;
+
 	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 			strerror(errno));
@@ -125,37 +192,20 @@ static void frobDependencies(struct service *s) {
 		if (!readServiceInfo(ent->d_name, servs + numservs, 0))
 			numservs++;
 	}
-	
-	/* Sane defaults */
-	s->sPriority = 50;
-	s->kPriority = 50;
-	
-	for (i = 0; i < numservs ; i++) {
-		if (s->startDeps) {
-			for (j = 0; s->startDeps[j] ; j++) {
-				if (!strcmp(s->startDeps[j], servs[i].name))
-					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->startDeps[j], servs[i].provides[k]))
-							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-					}
-				}
-			}
+
+	/* Resolve recursively the other dependancies */
+	do {
+	  	nResolved = 0;
+		int i;
+		
+		for (i = 0; i < numservs ; i++) {
+			if ((servs+i)->isLSB)
+				nResolved += frobOneDependencies(servs+i, servs, numservs, 0);
 		}
-		if (s->stopDeps) {
-			for (j = 0; s->stopDeps[j] ; j++) {
-				if (!strcmp(s->stopDeps[j], servs[i].name))
-					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->stopDeps[j], servs[i].provides[k]))
-							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-					}
-				}
-			}
-		}
-	}
+	} while (nResolved);
+
+	/* Resolve our target */
+	frobOneDependencies(s, servs, numservs, 1);
 }
 
 static int addService(char * name) {
@@ -168,9 +218,9 @@ static int addService(char * name) {
     }
 	
     if (s.type == TYPE_XINETD) return 0;
-    if (s.isLSB && (s.sPriority <= -1) && (s.kPriority <= -1))
+    if (s.isLSB)
 		frobDependencies(&s);
-    
+    else
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i)) {
 	    if ((1 << i) & s.levels)
@@ -337,7 +387,7 @@ int setService(char * name, int where, int state) {
     }
 
     if (s.type == TYPE_INIT_D) {
-	    if (s.isLSB && (s.sPriority <= -1) && (s.kPriority <= -1))
+	    if (s.isLSB)
 		    frobDependencies(&s);
 	    for (i = 0; i < 7; i++) {
 		    if (!((1 << i) & where)) continue;
