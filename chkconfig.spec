@@ -1,7 +1,7 @@
 # [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.13.2
+Version: 1.3.13.3
 Release: 0.3
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov  8 2005 Bill Nottingham <notting@redhat.com> 1.3.13.3-0.3
+- for LSB scripts, use any chkconfig: priorities as a basis,
+  instead of 50/50 (#172742)
+- fix LSB script dependency setting when no chkconfig: line
+  is present (#170366, <jean-francois.larvoire@hp.com>)
+- fix LSB script dependency setting when one of Required-Stop
+  or Required-Start: is missing (#170367)
+
 * Tue Feb 22 2005 Bill Nottingham <notting@redhat.com> 1.3.13.2-0.3
 - more LSB-related fixes (#149066)
 
