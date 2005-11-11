@@ -116,11 +116,11 @@ static int servicesWindow(struct service * services, int numServices,
     if (!update) return 1;
 
     for (i = 0; i < numServices; i++) {
-      if (services[i].type == TYPE_XINETD)
+      if (services[i].type == TYPE_XINETD) {
         if ((services[i].enabled && states[i] != '*') ||
 	    (!services[i].enabled && states[i] == '*'))
 	      setXinetdService(services[i], states[i] == '*');
-      else {
+      } else {
 	      for (j = 0; j < 7; j++) {
 		      if (levels & (1 << j))
 			doSetService(services[i], j, states[i] == '*');

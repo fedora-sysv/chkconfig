@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.22
+Version: 1.3.23
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Nov 11 2005 Bill Nottingham <notting@redhat.com> 1.3.23-1
+- fix ntsysv (#172996)
+
 * Wed Nov  9 2005 Bill Nottingham <notting@redhat.com>
 - fix doSetService call in frobOneDependencies
 
