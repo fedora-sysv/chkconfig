@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-07 15:23-0400\n"
-"PO-Revision-Date: 2005-10-12 19:32-0000\n"
+"POT-Creation-Date: 2005-11-11 18:03-0500\n"
+"PO-Revision-Date: 2005-11-14 10:53-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,53 +61,53 @@ msgstr "сервис %s не подржава chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "грешка при читању података о сервису %s: %s\n"
 
-#: ../chkconfig.c:98
-#: ../chkconfig.c:267
+#: ../chkconfig.c:165
+#: ../chkconfig.c:317
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "неуспешно отварање %s/init.d: %s\n"
 
-#: ../chkconfig.c:211
-#: ../chkconfig.c:216
-#: ../chkconfig.c:360
+#: ../chkconfig.c:261
+#: ../chkconfig.c:266
+#: ../chkconfig.c:410
 msgid "on"
 msgstr "укључено"
 
-#: ../chkconfig.c:211
-#: ../chkconfig.c:216
-#: ../chkconfig.c:360
+#: ../chkconfig.c:261
+#: ../chkconfig.c:266
+#: ../chkconfig.c:410
 msgid "off"
 msgstr "искључено"
 
-#: ../chkconfig.c:289
-#: ../ntsysv.c:166
-#: ../ntsysv.c:193
-#: ../ntsysv.c:231
+#: ../chkconfig.c:339
+#: ../ntsysv.c:168
+#: ../ntsysv.c:195
+#: ../ntsysv.c:233
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "грешка при читању података о сервису %s: %s\n"
 
-#: ../chkconfig.c:322
+#: ../chkconfig.c:372
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd засновани сервиси:\n"
 
-#: ../chkconfig.c:324
+#: ../chkconfig.c:374
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "неуспешно отварање директоријума %s: %s\n"
 
-#: ../chkconfig.c:455
+#: ../chkconfig.c:505
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s верзија %s\n"
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:512
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "можете навести само један од --list, --add или --del\n"
 
-#: ../chkconfig.c:517
+#: ../chkconfig.c:567
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "само један ниво извршавања сме бити наведен у chkconfig упиту\n"
@@ -137,37 +137,37 @@ msgstr "Које сервисе треба самостално покренут
 msgid "Services"
 msgstr "Сервиси"
 
-#: ../ntsysv.c:240
+#: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "грешка при читању из директоријума %s: %s\n"
 
-#: ../ntsysv.c:276
+#: ../ntsysv.c:278
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Морате бити root да би извршили %s.\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "лош аргумент за --levels\n"
 
-#: ../ntsysv.c:300
+#: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Ниједним сервисом не сме да управља ntsysv!\n"
 
-#: ../leveldb.c:528
+#: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "неуспешно поклапање обрасца %s: %s\n"
 
-#: ../leveldb.c:559
+#: ../leveldb.c:554
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "не могу да одредим текући ниво извршавања\n"
 
-#: ../leveldb.c:647
+#: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "неуспешно прављење симболичке везе %s: %s\n"
