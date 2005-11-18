@@ -925,7 +925,7 @@ int main(int argc, const char ** argv) {
       case MODE_REMOVE:
 	return removeService(title, target, altDir, stateDir, flags);
       case MODE_SLAVE:
-	abort();
+	usage(2);
     }
 
     abort();
