@@ -330,6 +330,18 @@ static int readConfig(struct alternativeSet * set, const char * title,
     return 0;
 }
 
+static int isLink(char *path)  {
+	struct stat sbuf;
+	int rc = 0;
+	
+	rc = lstat(path, &sbuf);
+	if (!rc) {
+		rc = S_ISLNK(sbuf.st_mode);
+	}
+	return rc;
+}
+
+
 static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
     char * sl;
 
@@ -337,14 +349,14 @@ static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
     sprintf(sl, "%s/%s", altDir, l->title);
     if (FL_TEST(flags)) {
 	printf(_("would remove %s\n"), sl);
-    } else if (unlink(sl) && errno != ENOENT) {
+    } else if (isLink(sl) && unlink(sl) && errno != ENOENT) {
 	fprintf(stderr, _("failed to remove link %s: %s\n"),
 		sl, strerror(errno));
 	return 1;
     }
     if (FL_TEST(flags)) {
 	printf(_("would remove %s\n"), l->facility);
-    } else if (unlink(l->facility) && errno != ENOENT) {
+    } else if (isLink(l->facility) && unlink(l->facility) && errno != ENOENT) {
 	fprintf(stderr, _("failed to remove link %s: %s\n"),
 		l->facility, strerror(errno));
 	return 1;
