@@ -398,7 +398,7 @@ int setService(char * name, int where, int state) {
 		      what = 1;
 		    else
 		      what = 0;
-		    return doSetService(s, i, what);
+		    doSetService(s, i, what);
 	    }
     } else if (s.type == TYPE_XINETD) {
 	    if (setXinetdService(s, state)) {

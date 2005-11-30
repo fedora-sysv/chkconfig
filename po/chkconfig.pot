@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-03 16:39-0500\n"
+"POT-Creation-Date: 2005-11-30 09:48-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,45 +64,45 @@ msgstr ""
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:165 ../chkconfig.c:298
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:363
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:313
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:363
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:282 ../ntsysv.c:195
+#: ../chkconfig.c:332 ../ntsysv.c:195
 #, c-format
 msgid "error reading from directory %s/init.d: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:290
+#: ../chkconfig.c:340
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:292
+#: ../chkconfig.c:342
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:409
+#: ../chkconfig.c:459
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:416
+#: ../chkconfig.c:466
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:468
+#: ../chkconfig.c:518
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:186 ../ntsysv.c:230 ../leveldb.c:581 ../leveldb.c:590
+#: ../ntsysv.c:186 ../ntsysv.c:230 ../leveldb.c:577 ../leveldb.c:586
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
@@ -156,17 +156,17 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:523
+#: ../leveldb.c:519
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:554
+#: ../leveldb.c:550
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:648
+#: ../leveldb.c:644
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

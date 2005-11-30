@@ -2,7 +2,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
 Version: 1.3.13.3
-Release: 1
+Release: 2
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Nov 30 2005 Bill Nottingham <notting@redhat.com> 1.3.13.3-2
+- fix 'chkconfig --level 345 <service> on' for LSB services
+
 * Tue Nov  8 2005 Bill Nottingham <notting@redhat.com> 1.3.13.3-1
 - for LSB scripts, use any chkconfig: priorities as a basis,
   instead of 50/50 (#172599)
