@@ -434,9 +434,12 @@ int setService(char * name, int where, int state) {
     }
 
     if (s.type == TYPE_INIT_D) {
+	    int rc = 0;
+	    
 	    if (s.isLSB)
 		    frobDependencies(&s);
 	    for (i = 0; i < 7; i++) {
+		    
 		    if (!((1 << i) & where)) continue;
 
 		    if (state == 1 || state == 0)
@@ -445,10 +448,13 @@ int setService(char * name, int where, int state) {
 		      what = 1;
 		    else
 		      what = 0;
-		    doSetService(s, i, what);
+		    rc |= doSetService(s, i, what);
 	    }
+	    return rc;
     } else if (s.type == TYPE_XINETD) {
-	    setXinetdService(s, state);
+	    if (setXinetdService(s, state)) {
+		    return 1;
+	    }
 	    system("/etc/init.d/xinetd reload >/dev/null 2>&1");
     }
 
