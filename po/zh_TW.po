@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-10-07 15:23-0400\n"
+"POT-Creation-Date: 2005-11-11 18:03-0500\n"
 "PO-Revision-Date: 2005-02-03 14:39+1000\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese Traditional <zh_TW@li.org>\n"
@@ -69,45 +69,45 @@ msgstr "%s 服務不支援 chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "在 %s 服務上讀取訊息錯誤: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:267
+#: ../chkconfig.c:165 ../chkconfig.c:317
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "無法開啟 %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "on"
 msgstr "開啟"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "off"
 msgstr "關閉"
 
-#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "讀取 %s 服務的資訊錯誤: %s\n"
 
-#: ../chkconfig.c:322
+#: ../chkconfig.c:372
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "以 xinetd 為主的服務:\n"
 
-#: ../chkconfig.c:324
+#: ../chkconfig.c:374
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "無法開啟 %s 目錄: %s\n"
 
-#: ../chkconfig.c:455
+#: ../chkconfig.c:505
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 版本 %s\n"
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:512
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "只能指定 --list, --add, 或 --del 中的其中一個\n"
 
-#: ../chkconfig.c:517
+#: ../chkconfig.c:567
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "只能對 chkconfig 查詢指定一種執行等級\n"
@@ -136,37 +136,37 @@ msgstr "那些服務應被自動啟動？"
 msgid "Services"
 msgstr "服務"
 
-#: ../ntsysv.c:240
+#: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "讀取 %s 目錄錯誤: %s\n"
 
-#: ../ntsysv.c:276
+#: ../ntsysv.c:278
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "您必須是 root 才能執行 %s。\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "在 --levels 處有不當參數\n"
 
-#: ../ntsysv.c:300
+#: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "無任何服務可被 ntsysv 管理！\n"
 
-#: ../leveldb.c:528
+#: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "設定全域設定值 %s 失敗: %s\n"
 
-#: ../leveldb.c:559
+#: ../leveldb.c:554
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "無法取得目前的執行等級\n"
 
-#: ../leveldb.c:647
+#: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "建立 %s 符號連結失敗: %s\n"
