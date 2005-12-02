@@ -12,6 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
+"X-POFile-SpellExtra: set help alt chkconfig Hat Red verbose add init\n"
+"X-POFile-SpellExtra: version usage config slave initscript ntsysv test\n"
+"X-POFile-SpellExtra: levels xinetd altdir level admin list install\n"
+"X-POFile-SpellExtra: admindir display dir Inc alternatives Enter\n"
 
 #: ../chkconfig.c:21
 #, c-format
