@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2005-11-19 19:19-0000\n"
+"PO-Revision-Date: 2006-01-09 20:24-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -291,7 +291,7 @@ msgstr "путања до алтернативе очекивана у %s\n"
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "бројчано првентсво очекивано у %s\n"
+msgstr "бројчано првенство очекивано у %s\n"
 
 #: ../alternatives.c:277
 #, c-format
@@ -371,7 +371,7 @@ msgstr "%s веза нетачна за подређени %s (%s %s)\n"
 #: ../alternatives.c:645
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - статус je самосталан.\n"
+msgstr "%s - статус је самосталан.\n"
 
 #: ../alternatives.c:647
 #, c-format
