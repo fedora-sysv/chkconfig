@@ -1,27 +1,28 @@
+# translation of bn_IN.po to Bangla (INDIA)
 # Bangla Translation of chkconfig.po.
 # Copyright (C) 2004 Red Hat Inc.
 # This file is distributed under the same license as the chkconfig package.
-# Runa Bhattacharjee <runab@redhat.com>, 2004, 2005.
+# Runa Bhattacharjee <runab@redhat.com>, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: bn_IN\n"
 "POT-Creation-Date: 2005-02-10 17:54-0500\n"
-"PO-Revision-Date: 2005-04-09 14:27+0530\n"
+"PO-Revision-Date: 2006-01-23 11:45+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
-"Language-Team: Bangla INDIA <redhat-translation@bengalinux.org>\n"
+"Language-Team: Bangla (INDIA) <redhat-translation@bengalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s সংস্করণ %s - স্বত্তাধিকার (C) ১৯৯৭-২০০০ Red Hat, Inc.\n"
+msgstr "%s সংস্করণ %s - স্বত্বাধিকার (C) ১৯৯৭-২০০০ Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
@@ -54,13 +55,13 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s পরিসেবাটি chkconfig সমর্থন করে, কিন্তু কোনো রান-লেভেলে উল্লিখিত হয় না "
+"%s পরিসেবার দ্বারা chkconfig সমর্থিত, কিন্তু কোনো রান-লেভেলে উল্লিখিত হয় না "
 "('chkconfig --add %s' ব্যবহার করুন)\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "%s পরিসেবাটি chkconfig সমর্থন করে না\n"
+msgstr "%s পরিসেবার দ্বারা chkconfig সমর্থন করা হয় না\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -112,7 +113,7 @@ msgstr "chkconfig query-র জন্য যে কোনও একটি রা
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
-msgstr "কোনো পরিসেবা সম্বন্ধে অধিক তথ্য জানার জন্য <F1> টিপুন।"
+msgstr "কোনো পরিসেবা সম্বন্ধে অধিক তথ্য জানতে <F1> টিপুন।"
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
@@ -120,7 +121,7 @@ msgstr "ঠিক আছে"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr "পুর্বাবস্থান"
+msgstr "পুর্বাবস্থা"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
@@ -128,7 +129,7 @@ msgstr "বাতিল"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
-msgstr "স্বয়ংক্রিয়ভাবে যে পরিসেবাগুলি আরম্ভ করা হবে?"
+msgstr "স্বয়ংক্রিয়ভাবে কোন পরিসেবাগুলি আরম্ভ করা হবে?"
 
 #: ../ntsysv.c:86
 msgid "Services"
@@ -147,7 +148,7 @@ msgstr "%s চালানোর জন্য root পরিচয় ব্যব�
 #: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "--levels এ অবৈধ আর্গুমেন্ট লেখা হয়েছে\n"
+msgstr "--levels'র সাথে অবৈধ আর্গুমেন্ট লেখা হয়েছে\n"
 
 #: ../ntsysv.c:300
 #, c-format
@@ -416,7 +417,7 @@ msgstr "  নির্বাচন    কমান্ড\n"
 #: ../alternatives.c:674
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচনের সংখ্যা টাইপ করুন: "
+msgstr "বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
 
 #: ../alternatives.c:677
 #, c-format
