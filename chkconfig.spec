@@ -1,10 +1,10 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.24
+Version: 1.3.25
 Release: 1
 License: GPL
 Group: System Environment/Base
-Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
+Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildPrereq: newt newt-devel gettext
 Conflicts: initscripts <= 5.30-1
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Nov 30 2005 Bill Nottingham <notting@redhat.com> 1.3.25-1
+- return an error if changing services fails (#150235)
+
 * Fri Nov 18 2005 Bill Nottingham <notting@redhat.com> 1.3.24-1
 - when removing alternatives links, check to make sure they're
   actually links (#173685)
