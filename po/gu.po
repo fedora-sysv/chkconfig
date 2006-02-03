@@ -7,14 +7,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
-"POT-Creation-Date: 2005-02-10 17:54-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-30 14:53-0500\n"
 "PO-Revision-Date: 2005-02-03 09:31+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <gu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 "X-Generator: KBabel 1.9\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
@@ -69,45 +69,45 @@ msgstr "સેવા %s chkconfig ને આધાર આપતી નથી\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "સેવા %s પરની જાણકારી વાંચવામાં ભૂલ: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:267
+#: ../chkconfig.c:165 ../chkconfig.c:317
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d ખોલવામાં નિષ્ફળ: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "on"
 msgstr "ચાલુ"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "off"
 msgstr "બંધ"
 
-#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "સેવા %s માટે જાણકારી વાંચવામાં ભૂલ: %s\n"
 
-#: ../chkconfig.c:322
+#: ../chkconfig.c:372
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd આધારિત સેવાઓ:\n"
 
-#: ../chkconfig.c:324
+#: ../chkconfig.c:374
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "ડિરેક્ટરી %s ખોલવામાં નિષ્ફળ: %s\n"
 
-#: ../chkconfig.c:455
+#: ../chkconfig.c:511
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s આવૃત્તિ %s\n"
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:518
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
 msgstr "--list, --add, અથવા --del માંનુ માત્ર એક સ્પષ્ટ થયેલ હશે\n"
 
-#: ../chkconfig.c:517
+#: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig પ્રશ્ન માટે માત્ર એક રનલેવલ સ્પષ્ટ કરેલ હશે\n"
@@ -136,37 +136,37 @@ msgstr "કઈ સેવાઓ આપોઆપ શરુ થઈ જશે?"
 msgid "Services"
 msgstr "સેવાઓ"
 
-#: ../ntsysv.c:240
+#: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "ડિરેક્ટરી %s માંથી વાંચવામાં ભૂલ: %s\n"
 
-#: ../ntsysv.c:276
+#: ../ntsysv.c:278
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s ચલાવવા માટે તમે રુટ હોવા જરુરી જ છે.\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels ને ખરાબ દલીલ\n"
 
-#: ../ntsysv.c:300
+#: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv દ્વારા કોઈ સેવાઓની વ્યવસ્થા થાય છે!\n"
 
-#: ../leveldb.c:522
+#: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ગ્લોબ ભાત %s માં નિષ્ફળ: %s\n"
 
-#: ../leveldb.c:553
+#: ../leveldb.c:554
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "વર્તમાન રનલેવલ નક્કી કરી શકતા નથી\n"
 
-#: ../leveldb.c:641
+#: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "સંજ્ઞાવાળી કડી %s બનાવવામાં નિષ્ફળ: %s\n"
@@ -320,107 +320,107 @@ msgstr "કોઈ વિકલ્પો કડી બિંદુઓમાં �
 msgid "link changed -- setting mode to manual\n"
 msgstr "કડી બદલાઈ ગયેલ છે -- મદદગ્રંથની સ્થિતિ સુયોજિત કરી રહ્યા છીએ\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346
+#: ../alternatives.c:351 ../alternatives.c:358
 #, c-format
 msgid "would remove %s\n"
 msgstr "શું %s ને કાઢી નાંખ્યું હશે\n"
 
-#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
+#: ../alternatives.c:353 ../alternatives.c:360 ../alternatives.c:391
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "કડી %s દૂર કરવામાં નિષ્ફળ: %s\n"
 
-#: ../alternatives.c:364 ../alternatives.c:376
+#: ../alternatives.c:376 ../alternatives.c:388
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "કડી %s -> %s બનાવશે\n"
 
-#: ../alternatives.c:368 ../alternatives.c:385
+#: ../alternatives.c:380 ../alternatives.c:397
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "કડી %s -> %s: %s બનાવવામાં નિષ્ફળ\n"
 
-#: ../alternatives.c:417
+#: ../alternatives.c:429
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s પહેલાથી જ હાજર છે\n"
 
-#: ../alternatives.c:419
+#: ../alternatives.c:431
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s બનાવવામાં નિષ્ફળ: %s\n"
 
-#: ../alternatives.c:450
+#: ../alternatives.c:462
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ને %s સાથે બદલવામાં નિષ્ફળ: %s\n"
 
-#: ../alternatives.c:476 ../alternatives.c:485
+#: ../alternatives.c:488 ../alternatives.c:497
 #, c-format
 msgid "running %s\n"
 msgstr "%s ચાલી રહ્યું છે\n"
 
-#: ../alternatives.c:512
+#: ../alternatives.c:524
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s માટેની પ્રાથમિક કડી %s જ હોવી જોઈએ\n"
 
-#: ../alternatives.c:576
+#: ../alternatives.c:604
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "કડી %s એ સ્લેવ %s માટે ખોટી હોઈ શકે (%s %s)\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:645
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - સ્થિતિ આપોઆપ છે.\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:647
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - સ્થિતિ જાતે છે.\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:649
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " કડી વર્તમાનમાં %s ને નિર્દેશ કરે છે\n"
 
-#: ../alternatives.c:625
+#: ../alternatives.c:652
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - પ્રાધાન્ય %d\n"
 
-#: ../alternatives.c:628
+#: ../alternatives.c:655
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " સ્લેવ %s: %s\n"
 
-#: ../alternatives.c:633
+#: ../alternatives.c:660
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "વર્તમાન `શ્રેષ્ઠ' આવૃત્તિ %s છે.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:690
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d કાર્યક્રમ '%s' પૂરું પાડે છે.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:690
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "ત્યાં %d કાર્યક્રમો છે કે જે '%s' પૂરુ પાડે છે.\n"
 
-#: ../alternatives.c:665
+#: ../alternatives.c:692
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  પસંદગી    આદેશ\n"
 
-#: ../alternatives.c:674
+#: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "વર્તમાન પસંદગી રાખવા માટે એન્ટર દબાવો[+], અથવા પસંદગી સંખ્યા છાપો: "
 
-#: ../alternatives.c:677
+#: ../alternatives.c:704
 #, c-format
 msgid ""
 "\n"
@@ -429,32 +429,32 @@ msgstr ""
 "\n"
 "પસંદ વાંચવામાં ભૂલ\n"
 
-#: ../alternatives.c:704 ../alternatives.c:730
+#: ../alternatives.c:731 ../alternatives.c:757
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s એ %s નો વિકલ્પ તરીકે રુપરેખાંકિત થયેલ નથી\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:773
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(શું %s ને કાઢી નાંખશે\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:775
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s ને દૂર કરવામાં નિષ્ફળ: %s\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:897
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s અયોગ્ય છે\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:903
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s અયોગ્ય છે\n"
 
-#: ../alternatives.c:886
+#: ../alternatives.c:913
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "વૈકલ્પિક આવૃત્તિ %s છે\n"
