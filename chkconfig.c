@@ -25,7 +25,7 @@ static void usage(void) {
     fprintf(stderr, _("usage:   %s --list [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
-    fprintf(stderr, _("         %s [--level <levels>] <name> %s\n"), progname, "<on|off|reset>");
+    fprintf(stderr, _("         %s [--level <levels>] <name> %s\n"), progname, "<on|off|reset|resetpriorities>");
 
     exit(1);
 }
@@ -444,6 +444,8 @@ int setService(char * name, int where, int state) {
 
 		    if (state == 1 || state == 0)
 		      what = state;
+		    else if (state == -2)
+		      what = isOn(name, i);
 		    else if (s.levels & (1 << i))
 		      what = 1;
 		    else
@@ -591,6 +593,8 @@ int main(int argc, char ** argv) {
 	    return setService(name, where, 0);
 	else if (!strcmp(state, "reset"))
 	    return setService(name, where, -1);
+	else if (!strcmp(state, "resetpriorities"))
+	    return setService(name, where, -2);
 	else
 	    usage();
     }
