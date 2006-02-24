@@ -1,8 +1,8 @@
 # [for (x)emacs] -*-  mode: RPM-SPEC; coding: utf-8 -*-
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.13.3
-Release: 2
+Version: 1.3.13.4
+Release: 1
 License: GPL
 Group: System Environment/Base
 Source: ftp://ftp.redhat.com/pub/redhat/code/chkconfig/%{name}-%{version}.tar.gz
@@ -75,6 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Feb 24 2006 Bill Nottingham <notting@redhat.com> 1.3.13.3-3
+- fix accidental enabling of LSB services on --add (#182729)
+
 * Wed Nov 30 2005 Bill Nottingham <notting@redhat.com> 1.3.13.3-2
 - fix 'chkconfig --level 345 <service> on' for LSB services
 

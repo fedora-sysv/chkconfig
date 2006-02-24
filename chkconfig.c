@@ -138,9 +138,10 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 
 	if (target || ((s0 != s->sPriority) || (k0 != s->kPriority))) {
 		for (i = 0; i < 7; i++) {
+			int on = isOn(s->name, i);
 			if (isConfigured(s->name, i) || target) {
 				delServiceOne(s->name,i);
-				doSetService(*s, i, ((1 << i) & s->levels));
+				doSetService(*s, i, on);
 			}
 		}
 		return 1; /* Resolved something */
