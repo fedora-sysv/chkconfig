@@ -9,8 +9,8 @@ ntsysv \- simple interface for configuring runlevels
 are also configurable through \fBchkconfig\fR. By default, it configures
 the current runlevel. If the user would like to configure other runlevels,
 those levels can be specified on the command line by listing the levels
-after \fB--levels\fR, without any spaces. For example, the option
-\fI--levels 016\fR edits runlevels 0, 1, and 6.
+after \fB--level\fR, without any spaces. For example, the option
+\fI--level 016\fR edits runlevels 0, 1, and 6.
 
 A service is considered to be started in the runlevel set if it is started
 in any of the runlevels which are being edited.
