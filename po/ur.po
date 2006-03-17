@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2006-03-09 21:10+0500\n"
+"PO-Revision-Date: 2006-03-17 20:18+0500\n"
 "Last-Translator: Usman Siraj Sheikh <usman.siraj@gmail.com>\n"
 "Language-Team: SCS GIFT UNIVERSITY (http://cs.gift.edu.pk) <urdu.scs.gift@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -379,7 +379,7 @@ msgstr "لنک %sسلیو کیلیّےغلط %s (%s %s)\n"
 #: ../alternatives.c:618
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s -حودبحود سٹیٹس.\n"
+msgstr "%s -خودبحود سٹیٹس.\n"
 
 #: ../alternatives.c:620
 #, c-format
