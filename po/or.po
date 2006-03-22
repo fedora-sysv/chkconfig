@@ -1,155 +1,156 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# translation of or.po to Oriya
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Subhransu Behera <sbehera@redhat.com>, 2006.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2006-03-22 17:05+0530\n"
+"Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
+"Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s ସଂସ୍କରଣ %s - ସତ୍ତ୍ବାଧୀକାର (C) ୧୯୯୭-୨୦୦୦ Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "ଏହା ଜି.ଏନ.ୟୁ. ସାର୍ବଜନୀନ ଲାଇସେନ୍ସ ଅଧୀନ ରେ ମାଗଣା ରେ ପୂନଃବଣ୍ଟିତ ହୋଇ ପାରିବ\n"
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "ବ୍ଯବହାର:   %s --list [ନାମ]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <ନାମ>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <ନାମ>\n" 
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <ସ୍ତର>] <ନାମ> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
+msgstr "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉଛି, କିନ୍ତୁ ଏହା କୌଣସ୍ ରନ୍ଲେବଲ ଦ୍ବାରା ସନ୍ଦର୍ପିତ ହୋଇନାହିଁ"
+"('chkconfig --add %s' ଏହାକୁ ଚଲାନ୍ତୁ)\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉ ନାହିଁ\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "%s କୁ ପଢିବା ସମୟ ରେ ତ୍ରୁଟି: %s\n"
 
 #: ../chkconfig.c:165 ../chkconfig.c:317
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr " %s/init.d କୁ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
 
 #: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "on"
-msgstr ""
+msgstr "ଅନ୍"
 
 #: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "off"
-msgstr ""
+msgstr "ଅଫ୍"
 
 #: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "%s ସେବା ପାଇଁ ସୂଚନା ପଢିବା ସମୟ ରେ ତ୍ରୁଟି: %s\n"
 
 #: ../chkconfig.c:372
 #, c-format
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd ଆଧାରିତ ତ୍ରୁଟି:\n"
 
 #: ../chkconfig.c:374
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr ""
+msgstr "%s ଡିରେକ୍ଟୋରି କୁ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
 
 #: ../chkconfig.c:511
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s ସଂସ୍କରଣ %s\n"
 
 #: ../chkconfig.c:518
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "--list, --add, or --del ମଦ୍ଧ୍ଯ ରୁ କେବଳ ଗୋଟିଏ ଉଲ୍ଲେକ୍ଷିତ ହୋଇ ପାରିବ\n"
 
 #: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "chkconfig ପ୍ରଶ୍ନ ପାଇଁ କେବଳ ଗୋଟିଏ ରନ୍ଲେବଲ ଉଲ୍ଲେକ୍ଷିତ ହୋଇ ପାରିବ\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "ସେବା ବିଷୟ ରେ ଅଧିକ ସୂଚନା ପାଇବା ପାଇଁ <F1> କୁ ଦବାଅ"
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
-msgstr ""
+msgstr "ଠିକ ଅଛି"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr ""
+msgstr "ପୂର୍ବବର୍ତ୍ତି"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
-msgstr ""
+msgstr "ବାତିଲ"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "କେଉଁ ସେବା ଗୁଡିକ ଆପଣାଛାଏଁ ପ୍ରାରମ୍ଭିତ ହେବା ଉଚିତ?"
 
 #: ../ntsysv.c:86
 msgid "Services"
-msgstr ""
+msgstr "ସେବା"
 
 #: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "%s ଡିରେକ୍ଟୋରି ରୁ ପଢିବା ସମୟ ରେ ତ୍ରୁଟି: %s\n"
 
 #: ../ntsysv.c:278
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "%s କୁ ଚଳାଇବା ପାଇଁ ଆପଣ ଗୋଟିଏ ମୂଖ୍ଯ ଚାଳକ ହେବା ଉଚିତ\n"
 
 #: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "--level ପାଇଁ ତ୍ରୁଚିପୂର୍ଣ୍ଣ ସନ୍ଦେଶ\n"
 
 #: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsys ଦ୍ବାରା କୌଣସି ସେବା ପରିଚାଳିତ ହୋଇ ନ ପାରେ!\n"
 
 #: ../leveldb.c:523
 #, c-format
@@ -449,3 +450,4 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
+
