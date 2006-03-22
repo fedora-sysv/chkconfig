@@ -52,7 +52,7 @@ msgstr "         %s [--level <ସ୍ତର>] <ନାମ> %s\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉଛି, କିନ୍ତୁ ଏହା କୌଣସ୍ ରନ୍ଲେବଲ ଦ୍ବାରା ସନ୍ଦର୍ପିତ ହୋଇନାହିଁ"
+msgstr "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉଛି, କିନ୍ତୁ ଏହା କୌଣସ୍ ରନଲେବଲ ଦ୍ବାରା ସନ୍ଦର୍ପିତ ହୋଇନାହିଁ"
 "('chkconfig --add %s' ଏହାକୁ ଚଲାନ୍ତୁ)\n"
 
 #: ../chkconfig.c:37
@@ -106,7 +106,7 @@ msgstr "--list, --add, or --del ମଦ୍ଧ୍ଯ ରୁ କେବଳ ଗୋଟ
 #: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig ପ୍ରଶ୍ନ ପାଇଁ କେବଳ ଗୋଟିଏ ରନ୍ଲେବଲ ଉଲ୍ଲେକ୍ଷିତ ହୋଇ ପାରିବ\n"
+msgstr "chkconfig ପ୍ରଶ୍ନ ପାଇଁ କେବଳ ଗୋଟିଏ ରନଲେବଲ ଉଲ୍ଲେକ୍ଷିତ ହୋଇ ପାରିବ\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -155,17 +155,17 @@ msgstr "ntsys ଦ୍ବାରା କୌଣସି ସେବା ପରିଚାଳ
 #: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "%s ନମୁନା କୁ ଆବରୋଧ କରିବାରେ ଅସଫଳ: %s\n"
 
 #: ../leveldb.c:554
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "ସାମ୍ପ୍ରତିକ ରନଲେବଲ କୁ ସ୍ଥିର କରି ପାରୁନାହିଁ\n"
 
 #: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "%s ସିମଲିଙ୍କ ସ୍ରୁଷ୍ଟି କରିବାରେ ଅସଫଳ: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
