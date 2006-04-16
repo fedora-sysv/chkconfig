@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: chkconfig 0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2006-04-01 21:53+0100\n"
+"PO-Revision-Date: 2006-04-12 18:29+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
-"Language-Team: Renato Pavicic <renato@translator-shop.org, lokalizacija@linux.hr>\n"
+"Language-Team: Renato Pavicic <renato@translator-shop.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -277,7 +277,7 @@ msgstr "putanja %s nije očekivana u %s\n"
 #: ../alternatives.c:217
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "za klijenta %s nedostaje putanja u %s\n"
+msgstr "za podčinjenog %s nedostaje putanja u %s\n"
 
 #: ../alternatives.c:227
 #, c-format
@@ -464,7 +464,3 @@ msgstr "neispravni admindir %s\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternativna verzija %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "greška kod čitanja iz mape %s/init.d: %s\n"
-
