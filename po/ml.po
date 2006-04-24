@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-03-20 09:35+0530\n"
+"PO-Revision-Date: 2006-04-24 16:56+0530\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
 "Language-Team: Malayalam\n"
 "MIME-Version: 1.0\n"
@@ -35,17 +35,17 @@ msgstr ""
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -71,11 +71,11 @@ msgstr ""
 
 #: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "on"
-msgstr ""
+msgstr "ഓണ്‍ ചെയ്യുക"
 
 #: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "off"
-msgstr ""
+msgstr "ഓഫ് ചെയ്യുക"
 
 #: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
 #, c-format
@@ -95,7 +95,7 @@ msgstr ""
 #: ../chkconfig.c:511
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s വേറ്‍ഷന്‍ %s\n"
 
 #: ../chkconfig.c:518
 #, c-format
@@ -125,7 +125,7 @@ msgstr "റദ്ദാക്കുക"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "ഏതെല്ലാം സറ്‍വീസുകള്‍ ഓട്ടോമാറ്റിക്കായി ആരംഭിക്കണം?"
 
 #: ../ntsysv.c:86
 msgid "Services"
@@ -169,7 +169,7 @@ msgstr ""
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -183,7 +183,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "usage: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -198,27 +198,27 @@ msgstr "                    [--slave <link> <name> <path>]*\n"
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr ""
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr ""
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr ""
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -228,17 +228,17 @@ msgstr "\n"
 #: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "common options: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "reading %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -383,17 +383,17 @@ msgstr ""
 #: ../alternatives.c:652
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - priority %d\n"
 
 #: ../alternatives.c:655
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:660
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Current `best' version is %s.\n"
 
 #: ../alternatives.c:690
 #, c-format
@@ -408,7 +408,7 @@ msgstr ""
 #: ../alternatives.c:692
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Selection    Command\n"
 
 #: ../alternatives.c:701
 #, c-format
@@ -450,5 +450,5 @@ msgstr ""
 #: ../alternatives.c:913
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "alternatives version %s\n"
 
