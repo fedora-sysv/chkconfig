@@ -56,7 +56,7 @@ msgid ""
 "'chkconfig --add %s')\n"
 msgstr ""
 "usługa %s obsługuje chkconfig, ale nie jest przypisana do żadnego poziomu "
-"uruchamiania (uruchom \"chkconfig -add %s\")\n"
+"uruchamiania (uruchom \"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:37
 #, c-format
