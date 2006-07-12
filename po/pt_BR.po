@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-07-11 00:21-0300\n"
+"PO-Revision-Date: 2006-07-11 23:29-0300\n"
 "Last-Translator: Igor Pires Soares <igorsoares@gmail.com>\n"
 "Language-Team: Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -273,12 +273,12 @@ msgstr "ligação primária inválida em %s\n"
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "localização %s inesperada em %s\n"
+msgstr "caminho %s inesperado em %s\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "falta a localização para o escravo %s em %s\n"
+msgstr "falta o caminho para o escravo %s em %s\n"
 
 #: ../alternatives.c:226
 #, c-format
@@ -288,7 +288,7 @@ msgstr "fim inesperado do arquivo em %s\n"
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "localização alternativa esperada em %s\n"
+msgstr "caminho alternativo esperado em %s\n"
 
 #: ../alternatives.c:255
 #, c-format
@@ -298,7 +298,7 @@ msgstr "prioridade numérica esperada em %s\n"
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "localização escrava esperada em %s\n"
+msgstr "caminho escravo esperado em %s\n"
 
 #: ../alternatives.c:296
 #, c-format
@@ -308,7 +308,7 @@ msgstr "linha inesperada em %s: %s\n"
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "falha ao acessar a ligação %s: %s\n"
+msgstr "falha ao ler a ligação %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
@@ -318,7 +318,7 @@ msgstr "pontos de ligação sem alternativas - configurando para modo manual\n"
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "ligação mudou - configurando para modo manual\n"
+msgstr "a ligação mudou - configurando para modo manual\n"
 
 #: ../alternatives.c:351 ../alternatives.c:358
 #, c-format
@@ -383,7 +383,7 @@ msgstr "%s - status é manual.\n"
 #: ../alternatives.c:649
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "a ligação aponta atualmente para %s\n"
+msgstr " a ligação aponta atualmente para %s\n"
 
 #: ../alternatives.c:652
 #, c-format
@@ -403,7 +403,7 @@ msgstr "A 'melhor' versão atual é %s.\n"
 #: ../alternatives.c:690
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Existem %d programas que oferecem '%s'.\n"
+msgstr "Há %d programa que oferece '%s'.\n"
 
 #: ../alternatives.c:690
 #, c-format
@@ -418,7 +418,7 @@ msgstr "  Seleção    Comando\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Indique para manter a seleção atual[+], ou digite o número da seleção:"
+msgstr "Indique para manter a seleção atual[+], ou digite o número da seleção: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -432,7 +432,7 @@ msgstr ""
 #: ../alternatives.c:731 ../alternatives.c:757
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s não foi configurado como um alternativa para %s\n"
+msgstr "%s não foi configurado como uma alternativa para %s\n"
 
 #: ../alternatives.c:773
 #, c-format
