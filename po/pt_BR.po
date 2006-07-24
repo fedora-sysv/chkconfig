@@ -16,7 +16,7 @@ msgstr ""
 "Language-Team: Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -110,7 +110,9 @@ msgstr "apenas uma destas pode ser especificada --list, --add, ou --del\n"
 #: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "somente um nível de execução pode ser indicado para uma consulta do chkconfig\n"
+msgstr ""
+"somente um nível de execução pode ser indicado para uma consulta do "
+"chkconfig\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -418,7 +420,8 @@ msgstr "  Seleção    Comando\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Indique para manter a seleção atual[+], ou digite o número da seleção: "
+msgstr ""
+"Indique para manter a seleção atual[+], ou digite o número da seleção: "
 
 #: ../alternatives.c:704
 #, c-format
