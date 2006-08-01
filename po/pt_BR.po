@@ -11,12 +11,12 @@ msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-07-11 23:29-0300\n"
+"PO-Revision-Date: 2006-07-31 21:50-0300\n"
 "Last-Translator: Igor Pires Soares <igorsoares@gmail.com>\n"
 "Language-Team: Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -176,7 +176,7 @@ msgstr "não foi possível criar a ligação simbólica %s: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "versão alternativa %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives versão %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -190,7 +190,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso: alternativas --install <ligação> <nome> <caminho> <prioridade>\n"
+msgstr "uso: alternatives --install <ligação> <nome> <caminho> <prioridade>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -205,27 +205,27 @@ msgstr "                    [--slave <ligação> <nome> <caminho>]*\n"
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternativas --remove <nome> <caminho>\n"
+msgstr "       alternatives --remove <nome> <caminho>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternativas --auto <nome>\n"
+msgstr "       alternatives --auto <nome>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternativas --config <nome>\n"
+msgstr "       alternatives --config <nome>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternativas --display <nome>\n"
+msgstr "       alternatives --display <nome>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternativas --set <nome> <caminho>\n"
+msgstr "       alternatives --set <nome> <caminho>\n"
 
 #: ../alternatives.c:58
 #, c-format
@@ -420,8 +420,7 @@ msgstr "  Seleção    Comando\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"Indique para manter a seleção atual[+], ou digite o número da seleção: "
+msgstr "Indique para manter a seleção atual[+], ou digite o número da seleção: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -460,7 +459,7 @@ msgstr "admindir %s inválido\n"
 #: ../alternatives.c:913
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "versão alternativa %s\n"
+msgstr "alternative versão %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "erro ao ler do diretório %s/init.d: %s\n"
