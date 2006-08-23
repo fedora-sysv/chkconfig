@@ -1,20 +1,23 @@
+# translation of sl.po to Slovenian
 # SLOVENIAN TRANSLATION OF CHKCONFIG.
-# Copyright (C) 2001 Free Software Foundation, Inc.
-# Roman Maurer <roman@lugos.si>, 2001.
-# $Id: sl.po,v 1.23 2005/02/02 21:19:51 notting Exp $
+# Copyright (C) 2001, 2006 Free Software Foundation, Inc.
+# $Id: sl.po,v 1.24 2006/08/23 20:48:43 rokaaa Exp $
 # $Source: /home/notting/prog/cvs-fu/chkconfig/po/Attic/sl.po,v $
 #
+# Roman Maurer <roman@lugos.si>, 2001.
+# Rok Papez <rok.papez@lugos.si>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 9.1\n"
+"Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-09-12 19:37+0200\n"
-"Last-Translator: Roman Maurer <roman@lugos.si>\n"
-"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2006-08-23 22:49+0200\n"
+"Last-Translator: Rok Papez <rok.papez@lugos.si>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -23,8 +26,7 @@ msgstr "%s različice %s - Pravna zaščita (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "To lahko prosto razširjate pod pogoji GNU Public License.\n"
 
 #: ../chkconfig.c:25
@@ -43,9 +45,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <ime>\n"
 
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <ravni>] <ime> %s)\n"
+msgstr "         %s [--level <ravni>] <ime> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -303,9 +305,9 @@ msgid "unexpected line in %s: %s\n"
 msgstr "nepričakovana vrstica v %s: %s\n"
 
 #: ../alternatives.c:305
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "ne morem brati %s: %s\n"
+msgstr "ne morem prebrati povezave %s: %s\n"
 
 #: ../alternatives.c:319
 #, c-format
@@ -398,9 +400,9 @@ msgid "Current `best' version is %s.\n"
 msgstr "Trenutna `najboljša' različica je %s.\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Obstaja %d programov, ki ponujajo '%s'.\n"
+msgstr "Obstaja %d program, ki ponujajo '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -456,5 +458,3 @@ msgstr "admindir %s neveljaven\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives različice %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "napaka pri branju iz imenika %s/init.d: %s\n"
