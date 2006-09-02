@@ -19,7 +19,7 @@ msgstr ""
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s έκδοση %s - Πνευματικά Δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s έκδοση %s - Πνευματικά δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
