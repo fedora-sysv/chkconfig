@@ -1,3 +1,4 @@
+# translation of bn_IN.po to Bengali India
 # translation of bn_IN.po to Bangla (INDIA)
 # Bangla Translation of chkconfig.po.
 # Copyright (C) 2004 Red Hat Inc.
@@ -9,14 +10,14 @@ msgstr ""
 "Project-Id-Version: bn_IN\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-01-23 11:45+0530\n"
+"PO-Revision-Date: 2006-09-05 18:17+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
-"Language-Team: Bangla (INDIA) <redhat-translation@bengalinux.org>\n"
+"Language-Team: Bengali India\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
 "\n"
 
 #: ../chkconfig.c:21
@@ -26,8 +27,7 @@ msgstr "%s সংস্করণ %s - স্বত্বাধিকার (C) �
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "এটি GNU Public License-র শর্ত অনুযায়ী বিতরণের জন্য অনুমোদিত।\n"
 
 #: ../chkconfig.c:25
@@ -105,13 +105,12 @@ msgstr "%s সংস্করণ %s\n"
 #: ../chkconfig.c:518
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
-"--list, --add, অথবা --del, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ করা যাবে\n"
+msgstr "--list, --add, অথবা --del, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ করা যাবে\n"
 
 #: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig query-র জন্য যে কোনও একটি রান লেভেল নির্দিষ্ট করা যাবে\n"
+msgstr "chkconfig query-র জন্য যে কোনো একটি রান লেভেল নির্দিষ্ট করা যাবে\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -123,7 +122,7 @@ msgstr "ঠিক আছে"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr "পুর্বাবস্থা"
+msgstr "পূর্বাবস্থা"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
@@ -175,7 +174,7 @@ msgstr "symlink %s নির্মাণ করতে ব্যর্থ: %s\n"
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "বৈকল্পিক সংস্করণ %s - কপিরাইট (C) ২০০১ Red Hat, Inc.\n"
+msgstr "বিকল্প সংস্করণ %s - কপিরাইট (C) ২০০১ Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -234,7 +233,7 @@ msgstr "\n"
 #: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "সাধারণ অপশন: --verbose --test --help --usage --version\n"
+msgstr "সাধারণ বিকল্প: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
 #, c-format
@@ -264,12 +263,12 @@ msgstr "%s ফাঁকা!\n"
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s 'র প্রথম লাইনে ভুল মোড\n"
+msgstr "%s 'র প্রথম লাইনে অশুদ্ধ মোড\n"
 
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%s'এ ভুল প্রাইমারি লিঙ্ক\n"
+msgstr "%s'এ অশুদ্ধ প্রাইমারি লিঙ্ক\n"
 
 #: ../alternatives.c:207
 #, c-format
@@ -289,12 +288,12 @@ msgstr "%s ফাইলের অপ্রত্যাশিত সমাপ্�
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%s'এ বৈকল্পিক পাথ প্রত্যাশিত\n"
+msgstr "%s'এ বিকল্প পাথ প্রত্যাশিত\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%s'এ অগ্রগণ্যতা মানের সংখ্যা প্রত্যাশিত\n"
+msgstr "%s'এ গুরুত্ব চিহ্নকারী মানের সংখ্যা প্রত্যাশিত\n"
 
 #: ../alternatives.c:277
 #, c-format
@@ -314,8 +313,7 @@ msgstr "%s লিঙ্ক পড়া সম্ভব হয়নি: %s\n"
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"লিঙ্কটি কোনও বিকল্প চিহ্নিত করে না -- ম্যানুয়েল মোড হিসাবে নির্ধারণ করা হচ্ছে\n"
+msgstr "লিঙ্কটি কোনও বিকল্প চিহ্নিত করে না -- ম্যানুয়েল মোডে নির্ধারণ করা হচ্ছে\n"
 
 #: ../alternatives.c:323
 #, c-format
@@ -335,7 +333,7 @@ msgstr "%s লিঙ্কটি সরাতে ব্যর্থ: %s\n"
 #: ../alternatives.c:376 ../alternatives.c:388
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "%s -> %s লিঙ্ক করবে\n"
+msgstr "%s -> %s লিঙ্ক করা হবে\n"
 
 #: ../alternatives.c:380 ../alternatives.c:397
 #, c-format
@@ -420,8 +418,7 @@ msgstr "  নির্বাচন    কমান্ড\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
+msgstr "বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -461,3 +458,4 @@ msgstr "admindir %s অবৈধ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "বিকল্প সংস্করণ %s\n"
+
