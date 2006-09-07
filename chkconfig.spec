@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.29
+Version: 1.3.30
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%doc COPYING
 %dir /etc/alternatives
 /sbin/chkconfig
 /usr/sbin/update-alternatives
@@ -75,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Sep  7 2006 Bill Nottingham <notting@redhat.com> 1.3.30-1
+- license cleanup
+
 * Fri Feb 24 2006 Bill Nottingham <notting@redhat.com> 1.3.29-1
 - fix accidental enabling of services on --add (#182729)
 
