@@ -17,7 +17,7 @@ msgstr ""
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -421,7 +421,8 @@ msgstr "  Seleção    Comando\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Indique para manter a seleção atual[+], ou digite o número da seleção: "
+msgstr ""
+"Indique para manter a seleção atual[+], ou digite o número da seleção: "
 
 #: ../alternatives.c:704
 #, c-format
