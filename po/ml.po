@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-04-24 16:56+0530\n"
+"PO-Revision-Date: 2006-09-21 13:27+0530\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
 "Language-Team: Malayalam\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "GNU Public License കരാറിന്‍ പ്രകാരം ഇവ
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "usage:   %s --list [name]\n"
 
 #: ../chkconfig.c:26
 #, c-format
@@ -53,21 +53,23 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"സറ്‍വീസ് %s chkconfig പിന്തുണയ്ക്കുന്നു, പക്ഷേ റണ്‍ലവലുകളില്‍ സൂചിപ്പിക്കുന്നില്ല "
+"('chkconfig --add %s' പ്രവര്‍ത്തിപ്പിക്കുക)\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "%s എന്ന സര്‍വീസ് chkconfig പിന്തുണയ്ക്കുന്നില്ല\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "%s സര്‍വീസില്‍ വിവരങ്ങള്‍ വായിക്കുന്നതില്‍ പിഴവ്: %s\n"
 
 #: ../chkconfig.c:165 ../chkconfig.c:317
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d തുറക്കുന്നതില്‍ പരാജയപ്പെട്ടു: %s\n"
 
 #: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
 msgid "on"
@@ -80,17 +82,17 @@ msgstr "ഓഫ് ചെയ്യുക"
 #: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "സറ്‍വീസ് %s വായിക്കുന്നതില്‍ പിഴവ്: %s\n"
 
 #: ../chkconfig.c:372
 #, c-format
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd-യുടെ അടിസ്ഥാനത്തിലുളള സര്‍വീസുകള്‍:\n"
 
 #: ../chkconfig.c:374
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr ""
+msgstr "%s ഡയറക്ടറി തുറക്കുന്നതില്‍ പരാജയം: %s\n"
 
 #: ../chkconfig.c:511
 #, c-format
@@ -100,12 +102,12 @@ msgstr "%s വേറ്‍ഷന്‍ %s\n"
 #: ../chkconfig.c:518
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "--list, --add, --del എന്നവയില്‍ ഒരെണ്ണം വ്യക്തമാക്കുക\n"
 
 #: ../chkconfig.c:573
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "ഒരു chkconfig ചോദ്യത്തിന് ഒരു റണ്‍ലവല്‍ മാത്രം വ്യക്തമാക്കുക\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
@@ -134,7 +136,7 @@ msgstr "സറ്‍വീസുകള്‍"
 #: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "%s ഡയറക്ടറിയില്‍ നിന്നും വായിക്കുന്നതില്‍ പിശക്: %s\n"
 
 #: ../ntsysv.c:278
 #, c-format
@@ -144,17 +146,17 @@ msgstr "%s പ്രവറ്‍ത്തിപ്പിക്കുവാന്
 #: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "--levels-ലേക്ക് തെറ്റായ ആര്‍ഗ്യുമെന്‍റ്\n"
 
 #: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsysv ഒരു സര്‍വീസുകളും കൈകാര്യം ചെയ്യുന്നതല്ല!\n"
 
 #: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "%s മാതൃക ഗ്ളോബ് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു: %s\n"
 
 #: ../leveldb.c:554
 #, c-format
@@ -164,7 +166,7 @@ msgstr "നിലവിലുള്ള റണ്‍ ലവല്‍ കണ്ട
 #: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "സിംലിങ്ക് %s ഉണ്ടാക്കുന്നതില്‍ പരാജയം: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
@@ -258,82 +260,86 @@ msgstr "%s ശൂന്യമാണ്!\n"
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "%s-ലുളള വരി 1-ല്‍ തെറ്റായ മോഡ്\n"
 
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "%s-ല്‍ തെറ്റായ പ്രൈമറി ലിങ്ക്\n"
 
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "%s എന്ന പാഥ് %s-ല്‍ അപ്രതീക്ഷിതമാണ്\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "%s-ലുളള %s സ്ളേവിലേക്കുളള വഴി ലഭ്യമല്ല\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "%s-ല്‍ അപ്രതീക്ഷിതമായ എന്‍ഡ് ഓഫ് ലൈന്‍\n"
 
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "പകരത്തിലേക്കുളള പാഥ് %s-ല്‍ പ്രതീക്ഷിക്കുന്നു\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%s-ല്‍ അക്കങ്ങള്‍ക്ക് മുന്‍ഗണന പ്രതീക്ഷിക്കുന്നു\n"
 
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "%s-ല്‍ സ്ലേവ് പാഥ് പ്രതീക്ഷിക്കുന്നു\n"
 
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "%s-ല്‍ അപ്രതീക്ഷിതമായ വരി: %s\n"
 
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr ""
+msgstr "ലിങ്ക് %s വായിക്കുന്നതില്‍ പരാജയം: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
+"പകരം ഇല്ലാത്തതിലേക്ക് പോയിന്‍റുകള്‍ ലിങ്ക് ചെയ്യുന്നു -- മാനുവല്‍ ആയി "
+"മോഡ് ക്രമികരിക്കുന്നു\n"
 
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
+"ലിങ്ക് മാറ്റിയിരിക്കുന്നു -- മോഡ് മാനുവല്‍ ആയി\n"
+"ക്രമീകരിക്കുക\n"
 
 #: ../alternatives.c:351 ../alternatives.c:358
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "%s നീക്കം ചെയ്യുന്നു\n"
 
 #: ../alternatives.c:353 ../alternatives.c:360 ../alternatives.c:391
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "ലിങ്ക് %s നീക്കം ചെയ്യുവാന്‍ സാധ്യമല്ല: %s\n"
 
 #: ../alternatives.c:376 ../alternatives.c:388
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "%s -> %s ആയി ലിങ്ക് ചെയ്യുന്നു\n"
 
 #: ../alternatives.c:380 ../alternatives.c:397
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "%s -> %s എന്ന് ലിങ്ക് ചെയ്യുന്നതില്‍ പരാജയം: %s\n"
 
 #: ../alternatives.c:429
 #, c-format
@@ -343,42 +349,42 @@ msgstr "%s നിലവിലുണ്ട്\n"
 #: ../alternatives.c:431
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr ""
+msgstr "%s ഉണ്ടാക്കുന്നതില്‍ പരാജയം: %s\n"
 
 #: ../alternatives.c:462
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "%s-നെ %s ആയി മാറ്റുന്നുതില്‍ പരാജയം: %s\n"
 
 #: ../alternatives.c:488 ../alternatives.c:497
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s പ്രവര്‍ത്തിക്കുന്നു\n"
 
 #: ../alternatives.c:524
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%s-നുളള പ്രൈമറി ലിങ്ക് %s ആണ്\n"
 
 #: ../alternatives.c:604
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "ലിങ്ക് %s എന്നത് സ്ലേവ് %s (%s %s)-ന് തെറ്റാണ്\n"
 
 #: ../alternatives.c:645
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - അവസ്ഥ ഓട്ടോ ആണ്.\n"
 
 #: ../alternatives.c:647
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - അവസ്ഥ മാനുവല്‍ ആണ്.\n"
 
 #: ../alternatives.c:649
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " ലിങ്ക് %s-ലേക്കുളളതാണ്\n"
 
 #: ../alternatives.c:652
 #, c-format
@@ -398,22 +404,24 @@ msgstr "Current `best' version is %s.\n"
 #: ../alternatives.c:690
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "%d പ്രോഗ്രാമില്‍ '%s' ലഭ്യമാക്കുന്നു.\n"
 
 #: ../alternatives.c:690
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "%d പ്രോഗ്രാമുകള്‍ '%s' ലഭ്യമാക്കുന്നു.\n"
 
 #: ../alternatives.c:692
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  Selection    Command\n"
+msgstr "  തിരഞ്ഞെടുക്കലിനുളള   നിര്‍ദ്ദേശം\n"
 
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
+"നിലവില്‍ തിരഞ്ഞെടുത്തത്[+] സംരക്ഷിക്കുന്നതിനായി എന്‍റര്‍ ചെയ്യുക, അല്ലെങ്കില്‍\n"
+"തിരഞ്ഞെടുത്ത അക്കം ടൈപ്പ് ചെയ്യുക:"
 
 #: ../alternatives.c:704
 #, c-format
@@ -421,34 +429,37 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"തിരഞ്ഞെടുത്തത് വായിക്കുന്നതില്‍ "
+"പിശക്\n"
 
 #: ../alternatives.c:731 ../alternatives.c:757
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s-ന് പകരമായി %s സജ്ജമാക്കിയിട്ടില്ല \n"
 
 #: ../alternatives.c:773
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(%s നീക്കുന്നതാണ്\n"
 
 #: ../alternatives.c:775
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "%s നീക്കുവാന്‍ സാധ്യമായില്ല: %s\n"
 
 #: ../alternatives.c:897
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s അസാധുവാണ്\n"
 
 #: ../alternatives.c:903
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s അസാധുവാണ്\n"
 
 #: ../alternatives.c:913
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "alternatives version %s\n"
+msgstr "പകരമായ വേര്‍ഷന്‍ %s\n"
 
