@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: chkconfig 0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2006-04-12 18:29+0100\n"
+"PO-Revision-Date: 2006-09-24 05:41+0100\n"
 "Last-Translator: Renato Pavicic <renato@translator-shop.org>\n"
 "Language-Team: Renato Pavicic <renato@translator-shop.org>\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "U redu"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr "Nazad"
+msgstr "Povratak"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
@@ -464,3 +464,4 @@ msgstr "neispravni admindir %s\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternativna verzija %s\n"
+
