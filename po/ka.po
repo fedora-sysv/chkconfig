@@ -1,19 +1,23 @@
+# translation of ka.po to Georgian
 # Georgian translations for PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2004.
 #
+# Automatically generated, 2004.
+# George Machitidze <giomac@gmail.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: package\n"
+"Project-Id-Version: ka\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 2004-06-04 16:57-0400\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2006-09-27 01:23+0400\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian <guiasher@mes.gov.ge>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -22,29 +26,28 @@ msgstr ""
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr ""
+msgstr "გამოყენება:   %s --list [სახელი]\n"
 
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <სახელი>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <სახელი>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <დონეები>] <სახელი> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -94,12 +97,12 @@ msgstr ""
 #: ../chkconfig.c:402
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s ვერსია %s\n"
 
 #: ../chkconfig.c:409
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr ""
+msgstr "შესაძლებელია მხოლოდ ერთი --list, --add, ან --del პარამეტრის მითითება\n"
 
 #: ../chkconfig.c:461
 #, c-format
@@ -112,15 +115,15 @@ msgstr ""
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
-msgstr ""
+msgstr "შეწყვეტა"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
@@ -128,7 +131,7 @@ msgstr ""
 
 #: ../ntsysv.c:86
 msgid "Services"
-msgstr ""
+msgstr "სერვისები"
 
 #: ../ntsysv.c:240
 #, c-format
@@ -185,12 +188,12 @@ msgstr ""
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <სერვისი>]\n"
 
 #: ../alternatives.c:53
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr ""
+msgstr "                    [--slave <ბმა> <სახელი> <გეზი>]*\n"
 
 #: ../alternatives.c:54
 #, c-format
@@ -220,7 +223,7 @@ msgstr ""
 #: ../alternatives.c:59
 #, c-format
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:60
 #, c-format
@@ -230,7 +233,7 @@ msgstr ""
 #: ../alternatives.c:61
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <დირექტორია> --admindir <დირექტორია>\n"
 
 #: ../alternatives.c:158
 #, c-format
@@ -335,7 +338,7 @@ msgstr ""
 #: ../alternatives.c:418
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s უკვე არსებობს\n"
 
 #: ../alternatives.c:420
 #, c-format
@@ -448,3 +451,4 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
+
