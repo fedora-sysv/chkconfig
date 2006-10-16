@@ -321,7 +321,8 @@ static int listService(char * item) {
 	
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb)) {
-	    err = errno;
+	    fprintf(stderr, _("error reading info for service %s: %s\n"), 
+		ent->d_name, strerror(errno));
 	    continue;
 	}
 	if (!S_ISREG(sb.st_mode)) continue;
@@ -330,12 +331,6 @@ static int listService(char * item) {
 	    closedir(dir);
 	    return 1;
 	}
-    }
-
-    if (err) {
-	fprintf(stderr, _("error reading from directory %s/init.d: %s\n"), 
-		RUNLEVELS, strerror(err));
-        return 1;
     }
 
     closedir(dir);

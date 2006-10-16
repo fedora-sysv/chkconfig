@@ -25,22 +25,16 @@ static int servicesWindow(struct service * services, int numServices,
     newtGrid grid, subgrid, buttons;
     char * states;
     int i, done = 0, update = 0, j;
-    int width, height;
     struct newtExitStruct e;
 
     newtPushHelpLine(_("Press <F1> for more information on a service."));
 
-    newtGetScreenSize(&width, &height);
-    width = width > 80 ? width - 60 : 20;
-    height = height > 25 ? height - 17 : 8;
-	
-	
-    sb = newtVerticalScrollbar(-1, -1, height, NEWT_COLORSET_CHECKBOX,
+    sb = newtVerticalScrollbar(-1, -1, 8, NEWT_COLORSET_CHECKBOX,
 				    NEWT_COLORSET_ACTCHECKBOX);
 
     subform = newtForm(sb, NULL, 0);
     newtFormSetBackground(subform, NEWT_COLORSET_CHECKBOX);
-    newtFormSetHeight(subform, height);
+    newtFormSetHeight(subform, 8);
 
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
@@ -63,14 +57,14 @@ static int servicesWindow(struct service * services, int numServices,
 	newtFormAddComponent(subform, checkboxes[i]);
     }
 
-    newtFormSetWidth(subform, width);
+    newtFormSetWidth(subform, 20);
 
     buttons = newtButtonBar(_("Ok"), &ok, backButton ? _("Back") : _("Cancel"),
 			    &cancel, NULL);
 
     blank = newtForm(NULL, NULL, 0);
     newtFormSetWidth(blank, 2);
-    newtFormSetHeight(blank, height);
+    newtFormSetHeight(blank, 8);
     newtFormSetBackground(blank, NEWT_COLORSET_CHECKBOX);
 
     subgrid = newtGridHCloseStacked(NEWT_GRID_COMPONENT, subform,
