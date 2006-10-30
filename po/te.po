@@ -1,14 +1,15 @@
-# translation of te౧.po to 
 # translation of te.po to 
+# translation of te౧.po to
+# translation of te.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: te౧\n"
+"Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-10-30 14:50+0530\n"
+"PO-Revision-Date: 2006-10-30 20:14+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,17 +35,17 @@ msgstr "వాడుక:   %s --జాబితా [పేరు]\n"
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:28
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:35
 #, c-format
