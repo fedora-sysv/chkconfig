@@ -1,4 +1,4 @@
-# Serbian translations for chkconfig
+# Serbian(Latin) translations for chkconfig
 # Copyright (C) 2005 Red Hat, Inc.
 # This file is distributed under the same license as the chkconfig package.
 # Zoltan Čala <zolika@sezampro.yu>, 1999.
