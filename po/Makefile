@@ -7,6 +7,7 @@ MSGMERGE = msgmerge
 
 NLSPACKAGE = chkconfig
 
+POFILES = $(shell ls *.po)
 CATALOGS = $(shell ls *.po | sed 's/\.po/\.mo/')
 
 POTFILES  = ../chkconfig.c ../ntsysv.c ../leveldb.c ../alternatives.c
@@ -72,10 +73,8 @@ install:
 %.mo: %.po
 	msgfmt -o $@ $<
 
-I18N_LANGS = ja ko zh_CN zh_TW pt_BR es de fr it hi gu bn pa ta
-
 report: 
-	@for lang in $(I18N_LANGS); do \
+	@for lang in $(POFILES); do \
                 echo -n "$$lang: "; \
                 msgfmt -v --statistics -o /dev/null $$lang; \
         done
