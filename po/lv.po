@@ -1,0 +1,451 @@
+# translation of lv.po to Latvian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Gatis Kalnins <gatis.kalnins@metatrons.lv>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: lv\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-30 14:53-0500\n"
+"PO-Revision-Date: 2006-11-21 06:15+0200\n"
+"Last-Translator: Gatis Kalnins <gatis.kalnins@metatrons.lv>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.1\n"
+
+#: ../chkconfig.c:21
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s versija %s - Kopēšanas tiesības (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:22
+#, c-format
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Var izplatīt, pamatojoties uz GNU Publiskās Licences nosacījumiem.\n"
+
+#: ../chkconfig.c:25
+#, c-format
+msgid "usage:   %s --list [name]\n"
+msgstr "pielietojums:   %s --list [name]\n"
+
+#: ../chkconfig.c:26
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <name>\n"
+
+#: ../chkconfig.c:27
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <name>\n"
+
+#: ../chkconfig.c:28
+#, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <levels>] <name> %s\n"
+
+#: ../chkconfig.c:35
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr "serviss %s atbalsta chkconfig, bet tas nedarbojas nevienā darblīmenī (startējiet 'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "serviss %s neatbalsta chkconfig\n"
+
+#: ../chkconfig.c:39
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "kļūda nolasot informāciju par servisu %s: %s\n"
+
+#: ../chkconfig.c:165 ../chkconfig.c:317
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "nav iespējams atvērt %s/init.d: %s\n"
+
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
+msgid "on"
+msgstr "iesl"
+
+#: ../chkconfig.c:261 ../chkconfig.c:266 ../chkconfig.c:410
+msgid "off"
+msgstr "izsl"
+
+#: ../chkconfig.c:339 ../ntsysv.c:168 ../ntsysv.c:195 ../ntsysv.c:233
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "kļūda nolasot informāciju par servisu %s: %s\n"
+
+#: ../chkconfig.c:372
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "uz xinetd bāzēti servisi:\n"
+
+#: ../chkconfig.c:374
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "nevar atvērt direktoriju %s: %s\n"
+
+#: ../chkconfig.c:511
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s versija %s\n"
+
+#: ../chkconfig.c:518
+#, c-format
+msgid "only one of --list, --add, or --del may be specified\n"
+msgstr "jānorāda tikai viens no šiem: --list, --add, vai --del\n"
+
+#: ../chkconfig.c:573
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "chkconfig pieprasījumā drīkst norādīt tikai vienu darblīmeni\n"
+
+#: ../ntsysv.c:31
+msgid "Press <F1> for more information on a service."
+msgstr ""
+
+#: ../ntsysv.c:68 ../ntsysv.c:105
+msgid "Ok"
+msgstr ""
+
+#: ../ntsysv.c:68
+msgid "Back"
+msgstr ""
+
+#: ../ntsysv.c:68
+msgid "Cancel"
+msgstr ""
+
+#: ../ntsysv.c:80
+msgid "What services should be automatically started?"
+msgstr ""
+
+#: ../ntsysv.c:86
+msgid "Services"
+msgstr ""
+
+#: ../ntsysv.c:242
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr ""
+
+#: ../ntsysv.c:278
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr ""
+
+#: ../ntsysv.c:295
+#, c-format
+msgid "bad argument to --levels\n"
+msgstr ""
+
+#: ../ntsysv.c:302
+#, c-format
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:523
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr ""
+
+#: ../leveldb.c:554
+#, c-format
+msgid "cannot determine current run level\n"
+msgstr ""
+
+#: ../leveldb.c:642
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:48
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr ""
+
+#: ../alternatives.c:49
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr ""
+
+#: ../alternatives.c:50
+#, c-format
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr ""
+
+#: ../alternatives.c:51
+#, c-format
+msgid "                    [--initscript <service>]\n"
+msgstr ""
+
+#: ../alternatives.c:52
+#, c-format
+msgid "                    [--slave <link> <name> <path>]*\n"
+msgstr ""
+
+#: ../alternatives.c:53
+#, c-format
+msgid "       alternatives --remove <name> <path>\n"
+msgstr ""
+
+#: ../alternatives.c:54
+#, c-format
+msgid "       alternatives --auto <name>\n"
+msgstr ""
+
+#: ../alternatives.c:55
+#, c-format
+msgid "       alternatives --config <name>\n"
+msgstr ""
+
+#: ../alternatives.c:56
+#, c-format
+msgid "       alternatives --display <name>\n"
+msgstr ""
+
+#: ../alternatives.c:57
+#, c-format
+msgid "       alternatives --set <name> <path>\n"
+msgstr ""
+
+#: ../alternatives.c:58
+#, c-format
+msgid "\n"
+msgstr ""
+
+#: ../alternatives.c:59
+#, c-format
+msgid "common options: --verbose --test --help --usage --version\n"
+msgstr ""
+
+#: ../alternatives.c:60
+#, c-format
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr ""
+
+#: ../alternatives.c:157
+#, c-format
+msgid "reading %s\n"
+msgstr ""
+
+#: ../alternatives.c:161
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:170
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:179
+#, c-format
+msgid "%s empty!\n"
+msgstr ""
+
+#: ../alternatives.c:188
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr ""
+
+#: ../alternatives.c:195
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr ""
+
+#: ../alternatives.c:207
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:216
+#, c-format
+msgid "missing path for slave %s in %s\n"
+msgstr ""
+
+#: ../alternatives.c:226
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr ""
+
+#: ../alternatives.c:235
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:255
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:277
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:296
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:304
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:318
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr ""
+
+#: ../alternatives.c:323
+#, c-format
+msgid "link changed -- setting mode to manual\n"
+msgstr ""
+
+#: ../alternatives.c:351 ../alternatives.c:358
+#, c-format
+msgid "would remove %s\n"
+msgstr ""
+
+#: ../alternatives.c:353 ../alternatives.c:360 ../alternatives.c:391
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:376 ../alternatives.c:388
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr ""
+
+#: ../alternatives.c:380 ../alternatives.c:397
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:429
+#, c-format
+msgid "%s already exists\n"
+msgstr ""
+
+#: ../alternatives.c:431
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:462
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:488 ../alternatives.c:497
+#, c-format
+msgid "running %s\n"
+msgstr ""
+
+#: ../alternatives.c:524
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr ""
+
+#: ../alternatives.c:604
+#, c-format
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr ""
+
+#: ../alternatives.c:645
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr ""
+
+#: ../alternatives.c:647
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr ""
+
+#: ../alternatives.c:649
+#, c-format
+msgid " link currently points to %s\n"
+msgstr ""
+
+#: ../alternatives.c:652
+#, c-format
+msgid "%s - priority %d\n"
+msgstr ""
+
+#: ../alternatives.c:655
+#, c-format
+msgid " slave %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:660
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr ""
+
+#: ../alternatives.c:690
+#, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr ""
+
+#: ../alternatives.c:690
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr ""
+
+#: ../alternatives.c:692
+#, c-format
+msgid "  Selection    Command\n"
+msgstr ""
+
+#: ../alternatives.c:701
+#, c-format
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr ""
+
+#: ../alternatives.c:704
+#, c-format
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+
+#: ../alternatives.c:731 ../alternatives.c:757
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr ""
+
+#: ../alternatives.c:773
+#, c-format
+msgid "(would remove %s\n"
+msgstr ""
+
+#: ../alternatives.c:775
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:897
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr ""
+
+#: ../alternatives.c:903
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr ""
+
+#: ../alternatives.c:913
+#, c-format
+msgid "alternatives version %s\n"
+msgstr ""
+
