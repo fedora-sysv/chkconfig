@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-11-21 06:15+0200\n"
+"PO-Revision-Date: 2006-11-21 06:47+0200\n"
 "Last-Translator: Gatis Kalnins <gatis.kalnins@metatrons.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
 "MIME-Version: 1.0\n"
@@ -108,67 +108,67 @@ msgstr "chkconfig pieprasījumā drīkst norādīt tikai vienu darblīmeni\n"
 
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "Nospiediet <F1>, lai iegūtu papildinformāciju par šo servisu."
 
 #: ../ntsysv.c:68 ../ntsysv.c:105
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr ""
+msgstr "Atpakaļ"
 
 #: ../ntsysv.c:68
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "Kādiem servisiem jāstartējas automātiski?"
 
 #: ../ntsysv.c:86
 msgid "Services"
-msgstr ""
+msgstr "Servisi"
 
 #: ../ntsysv.c:242
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "kļūda, lasot no direktorijas %s: %s\n"
 
 #: ../ntsysv.c:278
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "Tikai lietotājs root var startēt %s.\n"
 
 #: ../ntsysv.c:295
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "nepareizs arguments --levels\n"
 
 #: ../ntsysv.c:302
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "Nevienu no servisiem nevar vadīt ar ntsysv!\n"
 
 #: ../leveldb.c:523
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "nevar izmantot šablonu %s: %s\n"
 
 #: ../leveldb.c:554
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "nevar noteikt patreizējo darblīmeni\n"
 
 #: ../leveldb.c:642
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "kļūda veidojot simbolsaiti %s: %s\n"
 
 #: ../alternatives.c:48
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "alternatīvā versija %s - Kopēšanas tiesības (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:49
 #, c-format
@@ -176,241 +176,243 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
+"Var izplatīt, pamatojoties uz GNU Publiskās Licences nosacījumiem.\n"
+"\n"
 
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "izmantošana: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:51
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr ""
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:53
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr ""
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:55
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr ""
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:56
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr ""
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:57
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:58
 #, c-format
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:59
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "papildus parametri: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "lasa %s\n"
 
 #: ../alternatives.c:161
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr ""
+msgstr "kļūda atverot %s: %s\n"
 
 #: ../alternatives.c:170
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr ""
+msgstr "kļūda nolasot %s: %s\n"
 
 #: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s tukšs!\n"
 
 #: ../alternatives.c:188
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "nekorekts režīms %s 1.rindā\n"
 
 #: ../alternatives.c:195
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "nekorekta primārā saite %s\n"
 
 #: ../alternatives.c:207
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "ceļš %s nav norādīts iekš %s\n"
 
 #: ../alternatives.c:216
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "nav norādīts ceļš uz apakšnieku %s iekš %s\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "neparedzētas faila beigas iekš %s\n"
 
 #: ../alternatives.c:235
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "alternatīvs ceļš norādīts iekš %s\n"
 
 #: ../alternatives.c:255
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "numerācijas prioritāte norādīta iekš %s\n"
 
 #: ../alternatives.c:277
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "apakšnieka ceļš norādīts iekš %s\n"
 
 #: ../alternatives.c:296
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "neparedzēta rinda iekš %s: %s\n"
 
 #: ../alternatives.c:304
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr ""
+msgstr "kļūda nolasot saiti %s: %s\n"
 
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "saite norāda uz nealternatīvu elementu -- tiek uzstādīts manuālais režīms\n"
 
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "saite izmainīta -- tiek uzstādīts manuālais režīms\n"
 
 #: ../alternatives.c:351 ../alternatives.c:358
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "tiks dzēsts %s\n"
 
 #: ../alternatives.c:353 ../alternatives.c:360 ../alternatives.c:391
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "kļūda dzēšot saiti %s: %s\n"
 
 #: ../alternatives.c:376 ../alternatives.c:388
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "tiks izveidota saite %s -> %s\n"
 
 #: ../alternatives.c:380 ../alternatives.c:397
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "kļūda veidojot saiti %s -> %s: %s\n"
 
 #: ../alternatives.c:429
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s jau eksistē\n"
 
 #: ../alternatives.c:431
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr ""
+msgstr "kļūda izveidojot %s: %s\n"
 
 #: ../alternatives.c:462
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "kļūda aizvietojot %s ar %s: %s\n"
 
 #: ../alternatives.c:488 ../alternatives.c:497
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "startē %s\n"
 
 #: ../alternatives.c:524
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "primārai saitei priekš %s jābūt %s\n"
 
 #: ../alternatives.c:604
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "saite %s nav korekta priekš apakšnieka %s (%s %s)\n"
 
 #: ../alternatives.c:645
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - statuss ir auto.\n"
 
 #: ../alternatives.c:647
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - statuss ir manuāls.\n"
 
 #: ../alternatives.c:649
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " saite norāda uz %s\n"
 
 #: ../alternatives.c:652
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - prioritāte %d\n"
 
 #: ../alternatives.c:655
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " apakšnieks %s: %s\n"
 
 #: ../alternatives.c:660
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Patreizējā 'labākā' versija ir %s.\n"
 
 #: ../alternatives.c:690
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "Ir %d programmu, kad piedāvā '%s'.\n"
 
 #: ../alternatives.c:690
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Ir %d programmu, kas piedāvā '%s'.\n"
 
 #: ../alternatives.c:692
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Izvēlne    Komanda\n"
 
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Nospiediet Enter, lai saglabātu patreizējo izvēli [+], vai norādiet izvēles numuru: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -418,34 +420,36 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"kļūda nolasot izvēli\n"
 
 #: ../alternatives.c:731 ../alternatives.c:757
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s ir konfigurēts kā alternatīva priekš %s\n"
 
 #: ../alternatives.c:773
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(tiks dzēsts %s\n"
 
 #: ../alternatives.c:775
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "kļūda dzēšot %s: %s\n"
 
 #: ../alternatives.c:897
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "mape altdir %s nav korekta\n"
 
 #: ../alternatives.c:903
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "mape admindir %s nav korekta\n"
 
 #: ../alternatives.c:913
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "alternativā versija %s\n"
 
