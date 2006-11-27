@@ -35,7 +35,7 @@ msgstr "प्रयोग:   %s --list [नाम]\n"
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --जोड़ें <name>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:27
 #, c-format
