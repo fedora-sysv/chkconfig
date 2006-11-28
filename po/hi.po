@@ -15,7 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -24,7 +25,8 @@ msgstr "%s संस्करण %s - कॉपीराइट (C) 1997-2000 Red
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "जीएनयू जन लाइसेन्स के नियमानुसार मुक्त रूप में इसको पुन:बाँट कर सकते हैं.\n"
 
 #: ../chkconfig.c:25
@@ -52,7 +54,8 @@ msgstr "         %s [--level <levels>] <name> %s\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s सेवा chkconfig को मदद करता है, मगर किसी रनलेवल ('chkconfig --add %s' चलाएँ)\n"
+msgstr ""
+"%s सेवा chkconfig को मदद करता है, मगर किसी रनलेवल ('chkconfig --add %s' चलाएँ)\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -453,4 +456,3 @@ msgstr "admin %s अनुचित है\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "वैकल्पिक संस्करण %s\n"
-

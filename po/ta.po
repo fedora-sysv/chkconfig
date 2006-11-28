@@ -19,7 +19,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 "\n"
 
 #: ../chkconfig.c:21
@@ -29,7 +30,8 @@ msgstr "%s பதிப்பு %s - காப்புரிமை (C) 1997-20
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "இதை GNU பொது உரிமத்தின் கீழ் இலவசமாக விநியோகிக்கலாம் \n"
 
 #: ../chkconfig.c:25
@@ -420,7 +422,8 @@ msgstr "  தேர்ந்தெடுப்பு    கட்டளை\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "தற்போது உள்ள தேர்ந்தெடுப்பு [+]ஐ வைக்க உள்ளீடவும், அல்லது தேர்ச்சி எண்ணை தட்டச்சு செய்யவும்: "
+msgstr ""
+"தற்போது உள்ள தேர்ந்தெடுப்பு [+]ஐ வைக்க உள்ளீடவும், அல்லது தேர்ச்சி எண்ணை தட்டச்சு செய்யவும்: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -460,4 +463,3 @@ msgstr "admindir %s தவறானது\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "மாற்று பதிப்பு %s\n"
-

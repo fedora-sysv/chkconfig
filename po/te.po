@@ -24,7 +24,8 @@ msgstr "%s ప్రతి %s - కాపీహక్కు (C) 1997-2000 Red Ha
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU పబ్లిక్ లైసెన్సుకింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
 
 #: ../chkconfig.c:25
@@ -455,4 +456,3 @@ msgstr "నిర్వహణdir %s చెల్లనిది\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "ప్రత్యామ్నాయ ప్రతి %s\n"
-

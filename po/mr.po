@@ -26,7 +26,8 @@ msgstr ""
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 
 #: ../chkconfig.c:25
@@ -152,8 +153,7 @@ msgid "bad argument to --levels\n"
 msgstr ""
 
 #: ../ntsysv.c:302
-#, c-format
-#, fuzzy
+#, fuzzy, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "नाही"
 
@@ -455,4 +455,3 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
-

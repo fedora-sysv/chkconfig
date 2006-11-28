@@ -23,7 +23,8 @@ msgstr "%s সংস্কৰণ %s - প্ৰতিলিপি (C) 1997-2000 
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "এইটো মুক্ত ভাবে পুনঃবিতৰণ কৰা যাব পাৰে GNU সাধাৰণ অনুমতি পত্ৰৰ মতে ।\n"
 
 #: ../chkconfig.c:25
@@ -52,8 +53,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run "
-"'chkconfig --add %s')\n"
+"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run 'chkconfig "
+"--add %s')\n"
 
 #: ../chkconfig.c:37
 #, c-format
@@ -309,7 +310,8 @@ msgstr "%s সংযোগ পঢ়িব'লৈ অক্ষম: %s\n"
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
+msgstr ""
+"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
 
 #: ../alternatives.c:323
 #, c-format
@@ -454,4 +456,3 @@ msgstr "admindir %s অবৈধ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "বিকল্পসমূহৰ সংস্কৰণ %s\n"
-

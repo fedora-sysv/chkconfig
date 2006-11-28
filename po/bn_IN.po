@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 "\n"
 
 #: ../chkconfig.c:21
@@ -27,7 +28,8 @@ msgstr "%s সংস্করণ %s - স্বত্বাধিকার (C) �
 
 #: ../chkconfig.c:22
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "এটি GNU Public License-র শর্ত অনুযায়ী বিতরণের জন্য অনুমোদিত।\n"
 
 #: ../chkconfig.c:25
@@ -105,7 +107,8 @@ msgstr "%s সংস্করণ %s\n"
 #: ../chkconfig.c:518
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "--list, --add, অথবা --del, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ করা যাবে\n"
+msgstr ""
+"--list, --add, অথবা --del, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ করা যাবে\n"
 
 #: ../chkconfig.c:573
 #, c-format
@@ -418,7 +421,8 @@ msgstr "  নির্বাচন    কমান্ড\n"
 #: ../alternatives.c:701
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
+msgstr ""
+"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
 
 #: ../alternatives.c:704
 #, c-format
@@ -458,4 +462,3 @@ msgstr "admindir %s অবৈধ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "বিকল্প সংস্করণ %s\n"
-
