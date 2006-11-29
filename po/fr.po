@@ -1,22 +1,23 @@
-# translation of fr.po to French
+# translation of chkconfig.po to Français
 # Copyright (C) 2001 Red Hat, Inc.
+#
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004, 2005.
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004.
 # Audrey Simons <asimons@redhat.com>, 2004.
-#
+# Alain PORTAL <aportal@univ-montp2.fr>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: fr\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2005-02-14 13:40+1000\n"
-"Last-Translator: Jean-Paul Aubry <jpaubry@redhat.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2006-11-29 04:37+0100\n"
+"Last-Translator: Alain PORTAL <aportal@univ-montp2.fr>\n"
+"Language-Team: Français <traduc@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -25,8 +26,7 @@ msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Ce produit peut être librement distribué selon les termes de la licence "
 "publique GNU (GPL).\n"
@@ -146,6 +146,7 @@ msgstr "erreur lors de la lecture depuis le répertoire %s : %s\n"
 
 #: ../ntsysv.c:278
 #, c-format
+#, fuzzy
 msgid "You must be root to run %s.\n"
 msgstr "Vous devez être connecté en tant que root pour exécuter %s.\n"
 
@@ -192,8 +193,7 @@ msgstr ""
 #: ../alternatives.c:50
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:51
 #, c-format
@@ -248,7 +248,7 @@ msgstr "                --altdir <répertoire> --admindir <répertoire>\n"
 #: ../alternatives.c:157
 #, c-format
 msgid "reading %s\n"
-msgstr "lecture en cours %s\n"
+msgstr "lecture de %s\n"
 
 #: ../alternatives.c:161
 #, c-format
@@ -263,7 +263,7 @@ msgstr "impossible de lire %s : %s\n"
 #: ../alternatives.c:179
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s vide !\n"
+msgstr "%s est vide !\n"
 
 #: ../alternatives.c:188
 #, c-format
@@ -318,12 +318,12 @@ msgstr "impossible de lire le lien %s : %s\n"
 #: ../alternatives.c:318
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "le lien ne pointe pas sur une alternative -- passage au mode manuel\n"
+msgstr "le lien ne pointe pas sur une alternative -- passage en mode manuel\n"
 
 #: ../alternatives.c:323
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "lien changé -- passage au mode manuel\n"
+msgstr "lien changé -- passage en mode manuel\n"
 
 #: ../alternatives.c:351 ../alternatives.c:358
 #, c-format
@@ -363,7 +363,7 @@ msgstr "Impossible de remplacer %s avec %s : %s\n"
 #: ../alternatives.c:488 ../alternatives.c:497
 #, c-format
 msgid "running %s\n"
-msgstr "en cours d'exécution %s\n"
+msgstr "%s en cours d'exécution\n"
 
 #: ../alternatives.c:524
 #, c-format
@@ -424,7 +424,7 @@ msgstr "  Sélection    Commande\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Entrée pour garder la sélection courante[+] ou saisissez le numéro de type "
+"Entrez pour garder la sélection courante [+] ou saisissez le numéro de type "
 "de sélection :"
 
 #: ../alternatives.c:704
@@ -439,7 +439,7 @@ msgstr ""
 #: ../alternatives.c:731 ../alternatives.c:757
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s n'a pas encore été configuré en tant qu'une alternative pour %s\n"
+msgstr "%s n'a pas encore été configuré en tant qu'alternative à %s\n"
 
 #: ../alternatives.c:773
 #, c-format
@@ -453,6 +453,7 @@ msgstr "impossible de supprimer %s : %s\n"
 
 #: ../alternatives.c:897
 #, c-format
+#, fuzzy
 msgid "altdir %s invalid\n"
 msgstr "altdir %s invalide\n"
 
@@ -466,5 +467,3 @@ msgstr "admindir %s invalide\n"
 msgid "alternatives version %s\n"
 msgstr "version des alternatives %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "erreur lors de la lecture depuis le répertoire %s/init.d : %s\n"
