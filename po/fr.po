@@ -1,23 +1,25 @@
+# translation of fr.po to French
 # translation of chkconfig.po to Français
 # Copyright (C) 2001 Red Hat, Inc.
-#
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004, 2005.
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004.
 # Audrey Simons <asimons@redhat.com>, 2004.
 # Alain PORTAL <aportal@univ-montp2.fr>, 2006.
+# Decroux Fabien <fdecroux@redhat.com>, 2006.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-11-30 14:53-0500\n"
-"PO-Revision-Date: 2006-11-29 04:37+0100\n"
-"Last-Translator: Alain PORTAL <aportal@univ-montp2.fr>\n"
-"Language-Team: Français <traduc@traduc.org>\n"
+"PO-Revision-Date: 2006-12-01 14:52+1000\n"
+"Last-Translator: Decroux Fabien <fdecroux@redhat.com>\n"
+"Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../chkconfig.c:21
 #, c-format
@@ -146,7 +148,6 @@ msgstr "erreur lors de la lecture depuis le répertoire %s : %s\n"
 
 #: ../ntsysv.c:278
 #, c-format
-#, fuzzy
 msgid "You must be root to run %s.\n"
 msgstr "Vous devez être connecté en tant que root pour exécuter %s.\n"
 
@@ -453,7 +454,6 @@ msgstr "impossible de supprimer %s : %s\n"
 
 #: ../alternatives.c:897
 #, c-format
-#, fuzzy
 msgid "altdir %s invalid\n"
 msgstr "altdir %s invalide\n"
 
