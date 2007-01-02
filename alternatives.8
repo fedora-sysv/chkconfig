@@ -256,14 +256,17 @@ different from the default.
 .\" The names of the arguments should be identical with the ones
 .\" in SYNOPSIS section.
 .TP
-\fB--install\fR \fIlink name path pri\fR [\fB--slave\fR \fIslink sname spath\fR] [\fB--initscript\fR \fIservice\fR]...
+\fB--install\fR \fIlink name path priority\fR [\fB--slave\fR \fIslink sname spath\fR] [\fB--initscript\fR \fIservice\fR]...
 Add a group of alternatives to the system.
 .I name
 is the generic name for the master link,
 .I link
-is the name of its symlink, and
+is the name of its symlink,
 .I path
-is the alternative being introduced for the master link.
+is the alternative being introduced for the master link, and
+.I priority
+is the priority of the alternatives group. Higher priorities
+take precendence if no alternative is manually selected.
 .IR sname ,
 .I slink
 and
