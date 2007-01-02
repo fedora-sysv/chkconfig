@@ -76,6 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+- fix man page (#220558, <esr@thyrus.com>)
+
 * Fri Dec  1 2006 Bill Nottingham <notting@redhat.com> 1.3.30.1-1
 - translation updates: as, ka, lv, ml, te (#216617)
 
