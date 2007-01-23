@@ -1,507 +1,469 @@
-# Bosnian translation.
-# Copyright (C) 2001. Free Software Foundation, Inc.
-# Amir Becirovic <bechir_nsa@yahoo.com>, 2001.
-#
+# translation of hr.po to Bosnian
+# Adnan Hodzic <AbsintheSyringe@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: desktop files\n"
+"Project-Id-Version: hr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-02-02 16:19-0500\n"
-"PO-Revision-Date: 31.07.2002. 10:38\n"
-"Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
-"Language-Team: Bosnian <lokal@lugbih.org>\n"
+"PO-Revision-Date: 2007-01-23 15:59+0100\n"
+"Last-Translator: Adnan Hodzic <AbsintheSyringe@gmail.com>\n"
+"Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Poedit-Language: Croatian\n"
+"X-Poedit-Country: CROATIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
-# ../chkconfig.c:21
 #: ../chkconfig.c:21
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s verzija %s - Autorska prava (C) 1997-2000 Red Hat, Inc.\n"
 
-# ../chkconfig.c:22
 #: ../chkconfig.c:22
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ovo možete slobodno redistribuirati pod uslovima GNU javne licence.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ovaj se program može slobodno distribuirati pod uvjetima GNU javne licence.\n"
 
-# ../chkconfig.c:25
 #: ../chkconfig.c:25
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "upotreba:   %s --list [ime]\n"
+msgstr "upotreba:   %s --list [naziv]\n"
 
-# ../chkconfig.c:26
 #: ../chkconfig.c:26
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <ime>\n"
+msgstr "         %s --add <naziv>\n"
 
-# ../chkconfig.c:27
 #: ../chkconfig.c:27
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <ime>\n"
+msgstr "         %s --del <naziv>\n"
 
-# ../chkconfig.c:28
 #: ../chkconfig.c:28
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <nivoi>] <ime> %s)\n"
+msgstr "         %s [--level <razine>] <naziv> %s)\n"
 
 #: ../chkconfig.c:35
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"servis %s podržava chkconfig, ali nije u vezi ni s jednim runlevelom "
-"(pokrenite 'chkconfig --add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "usluga %s podržava chkconfig, ali nema reference ni u jednoj razini pokretanja (pokrenite chkconfig --add %s')\n"
 
-# ../chkconfig.c:35
 #: ../chkconfig.c:37
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "servis %s nepodržava chkconfig\n"
+msgstr "usluga %s ne podržava chkconfig\n"
 
-# ../chkconfig.c:37
 #: ../chkconfig.c:39
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "greška prilikom čitanja informacija sa servera %s: %s\n"
+msgstr "pogreška pri čitanju podataka o usluzi %s: %s\n"
 
-# ../chkconfig.c:138
-#: ../chkconfig.c:98 ../chkconfig.c:248
+#: ../chkconfig.c:98
+#: ../chkconfig.c:248
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "nije uspjeo da otvori %s/init.d: %s\n"
+msgstr "neuspjelo otvaranje %s/init.d: %s\n"
 
-# ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:308
 msgid "on"
 msgstr "uključeno"
 
-# ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:308
+#: ../chkconfig.c:211
+#: ../chkconfig.c:216
+#: ../chkconfig.c:308
 msgid "off"
 msgstr "isključeno"
 
-# ../ntsysv.c:174 ../ntsysv.c:218
-#: ../chkconfig.c:270 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:270
+#: ../ntsysv.c:166
+#: ../ntsysv.c:193
+#: ../ntsysv.c:231
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "greka prilikom čitanja informacija za servis %s: %s\n"
+msgstr "pogreška pri čitanju podataka za uslugu %s: %s\n"
 
-# ../chkconfig.c:180
 #: ../chkconfig.c:285
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "xinetd bazirani servisi:\n"
+msgstr "usluge zasnovane na xinetd:\n"
 
-# ../chkconfig.c:182
 #: ../chkconfig.c:287
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "ne mogu otvoriti direktorij %s: %s"
+msgstr "neuspjelo otvaranje mape %s: %s\n"
 
-# ../chkconfig.c:284
 #: ../chkconfig.c:402
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzija %s\n"
 
-# ../chkconfig.c:291
 #: ../chkconfig.c:409
 #, c-format
 msgid "only one of --list, --add, or --del may be specified\n"
-msgstr "samo jedan od --list, --add ili --del može biti naznačen\n"
+msgstr "može se zadati samo jedan od --list, --add ili --del\n"
 
-# ../chkconfig.c:339
 #: ../chkconfig.c:461
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "samo jedan nivo može biti naznačen za chkconfig upit\n"
+msgstr "za chkconfig upite može se zadati samo jedna razina pokretanja (runlevel)\n"
 
-# ../ntsysv.c:30
 #: ../ntsysv.c:31
 msgid "Press <F1> for more information on a service."
-msgstr "Pritisnite <F1> za više informacija o servisu."
+msgstr "Za dodatne podatke o usluzi pritisnite <F1>"
 
-# ../ntsysv.c:62 ../ntsysv.c:99
-#: ../ntsysv.c:68 ../ntsysv.c:105
+#: ../ntsysv.c:68
+#: ../ntsysv.c:105
 msgid "Ok"
 msgstr "U redu"
 
-# ../ntsysv.c:62
 #: ../ntsysv.c:68
 msgid "Back"
-msgstr "Nazad"
+msgstr "Povratak"
 
-# ../ntsysv.c:62
 #: ../ntsysv.c:68
 msgid "Cancel"
 msgstr "Odustani"
 
-# ../ntsysv.c:74
 #: ../ntsysv.c:80
 msgid "What services should be automatically started?"
-msgstr "Koji servisi bi trebali biti automatski uključeni?"
+msgstr "Koje bi usluge morale biti automatski pokrenute?"
 
-# ../ntsysv.c:80
 #: ../ntsysv.c:86
 msgid "Services"
-msgstr "Servisi"
+msgstr "Usluge"
 
-# ../ntsysv.c:227
 #: ../ntsysv.c:240
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "greška prilikom čitanja iz direktorija %s: %s\n"
+msgstr "pogreška pri čitanju iz mape %s: %s\n"
 
-# ../ntsysv.c:263
 #: ../ntsysv.c:276
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Morate biti root da pokrenete %s.\n"
+msgstr "Za pokretanje %s morate biti root korisnik.\n"
 
-# ../ntsysv.c:280
 #: ../ntsysv.c:293
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "pogrešan argument za --levels\n"
+msgstr "loš argument za --levels\n"
 
-# ../ntsysv.c:287
 #: ../ntsysv.c:300
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Nijedan servis ne može biti upravljan od strane ntsysv!\n"
+msgstr "Nijedna usluga ne može biti upravljana pomoću ntsysv!\n"
 
-# ../leveldb.c:367
 #: ../leveldb.c:517
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "nije uspjeo da glob-uje uzorak %s: %s\n"
+msgstr "neuspjela globalizacija uzorka %s: %s\n"
 
-# ../leveldb.c:398
 #: ../leveldb.c:548
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "ne može odrediti trenutni nivo\n"
+msgstr "nije moguće odrediti trenutnu razinu izvršavanja\n"
 
-# ../leveldb.c:486
 #: ../leveldb.c:636
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "greška prilikom pravljenja symlink %s: %s\n"
+msgstr "neuspjela izrada simbolične veze %s: %s\n"
 
-# ../chkconfig.c:21
 #: ../alternatives.c:49
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s verzija %s - Autorska prava (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "alternatives verzija %s - Autorska prava (C) 2001 Red Hat, Inc.\n"
 
-# ../chkconfig.c:22
 #: ../alternatives.c:50
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Ovo možete slobodno redistribuirati pod uslovima GNU javne licence.\n"
+msgstr ""
+"Ovaj se program može slobodno distribuirati pod uvjetima GNU javne licence.\n"
+"\n"
 
 #: ../alternatives.c:51
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "upotreba: alternatives --install <veza> <naziv> <putanja> <prioritet>\n"
 
 #: ../alternatives.c:52
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <usluga>]\n"
 
-# ../chkconfig.c:28
 #: ../alternatives.c:53
-#, fuzzy, c-format
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <nivoi>] <ime> %s)\n"
+msgstr "                    [--slave <veza> <naziv> <putanja>]*\n"
 
 #: ../alternatives.c:54
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <naziv> <putanja>\n"
 
-# ../chkconfig.c:26
 #: ../alternatives.c:55
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <ime>\n"
+msgstr "       alternatives --auto <naziv>\n"
 
-# ../chkconfig.c:26
 #: ../alternatives.c:56
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <ime>\n"
+msgstr "       alternatives --config <naziv>\n"
 
-# ../chkconfig.c:27
 #: ../alternatives.c:57
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <ime>\n"
+msgstr "       alternatives --display <naziv>\n"
 
-# ../chkconfig.c:27
 #: ../alternatives.c:58
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <ime>\n"
+msgstr "       alternatives --set <naziv> <putanja>\n"
 
 #: ../alternatives.c:59
 #, c-format
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "općenite opcije: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:61
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <mapa> --admindir <mapa>\n"
 
 #: ../alternatives.c:158
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "čitanje %s\n"
 
-# ../chkconfig.c:138
 #: ../alternatives.c:162
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "nije uspjeo da otvori %s/init.d: %s\n"
+msgstr "neuspjelo otvaranje %s: %s\n"
 
-# ../chkconfig.c:138
 #: ../alternatives.c:171
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "nije uspjeo da otvori %s/init.d: %s\n"
+msgstr "neuspjelo čitanje %s: %s\n"
 
 #: ../alternatives.c:180
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s je prazan!\n"
 
 #: ../alternatives.c:189
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "loš način u retku 1 od %s\n"
 
 #: ../alternatives.c:196
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "loša primarna veza u %s\n"
 
 #: ../alternatives.c:208
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "putanja %s nije očekivana u %s\n"
 
 #: ../alternatives.c:217
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "za podčinjenog %s nedostaje putanja u %s\n"
 
 #: ../alternatives.c:227
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "neočekivani završetak datoteke u %s\n"
 
 #: ../alternatives.c:236
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "putanja za alternativu je očekivana u %s\n"
 
 #: ../alternatives.c:256
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "brojčani prioritet očekivan je u %s\n"
 
 #: ../alternatives.c:278
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "putanja podčinjenog očekivana je u %s\n"
 
 #: ../alternatives.c:297
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "neočekivana linija u %s: %s\n"
 
-# ../chkconfig.c:138
 #: ../alternatives.c:305
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "nije uspjeo da otvori %s/init.d: %s\n"
+msgstr "neuspjelo čitanje veze %s: %s\n"
 
 #: ../alternatives.c:319
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "veza upućuje na alternativu --  postavlja se ručni način\n"
 
 #: ../alternatives.c:324
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "veza je izmijenjena -- postavlja se ručni način\n"
 
-#: ../alternatives.c:340 ../alternatives.c:347
+#: ../alternatives.c:340
+#: ../alternatives.c:347
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "premjestiti će %s\n"
 
-# ../leveldb.c:486
-#: ../alternatives.c:342 ../alternatives.c:349 ../alternatives.c:380
-#, fuzzy, c-format
+#: ../alternatives.c:342
+#: ../alternatives.c:349
+#: ../alternatives.c:380
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "greška prilikom pravljenja symlink %s: %s\n"
+msgstr "neuspjelo premještanje veze  %s: %s\n"
 
-#: ../alternatives.c:365 ../alternatives.c:377
+#: ../alternatives.c:365
+#: ../alternatives.c:377
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "povezat će %s -> %s\n"
 
-# ../leveldb.c:486
-#: ../alternatives.c:369 ../alternatives.c:386
-#, fuzzy, c-format
+#: ../alternatives.c:369
+#: ../alternatives.c:386
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "greška prilikom pravljenja symlink %s: %s\n"
+msgstr "neuspjelo povezivanje %s -> %s: %s\n"
 
 #: ../alternatives.c:418
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s već postoji\n"
 
-# ../leveldb.c:367
 #: ../alternatives.c:420
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "nije uspjeo da glob-uje uzorak %s: %s\n"
+msgstr "neuspjela izrada %s: %s\n"
 
-# ../leveldb.c:486
 #: ../alternatives.c:451
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "greška prilikom pravljenja symlink %s: %s\n"
+msgstr "neuspjela zamjena %s s %s: %s\n"
 
-#: ../alternatives.c:477 ../alternatives.c:486
+#: ../alternatives.c:477
+#: ../alternatives.c:486
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "pokretanje %s\n"
 
 #: ../alternatives.c:513
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "primarna veza za %s mora biti %s\n"
 
 #: ../alternatives.c:577
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "veza %s nije točna za podčinjenog %s (%s %s)\n"
 
 #: ../alternatives.c:619
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - stanje je automatsko.\n"
 
 #: ../alternatives.c:621
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - stanje je ručno.\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "veza trenutno upućuje prema %s\n"
 
 #: ../alternatives.c:626
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - prioritet %d\n"
 
 #: ../alternatives.c:629
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " podčinjeni %s: %s\n"
 
 #: ../alternatives.c:634
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Trenutna 'najbolja' verzija je %s.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "Postoji %d programa koji omogućuju '%s'.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Postoji %d programa koji omogućuju '%s'.\n"
 
 #: ../alternatives.c:666
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "   Odabir     Naredba\n"
 
 #: ../alternatives.c:675
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Za zadržavanje trenutnog odabira [+] pritisnite ENTER ili unesite broj odabira: "
 
-# ../ntsysv.c:174 ../ntsysv.c:218
 #: ../alternatives.c:678
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "greka prilikom čitanja informacija za servis %s: %s\n"
+msgstr ""
+"\n"
+"pogreška pri čitanju odabira\n"
 
-#: ../alternatives.c:705 ../alternatives.c:731
+#: ../alternatives.c:705
+#: ../alternatives.c:731
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s nije bila kofigurirana kao alternativa za %s\n"
 
 #: ../alternatives.c:747
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(uklonit će %s\n"
 
-# ../chkconfig.c:138
 #: ../alternatives.c:749
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "nije uspjeo da otvori %s/init.d: %s\n"
+msgstr "neuspjelo uklanjanje %s: %s\n"
 
 #: ../alternatives.c:871
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "neispravni altdir %s\n"
 
 #: ../alternatives.c:877
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "neispravni admindir %s\n"
 
-# ../chkconfig.c:284
 #: ../alternatives.c:887
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s verzija %s\n"
+msgstr "alternativna verzija %s\n"
 
-# ../ntsysv.c:183
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "greška prilikom čitanja iz direktorija %s/init.d: %s\n"
-
-# ../chkconfig.c:172
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "greška prilikom čitanja iz direktorija %s/init.d %s"
