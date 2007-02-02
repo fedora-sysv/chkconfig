@@ -242,6 +242,74 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 int readServiceInfo(char * name, struct service * service, int honorHide) {
     char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
     int fd;
+    struct service serv, serv_overrides;
+    int parseret;
+
+    sprintf(filename, RUNLEVELS "/init.d/%s", name);
+
+    if ((fd = open(filename, O_RDONLY)) < 0) {
+	    return readXinetdServiceInfo(name,service,honorHide);
+    }
+
+    parseret = parseServiceInfo(fd, name, &serv, honorHide, 0);
+    if (parseret) {
+        return parseret;
+    }
+
+    sprintf(filename, RUNLEVELS "/chkconfig.d/%s", name);
+    if ((fd = open(filename, O_RDONLY)) >= 0) {
+        parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
+        if (parseret >= 0) {
+            if (serv_overrides.name) serv.name = serv_overrides.name;
+            if (serv_overrides.levels != -1) serv.levels = serv_overrides.levels;
+            if (serv_overrides.kPriority != -2) serv.kPriority = serv_overrides.kPriority;
+            if (serv_overrides.sPriority != -2) serv.sPriority = serv_overrides.sPriority;
+            if (serv_overrides.desc) serv.desc = serv_overrides.desc;
+            if (serv_overrides.startDeps) serv.startDeps = serv_overrides.startDeps;
+            if (serv_overrides.stopDeps) serv.stopDeps = serv_overrides.stopDeps;
+            if (serv_overrides.provides) serv.provides = serv_overrides.provides;
+            if (serv_overrides.isLSB || serv.isLSB) serv.isLSB = 1;
+        }
+    }
+
+    *service = serv;
+    return 0;
+}
+
+int readServiceDifferences(char * name, struct service * service, struct service * service_overrides, int honorHide) {
+    char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
+    int fd;
+    struct service serv, serv_overrides;
+    int parseret;
+
+    sprintf(filename, RUNLEVELS "/init.d/%s", name);
+
+    if ((fd = open(filename, O_RDONLY)) < 0) {
+	    return readXinetdServiceInfo(name,service,honorHide);
+    }
+
+    parseret = parseServiceInfo(fd, name, &serv, honorHide, 0);
+    if (parseret) {
+        return parseret;
+    }
+
+    sprintf(filename, RUNLEVELS "/chkconfig.d/%s", name);
+    if ((fd = open(filename, O_RDONLY)) >= 0) {
+        parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
+    } else {
+        return 1;
+    }
+    if (parseret) {
+        return 1;
+    }
+
+    *service = serv;
+    *service_overrides = serv_overrides;
+    return 0;
+}
+
+
+int parseServiceInfo(int fd, char * name, struct service * service, int honorHide, int partialOk) {
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next, *tmpbufstart;
     struct service serv = { 
@@ -261,11 +329,6 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     char levelbuf[20];
     char * english_desc = NULL;
 
-    sprintf(filename, RUNLEVELS "/init.d/%s", name);
-
-    if ((fd = open(filename, O_RDONLY)) < 0) {
-	    return readXinetdServiceInfo(name,service,honorHide);
-    }
     fstat(fd, &sb);
 
     bufstart = mmap(NULL, sb.st_size, PROT_READ, MAP_SHARED, fd, 0);
@@ -484,7 +547,7 @@ int readServiceInfo(char * name, struct service * service, int honorHide) {
     } else if (english_desc)
 	free (english_desc);
 
-    if ((serv.levels == -1 ) || !serv.desc) {
+    if (!partialOk && ((serv.levels == -1) || !serv.desc)) {
 	return 1;
     } 
 
@@ -542,14 +605,26 @@ int findServiceEntries(char * name, int level, glob_t * globresptr) {
     return 0;
 }
 
-int isConfigured(char * name, int level) {
+int isConfigured(char * name, int level, int *priority, char *type) {
     glob_t globres;
+    char *pri_string;
 
     if (findServiceEntries(name, level, &globres))
 	exit(1);
 
     if (!globres.gl_pathc)
 	return 0;
+
+    if (type) {
+        *type = globres.gl_pathv[0][11];
+    }
+
+    if (priority) {
+        pri_string = strndup(globres.gl_pathv[0]+12, 2);
+        if (!pri_string) return 0;
+        sscanf(pri_string, "%d", priority);
+        free(pri_string);
+    }
 
     globfree(&globres);
     return 1;

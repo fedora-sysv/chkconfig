@@ -194,7 +194,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 		
 		rc = -2;
 		for (i = 0 ; i < 7 ; i++) {
-			if (isConfigured(ent->d_name, i)) {
+			if (isConfigured(ent->d_name, i, NULL, NULL)) {
 				rc = 0;
 				break;
 			}

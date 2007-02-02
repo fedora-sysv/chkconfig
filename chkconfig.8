@@ -10,6 +10,8 @@ chkconfig \- updates and queries runlevel information for system services
 .br
 \fBchkconfig\fR \fB--del\fR \fIname\fR
 .br
+\fBchkconfig\fR \fB--override\fR \fIname\fR
+.br
 \fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR>
 .br
 \fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR 
@@ -89,6 +91,15 @@ Note that future package installs for this service may run
 service, run \fBchkconfig \fIname\fR \fBoff\fR.
 
 .TP
+\fB-\-override\fR \fIname\fR
+If service \fIname\fR is configured exactly as it would be if the
+\fB-\-add\fR option had been specified with no override file in
+/etc/chkconfig.d/\fIname\fR, and if /etc/chkconfig.d/\fIname\fR now
+exists and is specified differently from the base initscript,
+change the configuration for service \fIname\fR to follow the
+overrides instead of the base configuration.
+
+.TP
 \fB-\-list\fR \fIname\fR
 This option lists all of the services which \fBchkconfig\fR knows about,
 and whether they are stopped or started in each runlevel. If \fIname\fR
@@ -118,6 +129,12 @@ and 5, that its start priority should be 20, and that its stop
 priority should be 80.  You should be able to figure out what the
 description says; the \e causes the line to be continued.  The
 extra space in front of the line is ignored.
+
+.SH OVERRIDE FILES
+
+File in /etc/chkconfig.d/\fIservicename\fR are parsed using the
+same comments that chkconfig notices in init service scripts,
+and override values in the init service scripts themselves.
 
 .SH SEE ALSO
 .IR init (8)

@@ -35,6 +35,7 @@ static void usage(void) {
     fprintf(stderr, _("usage:   %s --list [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
+    fprintf(stderr, _("         %s --override <name>\n"), progname);
     fprintf(stderr, _("         %s [--level <levels>] <name> %s\n"), progname, "<on|off|reset|resetpriorities>");
 
     exit(1);
@@ -94,6 +95,7 @@ static int delService(char * name) {
     return 0;
 }
 
+
 static inline int laterThan(int i, int j) {
 	if (i <= j) {
 		i = j+1;
@@ -148,7 +150,7 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 
 	if (target || ((s0 != s->sPriority) || (k0 != s->kPriority))) {
 		for (i = 0; i < 7; i++) {
-			if (isConfigured(s->name, i)) {
+			if (isConfigured(s->name, i, NULL, NULL)) {
 				int on = isOn(s->name, i);
 				delServiceOne(s->name,i);
 				doSetService(*s, i, on);
@@ -236,7 +238,7 @@ static int addService(char * name) {
 		frobDependencies(&s);
     else
     for (i = 0; i < 7; i++) {
-	if (!isConfigured(name, i)) {
+	if (!isConfigured(name, i, NULL, NULL)) {
 	    if ((1 << i) & s.levels)
 		doSetService(s, i, 1);
 	    else
@@ -246,6 +248,79 @@ static int addService(char * name) {
 
     return 0;
 }
+
+static int overrideService(char * name) {
+    /* Apply overrides if available; no available overrides is no error */
+    int level, i, rc;
+    glob_t globres;
+    struct service s;
+    struct service o;
+    int priority;
+    char type;
+    int doChange = 1;
+    int configured = 0;
+    int thisLevelAdded, thisLevelOn;
+
+    if ((rc = readServiceDifferences(name, &s, &o, 0))) {
+	return 0;
+    }
+	
+    if (s.type == TYPE_XINETD) return 0;
+
+    if ((s.levels == o.levels) &&
+        (s.kPriority == o.kPriority) &&
+        (s.sPriority == o.sPriority)) {
+        /* no relevant changes in the override file */
+	return 0;
+    }
+
+    if (s.isLSB && (s.sPriority <= -1) && (s.kPriority <= -1))
+		frobDependencies(&s);
+    if ((s.isLSB || o.isLSB) && (o.sPriority <= -1) && (o.kPriority <= -1))
+		frobDependencies(&o);
+
+    /* Apply overrides only if the service has not been changed since
+     * being added, and not if the service has never been configured
+     * at all.
+     */
+    
+    for (level = 0; level < 7; level++) {
+	thisLevelAdded = isConfigured(name, level, &priority, &type);
+        thisLevelOn = s.levels & 1<<level;
+        if (thisLevelAdded) {
+            configured = 1;
+            if (type == 'S') {
+                if (priority != s.sPriority || !thisLevelOn) {
+                    doChange = 0;
+                    break;
+                }
+            } else if (type == 'K') {
+                if (priority != s.kPriority || thisLevelOn) {
+                    doChange = 0;
+                    break;
+                }
+            }
+	}
+    }
+
+    if (configured && doChange) {
+        for (level = 0; level < 7; level++) {
+            if (!findServiceEntries(name, level, &globres)) {
+                for (i = 0; i < globres.gl_pathc; i++)
+                    unlink(globres.gl_pathv[i]);
+                if (globres.gl_pathc)
+                    globfree(&globres);
+                if ((1 << level) & o.levels)
+                    doSetService(o, level, 1);
+                else
+                    doSetService(o, level, 0);
+            }
+        }
+    }
+
+    return 0;
+}
+
 
 static int showServiceInfo(char * name, int forgiving) {
     int rc;
@@ -257,7 +332,7 @@ static int showServiceInfo(char * name, int forgiving) {
     if (!rc && s.type == TYPE_INIT_D) {
 	    rc = 2;
 	    for (i = 0 ; i < 7 ; i++) {
-		    if (isConfigured(name, i)) {
+		    if (isConfigured(name, i, NULL, NULL)) {
 			    rc = 0;
 			    break;
 		    }
@@ -478,7 +553,7 @@ int setService(char * name, int where, int state) {
 }
 
 int main(int argc, char ** argv) {
-    int listItem = 0, addItem = 0, delItem = 0;
+    int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
     int rc, i, x;
     int LSB = 0;
     char * levels = NULL;
@@ -488,6 +563,7 @@ int main(int argc, char ** argv) {
     struct poptOption optionsTable[] = {
 	    { "add", '\0', 0, &addItem, 0 },
 	    { "del", '\0', 0, &delItem, 0 },
+	    { "override", '\0', 0, &overrideItem, 0 },
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
 	    { "levels", '\0', POPT_ARG_STRING, &levels, 0 },
@@ -530,9 +606,9 @@ int main(int argc, char ** argv) {
 
     if (help || argc == 1) usage();
 
-    if ((listItem + addItem + delItem) > 1) {
-	fprintf(stderr, _("only one of --list, --add, or --del may be "
-		"specified\n"));
+    if ((listItem + addItem + delItem + overrideItem) > 1) {
+	fprintf(stderr, _("only one of --list, --add, --del, or --override"
+                " may be specified\n"));
 	exit(1);
     }
 
@@ -553,6 +629,13 @@ int main(int argc, char ** argv) {
 	if (LSB)
 		    name = basename(name);
 	return delService(name);
+    } else if (overrideItem) {
+	char * name = (char *)poptGetArg(optCon);
+
+	if (!name || !*name || poptGetArg(optCon)) usage();
+
+        name = basename(name);
+	return overrideService(name);
     } else if (listItem) {
 	char * item = (char *)poptGetArg(optCon);
 

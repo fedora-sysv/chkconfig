@@ -1,4 +1,4 @@
-Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
+Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
 Version: 1.3.31
 Release: 1
@@ -16,7 +16,7 @@ symbolic links in /etc/rc.d, to relieve system administrators of some
 of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
-Summary: A tool to set the stop/start of system services in a runlevel.
+Summary: A tool to set the stop/start of system services in a runlevel
 Group: System Environment/Base
 Requires: chkconfig = %{version}
 
