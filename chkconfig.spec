@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.31
+Version: 1.3.32
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Feb  2 2007 Bill Nottingham <notting@redhat.com> 1.3.32-1
+- support overriding various defaults via /etc/chkconfig.d (<johnsonm@rpath.com>)
+
 * Thu Feb  1 2007 Bill Nottingham <notting@redhat.com> 1.3.31-1
 - fix man page (#220558, <esr@thyrus.com>)
 - add some more verbiage in alternatives man page (#221089)
