@@ -19,21 +19,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
-"POT-Creation-Date: 2005-02-10 17:54-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-02-01 16:50-0500\n"
 "PO-Revision-Date: 2005-04-21 00:00+0200\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Report-Msgid-Bugs-To: \n"
 
-#: ../chkconfig.c:21
+#: ../chkconfig.c:31
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versió %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:22
+#: ../chkconfig.c:32
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -41,27 +41,32 @@ msgstr ""
 "Aquest programari es pot distribuir lliurement d'acord amb els termes de la "
 "Llicència Pública General GNU.\n"
 
-#: ../chkconfig.c:25
+#: ../chkconfig.c:35
 #, c-format
 msgid "usage:   %s --list [name]\n"
 msgstr "forma d'ús:   %s --list [nom]\n"
 
-#: ../chkconfig.c:26
+#: ../chkconfig.c:36
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <nom>\n"
 
-#: ../chkconfig.c:27
+#: ../chkconfig.c:37
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s –-del <nom>\n"
 
-#: ../chkconfig.c:28
+#: ../chkconfig.c:38
+#, fuzzy, c-format
+msgid "         %s --override <name>\n"
+msgstr "         %s –-del <nom>\n"
+
+#: ../chkconfig.c:39
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "         %s [--level <nivells>] <nom> %s\n"
 
-#: ../chkconfig.c:35
+#: ../chkconfig.c:46
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -70,125 +75,125 @@ msgstr ""
 "el servei %s és compatible amb el chkconfig, però no està referenciat en cap "
 "nivell d'execució (executeu 'chkconfig –add %s')\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:48
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "el servei %s no és compatible amb el chkconfig\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:50
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "s'ha produït un error en llegir la informació del servei %s: %s\n"
 
-#: ../chkconfig.c:98 ../chkconfig.c:267
+#: ../chkconfig.c:181 ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "no s'ha pogut obrir %s/init.d: %s\n"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "on"
 msgstr "engegat"
 
-#: ../chkconfig.c:211 ../chkconfig.c:216 ../chkconfig.c:360
+#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "off"
 msgstr "apagat"
 
-#: ../chkconfig.c:289 ../ntsysv.c:166 ../ntsysv.c:193 ../ntsysv.c:231
+#: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "s'ha produït un error en llegir la informació per al sevei %s: %s\n"
 
-#: ../chkconfig.c:322
+#: ../chkconfig.c:461
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "serveis basats en xinetd:\n"
 
-#: ../chkconfig.c:324
+#: ../chkconfig.c:463
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "no s'ha pogut obrir el directori %s: %s\n"
 
-#: ../chkconfig.c:455
+#: ../chkconfig.c:603
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versió %s\n"
 
-#: ../chkconfig.c:462
-#, c-format
-msgid "only one of --list, --add, or --del may be specified\n"
+#: ../chkconfig.c:610
+#, fuzzy, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "només es pot especificar una opció --list, --add, o --del\n"
 
-#: ../chkconfig.c:517
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 "només es pot especificar un nivell d'execució per a una consulta chkconfig\n"
 
-#: ../ntsysv.c:31
+#: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
 msgstr "Premeu <F1> per a més informació sobre un servei."
 
-#: ../ntsysv.c:68 ../ntsysv.c:105
+#: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
 msgstr "D'acord"
 
-#: ../ntsysv.c:68
+#: ../ntsysv.c:78
 msgid "Back"
 msgstr "Endarrere"
 
-#: ../ntsysv.c:68
+#: ../ntsysv.c:78
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../ntsysv.c:80
+#: ../ntsysv.c:90
 msgid "What services should be automatically started?"
 msgstr "Quins serveis s'haurien d'iniciar automàticament?"
 
-#: ../ntsysv.c:86
+#: ../ntsysv.c:96
 msgid "Services"
 msgstr "Serveis"
 
-#: ../ntsysv.c:240
+#: ../ntsysv.c:252
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "s'ha produït un error en llegir des del directori %s: %s\n"
 
-#: ../ntsysv.c:276
+#: ../ntsysv.c:288
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Heu de ser el superusuari per executar %s.\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:305
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "l'argument de --levels no és vàlid\n"
 
-#: ../ntsysv.c:300
+#: ../ntsysv.c:312
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "No hi ha cap servei que ntsysv pugui gestionar.\n"
 
-#: ../leveldb.c:522
+#: ../leveldb.c:596
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "no s'ha pogut globalitzar el patró %s: %s\n"
 
-#: ../leveldb.c:553
+#: ../leveldb.c:639
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "no es pot determinar l'actual nivell d'execució\n"
 
-#: ../leveldb.c:641
+#: ../leveldb.c:727
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "no s'ha pogut fer l'enllaç simbòlic %s: %s\n"
 
-#: ../alternatives.c:48
+#: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives versió %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:49
+#: ../alternatives.c:59
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -197,244 +202,244 @@ msgstr ""
 "Es pot distribuir lliurement sota els termes de la llicència pública GNU.\n"
 "\n"
 
-#: ../alternatives.c:50
+#: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "forma d'ús: alternatives --install <enllaç> <nom> <camí> <prioriat>\n"
 
-#: ../alternatives.c:51
+#: ../alternatives.c:61
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <servei>]\n"
 
-#: ../alternatives.c:52
+#: ../alternatives.c:62
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <enllaç> <nom> <camí>]*\n"
 
-#: ../alternatives.c:53
+#: ../alternatives.c:63
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <nom> <camí>\n"
 
-#: ../alternatives.c:54
+#: ../alternatives.c:64
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <nom>\n"
 
-#: ../alternatives.c:55
+#: ../alternatives.c:65
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <nom>\n"
 
-#: ../alternatives.c:56
+#: ../alternatives.c:66
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "        alternatives  --display <nom>\n"
 
-#: ../alternatives.c:57
+#: ../alternatives.c:67
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "        alternatives --set <nom> <camí>\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:68
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:59
+#: ../alternatives.c:69
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "opcions comunes: --verbose –-test –-help –-usage -–version\n"
 
-#: ../alternatives.c:60
+#: ../alternatives.c:70
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directori> --admindir <directori>\n"
 
-#: ../alternatives.c:157
+#: ../alternatives.c:167
 #, c-format
 msgid "reading %s\n"
 msgstr "s'està llegint %s\n"
 
-#: ../alternatives.c:161
+#: ../alternatives.c:171
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "no s'ha pogut obrir %s: %s\n"
 
-#: ../alternatives.c:170
+#: ../alternatives.c:180
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "no s'ha pogut llegir %s: %s\n"
 
-#: ../alternatives.c:179
+#: ../alternatives.c:189
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s està buit\n"
 
-#: ../alternatives.c:188
+#: ../alternatives.c:198
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "el mode a la línia 1 de %s no és correcte\n"
 
-#: ../alternatives.c:195
+#: ../alternatives.c:205
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "l'enllaç primari a %s no és correcte\n"
 
-#: ../alternatives.c:207
+#: ../alternatives.c:217
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "no s'esperava el camí %s a %s\n"
 
-#: ../alternatives.c:216
+#: ../alternatives.c:226
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "no s'ha trobat el camí per a l'esclau %s a %s\n"
 
-#: ../alternatives.c:226
+#: ../alternatives.c:236
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "no s'esperava el final del fitxer a %s\n"
 
-#: ../alternatives.c:235
+#: ../alternatives.c:245
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "s'esperava el camí per alternar a %s\n"
 
-#: ../alternatives.c:255
+#: ../alternatives.c:265
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "s'esperava la prioritat numèrica a %s\n"
 
-#: ../alternatives.c:277
+#: ../alternatives.c:287
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "s'esperava el camí esclau a %s\n"
 
-#: ../alternatives.c:296
+#: ../alternatives.c:306
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "no s'esperava la línia a %s: %s\n"
 
-#: ../alternatives.c:304
+#: ../alternatives.c:314
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "no s'ha pogut llegir l'enllaç %s: %s\n"
 
-#: ../alternatives.c:318
+#: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "l'enllaç no assenyala a cap alternativa -- es canviarà a mode manual\n"
 
-#: ../alternatives.c:323
+#: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "l'enllaç ha canviat –- es canviarà a mode manual\n"
 
-#: ../alternatives.c:339 ../alternatives.c:346
+#: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
 msgstr "se suprimiria %s\n"
 
-#: ../alternatives.c:341 ../alternatives.c:348 ../alternatives.c:379
+#: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "no s'ha pogut eliminar l'enllaç %s: %s\n"
 
-#: ../alternatives.c:364 ../alternatives.c:376
+#: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "s'enllaçaria %s -> %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:385
+#: ../alternatives.c:390 ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "no s'ha pogut enllaçar %s -> %s: %s\n"
 
-#: ../alternatives.c:417
+#: ../alternatives.c:439
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ja existeix\n"
 
-#: ../alternatives.c:419
+#: ../alternatives.c:441
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "no s'ha pogut crear %s: %s\n"
 
-#: ../alternatives.c:450
+#: ../alternatives.c:472
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "no s'ha pogut reemplaçar %s amb %s: %s\n"
 
-#: ../alternatives.c:476 ../alternatives.c:485
+#: ../alternatives.c:498 ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
 msgstr "s'està executant %s\n"
 
-#: ../alternatives.c:512
+#: ../alternatives.c:534
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "l'enllaç primari per a %s ha de ser %s\n"
 
-#: ../alternatives.c:576
+#: ../alternatives.c:614
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "l'enllaç %s és incorrecte per a l'esclau %s (%s %s)\n"
 
-#: ../alternatives.c:618
+#: ../alternatives.c:655
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - l'estat és automàtic.\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:657
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - l'estat és manual.\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:659
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " l'enllaç assenyala a %s\n"
 
-#: ../alternatives.c:625
+#: ../alternatives.c:662
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - prioritat %d\n"
 
-#: ../alternatives.c:628
+#: ../alternatives.c:665
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " esclau %s: %s\n"
 
-#: ../alternatives.c:633
+#: ../alternatives.c:670
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "La 'millor' versió actual és %s.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:700
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Hi ha %d programa que proveeix '%s'.\n"
 
-#: ../alternatives.c:663
+#: ../alternatives.c:700
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Hi ha %d programes que proveeixen '%s'.\n"
 
-#: ../alternatives.c:665
+#: ../alternatives.c:702
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Selecció     Ordre\n"
 
-#: ../alternatives.c:674
+#: ../alternatives.c:711
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Premeu la tecla de retorn per mantenir la selecció actual[+], o teclegeu el "
 "número de la selecció: "
 
-#: ../alternatives.c:677
+#: ../alternatives.c:714
 #, c-format
 msgid ""
 "\n"
@@ -443,32 +448,32 @@ msgstr ""
 "\n"
 "s'ha produït un error en llegir l'opció\n"
 
-#: ../alternatives.c:704 ../alternatives.c:730
+#: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "no s'ha configurat %s com a alternativa per a %s\n"
 
-#: ../alternatives.c:746
+#: ../alternatives.c:783
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(se suprimiria %s\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:785
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "no s'ha pogut eliminar %s: %s\n"
 
-#: ../alternatives.c:870
+#: ../alternatives.c:907
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "l'altdir %s no és vàlid\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:913
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "l'admindir %s no és vàlid\n"
 
-#: ../alternatives.c:886
+#: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "versions alternatives %s\n"
