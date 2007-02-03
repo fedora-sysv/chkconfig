@@ -2,23 +2,22 @@
 # Copyright (C) 2003, 2004 Lauri Nurmi.
 # This file is distributed under the same license as the chkconfig
 # package.
-# 
-# This translation is NOT based on the old Finnish 
+#
+# This translation is NOT based on the old Finnish
 # translation by Raimo Koski.
-# 
+#
 # Lauri Nurmi <lanurmi@iki.fi>, 2003, 2004.
 #
 # Kyllä, haluan oikeasti saada palautetta suomennoksesta.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2004-07-25 12:40+0300\n"
-"Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
-"Language-Team: Gnome Finnish Translation Team <gnome-fi-laatu@lists."
-"sourceforge.net>\n"
+"PO-Revision-Date: 2007-02-03 02:23+0200\n"
+"Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
+"Language-Team: Gnome Finnish Translation Team <gnome-fi-laatu@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,10 +29,8 @@ msgstr "%s versio %s - Tekijänoikeus © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Tätä ohjelmaa saa levittää vapaasti GNU Public Licensen ehtojen mukaisesti.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Tätä ohjelmaa saa levittää vapaasti GNU Public Licensen ehtojen mukaisesti.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -51,9 +48,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <nimi>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <nimi>\n"
+msgstr "         %s --override <nimi>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -62,12 +59,8 @@ msgstr "         %s [--level <tasot>] <nimi> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"palvelulla %s on chkconfig-tuki, mutta siihen ei viitata millään ajotasolla "
-"(aja \"chkconfig --add %s\")\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "palvelulla %s on chkconfig-tuki, mutta siihen ei viitata millään ajotasolla (aja \"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:48
 #, c-format
@@ -79,20 +72,28 @@ msgstr "palvelulla %s ei ole chkconfig-tukea\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "virhe luettaessa palvelun %s tietoja: %s\n"
 
-#: ../chkconfig.c:181 ../chkconfig.c:406
+#: ../chkconfig.c:181
+#: ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "tiedoston %s/init.d avaaminen ei onnistunut: %s\n"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "off"
 msgstr "ei"
 
-#: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
+#: ../chkconfig.c:428
+#: ../ntsysv.c:178
+#: ../ntsysv.c:205
+#: ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "virhe luettaessa tietoja palvelulle %s: %s\n"
@@ -113,9 +114,9 @@ msgid "%s version %s\n"
 msgstr "%s versio %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "vain yksi valitsimista --list, --add tai --del voidaan antaan\n"
+msgstr "vain yksi valitsimista --list, --add, --del tai --override voidaan antaa\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -126,7 +127,8 @@ msgstr "chkconfig-kyselyssä voidaan antaa vain yksi ajotaso\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Näppäin <F1> antaa lisää tietoja palvelusta."
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:78
+#: ../ntsysv.c:115
 msgid "Ok"
 msgstr "OK"
 
@@ -198,8 +200,7 @@ msgstr ""
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"käyttö: alternatives --install <linkki> <nimi> <polku> <prioriteetti>\n"
+msgstr "käyttö: alternatives --install <linkki> <nimi> <polku> <prioriteetti>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -331,22 +332,27 @@ msgstr "linkki ei osoita vaihtoehtoon -- asetetaan tila käsikäyttöiseksi\n"
 msgid "link changed -- setting mode to manual\n"
 msgstr "linkki muutettu -- asetetaan tila käsikäyttöiseksi\n"
 
-#: ../alternatives.c:361 ../alternatives.c:368
+#: ../alternatives.c:361
+#: ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
 msgstr "poistetettaisiin tiedosto %s\n"
 
-#: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
+#: ../alternatives.c:363
+#: ../alternatives.c:370
+#: ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "linkin %s poistaminen epäonnistui: %s\n"
 
-#: ../alternatives.c:386 ../alternatives.c:398
+#: ../alternatives.c:386
+#: ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "linkitettäisiin %s -> %s\n"
 
-#: ../alternatives.c:390 ../alternatives.c:407
+#: ../alternatives.c:390
+#: ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "linkin %s -> %s luominen epäonnistui: %s\n"
@@ -366,7 +372,8 @@ msgstr "tiedoston %s luominen epäonnistui: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "tiedoston %s korvaaminen tiedostolla %s epäonnistui: %s\n"
 
-#: ../alternatives.c:498 ../alternatives.c:507
+#: ../alternatives.c:498
+#: ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
 msgstr "suoritetaan %s\n"
@@ -440,7 +447,8 @@ msgstr ""
 "\n"
 "virhe luettaessa valintaa\n"
 
-#: ../alternatives.c:741 ../alternatives.c:767
+#: ../alternatives.c:741
+#: ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "ohjelmaa %s ei ole asetettu sovelluksen %s vaihtoehdoksi\n"
@@ -472,6 +480,6 @@ msgstr "alternatives versio %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "virhe luettaessa hakemistosta %s/init.d: %s\n"
-
 #~ msgid "error reading from directory %s/init.d: %s"
 #~ msgstr "virhe luettaessa hakemistosta %s/init.d/: %s"
+
