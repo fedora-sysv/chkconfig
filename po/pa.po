@@ -1,36 +1,35 @@
 # translation of pa.po to Punjabi
-# translation of pa2.po to Punjabi
 # Copyright (C) 2004 THE chkconfig'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the chkconfig package.
-# Automatically generated, 2004
+#
+# Automatically generated, 2004.
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004.
 # Amanpreet Singh Alam <aalam@redhat.cpm>, 2004.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-#
+# A S Alam <aalam@users.sf.net>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-12 16:43+0530\n"
-"Last-Translator: Amanpreet Singh Alam <amanpreetalam@yahoo.com>\n"
+"PO-Revision-Date: 2007-02-03 10:12+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <fedora-trans-pa@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 
 #: ../chkconfig.c:31
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s ਵਰਜ਼ਨ %s - (C)1997-2000 ਲਈ Red Hat Inc. ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
+msgstr "%s ਵਰਜਨ %s - (C)1997-2000 ਲਈ Red Hat Inc. ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "ਇਹ GNU ਪਬਲਿਕ ਲਾਇਸੈਂਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼ ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ।\n"
 
 #: ../chkconfig.c:35
@@ -49,9 +48,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <ਨਾਂ>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <ਨਾਂ>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -108,12 +107,12 @@ msgstr "%s ਡਾਇਰੈਕਟਰੀ ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਅ�
 #: ../chkconfig.c:603
 #, c-format
 msgid "%s version %s\n"
-msgstr "%s ਵਰਜ਼ਨ %s\n"
+msgstr "%s ਵਰਜਨ %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr " --list, --add, ਜਾਂ --del ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ\n"
+msgstr " --list, --add, --del ਜਾਂ --overrider ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -182,7 +181,7 @@ msgstr "symlink %s ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ਬਦਲਵਾਂ ਵਰਜ਼ਨ %s - (C) 2001 Red Hat, Inc ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
+msgstr "ਬਦਲਵਾਂ ਵਰਜਨ %s - (C) 2001 Red Hat, Inc ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -281,7 +280,7 @@ msgstr "%s ਵਿੱਚ ਗਲਤ ਮੁੱਖ ਲਿੰਕ\n"
 #: ../alternatives.c:217
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "ਮਾਰਗ %s, %s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਹੈ\n"
+msgstr "ਮਾਰਗ %s ਉੱਤੇ %s ਵਿੱਚ ਅਣਜਾਣ ਹੈ ਹੈ\n"
 
 #: ../alternatives.c:226
 #, c-format
@@ -291,7 +290,7 @@ msgstr "%s ਸਲੇਵ ਲਈ %s ਵਿੱਚ ਮਾਰਗ ਗੁੰਮ ਹੈ\
 #: ../alternatives.c:236
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s ਵਿੱਚ ਫਾਇਲ ਦਾ ਆਸ਼ਾਵਿਪਰੀਤ ਅੰਤ\n"
+msgstr "%s ਵਿੱਚ ਫਾਇਲ ਦਾ ਅਚਾਨਕ ਅੰਤ\n"
 
 #: ../alternatives.c:245
 #, c-format
@@ -311,7 +310,7 @@ msgstr "ਸਲੇਵ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ 
 #: ../alternatives.c:306
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s ਵਿੱਚ ਆਸ਼ਾਵਿਪਰੀਤ ਲਾਈਨ: %s\n"
+msgstr "%s ਵਿੱਚ ਅਣਜਾਣ ਲਾਈਨ: %s\n"
 
 #: ../alternatives.c:314
 #, c-format
@@ -321,12 +320,12 @@ msgstr "%s ਸੰਬੰਧ ਨੂੰ ਪੜਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "ਲਿੰਕ ਕਿਸੇ ਵਿਕਲਪ ਵੱਲ ਇਸ਼ਾਰਾ ਨਹੀਂ ਕਰਦਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
+msgstr "ਲਿੰਕ ਕਿਸੇ ਬਦਲ ਵੱਲ ਇਸ਼ਾਰਾ ਨਹੀਂ ਕਰਦਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਤਹਿ ਕਰਦਾ ਹੈ\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "ਲਿੰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਨਿਰਧਾਰਿਤ ਕਰ ਰਿਹਾ ਹੈ\n"
+msgstr "ਲਿੰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਸੈੱਟ ਕਰ ਰਿਹਾ ਹੈ\n"
 
 #: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
@@ -361,12 +360,12 @@ msgstr "%s ਬਣਾਉ ਵਿੱਚ ਅਸਫਲ: %s\n"
 #: ../alternatives.c:472
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%s ਨੂੰ %s ਨਾਲ ਵਿਸਥਾਪਿਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
+msgstr "%s ਨੂੰ %s ਨਾਲ ਬਦਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
 #: ../alternatives.c:498 ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
-msgstr "%s ਜਾਰੀ ਹੈ\n"
+msgstr "%s ਚੱਲਦਾ ਹੈ\n"
 
 #: ../alternatives.c:534
 #, c-format
@@ -381,12 +380,12 @@ msgstr "ਸਲੇਵ %s (%s %s) ਲਈ ਗਲਤ ਲਿੰਕ %s\n"
 #: ../alternatives.c:655
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - ਦਰਜਾ ਸਵੈ ਹੈ।\n"
+msgstr "%s - ਹਾਲਤ ਆਟੋ ਹੈ।\n"
 
 #: ../alternatives.c:657
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - ਦਰਜਾ ਦਸਤਾਵੇਜ਼ੀ ਹੈ।\n"
+msgstr "%s - ਹਾਲਤ ਦਸਤੀ ਹੈ।\n"
 
 #: ../alternatives.c:659
 #, c-format
@@ -406,7 +405,7 @@ msgstr " ਸਲੇਵ %s: %s\n"
 #: ../alternatives.c:670
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "ਵਰਤਮਾਨ ਵਧੀਆ ਵਰਜ਼ਨ %s ਹੈ।\n"
+msgstr "ਮੌਜੂਦਾ `best' ਵਰਜਨ %s ਹੈ।\n"
 
 #: ../alternatives.c:700
 #, c-format
@@ -465,4 +464,5 @@ msgstr "ਪ੍ਰਬੰਧ-ਡਾਇਰੈ %s ਗਲਤ ਹੈ\n"
 #: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "ਵਿਕਲਪ ਵਰਜ਼ਨ %s\n"
+msgstr "ਬਦਲਵਾਂ ਵਰਜਨ %s\n"
+
