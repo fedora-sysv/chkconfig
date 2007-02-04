@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2007-02-03 17:55-0000\n"
+"POT-Creation-Date: 2007-02-03 23:36-0500\n"
+"PO-Revision-Date: 2007-02-04 21:18-0000\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "%s верзија %s - Ауторкс права 1997-2000 Red Hat, Inc.
 #: ../chkconfig.c:32
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Ово се сме слободно делити у складу са одредбама ГНУ Опште јавне лиценце.\n"
+msgstr "Ово се сме слободно раздељивати у складу са одредбама ГНУ Опште јавне лиценце.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -34,22 +34,22 @@ msgstr "употреба: %s --list [име]\n"
 #: ../chkconfig.c:36
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <име>\n"
+msgstr "          %s --add <име>\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <име>\n"
+msgstr "          %s --del <име>\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <име>\n"
+msgstr "          %s --override <име>\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <нивои>] <име> %s\n"
+msgstr "          %s [--level <нивои>] <име> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
