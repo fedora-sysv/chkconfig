@@ -1,21 +1,23 @@
+# translation of de.po to 
 # Copyright (C) 2001 Red Hat, Inc.
+# Ronny Buchmann <ronny-vlug@vlugnet.org> 2005
 # Claudia Krug <fhonig@redhat.it>, 2001.
 # Bernd Groh <bgroh@redhat.com>, 2003,2004.
 # Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
-# Ronny Buchmann <ronny-vlug@vlugnet.org> 2005
+# Timo Trinks <ttrinks@redhat.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-03-23 22:41+0100\n"
-"Last-Translator: Ronny Buchmann <ronny-vlug@vlugnet.org>\n"
-"Language-Team: Deutsch <de@li.org>\n"
+"PO-Revision-Date: 2007-02-05 07:43+1000\n"
+"Last-Translator: Timo Trinks <ttrinks@redhat.com>\n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -25,10 +27,8 @@ msgstr "%s Version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 # ../chkconfig.c:23
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:35
@@ -50,9 +50,9 @@ msgstr "         %s --del <Name>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <Name>\n"
+msgstr "         %s --override <name>\n"
 
 # ../chkconfig.c:29
 #: ../chkconfig.c:39
@@ -122,10 +122,9 @@ msgstr "%s Version %s\n"
 
 # ../chkconfig.c:238
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"nur eines der Argumente --list, --add oder --del darf angegeben werden\n"
+msgstr "nur eines der Argumente --list, --add, --del oder --override darf angegeben werden\n"
 
 # ../chkconfig.c:286
 #: ../chkconfig.c:672
@@ -510,10 +509,3 @@ msgstr "admindir %s ungültig\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives Version %s\n"
 
-# ../ntsysv.c:173
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s\n"
-
-# ../chkconfig.c:151
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "Fehler beim Lesen von Verzeichnis %s/init.d: %s"
