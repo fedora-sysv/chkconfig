@@ -1,14 +1,16 @@
-# Copyright (C) 2003, 2004, 2005 chkconfig's COPYRIGHT HOLDER
-# Copyright (C) 2004, 2005 Miloslav Trmac <mitr@volny.cz>
+# Czech translation of chkconfig
+# Copyright (C) 2003, FSF
 #
 # Miloslav Trmac <mitr@volny.cz>, 2003, 2004, 2005
+# Milan Keršláger <kerslage@linux.cz>, 2007.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig unknown\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-03 13:25+0100\n"
-"Last-Translator: Miloslav Trmac <mitr@volny.cz>, 2003\n"
+"PO-Revision-Date: 2007-02-04 10:12+0100\n"
+"Last-Translator: Milan Kerslager <kerslage@linux.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,14 +19,14 @@ msgstr ""
 #: ../chkconfig.c:31
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s verze %s - Copyright © 1997-2000 Red Hat, Inc.\n"
+msgstr "%s verze %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Tento program může být volně šířen podle podmínek GNU Public License.\n"
+"Program může být volně šířen podle podmínek GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -42,9 +44,8 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <jméno>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <jméno>\n"
+msgstr "         %s --override <jméno>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -104,9 +105,8 @@ msgid "%s version %s\n"
 msgstr "%s verze %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "může být zadán pouze jeden z přepínačů --list, --add nebo --del\n"
+msgstr "může být zadán pouze jeden z přepínačů --list, --add, --del nebo --override\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -131,7 +131,7 @@ msgstr "Zrušit"
 
 #: ../ntsysv.c:90
 msgid "What services should be automatically started?"
-msgstr "Které služby mají být automaticky startovány?"
+msgstr "Které služby mají být automaticky spouštěny?"
 
 #: ../ntsysv.c:96
 msgid "Services"
@@ -155,7 +155,7 @@ msgstr "chybný argument volby --levels\n"
 #: ../ntsysv.c:312
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv nemůže spravovat žádné služby!\n"
+msgstr "Žádné služby nemohou být spravovány pomocí ntsysv!\n"
 
 #: ../leveldb.c:596
 #, c-format
@@ -175,7 +175,7 @@ msgstr "nemohu vytvořit symbolický odkaz %s: %s\n"
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives verze %s - Copyright © 2001 Red Hat, Inc.\n"
+msgstr "alternatives verze %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -183,13 +183,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Tento program může být volně šířen podle podmínek GNU Public License.\n"
+"Program může být volně šířen podle podmínek GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "použití: alternatives --install <odkaz> <jméno> <cesta> <priorita>\n"
+msgstr "použití: alternatives --install <linka> <jméno> <cesta> <priorita>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -199,7 +199,7 @@ msgstr "                      [--initscript <služba>]\n"
 #: ../alternatives.c:62
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                      [--slave <odkaz> <jméno> <cesta>]*\n"
+msgstr "                      [--slave <linka> <jméno> <cesta>]*\n"
 
 #: ../alternatives.c:63
 #, c-format
@@ -239,7 +239,7 @@ msgstr "společné přepínače: --verbose --test --help --usage --version\n"
 #: ../alternatives.c:70
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                  --altdir <adresář> --admindir <adresář>\n"
+msgstr "                    --altdir <adresář> --admindir <adresář>\n"
 
 #: ../alternatives.c:167
 #, c-format
@@ -309,17 +309,17 @@ msgstr "neočekávaný řádek v %s: %s\n"
 #: ../alternatives.c:314
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "nemohu číst odkaz %s: %s\n"
+msgstr "nemohu číst linku %s: %s\n"
 
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "odkaz neukazuje na alternativu -- nastavuji režim na manuální\n"
+msgstr "linka neukazuje na alternativu -- nastavuji režim na manuální\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "odkaz změněn -- nastavuji režim na manuální\n"
+msgstr "linka změněna -- nastavuji režim na manuální\n"
 
 #: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
@@ -329,17 +329,17 @@ msgstr "odstranil by %s\n"
 #: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "nemohu odstranit odkaz %s: %s\n"
+msgstr "nemohu odstranit linku %s: %s\n"
 
 #: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "vytvořil by odkaz %s -> %s\n"
+msgstr "vytvořil by linku %s -> %s\n"
 
 #: ../alternatives.c:390 ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "nemohu vytvořit odkaz %s -> %s: %s\n"
+msgstr "nemohu vytvořit linku %s -> %s: %s\n"
 
 #: ../alternatives.c:439
 #, c-format
@@ -364,12 +364,12 @@ msgstr "spouštím %s\n"
 #: ../alternatives.c:534
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "primární odkaz pro %s musí být %s\n"
+msgstr "primární linka pro %s musí být %s\n"
 
 #: ../alternatives.c:614
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "link %s nesprávný pro podřízeného %s (%s %s)\n"
+msgstr "linka %s nesprávný pro podřízeného %s (%s %s)\n"
 
 #: ../alternatives.c:655
 #, c-format
@@ -384,7 +384,7 @@ msgstr "%s - stav je manuální.\n"
 #: ../alternatives.c:659
 #, c-format
 msgid " link currently points to %s\n"
-msgstr " odkaz momentálně ukazuje na %s\n"
+msgstr " linka momentálně ukazuje na %s\n"
 
 #: ../alternatives.c:662
 #, c-format
@@ -459,9 +459,3 @@ msgstr "admindir %s neplatný\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verze %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "chyba při čtení z adresáře %s/init.d: %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "chyba při čtení z adresáře %s/init.d: %s"
