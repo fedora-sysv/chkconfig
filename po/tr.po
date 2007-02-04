@@ -1,27 +1,27 @@
 # translation of tr.po to Turkish
-# translation of tr.po to TURKISH
 #
 # Turkish translations for chkconfig messages.
-# Copyright (C) 2002,2003, 2004 Free Software Foundation, Inc.
-# $Id: tr.po,v 1.39 2007/02/02 21:40:14 ltenn Exp $
+# Copyright (C) 2002,2003, 2004, 2007 Free Software Foundation, Inc.
+# $Id: tr.po,v 1.40 2007/02/04 03:05:01 emturanb Exp $
+#
+#
 # Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003.
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003.
 # Hasan Umit Ezerce <humit@tr.net>, 2004.
 # Hasan Umit Ezerce <humit@linuxmail.org>, 2004.
-# 
-#
+# Egemen Metin Turan <mturan@aegee-ankara.org>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-04-16 19:58+0200\n"
-"Last-Translator: Bahadır Yağan <bahadir.yagan@mht.com.tr>\n"
+"PO-Revision-Date: 2007-02-04 04:44+0200\n"
+"Last-Translator: Egemen Metin Turan <mturan@aegee-ankara.org>\n"
 "Language-Team: Turkish <fedora-trans-tr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -30,10 +30,8 @@ msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -51,9 +49,9 @@ msgid "         %s --del <name>\n"
 msgstr "             %s --del <isim>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "             %s --del <isim>\n"
+msgstr "         %s --override <isim>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -113,15 +111,14 @@ msgid "%s version %s\n"
 msgstr "%s sürüm %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "--list, --add veya --del seçeneklerinden sadece biri belirtilebilir\n"
+msgstr "--list, --add veya --override seçeneklerinden sadece biri belirtilebilir\n"
 
 #: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
@@ -324,8 +321,7 @@ msgstr "%s bağlantısı okunamıyor: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
+msgstr "bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
 
 #: ../alternatives.c:333
 #, c-format
@@ -473,8 +469,3 @@ msgstr "%s yönetici dizini geçersiz\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives %s sürümü\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "%s/init.d dizininden okurken hata: %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "%s/init.d dizininden okunurken hata: %s"
