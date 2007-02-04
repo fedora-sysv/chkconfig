@@ -1,25 +1,23 @@
-# translation of it.po to Italiano
-# translation of it.po to
-# translation of it.po to
-# Copyright (C) 2000, 2004, 2005, 2006 Free Software Foundation, Inc.
+# translation of it.po to italiano
+# Copyright (C) 2000, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 #
 # Bettina De Monti  <bdemonti@redhat.it>, 2000.
 # Paolo Dona' <vik@3jv.com>, 2004.
 # Francesco Valente <fvalen@redhat.com>, 2004.
 # Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
-# Francesco Tombolini <tombo@adamantio.net>, 2006.
+# Francesco Tombolini <tombo@adamantio.net>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-02-05 10:02-0500\n"
+"PO-Revision-Date: 2007-02-04 01:17+0100\n"
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
-"Language-Team: Italiano <fedora-trans-it@redhat.com>\n"
+"Language-Team: italiano <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../chkconfig.c:31
@@ -29,35 +27,33 @@ msgstr "%s versione %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Questo software è liberamente distribuibile secondo la GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Questo software è liberamente distribuibile secondo i termini della GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "usare:  %s --list [nome]\n"
+msgstr "uso:     %s --list [nome]\n"
 
 #: ../chkconfig.c:36
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "        %s --add <nome>\n"
+msgstr "         %s --add <nome>\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "        %s --del <nome>\n"
+msgstr "         %s --del <nome>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "        %s --del <nome>\n"
+msgstr "         %s --override <nome>\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "        %s [--level <livelli>] <nome> %s)\n"
+msgstr "         %s [--level <livelli>] <nome> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
@@ -112,9 +108,9 @@ msgid "%s version %s\n"
 msgstr "%s versione %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "solo una delle opzioni --list, --add o --del può essere specificata\n"
+msgstr "solo una delle opzioni --list, --add, --del o --override può essere specificata\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -191,13 +187,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Questo software è liberamente distribuibile secondo la GNU Public License.\n"
+"Questo software è liberamente distribuibile secondo i termini della GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso: alternatives --install <link> <nome> <percorso> <priorità>\n"
+msgstr "uso:   alternatives --install <link> <nome> <percorso> <priorità>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -207,7 +203,7 @@ msgstr "                    [--initscript <servizio>]\n"
 #: ../alternatives.c:62
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <nome> <percorso>]*\n"
+msgstr "                    [--slave <link> <nome> <percorso>]\n"
 
 #: ../alternatives.c:63
 #, c-format
@@ -322,8 +318,7 @@ msgstr "impossibile leggere il link %s: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"il link non punta ad alcuna alternativa -- modalità impostata su manuale\n"
+msgstr "il link non punta ad alcuna alternativa -- modalità impostata su manuale\n"
 
 #: ../alternatives.c:333
 #, c-format
@@ -470,3 +465,4 @@ msgstr "admindir %s non valida\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives versione %s\n"
+
