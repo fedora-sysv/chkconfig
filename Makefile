@@ -51,24 +51,24 @@ clean:
 	rm -f chkconfig-*.tar.gz *~ *.old
 
 install:
-	[ -d $(instroot)/$(BINDIR) ] || mkdir -p $(instroot)/$(BINDIR)
-	[ -d $(instroot)/$(USRSBINDIR) ] || mkdir -p $(instroot)/$(USRSBINDIR)
-	[ -d $(instroot)/$(MANDIR) ] || mkdir -p $(instroot)/$(MANDIR)
-	[ -d $(instroot)/$(MANDIR)/man8 ] || mkdir -p $(instroot)/$(MANDIR)/man8
-	[ -d $(instroot)/$(MANDIR)/man5 ] || mkdir -p $(instroot)/$(MANDIR)/man5
-	[ -d $(instroot)/$(ALTDIR) ] || mkdir -p -m 755 $(instroot)/$(ALTDIR)
-	[ -d $(instroot)/$(ALTDATADIR) ] || mkdir -p -m 755 $(instroot)/$(ALTDATADIR)
+	[ -d $(DESTDIR)/$(BINDIR) ] || mkdir -p $(DESTDIR)/$(BINDIR)
+	[ -d $(DESTDIR)/$(USRSBINDIR) ] || mkdir -p $(DESTDIR)/$(USRSBINDIR)
+	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
+	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
+	[ -d $(DESTDIR)/$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man5
+	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
+	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 
-	install -m 755 $(PROG) $(instroot)/$(BINDIR)/$(PROG)
-	install -m 755 ntsysv $(instroot)/$(USRSBINDIR)/ntsysv
-	install -m 755 alternatives $(instroot)/$(USRSBINDIR)/alternatives
-	ln -s alternatives $(instroot)/$(USRSBINDIR)/update-alternatives
+	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
+	install -m 755 ntsysv $(DESTDIR)/$(USRSBINDIR)/ntsysv
+	install -m 755 alternatives $(DESTDIR)/$(USRSBINDIR)/alternatives
+	ln -s alternatives $(DESTDIR)/$(USRSBINDIR)/update-alternatives
 	
 	for i in $(MAN); do \
-		install -m 644 $$i $(instroot)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
+		install -m 644 $$i $(DESTDIR)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
 
-	ln -s alternatives.8 $(instroot)/$(MANDIR)/man8/update-alternatives.8
+	ln -s alternatives.8 $(DESTDIR)/$(MANDIR)/man8/update-alternatives.8
 
 	for d in $(SUBDIRS); do \
 	(cd $$d; $(MAKE) install) \

@@ -5,8 +5,8 @@ Release: 1
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
-BuildPrereq: newt newt-devel gettext
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires: newt-devel gettext
 Conflicts: initscripts <= 5.30-1
 
 %description
@@ -32,15 +32,11 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 
 %build
 
-%ifarch sparc
-LIBMHACK=-lm
-%endif
-
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LIBMHACK=$LIBMHACK
+make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make instroot=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
+make DESTDIR=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d
@@ -313,10 +309,10 @@ rm -rf $RPM_BUILD_ROOT
 - bump copyright date
 
 * Tue Jul 11 2000 Bill Nottingham <notting@redhat.com>
-- no %pre today. Maybe tomorrow.
+- no %%pre today. Maybe tomorrow.
 
 * Thu Jul  6 2000 Bill Nottingham <notting@redhat.com>
-- put initscripts %pre here too
+- put initscripts %%pre here too
 
 * Mon Jul  3 2000 Bill Nottingham <notting@redhat.com>
 - oops, if we don't prereq initscripts, we *need* to own /etc/rc[0-6].d
