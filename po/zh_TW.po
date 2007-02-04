@@ -6,13 +6,14 @@
 # Ben Wu <hpwu@redhat.com>, 2002, 2003.
 # Jouston Huang <jouston@jouston.no-ip.com>, 2004.
 # Chester Cheng <ccheng@redhat.com>, 2005.
+# Walter Cheuk <wwycheuk@gmail.com>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-03 14:39+1000\n"
+"PO-Revision-Date: 2007-02-04 17:54+0800\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese Traditional <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,9 +48,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <名稱>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <名稱>\n"
+msgstr "         %s --override <名稱>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -108,9 +109,9 @@ msgid "%s version %s\n"
 msgstr "%s 版本 %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "只能指定 --list, --add, 或 --del 中的其中一個\n"
+msgstr "只能指定 --list, --add, --del, 或 --override 中的其中一個\n"
 
 #: ../chkconfig.c:672
 #, c-format
