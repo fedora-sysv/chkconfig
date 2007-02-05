@@ -36,7 +36,7 @@ make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT MANDIR=%{_mandir} install
+make DESTDIR=$RPM_BUILD_ROOT MANDIR=%{_mandir} SBINDIR=%{_sbindir} install
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d

@@ -8,7 +8,7 @@ LDFLAGS=-g
 MAN=chkconfig.8 ntsysv.8 alternatives.8
 PROG=chkconfig
 BINDIR = /sbin
-USRSBINDIR = /usr/sbin
+SBINDIR = /usr/sbin
 MANDIR = /usr/man
 ALTDIR = /var/lib/alternatives
 ALTDATADIR = /etc/alternatives
@@ -52,7 +52,7 @@ clean:
 
 install:
 	[ -d $(DESTDIR)/$(BINDIR) ] || mkdir -p $(DESTDIR)/$(BINDIR)
-	[ -d $(DESTDIR)/$(USRSBINDIR) ] || mkdir -p $(DESTDIR)/$(USRSBINDIR)
+	[ -d $(DESTDIR)/$(SBINDIR) ] || mkdir -p $(DESTDIR)/$(SBINDIR)
 	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
 	[ -d $(DESTDIR)/$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man5
@@ -60,9 +60,9 @@ install:
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 
 	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
-	install -m 755 ntsysv $(DESTDIR)/$(USRSBINDIR)/ntsysv
-	install -m 755 alternatives $(DESTDIR)/$(USRSBINDIR)/alternatives
-	ln -s alternatives $(DESTDIR)/$(USRSBINDIR)/update-alternatives
+	install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
+	install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives
+	ln -s alternatives $(DESTDIR)/$(SBINDIR)/update-alternatives
 	
 	for i in $(MAN); do \
 		install -m 644 $$i $(DESTDIR)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
