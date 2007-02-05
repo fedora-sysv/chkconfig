@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.32
+Version: 1.3.33
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -55,8 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 %dir /etc/alternatives
 /sbin/chkconfig
-/usr/sbin/update-alternatives
-/usr/sbin/alternatives
+%{_sbindir}/update-alternatives
+%{_sbindir}/alternatives
 /etc/init.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
@@ -68,10 +68,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n ntsysv
 %defattr(-,root,root)
-/usr/sbin/ntsysv
+%{_sbindir}/ntsysv
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Feb  5 2007 Bill Nottingham <notting@redhat.com> 1.3.33-1
+- various changes from review
+
 * Fri Feb  2 2007 Bill Nottingham <notting@redhat.com> 1.3.32-1
 - support overriding various defaults via /etc/chkconfig.d (<johnsonm@rpath.com>)
 
