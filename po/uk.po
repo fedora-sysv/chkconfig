@@ -1,14 +1,14 @@
 # Ukrainian translation of chkconfig.
 # Copyright (C) Free Software Foundation
 # Dmytro Koval'ov <kov@tokyo.email.ne.jp>
-# Maxim Dzumanenko <mvd@mylinux.com.ua>, 2003
+# Maxim Dzumanenko <dziumanenko@gmail.com>, 2003-2007
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-06-08 17:56+0200\n"
-"Last-Translator: Maxim Dzumanenko <mvd@mylinux.com.ua>\n"
+"PO-Revision-Date: 2007-02-05 17:56+0200\n"
+"Last-Translator: Maxim Dzumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,9 +41,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <служба>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <служба>\n"
+msgstr "         %s --override <служба>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -103,9 +103,9 @@ msgid "%s version %s\n"
 msgstr "%s версія %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "можна вказувати лише один аргумент з --list, --add або --del\n"
+msgstr "можна вказувати лише один аргумент з --list, --add, --del або --override\n"
 
 #: ../chkconfig.c:672
 #, c-format
