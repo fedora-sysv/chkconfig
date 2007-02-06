@@ -18,7 +18,7 @@ of the drudgery of manually editing the symbolic links.
 %package -n ntsysv
 Summary: A tool to set the stop/start of system services in a runlevel
 Group: System Environment/Base
-Requires: chkconfig = %{version}
+Requires: chkconfig = %{version}-%{release}
 
 %description -n ntsysv
 Ntsysv provides a simple interface for setting which system services
