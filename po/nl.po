@@ -1,20 +1,20 @@
 # Dutch translation of chkconfig
-# Copyright (C) 2003, 2005 Free Software Foundation, Inc.
-# Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004.
-# Peter van Egdom <p.van.egdom@chello.nl>, 2003, 2005.
+# Copyright (C) 2003, 2005, 2007 Free Software Foundation, Inc.
 #
+# Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004.
+# Peter van Egdom <p.van.egdom@gmail.com>, 2003, 2005, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-05 10:34+0100\n"
-"Last-Translator: Peter van Egdom <p.van.egdom@chello.nl>\n"
+"PO-Revision-Date: 2007-02-07 21:55+0100\n"
+"Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -45,9 +45,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <naam>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <naam>\n"
+msgstr "         %s --override <naam>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -76,7 +76,7 @@ msgstr "fout bij lezen informatie over service %s: %s\n"
 #: ../chkconfig.c:181 ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "openen %s/init.d: %s mislukt\n"
+msgstr "openen van %s/init.d mislukt: %s\n"
 
 #: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "on"
@@ -99,7 +99,7 @@ msgstr "services gebaseerd op xinetd:\n"
 #: ../chkconfig.c:463
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "openen map %s mislukt: %s\n"
+msgstr "openen van map %s mislukt: %s\n"
 
 #: ../chkconfig.c:603
 #, c-format
@@ -107,9 +107,9 @@ msgid "%s version %s\n"
 msgstr "%s versie %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "slechts een van --list, --add, of --del mag worden gegeven\n"
+msgstr "slechts een van --list, --add, --del of --override mag worden opgegeven\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -163,7 +163,7 @@ msgstr "Er mogen geen services worden beheerd door ntsysv!\n"
 #: ../leveldb.c:596
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "patroon %s 'globben' mislukt: %s\n"
+msgstr "globben van patroon %s mislukt: %s\n"
 
 #: ../leveldb.c:639
 #, c-format
@@ -253,12 +253,12 @@ msgstr "lezen van %s\n"
 #: ../alternatives.c:171
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "openen %s mislukt: %s\n"
+msgstr "openen van %s mislukt: %s\n"
 
 #: ../alternatives.c:180
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "lezen %s mislukt: %s\n"
+msgstr "lezen van %s mislukt: %s\n"
 
 #: ../alternatives.c:189
 #, c-format
@@ -334,7 +334,7 @@ msgstr "zou %s verwijderen\n"
 #: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "link %s verwijderen mislukt: %s\n"
+msgstr "verwijderen van link %s mislukt: %s\n"
 
 #: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
@@ -344,7 +344,7 @@ msgstr "zou %s linken -> %s\n"
 #: ../alternatives.c:390 ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "aanmaken link %s -> %s mislukt %s\n"
+msgstr "aanmaken van link %s -> %s mislukt: %s\n"
 
 #: ../alternatives.c:439
 #, c-format
@@ -354,7 +354,7 @@ msgstr "%s bestaat reeds\n"
 #: ../alternatives.c:441
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "aanmaken %s mislukt: %s\n"
+msgstr "aanmaken van %s mislukt: %s\n"
 
 #: ../alternatives.c:472
 #, c-format
@@ -449,7 +449,7 @@ msgstr "(zou %s verwijderen\n"
 #: ../alternatives.c:785
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "verwijderen %s mislukt: %s\n"
+msgstr "verwijderen van %s mislukt: %s\n"
 
 #: ../alternatives.c:907
 #, c-format
