@@ -72,8 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
-* Mon Feb  5 2007 Bill Nottingham <notting@redhat.com> 1.3.33-1
-- various changes from review
+* Tue Feb  6 2007 Bill Nottingham <notting@redhat.com> 1.3.33-1
+- various changes from review - support alternate %%{_sbindir}, fix
+  summaries, add version to requires, assorted other bits
 
 * Fri Feb  2 2007 Bill Nottingham <notting@redhat.com> 1.3.32-1
 - support overriding various defaults via /etc/chkconfig.d (<johnsonm@rpath.com>)
