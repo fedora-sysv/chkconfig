@@ -3,13 +3,13 @@
 # Christian Rose <menthos@menthos.com>, 2005.
 # Göran Uddeborg <goeran@uddeborg.se> 2004.
 #
-# $Id: sv.po,v 1.35 2007/02/04 01:00:03 raada Exp $
+# $Id: sv.po,v 1.36 2007/02/10 02:51:17 raada Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
+"POT-Creation-Date: 2007-02-03 23:36-0500\n"
 "PO-Revision-Date: 2007-02-03 19:59-0500\n"
 "Last-Translator: Magnus Larsson <fedoratrans@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -24,8 +24,10 @@ msgstr "%s version %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Detta program kan distribueras fritt under villkoren i GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"Detta program kan distribueras fritt under villkoren i GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -54,8 +56,12 @@ msgstr "              %s [--level <nivåer>] <namn> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "tjänsten %s stöder chkconfig men nämns inte i någon körnivå (kör \"chkconfig --add %s\")\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"tjänsten %s stöder chkconfig men nämns inte i någon körnivå (kör \"chkconfig "
+"--add %s\")\n"
 
 #: ../chkconfig.c:48
 #, c-format
@@ -67,28 +73,20 @@ msgstr "tjänsten %s stöder inte chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
 
-#: ../chkconfig.c:181
-#: ../chkconfig.c:406
+#: ../chkconfig.c:181 ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "misslyckades med att öppna %s/init.d: %s\n"
 
-#: ../chkconfig.c:350
-#: ../chkconfig.c:355
-#: ../chkconfig.c:499
+#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "on"
 msgstr "på"
 
-#: ../chkconfig.c:350
-#: ../chkconfig.c:355
-#: ../chkconfig.c:499
+#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "off"
 msgstr "av"
 
-#: ../chkconfig.c:428
-#: ../ntsysv.c:178
-#: ../ntsysv.c:205
-#: ../ntsysv.c:243
+#: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fel vid läsning av information om tjänsten %s: %s\n"
@@ -122,8 +120,7 @@ msgstr "endast en körnivå (runlevel) kan anges i en chkconfig-fråga\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Tryck <F1> för mer information om en tjänst."
 
-#: ../ntsysv.c:78
-#: ../ntsysv.c:115
+#: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
 msgstr "Ok"
 
@@ -195,7 +192,8 @@ msgstr ""
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
+msgstr ""
+"användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -321,34 +319,30 @@ msgstr "misslyckades med att läsa länken %s: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "länken pekar inte till något alternativ -- ställer in läge till manuellt\n"
+msgstr ""
+"länken pekar inte till något alternativ -- ställer in läge till manuellt\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "länken ändrad -- ställer in läge till manuellt\n"
 
-#: ../alternatives.c:361
-#: ../alternatives.c:368
+#: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
 msgstr "skulle ta bort %s\n"
 
-#: ../alternatives.c:363
-#: ../alternatives.c:370
-#: ../alternatives.c:401
+#: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "misslyckades med att ta bort länken %s: %s\n"
 
-#: ../alternatives.c:386
-#: ../alternatives.c:398
+#: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "skulle länka %s -> %s\n"
 
-#: ../alternatives.c:390
-#: ../alternatives.c:407
+#: ../alternatives.c:390 ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "misslyckades med att länka %s -> %s: %s\n"
@@ -368,8 +362,7 @@ msgstr "misslyckades med att skapa %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "misslyckades med att ersätta %s med %s: %s\n"
 
-#: ../alternatives.c:498
-#: ../alternatives.c:507
+#: ../alternatives.c:498 ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
 msgstr "kör %s\n"
@@ -443,8 +436,7 @@ msgstr ""
 "\n"
 "fel vid läsning av val\n"
 
-#: ../alternatives.c:741
-#: ../alternatives.c:767
+#: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s har inte konfigurerats som ett alternativ för %s\n"
@@ -476,4 +468,3 @@ msgstr "alternatives version %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "fel vid läsning från katalogen %s/init.d: %s\n"
-
