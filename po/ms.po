@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-05 23:23+0800\n"
+"PO-Revision-Date: 2007-02-14 22:23+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,10 +24,8 @@ msgstr "%s versi %s - Hakcipta (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Ia boleh disebar semula dengan bebas dibawah syarat GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -45,9 +43,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <nama>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <nama>\n"
+msgstr "         %s --override <nama>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -56,12 +54,8 @@ msgstr "         %s [--level <tahap>] <nama> %s)\n"
 
 #: ../chkconfig.c:46
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"khidmat %s menyokong chkconfig, tetapi tidak dirujuk didalam sebarang "
-"runlevel (laksanakan 'chkconfig --add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "khidmat %s menyokong chkconfig, tetapi tidak dirujuk didalam sebarang runlevel (laksanakan 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:48
 #, c-format
@@ -73,20 +67,28 @@ msgstr "khidmat %s tidak menyokong chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "ralat membaca meklumat pada khidmat %s: %s\n"
 
-#: ../chkconfig.c:181 ../chkconfig.c:406
+#: ../chkconfig.c:181
+#: ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gagal untuk membuka %s/init.d: %s\n"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
+#: ../chkconfig.c:428
+#: ../ntsysv.c:178
+#: ../ntsysv.c:205
+#: ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "ralat membaca maklumat untuk khidmat %s: %s\n"
@@ -107,9 +109,9 @@ msgid "%s version %s\n"
 msgstr "%s versi %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "hanya satu daripada --list, --add, atau --del boleh digunakan\n"
+msgstr "hanya satu daripada --list, --add, --del, atau --override boleh dinyatakan\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -120,7 +122,8 @@ msgstr "hanya satu runlevel boleh digunakan dengan chkconfig\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Tekan <F1> untuk lebih maklumat berkenaan sesuatu khidmat."
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:78
+#: ../ntsysv.c:115
 msgid "Ok"
 msgstr "Ok"
 
@@ -317,30 +320,34 @@ msgstr "gagal untuk membaca %s: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"pautan merujuk kepada tiada alternatif -- menetapkan mod kepada manual\n"
+msgstr "pautan merujuk kepada tiada alternatif -- menetapkan mod kepada manual\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "pautan berubah -- menetapkan mod kepada manual\n"
 
-#: ../alternatives.c:361 ../alternatives.c:368
+#: ../alternatives.c:361
+#: ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
 msgstr "akan membuang %s\n"
 
-#: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
+#: ../alternatives.c:363
+#: ../alternatives.c:370
+#: ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "gagal untuk membuang pautan %s: %s\n"
 
-#: ../alternatives.c:386 ../alternatives.c:398
+#: ../alternatives.c:386
+#: ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "akan mempaut %s -> %s\n"
 
-#: ../alternatives.c:390 ../alternatives.c:407
+#: ../alternatives.c:390
+#: ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "gagal untuk mempaut %s -> %s: %s\n"
@@ -360,7 +367,8 @@ msgstr "gagal untuk mencipta %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "gagal untuk menggantikan %s dengan %s: %s\n"
 
-#: ../alternatives.c:498 ../alternatives.c:507
+#: ../alternatives.c:498
+#: ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
 msgstr "melaksanakan %s\n"
@@ -434,7 +442,8 @@ msgstr ""
 "\n"
 "ralat membaca pilihan\n"
 
-#: ../alternatives.c:741 ../alternatives.c:767
+#: ../alternatives.c:741
+#: ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s tidak ditentutetap sebagai alternatif untuk %s\n"
@@ -463,3 +472,4 @@ msgstr "admindir %s tidak sah\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "versi alternatif %s\n"
+
