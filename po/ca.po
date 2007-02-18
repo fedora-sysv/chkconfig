@@ -1,8 +1,8 @@
 # Catalan translations for chkconfig package.
-# Copyright @ 2004, 2005, The Free Software Foundation, Inc.
+# Copyright @ 2004, 2005, 2007 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the chkconfig package.
 # Jordi Barnés <jordi2@t-email.co.uk>, 2004.
-# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004, 2005.
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004, 2005, 2007.
 #
 # This file is translated according to the glossary and style guide of
 #   Softcatalà. If you plan to modify this file, please read first the page
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-04-21 00:00+0200\n"
+"PO-Revision-Date: 2007-02-18 10:12+0100\n"
 "Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "Language-Team: Catalan <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
@@ -57,9 +57,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s –-del <nom>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s –-del <nom>\n"
+msgstr "         %s –-override <nom>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -119,9 +119,11 @@ msgid "%s version %s\n"
 msgstr "%s versió %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "només es pot especificar una opció --list, --add, o --del\n"
+msgstr ""
+"només es pot especificar una de les opcions --list, --add, --del, o --"
+"override\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -139,7 +141,7 @@ msgstr "D'acord"
 
 #: ../ntsysv.c:78
 msgid "Back"
-msgstr "Endarrere"
+msgstr "Enrere"
 
 #: ../ntsysv.c:78
 msgid "Cancel"
