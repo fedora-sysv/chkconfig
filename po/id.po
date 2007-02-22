@@ -1,14 +1,14 @@
 # chkconfig Bahasa Indonesia
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Mohammad DAMT <mdamt@linux.or.id>, 1999.
-# Teguh DC <dheche@brawijaya.ac.id>, 2004
-# $Id: id.po,v 1.26 2007/02/02 20:56:01 ltenn Exp $
+# Teguh DC <dheche@brawijaya.ac.id>, 2004-2007
+# $Id: id.po,v 1.27 2007/02/22 19:38:24 dheche Exp $
 msgid ""
 msgstr ""
 "Project-Id-Version: ID-chkconfig 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-22 21:52+0700\n"
+"PO-Revision-Date: 2007-02-23 02:40+0700\n"
 "Last-Translator: Teguh DC <dheche@brawijaya.ac.id>\n"
 "Language-Team: LDP Indonesia <http://www.linux.or.id>\n"
 "MIME-Version: 1.0\n"
@@ -43,9 +43,9 @@ msgid "         %s --del <name>\n"
 msgstr "           %s --del <name>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "           %s --del <name>\n"
+msgstr "           %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -105,9 +105,9 @@ msgid "%s version %s\n"
 msgstr "%s versi %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "hanya satu dari --list, --add, atau --del yang dapat dipilih\n"
+msgstr "hanya satu dari --list, --add, --del atau --override yang dapat dipilih\n"
 
 #: ../chkconfig.c:672
 #, c-format
