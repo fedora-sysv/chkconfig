@@ -1,20 +1,20 @@
 # translation of ml.po to Malayalam
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Ani Peter <apeter@redhat.com>, 2006.
 #
+# Ani Peter <apeter@redhat.com>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-12-09 11:23+0530\n"
+"PO-Revision-Date: 2007-03-02 10:34+0530\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
-"Language-Team: Malayalam\n"
+"Language-Team: Malayalam <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
 "\n"
@@ -26,8 +26,7 @@ msgstr "%s വേറ്‍ഷന്‍ %s - Copyright (C) 1997-2000 Red Hat, Inc
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU Public License കരാറിന്‍ പ്രകാരം ഇവ സൌജന്യമായി വിതരണം ചെയ്യാവുന്നതാണ്.\n"
 
 #: ../chkconfig.c:35
@@ -46,9 +45,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -108,9 +107,9 @@ msgid "%s version %s\n"
 msgstr "%s വേറ്‍ഷന്‍ %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "--list, --add, --del എന്നവയില്‍ ഒരെണ്ണം വ്യക്തമാക്കുക\n"
+msgstr "--list, --add, --del, --override എന്നവയില്‍ ഒരെണ്ണം വ്യക്തമാക്കുക\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -467,3 +466,4 @@ msgstr "admindir %s അസാധുവാണ്\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "പകരമായ വേര്‍ഷന്‍ %s\n"
+
