@@ -4,31 +4,30 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Automatically generated, 2004.
-# George Machitidze <giomac@gmail.com>, 2006.
+# George Machitidze <giomac@gmail.com>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ka\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-09-27 01:23+0400\n"
+"PO-Revision-Date: 2007-03-03 12:57+0400\n"
 "Last-Translator: George Machitidze <giomac@gmail.com>\n"
 "Language-Team: Georgian <guiasher@mes.gov.ge>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: ../chkconfig.c:31
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s ვერსია %s - საავტორო უფლებები (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "შეიძლება თავისუფლად გავრცელდეს GNU Public License-ის პირობების და წესების მიხედვით.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -61,44 +60,46 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"%s-ს აქვს chkconfig-ის მხარდაჭერა, მაგრამ არ არის განსაზღვრული არცერთ გაშვების დონეზე (გაუშვით "
+"'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:48
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "%s სერვისს არ აქვს chkconfig-ის მხარდაჭერა\n"
 
 #: ../chkconfig.c:50
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s სერვისის შესახებ ინფორმაციის წაკითხვისას: %s\n"
 
 #: ../chkconfig.c:181 ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr ""
+msgstr "%s/init.d-ის გახსნა შუძლებელია: %s\n"
 
 #: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "on"
-msgstr ""
+msgstr "ჩართვა"
 
 #: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
 msgid "off"
-msgstr ""
+msgstr "გათიშვა"
 
 #: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s სერვისის შესახებ ინფორმაციის წაკითხვისას: %s\n"
 
 #: ../chkconfig.c:461
 #, c-format
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd-ზე დაფუძნებულოი სერვისები:\n"
 
 #: ../chkconfig.c:463
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s დირექტორიის გახსნისას: %s\n"
 
 #: ../chkconfig.c:603
 #, c-format
@@ -113,11 +114,11 @@ msgstr "შესაძლებელია მხოლოდ ერთი --l
 #: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "სერვისის შესახებ დამეტებითი ინფორმაციისთვის დააჭირეთ ღილაკს <F1>."
 
 #: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
@@ -133,7 +134,7 @@ msgstr "შეწყვეტა"
 
 #: ../ntsysv.c:90
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "რომელმა სერვისები უნდა გაიშვას ავტომატურად?"
 
 #: ../ntsysv.c:96
 msgid "Services"
@@ -142,22 +143,22 @@ msgstr "სერვისები"
 #: ../ntsysv.c:252
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s დირექტორიიდან წაკითხვისას: %s\n"
 
 #: ../ntsysv.c:288
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr ""
+msgstr "თქვენ უნდა იყოთ root რომ გაუშვათ %s.\n"
 
 #: ../ntsysv.c:305
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "ცუდი არგუმენტი პარამეტრისთვის --levels\n"
 
 #: ../ntsysv.c:312
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ntsysv-ის მიერ მართვადი სერვისები არაა!\n"
 
 #: ../leveldb.c:596
 #, c-format
@@ -167,29 +168,29 @@ msgstr ""
 #: ../leveldb.c:639
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "მიმდინარე გაშვების დონის დადგენა შეუძლებელია\n"
 
 #: ../leveldb.c:727
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s სიმბოლური ბმის შექმნისას: %s\n"
 
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "alternatives, ვერსია %s - საავტორო უფლებები (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:59
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr ""
+msgstr "შეიძლება თავისუფლად გავრცელდეს GNU Public License-ის პირობების და წესების მიხედვით.\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "გამოყენება: alternatives --install <ბმა> <სახელი> <გეზი> <პრიორიტეტი>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -204,27 +205,27 @@ msgstr "                    [--slave <ბმა> <სახელი> <გეზ
 #: ../alternatives.c:63
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --remove <სახელი> <გეზი>\n"
 
 #: ../alternatives.c:64
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr ""
+msgstr "       alternatives --auto <სახელი>\n"
 
 #: ../alternatives.c:65
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr ""
+msgstr "       alternatives --config <სახელი>\n"
 
 #: ../alternatives.c:66
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr ""
+msgstr "       alternatives --display <სახელი>\n"
 
 #: ../alternatives.c:67
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
+msgstr "       alternatives --set <სახელი> <გეზი>\n"
 
 #: ../alternatives.c:68
 #, c-format
@@ -234,32 +235,32 @@ msgstr "\n"
 #: ../alternatives.c:69
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "საერთო პარამეტრები: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <დირექტორია> --admindir <დირექტორია>\n"
+msgstr "                --altdir <დირექტორია> --admindir <დირექტირია>\n"
 
 #: ../alternatives.c:167
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "იკითხება %s\n"
 
 #: ../alternatives.c:171
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s-ის გახსნისას: %s\n"
 
 #: ../alternatives.c:180
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s-ის გახსნისას: %s\n"
 
 #: ../alternatives.c:189
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s ცარიელია!\n"
 
 #: ../alternatives.c:198
 #, c-format
@@ -359,7 +360,7 @@ msgstr ""
 #: ../alternatives.c:498 ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "%s-ი გაშვება...\n"
 
 #: ../alternatives.c:534
 #, c-format
@@ -374,12 +375,12 @@ msgstr ""
 #: ../alternatives.c:655
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - მდგომარეობა ავტომატურია.\n"
 
 #: ../alternatives.c:657
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - მდგომარეობა ხელითაა მითითებული.\n"
 
 #: ../alternatives.c:659
 #, c-format
@@ -399,7 +400,7 @@ msgstr ""
 #: ../alternatives.c:670
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "მიმდინარე `საუკეთესო' ვერსიაა %s.\n"
 
 #: ../alternatives.c:700
 #, c-format
@@ -427,6 +428,8 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"შეცდომა არჩევანის წაკითხვისას\n"
 
 #: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
@@ -456,4 +459,5 @@ msgstr ""
 #: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "alternatives, ვერსია %s\n"
+
