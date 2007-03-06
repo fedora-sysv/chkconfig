@@ -6,12 +6,12 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2005-02-18 18:41+0100\n"
-"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
+"PO-Revision-Date: 2007-03-06 13:40+0100\n"
+"Last-Translator: Mike Karas <zoliqe@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -20,10 +20,8 @@ msgstr "%s verzia %s - Autorské práva © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Program môže byť voľne šírený za podmienok určených GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Program môže byť voľne šírený za podmienok určených GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -41,9 +39,9 @@ msgid "         %s --del <name>\n"
 msgstr "            %s --del <názov>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "            %s --del <názov>\n"
+msgstr "         %s --override <názov>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -52,12 +50,8 @@ msgstr "            %s [--level <úrovne>] <názov> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"služba %s podporuje chkconfig, ale nie je na ňu odkazované zo žiadnej úrovne "
-"(spustite 'chkconfig --add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "služba %s podporuje chkconfig, ale nie je na ňu odkazované zo žiadnej úrovne (spustite 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:48
 #, c-format
@@ -69,20 +63,28 @@ msgstr "služba %s nepodporuje chkconfig\n"
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 
-#: ../chkconfig.c:181 ../chkconfig.c:406
+#: ../chkconfig.c:181
+#: ../chkconfig.c:406
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nepodarilo sa otvoriť %s/init.d: %s\n"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "on"
 msgstr "zapnuté"
 
-#: ../chkconfig.c:350 ../chkconfig.c:355 ../chkconfig.c:499
+#: ../chkconfig.c:350
+#: ../chkconfig.c:355
+#: ../chkconfig.c:499
 msgid "off"
 msgstr "vypnuté"
 
-#: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
+#: ../chkconfig.c:428
+#: ../ntsysv.c:178
+#: ../ntsysv.c:205
+#: ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
@@ -103,9 +105,9 @@ msgid "%s version %s\n"
 msgstr "%s verzia %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "môže byť zadaná iba jedna z volieb --list, --add alebo --del\n"
+msgstr "môže byť zadaná iba jedna z volieb --list, --add, --del alebo --override\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -116,7 +118,8 @@ msgstr "pre chkconfig otázku môže byť zadaná iba jedna úroveň\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Stlačením <F1> získate viac informácií o službe."
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:78
+#: ../ntsysv.c:115
 msgid "Ok"
 msgstr "Ok"
 
@@ -320,22 +323,27 @@ msgstr "odkaz neukazuje na alternatívu -- nastavujem režim na manuálny\n"
 msgid "link changed -- setting mode to manual\n"
 msgstr "odkaz zmenený -- nastavujem režim na manuálny\n"
 
-#: ../alternatives.c:361 ../alternatives.c:368
+#: ../alternatives.c:361
+#: ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
 msgstr "by vymazalo %s\n"
 
-#: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
+#: ../alternatives.c:363
+#: ../alternatives.c:370
+#: ../alternatives.c:401
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "nepodarilo sa odstrániť odkaz %s: %s\n"
 
-#: ../alternatives.c:386 ../alternatives.c:398
+#: ../alternatives.c:386
+#: ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "by prepojilo %s -> %s\n"
 
-#: ../alternatives.c:390 ../alternatives.c:407
+#: ../alternatives.c:390
+#: ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "nepodarilo sa vytvoriť odkaz %s -> %s: %s\n"
@@ -355,7 +363,8 @@ msgstr "nepodarilo sa vytvoriť %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "nepodarilo sa nahradiť %s s %s: %s\n"
 
-#: ../alternatives.c:498 ../alternatives.c:507
+#: ../alternatives.c:498
+#: ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
 msgstr "spúšťam %s\n"
@@ -418,8 +427,7 @@ msgstr "  Výber        Príkaz\n"
 #: ../alternatives.c:711
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"Zadajte pre zachovanie aktuálneho výberu[+], alebo zadajte číslo výberu: "
+msgstr "Zadajte pre zachovanie aktuálneho výberu[+], alebo zadajte číslo výberu: "
 
 #: ../alternatives.c:714
 #, c-format
@@ -430,7 +438,8 @@ msgstr ""
 "\n"
 "chyba pri čítaní voľby\n"
 
-#: ../alternatives.c:741 ../alternatives.c:767
+#: ../alternatives.c:741
+#: ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nebol nakonfigurovaný ako alternatíva pre %s\n"
@@ -459,3 +468,4 @@ msgstr "admindir %s je neplatný\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verzia %s\n"
+
