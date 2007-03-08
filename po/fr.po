@@ -1,25 +1,25 @@
-# translation of fr.po to French
-# translation of chkconfig.po to Français
+# translation of fr.po to Francais
 # Copyright (C) 2001 Red Hat, Inc.
+#
 # Bettina De Monti <bdemonti@redhat.it>, 2001.
 # Jean-Paul Aubry <jpaubry@redhat.com>, 2003,2004, 2005.
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004.
 # Audrey Simons <asimons@redhat.com>, 2004.
 # Alain PORTAL <aportal@univ-montp2.fr>, 2006.
 # Decroux Fabien <fdecroux@redhat.com>, 2006.
-#
+# Thomas Canniot <thomas.canniot@laposte.net>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-12-01 14:52+1000\n"
-"Last-Translator: Decroux Fabien <fdecroux@redhat.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2007-03-08 10:06+0100\n"
+"Last-Translator: Thomas Canniot <thomas.canniot@laposte.net>\n"
+"Language-Team: Francais <fedora-trans-fr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -28,10 +28,9 @@ msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Ce produit peut être librement distribué selon les termes de la licence "
+"Ce logiciel peut être librement distribué selon les termes de la licence "
 "publique GNU (GPL).\n"
 
 #: ../chkconfig.c:35
@@ -50,9 +49,9 @@ msgid "         %s --del <name>\n"
 msgstr "              %s --del <nom>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "              %s --del <nom>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -112,9 +111,9 @@ msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "spécifiez --list, --add ou --del\n"
+msgstr "spécifiez une seule des options suivantes --list, --add, --del ou --override\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -185,7 +184,7 @@ msgstr "impossible de créer le lien symbolique %s : %s\n"
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "versions alternatives %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "versions de alternatives %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -200,8 +199,7 @@ msgstr ""
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -472,4 +470,5 @@ msgstr "admindir %s invalide\n"
 #: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "version des alternatives %s\n"
+msgstr "version de alternatives %s\n"
+
