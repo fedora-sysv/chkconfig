@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: bg\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2007-03-10 01:52+0200\n"
+"PO-Revision-Date: 2007-03-10 03:45+0200\n"
 "Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
 "Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
 "MIME-Version: 1.0\n"
@@ -305,7 +305,7 @@ msgstr "очаква се цифров приоритет в %s\n"
 #: ../alternatives.c:287
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "очаква се slave път в %s\n"
+msgstr "очаква се подчинен път в %s\n"
 
 #: ../alternatives.c:306
 #, c-format
@@ -375,7 +375,7 @@ msgstr "първичната връзка за %s трябва да бъде %s\
 #: ../alternatives.c:614
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "връзката %s е неправилна за slave %s (%s %s)\n"
+msgstr "връзката %s е неправилна за подчинения %s (%s %s)\n"
 
 #: ../alternatives.c:655
 #, c-format
@@ -400,7 +400,7 @@ msgstr "%s - приоритет %d\n"
 #: ../alternatives.c:665
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " slave %s: %s\n"
+msgstr " подчинен %s: %s\n"
 
 #: ../alternatives.c:670
 #, c-format
@@ -425,7 +425,7 @@ msgstr "  Избор    Команда\n"
 #: ../alternatives.c:711
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter за да запазите текущата избор[+] или въведете номера на избор: "
+msgstr "Enter за да запазите текущата избор[+] или въведете номер за избор: "
 
 #: ../alternatives.c:714
 #, c-format
