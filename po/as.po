@@ -3,18 +3,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
 # Amitakhya Phukan <amitakhya.phukan@gmail.com>, 2006.
+# Amitakhya Phukan <aphukan@redhat.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-10-09 14:52+0530\n"
-"Last-Translator: Amitakhya Phukan <amitakhya.phukan@gmail.com>\n"
-"Language-Team: Assamese <Assam@mm.assam-glug.org>\n"
+"PO-Revision-Date: 2007-04-04 17:15+0530\n"
+"Last-Translator: Amitakhya Phukan <aphukan@redhat.com>\n"
+"Language-Team: Assamese <assam@mm.assam-glug.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -23,8 +25,7 @@ msgstr "%s সংস্কৰণ %s - প্ৰতিলিপি (C) 1997-2000 
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "এইটো মুক্ত ভাবে পুনঃবিতৰণ কৰা যাব পাৰে GNU সাধাৰণ অনুমতি পত্ৰৰ মতে ।\n"
 
 #: ../chkconfig.c:35
@@ -43,9 +44,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -105,9 +106,9 @@ msgid "%s version %s\n"
 msgstr "%s সংস্কৰণ %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "যিকোনো এটা --list, --add, বা  --del নিৰ্দ্দিষ্ট কৰা যাব পাৰে\n"
+msgstr "যিকোনো এটা --list, --add, --del, বা  --override নিৰ্দ্দিষ্ট কৰা যাব পাৰে\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -315,8 +316,7 @@ msgstr "%s সংযোগ পঢ়িব'লৈ অক্ষম: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
+msgstr "সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
 
 #: ../alternatives.c:333
 #, c-format
@@ -461,3 +461,4 @@ msgstr "admindir %s অবৈধ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "বিকল্পসমূহৰ সংস্কৰণ %s\n"
+
