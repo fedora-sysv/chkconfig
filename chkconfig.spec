@@ -75,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 * Mon Apr 16 2007 Bill Nottingham <notting@redhat.com> 1.3.34-1
 - translation updates: as, bg, bn_IN, bs, ca, de, fr, hi, hu, id, ja,
   ka, ml, ms, nb, or, sk, sl
+- add resetpriorities to the man page (#197399)
   
 * Tue Feb  6 2007 Bill Nottingham <notting@redhat.com> 1.3.33-1
 - various changes from review - support alternate %%{_sbindir}, fix
