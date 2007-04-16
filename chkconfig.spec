@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.33
+Version: 1.3.34
 Release: 1
 License: GPL
 Group: System Environment/Base
@@ -72,6 +72,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Apr 16 2007 Bill Nottingham <notting@redhat.com> 1.3.34-1
+- translation updates: as, bg, bn_IN, bs, ca, de, fr, hi, hu, id, ja,
+  ka, ml, ms, nb, or, sk, sl
+  
 * Tue Feb  6 2007 Bill Nottingham <notting@redhat.com> 1.3.33-1
 - various changes from review - support alternate %%{_sbindir}, fix
   summaries, add version to requires, assorted other bits
