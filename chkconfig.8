@@ -10,7 +10,7 @@ chkconfig \- updates and queries runlevel information for system services
 .br
 \fBchkconfig\fR \fB--del\fR \fIname\fR
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR>
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
 .br
 \fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR 
 .br
@@ -40,16 +40,18 @@ it is, \fBchkconfig\fR returns true; otherwise it returns false. The
 \fB--level\fR option may be used to have \fBchkconfig\fR query an
 alternative runlevel rather than the current one.
 
-If one of \fBon\fR, \fBoff\fR, or \fRreset\fR is specified after the
-service name, \fBchkconfig\fR changes the startup information for the
-specified service.  The \fBon\fR and \fBoff\fR flags cause the service
-to be started or stopped, respectively, in the runlevels being changed.
-The \fBreset\fR flag resets the startup information for the service to
-whatever is specified in the init script in question.
+If one of \fBon\fR, \fBoff\fR, \fBreset\fR, or \fBresetpriorities\fR is
+specified after the service name, \fBchkconfig\fR changes the startup
+information for the specified service.  The \fBon\fR and \fBoff\fR flags
+cause the service to be started or stopped, respectively, in the runlevels
+being changed. The \fBreset\fR flag resets the on/off state for all
+runlevels for the service to whatever is specified in the init script in question,
+while the \fBresetpriorities\fR flag resets the start/stop priorities
+for the service to whatever is specifed in the init script.
 
 By default, the \fBon\fR and \fBoff\fR options affect only runlevels 2, 3, 4,
-and 5, while \fBreset\fR affects all of the runlevels.  The \fB--level\fR
-option may be used to specify which runlevels are affected.
+and 5, while \fBreset\fR and \fBresetpriorities\fR affects all of the runlevels.
+The \fB--level\fR option may be used to specify which runlevels are affected.
 
 Note that for every service, each runlevel has either a start script
 or a stop script.  When switching runlevels, init will not re-start
