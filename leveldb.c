@@ -14,7 +14,6 @@
 #include <fcntl.h>
 #include <glob.h>
 #include <libintl.h> 
-#include <libgen.h>
 #include <locale.h> 
 #include <sys/mman.h>
 #include <sys/stat.h>
@@ -552,7 +551,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	return 1;
     } 
 
-    serv.name = strdup(basename(name));
+    serv.name = strdup(name);
     if (!serv.provides) {
 	    serv.provides = malloc(2 * sizeof(char *));
 	    serv.provides[0] = strdup(name);

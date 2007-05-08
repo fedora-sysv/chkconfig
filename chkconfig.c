@@ -618,16 +618,14 @@ int main(int argc, char ** argv) {
 	if (!name || !*name || poptGetArg(optCon)) 
 	    usage();
 	
-	if (LSB)
-		    name = basename(name);
+	name = basename(name);
 	return addService(name);
     } else if (delItem) {
 	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
-	if (LSB)
-		    name = basename(name);
+	name = basename(name);
 	return delService(name);
     } else if (overrideItem) {
 	char * name = (char *)poptGetArg(optCon);
