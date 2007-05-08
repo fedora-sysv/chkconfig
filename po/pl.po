@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2007-02-04 17:49+0200\n"
+"POT-Creation-Date: 2007-05-07 21:26-0400\n"
+"PO-Revision-Date: 2007-05-08 11:58+0200\n"
 "Last-Translator: Tom Berner <tom@lodz.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "tylko jedna z --list, --add, --del lub --override może zostać określona\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
