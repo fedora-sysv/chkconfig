@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
+"POT-Creation-Date: 2007-05-07 21:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,8 +25,7 @@ msgstr "%s ಆವ್ರುತ್ತಿ %s - ಕ್ರುತಿಸ್ವಾಮ್
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯಡಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
+msgstr "ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯಡಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -59,8 +58,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ ಕ್ರಿಯಾಹಂತದಲ್ಲಿ ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೊಗಿಸು "
-"'chkconfig --ಸೇರಿಸು %s')\n"
+"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ ಕ್ರಿಯಾಹಂತದಲ್ಲಿ "
+"ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೊಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
 
 #: ../chkconfig.c:48
 #, c-format
@@ -108,9 +107,11 @@ msgstr "%s ಆವ್ರುತ್ತಿ %s\n"
 #: ../chkconfig.c:610
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ ಇವುಗಳಿಂದ --ಪಟ್ಟಿ, --ಸೇರಿಸು, --ಅಳಿಸು, ಅಥವಾ --ಅತಿಕ್ರಮಿಸು ಬಳಸಿಕೊಳ್ಳಬಹುದು\n"
+msgstr ""
+"ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ ಇವುಗಳಿಂದ --ಪಟ್ಟಿ, --ಸೇರಿಸು, --ಅಳಿಸು, ಅಥವಾ --ಅತಿಕ್ರಮಿಸು "
+"ಬಳಸಿಕೊಳ್ಳಬಹುದು\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -185,7 +186,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯ ಕರಾರುಗಳಡಿಯಲ್ಲಿ ಉಚಿತವಾಗಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
+"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯ ಕರಾರುಗಳಡಿಯಲ್ಲಿ ಉಚಿತವಾಗಿ ಮರು ಹಂಚಿಕೆ "
+"ಮಾಡಬಹುದಾಗಿದೆ.\n"
 "\n"
 
 #: ../alternatives.c:60
@@ -391,7 +393,7 @@ msgstr ""
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - ಆದ್ಯತೆ %d\n"
 
 #: ../alternatives.c:665
 #, c-format
@@ -460,5 +462,4 @@ msgstr ""
 #: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
-
+msgstr "ಬದಲಿ ಆವ್ರುತ್ತಿ %s\n"
