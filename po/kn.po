@@ -117,27 +117,27 @@ msgstr ""
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
-msgstr ""
+msgstr "ಸೇವೆಯ ಬಗೆಗಿನ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗೆ <F1> ಬಳಸಿ "
 
 #: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
-msgstr ""
+msgstr "ಸರಿ"
 
 #: ../ntsysv.c:78
 msgid "Back"
-msgstr ""
+msgstr "ಹಿಂದಕ್ಕೆ"
 
 #: ../ntsysv.c:78
 msgid "Cancel"
-msgstr ""
+msgstr "ರದ್ದುಪಡಿಸು"
 
 #: ../ntsysv.c:90
 msgid "What services should be automatically started?"
-msgstr ""
+msgstr "ಯಾವ ಸೇವೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪ್ರಾರಂಬಿಸಬೇಕು?"
 
 #: ../ntsysv.c:96
 msgid "Services"
-msgstr ""
+msgstr "ಸೇವೆಗಳು"
 
 #: ../ntsysv.c:252
 #, c-format
@@ -152,12 +152,12 @@ msgstr ""
 #: ../ntsysv.c:305
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr ""
+msgstr "ತಪ್ಪು ವಾದವನ್ನು ಮಂಡಿಸಲಾಗಿದೆ --ಹಂತಗಳು ಗೆ\n"
 
 #: ../ntsysv.c:312
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr ""
+msgstr "ಯಾವುದೇ ಸೇವೆಗಳನ್ನು ntsysv ಇಂದ ನಿರ್ವಹಿಸಲಾಗುವುದಿಲ್ಲ\n"
 
 #: ../leveldb.c:596
 #, c-format
@@ -167,17 +167,17 @@ msgstr ""
 #: ../leveldb.c:639
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "ಈಗಿನ ಕ್ರಿಯಾ ಹಂತವನ್ನು ಕಂಡುಹಿಡಿಯಲಾಗಿಲ್ಲ\n"
 
 #: ../leveldb.c:727
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr ""
+msgstr "symlink ಮಾಡುವಲ್ಲಿ ಅಡಚಣೆಯಾಗಿದೆ %s: %s\n"
 
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr ""
+msgstr "ಬದಲಿ ಆವ್ರುತ್ತಿ %s - ಕ್ರುತಿಸ್ವಾಮ್ಯ (ಸಿ) 2001 ರೆಡ್ ಹ್ಯಾಟ್, ಇನ್ಕ್.\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -185,6 +185,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
+"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯ ಕರಾರುಗಳಡಿಯಲ್ಲಿ ಉಚಿತವಾಗಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
+"\n"
 
 #: ../alternatives.c:60
 #, c-format
@@ -194,37 +196,37 @@ msgstr ""
 #: ../alternatives.c:61
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <ಸೇವೆಗಳು>]\n"
 
 #: ../alternatives.c:62
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr ""
+msgstr "                    [--slave <ಕೊಂಡಿ> <ಹೆಸರು> <ಹಾದಿ>]*\n"
 
 #: ../alternatives.c:63
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       ಬದಲಿಗಳು --ಅಳಿಸು <ಹೆಸರು> <ಹಾದಿ>\n"
 
 #: ../alternatives.c:64
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr ""
+msgstr "       ಬದಲಿಗಳು --auto <ಹೆಸರು>\n"
 
 #: ../alternatives.c:65
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr ""
+msgstr "       ಬದಲಿಗಳು --config <ಹೆಸರು>\n"
 
 #: ../alternatives.c:66
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr ""
+msgstr "       ಬದಲಿಗಳು --display <ಹೆಸರು>\n"
 
 #: ../alternatives.c:67
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr ""
+msgstr "       ಬದಲಿಗಳು --set <ಹೆಸರು> <ಹೆಸರು>\n"
 
 #: ../alternatives.c:68
 #, c-format
@@ -234,12 +236,12 @@ msgstr "\n"
 #: ../alternatives.c:69
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "ಸಾಮನ್ಯ ಆಯ್ಕೆಗಳು: --verbose --ಪರೀಕ್ಶೆ --ಸಹಾಯ --ಉಪಯೊಗ --ಆವ್ರುತ್ತಿ\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:167
 #, c-format
@@ -249,12 +251,12 @@ msgstr "ಓದುತ್ತಿದೆ %s\n"
 #: ../alternatives.c:171
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr ""
+msgstr "ತೆರೆಯಲಾಗುತ್ತಿಲ್ಲ %s: %s\n"
 
 #: ../alternatives.c:180
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr ""
+msgstr "ಓದಲಾಗುತ್ತಿಲ್ಲ %s: %s\n"
 
 #: ../alternatives.c:189
 #, c-format
@@ -264,17 +266,17 @@ msgstr "%s ಕಾಲಿಯಾಗಿದೆ!\n"
 #: ../alternatives.c:198
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "ತಪ್ಪು ರೂಡಿ ಮೊದಲನೆ ಸಾಲಿನಲ್ಲಿ ಇದರಲ್ಲಿ %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "ತಪ್ಪು ಪ್ರಾಥಮಿಕ ಕೊಂಡಿ ಇಲ್ಲಿ %s\n"
 
 #: ../alternatives.c:217
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "ಹಾದಿ %s ಇಲ್ಲಿ ನಿರೀಷಿಸಿದ್ದಲ್ಲ %s\n"
 
 #: ../alternatives.c:226
 #, c-format
@@ -459,3 +461,4 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
+
