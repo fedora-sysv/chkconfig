@@ -44,9 +44,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <enw>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <enw>\n"
+msgstr "         %s --override <enw>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -106,9 +106,9 @@ msgid "%s version %s\n"
 msgstr "%s fersiwn %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "dim ond un o --list, --add, neu --del y ceir ei benodi\n"
+msgstr "dim ond un o --list, --add, --del, neu --override y ceir ei benodi\n"
 
 #: ../chkconfig.c:672
 #, c-format
