@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-03 23:36-0500\n"
+"POT-Creation-Date: 2007-05-07 21:26-0400\n"
 "PO-Revision-Date: 2007-02-04 17:54+0800\n"
 "Last-Translator: Chester Cheng <ccheng@redhat.com>\n"
 "Language-Team: Chinese Traditional <zh_TW@li.org>\n"
@@ -113,7 +113,7 @@ msgstr "%s 版本 %s\n"
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "只能指定 --list, --add, --del, 或 --override 中的其中一個\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "只能對 chkconfig 查詢指定一種執行等級\n"
