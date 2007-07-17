@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
+"POT-Creation-Date: 2007-05-07 21:26-0400\n"
 "PO-Revision-Date: 2007-02-07 21:55+0100\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -109,9 +109,10 @@ msgstr "%s versie %s\n"
 #: ../chkconfig.c:610
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "slechts een van --list, --add, --del of --override mag worden opgegeven\n"
+msgstr ""
+"slechts een van --list, --add, --del of --override mag worden opgegeven\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "slechts een runlevel mag worden gegeven voor een chkconfig zoekvraag\n"
