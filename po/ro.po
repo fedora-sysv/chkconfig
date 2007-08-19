@@ -1,33 +1,34 @@
-# $Id: ro.po,v 1.57 2007/02/02 21:24:39 ltenn Exp $
+# $Id: ro.po,v 1.58 2007/08/19 18:04:50 alexxed Exp $
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 199-04-10 12:00+EST\n"
+"PO-Revision-Date: 2007-08-19 21:14+0300\n"
 "Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8-bit"
 
 #: ../chkconfig.c:31
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s versiunea %s - Copyright (C) 1997-2002 Red Hat, Inc.\n"
+msgstr "%s versiunea %s - Drepturi de autor (C) 1997-2002 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:32
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Acest program poate fi distribuit gratuit sub licen�a GNU Public License.\n"
+"Acest program poate fi distribuit gratuit sub licența GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
 msgid "usage:   %s --list [name]\n"
-msgstr "apel:   %s --list [name]\n"
+msgstr "utilizare:\n"
+"         %s --list [name]\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -40,14 +41,14 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --override <nume>\n"
 
 #: ../chkconfig.c:39
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s>\n"
+msgstr "         %s [--level <nivele>] <nume> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
@@ -55,16 +56,18 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"serviciul %s suportă chkconfig, dar nu este de găsit în niciun nivel de rulare "
+"(rulați „chkconfig --add %s”)\n"
 
 #: ../chkconfig.c:48
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "serviciul %s nu suport� chkconfig\n"
+msgstr "serviciul %s nu suportă chkconfig\n"
 
 #: ../chkconfig.c:50
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "eroare la citirea informa�iilor pentru serviciul %s: %s\n"
+msgstr "eroare la citirea informaţiilor pentru serviciul %s: %s\n"
 
 #: ../chkconfig.c:181 ../chkconfig.c:406
 #, c-format
@@ -82,7 +85,7 @@ msgstr "off"
 #: ../chkconfig.c:428 ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:243
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "eroare la citirea informa�iilor pentru serviciul %s: %s\n"
+msgstr "eroare la citirea informaţiilor pentru serviciul %s: %s\n"
 
 #: ../chkconfig.c:461
 #, c-format
@@ -90,9 +93,9 @@ msgid "xinetd based services:\n"
 msgstr "servicii controlate de xinetd:\n"
 
 #: ../chkconfig.c:463
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "eroare la deschiderea %s: %s"
+msgstr "eroare la accesarea directorului %s: %s\n"
 
 #: ../chkconfig.c:603
 #, c-format
@@ -100,19 +103,18 @@ msgid "%s version %s\n"
 msgstr "%s versiunea %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"numai una dintre op�iunile --list, --add, sau --del poate fi specificat�\n"
+msgstr "numai una dintre opţiunile --list, --add, sau --override poate fi specificată\n"
 
 #: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "nu se poate edita dec�t un singur runlevel la fiecare execu�ie\n"
+msgstr "nu se poate edita decît un singur runlevel la fiecare execuţie\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
-msgstr "<F1> pentru extra informa�ii despre un serviciu."
+msgstr "<F1> pentru extra informaţii despre un serviciu."
 
 #: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
@@ -120,7 +122,7 @@ msgstr "Ok"
 
 #: ../ntsysv.c:78
 msgid "Back"
-msgstr "�napoi"
+msgstr "Înapoi"
 
 #: ../ntsysv.c:78
 msgid "Cancel"
@@ -142,7 +144,7 @@ msgstr "eroare la citirea din directorul %s: %s\n"
 #: ../ntsysv.c:288
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Trebuie s� rula�i programul %s ca root.\n"
+msgstr "Trebuie să rulaţi programul %s ca root.\n"
 
 #: ../ntsysv.c:305
 #, c-format
@@ -152,12 +154,12 @@ msgstr "argument invalid pentru --levels\n"
 #: ../ntsysv.c:312
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Nu s-a g�sit nici un serviciu care poate fi operat de c�tre ntsysv!\n"
+msgstr "Nu s-a găsit nici un serviciu care poate fi operat de către ntsysv!\n"
 
 #: ../leveldb.c:596
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "eroare la identificarea solu�iilor patternului %s: %s\n"
+msgstr "eroare la identificarea soluţiilor patternului %s: %s\n"
 
 #: ../leveldb.c:639
 #, c-format
@@ -170,289 +172,292 @@ msgid "failed to make symlink %s: %s\n"
 msgstr "nu s-a putut crea %s: %s\n"
 
 #: ../alternatives.c:58
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "%s versiunea %s - Copyright (C) 1997-2002 Red Hat, Inc.\n"
+msgstr "alternative versiunea %s - Drepturi de autor (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:59
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Acest program poate fi distribuit gratuit sub licen�a GNU Public License.\n"
+"Acest program poate fi redistribuit gratuit sub termenii licenței GNU Public License."
+"\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "utilizare: alternatives --install <legătură> <nume> <cale> <prioritate>\n"
 
 #: ../alternatives.c:61
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
+msgstr "                    [--initscript <serviciu>]\n"
 
 #: ../alternatives.c:62
-#, fuzzy, c-format
+#, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "         %s [--level <levels>] <name> %s>\n"
+msgstr "                    [--slave <link> <nume> <cale>]*\n"
 
 #: ../alternatives.c:63
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "       alternative --remove <nume> <cale>\n"
 
 #: ../alternatives.c:64
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "       alternative --auto <nume>\n"
 
 #: ../alternatives.c:65
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "       alternative -- config <nume>\n"
 
 #: ../alternatives.c:66
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "       alternative --display <nume>\n"
 
 #: ../alternatives.c:67
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         %s --del <name>\n"
+msgstr "       alternative --set <nume> <cale>\n"
 
 #: ../alternatives.c:68
 #, c-format
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: ../alternatives.c:69
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr ""
+msgstr "opțiuni comune: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "                --altdir <director> --admindir <director>\n"
 
 #: ../alternatives.c:167
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "citire %s\n"
 
 #: ../alternatives.c:171
-#, fuzzy, c-format
+#, c-format
 msgid "failed to open %s: %s\n"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
+msgstr "eroare la deschiderea %s: %s\n"
 
 #: ../alternatives.c:180
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read %s: %s\n"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
+msgstr "eroare la citirea %s: %s\n"
 
 #: ../alternatives.c:189
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s este gol!\n"
 
 #: ../alternatives.c:198
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "mod greșit la linia 1 din %s\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "legătură primară greșită în %s\n"
 
 #: ../alternatives.c:217
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "cale %s neașteptată în %s\n"
 
 #: ../alternatives.c:226
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "lipsește calea pentru sclavul %s în %s\n"
 
 #: ../alternatives.c:236
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "sfârșit neașteptat de fișier în %s\n"
 
 #: ../alternatives.c:245
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "calea către alternare așteptată în %s\n"
 
 #: ../alternatives.c:265
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "prioritate numerică așteptată în %s\n"
 
 #: ../alternatives.c:287
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "calea sclavului așteptată în %s\n"
 
 #: ../alternatives.c:306
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "linie neașteptată în %s: %s\n"
 
 #: ../alternatives.c:314
-#, fuzzy, c-format
+#, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
+msgstr "eroare la citirea legăturii %s: %s\n"
 
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "legătura trimite către nicio alternativă -- se setează modul la manual\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "legătura s-a schimbat -- se setează modul la manual\n"
 
 #: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "ar elimina %s\n"
 
 #: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "nu s-a putut crea %s: %s\n"
+msgstr "nu s-a putut șterge legătura %s: %s\n"
 
 #: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "ar lega %s la %s\n"
 
 #: ../alternatives.c:390 ../alternatives.c:407
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "nu s-a putut crea %s: %s\n"
+msgstr "nu s-a putut lega %s -> %s: %s\n"
 
 #: ../alternatives.c:439
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s există deja\n"
 
 #: ../alternatives.c:441
-#, fuzzy, c-format
+#, c-format
 msgid "failed to create %s: %s\n"
-msgstr "eroare la identificarea solu�iilor patternului %s: %s\n"
+msgstr "eroare la crearea %s: %s\n"
 
 #: ../alternatives.c:472
-#, fuzzy, c-format
+#, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "nu s-a putut crea %s: %s\n"
+msgstr "nu s-a putut înlocui %s cu %s: %s\n"
 
 #: ../alternatives.c:498 ../alternatives.c:507
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "se rulează %s\n"
 
 #: ../alternatives.c:534
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "legătura primară pentru %s trebuie să fie %s\n"
 
 #: ../alternatives.c:614
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "legătura %s incorectă pentru sclavul %s (%s %s)\n"
 
 #: ../alternatives.c:655
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - starea e auto.\n"
 
 #: ../alternatives.c:657
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - starea e manuală.\n"
 
 #: ../alternatives.c:659
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " legătura duce spre %s\n"
 
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - prioritate %d\n"
 
 #: ../alternatives.c:665
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " sclav %s: %s\n"
 
 #: ../alternatives.c:670
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Versiunea curentă și optimă este %s.\n"
 
 #: ../alternatives.c:700
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "Există %d program care furnizează „%s”.\n"
 
 #: ../alternatives.c:700
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Sunt %d programe care furnizează „%s”.\n"
 
 #: ../alternatives.c:702
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  Selecție     Comandă\n"
 
 #: ../alternatives.c:711
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Enter pentru a păstra selecția curentă[+] sau tastați numărul selecției: "
 
 #: ../alternatives.c:714
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "eroare la citirea informa�iilor pentru serviciul %s: %s\n"
+msgstr ""
+"\n"
+"eroare la citirea opțiunii\n"
 
 #: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s nu a fost configurat ca o alternativă pentru %s\n"
 
 #: ../alternatives.c:783
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(ar elimina %s\n"
 
 #: ../alternatives.c:785
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
+msgstr "eroare la eliminarea %s: %s\n"
 
 #: ../alternatives.c:907
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s este invalid\n"
 
 #: ../alternatives.c:913
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s este invalid\n"
 
 #: ../alternatives.c:923
-#, fuzzy, c-format
+#, c-format
 msgid "alternatives version %s\n"
-msgstr "%s versiunea %s\n"
+msgstr "alternatives versiunea %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "eroare la citirea din directorul %s/init.d: %s\n"
