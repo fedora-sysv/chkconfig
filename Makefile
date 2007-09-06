@@ -26,9 +26,9 @@ subdirs:
 	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
-	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -Wl,-Bstatic -lpopt -Wl,-Bdynamic
+	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt
 
-alternativs: alternatives.o
+alternatives: alternatives.o
 
 ntsysv: $(NTOBJS)
 	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)

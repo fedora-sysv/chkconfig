@@ -6,7 +6,7 @@ License: GPLv2
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext
+BuildRequires: newt-devel gettext popt-devel
 Conflicts: initscripts <= 5.30-1
 
 %description
@@ -72,6 +72,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+- buildreq popt-devel, link it dynamically (#279531)
+
 * Fri Aug  3 2007 Bill Nottingham <notting@redhat.com> 1.3.35-1
 - clarify licensing
 
