@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
+"POT-Creation-Date: 2007-05-07 21:26-0400\n"
 "PO-Revision-Date: 2007-03-01 14:41+1000\n"
 "Last-Translator: Noriko Mizumoto <noriko@redhat.com>\n"
 "Language-Team: Japanese <fedora-trans-ja@redhat.com>\n"
@@ -27,7 +27,8 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 # ../chkconfig.c:22
 #: ../chkconfig.c:32
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
 "きます。\n"
@@ -127,10 +128,12 @@ msgstr "%s バージョン %s\n"
 #: ../chkconfig.c:610
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけです。\n"
+msgstr ""
+"指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけで"
+"す。\n"
 
 # ../chkconfig.c:339
-#: ../chkconfig.c:672
+#: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです。\n"
@@ -512,4 +515,3 @@ msgstr "admindir %s は無効です。\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives バージョン %s\n"
-
