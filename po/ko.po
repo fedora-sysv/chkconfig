@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2007-08-02 20:42+1000\n"
+"PO-Revision-Date: 2007-09-17 15:04+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,7 @@ msgstr "--list, --add, --del, --override의 옵션 중 하나만 지정하셔야
 #: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig 질의시에는 하나의 실행 레벨만 지정하셔야 합니다\n"
+msgstr "chkconfig 질의에 대해 하나의 런레벨만 지정하셔야 합니다\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
@@ -170,7 +170,7 @@ msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 #: ../leveldb.c:639
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "현재의 실행 레벨을 확인할 수 없습니다\n"
+msgstr "현재의 런레벨을 확인할 수 없습니다\n"
 
 #: ../leveldb.c:727
 #, c-format
