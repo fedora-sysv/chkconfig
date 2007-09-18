@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-07 21:26-0400\n"
-"PO-Revision-Date: 2007-09-16 23:00+0530\n"
+"PO-Revision-Date: 2007-09-17 23:51+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,30 +31,28 @@ msgstr "ಇದನ್ನು GNU ಸಾರ್ವತ್ರಿಕ ಪರವಾನಗ
 
 #: ../chkconfig.c:35
 #, c-format
-#, fuzzy
 msgid "usage:   %s --list [name]\n"
-msgstr "ಬಳಕೆ:   %s --ಪಟ್ಟಿ [ಹೆಸರು]\n"
+msgstr "ಬಳಕೆ:   %s --list [name]\n"
 
 #: ../chkconfig.c:36
 #, c-format
-#, fuzzy
 msgid "         %s --add <name>\n"
-msgstr "         %s --ಸೇರಿಸು <ಹೆಸರು>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --ಅಳಿಸು <name>\n"
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --ಅತಿಕ್ರಮಿಸು <ಹೆಸರು>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
-msgstr "         %s [--ಹಂತ <ಹಂತಗಳು>] <ಹೆಸರು> %s\n"
+msgstr "         %s [--level <levels>] <name> %s\n"
 
 #: ../chkconfig.c:46
 #, c-format
@@ -111,14 +109,12 @@ msgstr "%s ಆವೃತ್ತಿ %s\n"
 #: ../chkconfig.c:610
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ ಇವುಗಳಿಂದ --ಪಟ್ಟಿ, --ಸೇರಿಸು, --ಅಳಿಸು, ಅಥವಾ --ಅತಿಕ್ರಮಿಸು "
-"ಬಳಸಿಕೊಳ್ಳಬಹುದು\n"
+msgstr "--list, --add, --del, ಅಥವ --override ಇವುಗಳಿಂದ ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
 
 #: ../chkconfig.c:670
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
+msgstr "ಒಂದು chkconfig ಮನವಿಗೆ ಕೇವಲ ಒಂದು ರನ್-ಲೆವೆಲನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
@@ -147,7 +143,7 @@ msgstr "ಸೇವೆಗಳು"
 #: ../ntsysv.c:252
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr ""
+msgstr "ಕಡತಕೋಶ %s ದಿಂದ ಓದುವಲ್ಲಿ ದೋಷ: %s\n"
 
 #: ../ntsysv.c:288
 #, c-format
@@ -157,7 +153,7 @@ msgstr "%s ಅನ್ನು ಚಲಾಯಿಸಲು ನೀವು ಮೂಲವಾ
 #: ../ntsysv.c:305
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "ತಪ್ಪು ವಾದವನ್ನು ಮಂಡಿಸಲಾಗಿದೆ --ಹಂತಗಳು ಗೆ\n"
+msgstr "--levels ಗೆ ತಪ್ಪು ಆರ್ಗ್ಯುಮೆಂಟ್\n"
 
 #: ../ntsysv.c:312
 #, c-format
@@ -182,7 +178,7 @@ msgstr "symlink ಮಾಡುವಲ್ಲಿ ಅಡಚಣೆಯಾಗಿದೆ %s
 #: ../alternatives.c:58
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ಬದಲಿ ಆವ್ರುತ್ತಿ %s - ಕ್ರುತಿಸ್ವಾಮ್ಯ (ಸಿ) 2001 ರೆಡ್ ಹ್ಯಾಟ್, ಇನ್ಕ್.\n"
+msgstr "ಬದಲಿ ಆವೃತ್ತಿ %s - ಕೃತಿಸ್ವಾಮ್ಯ (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../alternatives.c:59
 #, c-format
@@ -197,42 +193,42 @@ msgstr ""
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "ಬಳಕೆ: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:61
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <ಸೇವೆಗಳು>]\n"
+msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:62
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <ಕೊಂಡಿ> <ಹೆಸರು> <ಹಾದಿ>]*\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:63
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       ಬದಲಿಗಳು --ಅಳಿಸು <ಹೆಸರು> <ಹಾದಿ>\n"
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:64
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       ಬದಲಿಗಳು --auto <ಹೆಸರು>\n"
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:65
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       ಬದಲಿಗಳು --config <ಹೆಸರು>\n"
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:66
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       ಬದಲಿಗಳು --display <ಹೆಸರು>\n"
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:67
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       ಬದಲಿಗಳು --set <ಹೆಸರು> <ಹೆಸರು>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:68
 #, c-format
@@ -242,7 +238,7 @@ msgstr "\n"
 #: ../alternatives.c:69
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "ಸಾಮನ್ಯ ಆಯ್ಕೆಗಳು: --verbose --ಪರೀಕ್ಶೆ --ಸಹಾಯ --ಉಪಯೊಗ --ಆವ್ರುತ್ತಿ\n"
+msgstr "ಸಾಮಾನ್ಯ ಆಯ್ಕೆಗಳು: --verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:70
 #, c-format
@@ -272,17 +268,17 @@ msgstr "%s ಕಾಲಿಯಾಗಿದೆ!\n"
 #: ../alternatives.c:198
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "ತಪ್ಪು ರೂಡಿ ಮೊದಲನೆ ಸಾಲಿನಲ್ಲಿ ಇದರಲ್ಲಿ %s\n"
+msgstr "%s ನ ೧ ನೇ ಸಾಲಿನಲ್ಲಿ ತಪ್ಪು ಕ್ರಮ\n"
 
 #: ../alternatives.c:205
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "ತಪ್ಪು ಪ್ರಾಥಮಿಕ ಕೊಂಡಿ ಇಲ್ಲಿ %s\n"
+msgstr "%s ನಲ್ಲಿ ತಪ್ಪು ಪ್ರಾಥಮಿಕ ಕೊಂಡಿ\n"
 
 #: ../alternatives.c:217
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "ಹಾದಿ %s ಇಲ್ಲಿ ನಿರೀಷಿಸಿದ್ದಲ್ಲ %s\n"
+msgstr "ಪಥ %s ವು %s ನಲ್ಲಿ ಅನಿರೀಕ್ಷಿತವಾಗಿದೆ\n"
 
 #: ../alternatives.c:226
 #, c-format
@@ -292,7 +288,7 @@ msgstr ""
 #: ../alternatives.c:236
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "%s ನಲ್ಲಿ ಕಡತದ ಅನಿರೀಕ್ಷಿತ ಅಂತ್ಯ\n"
 
 #: ../alternatives.c:245
 #, c-format
@@ -436,7 +432,7 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"ಆಯ್ಕೆಗಳನ್ನು ಓದಲಾಗುತ್ತಿಲ್ಲ\n"
+"ಆಯ್ಕೆಯನ್ನು ಓದುವಲ್ಲಿ ದೋಷ\n"
 
 #: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
@@ -466,5 +462,5 @@ msgstr ""
 #: ../alternatives.c:923
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "ಬದಲಿ ಆವ್ರುತ್ತಿ %s\n"
+msgstr "ಬದಲಿಯ ಆವೃತ್ತಿ %s\n"
 
