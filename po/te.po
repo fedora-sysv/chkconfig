@@ -1,21 +1,23 @@
-# translation of te.po to 
+# translation of te.po to Telugu
+# translation of te.po to
 # translation of te౧.po to
 # translation of te.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2006.
 #
+# Krishna Babu K <kkrothap@redhat.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2006-10-30 20:14+0530\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2007-09-25 22:05+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:31
 #, c-format
@@ -24,8 +26,7 @@ msgstr "%s ప్రతి %s - కాపీహక్కు (C) 1997-2000 Red Ha
 
 #: ../chkconfig.c:32
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU పబ్లిక్ లైసెన్సుకింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
 
 #: ../chkconfig.c:35
@@ -44,9 +45,9 @@ msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:38
-#, fuzzy, c-format
+#, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -106,9 +107,9 @@ msgid "%s version %s\n"
 msgstr "%s ప్రతి %s\n"
 
 #: ../chkconfig.c:610
-#, fuzzy, c-format
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "కేవలం ఒక్క --జాబితాలో, --కలపటం, లేదా --తొలగించటం తెలపబడింది\n"
+msgstr "కేవలం ఒకటి --జాబితా, --కలపటం, లేదా --తొలగించటం మాత్రమే తెలుపవలెను\n"
 
 #: ../chkconfig.c:672
 #, c-format
@@ -461,3 +462,4 @@ msgstr "నిర్వహణdir %s చెల్లనిది\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "ప్రత్యామ్నాయ ప్రతి %s\n"
+
