@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.35
+Version: 1.3.36
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -72,7 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Sep 25 2007 Bill Nottingham <notting@redhat.com> 1.3.36-1
 - buildreq popt-devel, link it dynamically (#279531)
+- translation updates: kn, ko, mr, ro
 
 * Fri Aug  3 2007 Bill Nottingham <notting@redhat.com> 1.3.35-1
 - clarify licensing
