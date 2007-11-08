@@ -37,7 +37,7 @@ static void usage(void) {
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
-    fprintf(stderr, _("usage:   %s --list [name]\n"), progname);
+    fprintf(stderr, _("usage:   %s [--list] [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
     fprintf(stderr, _("         %s --override <name>\n"), progname);
@@ -609,7 +609,9 @@ int main(int argc, char ** argv) {
 	exit(0);
     }
 
-    if (help || argc == 1) usage();
+    if (help) usage();
+	
+    if (argc == 1) return listService(NULL);
 
     if ((listItem + addItem + delItem + overrideItem) > 1) {
 	fprintf(stderr, _("only one of --list, --add, --del, or --override"
