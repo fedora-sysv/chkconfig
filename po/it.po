@@ -1,11 +1,11 @@
 # translation of it.po to italiano
-# Copyright (C) 2000, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-#
 # Bettina De Monti  <bdemonti@redhat.it>, 2000.
 # Paolo Dona' <vik@3jv.com>, 2004.
 # Francesco Valente <fvalen@redhat.com>, 2004.
 # Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
 # Francesco Tombolini <tombo@adamantio.net>, 2006, 2007.
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
 "Language-Team: italiano <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
@@ -28,7 +28,7 @@ msgstr "%s versione %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:32
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Questo software Ë liberamente distribuibile secondo i termini della GNU Public License.\n"
+msgstr "Questo software √® liberamente distribuibile secondo i termini della GNU Public License.\n"
 
 #: ../chkconfig.c:35
 #, c-format
@@ -61,7 +61,7 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"il servizio %s supporta chkconfig, ma non Ë referenziato in nessun runlevel "
+"il servizio %s supporta chkconfig, ma non √® referenziato in nessun runlevel "
 "(eseguire 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:48
@@ -110,12 +110,12 @@ msgstr "%s versione %s\n"
 #: ../chkconfig.c:610
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "solo una delle opzioni --list, --add, --del o --override puÚ essere specificata\n"
+msgstr "solo una delle opzioni --list, --add, --del o --override pu√≤ essere specificata\n"
 
 #: ../chkconfig.c:672
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "solo un runlevel puÚ essere specificato per una query chkconfig\n"
+msgstr "solo un runlevel pu√≤ essere specificato per una query chkconfig\n"
 
 #: ../ntsysv.c:41
 msgid "Press <F1> for more information on a service."
@@ -187,13 +187,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Questo software Ë liberamente distribuibile secondo i termini della GNU Public License.\n"
+"Questo software √® liberamente distribuibile secondo i termini della GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:60
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso:   alternatives --install <link> <nome> <percorso> <priorit‡>\n"
+msgstr "uso:   alternatives --install <link> <nome> <percorso> <priorit√†>\n"
 
 #: ../alternatives.c:61
 #, c-format
@@ -268,7 +268,7 @@ msgstr "%s vuoto!\n"
 #: ../alternatives.c:198
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "modalit‡ difettosa sulla riga 1 di %s\n"
+msgstr "modalit√† difettosa sulla riga 1 di %s\n"
 
 #: ../alternatives.c:205
 #, c-format
@@ -298,7 +298,7 @@ msgstr "percorso alternativo previsto in %s\n"
 #: ../alternatives.c:265
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "priorit‡ numerica prevista in %s\n"
+msgstr "priorit√† numerica prevista in %s\n"
 
 #: ../alternatives.c:287
 #, c-format
@@ -318,17 +318,17 @@ msgstr "impossibile leggere il link %s: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "il link non punta ad alcuna alternativa -- modalit‡ impostata su manuale\n"
+msgstr "il link non punta ad alcuna alternativa -- modalit√† impostata su manuale\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "il link È cambiato -- modalit‡ impostata su manuale\n"
+msgstr "il link √® cambiato -- modalit√† impostata su manuale\n"
 
 #: ../alternatives.c:361 ../alternatives.c:368
 #, c-format
 msgid "would remove %s\n"
-msgstr "rimuover‡ %s\n"
+msgstr "rimuover√† %s\n"
 
 #: ../alternatives.c:363 ../alternatives.c:370 ../alternatives.c:401
 #, c-format
@@ -338,7 +338,7 @@ msgstr "impossibile rimuovere il link %s: %s\n"
 #: ../alternatives.c:386 ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "creer‡ un link %s -> %s\n"
+msgstr "creer√† un link %s -> %s\n"
 
 #: ../alternatives.c:390 ../alternatives.c:407
 #, c-format
@@ -348,7 +348,7 @@ msgstr "impossibile creare il link %s -> %s: %s\n"
 #: ../alternatives.c:439
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s esiste gi‡\n"
+msgstr "%s esiste gi√†\n"
 
 #: ../alternatives.c:441
 #, c-format
@@ -373,7 +373,7 @@ msgstr "il link primario per %s deve essere %s\n"
 #: ../alternatives.c:614
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "il link %s non Ë corretto per lo slave %s (%s %s)\n"
+msgstr "il link %s non √® corretto per lo slave %s (%s %s)\n"
 
 #: ../alternatives.c:655
 #, c-format
@@ -393,7 +393,7 @@ msgstr " il link attualmente punta su %s\n"
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - priority %d\n"
-msgstr "%s - priorit‡ %d\n"
+msgstr "%s - priorit√† %d\n"
 
 #: ../alternatives.c:665
 #, c-format
@@ -403,12 +403,12 @@ msgstr " slave %s: %s\n"
 #: ../alternatives.c:670
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "La migliore versione attuale È %s.\n"
+msgstr "La migliore versione attuale √® %s.\n"
 
 #: ../alternatives.c:700
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "C'Ë il programma %d che restituisce '%s'.\n"
+msgstr "C'√® il programma %d che restituisce '%s'.\n"
 
 #: ../alternatives.c:700
 #, c-format
@@ -439,12 +439,12 @@ msgstr ""
 #: ../alternatives.c:741 ../alternatives.c:767
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s non È stato configurato come alternativa per %s\n"
+msgstr "%s non √® stato configurato come alternativa per %s\n"
 
 #: ../alternatives.c:783
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(rimuover‡ %s\n"
+msgstr "(rimuover√† %s\n"
 
 #: ../alternatives.c:785
 #, c-format
