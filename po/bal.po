@@ -1,0 +1,459 @@
+# translation of chkconfig.balochi.po to Balochi
+# translation of chkconfig.balochi.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Mostafa Daneshvar <mostafa@daneshvar.org.uk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: chkconfig.balochi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"PO-Revision-Date: 2008-03-18 00:15+0330\n"
+"Last-Translator: Mostafa Daneshvar <mostafa@daneshvar.org.uk>\n"
+"Language-Team: Balochi <fedora-trans-bal@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../chkconfig.c:36
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s نسخه %s - حق کپی (C) 1997-2000 Red Hat, Inc \n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "شی تحت لیسانس عمومی GNU آزدانه ممکننت چند بار پخش بونت.\n"
+
+#: ../chkconfig.c:40
+#, c-format
+msgid "usage:   %s [--list] [name]\n"
+msgstr "استفاده: %s [--لیست] [ نام]\n"
+
+#: ../chkconfig.c:41
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr " %s --اضافه<name>\n"
+
+#: ../chkconfig.c:42
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr " %s -- حذف<name>\n"
+
+#: ../chkconfig.c:43
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr "  %s --اور نویسگ<name>\n"
+
+#: ../chkconfig.c:44
+#, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--سطح <levels>] <name> %s\n"
+
+#: ../chkconfig.c:51
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr "خدماتی %s  حمایت کنت chkconfig، بله ته هچ مسطح اجرایی ارجاع نه بوتت ( اجرا کنیت chkconfig --add %s)\n"
+
+#: ../chkconfig.c:53
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "خدمت %s  جمایت نکنت chkconfig\n"
+
+#: ../chkconfig.c:55
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "خطا ته وانگ اطلاعات اور سرویس %s: %s\n"
+
+#: ../chkconfig.c:186 ../chkconfig.c:411
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "پروش ته پچ کتن %s/init.d: %s\n"
+
+#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+msgid "on"
+msgstr "روشن"
+
+#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+msgid "off"
+msgstr "حاموش"
+
+#: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "خطا ته وانگ اطلاعات په سرویس %s: %s\n"
+
+#: ../chkconfig.c:466
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "خدمات مبتی په xinetd : \n"
+
+#: ../chkconfig.c:468
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "پروش ته پچ کتن مسیر %s: %s\n"
+
+#: ../chkconfig.c:608
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s نسخه%s\n"
+
+#: ../chkconfig.c:617
+#, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
+msgstr "فقط یکی چه --لیست، --اضافه، یا --اورنویسگ ممکننت مشخص ببیت.\n"
+
+#: ../chkconfig.c:677
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "فقط یک سطح اجرا ممکننت په یک جست chkconfig مشخص بیت.\n"
+
+#: ../ntsysv.c:46
+msgid "Press <F1> for more information on a service."
+msgstr "بجنیت <F1> په اطلاعات گیشتر اور یک سرویس"
+
+#: ../ntsysv.c:83 ../ntsysv.c:120
+msgid "Ok"
+msgstr "هوبنت"
+
+#: ../ntsysv.c:83
+msgid "Back"
+msgstr "تررگ"
+
+#: ../ntsysv.c:83
+msgid "Cancel"
+msgstr "کنسل"
+
+#: ../ntsysv.c:95
+msgid "What services should be automatically started?"
+msgstr "چه خدماتی بایدن اتوماتیکی شروع بنت؟"
+
+#: ../ntsysv.c:101
+msgid "Services"
+msgstr "خدمات"
+
+#: ../ntsysv.c:257
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "خطا ته وانگ چه مسیر %s: %s\n"
+
+#: ../ntsysv.c:293
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "شما باید رووت بیت تا اجرا کنیت %s.\n"
+
+#: ../ntsysv.c:310
+#, c-format
+msgid "bad argument to --levels\n"
+msgstr "بدین آرگومان په سطوح\n"
+
+#: ../ntsysv.c:317
+#, c-format
+msgid "No services may be managed by ntsysv!\n"
+msgstr "هچ خدمتی ممکننت گون ntsysv مدیریت مبیت!\n"
+
+#: ../leveldb.c:601
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "پروش ته جهانی کتن الگو %s: %s\n"
+
+#: ../leveldb.c:644
+#, c-format
+msgid "cannot determine current run level\n"
+msgstr "نه تونیت هنوکین سطح اجرا پجاه بیاریت\n"
+
+#: ../leveldb.c:732
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "پروش ته شر کتن symlink %s: %s\n"
+
+#: ../alternatives.c:63
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "دگه نسخه %s -حق کپی(C) رد هد  Inc.\n"
+
+#: ../alternatives.c:64
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr "شی تحت لیسانس عمومی GNU آزدانه ممکننت چند بار پخش بونت.\n"
+
+#: ../alternatives.c:65
+#, c-format
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "استفاده: دیگه -- نصب <link> <name> <path> <priority>\n"
+
+#: ../alternatives.c:66
+#, c-format
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <service>]\n"
+
+#: ../alternatives.c:67
+#, c-format
+msgid "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
+
+#: ../alternatives.c:68
+#, c-format
+msgid "       alternatives --remove <name> <path>\n"
+msgstr " دگه --دور <name> <path>\n"
+
+#: ../alternatives.c:69
+#, c-format
+msgid "       alternatives --auto <name>\n"
+msgstr " دگه --اتو <name>\n"
+
+#: ../alternatives.c:70
+#, c-format
+msgid "       alternatives --config <name>\n"
+msgstr "  دیگه --تنظیم <name>\n"
+
+#: ../alternatives.c:71
+#, c-format
+msgid "       alternatives --display <name>\n"
+msgstr " دگه --پیش دارگ <name>\n"
+
+#: ../alternatives.c:72
+#, c-format
+msgid "       alternatives --set <name> <path>\n"
+msgstr " دگه --ست <name> <path>\n"
+
+#: ../alternatives.c:73
+#, c-format
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:74
+#, c-format
+msgid "common options: --verbose --test --help --usage --version\n"
+msgstr "متداولین گزینه آن: --verbose --تست --help --استفاده --نسخه\n"
+
+#: ../alternatives.c:75
+#, c-format
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <directory> --admindir <directory>\n"
+
+#: ../alternatives.c:172
+#, c-format
+msgid "reading %s\n"
+msgstr "وانگنت %s\n"
+
+#: ../alternatives.c:176
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "پروش ته پچ کتن  %s: %s\n"
+
+#: ../alternatives.c:185
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "پروش ته وانگش  %s: %s\n"
+
+#: ../alternatives.c:194
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s هایلک!\n"
+
+#: ../alternatives.c:203
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr "بدین حالت ته خط 1 %s\n"
+
+#: ../alternatives.c:210
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr "بدین اصلی لینک ته %s\n"
+
+#: ../alternatives.c:222
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "مسیر %s جا آرگ نه بیت ته %s\n"
+
+#: ../alternatives.c:231
+#, c-format
+msgid "missing path for slave %s in %s\n"
+msgstr "گار کتن مسیر slave %s ته %s\n"
+
+#: ../alternatives.c:241
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "آهر فایل جاه آرگ نبیت ته  %s\n"
+
+#: ../alternatives.c:250
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr "مسیر په دیگه جاه آرتگین ته  %s\n"
+
+#: ../alternatives.c:270
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "شماره ترجیت لوٹیت ته  %s\n"
+
+#: ../alternatives.c:292
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "مسیر  slave لوٹیت ته %s\n"
+
+#: ../alternatives.c:311
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "نه لوٹتگین خط ته %s: %s\n"
+
+#: ../alternatives.c:319
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "پروش ته وانگ لینک  %s: %s\n"
+
+#: ../alternatives.c:333
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr "لینک په هچ جایگزینی وصل نهنت -- حالت تنظیم په دستی \n"
+
+#: ../alternatives.c:338
+#, c-format
+msgid "link changed -- setting mode to manual\n"
+msgstr "لینک عوض بیت --حالت تنظیم دستی\n"
+
+#: ../alternatives.c:366 ../alternatives.c:373
+#, c-format
+msgid "would remove %s\n"
+msgstr "زوریتی%s\n"
+
+#: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "پروش ته زورگ لینک %s: %s\n"
+
+#: ../alternatives.c:391 ../alternatives.c:403
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "لینک کنت  %s -> %s\n"
+
+#: ../alternatives.c:395 ../alternatives.c:412
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "پروش په لینک کتن %s -> %s: %s\n"
+
+#: ../alternatives.c:444
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s پی سر تر هستت\n"
+
+#: ../alternatives.c:446
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "پروش په شر کتن %s: %s\n"
+
+#: ../alternatives.c:477
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "پروش په جابه جاه کتن %s گون %s: %s\n"
+
+#: ../alternatives.c:503 ../alternatives.c:512
+#, c-format
+msgid "running %s\n"
+msgstr "اجرا بیگنت %s\n"
+
+#: ../alternatives.c:539
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "لینک اصلی په %s باید %s بیت\n"
+
+#: ../alternatives.c:619
+#, c-format
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr "لینک %s نادرستن په  slave %s (%s %s)\n"
+
+#: ../alternatives.c:660
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s حالت اتونت.\n"
+
+#: ../alternatives.c:662
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%a حالت دستینت.\n"
+
+#: ../alternatives.c:664
+#, c-format
+msgid " link currently points to %s\n"
+msgstr "لینک هنو نشان دنت به %s\n"
+
+#: ../alternatives.c:667
+#, c-format
+msgid "%s - priority %d\n"
+msgstr "%s - ترجیح %d\n"
+
+#: ../alternatives.c:670
+#, c-format
+msgid " slave %s: %s\n"
+msgstr " slave %s: %s\n"
+
+#: ../alternatives.c:675
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "Current `best' version is %s.\n"
+
+#: ../alternatives.c:705
+#, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr "برنامه هست %d که پیش آریت '%s'. \n"
+
+#: ../alternatives.c:705
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr "برنامه ان هست %d که پیش آریت '%s'. \n"
+
+#: ../alternatives.c:707
+#, c-format
+msgid "  Selection    Command\n"
+msgstr "انتخاب دستور\n"
+
+#: ../alternatives.c:716
+#, c-format
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr "واردکنیت تا هنوکین انتخابا بداریت [+], یا شماره انتخابا تایپ کنیت:"
+
+#: ../alternatives.c:719
+#, c-format
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"خطا تا وانگ انتخاب\n"
+
+#: ../alternatives.c:746 ../alternatives.c:772
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "تنظیم نه بوته %s په عنوان یک جایگزین په %s\n"
+
+#: ../alternatives.c:788
+#, c-format
+msgid "(would remove %s\n"
+msgstr "(بزورتی %s\n"
+
+#: ../alternatives.c:790
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr "پروش ته زورگ %s: %s\n"
+
+#: ../alternatives.c:912
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "altdir %s نامعتبر\n"
+
+#: ../alternatives.c:918
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "admindir %s نامعتبر\n"
+
+#: ../alternatives.c:928
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "دگه جایگزینی نسخه %s\n"
+
