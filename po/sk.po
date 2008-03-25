@@ -1,185 +1,186 @@
 # Stanislav Meduna <stano@eunet.sk>, 1999.
 # Marcel Telka <marcel@telka.sk>, 2003, 2004, 2005.
+# Marek Mahut <mmahut@fedoraproject.org>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2007-10-03 18:27+0200\n"
-"Last-Translator: Mike Karas <zoliqe@gmail.com>\n"
-"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"PO-Revision-Date: 2008-03-25 09:35+0100\n"
+"Last-Translator: Marek Mahut <mmahut@fedoraproject.org>\n"
+"Language-Team: Slovak <fedora-trans-sk@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: ../chkconfig.c:31
+#: ../chkconfig.c:36
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s verzia %s - Autorské práva © 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:32
+#: ../chkconfig.c:37
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Program môže byť voľne šírený za podmienok určených GNU Public License.\n"
 
-#: ../chkconfig.c:35
+#: ../chkconfig.c:40
 #, c-format
-msgid "usage:   %s --list [name]\n"
+msgid "usage:   %s [--list] [name]\n"
 msgstr "použitie:   %s --list [názov]\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:41
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "            %s --add <názov>\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:42
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "            %s --del <názov>\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:43
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <názov>\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:44
 #, c-format
 msgid "         %s [--level <levels>] <name> %s\n"
 msgstr "            %s [--level <úrovne>] <názov> %s\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:51
 #, c-format
 msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
 msgstr "služba %s podporuje chkconfig, ale nie je na ňu odkazované zo žiadnej úrovne (spustite 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:48
+#: ../chkconfig.c:53
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "služba %s nepodporuje chkconfig\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:55
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 
-#: ../chkconfig.c:181
-#: ../chkconfig.c:406
+#: ../chkconfig.c:186
+#: ../chkconfig.c:411
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nepodarilo sa otvoriť %s/init.d: %s\n"
 
-#: ../chkconfig.c:350
 #: ../chkconfig.c:355
-#: ../chkconfig.c:499
+#: ../chkconfig.c:360
+#: ../chkconfig.c:504
 msgid "on"
 msgstr "zap"
 
-#: ../chkconfig.c:350
 #: ../chkconfig.c:355
-#: ../chkconfig.c:499
+#: ../chkconfig.c:360
+#: ../chkconfig.c:504
 msgid "off"
 msgstr "vyp"
 
-#: ../chkconfig.c:428
-#: ../ntsysv.c:178
-#: ../ntsysv.c:205
-#: ../ntsysv.c:243
+#: ../chkconfig.c:433
+#: ../ntsysv.c:183
+#: ../ntsysv.c:210
+#: ../ntsysv.c:248
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 
-#: ../chkconfig.c:461
+#: ../chkconfig.c:466
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "služby spúšťané pomocou xinetd:\n"
 
-#: ../chkconfig.c:463
+#: ../chkconfig.c:468
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "nepodarilo sa otvoriť adresár %s: %s\n"
 
-#: ../chkconfig.c:603
+#: ../chkconfig.c:608
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzia %s\n"
 
-#: ../chkconfig.c:610
+#: ../chkconfig.c:617
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "môže byť zadaná iba jedna z volieb --list, --add, --del alebo --override\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:677
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "pre chkconfig otázku môže byť zadaná iba jedna úroveň\n"
 
-#: ../ntsysv.c:41
+#: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
 msgstr "Stlačením <F1> získate viac informácií o službe."
 
-#: ../ntsysv.c:78
-#: ../ntsysv.c:115
+#: ../ntsysv.c:83
+#: ../ntsysv.c:120
 msgid "Ok"
 msgstr "Ok"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:83
 msgid "Back"
 msgstr "Späť"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:83
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: ../ntsysv.c:90
+#: ../ntsysv.c:95
 msgid "What services should be automatically started?"
 msgstr "Ktoré služby majú byť automaticky spúšťané?"
 
-#: ../ntsysv.c:96
+#: ../ntsysv.c:101
 msgid "Services"
 msgstr "Služby"
 
-#: ../ntsysv.c:252
+#: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "chyba pri čítaní z adresára %s: %s\n"
 
-#: ../ntsysv.c:288
+#: ../ntsysv.c:293
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Musíte byť správca, aby ste mohli spustiť %s.\n"
 
-#: ../ntsysv.c:305
+#: ../ntsysv.c:310
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "chybný argument pre --levels\n"
 
-#: ../ntsysv.c:312
+#: ../ntsysv.c:317
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Žiadne služby nemôžu byť spravované ntsysv!\n"
 
-#: ../leveldb.c:596
+#: ../leveldb.c:601
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nepodarilo sa nájsť zhodu so vzorom %s: %s\n"
 
-#: ../leveldb.c:639
+#: ../leveldb.c:644
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "nie je možné zistiť aktuálnu úroveň\n"
 
-#: ../leveldb.c:727
+#: ../leveldb.c:732
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nepodarilo sa vytvoriť symbolický odkaz %s: %s\n"
 
-#: ../alternatives.c:58
+#: ../alternatives.c:63
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives verzia %s - Autorské práva © 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:59
+#: ../alternatives.c:64
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -188,248 +189,248 @@ msgstr ""
 "Toto môže byť voľne šírené za podmienok určených GNU Public License.\n"
 "\n"
 
-#: ../alternatives.c:60
+#: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "Použitie: alternatives --install <odkaz> <názov> <cesta> <priority>\n"
 
-#: ../alternatives.c:61
+#: ../alternatives.c:66
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <služba>]\n"
 
-#: ../alternatives.c:62
+#: ../alternatives.c:67
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <odkaz> <názov> cesta]*\n"
 
-#: ../alternatives.c:63
+#: ../alternatives.c:68
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <názov> <cesta>\n"
 
-#: ../alternatives.c:64
+#: ../alternatives.c:69
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <názov>\n"
 
-#: ../alternatives.c:65
+#: ../alternatives.c:70
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <názov>\n"
 
-#: ../alternatives.c:66
+#: ../alternatives.c:71
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <názov>\n"
 
-#: ../alternatives.c:67
+#: ../alternatives.c:72
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <názov> <cesta>\n"
 
-#: ../alternatives.c:68
+#: ../alternatives.c:73
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:69
+#: ../alternatives.c:74
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "spoločné voľby: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:70
+#: ../alternatives.c:75
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <adresár> --admindir <adresár>\n"
 
-#: ../alternatives.c:167
+#: ../alternatives.c:172
 #, c-format
 msgid "reading %s\n"
 msgstr "čítanie %s\n"
 
-#: ../alternatives.c:171
+#: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "nepodarilo sa otvoriť %s: %s\n"
 
-#: ../alternatives.c:180
+#: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "nepodarilo sa prečítať %s: %s\n"
 
-#: ../alternatives.c:189
+#: ../alternatives.c:194
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s je prázdny!\n"
 
-#: ../alternatives.c:198
+#: ../alternatives.c:203
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "zlý režim na riadku 1 z %s\n"
 
-#: ../alternatives.c:205
+#: ../alternatives.c:210
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "zlý primárny odkaz v %s\n"
 
-#: ../alternatives.c:217
+#: ../alternatives.c:222
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "cesta %s je neočakávaná v %s\n"
 
-#: ../alternatives.c:226
+#: ../alternatives.c:231
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "chýbajúca cesta pre pomocné %s v %s\n"
 
-#: ../alternatives.c:236
+#: ../alternatives.c:241
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "neočakávaný koniec súboru v %s\n"
 
-#: ../alternatives.c:245
+#: ../alternatives.c:250
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "cesta k alternatíve očakávaná v %s\n"
 
-#: ../alternatives.c:265
+#: ../alternatives.c:270
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "číselná priorita očakávaná v %s\n"
 
-#: ../alternatives.c:287
+#: ../alternatives.c:292
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "pomocná cesta očakávaná v %s\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:311
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "neočakávaný riadok v %s: %s\n"
 
-#: ../alternatives.c:314
+#: ../alternatives.c:319
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "nepodarilo sa prečítať odkaz %s: %s\n"
 
-#: ../alternatives.c:328
+#: ../alternatives.c:333
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "odkaz neukazuje na alternatívu -- nastavujem režim na manuálny\n"
 
-#: ../alternatives.c:333
+#: ../alternatives.c:338
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "odkaz zmenený -- nastavujem režim na manuálny\n"
 
-#: ../alternatives.c:361
-#: ../alternatives.c:368
+#: ../alternatives.c:366
+#: ../alternatives.c:373
 #, c-format
 msgid "would remove %s\n"
 msgstr "by vymazalo %s\n"
 
-#: ../alternatives.c:363
-#: ../alternatives.c:370
-#: ../alternatives.c:401
+#: ../alternatives.c:368
+#: ../alternatives.c:375
+#: ../alternatives.c:406
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "nepodarilo sa odstrániť odkaz %s: %s\n"
 
-#: ../alternatives.c:386
-#: ../alternatives.c:398
+#: ../alternatives.c:391
+#: ../alternatives.c:403
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "by prepojilo %s -> %s\n"
 
-#: ../alternatives.c:390
-#: ../alternatives.c:407
+#: ../alternatives.c:395
+#: ../alternatives.c:412
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "nepodarilo sa vytvoriť odkaz %s -> %s: %s\n"
 
-#: ../alternatives.c:439
+#: ../alternatives.c:444
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s už existuje\n"
 
-#: ../alternatives.c:441
+#: ../alternatives.c:446
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "nepodarilo sa vytvoriť %s: %s\n"
 
-#: ../alternatives.c:472
+#: ../alternatives.c:477
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "nepodarilo sa nahradiť %s s %s: %s\n"
 
-#: ../alternatives.c:498
-#: ../alternatives.c:507
+#: ../alternatives.c:503
+#: ../alternatives.c:512
 #, c-format
 msgid "running %s\n"
 msgstr "spúšťam %s\n"
 
-#: ../alternatives.c:534
+#: ../alternatives.c:539
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "primárny odkaz pre %s musí byť %s\n"
 
-#: ../alternatives.c:614
+#: ../alternatives.c:619
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "odkaz %s je nesprávny pre pomocné %s (%s %s)\n"
 
-#: ../alternatives.c:655
+#: ../alternatives.c:660
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - stav je automatický.\n"
 
-#: ../alternatives.c:657
+#: ../alternatives.c:662
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - stav je manuálny.\n"
 
-#: ../alternatives.c:659
+#: ../alternatives.c:664
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " odkaz momentálne ukazuje na %s\n"
 
-#: ../alternatives.c:662
+#: ../alternatives.c:667
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - priorita %d\n"
 
-#: ../alternatives.c:665
+#: ../alternatives.c:670
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " pomocné %s: %s\n"
 
-#: ../alternatives.c:670
+#: ../alternatives.c:675
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Aktuálna 'najlepšia' verzia je %s.\n"
 
-#: ../alternatives.c:700
+#: ../alternatives.c:705
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Existuje %d program, ktorý poskytuje '%s'.\n"
 
-#: ../alternatives.c:700
+#: ../alternatives.c:705
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Existuje %d programov, ktoré poskytujú '%s'.\n"
 
-#: ../alternatives.c:702
+#: ../alternatives.c:707
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Výber        Príkaz\n"
 
-#: ../alternatives.c:711
+#: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Zadajte pre zachovanie aktuálneho výberu[+], alebo zadajte číslo výberu: "
 
-#: ../alternatives.c:714
+#: ../alternatives.c:719
 #, c-format
 msgid ""
 "\n"
@@ -438,33 +439,33 @@ msgstr ""
 "\n"
 "chyba pri čítaní voľby\n"
 
-#: ../alternatives.c:741
-#: ../alternatives.c:767
+#: ../alternatives.c:746
+#: ../alternatives.c:772
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nebol nakonfigurovaný ako alternatíva pre %s\n"
 
-#: ../alternatives.c:783
+#: ../alternatives.c:788
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(by vymazalo %s\n"
 
-#: ../alternatives.c:785
+#: ../alternatives.c:790
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "nepodarilo sa odstrániť %s: %s\n"
 
-#: ../alternatives.c:907
+#: ../alternatives.c:912
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s je neplatný\n"
 
-#: ../alternatives.c:913
+#: ../alternatives.c:918
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s je neplatný\n"
 
-#: ../alternatives.c:923
+#: ../alternatives.c:928
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verzia %s\n"
