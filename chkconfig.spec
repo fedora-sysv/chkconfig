@@ -44,6 +44,7 @@ for n in 0 1 2 3 4 5 6; do
     mkdir -p $RPM_BUILD_ROOT/etc/rc.d/rc${n}.d
     ln -s rc.d/rc${n}.d $RPM_BUILD_ROOT/etc/rc${n}.d
 done
+mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 
 %find_lang %{name}
 
@@ -57,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig
 %{_sbindir}/update-alternatives
 %{_sbindir}/alternatives
+/etc/chkconfig.d
 /etc/init.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
