@@ -76,10 +76,6 @@ install:
 	done && test -z "$$fail"
 
 archive:
-	cvs tag -F $(CVSTAG) .
-	@rm -rf /tmp/chkconfig-$(VERSION) /tmp/chkconfig
-	@cd /tmp; cvs -d $(CVSROOT) export -r$(CVSTAG) chkconfig
-	@mv /tmp/chkconfig /tmp/chkconfig-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar cvzf $$dir/chkconfig-$(VERSION).tar.gz chkconfig-$(VERSION)
-	@rm -rf /tmp/chkconfig-$(VERSION)
+	git tag $(CVSTAG)
+	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(CVSTAG) | gzip >chkconfig-$(VERSION).tar.gz
 	@echo "The archive is in chkconfig-$(VERSION).tar.gz"
