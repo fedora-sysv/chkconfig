@@ -1,7 +1,5 @@
 VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
-RELEASE=$(shell awk '/Release:/ { print $$2 }' chkconfig.spec)
-CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
-CVSROOT = $(shell cat CVS/Root 2>/dev/null || :)
+TAG = chkconfig-$(VERSION)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
 LDFLAGS=-g
@@ -75,7 +73,11 @@ install:
 	    || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\
 	done && test -z "$$fail"
 
+tag:
+	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
+	@echo "Tagged as $(TAG)"
+                
+
 archive:
-	git tag $(CVSTAG)
-	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(CVSTAG) | gzip >chkconfig-$(VERSION).tar.gz
-	@echo "The archive is in chkconfig-$(VERSION).tar.gz"
+	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(TAG) | bzip2 >chkconfig-$(VERSION).tar.bz2
+	@echo "The archive is in chkconfig-$(VERSION).tar.bz2"
