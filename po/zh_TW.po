@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: chkconfig.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-08 16:29-0500\n"
-"PO-Revision-Date: 2008-09-01 16:36+1000\n"
+"PO-Revision-Date: 2008-09-24 14:26+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,17 +24,17 @@ msgstr ""
 #: ../chkconfig.c:36
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 版本 %s - 版權所有 (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s 版本 %s - 版權所有（C）1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:37
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "在遵守 GNU 通用公共許可證(GPL) 的條款下，可以自由的散佈這個程式。\n"
+msgstr "在遵守 GNU 通用公共許可證（GPL）的條款下，可以自由的散佈這個程式。\n"
 
 #: ../chkconfig.c:40
 #, c-format
 msgid "usage:   %s [--list] [name]\n"
-msgstr "用法：   %s [--list] [名稱]\n"
+msgstr "用法：%s [--list] [名稱]\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -61,7 +61,7 @@ msgstr "         %s [--level <執行等級們>] <名稱> %s\n"
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s 服務支援 chkconfig，但未向任何執行等級註冊 (請執行 'chkconfig --add %s')\n"
+msgstr "%s 服務支援 chkconfig，但未向任何執行等級註冊（請執行 'chkconfig --add %s'）\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -71,12 +71,12 @@ msgstr "%s 服務不支援 chkconfig\n"
 #: ../chkconfig.c:55
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "在 %s 服務上讀取訊息錯誤: %s\n"
+msgstr "在 %s 服務上讀取訊息錯誤：%s\n"
 
 #: ../chkconfig.c:186 ../chkconfig.c:411
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "無法開啟 %s/init.d: %s\n"
+msgstr "無法開啟 %s/init.d：%s\n"
 
 #: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
 msgid "on"
@@ -89,17 +89,17 @@ msgstr "關閉"
 #: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "讀取 %s 服務的資訊錯誤: %s\n"
+msgstr "讀取 %s 服務的資訊錯誤：%s\n"
 
 #: ../chkconfig.c:466
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "以 xinetd 為主的服務:\n"
+msgstr "以 xinetd 為主的服務：\n"
 
 #: ../chkconfig.c:468
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "無法開啟 %s 目錄: %s\n"
+msgstr "無法開啟 %s 目錄：%s\n"
 
 #: ../chkconfig.c:608
 #, c-format
@@ -143,7 +143,7 @@ msgstr "服務"
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "讀取 %s 目錄錯誤: %s\n"
+msgstr "讀取 %s 目錄錯誤：%s\n"
 
 #: ../ntsysv.c:293
 #, c-format
@@ -163,7 +163,7 @@ msgstr "無任何服務可被 ntsysv 管理！\n"
 #: ../leveldb.c:601
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "設定全域設定值 %s 失敗: %s\n"
+msgstr "設定全域設定值 %s 失敗：%s\n"
 
 #: ../leveldb.c:644
 #, c-format
@@ -173,24 +173,24 @@ msgstr "無法取得目前的執行等級\n"
 #: ../leveldb.c:732
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "建立 %s 符號連結失敗: %s\n"
+msgstr "建立 %s 符號連結失敗：%s\n"
 
 #: ../alternatives.c:63
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "另一版本 %s - 版權所有 (C) 2001 Red Hat, Inc.\n"
+msgstr "另一版本 %s - 版權所有（C）2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:64
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在遵守 GNU 通用公共許可證(GPL)的條款下，可以自由的散佈這個程式。\n"
+msgstr "在遵守 GNU 通用公共許可證（GPL）的條款下，可以自由的散佈這個程式。\n"
 
 #: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "用法: alternatives --install <連結> <名稱> <路徑> <優先順序>\n"
+msgstr "用法：alternatives --install <連結> <名稱> <路徑> <優先順序>\n"
 
 #: ../alternatives.c:66
 #, c-format
@@ -235,7 +235,7 @@ msgstr "\n"
 #: ../alternatives.c:74
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "共同選項: --verbose --test --help --usage --version\n"
+msgstr "共同選項：--verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:75
 #, c-format
@@ -250,12 +250,12 @@ msgstr "讀取中 %s\n"
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "無法開啟 %s: %s\n"
+msgstr "無法開啟 %s：%s\n"
 
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "無法讀取 %s: %s\n"
+msgstr "無法讀取 %s：%s\n"
 
 #: ../alternatives.c:194
 #, c-format
@@ -305,12 +305,12 @@ msgstr "請輸入從屬裝置路徑到 %s\n"
 #: ../alternatives.c:311
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s 中有錯誤的行列: %s\n"
+msgstr "%s 中有錯誤的行列：%s\n"
 
 #: ../alternatives.c:319
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "無法讀取連結 %s: %s\n"
+msgstr "無法讀取連結 %s：%s\n"
 
 #: ../alternatives.c:333
 #, c-format
@@ -330,7 +330,7 @@ msgstr "將移除 %s\n"
 #: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "移除 %s 的連結失敗: %s\n"
+msgstr "移除 %s 的連結失敗：%s\n"
 
 #: ../alternatives.c:391 ../alternatives.c:403
 #, c-format
@@ -340,7 +340,7 @@ msgstr "將連結 %s -> %s\n"
 #: ../alternatives.c:395 ../alternatives.c:412
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "建立 %s -> %s 的連結失敗: %s\n"
+msgstr "建立 %s -> %s 的連結失敗：%s\n"
 
 #: ../alternatives.c:444
 #, c-format
@@ -350,12 +350,12 @@ msgstr "%s 已經存在\n"
 #: ../alternatives.c:446
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "建立 %s 失敗: %s\n"
+msgstr "建立 %s 失敗：%s\n"
 
 #: ../alternatives.c:477
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "取代 %s 以 %s 失敗: %s\n"
+msgstr "取代 %s 以 %s 失敗：%s\n"
 
 #: ../alternatives.c:503 ../alternatives.c:512
 #, c-format
@@ -370,7 +370,7 @@ msgstr "%s 的主要連結必須是 %s\n"
 #: ../alternatives.c:619
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "%s 連結在從屬裝置 %s 上是錯誤的 (%s %s)\n"
+msgstr "%s 連結在從屬裝置 %s 上是錯誤的（%s %s）\n"
 
 #: ../alternatives.c:660
 #, c-format
@@ -395,7 +395,7 @@ msgstr "%s - 優先順序 %d\n"
 #: ../alternatives.c:670
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " 從屬裝置 %s: %s\n"
+msgstr " 從屬裝置 %s：%s\n"
 
 #: ../alternatives.c:675
 #, c-format
@@ -420,7 +420,7 @@ msgstr "  選擇        指令\n"
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼:"
+msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼："
 
 #: ../alternatives.c:719
 #, c-format
@@ -439,12 +439,12 @@ msgstr "%s 尚未被設定為 %s 的另一選擇\n"
 #: ../alternatives.c:788
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(將移除 %s\n"
+msgstr "（將移除 %s\n"
 
 #: ../alternatives.c:790
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "無法移除 %s: %s\n"
+msgstr "無法移除 %s：%s\n"
 
 #: ../alternatives.c:912
 #, c-format
