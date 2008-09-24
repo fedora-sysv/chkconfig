@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-01 16:50-0500\n"
-"PO-Revision-Date: 2008-09-25 00:30+0200\n"
+"PO-Revision-Date: 2008-09-25 00:36+0200\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -74,14 +74,12 @@ msgstr "dështoi në hapjen e %s/init.d: %s\n"
 #: ../chkconfig.c:350
 #: ../chkconfig.c:355
 #: ../chkconfig.c:499
-#, fuzzy
 msgid "on"
 msgstr "on"
 
 #: ../chkconfig.c:350
 #: ../chkconfig.c:355
 #: ../chkconfig.c:499
-#, fuzzy
 msgid "off"
 msgstr "off"
 
@@ -300,7 +298,7 @@ msgstr ""
 #: ../alternatives.c:265
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "pritej përparësi numerije te %s\n"
 
 #: ../alternatives.c:287
 #, c-format
@@ -320,12 +318,12 @@ msgstr "dështoi në leximin e lidhjes %s: %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "lidhja nuk shpie te alternativa -- mënyra po caktohet si dorazi\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "lidhja u ndryshua -- mënyra po caktohet si dorazi\n"
 
 #: ../alternatives.c:361
 #: ../alternatives.c:368
@@ -344,13 +342,13 @@ msgstr "dështoi në heqjen e lidhjes %s: %s\n"
 #: ../alternatives.c:398
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "do të lidhte %s -> %s\n"
 
 #: ../alternatives.c:390
 #: ../alternatives.c:407
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "dështoi të lidhte %s -> %s: %s\n"
 
 #: ../alternatives.c:439
 #, c-format
@@ -416,7 +414,7 @@ msgstr "Versioni `më i mirë' i tanishëm është %s.\n"
 #: ../alternatives.c:700
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "Ka një program %d që furnizon '%s'.\n"
 
 #: ../alternatives.c:700
 #, c-format
@@ -431,7 +429,7 @@ msgstr "  Përzgjedhje    Urdhër\n"
 #: ../alternatives.c:711
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "\"Enter\" që rq mbahet përzgjedhja e tanishme[+], ose shtypni numër përzgjedhjeje: "
 
 #: ../alternatives.c:714
 #, c-format
@@ -461,12 +459,12 @@ msgstr "dështoi në heqjen e %s: %s\n"
 #: ../alternatives.c:907
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s e pavlefshme\n"
 
 #: ../alternatives.c:913
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s e pavlefshme\n"
 
 #: ../alternatives.c:923
 #, c-format
