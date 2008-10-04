@@ -2,19 +2,20 @@
 # Copyright (C) 2002, 2004 Free Software Foundation, Inc.
 # Simos Xenitellis <simos@hellug.gr>, 2002.
 # Nikos Charonitakis <charosn@her.forthnet.gr>, 2004.
-#
+# jiannis bonatakis <california17@gmail.com>,2008	Nikos Charonitakis <charosn@her.forthnet.gr>, 2008.
+# 
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: el\n"
+"Project-Id-Version: el.po\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-08 16:29-0500\n"
-"PO-Revision-Date: 2004-08-05 20:32+0300\n"
-"Last-Translator: Nikos Charonitakis <charosn@her.forthnet.gr>\n"
-"Language-Team:  <nls@tux.hellug.gr>\n"
+"PO-Revision-Date: 2008-10-04 05:38+0300\n"
+"Last-Translator: jiannis bonatakis <california17@gmail.com>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"Content-Transfer-Encoding: 8bit"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -195,7 +196,7 @@ msgstr ""
 #: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
+msgstr "χρήση:·alternatives·--install·<σύνδεση>·<όνομα>·<διαδρομή>·<προτεραιότητα>\n"
 
 #: ../alternatives.c:66
 #, c-format
@@ -210,7 +211,7 @@ msgstr "         %s [--level <επίπεδα>] <όνομα> %s)\n"
 #: ../alternatives.c:68
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr ""
+msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n"
 
 #: ../alternatives.c:69
 #, fuzzy, c-format
@@ -245,12 +246,12 @@ msgstr ""
 #: ../alternatives.c:75
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr ""
+msgstr "················--altdir·<κατλογος>·--admindir·<κατάλογος>\n"
 
 #: ../alternatives.c:172
 #, c-format
 msgid "reading %s\n"
-msgstr "ανάγνωση %s\n"
+msgstr "ανάγνωση\n"
 
 #: ../alternatives.c:176
 #, c-format
@@ -305,7 +306,7 @@ msgstr ""
 #: ../alternatives.c:292
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "αναμονή δευτερεύον διαδρομής στο·%s\n"
 
 #: ../alternatives.c:311
 #, c-format
@@ -315,7 +316,7 @@ msgstr "μη αποδεκτη γραμμη στη %s: %s\n"
 #: ../alternatives.c:319
 #, fuzzy, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
+msgstr "αποτυχία ανοίγματος του συνδέσμου %s/init.d: %s\n"
 
 #: ../alternatives.c:333
 #, c-format
@@ -330,7 +331,7 @@ msgstr "ο συνδεσμος αλλαξε -- τροπος ορισμου με �
 #: ../alternatives.c:366 ../alternatives.c:373
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "προς μετακίνηση·%s\n"
 
 #: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
 #, c-format
@@ -340,7 +341,7 @@ msgstr "αποτυχία διαγραφής συμβολικού συνδέσμ�
 #: ../alternatives.c:391 ../alternatives.c:403
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "προς συνδεση·%s·->·%s\n"
 
 #: ../alternatives.c:395 ../alternatives.c:412
 #, c-format
@@ -370,27 +371,27 @@ msgstr "εκτελείται %s\n"
 #: ../alternatives.c:539
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "η κύρια σύνδεση για·%s·πρέπει να είναι·%s\n"
 
 #: ../alternatives.c:619
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "σύνδεση·%s·λανθασμένη για δευτερεύον·%s·(%s·%s)\n"
 
 #: ../alternatives.c:660
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s·-· κατασταση είναι αυτόματη.\n"
 
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s·-·κατασταση ειναι αυτόματη.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "η συνδεση αυτή τη στιγμη δείχνει στο·%s\n"
 
 #: ../alternatives.c:667
 #, c-format
@@ -400,22 +401,22 @@ msgstr "%s - προτεραιότητα %d\n"
 #: ../alternatives.c:670
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr "·δευτερεύον·%s:·%s\n"
 
 #: ../alternatives.c:675
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "Τωρινή 'καλύτερη' εκδοση ειναι·%s.\n"
 
 #: ../alternatives.c:705
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "Υπάρχει·%d·πρόγραμα που προβάλει·'%s'.\n"
 
 #: ../alternatives.c:705
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "Υπάπχουν·%d·προγράματα·που προβάλουν '%s'.\n"
 
 #: ../alternatives.c:707
 #, c-format
@@ -425,24 +426,24 @@ msgstr ""
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "Επέλεξε για να κρατήσεις την τρέχουσα επιλογή[+],·ή πληκτρολόγησε αριθμό επιλογής·"
 
 #: ../alternatives.c:719
 #, fuzzy, c-format
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
+msgstr "σφάλμα επιλογή ανάγνωσης  %s: %s\n"
 
 #: ../alternatives.c:746 ../alternatives.c:772
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s·δεν έχει ρυθμιστεί ως μια εναλακτική για·%s\n"
 
 #: ../alternatives.c:788
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(προς μετακίνηση·%s\n"
 
 #: ../alternatives.c:790
 #, c-format
@@ -452,17 +453,17 @@ msgstr "αποτυχία διαγραφής του %s: %s\n"
 #: ../alternatives.c:912
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir·%s·μη έγκυρο\n"
 
 #: ../alternatives.c:918
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir·%s·μη έγκυρο\n"
 
 #: ../alternatives.c:928
 #, fuzzy, c-format
 msgid "alternatives version %s\n"
-msgstr "%s έκδοση %s\n"
+msgstr "εναλακτικη έκδοση %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
