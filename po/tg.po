@@ -1,0 +1,475 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: chkconfig.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"PO-Revision-Date: 2008-10-18 04:54-0800\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik Fedora and Software Localization Team <victor.ibragimov@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Tajik\n"
+"X-Poedit-Country: TAJIKISTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../chkconfig.c:36
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s версияи %s - Ҳуқуқи муаллифӣ (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:37
+#, c-format
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+
+#: ../chkconfig.c:40
+#, c-format
+msgid "usage:   %s [--list] [name]\n"
+msgstr "истифодабарӣ:   %s [--list] [ном]\n"
+
+#: ../chkconfig.c:41
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <ном>\n"
+
+#: ../chkconfig.c:42
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <ном>\n"
+
+#: ../chkconfig.c:43
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr "         %s --override <ном>\n"
+
+#: ../chkconfig.c:44
+#, c-format
+msgid "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <дараҷа>] <ном> %s\n"
+
+#: ../chkconfig.c:51
+#, c-format
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr ""
+
+#: ../chkconfig.c:53
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "хидмати %s chkconfig*ро пуштибонӣ намекунад\n"
+
+#: ../chkconfig.c:55
+#, fuzzy, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "Хатогӣ ҳангоми хондани папкаи %1 дар сервери: "
+
+#: ../chkconfig.c:186
+#: ../chkconfig.c:411
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "қатъ карда шуд барои хониши %s/init.d: %s\n"
+
+#: ../chkconfig.c:355
+#: ../chkconfig.c:360
+#: ../chkconfig.c:504
+msgid "on"
+msgstr "фаъол"
+
+#: ../chkconfig.c:355
+#: ../chkconfig.c:360
+#: ../chkconfig.c:504
+msgid "off"
+msgstr "хомӯш"
+
+#: ../chkconfig.c:433
+#: ../ntsysv.c:183
+#: ../ntsysv.c:210
+#: ../ntsysv.c:248
+#, fuzzy, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "Хатогии хондани додаҳои садоӣ барои %1 аз Диски Фишурда"
+
+#: ../chkconfig.c:466
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "хидматҳои xinetd:\n"
+
+#: ../chkconfig.c:468
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "қатъ карда шуд барои кушодани феҳрасти %s: %s\n"
+
+#: ../chkconfig.c:608
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s версияи %s\n"
+
+#: ../chkconfig.c:617
+#, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
+msgstr ""
+
+#: ../chkconfig.c:677
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr ""
+
+#: ../ntsysv.c:46
+msgid "Press <F1> for more information on a service."
+msgstr "Барои гирифтани бисёр маълумот оиди ин хидмат тугмаи <F1> -ро зер кунед."
+
+#: ../ntsysv.c:83
+#: ../ntsysv.c:120
+msgid "Ok"
+msgstr "Ok"
+
+#: ../ntsysv.c:83
+msgid "Back"
+msgstr "Ақиб"
+
+#: ../ntsysv.c:83
+msgid "Cancel"
+msgstr "Бекор кардан"
+
+#: ../ntsysv.c:95
+msgid "What services should be automatically started?"
+msgstr ""
+
+#: ../ntsysv.c:101
+msgid "Services"
+msgstr "Хидматҳо"
+
+#: ../ntsysv.c:257
+#, fuzzy, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "Ҳангоми хондани PTY хато пайдо шуд"
+
+#: ../ntsysv.c:293
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "Барои иҷрокунии %s, ҳамчун root ворид шавед.\n"
+
+#: ../ntsysv.c:310
+#, fuzzy, c-format
+msgid "bad argument to --levels\n"
+msgstr "Баргардондани аргументи'%1' ба рақами тамомӣ иҷро нашуд."
+
+#: ../ntsysv.c:317
+#, c-format
+msgid "No services may be managed by ntsysv!\n"
+msgstr ""
+
+#: ../leveldb.c:601
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr ""
+
+#: ../leveldb.c:644
+#, c-format
+msgid "cannot determine current run level\n"
+msgstr ""
+
+#: ../leveldb.c:732
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "қатъ карда шуд барои эҷоди symlink %s: %s\n"
+
+#: ../alternatives.c:63
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr ""
+
+#: ../alternatives.c:64
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr ""
+
+#: ../alternatives.c:65
+#, c-format
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "истифодабарӣ: alternatives --install <алоқа> <ном> <роҳча> <афзалият>\n"
+
+#: ../alternatives.c:66
+#, c-format
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <хидмат>]\n"
+
+#: ../alternatives.c:67
+#, c-format
+msgid "                    [--slave <link> <name> <path>]*\n"
+msgstr "                    [--slave <алоқа> <ном> <роҳча>]*\n"
+
+#: ../alternatives.c:68
+#, c-format
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove <ном> <роҳча>\n"
+
+#: ../alternatives.c:69
+#, c-format
+msgid "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <ном>\n"
+
+#: ../alternatives.c:70
+#, c-format
+msgid "       alternatives --config <name>\n"
+msgstr "       alternatives --config <ном>\n"
+
+#: ../alternatives.c:71
+#, c-format
+msgid "       alternatives --display <name>\n"
+msgstr "       alternatives --display <ном>\n"
+
+#: ../alternatives.c:72
+#, c-format
+msgid "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <ном> <роҳча>\n"
+
+#: ../alternatives.c:73
+#, c-format
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:74
+#, c-format
+msgid "common options: --verbose --test --help --usage --version\n"
+msgstr ""
+
+#: ../alternatives.c:75
+#, c-format
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <феҳраст> --admindir <феҳраст>\n"
+
+#: ../alternatives.c:172
+#, c-format
+msgid "reading %s\n"
+msgstr "хониши %s\n"
+
+#: ../alternatives.c:176
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "қатъ карда шуд барои кушодани %s: %s\n"
+
+#: ../alternatives.c:185
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "қатъ карда шуд барои хониши %s: %s\n"
+
+#: ../alternatives.c:194
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s холӣ аст!\n"
+
+#: ../alternatives.c:203
+#, fuzzy, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr "Ронандаи чопгари ғайримухтори манбаи додаҳо"
+
+#: ../alternatives.c:210
+#, fuzzy, c-format
+msgid "bad primary link in %s\n"
+msgstr "Пайвапнди давронӣ дар %1 пайдо шуд."
+
+#: ../alternatives.c:222
+#, fuzzy, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "Роҳчаи дарунсохт барои китобхонаҳо"
+
+#: ../alternatives.c:231
+#, c-format
+msgid "missing path for slave %s in %s\n"
+msgstr ""
+
+#: ../alternatives.c:241
+#, fuzzy, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "Хабарҳо дар файли локалӣ"
+
+#: ../alternatives.c:250
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:270
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr ""
+
+#: ../alternatives.c:292
+#, fuzzy, c-format
+msgid "slave path expected in %s\n"
+msgstr "Роҳчаи дарунсохт барои китобхонаҳо"
+
+#: ../alternatives.c:311
+#, fuzzy, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "Аз хат тасвир кардан"
+
+#: ../alternatives.c:319
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "қатъ карда шуд барои хониши алоқаи %s: %s\n"
+
+#: ../alternatives.c:333
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr ""
+
+#: ../alternatives.c:338
+#, c-format
+msgid "link changed -- setting mode to manual\n"
+msgstr "алоқа иваз шуд -- ҳолати дастии танзимот\n"
+
+#: ../alternatives.c:366
+#: ../alternatives.c:373
+#, c-format
+msgid "would remove %s\n"
+msgstr "нест карда мешавад %s\n"
+
+#: ../alternatives.c:368
+#: ../alternatives.c:375
+#: ../alternatives.c:406
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "қатъ карда шуд барои несткунии алоқаи %s: %s\n"
+
+#: ../alternatives.c:391
+#: ../alternatives.c:403
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "пайванд мекунад %s -> %s\n"
+
+#: ../alternatives.c:395
+#: ../alternatives.c:412
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "қатъ карда шуд барои пайванди %s -> %s: %s\n"
+
+#: ../alternatives.c:444
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s аллакай мавҷуд аст\n"
+
+#: ../alternatives.c:446
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "қатъ карда шуд барои эҷоди %s: %s\n"
+
+#: ../alternatives.c:477
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "қатъ карда шуд барои ҷойивазкунии %s бо %s: %s\n"
+
+#: ../alternatives.c:503
+#: ../alternatives.c:512
+#, c-format
+msgid "running %s\n"
+msgstr "%s иҷро шуда истодааст\n"
+
+#: ../alternatives.c:539
+#, fuzzy, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "Барои содирот шохаро ишора намудан лозим аст."
+
+#: ../alternatives.c:619
+#, c-format
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr ""
+
+#: ../alternatives.c:660
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s - ҳолати худкор.\n"
+
+#: ../alternatives.c:662
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%s - ҳолати дастӣ.\n"
+
+#: ../alternatives.c:664
+#, c-format
+msgid " link currently points to %s\n"
+msgstr ""
+
+#: ../alternatives.c:667
+#, c-format
+msgid "%s - priority %d\n"
+msgstr "%s - афзалият %d\n"
+
+#: ../alternatives.c:670
+#, c-format
+msgid " slave %s: %s\n"
+msgstr " slave %s: %s\n"
+
+#: ../alternatives.c:675
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "Версияи `беҳтарини' ҷорӣ %s.\n"
+
+#: ../alternatives.c:705
+#, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr ""
+
+#: ../alternatives.c:705
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr ""
+
+#: ../alternatives.c:707
+#, c-format
+msgid "  Selection    Command\n"
+msgstr "  Интихоби    фармон\n"
+
+#: ../alternatives.c:716
+#, c-format
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr ""
+
+#: ../alternatives.c:719
+#, c-format
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"интихоби хондани хато\n"
+
+#: ../alternatives.c:746
+#: ../alternatives.c:772
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr ""
+
+#: ../alternatives.c:788
+#, c-format
+msgid "(would remove %s\n"
+msgstr "(%s нест карда мешавад\n"
+
+#: ../alternatives.c:790
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr "қатъ карда шуд барои несткунии %s: %s\n"
+
+#: ../alternatives.c:912
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "altdir %s нодуруст аст\n"
+
+#: ../alternatives.c:918
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "admindir %s нодуруст аст\n"
+
+#: ../alternatives.c:928
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "версияи иловагии %s\n"
+
