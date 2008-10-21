@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
 #: ../chkconfig.c:36
 #, c-format
@@ -26,7 +27,8 @@ msgstr "%s ಆವೃತ್ತಿ %s - ಕೃತಿಸ್ವಾಮ್ಯ (C) 1997
 
 #: ../chkconfig.c:37
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "ಇದನ್ನು GNU ಸಾರ್ವತ್ರಿಕ ಪರವಾನಗಿಯಡಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
 
 #: ../chkconfig.c:40
@@ -467,4 +469,3 @@ msgstr "admindir %s ಅಮಾನ್ಯವಾಗಿದೆ\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "ಬದಲಿಯ ಆವೃತ್ತಿ %s\n"
-
