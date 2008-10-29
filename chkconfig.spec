@@ -4,7 +4,7 @@ Version: 1.3.38
 Release: 1
 License: GPLv2
 Group: System Environment/Base
-Source: %{name}-%{version}.tar.gz
+Source: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel
 Conflicts: initscripts <= 5.30-1
