@@ -52,7 +52,7 @@ refresh-po: Makefile
 	done
 
 clean:
-	rm -f *mo $(NLSPACKAGE).pot
+	rm -f *mo
 
 distclean: clean
 	rm -f .depend Makefile
