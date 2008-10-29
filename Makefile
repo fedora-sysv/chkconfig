@@ -78,6 +78,6 @@ tag:
 	@echo "Tagged as $(TAG)"
                 
 
-archive:
+archive: tag
 	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(TAG) | bzip2 >chkconfig-$(VERSION).tar.bz2
 	@echo "The archive is in chkconfig-$(VERSION).tar.bz2"
