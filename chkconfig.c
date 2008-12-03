@@ -32,6 +32,8 @@ static char *progname;
 
 #include "leveldb.h"
 
+static int LSB = 0;
+
 static void usage(void) {
     fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
@@ -119,7 +121,7 @@ static inline int earlierThan(int i, int j) {
 	return i;
 }
 
-static int frobOneDependencies(struct service *s, struct service *servs, int numservs, int target) {
+static int frobOneDependencies(struct service *s, struct service *servs, int numservs, int target, int depfail) {
 	int i, j, k;
 	int s0 = s->sPriority;
 	int k0 = s->kPriority;
@@ -128,27 +130,49 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	if (s->kPriority < 0) s->kPriority = 50;
 	for (i = 0; i < numservs ; i++) {
 		if (s->startDeps) {
-			for (j = 0; s->startDeps[j] ; j++) {
-				if (!strcmp(s->startDeps[j], servs[i].name))
+			for (j = 0; s->startDeps[j].name ; j++) {
+				if (!strcmp(s->startDeps[j].name, servs[i].name)) {
 					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+					s->startDeps[j].handled = 1;
+				}
 				if (servs[i].provides) {
 					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->startDeps[j], servs[i].provides[k]))
+						if (!strcmp(s->startDeps[j].name, servs[i].provides[k])) {
 							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+							s->startDeps[j].handled = 1;
+						}
 					}
 				}
 			}
 		}
 		if (s->stopDeps) {
-			for (j = 0; s->stopDeps[j] ; j++) {
-				if (!strcmp(s->stopDeps[j], servs[i].name))
+			for (j = 0; s->stopDeps[j].name ; j++) {
+				if (!strcmp(s->stopDeps[j].name, servs[i].name)) {
 					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+					s->stopDeps[j].handled = 1;
+				}
 				if (servs[i].provides) {
 					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->stopDeps[j], servs[i].provides[k]))
+						if (!strcmp(s->stopDeps[j].name, servs[i].provides[k])) {
 							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+							s->stopDeps[j].handled = 1;
+						}
 					}
 				}
+			}
+		}
+	}
+	if (depfail) {
+		if (s->startDeps) {
+			for (j = 0; s->startDeps[j].name; j++) {
+				if (!s->startDeps[j].handled)
+					return -1;
+			}
+		}
+		if (s->stopDeps) {
+			for (j = 0; s->stopDeps[j].name; j++) {
+				if (!s->stopDeps[j].handled)
+					return -1;
 			}
 		}
 	}
@@ -173,7 +197,7 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 /* LSB-style dependency frobber. Calculates a usable start priority
  * and stop priority.
  * This algorithm will almost certainly break horribly at some point. */
-static void frobDependencies(struct service *s) {
+static int frobDependencies(struct service *s) {
 	DIR * dir;
 	struct dirent * ent;
 	struct stat sb;
@@ -185,7 +209,7 @@ static void frobDependencies(struct service *s) {
 	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 			strerror(errno));
-		return;
+		return 1;
 	}
 
 	while ((ent = readdir(dir))) {
@@ -221,12 +245,14 @@ static void frobDependencies(struct service *s) {
 		
 		for (i = 0; i < numservs ; i++) {
 			if ((servs+i)->isLSB)
-				nResolved += frobOneDependencies(servs+i, servs, numservs, 0);
+				nResolved += frobOneDependencies(servs+i, servs, numservs, 0, 0);
 		}
 	} while (nResolved);
 
 	/* Resolve our target */
-	frobOneDependencies(s, servs, numservs, 1);
+	if (frobOneDependencies(s, servs, numservs, 1, LSB) == -1)
+		return 1;
+	return 0;
 }
 
 static int addService(char * name) {
@@ -240,7 +266,7 @@ static int addService(char * name) {
 	
     if (s.type == TYPE_XINETD) return 0;
     if (s.isLSB)
-		frobDependencies(&s);
+		rc = frobDependencies(&s);
     else
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i, NULL, NULL)) {
@@ -251,7 +277,7 @@ static int addService(char * name) {
 	}
     }
 
-    return 0;
+    return rc;
 }
 
 static int overrideService(char * name) {
@@ -560,7 +586,6 @@ int setService(char * name, int where, int state) {
 int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
     int rc, i, x;
-    int LSB = 0;
     char * levels = NULL;
     int help=0, version=0;
     struct service s;
