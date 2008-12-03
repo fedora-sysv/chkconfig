@@ -482,9 +482,10 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 			}
 			numdeps++;
 			serv.startDeps = realloc(serv.startDeps,
-						 (numdeps + 1) * sizeof(char *));
-			serv.startDeps[numdeps-1] = strdup(start);
-			serv.startDeps[numdeps] = NULL;
+						 (numdeps + 1) * sizeof(struct dep));
+			serv.startDeps[numdeps-1].name = strdup(start);
+			serv.startDeps[numdeps-1].handled = 0;
+			memset(&serv.startDeps[numdeps],'\0',sizeof(struct dep));
 			if (!t || t >= end)
 				break;
 			else
@@ -507,9 +508,10 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 			}
 			numdeps++;
 			serv.stopDeps = realloc(serv.stopDeps,
-						 (numdeps + 1) * sizeof(char *));
-			serv.stopDeps[numdeps-1] = strdup(start);
-			serv.stopDeps[numdeps] = NULL;
+						 (numdeps + 1) * sizeof(struct dep));
+			serv.stopDeps[numdeps-1].name = strdup(start);
+			serv.stopDeps[numdeps-1].handled = 0;
+			memset(&serv.stopDeps[numdeps],'\0',sizeof(struct dep));
 			if (!t || t >= end)
 				break;
 			else

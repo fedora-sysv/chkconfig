@@ -24,12 +24,17 @@
 #define TYPE_INIT_D	0
 #define TYPE_XINETD	1
 
+struct dep {
+    char *name;
+    int handled;
+};
+
 struct service {
     char * name;
     int levels, kPriority, sPriority;
     char * desc;
-    char **startDeps;
-    char **stopDeps;
+    struct dep *startDeps;
+    struct dep *stopDeps;
     char **provides;
     int type;
     int isLSB;
