@@ -471,9 +471,12 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 		return 1;
 	    }
 	} else if (!strncmp(start, "description", 11) ||
-		   !strncmp(start, "Description:", 12) ||
-		   !strncmp(start, "Short-Description:", 18)) {
+		   !strncmp(start, "Description:", 12)) {
 		if (readDescription(start+11, bufstop, &english_desc, &serv.desc)) {
+			if (serv.desc) free(serv.desc);
+		}
+	} else if (!strncmp(start, "Short-Description:", 18)) {
+		if (readDescription(start+17, bufstop, &english_desc, &serv.desc)) {
 			if (serv.desc) free(serv.desc);
 		}
 	} else if (!strncmp(start, "Default-Start:", 14)) {
