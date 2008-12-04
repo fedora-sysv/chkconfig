@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.38
+Version: 1.3.39
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Dec  4 2008 Bill Nottingham <notting@redhat.com> 1.3.39-1
+- fail if dependencies fail on add/remove in LSB mode (#474223)
+
 * Wed Oct 29 2008 Bill Nottingham <notting@redhat.com> 1.3.38-1
 - Fix runlevel list in man page (#466739)
 - translation updates
