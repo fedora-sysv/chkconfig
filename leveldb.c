@@ -15,6 +15,7 @@
  */
 #include <alloca.h>
 #include <ctype.h>
+#include <dirent.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <glob.h>
@@ -242,6 +243,48 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	}
 	*service = serv;
 	return 0;
+}
+
+int readServices(struct service **services) {
+	DIR * dir;
+	struct dirent * ent;
+	struct stat sb;
+	struct service *servs = NULL;
+	int numservs = 0;
+	char fn[1024];
+
+	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
+		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
+			strerror(errno));
+		return 1;
+	}
+
+	while ((ent = readdir(dir))) {
+		const char *dn;
+
+		/* Skip any file starting with a . */
+		if (ent->d_name[0] == '.')	continue;
+
+		/* Skip files with known bad extensions */
+		if ((dn = strrchr(ent->d_name, '.')) != NULL &&
+		    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
+			continue;
+
+		dn = ent->d_name + strlen(ent->d_name) - 1;
+		if (*dn == '~' || *dn == ',')
+			continue;
+
+		sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+		if (stat(fn, &sb)) {
+			continue;
+		}
+		if (!S_ISREG(sb.st_mode)) continue;
+		servs = realloc(servs, (numservs+1) * sizeof(struct service));
+		if (!readServiceInfo(ent->d_name, servs + numservs, 0))
+			numservs++;
+	}
+	*services = servs;
+	return numservs;
 }
 
 int readServiceInfo(char * name, struct service * service, int honorHide) {

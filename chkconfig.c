@@ -193,58 +193,22 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	return 0; /* Didn't resolve anything */
 }
 
-
 /* LSB-style dependency frobber. Calculates a usable start priority
  * and stop priority.
  * This algorithm will almost certainly break horribly at some point. */
 static int frobDependencies(struct service *s) {
-	DIR * dir;
-	struct dirent * ent;
-	struct stat sb;
 	struct service *servs = NULL;
 	int numservs = 0;
-	char fn[1024];
 	int nResolved = 0;
 
-	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
-			strerror(errno));
-		return 1;
-	}
-
-	while ((ent = readdir(dir))) {
-		const char *dn;
-
-		/* Skip any file starting with a . */
-		if (ent->d_name[0] == '.')	continue;
-
-		/* Skip files with known bad extensions */
-		if ((dn = strrchr(ent->d_name, '.')) != NULL &&
-		    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
-			continue;
-		
-		dn = ent->d_name + strlen(ent->d_name) - 1;
-		if (*dn == '~' || *dn == ',')
-			continue;
-	
-		sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
-		if (stat(fn, &sb)) {
-			continue;
-		}
-		if (!S_ISREG(sb.st_mode)) continue;
-		if (!strcmp(ent->d_name, s->name)) continue;
-		servs = realloc(servs, (numservs+1) * sizeof(struct service));
-		if (!readServiceInfo(ent->d_name, servs + numservs, 0))
-			numservs++;
-	}
-
+	numservs = readServices(&servs);
 	/* Resolve recursively the other dependancies */
 	do {
 	  	nResolved = 0;
 		int i;
 		
 		for (i = 0; i < numservs ; i++) {
-			if ((servs+i)->isLSB)
+			if ((servs+i)->isLSB && strcmp((servs+i)->name, s->name))
 				nResolved += frobOneDependencies(servs+i, servs, numservs, 0, 0);
 		}
 	} while (nResolved);
@@ -352,28 +316,18 @@ static int overrideService(char * name) {
     return 0;
 }
 
-
-static int showServiceInfo(char * name, int forgiving) {
+static int showServiceInfo(struct service s, int forgiving) {
     int rc;
     int i;
-    struct service s;
 
-    rc = readServiceInfo(name, &s, 0);
-    
-    if (!rc && s.type == TYPE_INIT_D) {
+    if (s.type == TYPE_INIT_D) {
 	    rc = 2;
 	    for (i = 0 ; i < 7 ; i++) {
-		    if (isConfigured(name, i, NULL, NULL)) {
+		    if (isConfigured(s.name, i, NULL, NULL)) {
 			    rc = 0;
 			    break;
 		    }
 	    }
-    }
-
-    if (rc) {
-	if (!forgiving)
-	    readServiceError(rc, name);
-	return forgiving ? 0 : 1;
     }
 
     printf("%-15s", s.name);
@@ -389,6 +343,22 @@ static int showServiceInfo(char * name, int forgiving) {
 
     return 0;
 }
+
+static int showServiceInfoByName(char * name, int forgiving) {
+    int rc;
+    struct service s;
+
+    rc = readServiceInfo(name, &s, 0);
+
+    if (rc) {
+	if (!forgiving)
+	    readServiceError(rc, name);
+	return forgiving ? 0 : 1;
+    }
+
+    return showServiceInfo(s, forgiving);
+}
+
 
 static int isXinetdEnabled() {
 	int i;
@@ -416,75 +386,27 @@ static int xinetdNameCmp(const void * a, const void * b) {
 }
 
 
-
 static int listService(char * item) {
     DIR * dir;
     struct dirent * ent;
-    struct stat sb;
-    char fn[1024];
-    char **services;
+    struct service *services;
     int i;
     int numServices = 0;
     int numServicesAlloced;
     int err = 0;
 
-    if (item) return showServiceInfo(item, 0);
+    if (item) return showServiceInfoByName(item, 0);
 
-    numServicesAlloced = 10;
-    services = malloc(sizeof(*services) * numServicesAlloced);
+    numServices = readServices(&services);
     
-    if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-	fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
-		strerror(errno));
-        return 1;
-    }
-
-    while ((ent = readdir(dir))) {
-	const char *dn;
-
-	/* Skip any file starting with a . */
-	if (ent->d_name[0] == '.')	continue;
-
-	/* Skip files with known bad extensions */
-	if ((dn = strrchr(ent->d_name, '.')) != NULL &&
-    (!strcmp(dn, ".rpmsave") || !strcmp(dn, ".rpmnew") || !strcmp(dn, ".rpmorig") || !strcmp(dn, ".swp")))
-	    continue;
-
-	dn = ent->d_name + strlen(ent->d_name) - 1;
-	if (*dn == '~' || *dn == ',')
-	    continue;
-	
-	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
-	if (stat(fn, &sb)) {
-	    fprintf(stderr, _("error reading info for service %s: %s\n"), 
-		ent->d_name, strerror(errno));
-	    continue;
-	}
-	if (!S_ISREG(sb.st_mode)) continue;
-
-	if (numServices == numServicesAlloced) {
-	    numServicesAlloced += 10;
-	    services = realloc(services, numServicesAlloced * sizeof(*services));
-        }
-
-	services[numServices] = alloca(strlen(ent->d_name) + 1);
-	strncpy(services[numServices++], ent->d_name, strlen(ent->d_name) + 1);
-    }
-
     qsort(services, numServices, sizeof(*services), serviceNameCmp);
 	
     for (i = 0; i < numServices ; i++) {
 	    if (showServiceInfo(services[i], 1)) {
-		    free(services);
-		    closedir(dir);
 		    return 1;
 	    }
     }
 		    
-    free(services);
-	
-    closedir(dir);
-	
     if (isXinetdEnabled()) {
 	    struct service *s, *t;
 	  
