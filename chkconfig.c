@@ -61,6 +61,13 @@ static void readServiceError(int rc, char * name) {
     exit(1);
 }
 
+static void checkRoot() {
+	if (access(RUNLEVELS "/rc3.d", R_OK | W_OK) != 0) {
+		fprintf(stderr, _("You do not have enough privileges to perform this operation.\n"));
+		exit(1);
+	}
+}
+
 static int delService(char *name, int level) {
     int i, j, numservs, rc;
     glob_t globres;
@@ -72,6 +79,8 @@ static int delService(char *name, int level) {
 	return 1;
     }
     if (s.type == TYPE_XINETD) return 0;
+
+    checkRoot();
 
     if (LSB && level == -1) {
 	numservs = readServices(&services);
@@ -232,6 +241,8 @@ static int addService(char * name) {
     }
 	
     if (s.type == TYPE_XINETD) return 0;
+    checkRoot();
+
     if (s.isLSB)
 		rc = frobDependencies(&s);
     else
@@ -264,6 +275,8 @@ static int overrideService(char * name) {
     }
 	
     if (s.type == TYPE_XINETD) return 0;
+
+    checkRoot();
 
     if ((s.levels == o.levels) &&
         (s.kPriority == o.kPriority) &&
@@ -477,6 +490,8 @@ int setService(char * name, int where, int state) {
 	readServiceError(rc, name);
 	return 1;
     }
+
+    checkRoot();
 
     if (s.type == TYPE_INIT_D) {
 	    int rc = 0;
