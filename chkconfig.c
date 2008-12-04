@@ -61,10 +61,11 @@ static void readServiceError(int rc, char * name) {
     exit(1);
 }
 
-static int delServiceOne(char *name, int level) {
-    int i, rc;
+static int delService(char *name, int level) {
+    int i, j, numservs, rc;
     glob_t globres;
     struct service s;
+    struct service *services;
 
     if ((rc = readServiceInfo(name, &s, 0))) {
 	readServiceError(rc, name);
@@ -72,36 +73,38 @@ static int delServiceOne(char *name, int level) {
     }
     if (s.type == TYPE_XINETD) return 0;
 
+    if (LSB && level == -1) {
+	numservs = readServices(&services);
 
-    if (!findServiceEntries(name, level, &globres)) {
-	    for (i = 0; i < globres.gl_pathc; i++)
-		    unlink(globres.gl_pathv[i]);
-	    if (globres.gl_pathc) globfree(&globres);
+	for (i = 0; i < numservs ; i++) {
+		if (services[i].startDeps) {
+			for (j = 0; services[i].startDeps[j].name ; j++) {
+				if (!strcmp(services[i].startDeps[j].name, s.name)) {
+				        return 1;
+				}
+			}
+		}
+		if (services[i].stopDeps) {
+			for (j = 0; services[i].stopDeps[j].name ; j++) {
+				if (!strcmp(services[i].stopDeps[j].name, s.name)) {
+				        return 1;
+				}
+			}
+		}
+	}
+    }
+
+    for (j = 0 ; j < 7; j++) {
+	 if (level == -1 || level == j) {
+		 if (!findServiceEntries(name, j, &globres)) {
+			 for (i = 0; i < globres.gl_pathc; i++)
+				 unlink(globres.gl_pathv[i]);
+			    if (globres.gl_pathc) globfree(&globres);
+		    }
+	 }
     }
     return 0;
 }
-
-static int delService(char * name) {
-    int level, i, rc;
-    glob_t globres;
-    struct service s;
-
-    if ((rc = readServiceInfo(name, &s, 0))) {
-	readServiceError(rc, name);
-	return 1;
-    }
-    if (s.type == TYPE_XINETD) return 0;
-
-    for (level = 0; level < 7; level++) {
-	    if (!findServiceEntries(name, level, &globres)) {
-		    for (i = 0; i < globres.gl_pathc; i++)
-		      unlink(globres.gl_pathv[i]);
-		    if (globres.gl_pathc) globfree(&globres);
-	    }
-    }
-    return 0;
-}
-
 
 static inline int laterThan(int i, int j) {
 	if (i <= j) {
@@ -181,10 +184,10 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 		for (i = 0; i < 7; i++) {
 			if (isConfigured(s->name, i, NULL, NULL)) {
 				int on = isOn(s->name, i);
-				delServiceOne(s->name,i);
+				delService(s->name,i);
 				doSetService(*s, i, on);
 			} else if (target) {
-				delServiceOne(s->name,i);
+				delService(s->name,i);
 				doSetService(*s, i, ((1<<i) & s->levels));
 			}
 		}
@@ -580,7 +583,7 @@ int main(int argc, char ** argv) {
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	name = basename(name);
-	return delService(name);
+	return delService(name, -1);
     } else if (overrideItem) {
 	char * name = (char *)poptGetArg(optCon);
 
