@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"POT-Creation-Date: 2008-12-04 23:29-0500\n"
 "PO-Revision-Date: 2007-11-18 00:29+0200\n"
 "Last-Translator: Tom Berner <tom@lodz.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -29,32 +29,32 @@ msgstr ""
 "Program może być swobodnie rozprowadzany na warunkach Powszechnej Licencji "
 "Publicznej GNU.\n"
 
-#: ../chkconfig.c:40
-#, c-format
-msgid "usage:   %s [--list] [name]\n"
+#: ../chkconfig.c:42
+#, fuzzy, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "użycie:   %s [--list] [nazwa]\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <nazwa>\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:44
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <nazwa>\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <nazwa>\n"
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "         %s [--level <levels>] <name> %s\n"
+#: ../chkconfig.c:46
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <poziomy>] <nazwa> %s)\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:53
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -63,56 +63,56 @@ msgstr ""
 "usługa %s obsługuje chkconfig, ale nie jest przypisana do żadnego poziomu "
 "uruchamiania (uruchom \"chkconfig --add %s\")\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:55
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "usługa %s nie obsługuje chkconfig\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:57
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 
-#: ../chkconfig.c:186 ../chkconfig.c:411
+#: ../chkconfig.c:66
 #, c-format
-msgid "failed to open %s/init.d: %s\n"
-msgstr "otwarcie %s/init.d nie powiodło się: %s\n"
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr ""
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
 msgstr "włączone"
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "off"
 msgstr "wyłączone"
 
-#: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr "błąd podczas odczytywania informacji o %s: %s\n"
-
-#: ../chkconfig.c:466
+#: ../chkconfig.c:432
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "usługi oparte na xinetd:\n"
 
-#: ../chkconfig.c:468
+#: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "otwarcie folderu %s nie powiodło się: %s\n"
 
-#: ../chkconfig.c:608
+#: ../chkconfig.c:578
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s wersja %s\n"
 
-#: ../chkconfig.c:617
+#: ../chkconfig.c:590
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr ""
+
+#: ../chkconfig.c:598
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "tylko jedna z --list, --add, --del lub --override może zostać określona\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:658
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -143,6 +143,11 @@ msgstr "Które z usług powinny być automatycznie uruchamiane?"
 msgid "Services"
 msgstr "Usługi"
 
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "błąd podczas odczytywania informacji o %s: %s\n"
+
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -163,17 +168,22 @@ msgstr "błędny argument dla --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Brak usług, które mogą być zarządzane przez ntsysv!\n"
 
-#: ../leveldb.c:601
+#: ../leveldb.c:260
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "otwarcie %s/init.d nie powiodło się: %s\n"
+
+#: ../leveldb.c:668
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "dopasowanie do wzoru %s nie powiodło się: %s\n"
 
-#: ../leveldb.c:644
+#: ../leveldb.c:711
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "nie można ustalić aktualnego poziomu uruchamiania\n"
 
-#: ../leveldb.c:732
+#: ../leveldb.c:799
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "utworzenie dowiązania symbolicznego %s nie powiodło się: %s\n"

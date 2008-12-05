@@ -3,57 +3,57 @@
 # Leonid Kanter <leon@geon.donetsk.ua>, 2003.
 # Leonid Kanter <leon@asplinux.ru>, 2004.
 # Andrew Martynov <andrewm@inventa.ru>, 2004.
-# 
-# 
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"POT-Creation-Date: 2008-12-04 23:29-0500\n"
 "PO-Revision-Date: 2008-03-31 22:11+0300\n"
 "Last-Translator:  <anatoliy.guskov@gmail.com>\n"
 "Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
 
-#: ../chkconfig.c:40
-#, c-format
-msgid "usage:   %s [--list] [name]\n"
+#: ../chkconfig.c:42
+#, fuzzy, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "применение:   %s [--list] [имя сервиса]\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <имя сервиса>\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:44
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <имя сервиса>\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <имя сервиса>\n"
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "         %s [--level <levels>] <name> %s\n"
+#: ../chkconfig.c:46
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <уровни>] <имя сервиса> %s\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:53
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -62,56 +62,56 @@ msgstr ""
 "сервис %s поддерживает chkconfig, но неиспользуется ни в одном уровне "
 "выполнения (запустите 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:55
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "сервис %s не поддерживает chkconfig\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:57
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "ошибка чтения информации о сервисе %s: %s\n"
 
-#: ../chkconfig.c:186 ../chkconfig.c:411
+#: ../chkconfig.c:66
 #, c-format
-msgid "failed to open %s/init.d: %s\n"
-msgstr "невозможно открыть %s/init.d: %s\n"
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr ""
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
 msgstr "вкл"
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "off"
 msgstr "выкл"
 
-#: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr "ошибка чтения информации для сервиса %s: %s\n"
-
-#: ../chkconfig.c:466
+#: ../chkconfig.c:432
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "сервисы на основе xinetd:\n"
 
-#: ../chkconfig.c:468
+#: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "не удалось открыть каталог %s: %s\n"
 
-#: ../chkconfig.c:608
+#: ../chkconfig.c:578
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
-#: ../chkconfig.c:617
+#: ../chkconfig.c:590
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr ""
+
+#: ../chkconfig.c:598
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "может быть указана лишь одна команда: --list, --add, --del или --override\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:658
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -141,6 +141,11 @@ msgstr "Какие сервисы должны запускаться автом
 msgid "Services"
 msgstr "Сервисы"
 
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "ошибка чтения информации для сервиса %s: %s\n"
+
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -161,17 +166,22 @@ msgstr "неверный аргумент для --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Нет сервисов, управляемых ntsysv!\n"
 
-#: ../leveldb.c:601
+#: ../leveldb.c:260
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "невозможно открыть %s/init.d: %s\n"
+
+#: ../leveldb.c:668
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "невозможно использовать шаблон %s: %s\n"
 
-#: ../leveldb.c:644
+#: ../leveldb.c:711
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "невозможно определить текущий уровень выполнения\n"
 
-#: ../leveldb.c:732
+#: ../leveldb.c:799
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ошибка создания символической ссылки %s: %s\n"

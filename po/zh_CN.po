@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"POT-Creation-Date: 2008-12-04 23:29-0500\n"
 "PO-Revision-Date: 2008-03-19 10:55+1000\n"
 "Last-Translator: Leah Liu <lliu@redhat.com>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
@@ -16,42 +16,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
-#: ../chkconfig.c:40
-#, c-format
-msgid "usage:   %s [--list] [name]\n"
+#: ../chkconfig.c:42
+#, fuzzy, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "用法：   %s [--list] [name]\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <name>\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:44
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "         %s [--level <levels>] <name> %s\n"
+#: ../chkconfig.c:46
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] <name> %s\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:53
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -60,55 +61,55 @@ msgstr ""
 "%s 服务支持 chkconfig，但它在任何级别中都没有被引用(运行“chkconfig --add %"
 "s”)\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:55
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s 服务不支持 chkconfig\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:57
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "在 %s 服务中读取信息时出错：%s\n"
 
-#: ../chkconfig.c:186 ../chkconfig.c:411
+#: ../chkconfig.c:66
 #, c-format
-msgid "failed to open %s/init.d: %s\n"
-msgstr "打开 %s/init.d 失败：%s\n"
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr ""
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
 msgstr "启用"
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "off"
 msgstr "关闭"
 
-#: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr "在读取关于 %s 服务的信息时出错：%s\n"
-
-#: ../chkconfig.c:466
+#: ../chkconfig.c:432
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "基于 xinetd 的服务：\n"
 
-#: ../chkconfig.c:468
+#: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "打开目录 %s 失败：%s\n"
 
-#: ../chkconfig.c:608
+#: ../chkconfig.c:578
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 版本 %s \n"
 
-#: ../chkconfig.c:617
+#: ../chkconfig.c:590
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr ""
+
+#: ../chkconfig.c:598
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list,--add,--del或--override中只能指定一个\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:658
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 查询只能指定一个运行级别\n"
@@ -137,6 +138,11 @@ msgstr "您想自动启动哪些服务？"
 msgid "Services"
 msgstr "服务"
 
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "在读取关于 %s 服务的信息时出错：%s\n"
+
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -157,17 +163,22 @@ msgstr "--levels 参数不对\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 不能管理任何服务！\n"
 
-#: ../leveldb.c:601
+#: ../leveldb.c:260
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "打开 %s/init.d 失败：%s\n"
+
+#: ../leveldb.c:668
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "glob 图案 %s 失败：%s\n"
 
-#: ../leveldb.c:644
+#: ../leveldb.c:711
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "无法判定目前的运行级别\n"
 
-#: ../leveldb.c:732
+#: ../leveldb.c:799
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "制作 %s 的符号链接失败：%s\n"
@@ -459,4 +470,3 @@ msgstr "admindir %s 无效\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "替换选择(alternatives)的版本 %s \n"
-

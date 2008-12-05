@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master.gu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-08 16:29-0500\n"
+"POT-Creation-Date: 2008-12-04 23:29-0500\n"
 "PO-Revision-Date: 2008-03-11 14:30+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
@@ -15,46 +15,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"\n"
 "\n"
 "\n"
 
-#: ../chkconfig.c:36
+#: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s આવૃત્તિ %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:37
+#: ../chkconfig.c:39
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "આ કદાચ GNU Public License ની શરતો હેઠળ મુક્તપણે વહેંચી શકાશે.\n"
 
-#: ../chkconfig.c:40
-#, c-format
-msgid "usage:   %s [--list] [name]\n"
+#: ../chkconfig.c:42
+#, fuzzy, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "વપરાશ:   %s [--list] [name]\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <name>\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:44
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "         %s [--level <levels>] <name> %s\n"
+#: ../chkconfig.c:46
+#, fuzzy, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] <name> %s\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:53
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -63,55 +65,55 @@ msgstr ""
 "સેવા %s chkconfig ને આધાર આપે છે, પરંતુ તે કોઈ રનલેવલમાં સંદર્ભ અપાયેલ નથી ('chkconfig --"
 "add %s' ચલાવો)\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:55
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "સેવા %s chkconfig ને આધાર આપતી નથી\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:57
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "સેવા %s પરની જાણકારી વાંચવામાં ભૂલ: %s\n"
 
-#: ../chkconfig.c:186 ../chkconfig.c:411
+#: ../chkconfig.c:66
 #, c-format
-msgid "failed to open %s/init.d: %s\n"
-msgstr "%s/init.d ખોલવામાં નિષ્ફળ: %s\n"
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr ""
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
 msgstr "ચાલુ"
 
-#: ../chkconfig.c:355 ../chkconfig.c:360 ../chkconfig.c:504
+#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "off"
 msgstr "બંધ"
 
-#: ../chkconfig.c:433 ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr "સેવા %s માટે જાણકારી વાંચવામાં ભૂલ: %s\n"
-
-#: ../chkconfig.c:466
+#: ../chkconfig.c:432
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd આધારિત સેવાઓ:\n"
 
-#: ../chkconfig.c:468
+#: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "ડિરેક્ટરી %s ખોલવામાં નિષ્ફળ: %s\n"
 
-#: ../chkconfig.c:608
+#: ../chkconfig.c:578
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s આવૃત્તિ %s\n"
 
-#: ../chkconfig.c:617
+#: ../chkconfig.c:590
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr ""
+
+#: ../chkconfig.c:598
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del, અથવા --override માંનુ માત્ર એક સ્પષ્ટ થયેલ હશે\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:658
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig પ્રશ્ન માટે માત્ર એક રનલેવલ સ્પષ્ટ કરેલ હશે\n"
@@ -140,6 +142,11 @@ msgstr "કઈ સેવાઓ આપોઆપ શરુ થઈ જશે?"
 msgid "Services"
 msgstr "સેવાઓ"
 
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "સેવા %s માટે જાણકારી વાંચવામાં ભૂલ: %s\n"
+
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
@@ -160,17 +167,22 @@ msgstr "--levels ને ખરાબ દલીલ\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv દ્વારા કોઈ સેવાઓની વ્યવસ્થા થાય છે!\n"
 
-#: ../leveldb.c:601
+#: ../leveldb.c:260
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "%s/init.d ખોલવામાં નિષ્ફળ: %s\n"
+
+#: ../leveldb.c:668
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ગ્લોબ ભાત %s માં નિષ્ફળ: %s\n"
 
-#: ../leveldb.c:644
+#: ../leveldb.c:711
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "વર્તમાન રનલેવલ નક્કી કરી શકતા નથી\n"
 
-#: ../leveldb.c:732
+#: ../leveldb.c:799
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "સંજ્ઞાવાળી કડી %s બનાવવામાં નિષ્ફળ: %s\n"
@@ -462,4 +474,3 @@ msgstr "admindir %s અયોગ્ય છે\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "વૈકલ્પિક આવૃત્તિ %s છે\n"
-
