@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.39
+Version: 1.3.40
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Dec  5 2008 Bill Nottingham <notting@redhat.com> 1.3.40-1
+- fix some overflows. (#176944)
+- add --type parameter to specify either xinetd or sysv services.
+  (#467863, <mschmidt@redhat.com>
+- do a permissions check before add/remove/on/off/resetpriorities. (#450254)
+- parse Short-Description correctly (#441813, <peter_e@gmx.net>)
+
 * Thu Dec  4 2008 Bill Nottingham <notting@redhat.com> 1.3.39-1
 - fail if dependencies fail on add/remove in LSB mode (#474223)
 
