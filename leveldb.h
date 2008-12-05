@@ -21,8 +21,9 @@
 
 #include <glob.h>
 
-#define TYPE_INIT_D	0
-#define TYPE_XINETD	1
+#define TYPE_INIT_D	0x1
+#define TYPE_XINETD	0x2
+#define TYPE_ANY	(TYPE_INIT_D | TYPE_XINETD)
 
 struct dep {
     char *name;
@@ -45,9 +46,9 @@ int parseLevels(char * str, int emptyOk);
 
 /* returns 0 on success, 1 if the service is not chkconfig-able, -1 if an
    I/O error occurs (in which case errno can be checked) */
-int readServiceInfo(char * name, struct service * service, int honorHide);
+int readServiceInfo(char * name, int type, struct service * service, int honorHide);
 int readServices(struct service **services);
-int readServiceDifferences(char * name, struct service * service, struct service * service_overrides, int honorHide);
+int readServiceDifferences(char * name, int type, struct service * service, struct service * service_overrides, int honorHide);
 int parseServiceInfo(int fd, char * name, struct service * service, int honorHide, int partialOk);
 int currentRunlevel(void);
 int isOn(char * name, int where);

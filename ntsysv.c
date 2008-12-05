@@ -192,7 +192,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 				numServicesAlloced * sizeof(*services));
 	}
 
-	rc = readServiceInfo(ent->d_name, services + numServices, honorHide);
+	rc = readServiceInfo(ent->d_name, TYPE_INIT_D, services + numServices, honorHide);
         
 	if (!rc) {
 		int i;

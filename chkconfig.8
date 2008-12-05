@@ -4,7 +4,7 @@
 chkconfig \- updates and queries runlevel information for system services
 
 .SH SYNOPSIS
-\fBchkconfig\fR [\fB--list\fR] [\fIname\fR]
+\fBchkconfig\fR [\fB--list\fR] [\fB--type\fR \fItype\fR][\fIname\fR]
 .br
 \fBchkconfig\fR \fB--add\fR \fIname\fR
 .br
@@ -12,9 +12,9 @@ chkconfig \- updates and queries runlevel information for system services
 .br
 \fBchkconfig\fR \fB--override\fR \fIname\fR
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] \fIname\fR 
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] \fIname\fR 
 .br
 
 .SH DESCRIPTION
@@ -67,6 +67,11 @@ not running.
 of xinetd.d configuration files. Note that only the
 \fBon\fR, \fBoff\fR, and \fB-\-list\fR commands are supported
 for xinetd.d services.
+
+\fBchkconfig\fR supports a \fB-\-type\fR argument to limit actions to only
+a specific type of services, in the case where services of either type may
+share a name. Possible values for \fItype\fR are \fIsysv\fR
+and \fIxinetd\fR.
 
 .SH OPTIONS
 .TP

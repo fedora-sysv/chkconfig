@@ -39,11 +39,11 @@ static void usage(void) {
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
-    fprintf(stderr, _("usage:   %s [--list] [name]\n"), progname);
+    fprintf(stderr, _("usage:   %s [--list] [--type <type>] [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
     fprintf(stderr, _("         %s --override <name>\n"), progname);
-    fprintf(stderr, _("         %s [--level <levels>] <name> %s\n"), progname, "<on|off|reset|resetpriorities>");
+    fprintf(stderr, _("         %s [--level <levels>] [--type <type>] <name> %s\n"), progname, "<on|off|reset|resetpriorities>");
 
     exit(1);
 }
@@ -68,13 +68,13 @@ static void checkRoot() {
 	}
 }
 
-static int delService(char *name, int level) {
+static int delService(char *name, int type, int level) {
     int i, j, numservs, rc;
     glob_t globres;
     struct service s;
     struct service *services;
 
-    if ((rc = readServiceInfo(name, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }
@@ -193,10 +193,10 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 		for (i = 0; i < 7; i++) {
 			if (isConfigured(s->name, i, NULL, NULL)) {
 				int on = isOn(s->name, i);
-				delService(s->name,i);
+				delService(s->name, TYPE_INIT_D, i);
 				doSetService(*s, i, on);
 			} else if (target) {
-				delService(s->name,i);
+				delService(s->name, TYPE_INIT_D, i);
 				doSetService(*s, i, ((1<<i) & s->levels));
 			}
 		}
@@ -231,11 +231,11 @@ static int frobDependencies(struct service *s) {
 	return 0;
 }
 
-static int addService(char * name) {
+static int addService(char * name, int type) {
     int i, rc;
     struct service s;
 
-    if ((rc = readServiceInfo(name, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }
@@ -258,7 +258,7 @@ static int addService(char * name) {
     return rc;
 }
 
-static int overrideService(char * name) {
+static int overrideService(char * name, int srvtype) {
     /* Apply overrides if available; no available overrides is no error */
     int level, i, rc;
     glob_t globres;
@@ -270,7 +270,7 @@ static int overrideService(char * name) {
     int configured = 0;
     int thisLevelAdded, thisLevelOn;
 
-    if ((rc = readServiceDifferences(name, &s, &o, 0))) {
+    if ((rc = readServiceDifferences(name, srvtype, &s, &o, 0))) {
 	return 0;
     }
 	
@@ -360,11 +360,11 @@ static int showServiceInfo(struct service s, int forgiving) {
     return 0;
 }
 
-static int showServiceInfoByName(char * name, int forgiving) {
+static int showServiceInfoByName(char * name, int type, int forgiving) {
     int rc;
     struct service s;
 
-    rc = readServiceInfo(name, &s, 0);
+    rc = readServiceInfo(name, type, &s, 0);
 
     if (rc) {
 	if (!forgiving)
@@ -380,7 +380,7 @@ static int isXinetdEnabled() {
 	int i;
 	struct service s;
 	
-	if (readServiceInfo("xinetd", &s, 0)) {
+	if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
 		return 0;
 	}
 	for (i = 0; i < 7; i++) {
@@ -402,7 +402,7 @@ static int xinetdNameCmp(const void * a, const void * b) {
 }
 
 
-static int listService(char * item) {
+static int listService(char * item, int type) {
     DIR * dir;
     struct dirent * ent;
     struct service *services;
@@ -411,19 +411,21 @@ static int listService(char * item) {
     int numServicesAlloced;
     int err = 0;
 
-    if (item) return showServiceInfoByName(item, 0);
+    if (item) return showServiceInfoByName(item, type, 0);
 
-    numServices = readServices(&services);
+    if (type & TYPE_INIT_D) {
+        numServices = readServices(&services);
     
-    qsort(services, numServices, sizeof(*services), serviceNameCmp);
+        qsort(services, numServices, sizeof(*services), serviceNameCmp);
 	
-    for (i = 0; i < numServices ; i++) {
+        for (i = 0; i < numServices ; i++) {
 	    if (showServiceInfo(services[i], 1)) {
 		    return 1;
 	    }
+        }
     }
 		    
-    if (isXinetdEnabled()) {
+    if (isXinetdEnabled() && type & TYPE_XINETD) {
 	    struct service *s, *t;
 	  
 	    printf("\n");
@@ -473,7 +475,7 @@ static int listService(char * item) {
     return 0;
 }
 
-int setService(char * name, int where, int state) {
+int setService(char * name, int type, int where, int state) {
     int i, rc;
     int what;
     struct service s;
@@ -486,7 +488,7 @@ int setService(char * name, int where, int state) {
 	        (1 << 3) | (1 << 4) | (1 << 5) | (1 << 6);
     }
 
-    if ((rc = readServiceInfo(name, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0))) {
 	readServiceError(rc, name);
 	return 1;
     }
@@ -525,8 +527,10 @@ int setService(char * name, int where, int state) {
 
 int main(int argc, char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
+    int type = TYPE_ANY;
     int rc, i, x;
     char * levels = NULL;
+    char * typeString = NULL;
     int help=0, version=0;
     struct service s;
     poptContext optCon;
@@ -537,6 +541,7 @@ int main(int argc, char ** argv) {
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
 	    { "levels", '\0', POPT_ARG_STRING, &levels, 0 },
+	    { "type", '\0', POPT_ARG_STRING, &typeString, 0 },
 	    { "help", 'h', POPT_ARG_NONE, &help, 0 },
 	    { "version", 'v', POPT_ARG_NONE, &version, 0 },
 	    { 0, 0, 0, 0, 0 } 
@@ -575,8 +580,19 @@ int main(int argc, char ** argv) {
     }
 
     if (help) usage();
-	
-    if (argc == 1) return listService(NULL);
+
+    if (typeString) {
+	if (!strcmp(typeString, "xinetd"))
+	    type = TYPE_XINETD;
+	else if (!strcmp(typeString, "sysv"))
+	    type = TYPE_INIT_D;
+	else {
+	    fprintf(stderr, _("--type must be 'sysv' or 'xinetd'\n"));
+	    exit(1);
+	}
+    }
+
+    if (argc == 1) return listService(NULL, type);
 
     if ((listItem + addItem + delItem + overrideItem) > 1) {
 	fprintf(stderr, _("only one of --list, --add, --del, or --override"
@@ -591,27 +607,27 @@ int main(int argc, char ** argv) {
 	    usage();
 	
 	name = basename(name);
-	return addService(name);
+	return addService(name, type);
     } else if (delItem) {
 	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	name = basename(name);
-	return delService(name, -1);
+	return delService(name, type, -1);
     } else if (overrideItem) {
 	char * name = (char *)poptGetArg(optCon);
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
         name = basename(name);
-	return overrideService(name);
+	return overrideService(name, type);
     } else if (listItem) {
 	char * item = (char *)poptGetArg(optCon);
 
 	if (item && poptGetArg(optCon)) usage();
 
-	return listService(item);
+	return listService(item, type);
     } else {
 	char * name = (char *)poptGetArg(optCon);
 	char * state = (char *)poptGetArg(optCon);
@@ -644,7 +660,7 @@ int main(int argc, char ** argv) {
 		    exit(1);
 		}
 	    } 
-	    rc = readServiceInfo(name, &s, 0);
+	    rc = readServiceInfo(name, type, &s, 0);
 	    if (rc)
 	       return 1;
 	    if (s.type == TYPE_XINETD) {
@@ -655,13 +671,13 @@ int main(int argc, char ** argv) {
 	    } else	
 	       return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
-	    return setService(name, where, 1);
+	    return setService(name, type, where, 1);
 	else if (!strcmp(state, "off"))
-	    return setService(name, where, 0);
+	    return setService(name, type, where, 0);
 	else if (!strcmp(state, "reset"))
-	    return setService(name, where, -1);
+	    return setService(name, type, where, -1);
 	else if (!strcmp(state, "resetpriorities"))
-	    return setService(name, where, -2);
+	    return setService(name, type, where, -2);
 	else
 	    usage();
     }
