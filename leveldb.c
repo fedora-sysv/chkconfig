@@ -87,7 +87,7 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 	    } else ++start;
 
 	    while (isspace(*start) && start < end) start++;
-	    if (start == end) {
+	    if (start >= end) {
 		return 1;
 	    }
           {
@@ -207,6 +207,8 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 				if (!serv.desc) {
 					if (eng_desc)
 					  serv.desc = eng_desc;
+                                        else
+                                          serv.desc = strdup(name);
 				} else if (eng_desc)
 					  free (eng_desc);
 			}
@@ -456,7 +458,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 		return 1;
 	    }
 
-	    if ((sscanf(start, "%s %d %d%c", levelbuf,
+	    if ((sscanf(start, "%15s %d %d%c", levelbuf,
 			&spri, &kpri, &overflow) != 4) ||
 		 !isspace(overflow)) {
 		if (serv.desc) free(serv.desc);
@@ -611,6 +613,8 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     if (!serv.desc) {
       if (english_desc)
 	serv.desc = english_desc;
+      else
+        serv.desc = strdup(name);
     } else if (english_desc)
 	free (english_desc);
 
