@@ -28,9 +28,9 @@ msgid ""
 msgstr "在 GNU 公共许可的条款下，本软件可以被自由发行。\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "用法：   %s [--list] [name]\n"
+msgstr "用法：   %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -48,9 +48,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
