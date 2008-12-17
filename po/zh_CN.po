@@ -74,7 +74,7 @@ msgstr "在 %s 服务中读取信息时出错：%s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "你没有足够权限执行此操作。\n"
 
 #: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
@@ -102,7 +102,7 @@ msgstr "%s 版本 %s \n"
 #: ../chkconfig.c:590
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type 必须是 'sysv' 或者 'xinetd'\n"
 
 #: ../chkconfig.c:598
 #, c-format
