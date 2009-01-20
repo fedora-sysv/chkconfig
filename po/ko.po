@@ -8,13 +8,14 @@ msgstr ""
 "Project-Id-Version: chkconfig.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-02-29 10:29+1000\n"
+"PO-Revision-Date: 2008-12-19 13:50+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
 
 #: ../chkconfig.c:38
 #, c-format
@@ -23,15 +24,13 @@ msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "이 프로그램은 GNU Public License 내에서 자유롭게 재배포될 수 있습니다.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "사용법:   %s [--list] [이름]\n"
+msgstr "사용법:   %s [--list] [--type <type>] [이름]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -49,9 +48,9 @@ msgid "         %s --override <name>\n"
 msgstr "          %s --override <이름>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <레벨>] <이름> %s\n"
+msgstr "         %s [--level <레벨>] [--type <type>] <이름> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -75,7 +74,7 @@ msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생되었습니다:
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "이 작업을 실행할 권한이 없습니다.\n"
 
 # #
 # # 이곳을 '켜짐' 과 '꺼짐'으로 번역하면,
@@ -108,7 +107,7 @@ msgstr "%s %s\n"
 #: ../chkconfig.c:590
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type은 'sysv' 또는 'xinetd'이어야만 합니다\n"
 
 #: ../chkconfig.c:598
 #, c-format
@@ -331,8 +330,7 @@ msgstr "%s 링크를 읽기에 실패했습니다: %s\n"
 #: ../alternatives.c:333
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
+msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
 
 #: ../alternatives.c:338
 #, c-format
@@ -479,3 +477,4 @@ msgstr "admindir %s가 올바르지 않습니다\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "대체 버전 %s\n"
+

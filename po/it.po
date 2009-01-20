@@ -10,14 +10,13 @@ msgstr ""
 "Project-Id-Version: chkconfig.master\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-08 21:47+0100\n"
+"PO-Revision-Date: 2008-12-07 12:16+0100\n"
 "Last-Translator: Francesco Tombolini <tombo@adamantio.net>\n"
-"Language-Team: Italiano <fedora-trans-it@redhat.com>\n"
+"Language-Team: Italian <fedora-trans-it@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);"
 
 #: ../chkconfig.c:38
 #, c-format
@@ -33,9 +32,9 @@ msgstr ""
 "Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "uso:   %s [--list] [nome]\n"
+msgstr "uso:···%s·[--list]·[--type·<tipo>]·[nome]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -53,9 +52,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <nome>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <livelli>] <nome> %s\n"
+msgstr "·········%s·[--level·<livelli>]·[--type·<tipo>]·<nome>·%s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -79,7 +78,7 @@ msgstr "errore durante la lettura delle informazioni sul servizio %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Non si anno privilegi sufficienti per eseguire questa operazione\n"
 
 #: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
@@ -107,7 +106,7 @@ msgstr "%s versione %s\n"
 #: ../chkconfig.c:590
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type·deve essere·'sysv'·o·'xinetd'\n"
 
 #: ../chkconfig.c:598
 #, c-format
@@ -481,3 +480,4 @@ msgstr "admindir %s non valida\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives versione %s\n"
+
