@@ -346,6 +346,12 @@ static int showServiceInfo(struct service s, int forgiving) {
 	    }
     }
 
+    if (rc) {
+	if (!forgiving)
+	    readServiceError(rc, s.name);
+	return forgiving ? 0 : 1;
+    }
+
     printf("%-15s", s.name);
     if (s.type == TYPE_XINETD) {
 	    printf("\t%s\n", s.levels ? _("on") : _("off"));

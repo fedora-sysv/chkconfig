@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.40
+Version: 1.3.41
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Jan 20 2009 Bill Nottingham <notting@redhat.com> 1.3.41-1
+- restore return code & error on unconfigured services (#480805)
+
 * Fri Dec  5 2008 Bill Nottingham <notting@redhat.com> 1.3.40-1
 - fix some overflows. (#176944)
 - add --type parameter to specify either xinetd or sysv services.
