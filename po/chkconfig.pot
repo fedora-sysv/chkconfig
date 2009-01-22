@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-20 13:20-0500\n"
+"POT-Creation-Date: 2009-01-22 14:20-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,40 +74,40 @@ msgstr ""
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:438
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:440
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:584
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:596
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:604
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:664
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
