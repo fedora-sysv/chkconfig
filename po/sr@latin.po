@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-02-19 10:19+0100\n"
-"Last-Translator: Milos Mijatovic <mijatix@gmail.com>\n"
+"POT-Creation-Date: 2009-01-22 14:20-0500\n"
+"PO-Revision-Date: 2009-01-10 20:49+0100\n"
+"Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora-trans-sr@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,9 +34,9 @@ msgstr ""
 "licence.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "upotreba: %s [--list] [ime]\n"
+msgstr "upotreba: %s [--list] [--type <vrsta>] [ime]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -54,9 +54,9 @@ msgid "         %s --override <name>\n"
 msgstr "          %s --override <ime>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "          %s [--level <nivoi>] <ime> %s\n"
+msgstr "          %s [--level <nivoi>] [--type <vrsta>] <ime> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -80,42 +80,42 @@ msgstr "greška pri čitanju podataka o servisu %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Nemate dovoljne povlastice za izvršavanje ove operacije.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "on"
 msgstr "uključeno"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "off"
 msgstr "isključeno"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:438
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "servisi zasnovani na xinetd-u:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:440
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "neuspešno otvaranje direktorijuma %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:584
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzija %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:596
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type mora biti „sysv“ ili „xinetd“\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:604
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "možete navesti samo jedan od --list, --add, --del ili --override\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:664
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "samo jedan nivo izvršavanja sme biti naveden u chkconfig upitu\n"
@@ -169,22 +169,22 @@ msgstr "loš argument za --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nijednim servisom ne sme da upravlja ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "neuspešno otvaranje %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "neuspešno poklapanje obrasca %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "ne mogu da odredim trenutni nivo izvršavanja\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "neuspešno pravljenje simboličke veze %s: %s\n"
