@@ -1,8 +1,7 @@
+# translation of chkconfig.master.po to català
 # Catalan translations for chkconfig package.
 # Copyright @ 2004, 2005, 2007 The Free Software Foundation, Inc.
 # This file is distributed under the same license as the chkconfig package.
-# Jordi Barnés <jordi2@t-email.co.uk>, 2004.
-# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004, 2005, 2007.
 #
 # This file is translated according to the glossary and style guide of
 #   Softcatalà. If you plan to modify this file, please read first the page
@@ -16,17 +15,21 @@
 #   http://www.softcatala.org/projectes/fedora/
 #   i contacteu l'anterior traductor/a.
 #
+# Jordi Barnés <jordi2@t-email.co.uk>, 2004.
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2004, 2005, 2007.
+# Josep Torné <josep.torne at gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-09-27 10:12+0100\n"
-"Last-Translator: Josep Puigdemont <josep.puigdemont@gmail.com>\n"
-"Language-Team: Catalan <fedora@softcatala.net>\n"
+"POT-Creation-Date: 2009-01-22 14:20-0500\n"
+"PO-Revision-Date: 2009-02-13 16:44+0100\n"
+"Last-Translator: Josep Torné <josep.torne at gmail.com>\n"
+"Language-Team: Softcatalà <fedora@softcatala.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:38
 #, c-format
@@ -35,16 +38,15 @@ msgstr "%s versió %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Aquest programari es pot distribuir lliurement d'acord amb els termes de la "
 "Llicència Pública General GNU.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "forma d'ús:   %s [--list] [nom]\n"
+msgstr "forma d'ús:   %s [--list] [--type <tipus>] [nom]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -62,9 +64,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s –-override <nom>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <nivells>] <nom> %s\n"
+msgstr "         %s [--level <nivells>] [--type <tipus>] <nom> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -88,48 +90,47 @@ msgstr "s'ha produït un error en llegir la informació del servei %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "No teniu suficients privilegis per executar aquesta operació.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "on"
 msgstr "executant-se"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "off"
 msgstr "aturat"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:438
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "serveis basats en xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:440
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "no s'ha pogut obrir el directori %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:584
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versió %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:596
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type ha de ser 'sysv' o 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:604
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "només es pot especificar una de les opcions --list, --add, --del, o --"
 "override\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:664
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"només es pot especificar un nivell d'execució per a una consulta chkconfig\n"
+msgstr "només es pot especificar un nivell d'execució per a una consulta chkconfig\n"
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
@@ -180,22 +181,22 @@ msgstr "l'argument de --levels no és vàlid\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "No hi ha cap servei que ntsysv pugui gestionar.\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "no s'ha pogut obrir %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "no s'ha pogut globalitzar el patró %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "no es pot determinar l'actual nivell d'execució\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "no s'ha pogut fer l'enllaç simbòlic %s: %s\n"
@@ -490,5 +491,3 @@ msgstr "l'admindir %s no és vàlid\n"
 msgid "alternatives version %s\n"
 msgstr "versions alternatives %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "S'ha produït un error en llegir el directori %s/init.d: %s\n"
