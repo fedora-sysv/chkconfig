@@ -1,482 +1,1400 @@
-# $Id: ro.po,v 1.58 2007/08/19 18:04:50 alexxed Exp $
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 3.0\n"
+"Project-Id-Version: Fedora 10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2007-08-19 21:14+0300\n"
-"Last-Translator: Cristian Gafton <gafton@redhat.com>\n"
-"Language-Team: Romanian <ro@li.org>\n"
+"POT-Creation-Date: 2009-02-18 13:52+0000\n"
+"PO-Revision-Date: 2009-02-18 21:01+0200\n"
+"Last-Translator: alexxed <alexxed@gmail.com>\n"
+"Language-Team: Romanian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Narro 0.9.4 on http://tradu.softwareliber.ro\n"
 
-#: ../chkconfig.c:38
-#, c-format
-msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s versiunea %s - Drepturi de autor (C) 1997-2002 Red Hat, Inc.\n"
+#: ../comps-f7.xml.in.h:1 ../comps-f8.xml.in.h:1 ../comps-f9.xml.in.h:1
+#: ../comps-f10.xml.in.h:1 ../comps-f11.xml.in.h:1
+msgid "A lightweight desktop environment that works well on low end machines."
+msgstr ""
+"Un mediu de lucru lejer care funcționează bine pe calculatoare mai slabe."
 
-#: ../chkconfig.c:39
-#, c-format
+#: ../comps-f7.xml.in.h:2 ../comps-f8.xml.in.h:2 ../comps-f9.xml.in.h:2
+#: ../comps-f10.xml.in.h:3 ../comps-f11.xml.in.h:3 ../comps-el4.xml.in.h:1
+#: ../comps-el5.xml.in.h:1
+msgid "Administration Tools"
+msgstr "Unelte de administrare"
+
+#: ../comps-f7.xml.in.h:3 ../comps-f8.xml.in.h:3 ../comps-f9.xml.in.h:3
+#: ../comps-f10.xml.in.h:4 ../comps-f11.xml.in.h:4
+msgid "Afrikaans Support"
+msgstr "Suport pentru africană"
+
+#: ../comps-f7.xml.in.h:4 ../comps-f8.xml.in.h:4 ../comps-f9.xml.in.h:4
+#: ../comps-f10.xml.in.h:5 ../comps-f11.xml.in.h:5
+msgid "Albanian Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:5 ../comps-f8.xml.in.h:5 ../comps-f9.xml.in.h:5
+#: ../comps-f10.xml.in.h:6 ../comps-f11.xml.in.h:7 ../comps-el4.xml.in.h:2
+#: ../comps-el5.xml.in.h:2
+msgid "Applications"
+msgstr "Aplicații"
+
+#: ../comps-f7.xml.in.h:6 ../comps-f8.xml.in.h:6 ../comps-f9.xml.in.h:6
+#: ../comps-f10.xml.in.h:7 ../comps-f11.xml.in.h:8
+msgid "Applications to perform a variety of tasks"
+msgstr "Aplicații pentru executarea unor sarcini diverse"
+
+#: ../comps-f7.xml.in.h:7 ../comps-f8.xml.in.h:7 ../comps-f9.xml.in.h:7
+#: ../comps-f10.xml.in.h:8 ../comps-f11.xml.in.h:9 ../comps-el4.xml.in.h:4
+#: ../comps-el5.xml.in.h:4
+msgid "Arabic Support"
+msgstr "Suport pentru arabă"
+
+#: ../comps-f7.xml.in.h:8 ../comps-f8.xml.in.h:8 ../comps-f9.xml.in.h:8
+#: ../comps-f10.xml.in.h:9 ../comps-f11.xml.in.h:10 ../comps-el4.xml.in.h:5
+#: ../comps-el5.xml.in.h:5
+msgid "Armenian Support"
+msgstr "Suport pentru armeană"
+
+#: ../comps-f7.xml.in.h:9 ../comps-f8.xml.in.h:9 ../comps-f9.xml.in.h:9
+#: ../comps-f10.xml.in.h:10 ../comps-f11.xml.in.h:11
+msgid "Assamese Support"
+msgstr "Suport pentru asameză"
+
+#: ../comps-f7.xml.in.h:10 ../comps-f8.xml.in.h:10 ../comps-f9.xml.in.h:10
+#: ../comps-f10.xml.in.h:11 ../comps-f11.xml.in.h:12 ../comps-el4.xml.in.h:6
+#: ../comps-el5.xml.in.h:6
+msgid "Authoring and Publishing"
+msgstr "Creare și publicare documente"
+
+#: ../comps-f7.xml.in.h:11 ../comps-f8.xml.in.h:11 ../comps-f9.xml.in.h:11
+#: ../comps-f10.xml.in.h:12 ../comps-f11.xml.in.h:13
+msgid "Base"
+msgstr "Bază"
+
+#: ../comps-f7.xml.in.h:12 ../comps-f8.xml.in.h:12 ../comps-f9.xml.in.h:12
+#: ../comps-f10.xml.in.h:13 ../comps-f11.xml.in.h:14 ../comps-el4.xml.in.h:7
+#: ../comps-el5.xml.in.h:7
+msgid "Base System"
+msgstr "Sistem de bază"
+
+#: ../comps-f7.xml.in.h:13 ../comps-f8.xml.in.h:13 ../comps-f9.xml.in.h:13
+#: ../comps-f10.xml.in.h:14 ../comps-f11.xml.in.h:15
+msgid "Basic support for the Ruby programming language."
+msgstr "Suport de bază pentru limbajul de programare Ruby."
+
+#: ../comps-f7.xml.in.h:14 ../comps-f8.xml.in.h:14 ../comps-f9.xml.in.h:14
+#: ../comps-f10.xml.in.h:15 ../comps-f11.xml.in.h:16
+msgid "Basque Support"
+msgstr "Suport pentru bască"
+
+#: ../comps-f7.xml.in.h:15 ../comps-f8.xml.in.h:15 ../comps-f9.xml.in.h:15
+#: ../comps-f10.xml.in.h:16 ../comps-f11.xml.in.h:17
+msgid "Belarusian Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:16 ../comps-f8.xml.in.h:16 ../comps-f9.xml.in.h:16
+#: ../comps-f10.xml.in.h:17 ../comps-f11.xml.in.h:18
+msgid "Bengali Support"
+msgstr "Suport pentru bengaleză"
+
+#: ../comps-f7.xml.in.h:17 ../comps-f8.xml.in.h:17 ../comps-f9.xml.in.h:17
+#: ../comps-f10.xml.in.h:18 ../comps-f11.xml.in.h:19
+msgid "Bhutanese Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:18 ../comps-f8.xml.in.h:18 ../comps-f9.xml.in.h:18
+#: ../comps-f10.xml.in.h:19 ../comps-f11.xml.in.h:20
+msgid "Bosnian Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:19 ../comps-f8.xml.in.h:19 ../comps-f9.xml.in.h:19
+#: ../comps-f10.xml.in.h:20 ../comps-f11.xml.in.h:21
+msgid "Brazilian Portuguese Support"
+msgstr "Suport pentru portugheză braziliană"
+
+#: ../comps-f7.xml.in.h:20 ../comps-f8.xml.in.h:20 ../comps-f9.xml.in.h:20
+#: ../comps-f10.xml.in.h:21 ../comps-f11.xml.in.h:22
+msgid "Breton Support"
+msgstr "Suport pentru bretonă"
+
+#: ../comps-f7.xml.in.h:21 ../comps-f8.xml.in.h:22 ../comps-f9.xml.in.h:22
+#: ../comps-f10.xml.in.h:23 ../comps-f11.xml.in.h:24
+msgid "Bulgarian Support"
+msgstr "Suport pentru bulgară"
+
+#: ../comps-f7.xml.in.h:22 ../comps-f8.xml.in.h:23 ../comps-f9.xml.in.h:23
+#: ../comps-f10.xml.in.h:24 ../comps-f11.xml.in.h:25
+msgid "Catalan Support"
+msgstr "Suport pentru catalană"
+
+#: ../comps-f7.xml.in.h:23 ../comps-f8.xml.in.h:24 ../comps-f9.xml.in.h:24
+#: ../comps-f10.xml.in.h:25 ../comps-f11.xml.in.h:26
+msgid "Chinese Support"
+msgstr "Suport pentru chineză"
+
+#: ../comps-f7.xml.in.h:24 ../comps-f8.xml.in.h:25 ../comps-f9.xml.in.h:25
+#: ../comps-f10.xml.in.h:26 ../comps-f11.xml.in.h:27
+msgid "Clustering"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:25 ../comps-f8.xml.in.h:26 ../comps-f9.xml.in.h:26
+#: ../comps-f10.xml.in.h:27 ../comps-f11.xml.in.h:28
+msgid "Clustering Support"
+msgstr "Suport pentru clustering"
+
+#: ../comps-f7.xml.in.h:26 ../comps-f8.xml.in.h:27 ../comps-f9.xml.in.h:27
+#: ../comps-f10.xml.in.h:28 ../comps-f11.xml.in.h:29
+msgid "Core"
+msgstr "Nucleu"
+
+#: ../comps-f7.xml.in.h:27 ../comps-f8.xml.in.h:28 ../comps-f9.xml.in.h:28
+#: ../comps-f10.xml.in.h:29 ../comps-f11.xml.in.h:30
+msgid "Croatian Support"
+msgstr "Suport pentru croată"
+
+#: ../comps-f7.xml.in.h:28 ../comps-f8.xml.in.h:29 ../comps-f9.xml.in.h:29
+#: ../comps-f10.xml.in.h:30 ../comps-f11.xml.in.h:31 ../comps-el5.xml.in.h:8
+msgid "Czech Support"
+msgstr "Suport pentru cehă"
+
+#: ../comps-f7.xml.in.h:29 ../comps-f8.xml.in.h:30 ../comps-f9.xml.in.h:30
+#: ../comps-f10.xml.in.h:31 ../comps-f11.xml.in.h:32
+msgid "DNS Name Server"
+msgstr "Server de nume DNS"
+
+#: ../comps-f7.xml.in.h:30 ../comps-f8.xml.in.h:31 ../comps-f9.xml.in.h:31
+#: ../comps-f10.xml.in.h:32 ../comps-f11.xml.in.h:33
+msgid "Danish Support"
+msgstr "Suport pentru olandeză"
+
+#: ../comps-f7.xml.in.h:31 ../comps-f8.xml.in.h:32 ../comps-f9.xml.in.h:32
+#: ../comps-f10.xml.in.h:33 ../comps-f11.xml.in.h:34 ../comps-el4.xml.in.h:8
+#: ../comps-el5.xml.in.h:9
+msgid "Desktop Environments"
+msgstr "Medii pentru Spațiul de lucru"
+
+#: ../comps-f7.xml.in.h:32 ../comps-f8.xml.in.h:33 ../comps-f9.xml.in.h:33
+#: ../comps-f10.xml.in.h:34 ../comps-f11.xml.in.h:35 ../comps-el4.xml.in.h:9
+#: ../comps-el5.xml.in.h:10
+msgid "Desktop environments"
+msgstr "Medii pentru spațiul de lucru"
+
+#: ../comps-f7.xml.in.h:33 ../comps-f8.xml.in.h:34 ../comps-f9.xml.in.h:34
+#: ../comps-f10.xml.in.h:35 ../comps-f11.xml.in.h:36 ../comps-el4.xml.in.h:10
+#: ../comps-el5.xml.in.h:11
+msgid "Development"
+msgstr "Dezvoltare"
+
+#: ../comps-f7.xml.in.h:34 ../comps-f8.xml.in.h:35 ../comps-f9.xml.in.h:35
+#: ../comps-f10.xml.in.h:36 ../comps-f11.xml.in.h:37
+msgid "Development Libraries"
+msgstr "Librării pentru dezvoltare"
+
+#: ../comps-f7.xml.in.h:35 ../comps-f8.xml.in.h:36 ../comps-f9.xml.in.h:36
+#: ../comps-f10.xml.in.h:37 ../comps-f11.xml.in.h:38 ../comps-el4.xml.in.h:11
+#: ../comps-el5.xml.in.h:12
+msgid "Development Tools"
+msgstr "Unelte pentru dezvoltare"
+
+#: ../comps-f7.xml.in.h:36 ../comps-f8.xml.in.h:37 ../comps-f9.xml.in.h:37
+#: ../comps-f10.xml.in.h:38 ../comps-f11.xml.in.h:39
+msgid "Dial-up Networking Support"
+msgstr "Suport pentru acces la rețea prin telefon"
+
+#: ../comps-f7.xml.in.h:37 ../comps-f8.xml.in.h:38 ../comps-f9.xml.in.h:38
+#: ../comps-f10.xml.in.h:39 ../comps-f11.xml.in.h:40
+msgid "Dutch Support"
+msgstr "Suport pentru olandeză"
+
+#: ../comps-f7.xml.in.h:38
+msgid "Eclipse"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:39 ../comps-f8.xml.in.h:39 ../comps-f9.xml.in.h:39
+#: ../comps-f10.xml.in.h:40 ../comps-f11.xml.in.h:41 ../comps-el4.xml.in.h:13
+#: ../comps-el5.xml.in.h:14
+msgid "Editors"
+msgstr "Editoare"
+
+#: ../comps-f7.xml.in.h:40 ../comps-f8.xml.in.h:40 ../comps-f9.xml.in.h:40
+#: ../comps-f10.xml.in.h:41 ../comps-f11.xml.in.h:42 ../comps-el4.xml.in.h:14
+#: ../comps-el5.xml.in.h:15
+msgid "Educational Software"
+msgstr "Programe educaționale"
+
+#: ../comps-f7.xml.in.h:41 ../comps-f8.xml.in.h:41 ../comps-f9.xml.in.h:41
+#: ../comps-f10.xml.in.h:42 ../comps-f11.xml.in.h:43 ../comps-el4.xml.in.h:15
+#: ../comps-el5.xml.in.h:16
+msgid "Educational software for learning"
+msgstr "Programe educaționale pentru învățat"
+
+#: ../comps-f7.xml.in.h:42 ../comps-f8.xml.in.h:42 ../comps-f9.xml.in.h:42
+#: ../comps-f10.xml.in.h:43 ../comps-f11.xml.in.h:44 ../comps-el4.xml.in.h:16
+#: ../comps-el5.xml.in.h:17
+msgid "Engineering and Scientific"
+msgstr "Inginerie și Științific"
+
+#: ../comps-f7.xml.in.h:43 ../comps-f8.xml.in.h:43 ../comps-f9.xml.in.h:43
+#: ../comps-f10.xml.in.h:44 ../comps-f11.xml.in.h:45
+msgid "English (UK) Support"
+msgstr "Suport pentru engleză (UK)"
+
+#: ../comps-f7.xml.in.h:44 ../comps-f8.xml.in.h:44 ../comps-f9.xml.in.h:45
+#: ../comps-f10.xml.in.h:46 ../comps-f11.xml.in.h:47
+msgid "Estonian Support"
+msgstr "Suport pentru estonă"
+
+#: ../comps-f7.xml.in.h:45 ../comps-f8.xml.in.h:45 ../comps-f9.xml.in.h:46
+#: ../comps-f10.xml.in.h:47 ../comps-f11.xml.in.h:48
+msgid "Ethiopic Support"
+msgstr "Suport pentru etiopeană"
+
+#: ../comps-f7.xml.in.h:46 ../comps-f8.xml.in.h:46 ../comps-f9.xml.in.h:47
+#: ../comps-f10.xml.in.h:48 ../comps-f11.xml.in.h:49 ../comps-el4.xml.in.h:17
+#: ../comps-el5.xml.in.h:18
+msgid "FTP Server"
+msgstr "Server FTP"
+
+#: ../comps-f7.xml.in.h:47 ../comps-f8.xml.in.h:47 ../comps-f9.xml.in.h:48
+#: ../comps-f10.xml.in.h:49 ../comps-f11.xml.in.h:50
+msgid "Faeroese Support"
+msgstr "Suport pentru faroeză"
+
+#: ../comps-f7.xml.in.h:48 ../comps-f8.xml.in.h:49 ../comps-f9.xml.in.h:50
+#: ../comps-f10.xml.in.h:51 ../comps-f11.xml.in.h:52 ../comps-el4.xml.in.h:18
+#: ../comps-el5.xml.in.h:19
+msgid "Fedora Packager"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:49 ../comps-f8.xml.in.h:50 ../comps-f9.xml.in.h:51
+#: ../comps-f10.xml.in.h:52 ../comps-f11.xml.in.h:53
+msgid "Filipino Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:50 ../comps-f8.xml.in.h:51 ../comps-f9.xml.in.h:52
+#: ../comps-f10.xml.in.h:53 ../comps-f11.xml.in.h:54
+msgid "Finnish Support"
+msgstr "Suport pentru finlandeză"
+
+#: ../comps-f7.xml.in.h:51 ../comps-f8.xml.in.h:54 ../comps-f9.xml.in.h:55
+#: ../comps-f10.xml.in.h:56 ../comps-f11.xml.in.h:58
+msgid "French Support"
+msgstr "Suport pentru franceză"
+
+#: ../comps-f7.xml.in.h:52 ../comps-f8.xml.in.h:55 ../comps-f9.xml.in.h:56
+#: ../comps-f10.xml.in.h:57 ../comps-f11.xml.in.h:61 ../comps-el4.xml.in.h:19
+#: ../comps-el5.xml.in.h:20
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+"From CD recording to playing audio CDs and multimedia files, this package "
+"group allows you to work with sound and video on the system."
 msgstr ""
-"Acest program poate fi distribuit gratuit sub licența GNU Public License.\n"
+"De la înregistrare CD la ascultare CD și fișiere multimedia, acest grup de "
+"pachete vă permite să lucrați cu sunet și video pe sistem."
 
-#: ../chkconfig.c:42
-#, fuzzy, c-format
-msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr ""
-"utilizare:\n"
-"         %s --list [name]\n"
+#: ../comps-f7.xml.in.h:53 ../comps-f8.xml.in.h:56 ../comps-f9.xml.in.h:57
+#: ../comps-f10.xml.in.h:58 ../comps-f11.xml.in.h:62 ../comps-el4.xml.in.h:20
+#: ../comps-el5.xml.in.h:21
+msgid "GNOME Desktop Environment"
+msgstr "Mediul de lucru GNOME"
 
-#: ../chkconfig.c:43
-#, c-format
-msgid "         %s --add <name>\n"
-msgstr "         %s --add <name>\n"
+#: ../comps-f7.xml.in.h:54 ../comps-f8.xml.in.h:57 ../comps-f9.xml.in.h:58
+#: ../comps-f10.xml.in.h:59 ../comps-f11.xml.in.h:63 ../comps-el4.xml.in.h:21
+#: ../comps-el5.xml.in.h:22
+msgid "GNOME Software Development"
+msgstr "Dezvoltare programe GNOME"
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "         %s --del <name>\n"
-msgstr "         %s --del <name>\n"
-
-#: ../chkconfig.c:45
-#, c-format
-msgid "         %s --override <name>\n"
-msgstr "         %s --override <nume>\n"
-
-#: ../chkconfig.c:46
-#, fuzzy, c-format
-msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <nivele>] <nume> %s\n"
-
-#: ../chkconfig.c:53
-#, c-format
+#: ../comps-f7.xml.in.h:55 ../comps-f8.xml.in.h:58 ../comps-f9.xml.in.h:59
+#: ../comps-f10.xml.in.h:60 ../comps-f11.xml.in.h:64
 msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
+"GNOME is a powerful graphical user interface which includes a panel, desktop, "
+"system icons, and a graphical file manager."
 msgstr ""
-"serviciul %s suportă chkconfig, dar nu este de găsit în niciun nivel de "
-"rulare (rulați „chkconfig --add %s”)\n"
+"GNOME este o puternică interfață grafică cu utilizatorul care include un "
+"panou, spațiu de lucru, icoane pentru sistem precum și un manager grafic de "
+"fișiere."
 
-#: ../chkconfig.c:55
-#, c-format
-msgid "service %s does not support chkconfig\n"
-msgstr "serviciul %s nu suportă chkconfig\n"
+#: ../comps-f7.xml.in.h:56 ../comps-f8.xml.in.h:59 ../comps-f9.xml.in.h:60
+#: ../comps-f10.xml.in.h:61 ../comps-f11.xml.in.h:65
+msgid "Gaelic Support"
+msgstr "Suport pentru galeză"
 
-#: ../chkconfig.c:57
-#, c-format
-msgid "error reading information on service %s: %s\n"
-msgstr "eroare la citirea informaţiilor pentru serviciul %s: %s\n"
+#: ../comps-f7.xml.in.h:57 ../comps-f8.xml.in.h:60 ../comps-f9.xml.in.h:61
+#: ../comps-f10.xml.in.h:62 ../comps-f11.xml.in.h:66
+msgid "Galician Support"
+msgstr "Suport pentru galiciană"
 
-#: ../chkconfig.c:66
-#, c-format
-msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+#: ../comps-f7.xml.in.h:58 ../comps-f8.xml.in.h:61 ../comps-f9.xml.in.h:62
+#: ../comps-f10.xml.in.h:63 ../comps-f11.xml.in.h:67 ../comps-el5.xml.in.h:24
+msgid "Games and Entertainment"
+msgstr "Jocuri și Distracție"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
-msgid "on"
-msgstr "on"
-
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
-msgid "off"
-msgstr "off"
-
-#: ../chkconfig.c:432
-#, c-format
-msgid "xinetd based services:\n"
-msgstr "servicii controlate de xinetd:\n"
-
-#: ../chkconfig.c:434
-#, c-format
-msgid "failed to open directory %s: %s\n"
-msgstr "eroare la accesarea directorului %s: %s\n"
-
-#: ../chkconfig.c:578
-#, c-format
-msgid "%s version %s\n"
-msgstr "%s versiunea %s\n"
-
-#: ../chkconfig.c:590
-#, c-format
-msgid "--type must be 'sysv' or 'xinetd'\n"
+#: ../comps-f7.xml.in.h:59 ../comps-f8.xml.in.h:62 ../comps-f9.xml.in.h:63
+#: ../comps-f10.xml.in.h:64 ../comps-f11.xml.in.h:68
+msgid "Georgian Support"
 msgstr ""
 
-#: ../chkconfig.c:598
-#, c-format
-msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"numai una dintre opţiunile --list, --add, sau --override poate fi "
-"specificată\n"
+#: ../comps-f7.xml.in.h:60 ../comps-f8.xml.in.h:63 ../comps-f9.xml.in.h:64
+#: ../comps-f10.xml.in.h:65 ../comps-f11.xml.in.h:69
+msgid "German Support"
+msgstr "Suport pentru germană"
 
-#: ../chkconfig.c:658
-#, c-format
-msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "nu se poate edita decît un singur runlevel la fiecare execuţie\n"
+#: ../comps-f7.xml.in.h:61 ../comps-f8.xml.in.h:64 ../comps-f9.xml.in.h:65
+#: ../comps-f10.xml.in.h:66 ../comps-f11.xml.in.h:70 ../comps-el4.xml.in.h:23
+#: ../comps-el5.xml.in.h:25
+msgid "Graphical Internet"
+msgstr "Internet grafic"
 
-#: ../ntsysv.c:46
-msgid "Press <F1> for more information on a service."
-msgstr "<F1> pentru extra informaţii despre un serviciu."
+#: ../comps-f7.xml.in.h:62 ../comps-f8.xml.in.h:65 ../comps-f9.xml.in.h:66
+#: ../comps-f10.xml.in.h:67 ../comps-f11.xml.in.h:71 ../comps-el4.xml.in.h:24
+#: ../comps-el5.xml.in.h:26
+msgid "Graphics"
+msgstr "Grafică"
 
-#: ../ntsysv.c:83 ../ntsysv.c:120
-msgid "Ok"
-msgstr "Ok"
+#: ../comps-f7.xml.in.h:63 ../comps-f8.xml.in.h:66 ../comps-f9.xml.in.h:67
+#: ../comps-f10.xml.in.h:68 ../comps-f11.xml.in.h:72
+msgid "Greek Support"
+msgstr "Suport pentru greacă"
 
-#: ../ntsysv.c:83
-msgid "Back"
-msgstr "Înapoi"
+#: ../comps-f7.xml.in.h:64 ../comps-f8.xml.in.h:67 ../comps-f9.xml.in.h:68
+#: ../comps-f10.xml.in.h:69 ../comps-f11.xml.in.h:73
+msgid "Gujarati Support"
+msgstr "Suport pentru gujurati"
 
-#: ../ntsysv.c:83
-msgid "Cancel"
-msgstr "Abandon"
+#: ../comps-f7.xml.in.h:65 ../comps-f8.xml.in.h:68 ../comps-f9.xml.in.h:69
+#: ../comps-f10.xml.in.h:70 ../comps-f11.xml.in.h:74 ../comps-el4.xml.in.h:25
+#: ../comps-el5.xml.in.h:27
+msgid "Hardware Support"
+msgstr "Suport hardware"
 
-#: ../ntsysv.c:95
-msgid "What services should be automatically started?"
-msgstr "Ce servicii trebuie pornite automat?"
+#: ../comps-f7.xml.in.h:66 ../comps-f8.xml.in.h:69 ../comps-f9.xml.in.h:70
+#: ../comps-f10.xml.in.h:72 ../comps-f11.xml.in.h:76 ../comps-el4.xml.in.h:26
+#: ../comps-el5.xml.in.h:28
+msgid "Hebrew Support"
+msgstr "Suport pentru ebraică"
 
-#: ../ntsysv.c:101
-msgid "Services"
-msgstr "Servicii"
+#: ../comps-f7.xml.in.h:67 ../comps-f8.xml.in.h:70 ../comps-f9.xml.in.h:71
+#: ../comps-f10.xml.in.h:73 ../comps-f11.xml.in.h:77
+msgid "Hindi Support"
+msgstr "Suport pentru hindusă"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
-#, c-format
-msgid "error reading info for service %s: %s\n"
-msgstr "eroare la citirea informaţiilor pentru serviciul %s: %s\n"
+#: ../comps-f7.xml.in.h:68 ../comps-f8.xml.in.h:71 ../comps-f9.xml.in.h:72
+#: ../comps-f10.xml.in.h:74 ../comps-f11.xml.in.h:78
+msgid "Hungarian Support"
+msgstr "Suport pentru maghiară"
 
-#: ../ntsysv.c:257
-#, c-format
-msgid "error reading from directory %s: %s\n"
-msgstr "eroare la citirea din directorul %s: %s\n"
+#: ../comps-f7.xml.in.h:69 ../comps-f8.xml.in.h:72 ../comps-f9.xml.in.h:73
+#: ../comps-f10.xml.in.h:75 ../comps-f11.xml.in.h:79
+msgid "Icelandic Support"
+msgstr "Suport pentru islandeză"
 
-#: ../ntsysv.c:293
-#, c-format
-msgid "You must be root to run %s.\n"
-msgstr "Trebuie să rulaţi programul %s ca root.\n"
+#: ../comps-f7.xml.in.h:70 ../comps-f8.xml.in.h:73 ../comps-f9.xml.in.h:74
+#: ../comps-f10.xml.in.h:76 ../comps-f11.xml.in.h:80
+msgid "Indonesian Support"
+msgstr "Suport pentru indoneză"
 
-#: ../ntsysv.c:310
-#, c-format
-msgid "bad argument to --levels\n"
-msgstr "argument invalid pentru --levels\n"
-
-#: ../ntsysv.c:317
-#, c-format
-msgid "No services may be managed by ntsysv!\n"
-msgstr "Nu s-a găsit nici un serviciu care poate fi operat de către ntsysv!\n"
-
-#: ../leveldb.c:260
-#, c-format
-msgid "failed to open %s/init.d: %s\n"
-msgstr "eroare la deschiderea %s/init.d: %s\n"
-
-#: ../leveldb.c:668
-#, c-format
-msgid "failed to glob pattern %s: %s\n"
-msgstr "eroare la identificarea soluţiilor patternului %s: %s\n"
-
-#: ../leveldb.c:711
-#, c-format
-msgid "cannot determine current run level\n"
-msgstr "nu se poate determina current runlevel\n"
-
-#: ../leveldb.c:799
-#, c-format
-msgid "failed to make symlink %s: %s\n"
-msgstr "nu s-a putut crea %s: %s\n"
-
-#: ../alternatives.c:63
-#, c-format
-msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternative versiunea %s - Drepturi de autor (C) 2001 Red Hat, Inc.\n"
-
-#: ../alternatives.c:64
-#, c-format
+#: ../comps-f7.xml.in.h:71 ../comps-f8.xml.in.h:74 ../comps-f9.xml.in.h:75
+#: ../comps-f10.xml.in.h:79 ../comps-f11.xml.in.h:83 ../comps-el4.xml.in.h:27
+#: ../comps-el5.xml.in.h:29
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-"\n"
+"Install these packages in order to develop GTK+ and GNOME graphical "
+"applications."
 msgstr ""
-"Acest program poate fi redistribuit gratuit sub termenii licenței GNU Public "
-"License.\n"
+"Instalați aceste pachete pentru a putea dezvolta aplicații grafice GTK+ și "
+"GNOME."
 
-#: ../alternatives.c:65
-#, c-format
-msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"utilizare: alternatives --install <legătură> <nume> <cale> <prioritate>\n"
-
-#: ../alternatives.c:66
-#, c-format
-msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <serviciu>]\n"
-
-#: ../alternatives.c:67
-#, c-format
-msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <nume> <cale>]*\n"
-
-#: ../alternatives.c:68
-#, c-format
-msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternative --remove <nume> <cale>\n"
-
-#: ../alternatives.c:69
-#, c-format
-msgid "       alternatives --auto <name>\n"
-msgstr "       alternative --auto <nume>\n"
-
-#: ../alternatives.c:70
-#, c-format
-msgid "       alternatives --config <name>\n"
-msgstr "       alternative -- config <nume>\n"
-
-#: ../alternatives.c:71
-#, c-format
-msgid "       alternatives --display <name>\n"
-msgstr "       alternative --display <nume>\n"
-
-#: ../alternatives.c:72
-#, c-format
-msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternative --set <nume> <cale>\n"
-
-#: ../alternatives.c:73
-#, c-format
-msgid "\n"
-msgstr "\n"
-
-#: ../alternatives.c:74
-#, c-format
-msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "opțiuni comune: --verbose --test --help --usage --version\n"
-
-#: ../alternatives.c:75
-#, c-format
-msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <director> --admindir <director>\n"
-
-#: ../alternatives.c:172
-#, c-format
-msgid "reading %s\n"
-msgstr "citire %s\n"
-
-#: ../alternatives.c:176
-#, c-format
-msgid "failed to open %s: %s\n"
-msgstr "eroare la deschiderea %s: %s\n"
-
-#: ../alternatives.c:185
-#, c-format
-msgid "failed to read %s: %s\n"
-msgstr "eroare la citirea %s: %s\n"
-
-#: ../alternatives.c:194
-#, c-format
-msgid "%s empty!\n"
-msgstr "%s este gol!\n"
-
-#: ../alternatives.c:203
-#, c-format
-msgid "bad mode on line 1 of %s\n"
-msgstr "mod greșit la linia 1 din %s\n"
-
-#: ../alternatives.c:210
-#, c-format
-msgid "bad primary link in %s\n"
-msgstr "legătură primară greșită în %s\n"
-
-#: ../alternatives.c:222
-#, c-format
-msgid "path %s unexpected in %s\n"
-msgstr "cale %s neașteptată în %s\n"
-
-#: ../alternatives.c:231
-#, c-format
-msgid "missing path for slave %s in %s\n"
-msgstr "lipsește calea pentru sclavul %s în %s\n"
-
-#: ../alternatives.c:241
-#, c-format
-msgid "unexpected end of file in %s\n"
-msgstr "sfârșit neașteptat de fișier în %s\n"
-
-#: ../alternatives.c:250
-#, c-format
-msgid "path to alternate expected in %s\n"
-msgstr "calea către alternare așteptată în %s\n"
-
-#: ../alternatives.c:270
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "prioritate numerică așteptată în %s\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "calea sclavului așteptată în %s\n"
-
-#: ../alternatives.c:311
-#, c-format
-msgid "unexpected line in %s: %s\n"
-msgstr "linie neașteptată în %s: %s\n"
-
-#: ../alternatives.c:319
-#, c-format
-msgid "failed to read link %s: %s\n"
-msgstr "eroare la citirea legăturii %s: %s\n"
-
-#: ../alternatives.c:333
-#, c-format
-msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"legătura trimite către nicio alternativă -- se setează modul la manual\n"
-
-#: ../alternatives.c:338
-#, c-format
-msgid "link changed -- setting mode to manual\n"
-msgstr "legătura s-a schimbat -- se setează modul la manual\n"
-
-#: ../alternatives.c:366 ../alternatives.c:373
-#, c-format
-msgid "would remove %s\n"
-msgstr "ar elimina %s\n"
-
-#: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
-#, c-format
-msgid "failed to remove link %s: %s\n"
-msgstr "nu s-a putut șterge legătura %s: %s\n"
-
-#: ../alternatives.c:391 ../alternatives.c:403
-#, c-format
-msgid "would link %s -> %s\n"
-msgstr "ar lega %s la %s\n"
-
-#: ../alternatives.c:395 ../alternatives.c:412
-#, c-format
-msgid "failed to link %s -> %s: %s\n"
-msgstr "nu s-a putut lega %s -> %s: %s\n"
-
-#: ../alternatives.c:444
-#, c-format
-msgid "%s already exists\n"
-msgstr "%s există deja\n"
-
-#: ../alternatives.c:446
-#, c-format
-msgid "failed to create %s: %s\n"
-msgstr "eroare la crearea %s: %s\n"
-
-#: ../alternatives.c:477
-#, c-format
-msgid "failed to replace %s with %s: %s\n"
-msgstr "nu s-a putut înlocui %s cu %s: %s\n"
-
-#: ../alternatives.c:503 ../alternatives.c:512
-#, c-format
-msgid "running %s\n"
-msgstr "se rulează %s\n"
-
-#: ../alternatives.c:539
-#, c-format
-msgid "the primary link for %s must be %s\n"
-msgstr "legătura primară pentru %s trebuie să fie %s\n"
-
-#: ../alternatives.c:619
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "legătura %s incorectă pentru sclavul %s (%s %s)\n"
-
-#: ../alternatives.c:660
-#, c-format
-msgid "%s - status is auto.\n"
-msgstr "%s - starea e auto.\n"
-
-#: ../alternatives.c:662
-#, c-format
-msgid "%s - status is manual.\n"
-msgstr "%s - starea e manuală.\n"
-
-#: ../alternatives.c:664
-#, c-format
-msgid " link currently points to %s\n"
-msgstr " legătura duce spre %s\n"
-
-#: ../alternatives.c:667
-#, c-format
-msgid "%s - priority %d\n"
-msgstr "%s - prioritate %d\n"
-
-#: ../alternatives.c:670
-#, c-format
-msgid " slave %s: %s\n"
-msgstr " sclav %s: %s\n"
-
-#: ../alternatives.c:675
-#, c-format
-msgid "Current `best' version is %s.\n"
-msgstr "Versiunea curentă și optimă este %s.\n"
-
-#: ../alternatives.c:705
-#, c-format
-msgid "There is %d program that provides '%s'.\n"
-msgstr "Există %d program care furnizează „%s”.\n"
-
-#: ../alternatives.c:705
-#, c-format
-msgid "There are %d programs which provide '%s'.\n"
-msgstr "Sunt %d programe care furnizează „%s”.\n"
-
-#: ../alternatives.c:707
-#, c-format
-msgid "  Selection    Command\n"
-msgstr "  Selecție     Comandă\n"
-
-#: ../alternatives.c:716
-#, c-format
-msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"Enter pentru a păstra selecția curentă[+] sau tastați numărul selecției: "
-
-#: ../alternatives.c:719
-#, c-format
+#: ../comps-f7.xml.in.h:72 ../comps-f8.xml.in.h:75 ../comps-f9.xml.in.h:76
+#: ../comps-f10.xml.in.h:80 ../comps-f11.xml.in.h:84
 msgid ""
-"\n"
-"error reading choice\n"
+"Install these packages in order to develop GTK+ and XFCE graphical "
+"applications."
 msgstr ""
-"\n"
-"eroare la citirea opțiunii\n"
+"Instalați aceste pachete pentru a putea dezvolta aplicații grafice GTK+ și "
+"aplicații grafice XFCE."
 
-#: ../alternatives.c:746 ../alternatives.c:772
-#, c-format
-msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s nu a fost configurat ca o alternativă pentru %s\n"
+#: ../comps-f7.xml.in.h:73 ../comps-f8.xml.in.h:76 ../comps-f9.xml.in.h:77
+#: ../comps-f10.xml.in.h:81 ../comps-f11.xml.in.h:85 ../comps-el4.xml.in.h:28
+#: ../comps-el5.xml.in.h:30
+msgid "Install these packages to develop QT and KDE graphical applications."
+msgstr "Instalați aceste pachete pentru a dezvolta aplicații grafice QT și KDE."
 
-#: ../alternatives.c:788
-#, c-format
-msgid "(would remove %s\n"
-msgstr "(ar elimina %s\n"
+#: ../comps-f7.xml.in.h:74 ../comps-f8.xml.in.h:77 ../comps-f9.xml.in.h:78
+#: ../comps-f10.xml.in.h:82 ../comps-f11.xml.in.h:86
+msgid ""
+"Install these tools to enable the system to print or act as a print server."
+msgstr ""
+"Instalați aceste unelte pentru a permite sistemului să tipărească sau să "
+"funcționeze ca un server de tipărire."
 
-#: ../alternatives.c:790
-#, c-format
-msgid "failed to remove %s: %s\n"
-msgstr "eroare la eliminarea %s: %s\n"
+#: ../comps-f7.xml.in.h:75 ../comps-f8.xml.in.h:78 ../comps-f9.xml.in.h:79
+#: ../comps-f10.xml.in.h:83 ../comps-f11.xml.in.h:87 ../comps-el4.xml.in.h:29
+#: ../comps-el5.xml.in.h:31
+msgid ""
+"Install this group of packages to use the base graphical (X) user interface."
+msgstr ""
+"Instalați acest grup de pachete pentru a folosi interfața grafică primară (X)."
 
-#: ../alternatives.c:912
-#, c-format
-msgid "altdir %s invalid\n"
-msgstr "altdir %s este invalid\n"
+#: ../comps-f7.xml.in.h:76 ../comps-f8.xml.in.h:80 ../comps-f9.xml.in.h:81
+#: ../comps-f10.xml.in.h:85 ../comps-f11.xml.in.h:89
+msgid "Inuktitut Support"
+msgstr ""
 
-#: ../alternatives.c:918
-#, c-format
-msgid "admindir %s invalid\n"
-msgstr "admindir %s este invalid\n"
+#: ../comps-f7.xml.in.h:77 ../comps-f8.xml.in.h:81 ../comps-f9.xml.in.h:82
+#: ../comps-f10.xml.in.h:86 ../comps-f11.xml.in.h:90
+msgid "Irish Support"
+msgstr "Suport pentru irlandeză"
 
-#: ../alternatives.c:928
-#, c-format
-msgid "alternatives version %s\n"
-msgstr "alternatives versiunea %s\n"
+#: ../comps-f7.xml.in.h:78 ../comps-f8.xml.in.h:82 ../comps-f9.xml.in.h:83
+#: ../comps-f10.xml.in.h:87 ../comps-f11.xml.in.h:91
+msgid "Italian Support"
+msgstr "Suport pentru italiană"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "eroare la citirea din directorul %s/init.d: %s\n"
+#: ../comps-f7.xml.in.h:79 ../comps-f8.xml.in.h:83 ../comps-f9.xml.in.h:84
+#: ../comps-f10.xml.in.h:88 ../comps-f11.xml.in.h:92 ../comps-el4.xml.in.h:30
+#: ../comps-el5.xml.in.h:32
+msgid "Japanese Support"
+msgstr "Suport pentru japoneză"
 
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "eroare la citirea din directorul %s/init.d: %s"
+#: ../comps-f7.xml.in.h:80 ../comps-f8.xml.in.h:84 ../comps-f9.xml.in.h:85
+#: ../comps-f10.xml.in.h:89 ../comps-f11.xml.in.h:93 ../comps-el4.xml.in.h:31
+msgid "Java"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:81 ../comps-f8.xml.in.h:85 ../comps-f9.xml.in.h:86
+#: ../comps-f10.xml.in.h:90 ../comps-f11.xml.in.h:94 ../comps-el4.xml.in.h:32
+msgid "Java Development"
+msgstr "Dezvoltare Java"
+
+#: ../comps-f7.xml.in.h:82 ../comps-f8.xml.in.h:86 ../comps-f9.xml.in.h:87
+#: ../comps-f10.xml.in.h:91 ../comps-f11.xml.in.h:95 ../comps-el4.xml.in.h:33
+#: ../comps-el5.xml.in.h:33
+msgid "KDE (K Desktop Environment)"
+msgstr "KDE (Mediul de lucru K)"
+
+#: ../comps-f7.xml.in.h:83 ../comps-f8.xml.in.h:87 ../comps-f9.xml.in.h:88
+#: ../comps-f10.xml.in.h:92 ../comps-f11.xml.in.h:96 ../comps-el4.xml.in.h:34
+#: ../comps-el5.xml.in.h:34
+msgid "KDE Software Development"
+msgstr "Dezvoltare programe KDE"
+
+#: ../comps-f7.xml.in.h:84 ../comps-f8.xml.in.h:88 ../comps-f9.xml.in.h:89
+#: ../comps-f10.xml.in.h:93 ../comps-f11.xml.in.h:97
+msgid ""
+"KDE is a powerful graphical user interface which includes a panel, desktop, "
+"system icons, and a graphical file manager."
+msgstr ""
+"KDE este o puternică interfață grafică cu utilizatorul care include un panou, "
+"spațiu de lucru, icoane pentru sistem și un manager grafic de fișiere."
+
+#: ../comps-f7.xml.in.h:85 ../comps-f8.xml.in.h:89 ../comps-f9.xml.in.h:90
+#: ../comps-f10.xml.in.h:94 ../comps-f11.xml.in.h:98
+msgid "Kannada Support"
+msgstr "Suport pentru kannada"
+
+#: ../comps-f7.xml.in.h:86 ../comps-f8.xml.in.h:90 ../comps-f9.xml.in.h:92
+#: ../comps-f10.xml.in.h:97 ../comps-f11.xml.in.h:101
+msgid "Khmer Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:87 ../comps-f8.xml.in.h:91 ../comps-f9.xml.in.h:93
+#: ../comps-f10.xml.in.h:99 ../comps-f11.xml.in.h:104
+msgid "Korean Support"
+msgstr "Suport pentru coreeană"
+
+#: ../comps-f7.xml.in.h:88 ../comps-f8.xml.in.h:92 ../comps-f9.xml.in.h:95
+#: ../comps-f10.xml.in.h:102 ../comps-f11.xml.in.h:107
+msgid "Languages"
+msgstr "Limbi"
+
+#: ../comps-f7.xml.in.h:89 ../comps-f8.xml.in.h:93 ../comps-f9.xml.in.h:96
+#: ../comps-f10.xml.in.h:103 ../comps-f11.xml.in.h:108
+msgid "Lao Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:90 ../comps-f8.xml.in.h:94 ../comps-f9.xml.in.h:97
+#: ../comps-f10.xml.in.h:104 ../comps-f11.xml.in.h:109
+msgid "Latvian Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:91 ../comps-f8.xml.in.h:96 ../comps-f9.xml.in.h:99
+#: ../comps-f10.xml.in.h:106 ../comps-f11.xml.in.h:111
+msgid "Legacy Network Server"
+msgstr "Servere de rețea depreciate"
+
+#: ../comps-f7.xml.in.h:92 ../comps-f8.xml.in.h:97 ../comps-f9.xml.in.h:100
+#: ../comps-f10.xml.in.h:107 ../comps-f11.xml.in.h:112
+msgid "Legacy Software Development"
+msgstr "Dezvoltare programe depreciate"
+
+#: ../comps-f7.xml.in.h:93 ../comps-f8.xml.in.h:98 ../comps-f9.xml.in.h:101
+#: ../comps-f10.xml.in.h:108 ../comps-f11.xml.in.h:113
+msgid "Legacy Software Support"
+msgstr "Suport programe depreciate"
+
+#: ../comps-f7.xml.in.h:94 ../comps-f8.xml.in.h:99 ../comps-f9.xml.in.h:102
+#: ../comps-f10.xml.in.h:109 ../comps-f11.xml.in.h:114
+msgid "Lithuanian Support"
+msgstr "Suport pentru lituaniană"
+
+#: ../comps-f7.xml.in.h:95 ../comps-f8.xml.in.h:101 ../comps-f9.xml.in.h:105
+#: ../comps-f10.xml.in.h:112 ../comps-f11.xml.in.h:117 ../comps-el4.xml.in.h:36
+#: ../comps-el5.xml.in.h:36
+msgid "Mail Server"
+msgstr "Server de mail"
+
+#: ../comps-f7.xml.in.h:96 ../comps-f8.xml.in.h:102 ../comps-f9.xml.in.h:106
+#: ../comps-f10.xml.in.h:114 ../comps-f11.xml.in.h:120
+msgid "Malay Support"
+msgstr "Suport pentru malteză"
+
+#: ../comps-f7.xml.in.h:97 ../comps-f8.xml.in.h:103 ../comps-f9.xml.in.h:107
+#: ../comps-f10.xml.in.h:115 ../comps-f11.xml.in.h:121
+msgid "Malayalam Support"
+msgstr "Suport pentru malayalam"
+
+#: ../comps-f7.xml.in.h:98 ../comps-f8.xml.in.h:104 ../comps-f9.xml.in.h:108
+#: ../comps-f10.xml.in.h:116 ../comps-f11.xml.in.h:122
+msgid "Maori Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:99 ../comps-f8.xml.in.h:105 ../comps-f9.xml.in.h:109
+#: ../comps-f10.xml.in.h:117 ../comps-f11.xml.in.h:123
+msgid "Marathi Support"
+msgstr "Suport pentru marathi"
+
+#: ../comps-f7.xml.in.h:100 ../comps-f8.xml.in.h:107 ../comps-f9.xml.in.h:111
+#: ../comps-f10.xml.in.h:119 ../comps-f11.xml.in.h:125
+msgid "MySQL Database"
+msgstr "Baza de date MySQL"
+
+#: ../comps-f7.xml.in.h:101 ../comps-f8.xml.in.h:109 ../comps-f9.xml.in.h:113
+#: ../comps-f10.xml.in.h:122 ../comps-f11.xml.in.h:128 ../comps-el4.xml.in.h:37
+#: ../comps-el5.xml.in.h:37
+msgid "Network Servers"
+msgstr "Servere de rețea"
+
+#: ../comps-f7.xml.in.h:102 ../comps-f8.xml.in.h:110 ../comps-f9.xml.in.h:114
+#: ../comps-f10.xml.in.h:123 ../comps-f11.xml.in.h:129 ../comps-el4.xml.in.h:38
+#: ../comps-el5.xml.in.h:38
+msgid "News Server"
+msgstr "Server de știri"
+
+#: ../comps-f7.xml.in.h:103 ../comps-f8.xml.in.h:111 ../comps-f9.xml.in.h:116
+#: ../comps-f10.xml.in.h:125 ../comps-f11.xml.in.h:131
+msgid "Northern Sotho Support"
+msgstr "Suport pentru Sotho de Nord"
+
+#: ../comps-f7.xml.in.h:104 ../comps-f8.xml.in.h:112 ../comps-f9.xml.in.h:117
+#: ../comps-f10.xml.in.h:126 ../comps-f11.xml.in.h:132
+msgid "Norwegian Support"
+msgstr "Suport pentru norvegiană"
+
+#: ../comps-f7.xml.in.h:105 ../comps-f8.xml.in.h:113 ../comps-f9.xml.in.h:118
+#: ../comps-f10.xml.in.h:127 ../comps-f11.xml.in.h:134 ../comps-el4.xml.in.h:39
+#: ../comps-el5.xml.in.h:39
+msgid "Office/Productivity"
+msgstr "Birou/Productivitate"
+
+#: ../comps-f7.xml.in.h:106 ../comps-f8.xml.in.h:115 ../comps-f9.xml.in.h:120
+#: ../comps-f10.xml.in.h:129 ../comps-f11.xml.in.h:136
+msgid "Oriya Support"
+msgstr "Suport pentru oriază"
+
+#: ../comps-f7.xml.in.h:107 ../comps-f8.xml.in.h:116 ../comps-f9.xml.in.h:121
+#: ../comps-f10.xml.in.h:130 ../comps-f11.xml.in.h:137 ../comps-el4.xml.in.h:40
+#: ../comps-el5.xml.in.h:40
+msgid ""
+"Packages which provide functionality for developing and building applications."
+msgstr ""
+"Pachete care oferă funcționalități pentru dezvoltarea și construirea de "
+"aplicații."
+
+#: ../comps-f7.xml.in.h:108 ../comps-f8.xml.in.h:117 ../comps-f9.xml.in.h:122
+#: ../comps-f10.xml.in.h:131 ../comps-f11.xml.in.h:138
+msgid "Persian Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:109 ../comps-f8.xml.in.h:118 ../comps-f9.xml.in.h:123
+#: ../comps-f10.xml.in.h:132 ../comps-f11.xml.in.h:139
+msgid "Polish Support"
+msgstr "Suport pentru poloneză"
+
+#: ../comps-f7.xml.in.h:110 ../comps-f8.xml.in.h:119 ../comps-f9.xml.in.h:124
+#: ../comps-f10.xml.in.h:133 ../comps-f11.xml.in.h:140
+msgid "Portuguese Support"
+msgstr "Suport pentru portugheză"
+
+#: ../comps-f7.xml.in.h:111 ../comps-f8.xml.in.h:120 ../comps-f9.xml.in.h:125
+#: ../comps-f10.xml.in.h:134 ../comps-f11.xml.in.h:141
+msgid "PostgreSQL Database"
+msgstr "Baza de date PostgreSQL"
+
+#: ../comps-f7.xml.in.h:112 ../comps-f8.xml.in.h:121 ../comps-f9.xml.in.h:126
+#: ../comps-f10.xml.in.h:135 ../comps-f11.xml.in.h:142
+msgid "Printing Support"
+msgstr "Suport pentru tipărire"
+
+#: ../comps-f7.xml.in.h:113 ../comps-f8.xml.in.h:122 ../comps-f9.xml.in.h:127
+#: ../comps-f10.xml.in.h:136 ../comps-f11.xml.in.h:143
+msgid "Punjabi Support"
+msgstr "Suport pentru punjabi"
+
+#: ../comps-f7.xml.in.h:114 ../comps-f8.xml.in.h:123 ../comps-f9.xml.in.h:128
+#: ../comps-f10.xml.in.h:137 ../comps-f11.xml.in.h:144
+msgid "Romanian Support"
+msgstr "Suport pentru română"
+
+#: ../comps-f7.xml.in.h:115 ../comps-f8.xml.in.h:124 ../comps-f9.xml.in.h:129
+#: ../comps-f10.xml.in.h:138 ../comps-f11.xml.in.h:145
+msgid "Ruby"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:116 ../comps-f8.xml.in.h:125 ../comps-f9.xml.in.h:130
+#: ../comps-f10.xml.in.h:139 ../comps-f11.xml.in.h:146
+msgid "Russian Support"
+msgstr "Suport pentru rusă"
+
+#: ../comps-f7.xml.in.h:117 ../comps-f8.xml.in.h:126 ../comps-f9.xml.in.h:133
+#: ../comps-f10.xml.in.h:141 ../comps-f11.xml.in.h:148
+msgid "Samoan Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:118 ../comps-f8.xml.in.h:127 ../comps-f9.xml.in.h:134
+#: ../comps-f10.xml.in.h:142 ../comps-f11.xml.in.h:149
+msgid "Serbian Support"
+msgstr "Suport pentru sârbă"
+
+#: ../comps-f7.xml.in.h:119 ../comps-f8.xml.in.h:128 ../comps-f9.xml.in.h:135
+#: ../comps-f10.xml.in.h:143 ../comps-f11.xml.in.h:150
+msgid "Server Configuration Tools"
+msgstr "Unelte de configurat servere"
+
+#: ../comps-f7.xml.in.h:120 ../comps-f8.xml.in.h:129 ../comps-f9.xml.in.h:136
+#: ../comps-f10.xml.in.h:144 ../comps-f11.xml.in.h:151 ../comps-el4.xml.in.h:41
+#: ../comps-el5.xml.in.h:41
+msgid "Servers"
+msgstr "Servere"
+
+#: ../comps-f7.xml.in.h:121 ../comps-f8.xml.in.h:130 ../comps-f9.xml.in.h:137
+#: ../comps-f10.xml.in.h:145 ../comps-f11.xml.in.h:152 ../comps-el4.xml.in.h:42
+#: ../comps-el5.xml.in.h:42
+msgid "Simple window managers that aren't part of a larger desktop environment."
+msgstr ""
+"Manageri de ferestre simpli care nu sunt parte a unui mediu de lucru mai mare."
+
+#: ../comps-f7.xml.in.h:122 ../comps-f8.xml.in.h:131 ../comps-f9.xml.in.h:138
+#: ../comps-f10.xml.in.h:147 ../comps-f11.xml.in.h:154
+msgid "Sinhala Support"
+msgstr "Suport pentru sinhaleză"
+
+#: ../comps-f7.xml.in.h:123 ../comps-f8.xml.in.h:132 ../comps-f9.xml.in.h:139
+#: ../comps-f10.xml.in.h:148 ../comps-f11.xml.in.h:155
+msgid "Slovak Support"
+msgstr "Suport pentru slovacă"
+
+#: ../comps-f7.xml.in.h:124 ../comps-f8.xml.in.h:133 ../comps-f9.xml.in.h:140
+#: ../comps-f10.xml.in.h:149 ../comps-f11.xml.in.h:156
+msgid "Slovenian Support"
+msgstr "Suport pentru slovenă"
+
+#: ../comps-f7.xml.in.h:125 ../comps-f8.xml.in.h:134 ../comps-f9.xml.in.h:141
+#: ../comps-f10.xml.in.h:150 ../comps-f11.xml.in.h:157
+msgid "Smallest possible installation"
+msgstr "Cea mai mică instalare posibilă"
+
+#: ../comps-f7.xml.in.h:126 ../comps-f8.xml.in.h:135 ../comps-f9.xml.in.h:142
+#: ../comps-f10.xml.in.h:151 ../comps-f11.xml.in.h:158 ../comps-el4.xml.in.h:43
+#: ../comps-el5.xml.in.h:43
+msgid "Software used for running network servers"
+msgstr "Programe folosite pentru a rula servere de rețea"
+
+#: ../comps-f7.xml.in.h:127 ../comps-f8.xml.in.h:136 ../comps-f9.xml.in.h:143
+#: ../comps-f10.xml.in.h:152 ../comps-f11.xml.in.h:159
+msgid "Somali Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:128 ../comps-f8.xml.in.h:137 ../comps-f9.xml.in.h:144
+#: ../comps-f10.xml.in.h:153 ../comps-f11.xml.in.h:160
+msgid ""
+"Sometimes called text editors, these are programs that allow you to create "
+"and edit text files. This includes Emacs and Vi."
+msgstr ""
+"Uneori numite editoare de texte, acestea sunt programe care vă permit să "
+"creați și editați fișiere text. Acestea includ Emacs și Vi."
+
+#: ../comps-f7.xml.in.h:129 ../comps-f8.xml.in.h:138 ../comps-f9.xml.in.h:145
+#: ../comps-f10.xml.in.h:154 ../comps-f11.xml.in.h:161 ../comps-el4.xml.in.h:45
+#: ../comps-el5.xml.in.h:45
+msgid "Sound and Video"
+msgstr "Sunet și Video"
+
+#: ../comps-f7.xml.in.h:130 ../comps-f8.xml.in.h:139 ../comps-f9.xml.in.h:146
+#: ../comps-f10.xml.in.h:155 ../comps-f11.xml.in.h:162
+msgid "Southern Ndebele Support"
+msgstr "Suport pentru Ndebele de Sud"
+
+#: ../comps-f7.xml.in.h:131 ../comps-f8.xml.in.h:140 ../comps-f9.xml.in.h:147
+#: ../comps-f10.xml.in.h:156 ../comps-f11.xml.in.h:163
+msgid "Southern Sotho Support"
+msgstr "Suport pentru Sotho de Sud"
+
+#: ../comps-f7.xml.in.h:132 ../comps-f8.xml.in.h:141 ../comps-f9.xml.in.h:148
+#: ../comps-f10.xml.in.h:157 ../comps-f11.xml.in.h:164
+msgid "Spanish Support"
+msgstr "Suport pentru spaniolă"
+
+#: ../comps-f7.xml.in.h:133 ../comps-f8.xml.in.h:142 ../comps-f9.xml.in.h:149
+#: ../comps-f10.xml.in.h:159 ../comps-f11.xml.in.h:166 ../comps-el4.xml.in.h:46
+msgid "Support for developing programs in the Java programming language."
+msgstr "Suport pentru dezvoltarea programelor în limbajul de programare Java."
+
+#: ../comps-f7.xml.in.h:134 ../comps-f8.xml.in.h:143 ../comps-f9.xml.in.h:150
+#: ../comps-f10.xml.in.h:160 ../comps-f11.xml.in.h:167 ../comps-el4.xml.in.h:47
+msgid "Support for running programs written in the Java programming language."
+msgstr ""
+"Suport pentru rularea programelor scrise în limbajul de programare Java."
+
+#: ../comps-f7.xml.in.h:135 ../comps-f8.xml.in.h:144 ../comps-f9.xml.in.h:151
+#: ../comps-f10.xml.in.h:161 ../comps-f11.xml.in.h:168
+msgid "Swati Support"
+msgstr "Suport pentru Swati"
+
+#: ../comps-f7.xml.in.h:136 ../comps-f8.xml.in.h:145 ../comps-f9.xml.in.h:152
+#: ../comps-f10.xml.in.h:162 ../comps-f11.xml.in.h:169
+msgid "Swedish Support"
+msgstr "Suport pentru suedeză"
+
+#: ../comps-f7.xml.in.h:137 ../comps-f8.xml.in.h:146 ../comps-f9.xml.in.h:153
+#: ../comps-f10.xml.in.h:163 ../comps-f11.xml.in.h:170 ../comps-el4.xml.in.h:48
+#: ../comps-el5.xml.in.h:46
+msgid "System Tools"
+msgstr "Unelte sistem"
+
+#: ../comps-f7.xml.in.h:138 ../comps-f8.xml.in.h:147 ../comps-f9.xml.in.h:154
+#: ../comps-f10.xml.in.h:164 ../comps-f11.xml.in.h:171
+msgid "Tagalog Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:139 ../comps-f8.xml.in.h:148 ../comps-f9.xml.in.h:155
+#: ../comps-f10.xml.in.h:166 ../comps-f11.xml.in.h:173
+msgid "Tamil Support"
+msgstr "Suport pentru tamil"
+
+#: ../comps-f7.xml.in.h:140 ../comps-f8.xml.in.h:149 ../comps-f9.xml.in.h:156
+#: ../comps-f10.xml.in.h:167 ../comps-f11.xml.in.h:174
+msgid "Telugu Support"
+msgstr "Suport pentru telugu"
+
+#: ../comps-f7.xml.in.h:141 ../comps-f8.xml.in.h:150 ../comps-f9.xml.in.h:157
+#: ../comps-f10.xml.in.h:168 ../comps-f11.xml.in.h:175 ../comps-el4.xml.in.h:49
+#: ../comps-el5.xml.in.h:47
+msgid "Text-based Internet"
+msgstr "Internet în mod text"
+
+#: ../comps-f7.xml.in.h:142 ../comps-f8.xml.in.h:151 ../comps-f9.xml.in.h:158
+#: ../comps-f10.xml.in.h:169 ../comps-f11.xml.in.h:176
+msgid "Thai Support"
+msgstr "Suport pentru tailandeză"
+
+#: ../comps-f7.xml.in.h:143
+msgid "The Eclipse Integrated Development Environment."
+msgstr "Mediul integrat de lucru și dezvoltare Eclipse."
+
+#: ../comps-f7.xml.in.h:144 ../comps-f8.xml.in.h:152 ../comps-f9.xml.in.h:159
+#: ../comps-f10.xml.in.h:170 ../comps-f11.xml.in.h:177 ../comps-el4.xml.in.h:51
+#: ../comps-el5.xml.in.h:49
+msgid "The applications include office suites, PDF viewers, and more."
+msgstr "Aplicațiile includ suite de birou, vizualizatoare PDF și altele."
+
+#: ../comps-f7.xml.in.h:145 ../comps-f8.xml.in.h:153 ../comps-f9.xml.in.h:160
+#: ../comps-f10.xml.in.h:171 ../comps-f11.xml.in.h:178
+msgid ""
+"The packages in this group are core libraries needed to develop applications."
+msgstr ""
+"Pachetele din acest grup sunt librării de bază necesare pentru a dezvolta "
+"aplicații."
+
+#: ../comps-f7.xml.in.h:146 ../comps-f8.xml.in.h:154 ../comps-f9.xml.in.h:161
+#: ../comps-f10.xml.in.h:172 ../comps-f11.xml.in.h:179 ../comps-el4.xml.in.h:52
+#: ../comps-el5.xml.in.h:50
+msgid "These packages allow you to configure an IMAP or SMTP mail server."
+msgstr ""
+"Aceste pachete vă permit să configurați un server de mail IMAP sau SMTP."
+
+#: ../comps-f7.xml.in.h:147 ../comps-f8.xml.in.h:155 ../comps-f9.xml.in.h:162
+#: ../comps-f10.xml.in.h:173 ../comps-f11.xml.in.h:180
+msgid ""
+"These packages allow you to develop applications for the X Window System."
+msgstr ""
+"Aceste pachete vă permit să dezvoltați aplicații pentru sistemul de ferestre "
+"X."
+
+#: ../comps-f7.xml.in.h:148 ../comps-f8.xml.in.h:156 ../comps-f9.xml.in.h:163
+#: ../comps-f10.xml.in.h:174 ../comps-f11.xml.in.h:181 ../comps-el4.xml.in.h:53
+#: ../comps-el5.xml.in.h:51
+msgid ""
+"These packages are helpful when developing web applications or web pages."
+msgstr ""
+"Aceste pachete vă sunt de folos dacă dezvoltați aplicații sau pagini web."
+
+#: ../comps-f7.xml.in.h:149 ../comps-f8.xml.in.h:157 ../comps-f9.xml.in.h:164
+#: ../comps-f10.xml.in.h:175 ../comps-f11.xml.in.h:182
+msgid ""
+"These packages include network-based servers such as DHCP, Kerberos and NIS."
+msgstr ""
+"Aceste pachete includ servere bazate pe rețea cum ar fi DHCP, Kerberos și NIS."
+
+#: ../comps-f7.xml.in.h:150 ../comps-f8.xml.in.h:158 ../comps-f9.xml.in.h:165
+#: ../comps-f10.xml.in.h:176 ../comps-f11.xml.in.h:183
+msgid ""
+"These packages include servers for old network protocols such as rsh and "
+"telnet."
+msgstr ""
+"Aceste pachete includ servere pentru protocoale vechi de rețea cum ar fi rsh "
+"și telnet."
+
+#: ../comps-f7.xml.in.h:151 ../comps-f8.xml.in.h:159 ../comps-f9.xml.in.h:166
+#: ../comps-f10.xml.in.h:177 ../comps-f11.xml.in.h:184
+msgid "These packages provide a virtualization environment."
+msgstr "Aceste pachete oferă un mediu de virtualizare."
+
+#: ../comps-f7.xml.in.h:152 ../comps-f8.xml.in.h:160 ../comps-f9.xml.in.h:167
+#: ../comps-f10.xml.in.h:178 ../comps-f11.xml.in.h:185
+msgid "These packages provide compatibility with previous releases."
+msgstr "Aceste pachete oferă compatibilitate cu lansările anterioare."
+
+#: ../comps-f7.xml.in.h:153 ../comps-f8.xml.in.h:161 ../comps-f9.xml.in.h:168
+#: ../comps-f10.xml.in.h:179 ../comps-f11.xml.in.h:186
+msgid ""
+"These packages provide support for various locales including fonts and input "
+"methods."
+msgstr ""
+"Aceste pachete oferă suport pentru diverse localizări, acesta incluzând "
+"fonturi și metode de introducere."
+
+#: ../comps-f7.xml.in.h:154 ../comps-f8.xml.in.h:162 ../comps-f9.xml.in.h:169
+#: ../comps-f10.xml.in.h:180 ../comps-f11.xml.in.h:187
+msgid ""
+"These tools allow you to create documents in the DocBook format and convert "
+"them into HTML, PDF, Postscript, and text."
+msgstr ""
+"Aceste unelte vă permit să creați documente în formatul DocBook și să le "
+"convertiți în HTML, PDF, Postscript și text."
+
+#: ../comps-f7.xml.in.h:155 ../comps-f8.xml.in.h:163 ../comps-f9.xml.in.h:170
+#: ../comps-f10.xml.in.h:181 ../comps-f11.xml.in.h:188 ../comps-el4.xml.in.h:55
+#: ../comps-el5.xml.in.h:53
+msgid "These tools allow you to run a Web server on the system."
+msgstr "Aceste unelte vă permit să rulați un server web pe sistem."
+
+#: ../comps-f7.xml.in.h:156 ../comps-f8.xml.in.h:164 ../comps-f9.xml.in.h:171
+#: ../comps-f10.xml.in.h:182 ../comps-f11.xml.in.h:189 ../comps-el4.xml.in.h:56
+#: ../comps-el5.xml.in.h:54
+msgid "These tools allow you to run an FTP server on the system."
+msgstr "Aceste unelte vă permit să rulați un server FTP pe sistem."
+
+#: ../comps-f7.xml.in.h:157 ../comps-f8.xml.in.h:165 ../comps-f9.xml.in.h:172
+#: ../comps-f10.xml.in.h:183 ../comps-f11.xml.in.h:190 ../comps-el4.xml.in.h:57
+#: ../comps-el5.xml.in.h:55
+msgid ""
+"These tools include core development tools such as automake, gcc, perl, "
+"python, and debuggers."
+msgstr ""
+"Aceste unelte includ unelte de bază pentru dezvoltare cum ar fi automake, "
+"gcc, perl, python și deploșnițori."
+
+#: ../comps-f7.xml.in.h:158 ../comps-f8.xml.in.h:166 ../comps-f9.xml.in.h:173
+#: ../comps-f10.xml.in.h:184 ../comps-f11.xml.in.h:191 ../comps-el4.xml.in.h:58
+#: ../comps-el5.xml.in.h:56
+msgid "This group allows you to configure the system as a news server."
+msgstr "Acest grup vă permite să configurați sistemul ca un server de știri."
+
+#: ../comps-f7.xml.in.h:159 ../comps-f8.xml.in.h:167 ../comps-f9.xml.in.h:174
+#: ../comps-f10.xml.in.h:185 ../comps-f11.xml.in.h:192
+msgid "This group contains all of Red Hat's custom server configuration tools."
+msgstr ""
+"Acest grup conține toate uneltele personalizate de configurare a serverelor "
+"de la Red Hat."
+
+#: ../comps-f7.xml.in.h:160 ../comps-f8.xml.in.h:168 ../comps-f9.xml.in.h:175
+#: ../comps-f10.xml.in.h:186 ../comps-f11.xml.in.h:193
+msgid ""
+"This group includes a minimal set of packages. Useful for creating small "
+"router/firewall boxes, for example."
+msgstr ""
+"Acest grup include un set minimal de pachete. Util pentru a crea mici mașini "
+"router/firewall, de exemplu."
+
+#: ../comps-f7.xml.in.h:161 ../comps-f8.xml.in.h:169 ../comps-f9.xml.in.h:176
+#: ../comps-f10.xml.in.h:187 ../comps-f11.xml.in.h:194 ../comps-el4.xml.in.h:59
+#: ../comps-el5.xml.in.h:57
+msgid "This group includes graphical email, Web, and chat clients."
+msgstr "Acest grup include mail grafic, web și clienți pentru discuții."
+
+#: ../comps-f7.xml.in.h:162 ../comps-f8.xml.in.h:170 ../comps-f9.xml.in.h:177
+#: ../comps-f10.xml.in.h:188 ../comps-f11.xml.in.h:195 ../comps-el4.xml.in.h:60
+#: ../comps-el5.xml.in.h:58
+msgid ""
+"This group includes packages for performing mathematical and scientific "
+"computations and plotting, as well as unit conversion."
+msgstr ""
+"Acest grup include pachete pentru a efectua calcule și grafice matematice și "
+"științifice precum și conversie între unități de măsură."
+
+#: ../comps-f7.xml.in.h:163 ../comps-f8.xml.in.h:171 ../comps-f9.xml.in.h:178
+#: ../comps-f10.xml.in.h:189 ../comps-f11.xml.in.h:196 ../comps-el4.xml.in.h:61
+#: ../comps-el5.xml.in.h:59
+msgid "This group includes packages to help you manipulate and scan images."
+msgstr ""
+"Acest grup include pachete care vă ajută să manipulați și scanați imagini."
+
+#: ../comps-f7.xml.in.h:164 ../comps-f8.xml.in.h:172 ../comps-f9.xml.in.h:179
+#: ../comps-f10.xml.in.h:190 ../comps-f11.xml.in.h:197 ../comps-el4.xml.in.h:62
+#: ../comps-el5.xml.in.h:60
+msgid ""
+"This group includes text-based email, Web, and chat clients. These "
+"applications do not require the X Window System."
+msgstr ""
+"Acest grup include mail în mod text, web și clienți pentru discuții. Aceste "
+"aplicații nu au nevoie de sistemul de ferestre X."
+
+#: ../comps-f7.xml.in.h:165 ../comps-f8.xml.in.h:173 ../comps-f9.xml.in.h:180
+#: ../comps-f10.xml.in.h:191 ../comps-f11.xml.in.h:198 ../comps-el4.xml.in.h:63
+#: ../comps-el5.xml.in.h:61
+msgid ""
+"This group is a collection of graphical administration tools for the system, "
+"such as for managing user accounts and configuring system hardware."
+msgstr ""
+"Acest grup este o colecție de unelte grafice de administrare pentru sistem, "
+"cum ar fi administrarea conturilor de utilizator și configurarea hardware."
+
+#: ../comps-f7.xml.in.h:166 ../comps-f8.xml.in.h:174 ../comps-f9.xml.in.h:181
+#: ../comps-f10.xml.in.h:192 ../comps-f11.xml.in.h:199 ../comps-el4.xml.in.h:66
+#: ../comps-el5.xml.in.h:64
+msgid ""
+"This group is a collection of tools and resources of Armenian environments."
+msgstr "Acest grup este o colecție de unelte și resurse ale mediilor Armenian."
+
+#: ../comps-f7.xml.in.h:167 ../comps-f8.xml.in.h:175 ../comps-f9.xml.in.h:182
+#: ../comps-f10.xml.in.h:193 ../comps-f11.xml.in.h:200 ../comps-el4.xml.in.h:69
+#: ../comps-el5.xml.in.h:68
+msgid ""
+"This group is a collection of tools for various hardware specific utilities."
+msgstr ""
+"Acest grup este o colecție de unelte pentru diferite unelte cu specific "
+"hardware."
+
+#: ../comps-f7.xml.in.h:168 ../comps-f8.xml.in.h:176 ../comps-f9.xml.in.h:183
+#: ../comps-f10.xml.in.h:194 ../comps-f11.xml.in.h:202 ../comps-el4.xml.in.h:70
+#: ../comps-el5.xml.in.h:69
+msgid ""
+"This group is a collection of various tools for the system, such as the "
+"client for connecting to SMB shares and tools to monitor network traffic."
+msgstr ""
+"Acest grup este o colecție de unelte diverse pentru sistem, cum ar fi un "
+"client pentru conectare la partajări SMB și unelte pentru a monitoriza "
+"traficul din rețea."
+
+#: ../comps-f7.xml.in.h:169 ../comps-f8.xml.in.h:177 ../comps-f9.xml.in.h:184
+#: ../comps-f10.xml.in.h:195 ../comps-f11.xml.in.h:203
+msgid ""
+"This package group allows you to run a DNS name server (BIND) on the system."
+msgstr ""
+"Acest grup de pachete vă permite să rulați pe sistem un server de nume DNS "
+"(BIND)."
+
+#: ../comps-f7.xml.in.h:170 ../comps-f8.xml.in.h:178 ../comps-f9.xml.in.h:185
+#: ../comps-f10.xml.in.h:196 ../comps-f11.xml.in.h:204
+msgid ""
+"This package group allows you to share files between Linux and MS Windows(tm) "
+"systems."
+msgstr ""
+"Acest grup de pachete vă permite să partajați fișiere între sisteme Linux și "
+"MS Windows(tm)."
+
+#: ../comps-f7.xml.in.h:171 ../comps-f8.xml.in.h:179 ../comps-f9.xml.in.h:186
+#: ../comps-f10.xml.in.h:197 ../comps-f11.xml.in.h:205
+msgid "This package group contains packages useful for use with MySQL."
+msgstr "Acest grup de pachete conține pachete utile pentru lucrul cu MySQL."
+
+#: ../comps-f7.xml.in.h:172 ../comps-f8.xml.in.h:180 ../comps-f9.xml.in.h:187
+#: ../comps-f10.xml.in.h:198 ../comps-f11.xml.in.h:206
+msgid "This package group includes packages useful for use with Postgresql."
+msgstr ""
+"Acest grup de pachete include pachete utile pentru lucrul cu PostgreSQL."
+
+#: ../comps-f7.xml.in.h:173 ../comps-f8.xml.in.h:181 ../comps-f9.xml.in.h:188
+#: ../comps-f10.xml.in.h:199 ../comps-f11.xml.in.h:207
+msgid "Tibetan Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:174 ../comps-f8.xml.in.h:182 ../comps-f9.xml.in.h:189
+#: ../comps-f10.xml.in.h:200 ../comps-f11.xml.in.h:208
+msgid "Tonga Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:175 ../comps-f8.xml.in.h:183 ../comps-f9.xml.in.h:190
+#: ../comps-f10.xml.in.h:201 ../comps-f11.xml.in.h:209 ../comps-el4.xml.in.h:71
+#: ../comps-el5.xml.in.h:70
+msgid "Tools and Utilities needed by a Fedora Packager"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:176 ../comps-f8.xml.in.h:184 ../comps-f9.xml.in.h:191
+#: ../comps-f10.xml.in.h:202 ../comps-f11.xml.in.h:210
+msgid "Tsonga Support"
+msgstr "Suport pentru tsonga"
+
+#: ../comps-f7.xml.in.h:177 ../comps-f8.xml.in.h:185 ../comps-f9.xml.in.h:192
+#: ../comps-f10.xml.in.h:203 ../comps-f11.xml.in.h:211
+msgid "Tswana Support"
+msgstr "Suport pentru tsawana"
+
+#: ../comps-f7.xml.in.h:178 ../comps-f8.xml.in.h:186 ../comps-f9.xml.in.h:193
+#: ../comps-f10.xml.in.h:204 ../comps-f11.xml.in.h:212
+msgid "Turkish Support"
+msgstr "Suport pentru turcă"
+
+#: ../comps-f7.xml.in.h:179 ../comps-f8.xml.in.h:187 ../comps-f9.xml.in.h:194
+#: ../comps-f10.xml.in.h:205 ../comps-f11.xml.in.h:214
+msgid "Ukrainian Support"
+msgstr "Suport pentru ucraineană"
+
+#: ../comps-f7.xml.in.h:180 ../comps-f8.xml.in.h:188 ../comps-f9.xml.in.h:195
+#: ../comps-f10.xml.in.h:206 ../comps-f11.xml.in.h:216
+msgid "Urdu Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:181 ../comps-f8.xml.in.h:189 ../comps-f9.xml.in.h:196
+#: ../comps-f10.xml.in.h:208 ../comps-f11.xml.in.h:218 ../comps-el4.xml.in.h:72
+#: ../comps-el5.xml.in.h:71
+msgid "Various core pieces of the system."
+msgstr "Diverse componente cheie ale sistemului."
+
+#: ../comps-f7.xml.in.h:182 ../comps-f8.xml.in.h:190 ../comps-f9.xml.in.h:197
+#: ../comps-f10.xml.in.h:209 ../comps-f11.xml.in.h:219 ../comps-el5.xml.in.h:72
+msgid "Various ways to relax and spend your free time."
+msgstr "Moduri diverse de a vă relaxa și petrece timpul liber."
+
+#: ../comps-f7.xml.in.h:183 ../comps-f8.xml.in.h:191 ../comps-f9.xml.in.h:198
+#: ../comps-f10.xml.in.h:210 ../comps-f11.xml.in.h:220
+msgid "Venda Support"
+msgstr "Suport pentru venda"
+
+#: ../comps-f7.xml.in.h:184 ../comps-f8.xml.in.h:192 ../comps-f9.xml.in.h:199
+#: ../comps-f10.xml.in.h:211 ../comps-f11.xml.in.h:221
+msgid "Vietnamese Support"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:185 ../comps-f8.xml.in.h:193 ../comps-f9.xml.in.h:200
+#: ../comps-f10.xml.in.h:212 ../comps-f11.xml.in.h:222
+msgid "Virtualization"
+msgstr "Virtualizare"
+
+#: ../comps-f7.xml.in.h:186 ../comps-f8.xml.in.h:194 ../comps-f9.xml.in.h:202
+#: ../comps-f10.xml.in.h:214 ../comps-f11.xml.in.h:224 ../comps-el4.xml.in.h:73
+#: ../comps-el5.xml.in.h:73
+msgid "Web Development"
+msgstr "Dezvoltare web"
+
+#: ../comps-f7.xml.in.h:187 ../comps-f8.xml.in.h:195 ../comps-f9.xml.in.h:203
+#: ../comps-f10.xml.in.h:215 ../comps-f11.xml.in.h:225 ../comps-el4.xml.in.h:74
+#: ../comps-el5.xml.in.h:74
+msgid "Web Server"
+msgstr "Server Web"
+
+#: ../comps-f7.xml.in.h:188 ../comps-f8.xml.in.h:196 ../comps-f9.xml.in.h:204
+#: ../comps-f10.xml.in.h:216 ../comps-f11.xml.in.h:226
+msgid "Welsh Support"
+msgstr "Suport pentru galeză"
+
+#: ../comps-f7.xml.in.h:189 ../comps-f8.xml.in.h:197 ../comps-f9.xml.in.h:205
+#: ../comps-f10.xml.in.h:217 ../comps-f11.xml.in.h:227 ../comps-el4.xml.in.h:75
+#: ../comps-el5.xml.in.h:75
+msgid "Window Managers"
+msgstr "Manageri de ferestre"
+
+#: ../comps-f7.xml.in.h:190 ../comps-f8.xml.in.h:198 ../comps-f9.xml.in.h:206
+#: ../comps-f10.xml.in.h:218 ../comps-f11.xml.in.h:228
+msgid "Windows File Server"
+msgstr "Server de partajare Windows"
+
+#: ../comps-f7.xml.in.h:191 ../comps-f8.xml.in.h:199 ../comps-f9.xml.in.h:207
+#: ../comps-f10.xml.in.h:219 ../comps-f11.xml.in.h:229
+msgid "X Software Development"
+msgstr "Dezvoltare programe X"
+
+#: ../comps-f7.xml.in.h:192 ../comps-f8.xml.in.h:200 ../comps-f9.xml.in.h:208
+#: ../comps-f10.xml.in.h:220 ../comps-f11.xml.in.h:230 ../comps-el4.xml.in.h:76
+#: ../comps-el5.xml.in.h:76
+msgid "X Window System"
+msgstr "Sistemul de ferestre X"
+
+#: ../comps-f7.xml.in.h:193 ../comps-f8.xml.in.h:201 ../comps-f9.xml.in.h:209
+#: ../comps-f10.xml.in.h:221 ../comps-f11.xml.in.h:231
+msgid "XFCE"
+msgstr ""
+
+#: ../comps-f7.xml.in.h:194 ../comps-f8.xml.in.h:202 ../comps-f9.xml.in.h:210
+#: ../comps-f10.xml.in.h:222 ../comps-f11.xml.in.h:232
+msgid "XFCE Software Development"
+msgstr "Dezvoltare programe XFCE"
+
+#: ../comps-f7.xml.in.h:195 ../comps-f8.xml.in.h:203 ../comps-f9.xml.in.h:211
+#: ../comps-f10.xml.in.h:223 ../comps-f11.xml.in.h:233
+msgid "Xhosa Support"
+msgstr "Suport pentru xhosa"
+
+#: ../comps-f7.xml.in.h:196 ../comps-f8.xml.in.h:204 ../comps-f9.xml.in.h:212
+#: ../comps-f10.xml.in.h:224 ../comps-f11.xml.in.h:234
+msgid "Zulu Support"
+msgstr "Suport pentru zulu"
+
+#: ../comps-f8.xml.in.h:21 ../comps-f9.xml.in.h:21 ../comps-f10.xml.in.h:22
+#: ../comps-f11.xml.in.h:23
+msgid "Buildsystem building group"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:48 ../comps-f9.xml.in.h:49 ../comps-f10.xml.in.h:50
+#: ../comps-f11.xml.in.h:51
+msgid "Fedora Eclipse"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:52 ../comps-f9.xml.in.h:53 ../comps-f10.xml.in.h:54
+#: ../comps-f11.xml.in.h:56
+msgid "Fonts"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:53 ../comps-f9.xml.in.h:54 ../comps-f10.xml.in.h:55
+#: ../comps-f11.xml.in.h:57
+msgid "Fonts packages for rendering text on the desktop."
+msgstr ""
+
+#: ../comps-f8.xml.in.h:79 ../comps-f9.xml.in.h:80 ../comps-f10.xml.in.h:84
+#: ../comps-f11.xml.in.h:88
+msgid "Integrated Development Environments based on Eclipse."
+msgstr ""
+
+#: ../comps-f8.xml.in.h:95 ../comps-f9.xml.in.h:98 ../comps-f10.xml.in.h:105
+#: ../comps-f11.xml.in.h:110
+msgid "Legacy Fonts"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:100 ../comps-f9.xml.in.h:103 ../comps-f10.xml.in.h:110
+#: ../comps-f11.xml.in.h:115
+msgid "Low Saxon Support"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:106 ../comps-f9.xml.in.h:110 ../comps-f10.xml.in.h:118
+#: ../comps-f11.xml.in.h:124
+msgid "Mongolian Support"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:108 ../comps-f9.xml.in.h:112 ../comps-f10.xml.in.h:121
+#: ../comps-f11.xml.in.h:127
+msgid "Nepali Support"
+msgstr ""
+
+#: ../comps-f8.xml.in.h:114 ../comps-f9.xml.in.h:119 ../comps-f10.xml.in.h:128
+#: ../comps-f11.xml.in.h:135
+msgid "Older bitmap and vector fonts packages"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:44 ../comps-f10.xml.in.h:45 ../comps-f11.xml.in.h:46
+msgid "Esperanto Support"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:91 ../comps-f10.xml.in.h:96 ../comps-f11.xml.in.h:100
+msgid "Kashubian Support"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:94 ../comps-f10.xml.in.h:100 ../comps-f11.xml.in.h:105
+msgid "Kurdish Support"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:104 ../comps-f10.xml.in.h:111 ../comps-f11.xml.in.h:116
+msgid "Macedonian Support"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:115 ../comps-f10.xml.in.h:124 ../comps-f11.xml.in.h:130
+msgid "Northern Sami Support"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:131 ../comps-f10.xml.in.h:140 ../comps-f11.xml.in.h:147
+msgid "SUGAR Desktop Environment"
+msgstr ""
+
+#: ../comps-f9.xml.in.h:132
+msgid "SUGAR is the desktop environment developed for the OLPC XO."
+msgstr ""
+
+#: ../comps-f9.xml.in.h:201 ../comps-f10.xml.in.h:213 ../comps-f11.xml.in.h:223
+msgid "Walloon Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:2 ../comps-f11.xml.in.h:2
+msgid "A software playground for learning about learning."
+msgstr ""
+
+#: ../comps-f10.xml.in.h:71 ../comps-f11.xml.in.h:75
+msgid "Haskell Development"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:77 ../comps-f11.xml.in.h:81
+msgid "Input Methods"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:78 ../comps-f11.xml.in.h:82
+msgid "Input method packages for the input of international text."
+msgstr ""
+
+#: ../comps-f10.xml.in.h:95 ../comps-f11.xml.in.h:99
+msgid "Kashmiri Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:98 ../comps-f11.xml.in.h:103
+msgid "Konkani Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:101 ../comps-f11.xml.in.h:106
+msgid "LXDE"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:113 ../comps-f11.xml.in.h:118
+msgid "Maithili Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:120 ../comps-f11.xml.in.h:126
+msgid "Myanmar (Burmese) Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:146 ../comps-f11.xml.in.h:153
+msgid "Sindhi Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:158 ../comps-f11.xml.in.h:165
+msgid "Support for developing programs in the Haskell programming language."
+msgstr ""
+
+#: ../comps-f10.xml.in.h:165 ../comps-f11.xml.in.h:172
+msgid "Tajik Support"
+msgstr ""
+
+#: ../comps-f10.xml.in.h:207 ../comps-f11.xml.in.h:217
+msgid "Uzbek Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:6
+msgid "Amazigh Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:55
+msgid "Font design and packaging"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:59
+msgid "Frisian Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:60
+msgid "Friulian Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:102
+msgid "Kinyarwanda Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:119
+msgid "Malagasy Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:133
+msgid "Occitan Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:201
+msgid ""
+"This group is a collection of tools used in the design, modification, "
+"manipulation, and packaging of fonts."
+msgstr ""
+
+#: ../comps-f11.xml.in.h:213
+msgid "Turkmen Support"
+msgstr ""
+
+#: ../comps-f11.xml.in.h:215
+msgid "Upper Sorbian Support"
+msgstr ""
+
+#: ../comps-el4.xml.in.h:3 ../comps-el5.xml.in.h:3
+msgid "Applications for a variety of tasks"
+msgstr "Aplicații pentru diverse treburi"
+
+#: ../comps-el4.xml.in.h:12 ../comps-el5.xml.in.h:13
+msgid "Dialup Networking Support"
+msgstr "Suport pentru acces la rețea prin telefon"
+
+#: ../comps-el4.xml.in.h:22 ../comps-el5.xml.in.h:23
+msgid ""
+"GNOME is a powerful, graphical user interface which includes a panel, "
+"desktop, system icons, and a graphical file manager."
+msgstr ""
+"GNOME este o puternică interfață grafică cu utilizatorul care include un "
+"panou, spațiu de lucru, icoane pentru sistem precum și un manager grafic de "
+"fișiere."
+
+#: ../comps-el4.xml.in.h:35 ../comps-el5.xml.in.h:35
+msgid ""
+"KDE is a powerful, graphical user interface which includes a panel, desktop, "
+"system icons, and a graphical file manager."
+msgstr ""
+"KDE este o puternică interfață grafică cu utilizatorul care include un panou, "
+"spațiu de lucru, icoane pentru sistem și un manager grafic de fișiere."
+
+#: ../comps-el4.xml.in.h:44 ../comps-el5.xml.in.h:44
+msgid ""
+"Sometimes called text editors, these are programs that allow you to create "
+"and edit files. These include Emacs and Vi."
+msgstr ""
+"Uneori numite editoare de texte, acestea sunt programe care vă permit să "
+"creați și să editați fișiere. Acestea includ Emacs și Vi."
+
+#: ../comps-el4.xml.in.h:50 ../comps-el5.xml.in.h:48
+msgid "The XEmacs text editor."
+msgstr "Editorul de texte XEmacs."
+
+#: ../comps-el4.xml.in.h:54 ../comps-el5.xml.in.h:52
+msgid ""
+"These tools allow you to create documentation in the DocBook format and "
+"convert them to HTML, PDF, Postscript, and text."
+msgstr ""
+"Aceste unelte vă permit să creați documentație în formatul DocBook și să le "
+"convertiți în HTML, PDF, Postscript și text."
+
+#: ../comps-el4.xml.in.h:64 ../comps-el5.xml.in.h:62
+msgid "This group is a collection of network servers for specific purposes"
+msgstr ""
+
+#: ../comps-el4.xml.in.h:65 ../comps-el5.xml.in.h:63
+msgid ""
+"This group is a collection of tools and resources of Arabic environments."
+msgstr ""
+
+#: ../comps-el4.xml.in.h:67 ../comps-el5.xml.in.h:66
+msgid ""
+"This group is a collection of tools and resources of Hebrew environments."
+msgstr ""
+
+#: ../comps-el4.xml.in.h:68 ../comps-el5.xml.in.h:67
+msgid ""
+"This group is a collection of tools and resources of Japanese environments."
+msgstr ""
+
+#: ../comps-el4.xml.in.h:77 ../comps-el5.xml.in.h:77
+msgid "XEmacs"
+msgstr ""
+
+#: ../comps-el5.xml.in.h:65
+msgid "This group is a collection of tools and resources of Czech environments."
+msgstr ""
