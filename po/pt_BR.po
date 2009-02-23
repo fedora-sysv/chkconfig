@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-12-08 11:52-0300\n"
-"Last-Translator: Igor Pires Soares <igor@projetofedora.org>\n"
+"PO-Revision-Date: 2009-02-22 21:17-0300\n"
+"Last-Translator: Lucas do Amaral <lucas@cefetce.br>\n"
 "Language-Team: Brazilian Portuguese <fedora-trans-pt_br@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +98,7 @@ msgstr "servidos baseados no xinetd:\n"
 #: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "não foi possível abrir o diretório %s: %s\n"
+msgstr "falha ao abrir o diretório %s: %s\n"
 
 #: ../chkconfig.c:578
 #, c-format
@@ -269,12 +269,12 @@ msgstr "lendo %s\n"
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "não foi possível abrir %s: %s\n"
+msgstr "falha ao abrir %s: %s\n"
 
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "não foi possível ler %s: %s\n"
+msgstr "falha ao ler %s: %s\n"
 
 #: ../alternatives.c:194
 #, c-format
@@ -364,7 +364,7 @@ msgstr "ligará %s -> %s\n"
 #: ../alternatives.c:412
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "não foi possível ligar %s -> %s: %s\n"
+msgstr "falha ao ligar %s -> %s: %s\n"
 
 #: ../alternatives.c:444
 #, c-format
@@ -374,12 +374,12 @@ msgstr "%s já existe\n"
 #: ../alternatives.c:446
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "não foi possível criar %s: %s\n"
+msgstr "falha ao criar %s: %s\n"
 
 #: ../alternatives.c:477
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "não foi possível substituir %s por %s: %s\n"
+msgstr "falha ao  substituir %s por %s: %s\n"
 
 #: ../alternatives.c:503
 #: ../alternatives.c:512
