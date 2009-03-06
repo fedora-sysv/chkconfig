@@ -618,7 +618,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     } else if (english_desc)
 	free (english_desc);
 
-    if (!partialOk && ((serv.levels == -1) || !serv.desc || serv.sPriority == -1 || serv.kPriority == -1)) {
+    if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == -1)))) {
 	return 1;
     } 
 
