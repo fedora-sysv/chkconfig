@@ -69,7 +69,7 @@ static void checkRoot() {
 }
 
 static int delService(char *name, int type, int level) {
-    int i, j, numservs, rc;
+    int i, j, k, numservs, rc;
     glob_t globres;
     struct service s;
     struct service *services;
@@ -89,14 +89,20 @@ static int delService(char *name, int type, int level) {
 		if (services[i].startDeps) {
 			for (j = 0; services[i].startDeps[j].name ; j++) {
 				if (!strcmp(services[i].startDeps[j].name, s.name)) {
-				        return 1;
+				        for (k = 0 ; k <= 6; k++) {
+				            if (isOn(services[i].name, k))
+				                return 1;
+                                        }
 				}
 			}
 		}
 		if (services[i].stopDeps) {
 			for (j = 0; services[i].stopDeps[j].name ; j++) {
 				if (!strcmp(services[i].stopDeps[j].name, s.name)) {
-				        return 1;
+				        for (k = 0 ; k <= 6; k++) {
+				                if (!isOn(services[i].name, k))
+				                    return 1;
+                                        }
 				}
 			}
 		}
