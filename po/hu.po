@@ -3,23 +3,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-04-24 06:39+0100\n"
+"POT-Creation-Date: 2009-01-22 14:20-0500\n"
+"PO-Revision-Date: 2009-03-06 07:47+0100\n"
 "Last-Translator: Sulyok Péter <peti@sulyok.hu>\n"
 "Language-Team: Hungarian <fedora-trans-hu@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: Hungarian\n"
-"X-Poedit-Country: HUNGARY\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s %s - Copyright (c) Red Hat, Inc., 1997-2000.\n"
+msgstr "%s %s változat – Szerzői jog (C) Red Hat, Inc., 1997-2000.\n"
 
 #: ../chkconfig.c:39
 #, c-format
@@ -30,9 +26,9 @@ msgstr ""
 "szerint.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "használat:   %s [--list] [név]\n"
+msgstr "használat:   %s [--list] [--type <típus>] [név]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -50,9 +46,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <név>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <szintek>] <név> %s\n"
+msgstr "         %s [--level <szintek>] [--type <típus>] <név> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -76,42 +72,42 @@ msgstr "hiba történt %s szolgáltatás adatainak beolvasásakor: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Nincs elég joga e művelet elvégzéséhez.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "on"
 msgstr "be"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
 msgid "off"
 msgstr "ki"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:438
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-alapú szolgáltatások:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:440
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "nem sikerült megnyitni %s könyvtárt: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:584
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:596
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type csak „sysv” vagy „xinetd” lehet\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:604
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "a --list, --add, --del és --override közül csak egyet lehet megadni\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:664
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "csak egy futási szintet lehet megadni egy chkconfig-lekérdezésben\n"
@@ -165,22 +161,22 @@ msgstr "hibás argumentum a --levels opcióhoz\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Egy szolgáltatás sem kezelhető az ntsysv programmal.\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d megnyitása nem sikerült: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nem sikerült értelmezni %s mintát: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "nem sikerült megállapítani az aktuális futási szintet\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s szimbolikus link létrehozása nem sikerült: %s\n"
@@ -476,3 +472,4 @@ msgstr "%s admindir érvénytelen\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives %s. változat\n"
+
