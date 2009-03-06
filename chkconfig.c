@@ -139,6 +139,22 @@ static inline int earlierThan(int i, int j) {
 	return i;
 }
 
+static int isSimilarlyConfigured(struct service s, struct service t, int start) {
+        int i, state_s, state_t;
+
+        for (i = 0; i <= 6; i ++) {
+                if (isConfigured(s.name, i, NULL, NULL)) {
+                        state_s = isOn(s.name, i);
+                } else {
+                        state_s = ((1<<i) & s.levels);
+                }
+                state_t = isOn(t.name, i);
+                if (state_s == state_t && state_s == start)
+                        return 1;
+        }
+        return 0;
+}
+
 static int frobOneDependencies(struct service *s, struct service *servs, int numservs, int target, int depfail) {
 	int i, j, k;
 	int s0 = s->sPriority;
@@ -149,13 +165,13 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	for (i = 0; i < numservs ; i++) {
 		if (s->startDeps) {
 			for (j = 0; s->startDeps[j].name ; j++) {
-				if (!strcmp(s->startDeps[j].name, servs[i].name)) {
+				if (!strcmp(s->startDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 1)) {
 					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
 					s->startDeps[j].handled = 1;
 				}
 				if (servs[i].provides) {
 					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->startDeps[j].name, servs[i].provides[k])) {
+						if (!strcmp(s->startDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 1)) {
 							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
 							s->startDeps[j].handled = 1;
 						}
@@ -165,13 +181,13 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 		}
 		if (s->stopDeps) {
 			for (j = 0; s->stopDeps[j].name ; j++) {
-				if (!strcmp(s->stopDeps[j].name, servs[i].name)) {
+				if (!strcmp(s->stopDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 0)) {
 					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
 					s->stopDeps[j].handled = 1;
 				}
 				if (servs[i].provides) {
 					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->stopDeps[j].name, servs[i].provides[k])) {
+						if (!strcmp(s->stopDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 0)) {
 							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
 							s->stopDeps[j].handled = 1;
 						}
