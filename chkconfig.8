@@ -142,6 +142,26 @@ priority should be 80.  You should be able to figure out what the
 description says; the \e causes the line to be continued.  The
 extra space in front of the line is ignored.
 
+chkconfig also supports LSB-style init stanzas, and will apply
+them in preference to "chkconfig:" lines where available.
+A LSB stanza looks like:
+.nf
+.ft C
+### BEGIN INIT INFO
+# Provides: foo
+# Required-Start: bar
+# Defalt-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Description: Foo init script
+### END INIT INFO
+.ft R
+.fi
+
+In this case, the start priority of "foo" would be changed such
+that it is higher than the "bar" start priority, if "bar" is enabled.
+Care must be taken when adding dependencies, as they can cause
+vast shifts in the start and stop priorities of many scripts.
+
 .SH OVERRIDE FILES
 
 File in /etc/chkconfig.d/\fIservicename\fR are parsed using the
