@@ -146,7 +146,7 @@ static int isSimilarlyConfigured(struct service s, struct service t, int start) 
                 if (isConfigured(s.name, i, NULL, NULL)) {
                         state_s = isOn(s.name, i);
                 } else {
-                        state_s = ((1<<i) & s.levels);
+                        state_s = ((1<<i) & s.levels) ? 1 : 0;
                 }
                 state_t = isOn(t.name, i);
                 if (state_s == state_t && state_s == start)
