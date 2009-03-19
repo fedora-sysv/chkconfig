@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-06 01:38-0500\n"
-"PO-Revision-Date: 2009-03-15 12:43+0100\n"
+"PO-Revision-Date: 2009-03-19 21:01+0100\n"
 "Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "%s version %s\n"
 #: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr "--type måsta vara 'sysv' eller 'xinetd'\n"
+msgstr "--type måste vara \"sysv\" eller \"xinetd\"\n"
 
 #: ../chkconfig.c:626
 #, c-format
