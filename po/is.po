@@ -1,17 +1,20 @@
+# translation of chkconfig.master.po to icelandic
+# Richard Allen (ra@ra.is), 2003.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
 # Íslensk þýðing chkconfig
 # Copyright (C) 2003 Red Hat, Inc.
-# Richard Allen (ra@ra.is), 2003
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig 1.11\n"
+"Project-Id-Version: chkconfig.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2007-02-03 01:17+0000\n"
-"Last-Translator: Richard Allen <ra@ra.is>\n"
-"Language-Team: is <kde-isl@molar.is>\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-03-20 11:36+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:38
 #, c-format
@@ -20,14 +23,13 @@ msgstr "%s útgáfa %s - Höfundarréttur (C) 1997-2000 Red Hat HF.\n"
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "notkun:   %s --list [heiti]\n"
+msgstr "notkun:   %s [--list] [--type <type>] [heiti]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -45,9 +47,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <heiti>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <stig>] <heiti> %s)\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -71,43 +73,42 @@ msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Þú hefur ekki nægar heimildir til að framkvæma þessa aðgerð.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "virk"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "óvirk"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "þjónustur úr xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "gat ekki opnað möppuna %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s útgáfa %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type verður að vera 'sysv' eða 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"einungis má nefna eitt af --list, --add, --del eða --override viðföngunum\n"
+msgstr "einungis má nefna eitt af --list, --add, --del eða --override viðföngunum\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
@@ -161,22 +162,22 @@ msgstr "óleyfilegt viðfang við --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Engum þjónustum er hægt að stjórna með ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gat ekki opnað %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gat ekki mátað mynstrið %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "get ekki ákvarðað núverandi keyrslustig\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "gat ekki búið til tákntengið %s: %s\n"
@@ -468,3 +469,4 @@ msgstr "mappan %s er ógild\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives útgáfa %s\n"
+
