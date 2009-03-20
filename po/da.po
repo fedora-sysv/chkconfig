@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-22 14:20-0500\n"
-"PO-Revision-Date: 2009-03-19 11:07+0100\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-03-20 02:26+0100\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"tjenesten \"%s\" understøtter chkconfig, men refereres ikke fra noget "
+"tjenesten %s understøtter chkconfig, men refereres ikke fra noget "
 "kørselsniveau (kør \"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:55
@@ -79,40 +79,40 @@ msgstr "fejl ved læsning af information om tjeneste %s: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Du har ikke nok rettigheder til at udføre denne operation.\n"
 
-#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "til"
 
-#: ../chkconfig.c:357 ../chkconfig.c:362 ../chkconfig.c:476
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "fra"
 
-#: ../chkconfig.c:438
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd baserede tjenester:\n"
 
-#: ../chkconfig.c:440
+#: ../chkconfig.c:462
 #, c-format
-msgid "failed to open directory \"%s\": \"%s\"\n"
-msgstr "kunne ikke åbne katalog \"%s\": \"%s\"\n"
+msgid "failed to open directory %s: %s\n"
+msgstr "kunne ikke åbne katalog %s: %s\n"
 
-#: ../chkconfig.c:584
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:596
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type skal være \"sysv\" eller \"xinetd\"\n"
 
-#: ../chkconfig.c:604
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "kun én af --list, --add eller --del eller --override må angives\n"
 
-#: ../chkconfig.c:664
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "kun ét kørselsniveau må angives for en chkconfig forespørgsel\n"
@@ -144,17 +144,17 @@ msgstr "Tjenester"
 #: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "fejl ved læsning af information om tjeneste \"%s\": \"%s\"\n"
+msgstr "fejl ved læsning af information om tjeneste %s: %s\n"
 
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "fejl ved læsning fra katalog \"%s\": \"%s\"\n"
+msgstr "fejl ved læsning fra katalog %s: %s\n"
 
 #: ../ntsysv.c:293
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Du skal være root for at køre \"%s\".\n"
+msgstr "Du skal være root for at køre %s.\n"
 
 #: ../ntsysv.c:310
 #, c-format
@@ -263,12 +263,12 @@ msgstr "læser %s\n"
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "kunne ikke åbne \"%s\": \"%s\"\n"
+msgstr "kunne ikke åbne %s: %s\n"
 
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "kunne ikke læse \"%s\": \"%s\"\n"
+msgstr "kunne ikke læse %s: %s\n"
 
 #: ../alternatives.c:194
 #, c-format
@@ -433,7 +433,9 @@ msgstr "  Valg         Kommando\n"
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Tryk retur for at beholde det nuværende valg[+], eller indtast nummeret på valget: "
+msgstr ""
+"Tryk retur for at beholde det nuværende valg[+], eller indtast nummeret på "
+"valget: "
 
 #: ../alternatives.c:719
 #, c-format
