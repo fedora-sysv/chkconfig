@@ -7,13 +7,13 @@
 # Rahul Bhalerao <rbhalera@redhat.com>, 2006.
 # Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
 # sandeep shedmake <sandeep.shedmake@gmail.com>, 2007.
-# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008.
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master.mr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-11 14:50+0530\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-03-31 17:44+0530\n"
 "Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
@@ -30,14 +30,13 @@ msgstr "%s आवृत्ती %s - प्रतिकृती अधिक�
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU Public License च्या शर्तींअंतर्गत हे मुक्तपणे पुनःवितरित केले जाऊ शकते.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "वापर:   %s [--list] [name]\n"
+msgstr "वापरणी:   %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -55,9 +54,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -81,42 +80,42 @@ msgstr "%s सेवेवर माहिती वाचण्यात चू
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "हे कार्य करण्याकरीता तुमच्याकडे अतिरीक्त परवानगी नाही.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "चालू"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "बंद"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd आधारित सेवा:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s निर्देशिका उघडण्यास अपयशी: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s आवृत्ती %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type 'sysv' किंवा 'xinetd' नुरूप असयाला हवे\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del किंवा --override पैकी फक्त एकच दर्शवावा\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig प्रश्नासाठी फक्त एकच रनलेवल दर्शवावी\n"
@@ -170,22 +169,22 @@ msgstr "--levels ला वाईट आर्ग्यूमेंट\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv द्वारे कोणत्याही सेवा व्यवस्थापित होणार नाहीत!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d उघडण्यात अपयशी: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s स्वरूप एकत्रित करण्यात अपयश: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "चालू रनलेवल ठरवू शकत नाही\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s सिमलिंक बनवण्यात अपयशी: %s\n"
@@ -477,3 +476,4 @@ msgstr "admindir %s अवैध\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "पर्यायी आवृत्ती %s\n"
+
