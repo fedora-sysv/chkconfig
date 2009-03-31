@@ -1,7 +1,7 @@
 # translation of ja.po to Japanese
 # Tadashi Jokagi <fedora@elf.no-ip.org>, 2004.
 # Noriko Mizumoto <noriko@redhat.com>, 2007.
-# Kiyoto Hashida <khashida@redhat.com>, 2008.
+# Kiyoto Hashida <khashida@redhat.com>, 2008, 2009.
 # Chkconfig Japanese Translation
 # Copyright (C) 2001 Red Hat, Inc.
 # James Hashida <khashida@redhat.com> 2002 2003
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-04-07 12:18+1000\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-03-31 15:41+1000\n"
 "Last-Translator: Kiyoto Hashida <khashida@redhat.com>\n"
 "Language-Team: Japanese <jp@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,17 +27,16 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 # ../chkconfig.c:22
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
 "きます。\n"
 
 # ../chkconfig.c:25
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "使用法:  %s [--list] [名前]\n"
+msgstr "使用法:   %s [--list] [--type <タイプ>] [名前]\n"
 
 # ../chkconfig.c:26
 #: ../chkconfig.c:43
@@ -59,9 +58,9 @@ msgstr "         %s --override <名前>\n"
 
 # ../chkconfig.c:28
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <レベル>] <名前> %s\n"
+msgstr "         %s [--level <レベル>] [--type <タイプ>] <名前> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -87,43 +86,43 @@ msgstr "サービス %s に関する情報の読み込み中にエラーが発�
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "この操作を実行するためには権限が十分ではありません。\n"
 
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "on"
 
 # ../chkconfig.c:101 ../chkconfig.c:106 ../chkconfig.c:203
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "off"
 
 # ../chkconfig.c:180
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ベースのサービス:\n"
 
 # ../chkconfig.c:182
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "ディレクトリ %s を開くことができませんでした: %s\n"
 
 # ../chkconfig.c:284
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s バージョン %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type は 'sysv' か 'xinetd' でなければなりません\n"
 
 # ../chkconfig.c:291
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
@@ -131,7 +130,7 @@ msgstr ""
 "す。\n"
 
 # ../chkconfig.c:339
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです。\n"
@@ -196,25 +195,25 @@ msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv によって管理できるサービスがありません。\n"
 
 # ../chkconfig.c:138
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d を開くことができませんでした: %s\n"
 
 # ../leveldb.c:355
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "パターン %s の解析に失敗しました: %s\n"
 
 # ../leveldb.c:386
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません。\n"
 
 # ../leveldb.c:474
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "シンボリックリンク %s をつくるのに失敗しました: %s\n"
@@ -525,3 +524,4 @@ msgstr "admindir %s は無効です。\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives バージョン %s\n"
+
