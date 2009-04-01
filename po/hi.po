@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Rajesh Ranjan <rranjan@redhat.com>, 2004, 2005, 2006, 2008.
+# Rajesh Ranjan <rranjan@redhat.com>, 2004, 2005, 2006, 2008, 2009.
 # hi <rranjan@redhat.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master.hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-31 15:17+0530\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-04-01 13:49+0530\n"
 "Last-Translator: Rajesh Ranjan <rranjan@redhat.com>\n"
 "Language-Team: Hindi <hindi.sf.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 "\n"
 "\n"
 "\n"
@@ -29,14 +29,13 @@ msgstr "%s संस्करण %s - कॉपीराइट (C) 1997-2000 Red
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU सार्वजनिक लाइसेन्स के नियमानुसार मुक्त रूप में इसको पुन:बाँट कर सकते हैं.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "प्रयोग:   %s [--list] [name]\n"
+msgstr "प्रयोग:   %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -54,17 +53,16 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr ""
-"%s सेवा chkconfig को मदद करता है, मगर किसी रनलेवल ('chkconfig --add %s' चलाएँ)\n"
+msgstr "%s सेवा chkconfig को मदद करता है, मगर किसी रनलेवल ('chkconfig --add %s' चलाएँ)\n"
 
 #: ../chkconfig.c:55
 #, c-format
@@ -79,42 +77,42 @@ msgstr "%s सेवा पर जानकारी पढ़ने में �
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "आपके पास इस संक्रिया को करने का पर्याप्त अधिकार नहीं है.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "चालू"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "बन्द"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd आधारित सेवाएँ:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s निर्देशिका खोलने में असफल था: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s संस्करण %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type को जरूर 'sysv' या 'xinetd' होना चाहिए\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del, या --override में से एक निर्दिष्ट किया जा सकता है\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "एक chkconfig प्रश्न के लिए सिर्फ एक रनलेवल निर्दिष्ट करना है\n"
@@ -168,22 +166,22 @@ msgstr "--levels में गलत तर्क\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv से सेवाओं का प्रबंध न हो सकेगा!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d खोलने में असफल था: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s प्रतिरूप को इकट्ठा करने में असफल: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "वर्तमान रनलेवल निर्णय नहीं कर सकता\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s संकलन बनाने में असफल था: %s\n"
@@ -475,3 +473,4 @@ msgstr "admin %s अनुचित है\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "वैकल्पिक संस्करण %s\n"
+
