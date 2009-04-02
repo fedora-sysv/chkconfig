@@ -1,37 +1,37 @@
 # translation of ru.po to
-# translation of ru.po to Russian
+#
+#
 # Leonid Kanter <leon@geon.donetsk.ua>, 2003.
 # Leonid Kanter <leon@asplinux.ru>, 2004.
 # Andrew Martynov <andrewm@inventa.ru>, 2004.
-#
-#
+# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-31 22:11+0300\n"
-"Last-Translator:  <anatoliy.guskov@gmail.com>\n"
-"Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-04-02 12:42+1100\n"
+"Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s версия %s - (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "Может свободно распостраняться в рамках GNU Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "применение:   %s [--list] [имя сервиса]\n"
+msgstr "формат:   %s [--list] [--type <тип>] [имя]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -49,9 +49,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <имя сервиса>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <уровни>] <имя сервиса> %s\n"
+msgstr "         %s [--level <уровни>] [--type <тип>] <имя> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -75,47 +75,45 @@ msgstr "ошибка чтения информации о сервисе %s: %s\
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "У вас недостаточно полномочий для выполнения этого действия.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "вкл"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "выкл"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "сервисы на основе xinetd:\n"
+msgstr "службы на основе xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "не удалось открыть каталог %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "В качестве значения --type надо указать 'sysv' или 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"может быть указана лишь одна команда: --list, --add, --del или --override\n"
+msgstr "может быть указана лишь одна команда: --list, --add, --del или --override\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"Только один уровень выполнения может быть указан для запроса chkconfig\n"
+msgstr "Только один уровень выполнения может быть указан для запроса chkconfig\n"
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
@@ -166,22 +164,22 @@ msgstr "неверный аргумент для --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Нет сервисов, управляемых ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "невозможно открыть %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "невозможно использовать шаблон %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "невозможно определить текущий уровень выполнения\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "ошибка создания символической ссылки %s: %s\n"
@@ -476,5 +474,3 @@ msgstr "admindir %s invalid\n"
 msgid "alternatives version %s\n"
 msgstr "alternatives версия %s\n"
 
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "ошибка чтения из директории %s/init.d: %s\n"
