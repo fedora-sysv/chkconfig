@@ -1,3 +1,4 @@
+# translation of chkconfig.master.ml.po to
 # translation of ml.po to
 # translation of new_ml.po to
 # This file is distributed under the same license as the PACKAGE package.
@@ -6,10 +7,10 @@
 # Ani Peter <apeter@redhat.com>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: ml\n"
+"Project-Id-Version: chkconfig.master.ml\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-20 14:44+0530\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-04-15 13:23+0530\n"
 "Last-Translator: \n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,14 +28,13 @@ msgstr "%s വേര്‍ഷന്‍ %s - പകര്‍പ്പവകാശ
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "GNU Public License കരാറിന്‍ പ്രകാരം ഇവ സൌജന്യമായി വിതരണം ചെയ്യാവുന്നതാണ്.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "usage:   %s [--list] [name]\n"
+msgstr "ഉപയോഗിക്കേണ്ട വിധം:   %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -52,9 +52,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <levels>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -78,42 +78,42 @@ msgstr "%s സര്‍വീസില്‍ വിവരങ്ങള്‍ വ�
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "ഈ പ്രക്രിയയ്ക്കു് ആവശ്യമായ അനുമതികള്‍ നിങ്ങള്‍ക്കില്ല.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "ഓണ്‍ ചെയ്യുക"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "ഓഫ് ചെയ്യുക"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-യുടെ അടിസ്ഥാനത്തിലുളള സര്‍വീസുകള്‍:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s ഡയറക്ടറി തുറക്കുന്നതില്‍ പരാജയം: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s വേറ്‍ഷന്‍ %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type - 'sysv' അല്ലെങ്കില്‍ 'xinetd' ആയിരിക്കണം\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del, --override എന്നവയില്‍ ഒരെണ്ണം വ്യക്തമാക്കുക\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "ഒരു chkconfig ചോദ്യത്തിന് ഒരു റണ്‍ലവല്‍ മാത്രം വ്യക്തമാക്കുക\n"
@@ -167,22 +167,22 @@ msgstr "--levels-ലേക്ക് തെറ്റായ ആര്‍ഗ്യ�
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv ഒരു സര്‍വീസുകളും കൈകാര്യം ചെയ്യുന്നതല്ല!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d തുറക്കുന്നതില്‍ പരാജയപ്പെട്ടു: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s മാതൃക ഗ്ളോബ് ചെയ്യുന്നതില്‍ പരാജയപ്പെട്ടു: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "നിലവിലുള്ള റണ്‍ ലവല്‍ കണ്ടു പിടിക്കുവാന്‍ കഴിയുന്നില്ല\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "സിംലിങ്ക് %s ഉണ്ടാക്കുന്നതില്‍ പരാജയം: %s\n"
@@ -478,3 +478,4 @@ msgstr "admindir %s അസാധുവാണ്\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "പകരമായ വേര്‍ഷന്‍ %s\n"
+
