@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-06 01:38-0500\n"
-"PO-Revision-Date: 2009-03-20 02:26+0100\n"
+"PO-Revision-Date: 2009-05-15 13:14+0200\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -154,7 +154,7 @@ msgstr "fejl ved læsning fra katalog %s: %s\n"
 #: ../ntsysv.c:293
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Du skal være root for at køre %s.\n"
+msgstr "Du skal være administrator (root) for at køre %s.\n"
 
 #: ../ntsysv.c:310
 #, c-format
