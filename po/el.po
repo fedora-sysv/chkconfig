@@ -10,12 +10,13 @@ msgstr ""
 "Project-Id-Version: el.po\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-06 01:38-0500\n"
-"PO-Revision-Date: 2009-04-28 15:51+0200\n"
-"Last-Translator: nikosCharonitakis <nikosx@gmail.com>\n"
+"PO-Revision-Date: 2009-05-20 12:38+0200\n"
+"Last-Translator: \n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Greek\n"
 
 #: ../chkconfig.c:38
 #, c-format
@@ -25,7 +26,7 @@ msgstr "%s έκδοση %s - Πνευματικά δικαιώματα (C) 1997-
 #: ../chkconfig.c:39
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Μπορείτε να το επαναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας GNU.\n"
+msgstr "Μπορείτε να το αναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας GNU.\n"
 
 #: ../chkconfig.c:42
 #, c-format
@@ -55,7 +56,7 @@ msgstr "         %s [--level <επίπεδα>]  [--type <τύπος>] <όνομ�
 #: ../chkconfig.c:53
 #, c-format
 msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί σε κανενα runlevel(εκτελέστε 'chkconfig --add %s')\n"
+msgstr "η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί σε κανένα runlevel (εκτελέστε 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:55
 #, c-format
@@ -191,7 +192,7 @@ msgstr "αποτυχία δημιουργίας συμβολικού συνδέ�
 #: ../alternatives.c:63
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "Εναλακτικές εκδόσεις %s - Πνευματικά δικαιώματα (C) 2001 Red Hat, Inc.\n"
+msgstr "έκδοση alternatives %s - Πνευματικά δικαιώματα (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:64
 #, c-format
@@ -199,7 +200,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Μπορείτε να το επαναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας GNU Public Licence.\n"
+"Μπορείτε να το αναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας GNU Public Licence.\n"
 "\n"
 
 #: ../alternatives.c:65
@@ -225,22 +226,22 @@ msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n
 #: ../alternatives.c:69
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       εναλακτικά --auto <όνομα>\n"
+msgstr "       alternatives --auto <όνομα>\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       εναλακτικά --config <όνομα>\n"
+msgstr "       alternatives --config <όνομα>\n"
 
 #: ../alternatives.c:71
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       εναλακτικά --display <όνομα>\n"
+msgstr "       alternatives --display <όνομα>\n"
 
 #: ../alternatives.c:72
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       εναλακτικά --set <όνομα> <διαδρομή>\n"
+msgstr "       alternatives --set <όνομα> <διαδρομή>\n"
 
 #: ../alternatives.c:73
 #, c-format
@@ -280,12 +281,12 @@ msgstr "%s κενό!\n"
 #: ../alternatives.c:203
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "κακη χρήση στη γραμμη 1 του %s\n"
+msgstr "μη έγκυρη χρήση στη γραμμή 1 του %s\n"
 
 #: ../alternatives.c:210
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "κακο αρρχικός συνδεσμος στο %s\n"
+msgstr "μη έγκυρη πρωτεύουσα σύνδεση στο %s\n"
 
 #: ../alternatives.c:222
 #, c-format
@@ -295,7 +296,7 @@ msgstr "διαδρομή %s μη αναμενόμενη στη %s\n"
 #: ../alternatives.c:231
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "χαμενη διαδρομη για το δευτερευον %s στη %s\n"
+msgstr "λείπει η διαδρομή για το δευτερεύον %s στη %s\n"
 
 #: ../alternatives.c:241
 #, c-format
@@ -305,37 +306,37 @@ msgstr "απρόσμενο τέλος αρχείου στη %s\n"
 #: ../alternatives.c:250
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "διαδρομή για αλλαγη αναμενεται στο %s\n"
+msgstr "αναμένεται διαδρομή για αλλαγή στο %s\n"
 
 #: ../alternatives.c:270
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "αναμενόταν αριθμιτική προτεραιότητα στο %s\n"
+msgstr "αναμένεται αριθμητική προτεραιότητα στο %s\n"
 
 #: ../alternatives.c:292
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "αναμονή δευτερεύον διαδρομής στο·%s\n"
+msgstr "αναμονή δευτερεύουσας διαδρομής στο·%s\n"
 
 #: ../alternatives.c:311
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "μη αποδεκτη γραμμη στη %s: %s\n"
+msgstr "απρόσμενη γραμμή στη %s: %s\n"
 
 #: ../alternatives.c:319
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "αποτυχία ανοίγματος του συνδέσμου %s: %s\n"
+msgstr "αποτυχία ανάγνωσης σύνδεσης %s: %s\n"
 
 #: ../alternatives.c:333
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "οι συνδεσμοι δειχνουν σε μη εναλακτικη -- τροπος ορισμου με το χερι\n"
+msgstr "οι συνδέσεις δεν δείχνουν σε alternative -- ορισμός χειρωνακτικής κατάστασης\n"
 
 #: ../alternatives.c:338
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "ο συνδεσμος αλλαξε -- τροπος ορισμου με το χερι\n"
+msgstr "η σύνδεση τροποποιήθηκε -- ορισμός χειρωνακτικής κατάστασης\n"
 
 #: ../alternatives.c:366
 #: ../alternatives.c:373
@@ -348,19 +349,19 @@ msgstr "προς μετακίνηση %s\n"
 #: ../alternatives.c:406
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "αποτυχία διαγραφής συμβολικού συνδέσμου %s: %s\n"
+msgstr "αποτυχία διαγραφής σύνδεσης %s: %s\n"
 
 #: ../alternatives.c:391
 #: ../alternatives.c:403
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "προς συνδεση %s -> %s\n"
+msgstr "προς σύνδεση %s -> %s\n"
 
 #: ../alternatives.c:395
 #: ../alternatives.c:412
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s -> %s: %s\n"
+msgstr "αποτυχία δημιουργίας σύνδεσης %s -> %s: %s\n"
 
 #: ../alternatives.c:444
 #, c-format
@@ -391,22 +392,22 @@ msgstr "η κύρια σύνδεση για·%s·πρέπει να είναι·%
 #: ../alternatives.c:619
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "σύνδεση·%s·λανθασμένη για δευτερεύον·%s·(%s·%s)\n"
+msgstr "σύνδεση·%s·λανθασμένη για δευτερεύουσα·%s·(%s·%s)\n"
 
 #: ../alternatives.c:660
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s·-· κατασταση είναι αυτόματη.\n"
+msgstr "%s·-· αυτόματη κατάσταση.\n"
 
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s·-·κατασταση ειναι αυτόματη.\n"
+msgstr "%s·- χειροκίνητη κατάσταση.\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "η συνδεση αυτή τη στιγμη δείχνει στο·%s\n"
+msgstr "η σύνδεση αυτή τη στιγμιαία δείχνει στο·%s\n"
 
 #: ../alternatives.c:667
 #, c-format
@@ -416,22 +417,22 @@ msgstr "%s - προτεραιότητα %d\n"
 #: ../alternatives.c:670
 #, c-format
 msgid " slave %s: %s\n"
-msgstr "·δευτερεύον·%s:·%s\n"
+msgstr " δευτερεύουσα %s: %s\n"
 
 #: ../alternatives.c:675
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "Τωρινή 'καλύτερη' εκδοση ειναι·%s.\n"
+msgstr "Τωρινή 'καλύτερη' έκδοση είναι·%s.\n"
 
 #: ../alternatives.c:705
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Υπάρχει·%d·πρόγραμα που προβάλει·'%s'.\n"
+msgstr "Υπάρχει %d πρόγραμμα που παρέχει '%s'.\n"
 
 #: ../alternatives.c:705
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "Υπάπχουν·%d·προγράματα·που προβάλουν '%s'.\n"
+msgstr "Υπάρχουν %d προγράμματα που παρέχουν '%s'.\n"
 
 #: ../alternatives.c:707
 #, c-format
@@ -441,7 +442,7 @@ msgstr " Επιλογή   Εντολή\n"
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Επέλεξε για να κρατήσεις την τρέχουσα επιλογή[+],·ή πληκτρολόγησε αριθμό επιλογής·"
+msgstr "Πατήστε Enter για να διατηρήσετε την τρέχουσα επιλογή[+], ή πληκτρολόγησε αριθμό επιλογής·"
 
 #: ../alternatives.c:719
 #, c-format
@@ -456,32 +457,32 @@ msgstr ""
 #: ../alternatives.c:772
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s·δεν έχει ρυθμιστεί ως μια εναλακτική για·%s\n"
+msgstr "%s δεν έχει ρυθμιστεί ως μια εναλλακτική για·%s\n"
 
 #: ../alternatives.c:788
 #, c-format
 msgid "(would remove %s\n"
-msgstr "(προς μετακίνηση·%s\n"
+msgstr "(προς απομάκρυνση %s\n"
 
 #: ../alternatives.c:790
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "αποτυχία διαγραφής του %s: %s\n"
+msgstr "αποτυχία απομάκρυνσης του %s: %s\n"
 
 #: ../alternatives.c:912
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "altdir·%s·μη έγκυρο\n"
+msgstr "altdir %s δεν είναι έγκυρο\n"
 
 #: ../alternatives.c:918
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr "admindir·%s·μη έγκυρο\n"
+msgstr "admindir %s δεν είναι έγκυρο\n"
 
 #: ../alternatives.c:928
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "εναλακτικές εκδόσεις %s\n"
+msgstr "έκδοση alternatives  %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
