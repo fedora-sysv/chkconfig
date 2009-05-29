@@ -1,14 +1,15 @@
 # Stanislav Meduna <stano@eunet.sk>, 1999.
 # Marcel Telka <marcel@telka.sk>, 2003, 2004, 2005.
 # Marek Mahut <mmahut@fedoraproject.org>, 2008.
+# Pavol Šimo <palos@fedoraproject.org>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-03-25 09:35+0100\n"
-"Last-Translator: Marek Mahut <mmahut@fedoraproject.org>\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-05-29 22:05+0200\n"
+"Last-Translator: Pavol Šimo <palos@fedoraproject.org>\n"
 "Language-Team: Slovak <fedora-trans-sk@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,9 +28,9 @@ msgstr ""
 "Program môže byť voľne šírený za podmienok určených GNU Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "použitie:   %s --list [názov]\n"
+msgstr "použitie:   %s [--list] [--type <typ>] [názov]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -47,9 +48,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <názov>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "            %s [--level <úrovne>] <názov> %s\n"
+msgstr "            %s [--level <úrovne>] [--type <typ>] <názov> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -73,43 +74,43 @@ msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Na vykonanie tejto operácie nemáte dostatočné oprávnenia.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "zap"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "vyp"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "služby spúšťané pomocou xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "nepodarilo sa otvoriť adresár %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzia %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type musí byť 'sysv' alebo 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "môže byť zadaná iba jedna z volieb --list, --add, --del alebo --override\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "pre chkconfig otázku môže byť zadaná iba jedna úroveň\n"
@@ -163,22 +164,22 @@ msgstr "chybný argument pre --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Žiadne služby nemôžu byť spravované ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "nepodarilo sa otvoriť %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "nepodarilo sa nájsť zhodu so vzorom %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "nie je možné zistiť aktuálnu úroveň\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "nepodarilo sa vytvoriť symbolický odkaz %s: %s\n"
