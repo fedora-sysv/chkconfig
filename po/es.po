@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-12-11 12:43-0300\n"
-"Last-Translator: Domingo Becker <domingobecker@gmail.com>\n"
+"POT-Creation-Date: 2009-03-06 01:38-0500\n"
+"PO-Revision-Date: 2009-06-15 13:58-0400\n"
+"Last-Translator: Dennis Tobar <dennis.tobar@gmail.com>\n"
 "Language-Team: Fedora Spanish <fedora-trans-es@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,7 +61,7 @@ msgstr "         %s [--level <niveles>] [--type <tipo>] <nombre> %s\n"
 #, c-format
 msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
 msgstr ""
-"El servicio %s soporta chkconfig, pero no esta registrado (ejecute \n"
+"El servicio %s soporta chkconfig, pero no está registrado (ejecute \n"
 "'chkconfig -- añada %s')\n"
 
 #: ../chkconfig.c:55
@@ -79,44 +79,44 @@ msgstr "error al leer la información del servicio %s: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "No tiene los privilegios suficientes para realizar esta operación.\n"
 
-#: ../chkconfig.c:351
-#: ../chkconfig.c:356
-#: ../chkconfig.c:470
+#: ../chkconfig.c:379
+#: ../chkconfig.c:384
+#: ../chkconfig.c:498
 msgid "on"
 msgstr "activo"
 
-#: ../chkconfig.c:351
-#: ../chkconfig.c:356
-#: ../chkconfig.c:470
+#: ../chkconfig.c:379
+#: ../chkconfig.c:384
+#: ../chkconfig.c:498
 msgid "off"
 msgstr "desactivado"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "servicios basados en xinetd: \n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "error al abrir el directorio %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versión %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type debe ser 'sysv' o 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "sólo una de las opciones --list, --add, --del o --override puede ser especificada\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -163,7 +163,7 @@ msgstr "error al leer en el directorio %s/init.d: %s\n"
 #: ../ntsysv.c:293
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr " Tiene que ser root para poder ejecutar el programa %s\n"
+msgstr "Tiene que ser root para poder ejecutar el programa %s\n"
 
 #: ../ntsysv.c:310
 #, c-format
@@ -175,22 +175,22 @@ msgstr "argumento incorrecto para --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "¡ntsysv no puede gestionar ningún servicio!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "error al abrir %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "error al incorporar el patrón %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "No se puede determinar el nivel de ejecución actual\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "no se pudo crear el enlace simbólico %s: %s\n"
@@ -302,7 +302,7 @@ msgstr "ruta %s inesperada en %s\n"
 #: ../alternatives.c:231
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "ruta perdida para el esclavo  %s en %s\n"
+msgstr "ruta pérdida para el esclavo  %s en %s\n"
 
 #: ../alternatives.c:241
 #, c-format
