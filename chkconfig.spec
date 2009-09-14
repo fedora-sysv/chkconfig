@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.42
+Version: 1.3.43
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Sep 14 2009 Bill Nottingham <notting@redhat.com> 1.3.43-1
+- ntsysv man page tweak (#516599)
+- another minor LSB tweak (#474223)
+- translation updates
+
 * Fri Mar  6 2009 Bill Nottingham <notting@redhat.com> 1.3.42-1
 - further LSB fixes (#474223)
 - throw errors on various malformed init scripts (#481198)
