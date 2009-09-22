@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-12-05 23:11+0100\n"
+"PO-Revision-Date: 2009-09-22 17:28+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: Polish <fedora-trans-pl@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,7 +27,7 @@ msgstr "%s wersja %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Program może być swobodnie rozprowadzany na warunkach Powszechnej Licencji "
+"Niniejszy program można rozprowadzać dalej na warunkach Powszechnej Licencji "
 "Publicznej GNU.\n"
 
 #: ../chkconfig.c:42
@@ -62,7 +62,7 @@ msgid ""
 "'chkconfig --add %s')\n"
 msgstr ""
 "usługa %s obsługuje chkconfig, ale nie jest przypisana do żadnego poziomu "
-"uruchamiania (wykonaj \"chkconfig --add %s\")\n"
+"uruchamiania (proszę wykonać \"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:55
 #, c-format
@@ -77,7 +77,7 @@ msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr "Nie posiadasz wystarczających uprawnień, aby wykonać to działanie.\n"
+msgstr "Brak wystarczających uprawnień, aby wykonać te działanie.\n"
 
 #: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
 msgid "on"
@@ -95,7 +95,7 @@ msgstr "usługi oparte na xinetd:\n"
 #: ../chkconfig.c:434
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "otwarcie folderu %s nie powiodło się: %s\n"
+msgstr "otwarcie katalogu %s nie powiodło się: %s\n"
 
 #: ../chkconfig.c:578
 #, c-format
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
-msgstr "Naciśnij <F1>, aby dowiedzieć się więcej o usłudze."
+msgstr "Proszę nacisnąć przycisk <F1>, aby dowiedzieć się więcej o usłudze."
 
 #: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
@@ -151,12 +151,12 @@ msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 #: ../ntsysv.c:257
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "błąd podczas odczytywania z folderu %s: %s\n"
+msgstr "błąd podczas odczytywania z katalogu %s: %s\n"
 
 #: ../ntsysv.c:293
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "Musisz być rootem, aby uruchomić %s.\n"
+msgstr "Tylko root może wykonać %s.\n"
 
 #: ../ntsysv.c:310
 #, c-format
@@ -166,7 +166,7 @@ msgstr "błędny parametr dla --levels\n"
 #: ../ntsysv.c:317
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "Brak usług, które mogą być zarządzane przez ntsysv!\n"
+msgstr "Brak usług, które mogą być zarządzane przez ntsysv.\n"
 
 #: ../leveldb.c:260
 #, c-format
@@ -199,7 +199,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Program może być swobodnie rozprowadzany na warunkach Powszechnej Licencji "
+"Niniejszy program można rozprowadzać dalej na warunkach Powszechnej Licencji "
 "Publicznej GNU.\n"
 "\n"
 
@@ -257,7 +257,7 @@ msgstr "wspólne opcje: --verbose --test --help --usage --version\n"
 #: ../alternatives.c:75
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <folder> --admindir <folder>\n"
+msgstr "                --altdir <katalog> --admindir <katalog>\n"
 
 #: ../alternatives.c:172
 #, c-format
@@ -277,7 +277,7 @@ msgstr "odczytanie %s nie powiodło się: %s\n"
 #: ../alternatives.c:194
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s jest puste!\n"
+msgstr "%s jest puste.\n"
 
 #: ../alternatives.c:203
 #, c-format
@@ -377,7 +377,7 @@ msgstr "zastąpienie %s na %s nie powiodło się: %s\n"
 #: ../alternatives.c:503 ../alternatives.c:512
 #, c-format
 msgid "running %s\n"
-msgstr "uruchamianie %s\n"
+msgstr "wykonywanie %s\n"
 
 #: ../alternatives.c:539
 #, c-format
@@ -432,12 +432,14 @@ msgstr "Jest %d programów dostarczających \"%s\".\n"
 #: ../alternatives.c:707
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  Zaznaczenie    Polecenie\n"
+msgstr "  Wybór    Polecenie\n"
 
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Potwierdź, aby zachować bieżący wybór[+] lub podaj numer wyboru: "
+msgstr ""
+"Proszę nacisnąć przycisk Enter, aby zachować bieżący wybór[+] lub podać "
+"numer wyboru: "
 
 #: ../alternatives.c:719
 #, c-format
