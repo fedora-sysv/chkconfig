@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2007-02-05 17:56+0200\n"
+"POT-Creation-Date: 2009-03-09 15:56-0400\n"
+"PO-Revision-Date: 2009-03-09 17:56+0200\n"
 "Last-Translator: Maxim Dzumanenko <dziumanenko@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,9 +26,9 @@ msgid ""
 msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "використання:   %s --list [служба]\n"
+msgstr "використання:   %s [--list] [--type <тип>] [служба]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -46,9 +46,9 @@ msgid "         %s --override <name>\n"
 msgstr "         %s --override <служба>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <рівні>] <служба> %s\n"
+msgstr "         %s [--level <рівні>] [--type <тип] <служба> %s\n"
 
 #: ../chkconfig.c:53
 #, c-format
@@ -72,43 +72,43 @@ msgstr "помилка читання інформації у службі %s: %
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "У вас недостатньо повноважень для виконання цієї дії.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "on"
 msgstr "ввімк"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
 msgid "off"
 msgstr "вимк"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "служби, що базуються на xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "не вдається відкрити каталог %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версія %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "у якості значення --type треба вказати 'sysv' або 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "можна вказувати лише один аргумент з --list, --add, --del або --override\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "можна вказувати лише один рівень виконання для запиту chkconfig\n"
@@ -162,22 +162,22 @@ msgstr "неправильний аргумент в --levels\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Немає служб, які керуються ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "не вдається відкрити %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "не вдається визначити шаблон %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "не вдається визначити поточний рівень виконання\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "не вдається створити символічне посилання %s: %s\n"
