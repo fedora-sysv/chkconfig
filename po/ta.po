@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig.master.ta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-06 01:38-0500\n"
-"PO-Revision-Date: 2009-04-01 12:48+0530\n"
+"POT-Creation-Date: 2009-03-09 15:56-0400\n"
+"PO-Revision-Date: 2009-09-22 13:12+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -25,16 +25,17 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+"\n"
 
 #: ../chkconfig.c:38
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s பதிப்பு %s - காப்புரிமை (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:39
 #, c-format
 msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "இதை GNU பொது உரிமத்தின் கீழ் இலவசமாக விநியோகிக்கலாம் \n"
+msgstr "This may be freely redistributed under the terms of the GNU Public License.\n"
 
 #: ../chkconfig.c:42
 #, c-format
