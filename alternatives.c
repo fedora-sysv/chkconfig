@@ -243,6 +243,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 
 	if (*line != '/') {
 	    fprintf(stderr, _("path to alternate expected in %s\n"), path);
+	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
 	    return 1;
 	}
 
@@ -263,6 +264,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	set->alts[set->numAlts].initscript = NULL;
 	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
+	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
 	    return 1;
 	}
 	if (end) {
@@ -285,6 +287,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	    line = parseLine(&buf);
 	    if (line && strlen(line) && *line != '/') {
 		fprintf(stderr, _("slave path expected in %s\n"), path);
+		fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
 		return 1;
 	    }
 
