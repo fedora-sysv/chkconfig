@@ -793,14 +793,14 @@ static int removeService(const char * title, const char * target,
 	if (rc) return 2; else return 0;
     }
 
-    /* memory leak */
-    set.alts[i] = set.alts[set.numAlts - 1];
+    /* If the current link is what we're removing, reset it. */
+    if (set.current == i)
+	set.current = -1;
 
+    /* Replace removed link set with last one */
+    set.alts[i] = set.alts[set.numAlts - 1];
     if (set.current == (set.numAlts - 1))
 	set.current = i;
-    else if (set.current == i)
-	set.current = -1;		/* we'll fix this in a minute */
-
     set.numAlts--;
 
     set.best = 0;
