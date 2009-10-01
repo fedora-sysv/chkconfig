@@ -4,7 +4,7 @@ Version: 1.3.30.2
 Release: 1%{?dist}
 License: GPL
 Group: System Environment/Base
-Source: %{name}-%{version}.tar.bz2
+Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildPrereq: newt newt-devel gettext
 Conflicts: initscripts <= 5.30-1
