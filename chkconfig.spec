@@ -77,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Mon Nov  2 2009 Bill Nottingham <notting@redhat.com> 1.3.30.2-1
-- alternatives: fix removal of manual links (#525021, <dtardon@redhat.com>)
+- alternatives: fix removal of manual links (#525051, <dtardon@redhat.com>)
 - ntsysv man page tweak (#516599)
 - add resetpriorities to the chkconfig man page (#501225)
 - Fix runlevel list in man page (#466740)
