@@ -1,7 +1,7 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy.
 Name: chkconfig
-Version: 1.3.30.1
-Release: 1
+Version: 1.3.30.2
+Release: 1%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.gz
@@ -76,6 +76,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Nov  2 2009 Bill Nottingham <notting@redhat.com> 1.3.30.2-1
+- alternatives: fix removal of manual links (#525021, <dtardon@redhat.com>)
+- ntsysv man page tweak (#516599)
+- add resetpriorities to the chkconfig man page (#501225)
+- Fix runlevel list in man page (#466740)
+- alternatives: clarify error messages with more context (#441443)
+
 * Tue Nov 13 2007 Bill Nottingham <notting@redhat.com> 1.3.30.1-2
 - don't print usage message on a nonexstent service (#226804)
 
