@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov 13 2007 Bill Nottingham <notting@redhat.com> 1.3.30.1-2
+- don't print usage message on a nonexstent service (#226804)
+
 * Fri Dec  1 2006 Bill Nottingham <notting@redhat.com> 1.3.30.1-1
 - translation updates: as, ka, lv, ml, te (#216617)
 

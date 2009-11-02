@@ -593,7 +593,7 @@ int main(int argc, char ** argv) {
 	    } 
 	    rc = readServiceInfo(name, &s, 0);
 	    if (rc)
-	       usage();
+	       return 1;
 	    if (s.type == TYPE_XINETD) {
 	       if (isOn("xinetd",level))
 		       return !s.levels;
