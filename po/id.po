@@ -1,14 +1,14 @@
 # chkconfig Bahasa Indonesia
 # Copyright (C) 1999 Free Software Foundation, Inc.
 # Mohammad DAMT <mdamt@linux.or.id>, 1999.
-# Teguh DC <dheche@songolimo.net>, 2004-2008
+# Teguh DC <dheche@songolimo.net>, 2004-2009
 # $Id: id.po,v 1.27 2007/02/22 19:38:24 dheche Exp $
 msgid ""
 msgstr ""
-"Project-Id-Version: ID-chkconfig 1.0\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-09-02 12:36+0700\n"
+"POT-Creation-Date: 2009-03-09 15:56-0400\n"
+"PO-Revision-Date: 2010-01-20 20:27+0700\n"
 "Last-Translator: Teguh DC <dheche@songolimo.net>\n"
 "Language-Team: Fedora Trans ID <fedora-trans-id@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,15 +22,13 @@ msgstr "%s versi %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:39
 #, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"Program ini dapat didistribusikan di bawah Lisensi GNU Public License.\n"
+msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Program ini dapat didistribusikan di bawah Lisensi GNU Public License.\n"
 
 #: ../chkconfig.c:42
-#, fuzzy, c-format
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "cara pakai:  %s [--list] [name]\n"
+msgstr "cara pakai:  %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -48,18 +46,14 @@ msgid "         %s --override <name>\n"
 msgstr "           %s --override <name>\n"
 
 #: ../chkconfig.c:46
-#, fuzzy, c-format
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "          %s [--level <levels>] <name> %s)\n"
+msgstr "          %s [--level <levels>] [--type <type>] <name> %s)\n"
 
 #: ../chkconfig.c:53
 #, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-"layanan %s mendukung chkconfig, tapi belum memiliki referensi di runlevel "
-"manapun (jalankan 'chkconfig --add %s')\n"
+msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgstr "layanan %s mendukung chkconfig, tapi belum memiliki referensi di runlevel manapun (jalankan 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:55
 #, c-format
@@ -74,43 +68,46 @@ msgstr "terdapat error ketika membaca informasi layanan %s: %s\n"
 #: ../chkconfig.c:66
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Anda tidak memiliki hak akses yang memadai untuk menjalankan operasi ini.\n"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379
+#: ../chkconfig.c:384
+#: ../chkconfig.c:498
 msgid "on"
 msgstr "hidup"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:379
+#: ../chkconfig.c:384
+#: ../chkconfig.c:498
 msgid "off"
 msgstr "mati"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:460
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "Layanan berbasis xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:462
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "gagal untuk membuka direktori %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:606
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versi %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:618
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type harus 'sysv' atau 'xinetd'\n"
 
-#: ../chkconfig.c:598
+#: ../chkconfig.c:626
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"hanya satu dari --list, --add, --del atau --override yang dapat dipilih\n"
+msgstr "hanya satu dari --list, --add, --del atau --override yang dapat dipilih\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "hanya satu runlevel yang dapat dipilih untuk query chkconfig\n"
@@ -119,7 +116,8 @@ msgstr "hanya satu runlevel yang dapat dipilih untuk query chkconfig\n"
 msgid "Press <F1> for more information on a service."
 msgstr "Tekan <F1> untuk melihat informasi tentang suatu layanan."
 
-#: ../ntsysv.c:83 ../ntsysv.c:120
+#: ../ntsysv.c:83
+#: ../ntsysv.c:120
 msgid "Ok"
 msgstr "Ok"
 
@@ -139,7 +137,9 @@ msgstr "Layanan mana yang harus distart secara otomatis?"
 msgid "Services"
 msgstr "Layanan"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183
+#: ../ntsysv.c:210
+#: ../ntsysv.c:248
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "gagal membaca info layanan %s: %s\n"
@@ -164,22 +164,22 @@ msgstr "parameter untuk --levels salah\n"
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Tidak ada layanan yang dapat diatur oleh ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:259
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gagal membuka %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:667
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gagal untuk mengglob pola %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:710
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "tidak dapat menentukan run level yang aktif\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:798
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "gagal untuk membuat symlink %s: %s\n"
@@ -194,9 +194,7 @@ msgstr "alternatives versi %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr ""
-"Program ini dapat didistribusikan bebas di bawah Lisensi GNU Public "
-"License.\n"
+msgstr "Program ini dapat didistribusikan bebas di bawah Lisensi GNU Public License.\n"
 
 #: ../alternatives.c:65
 #, c-format
@@ -333,22 +331,27 @@ msgstr "link menuju pada tidak ada alternatif - mode set ke manual\n"
 msgid "link changed -- setting mode to manual\n"
 msgstr "link berubah - mode set ke manual\n"
 
-#: ../alternatives.c:366 ../alternatives.c:373
+#: ../alternatives.c:366
+#: ../alternatives.c:373
 #, c-format
 msgid "would remove %s\n"
 msgstr "Akan dihapus %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
+#: ../alternatives.c:368
+#: ../alternatives.c:375
+#: ../alternatives.c:406
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "gagal untuk menghapus link %s: %s\n"
 
-#: ../alternatives.c:391 ../alternatives.c:403
+#: ../alternatives.c:391
+#: ../alternatives.c:403
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "Akan dilink %s -> %s\n"
 
-#: ../alternatives.c:395 ../alternatives.c:412
+#: ../alternatives.c:395
+#: ../alternatives.c:412
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "gagal untuk membuat link %s -> %s: %s\n"
@@ -368,7 +371,8 @@ msgstr "gagal untuk membuat %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "gagal untuk mengganti %s dengan  %s: %s\n"
 
-#: ../alternatives.c:503 ../alternatives.c:512
+#: ../alternatives.c:503
+#: ../alternatives.c:512
 #, c-format
 msgid "running %s\n"
 msgstr "Jalan di %s\n"
@@ -431,9 +435,7 @@ msgstr "  Perintah yang dipilih\n"
 #: ../alternatives.c:716
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"Enter untuk mempertahankan pilihan[+] saat ini, atau ketik nomer yang "
-"dipilih: "
+msgstr "Enter untuk mempertahankan pilihan[+] saat ini, atau ketik nomer yang dipilih: "
 
 #: ../alternatives.c:719
 #, c-format
@@ -444,7 +446,8 @@ msgstr ""
 "\n"
 "gagal membaca pilihan\n"
 
-#: ../alternatives.c:746 ../alternatives.c:772
+#: ../alternatives.c:746
+#: ../alternatives.c:772
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
@@ -476,3 +479,4 @@ msgstr "alternatives versi %s\n"
 
 #~ msgid "error reading from directory %s/init.d: %s\n"
 #~ msgstr "gagal membaca direktori %s/init.d: %s\n"
+
