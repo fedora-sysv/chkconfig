@@ -175,7 +175,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 
     while ((ent = readdir(dir))) {
 	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
-	    strchr(ent->d_name, '.')) continue;
+	    (ent->d_name[0] == '.')) continue;
 
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb))
