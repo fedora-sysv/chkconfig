@@ -376,6 +376,35 @@ try_xinetd:
     return readXinetdServiceInfo(name,service,honorHide);
 }
 
+static struct dep *parseDeps(char *pos, char *end) {
+    char *t;
+    int numdeps = 0;
+    struct dep *deps = NULL;
+
+    while (1) {
+	while (*pos && isspace(*pos) && pos < end) pos++;
+	if (pos == end)
+            break;
+        t = pos;
+        while (*t && !isspace(*t) && t < end) t++;
+        if (isspace(*t)) {
+            *t = '\0';
+            t++;
+        }
+        numdeps++;
+        deps = realloc(deps,
+		 (numdeps + 1) * sizeof(struct dep));
+        deps[numdeps-1].name = strdup(pos);
+        deps[numdeps-1].handled = 0;
+        memset(&deps[numdeps],'\0',sizeof(struct dep));
+        if (!t || t >= end)
+            break;
+        else
+            pos = t;
+    }
+    return deps;
+}
+
 
 int parseServiceInfo(int fd, char * name, struct service * service, int honorHide, int partialOk) {
     struct stat sb;
@@ -534,109 +563,17 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 			serv.levels &= ~(1 << lev);
 		}
 	} else if (!strncmp(start, "Required-Start:", 15)) {
-		char *t;
-		int numdeps = 0;
-
 		start+=15;
-		while (1) {
-			while (*start && isspace(*start) && start < end) start++;
-			if (start == end)
-				break;
-			t = start;
-			while (*t && !isspace(*t) && t < end) t++;
-			if (isspace(*t)) {
-				*t = '\0';
-				t++;
-			}
-			numdeps++;
-			serv.startDeps = realloc(serv.startDeps,
-						 (numdeps + 1) * sizeof(struct dep));
-			serv.startDeps[numdeps-1].name = strdup(start);
-			serv.startDeps[numdeps-1].handled = 0;
-			memset(&serv.startDeps[numdeps],'\0',sizeof(struct dep));
-			if (!t || t >= end)
-				break;
-			else
-				start = t;
-		}
+		serv.startDeps = parseDeps(start, end);
 	} else if (!strncmp(start, "Required-Stop:", 14)) {
-		char *t;
-		int numdeps = 0;
-
 		start+=14;
-		while (1) {
-			while (*start && isspace(*start) && start < end) start++;
-			if (start == end)
-				break;
-			t = start;
-			while (*t && !isspace(*t) && t < end) t++;
-			if (isspace(*t)) {
-				*t = '\0';
-				t++;
-			}
-			numdeps++;
-			serv.stopDeps = realloc(serv.stopDeps,
-						 (numdeps + 1) * sizeof(struct dep));
-			serv.stopDeps[numdeps-1].name = strdup(start);
-			serv.stopDeps[numdeps-1].handled = 0;
-			memset(&serv.stopDeps[numdeps],'\0',sizeof(struct dep));
-			if (!t || t >= end)
-				break;
-			else
-				start = t;
-		}
+		serv.stopDeps = parseDeps(start, end);
 	} else if (!strncmp(start, "Should-Start:", 13)) {
-		char *t;
-		int numdeps = 0;
-
 		start+=13;
-		while (1) {
-			while (*start && isspace(*start) && start < end) start++;
-			if (start == end)
-				break;
-			t = start;
-			while (*t && !isspace(*t) && t < end) t++;
-			if (isspace(*t)) {
-				*t = '\0';
-				t++;
-			}
-			numdeps++;
-			serv.softStartDeps = realloc(serv.softStartDeps,
-						 (numdeps + 1) * sizeof(struct dep));
-			serv.softStartDeps[numdeps-1].name = strdup(start);
-			serv.softStartDeps[numdeps-1].handled = 0;
-			memset(&serv.softStartDeps[numdeps],'\0',sizeof(struct dep));
-			if (!t || t >= end)
-				break;
-			else
-				start = t;
-		}
+		serv.softStartDeps = parseDeps(start, end);
 	} else if (!strncmp(start, "Should-Stop:", 12)) {
-		char *t;
-		int numdeps = 0;
-
 		start+=12;
-		while (1) {
-			while (*start && isspace(*start) && start < end) start++;
-			if (start == end)
-				break;
-			t = start;
-			while (*t && !isspace(*t) && t < end) t++;
-			if (isspace(*t)) {
-				*t = '\0';
-				t++;
-			}
-			numdeps++;
-			serv.softStopDeps = realloc(serv.softStopDeps,
-						 (numdeps + 1) * sizeof(struct dep));
-			serv.softStopDeps[numdeps-1].name = strdup(start);
-			serv.softStopDeps[numdeps-1].handled = 0;
-			memset(&serv.softStopDeps[numdeps],'\0',sizeof(struct dep));
-			if (!t || t >= end)
-				break;
-			else
-				start = t;
-		}
+		serv.softStopDeps = parseDeps(start, end);
 	} else if (!strncmp(start, "Provides:", 9)) {
 		char *t;
 		int numdeps = 0;
