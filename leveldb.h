@@ -36,6 +36,8 @@ struct service {
     char * desc;
     struct dep *startDeps;
     struct dep *stopDeps;
+    struct dep *softStartDeps;
+    struct dep *softStopDeps;
     char **provides;
     int type;
     int isLSB;

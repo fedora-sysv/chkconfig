@@ -179,6 +179,22 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 				}
 			}
 		}
+		if (s->softStartDeps) {
+			for (j = 0; s->softStartDeps[j].name ; j++) {
+				if (!strcmp(s->softStartDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 1)) {
+					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+					s->softStartDeps[j].handled = 1;
+				}
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->softStartDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 1)) {
+							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
+							s->softStartDeps[j].handled = 1;
+						}
+					}
+				}
+			}
+		}
 		if (s->stopDeps) {
 			for (j = 0; s->stopDeps[j].name ; j++) {
 				if (!strcmp(s->stopDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 0)) {
@@ -190,6 +206,22 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 						if (!strcmp(s->stopDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 0)) {
 							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
 							s->stopDeps[j].handled = 1;
+						}
+					}
+				}
+			}
+		}
+		if (s->softStopDeps) {
+			for (j = 0; s->softStopDeps[j].name ; j++) {
+				if (!strcmp(s->softStopDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 0)) {
+					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+					s->softStopDeps[j].handled = 1;
+				}
+				if (servs[i].provides) {
+					for (k = 0; servs[i].provides[k]; k++) {
+						if (!strcmp(s->softStopDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 0)) {
+							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
+							s->softStopDeps[j].handled = 1;
 						}
 					}
 				}
