@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.44
+Version: 1.3.45
 Release: 1
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Mar 04 2010 Bill Nottingham <notting@redhat.com> 1.3.45-1
+- add support for Should-Start, Should-Stop (#98470, <iarnell@gmail.com>)
+- ntsysv: don't drop initscripts with '.' in the name (#556751)
+- translation updates: el, id
+
 * Tue Sep 29 2009 Bill Nottingham <notting@redhat.com> 1.3.44-1
 - alternatives: update symlinks if they exist on installation (#104940)
 - alternatives: clarify error messages with more context (#441443)
