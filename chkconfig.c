@@ -155,8 +155,33 @@ static int isSimilarlyConfigured(struct service s, struct service t, int start) 
         return 0;
 }
 
+static void checkDeps(struct service *s, struct dep *deps, struct service *serv, int start) {
+        int j,k;
+
+        for (j = 0; deps[j].name ; j++) {
+                if (!strcmp(deps[j].name, serv->name) && isSimilarlyConfigured(*s, *serv, 0)) {
+                        if (start)
+                                s->sPriority = laterThan(s->sPriority, serv->sPriority);
+                        else
+                                s->kPriority = earlierThan(s->kPriority, serv->kPriority);
+                        deps[j].handled = 1;
+                }
+                if (serv->provides) {
+                        for (k = 0; serv->provides[k]; k++) {
+                                if (!strcmp(deps[j].name, serv->provides[k]) && isSimilarlyConfigured(*s, *serv, 0)) {
+                                        if (start)
+                                                s->sPriority = laterThan(s->sPriority, serv->sPriority);
+                                        else
+                                                s->kPriority = earlierThan(s->kPriority, serv->kPriority);
+                                        deps[j].handled = 1;
+                                }
+                        }
+                }
+        }
+}
+
 static int frobOneDependencies(struct service *s, struct service *servs, int numservs, int target, int depfail) {
-	int i, j, k;
+	int i;
 	int s0 = s->sPriority;
 	int k0 = s->kPriority;
 
@@ -164,80 +189,28 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	if (s->kPriority < 0) s->kPriority = 50;
 	for (i = 0; i < numservs ; i++) {
 		if (s->startDeps) {
-			for (j = 0; s->startDeps[j].name ; j++) {
-				if (!strcmp(s->startDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 1)) {
-					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-					s->startDeps[j].handled = 1;
-				}
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->startDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 1)) {
-							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-							s->startDeps[j].handled = 1;
-						}
-					}
-				}
-			}
+			checkDeps(s, s->startDeps, &servs[i], 1);
 		}
 		if (s->softStartDeps) {
-			for (j = 0; s->softStartDeps[j].name ; j++) {
-				if (!strcmp(s->softStartDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 1)) {
-					s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-					s->softStartDeps[j].handled = 1;
-				}
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->softStartDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 1)) {
-							s->sPriority = laterThan(s->sPriority, servs[i].sPriority);
-							s->softStartDeps[j].handled = 1;
-						}
-					}
-				}
-			}
+		        checkDeps(s, s->softStartDeps, &servs[i], 1);
 		}
 		if (s->stopDeps) {
-			for (j = 0; s->stopDeps[j].name ; j++) {
-				if (!strcmp(s->stopDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 0)) {
-					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-					s->stopDeps[j].handled = 1;
-				}
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->stopDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 0)) {
-							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-							s->stopDeps[j].handled = 1;
-						}
-					}
-				}
-			}
+		        checkDeps(s, s->stopDeps, &servs[i], 0);
 		}
 		if (s->softStopDeps) {
-			for (j = 0; s->softStopDeps[j].name ; j++) {
-				if (!strcmp(s->softStopDeps[j].name, servs[i].name) && isSimilarlyConfigured(*s, servs[i], 0)) {
-					s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-					s->softStopDeps[j].handled = 1;
-				}
-				if (servs[i].provides) {
-					for (k = 0; servs[i].provides[k]; k++) {
-						if (!strcmp(s->softStopDeps[j].name, servs[i].provides[k]) && isSimilarlyConfigured(*s, servs[i], 0)) {
-							s->kPriority = earlierThan(s->kPriority, servs[i].kPriority);
-							s->softStopDeps[j].handled = 1;
-						}
-					}
-				}
-			}
+		        checkDeps(s, s->softStopDeps, &servs[i], 0);
 		}
 	}
 	if (depfail) {
 		if (s->startDeps) {
-			for (j = 0; s->startDeps[j].name; j++) {
-				if (!s->startDeps[j].handled)
+			for (i = 0; s->startDeps[i].name; i++) {
+				if (!s->startDeps[i].handled)
 					return -1;
 			}
 		}
 		if (s->stopDeps) {
-			for (j = 0; s->stopDeps[j].name; j++) {
-				if (!s->stopDeps[j].handled)
+			for (i = 0; s->stopDeps[i].name; i++) {
+				if (!s->stopDeps[i].handled)
 					return -1;
 			}
 		}
