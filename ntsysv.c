@@ -209,8 +209,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));
-	    closedir(dir);
-	    return 2;
+	    continue;
 	} else if (!rc)
 	    numServices++;
     }
