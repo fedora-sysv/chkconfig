@@ -150,8 +150,8 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 	return 0;
 }
 
-int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
-	char * filename = alloca(strlen(name) + strlen(XINETDDIR) + 50);
+int readXinetdServiceInfo(char *name, struct service * service) {
+	char * filename;
 	int fd;
 	struct service serv = { 
 			name: NULL,
@@ -169,20 +169,16 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 			enabled: -1
 	};
 	struct stat sb;
-	char * buf, *ptr;
+	char * buf = NULL, *ptr;
 	char * eng_desc = NULL, *start;
 	
-	snprintf(filename, strlen(name)+strlen(XINETDDIR)+50, XINETDDIR "/%s", name);
+	asprintf(&filename, XINETDDIR "/%s", name);
 	
-	if ((fd = open(filename, O_RDONLY)) < 0) return -1;
+	if ((fd = open(filename, O_RDONLY)) < 0) goto out_err;
 	fstat(fd,&sb);
-	if (! S_ISREG(sb.st_mode)) return -1;
+	if (! S_ISREG(sb.st_mode)) goto out_err;
 	buf = malloc(sb.st_size+1);
-	if (read(fd,buf,sb.st_size)!=sb.st_size) {
-		close(fd);
-		free(buf);
-		return -1;
-	}
+	if (read(fd,buf,sb.st_size)!=sb.st_size) goto out_err;
 	close(fd);
         serv.name = strdup(name);
 	buf[sb.st_size] = '\0';
@@ -247,6 +243,11 @@ int readXinetdServiceInfo(char *name, struct service * service, int honorHide) {
 	}
 	*service = serv;
 	return 0;
+out_err:
+        close(fd);
+        free(buf);
+        free(filename);
+        return -1;
 }
 
 int readServices(struct service **services) {
@@ -292,7 +293,7 @@ int readServices(struct service **services) {
 }
 
 int readServiceInfo(char * name, int type, struct service * service, int honorHide) {
-    char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
+    char * filename;
     int fd;
     struct service serv, serv_overrides;
     int parseret;
@@ -300,16 +301,17 @@ int readServiceInfo(char * name, int type, struct service * service, int honorHi
     if (!(type & TYPE_INIT_D))
 	goto try_xinetd;
 
-    sprintf(filename, RUNLEVELS "/init.d/%s", name);
+    asprintf(&filename, RUNLEVELS "/init.d/%s", name);
 
     if ((fd = open(filename, O_RDONLY)) < 0)
 	goto try_xinetd;
 
+    free(filename);
     parseret = parseServiceInfo(fd, name, &serv, honorHide, 0);
     if (parseret)
         return parseret;
 
-    sprintf(filename, RUNLEVELS "/chkconfig.d/%s", name);
+    asprintf(&filename, RUNLEVELS "/chkconfig.d/%s", name);
     if ((fd = open(filename, O_RDONLY)) >= 0) {
         parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
         if (parseret >= 0) {
@@ -327,17 +329,19 @@ int readServiceInfo(char * name, int type, struct service * service, int honorHi
         }
     }
 
+    free(filename);
     *service = serv;
     return 0;
 
 try_xinetd:
+    free(filename);
     if (!(type & TYPE_XINETD))
 	return -1;
-    return readXinetdServiceInfo(name,service,honorHide);
+    return readXinetdServiceInfo(name,service);
 }
 
 int readServiceDifferences(char * name, int type, struct service * service, struct service * service_overrides, int honorHide) {
-    char * filename = alloca(strlen(name) + strlen(RUNLEVELS) + 50);
+    char * filename;
     int fd;
     struct service serv, serv_overrides;
     int parseret;
@@ -345,23 +349,26 @@ int readServiceDifferences(char * name, int type, struct service * service, stru
     if (!(type & TYPE_INIT_D))
 	goto try_xinetd;
 
-    sprintf(filename, RUNLEVELS "/init.d/%s", name);
+    asprintf(&filename, RUNLEVELS "/init.d/%s", name);
 
     if ((fd = open(filename, O_RDONLY)) < 0) {
 	goto try_xinetd;
     }
 
+    free(filename);
     parseret = parseServiceInfo(fd, name, &serv, honorHide, 0);
     if (parseret) {
         return parseret;
     }
 
-    sprintf(filename, RUNLEVELS "/chkconfig.d/%s", name);
+    asprintf(&filename, RUNLEVELS "/chkconfig.d/%s", name);
     if ((fd = open(filename, O_RDONLY)) >= 0) {
         parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
     } else {
-        return 1;
+        parseret = 1;
     }
+
+    free(filename);
     if (parseret) {
         return 1;
     }
@@ -371,9 +378,10 @@ int readServiceDifferences(char * name, int type, struct service * service, stru
     return 0;
 
 try_xinetd:
+    free(filename);
     if (!(type & TYPE_XINETD))
 	return -1;
-    return readXinetdServiceInfo(name,service,honorHide);
+    return readXinetdServiceInfo(name,service);
 }
 
 static struct dep *parseDeps(char *pos, char *end) {

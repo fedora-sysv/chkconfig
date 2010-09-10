@@ -491,7 +491,7 @@ static int listService(char * item, int type) {
 			    numServicesAlloced += 10;
 			    s = realloc(s, numServicesAlloced * sizeof (*s));
 		    }
-		    if (readXinetdServiceInfo(ent->d_name, s + numServices, 0) != -1)
+		    if (readXinetdServiceInfo(ent->d_name, s + numServices) != -1)
 			    numServices ++;
 	    }
 	    
@@ -558,7 +558,7 @@ int setService(char * name, int type, int where, int state) {
     return 0;
 }
 
-int main(int argc, char ** argv) {
+int main(int argc, const char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
     int type = TYPE_ANY;
     int rc, i, x;
@@ -583,7 +583,7 @@ int main(int argc, char ** argv) {
     if ((progname = strrchr(argv[0], '/')) != NULL)
 	progname++;
     else
-	progname = argv[0];
+	progname = (char *)argv[0];
     if (!strcmp(progname,"install_initd")) {
 	    addItem++;
 	    LSB++;

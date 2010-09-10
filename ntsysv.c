@@ -241,7 +241,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 				numServicesAlloced * sizeof(*services));
 	}
 
-	rc = readXinetdServiceInfo(ent->d_name, services + numServices, honorHide);
+	rc = readXinetdServiceInfo(ent->d_name, services + numServices);
 	
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
@@ -267,7 +267,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     return 0;
 }
 
-int main(int argc, char ** argv) {
+int main(int argc, const char ** argv) {
     struct service * services;
     int numServices;
     int levels = -1;
@@ -286,7 +286,7 @@ int main(int argc, char ** argv) {
     bindtextdomain("chkconfig", "/usr/share/locale"); 
     textdomain("chkconfig"); 
 
-    progName = argv[0];
+    progName = (char *)argv[0];
 
     if (getuid() != 0) {
 	fprintf(stderr, _("You must be root to run %s.\n"),progName);
