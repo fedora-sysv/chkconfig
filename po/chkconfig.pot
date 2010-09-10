@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
+"POT-Creation-Date: 2010-09-10 15:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,40 +75,40 @@ msgstr ""
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:384 ../chkconfig.c:389 ../chkconfig.c:503
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:384 ../chkconfig.c:389 ../chkconfig.c:503
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:465
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:467
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:611
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:650
+#: ../chkconfig.c:623
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:631
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:691
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -136,27 +137,27 @@ msgstr ""
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""

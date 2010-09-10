@@ -204,13 +204,13 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	if (depfail) {
 		if (s->startDeps) {
 			for (i = 0; s->startDeps[i].name; i++) {
-				if (!s->startDeps[i].handled)
+				if (!s->startDeps[i].handled && strcmp(s->startDeps[i].name,"$local_fs"))
 					return -1;
 			}
 		}
 		if (s->stopDeps) {
 			for (i = 0; s->stopDeps[i].name; i++) {
-				if (!s->stopDeps[i].handled)
+				if (!s->stopDeps[i].handled && strcmp(s->stopDeps[i].name,"$local_fs"))
 					return -1;
 			}
 		}
