@@ -57,7 +57,7 @@ int isOn(char * name, int where);
 int isConfigured(char * name, int level, int *priority, char *type);
 int doSetService(struct service s, int level, int on);
 int findServiceEntries(char * name, int level, glob_t * globresptr);
-int readXinetdServiceInfo(char *name, struct service *service, int honorHide);
+int readXinetdServiceInfo(char *name, struct service *service);
 int setXinetdService(struct service s, int on);
 
 #endif
