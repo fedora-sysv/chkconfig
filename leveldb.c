@@ -293,7 +293,7 @@ int readServices(struct service **services) {
 }
 
 int readServiceInfo(char * name, int type, struct service * service, int honorHide) {
-    char * filename;
+    char * filename = NULL;
     int fd;
     struct service serv, serv_overrides;
     int parseret;
@@ -341,7 +341,7 @@ try_xinetd:
 }
 
 int readServiceDifferences(char * name, int type, struct service * service, struct service * service_overrides, int honorHide) {
-    char * filename;
+    char * filename = NULL;
     int fd;
     struct service serv, serv_overrides;
     int parseret;

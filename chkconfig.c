@@ -360,7 +360,7 @@ static int overrideService(char * name, int srvtype) {
 }
 
 static int showServiceInfo(struct service s, int forgiving) {
-    int rc;
+    int rc = 0;
     int i;
 
     if (s.type == TYPE_INIT_D) {
