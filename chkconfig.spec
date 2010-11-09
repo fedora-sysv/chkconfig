@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.48
+Version: 1.3.49
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov  9 2010 Bill Nottingham <notting@redhat.com> 1.3.49-1
+- fix abort on free of uninitialized data. (#649227)
+
 * Wed Oct 27 2010 Bill Nottingham <notting@redhat.com> 1.3.48-1
 - fix install_initd invocation for services that require $local_fs (#632294)
 
