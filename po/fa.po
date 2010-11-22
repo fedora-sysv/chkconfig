@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2010-11-20 11:54+0330\n"
+"PO-Revision-Date: 2010-11-22 09:04+0330\n"
 "Last-Translator: sihi <sohi666@gmail.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -256,52 +256,52 @@ msgstr "                --دایرکتوری جایگزین <directory> --admind
 #: ../alternatives.c:172
 #, c-format
 msgid "reading %s\n"
-msgstr ""
+msgstr "در حال خواندن  %s\n"
 
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr ""
+msgstr "خطا در باز کردن %s: %s\n"
 
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr ""
+msgstr "خطا در خواندن %s: %s\n"
 
 #: ../alternatives.c:194
 #, c-format
 msgid "%s empty!\n"
-msgstr ""
+msgstr "%s خالی!\n"
 
 #: ../alternatives.c:203
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "خطا در خط  1 از %s\n"
 
 #: ../alternatives.c:210
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "خطای لینک اصلی در %s\n"
 
 #: ../alternatives.c:222
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "مسیر %s پیش بینی نشده در %s\n"
 
 #: ../alternatives.c:231
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "اشکال مسیر پیرو %s در %s\n"
 
 #: ../alternatives.c:241
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "خطای پیش بینی نشده در انتهای فایل %s\n"
 
 #: ../alternatives.c:250
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "پیش بینی مسیر جایگزین در  %s\n"
 
 #: ../alternatives.c:251
 #: ../alternatives.c:272
@@ -309,138 +309,138 @@ msgstr ""
 #: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "ورودی پیش بینی نشده در %s: %s\n"
 
 #: ../alternatives.c:271
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "انتظار اولویت عددی در %s\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "انتظار مسیر پیرو در %s\n"
 
 #: ../alternatives.c:322
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr ""
+msgstr "خطا در خواندن لینک %s: %s\n"
 
 #: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
+msgstr "لینک به مسیر جایگزین اشاره ندارد -- در حال تغییر حالت به دستی\n"
 
 #: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "لینک تغییر یافته -- در حال تغییر به حالت دستی\n"
 
 #: ../alternatives.c:369
 #: ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "با ید حذف شود %s\n"
 
 #: ../alternatives.c:371
 #: ../alternatives.c:378
 #: ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "خطا در حذف لینک  %s: %s\n"
 
 #: ../alternatives.c:394
 #: ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "لینک خواهد شد %s -> %s\n"
 
 #: ../alternatives.c:399
 #: ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "خطا در لینک کردن  %s -> %s: %s\n"
 
 #: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
-msgstr ""
+msgstr "%s از قبل وحود دارد\n"
 
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr ""
+msgstr "خطا در ایجاد %s: %s\n"
 
 #: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "خطا در جایگزین کردن %s با %s: %s\n"
 
 #: ../alternatives.c:507
 #: ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
-msgstr ""
+msgstr "اجرای %s\n"
 
 #: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "لینک اصلی برای  %s با ید باشد %s\n"
 
 #: ../alternatives.c:623
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "لینک %s برای لینک پیرو غلط است %s (%s %s)\n"
 
 #: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr ""
+msgstr "%s - وضعیت اتوماتیک است .\n"
 
 #: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr ""
+msgstr "%s - وضعیت دستی است.\n"
 
 #: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr "لینک در حال حاظر اشاره دارد به %s\n"
 
 #: ../alternatives.c:671
 #, c-format
 msgid "%s - priority %d\n"
-msgstr ""
+msgstr "%s - اولویت %d\n"
 
 #: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr "پیرو %s: %s\n"
 
 #: ../alternatives.c:679
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr ""
+msgstr "حاری `best' نسخه ای است از %s.\n"
 
 #: ../alternatives.c:709
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "وجود دارد %d برنامه ای که در حال ایجاد  '%s'.\n"
 
 #: ../alternatives.c:709
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "وجود دارد  %d برنامه ای برای ایجاد '%s'.\n"
 
 #: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "انتخاب    دستور\n"
 
 #: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
+msgstr "برای باقیماندن انتخاب جاری enter کنید [+], یا عدد دلخواه واردنمایید : "
 
 #: ../alternatives.c:723
 #, c-format
@@ -448,35 +448,37 @@ msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
+"\n"
+"خطا در خواندن انتخاب \n"
 
 #: ../alternatives.c:750
 #: ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s برای نسخه جایگزین تنظیم نشده است %s\n"
 
 #: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(حذف خواهد شد %s\n"
 
 #: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "خطا در حذف %s: %s\n"
 
 #: ../alternatives.c:916
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "دایکتوری جایگزین  %s iنامعتبر است \n"
 
 #: ../alternatives.c:922
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "دایرکتوری ادمین %s نامعتبر\n"
 
 #: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "نسخه جایگزین %s\n"
 
