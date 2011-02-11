@@ -244,7 +244,8 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 	*service = serv;
 	return 0;
 out_err:
-        close(fd);
+        if (fd >= 0)
+            close(fd);
         free(buf);
         free(filename);
         return -1;
@@ -418,7 +419,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next, *tmpbufstart;
     struct service serv = {
-	    	    name: NULL,
+		    name: NULL,
 		    levels: -1,
 		    kPriority: -1,
 		    sPriority: -1,
@@ -805,4 +806,3 @@ int doSetService(struct service s, int level, int on) {
 
     return 0;
 }
-
