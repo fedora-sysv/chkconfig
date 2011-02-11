@@ -19,8 +19,8 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <glob.h>
-#include <libintl.h> 
-#include <locale.h> 
+#include <libintl.h>
+#include <locale.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <stdlib.h>
@@ -31,10 +31,10 @@
 /* Changes
    1998-09-22 - Arnaldo Carvalho de Melo <acme@conectiva.com.br>
                 i18n for init.d scripts (eg.: description(pt_BR) is a brazilian
-		portuguese description for the package) 
+		portuguese description for the package)
 */
 
-#define _(String) gettext((String)) 
+#define _(String) gettext((String))
 
 #include "leveldb.h"
 
@@ -54,7 +54,7 @@ int parseLevels(char * str, int emptyOk) {
     return rc;
 }
 
-int readDescription(char *start, char *bufstop, char **english_desc, char **serv_desc) { 
+int readDescription(char *start, char *bufstop, char **english_desc, char **serv_desc) {
 	char english;
 	char my_lang_loaded = 0;
 	char is_my_lang = 0;
@@ -62,10 +62,10 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 	char * final_parenthesis;
 	char * end, *next;
 	int i;
-	
+
 	english = *start == ':';
 	end = strchr(start, '\n');
-	if (!end) 
+	if (!end)
 	    next = end = bufstop;
 	else
 	    next = end + 1;
@@ -100,7 +100,7 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 	    while (desc[strlen(desc) - 1] == '\\') {
 		desc[strlen(desc) - 1] = '\0';
 		start = next;
-		
+
 		while (isspace(*start) && start < bufstop) start++;
 		if (start == bufstop || *start != '#') {
 		    return 1;
@@ -114,7 +114,7 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 		}
 
 		end = strchr(start, '\n');
-		if (!end) 
+		if (!end)
 		    next = end = bufstop;
 		else
 		    next = end + 1;
@@ -153,27 +153,27 @@ int readDescription(char *start, char *bufstop, char **english_desc, char **serv
 int readXinetdServiceInfo(char *name, struct service * service) {
 	char * filename;
 	int fd;
-	struct service serv = { 
+	struct service serv = {
 			name: NULL,
 			levels: -1,
 			kPriority: -1,
-			sPriority: -1, 
-			desc: NULL, 
-			startDeps: NULL, 
+			sPriority: -1,
+			desc: NULL,
+			startDeps: NULL,
 			stopDeps: NULL,
 			softStartDeps: NULL,
 			softStopDeps: NULL,
 		        provides: NULL,
-			type: TYPE_XINETD, 
-			isLSB: 0, 
+			type: TYPE_XINETD,
+			isLSB: 0,
 			enabled: -1
 	};
 	struct stat sb;
 	char * buf = NULL, *ptr;
 	char * eng_desc = NULL, *start;
-	
+
 	asprintf(&filename, XINETDDIR "/%s", name);
-	
+
 	if ((fd = open(filename, O_RDONLY)) < 0) goto out_err;
 	fstat(fd,&sb);
 	if (! S_ISREG(sb.st_mode)) goto out_err;
@@ -213,14 +213,14 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 			if (ptr) {
 				*ptr = '\0';
 				ptr++;
-			} 
+			}
 			buf = ptr;
 			continue;
 		}
 		while (isspace(*buf) && buf < ptr) buf++;
 		if (!strncmp(buf,"disable", 7)) {
 			buf = strstr(buf,"=");
-			if (buf) 
+			if (buf)
 			  do {
 				  buf++;
 			  } while(isspace(*buf));
@@ -238,7 +238,7 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 		if (ptr) {
 			*ptr = '\0';
 			ptr++;
-		} 
+		}
 		buf = ptr;
 	}
 	*service = serv;
@@ -417,19 +417,19 @@ static struct dep *parseDeps(char *pos, char *end) {
 int parseServiceInfo(int fd, char * name, struct service * service, int honorHide, int partialOk) {
     struct stat sb;
     char * bufstart, * bufstop, * start, * end, * next, *tmpbufstart;
-    struct service serv = { 
-	    	    name: NULL, 
-		    levels: -1, 
-		    kPriority: -1, 
-		    sPriority: -1, 
-		    desc: NULL, 
-		    startDeps: NULL, 
+    struct service serv = {
+	    	    name: NULL,
+		    levels: -1,
+		    kPriority: -1,
+		    sPriority: -1,
+		    desc: NULL,
+		    startDeps: NULL,
 		    stopDeps: NULL,
-		    softStartDeps: NULL, 
+		    softStartDeps: NULL,
 		    softStopDeps: NULL,
 		    provides: NULL,
-		    type: TYPE_INIT_D, 
-		    isLSB: 0, 
+		    type: TYPE_INIT_D,
+		    isLSB: 0,
 		    enabled: 0
     };
     char overflow;
@@ -440,13 +440,13 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 
     bufstart = mmap(NULL, sb.st_size, PROT_READ, MAP_SHARED, fd, 0);
     if (bufstart == ((caddr_t) -1)) {
-	close(fd);	
+	close(fd);
 	return -1;
     }
 
     tmpbufstart = (char*)malloc(sb.st_size+1);
     if (tmpbufstart == NULL) {
-	close(fd);	
+	close(fd);
 	return -1;
     }
 
@@ -464,10 +464,10 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	start = next;
 
 	while (isspace(*start) && start < bufstop) start++;
-	if (start == bufstop) break; 
+	if (start == bufstop) break;
 
 	end = strchr(start, '\n');
-	if (!end) 
+	if (!end)
 	    next = end = bufstop;
 	else
 	    next = end + 1;
@@ -477,7 +477,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	start++;
 	if (!strncmp(start, "## BEGIN INIT INFO", 18))
 		    serv.isLSB = 1;
-		
+
 	while (isspace(*start) && start < end) start++;
 	if (start == end) continue;
 	if (honorHide && !strncmp(start, "hide:", 5)) {
@@ -492,7 +492,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 
 	if (!strncmp(start, "chkconfig:", 10)) {
 	    int spri, kpri;
-	     
+
 	    start += 10;
 	    while (isspace(*start) && start < end) start++;
 	    if (start == end) {
@@ -540,11 +540,11 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 		}
 	} else if (!strncmp(start, "Default-Start:", 14)) {
 		char *t;
-		
+
 		start+=14;
 		while (1) {
 			int lev;
-			
+
 			lev = strtol(start, &t, 10);
 			if (t && t != start)
 				start = t;
@@ -556,11 +556,11 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 		}
 	} else if (!strncmp(start, "Default-Stop:", 13)) {
 		char *t;
-		
+
 		start+=13;
 		while (1) {
 			int lev;
-			
+
 			lev = strtol(start, &t, 10);
 			if (t && t != start)
 				start = t;
@@ -585,7 +585,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	} else if (!strncmp(start, "Provides:", 9)) {
 		char *t;
 		int numdeps = 0;
-		
+
 		start+=9;
 		while (1) {
 			while (*start && isspace(*start) && start < end) start++;
@@ -607,7 +607,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 			else
 				start = t;
 		}
-		
+
 	}
     }
 
@@ -623,7 +623,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 
     if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == -1)))) {
 	return 1;
-    } 
+    }
 
     serv.name = strdup(name);
     if (!serv.provides) {
@@ -651,7 +651,7 @@ int currentRunlevel(void) {
 
     pclose(p);
 
-    if (response[1] != ' ' || !isdigit(response[2]) || response[3] != '\n') 
+    if (response[1] != ' ' || !isdigit(response[2]) || response[3] != '\n')
 	return -1;
 
     return response[2] - '0';
@@ -731,7 +731,7 @@ int setXinetdService(struct service s, int on) {
 	char tmpstr[50];
 	char *buf, *ptr, *tmp;
 	struct stat sb;
-	
+
 	if (on == -1) {
 		on = s.enabled ? 1 : 0;
 	}
@@ -760,7 +760,7 @@ int setXinetdService(struct service s, int on) {
 		if (ptr) {
 			*ptr = '\0';
 			ptr++;
-		} 
+		}
 		while (isspace(*buf)) buf++;
 		if (strncmp(buf,"disable", 7) && strlen(buf)) {
 			write(newfd,tmp,strlen(tmp));
@@ -803,6 +803,6 @@ int doSetService(struct service s, int level, int on) {
 	return 1;
     }
 
-    return 0; 
+    return 0;
 }
 

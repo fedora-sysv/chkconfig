@@ -55,8 +55,8 @@ struct alternativeSet {
     char * currentLink;
 };
 
-enum programModes { MODE_UNKNOWN, MODE_INSTALL, MODE_REMOVE, MODE_AUTO, 
-		    MODE_DISPLAY, MODE_CONFIG, MODE_SET, 
+enum programModes { MODE_UNKNOWN, MODE_INSTALL, MODE_REMOVE, MODE_AUTO,
+		    MODE_DISPLAY, MODE_CONFIG, MODE_SET,
 		    MODE_SLAVE, MODE_VERSION, MODE_USAGE };
 
 static int usage(int rc) {
@@ -77,10 +77,10 @@ static int usage(int rc) {
     exit(rc);
 }
 
-static void setupSingleArg(enum programModes * mode, const char *** nextArgPtr, 
+static void setupSingleArg(enum programModes * mode, const char *** nextArgPtr,
 			   enum programModes newMode, char ** title) {
     const char ** nextArg = *nextArgPtr;
-    
+
     if (*mode != MODE_UNKNOWN) usage(2);
     *mode = newMode;
     nextArg++;
@@ -90,7 +90,7 @@ static void setupSingleArg(enum programModes * mode, const char *** nextArgPtr,
     *nextArgPtr = nextArg + 1;
 }
 
-static void setupDoubleArg(enum programModes * mode, const char *** nextArgPtr, 
+static void setupDoubleArg(enum programModes * mode, const char *** nextArgPtr,
 			   enum programModes newMode, char ** title,
 			   char ** target) {
     const char ** nextArg = *nextArgPtr;
@@ -143,7 +143,7 @@ char * parseLine(char ** buf) {
     return strdup(start);
 }
 
-static int readConfig(struct alternativeSet * set, const char * title, 
+static int readConfig(struct alternativeSet * set, const char * title,
 		      const char * altDir, const char * stateDir, int flags) {
     char * path;
     int fd;
@@ -255,10 +255,10 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	set->alts[set->numAlts].master.facility = strdup(groups[0].facility);
 	set->alts[set->numAlts].master.title = strdup(groups[0].title);
 	set->alts[set->numAlts].master.target = line;
-	set->alts[set->numAlts].numSlaves = numGroups - 1; 
+	set->alts[set->numAlts].numSlaves = numGroups - 1;
 	if (numGroups > 1)
-	    set->alts[set->numAlts].slaves = 
-		malloc((numGroups - 1) * 
+	    set->alts[set->numAlts].slaves =
+		malloc((numGroups - 1) *
 			sizeof(*set->alts[set->numAlts].slaves));
 	else
 	    set->alts[set->numAlts].slaves = NULL;
@@ -275,7 +275,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	if (end) {
 		char tmppath[500];
 		struct stat sbuf;
-		
+
 		while (*end && isspace(*end)) end++;
 		if (strlen(end)) {
 			snprintf(tmppath, 500, "/etc/init.d/%s", end);
@@ -296,9 +296,9 @@ static int readConfig(struct alternativeSet * set, const char * title,
 		return 1;
 	    }
 
-	    set->alts[set->numAlts].slaves[i - 1].title = 
+	    set->alts[set->numAlts].slaves[i - 1].title =
 			strdup(groups[i].title);
-	    set->alts[set->numAlts].slaves[i - 1].facility = 
+	    set->alts[set->numAlts].slaves[i - 1].facility =
 			strdup(groups[i].facility);
 		set->alts[set->numAlts].slaves[i - 1].target = (line && strlen(line)) ? line : NULL;
 	}
@@ -351,7 +351,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 static int isLink(char *path)  {
 	struct stat sbuf;
 	int rc = 0;
-	
+
 	rc = lstat(path, &sbuf);
 	if (!rc) {
 		rc = S_ISLNK(sbuf.st_mode);
@@ -379,7 +379,7 @@ static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
 		l->facility, strerror(errno));
 	return 1;
     }
-    
+
     return 0;
 }
 
@@ -402,7 +402,7 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 		    }
 	    }
     }
-	
+
     if (FL_TEST(flags)) {
 	printf(_("would link %s -> %s\n"), sl, l->target);
     } else {
@@ -410,15 +410,15 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 	    fprintf(stderr, _("failed to remove link %s: %s\n"),
 		    sl, strerror(errno));
 	    return 1;
-	} 
-	
+	}
+
 	if (symlink(l->target, sl)) {
 	    fprintf(stderr, _("failed to link %s -> %s: %s\n"),
 		    sl, l->target, strerror(errno));
 	    return 1;
 	}
     }
-    
+
     return 0;
 }
 
@@ -431,7 +431,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
     int i, j;
     int rc = 0;
     struct alternative * alt;
-    
+
     path = alloca(strlen(stateDir) + strlen(set->alts[0].master.title) + 6);
     sprintf(path, "%s/%s.new", stateDir, set->alts[0].master.title);
 
@@ -444,10 +444,10 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 	fd = open(path, O_RDWR | O_CREAT | O_EXCL, 0644);
 
     if (fd < 0) {
-	if (errno == EEXIST) 
+	if (errno == EEXIST)
 	    fprintf(stderr, _("%s already exists\n"), path);
-	else 
-	    fprintf(stderr, _("failed to create %s: %s\n"), path, 
+	else
+	    fprintf(stderr, _("failed to create %s: %s\n"), path,
 		    strerror(errno));
 	return 1;
     }
@@ -474,7 +474,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 		fprintf(f,"\n");
 	}
     }
-    
+
     fclose(f);
 
     if (!FL_TEST(flags) && rename(path, path2)) {
@@ -486,7 +486,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     if (set->mode == AUTO)
 		set->current = set->best;
-    
+
     alt = set->alts + ( set->current > 0 ? set->current : 0);
 
     if (forceLinks || set->mode == AUTO) {
@@ -524,7 +524,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
 static int linkCmp(const void *a, const void *b) {
 	struct linkSet *one = (struct linkSet *)a, *two = (struct linkSet *)b;
-	
+
 	return strcmp(one->facility, two->facility);
 }
 
@@ -535,7 +535,7 @@ static int addService(struct alternative newAlt, const char * altDir,
     struct linkSet * newLinks;
     int i, j, k, rc;
 
-    if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2) 
+    if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2)
 	return 2;
 
     if (set.numAlts) {
@@ -544,11 +544,11 @@ static int addService(struct alternative newAlt, const char * altDir,
 		    set.alts[0].master.title, set.alts[0].master.facility);
 	    return 2;
 	}
-	
+
         /* Determine the maximal set of slave links. */
         base.numSlaves = set.alts[0].numSlaves;
 	base.slaves = malloc(set.alts[0].numSlaves * sizeof(struct linkSet));
-	memcpy(base.slaves, set.alts[0].slaves, 
+	memcpy(base.slaves, set.alts[0].slaves,
 	       set.alts[0].numSlaves * sizeof(struct linkSet));
 
 	for (i = 0; i < newAlt.numSlaves; i++) {
@@ -564,14 +564,14 @@ static int addService(struct alternative newAlt, const char * altDir,
 			base.numSlaves++;
 		}
 	}
-	
+
 	/* Insert new set into the set of alternatives */
 	for (i = 0 ; i < set.numAlts ; i++) {
 		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
 			set.alts[i] = newAlt;
 			break;
 		}
-		
+
 	}
 	if (i == set.numAlts) {
 		set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
@@ -590,7 +590,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 					    && set.alts[j].slaves[k].target)
 						goto found;
 				}
-				
+
 			}
 			removeLinks(base.slaves + i, altDir, flags);
 			base.numSlaves--;
@@ -602,16 +602,16 @@ static int addService(struct alternative newAlt, const char * altDir,
 			i++;
 		}
 	}
-	
+
 	/* Sort the list for file legibility */
 	qsort(base.slaves, base.numSlaves, sizeof(struct linkSet), linkCmp);
-	    
+
 	/* need to match the slaves up; newLinks will parallel the original
 	   ordering */
 	for (k = 0; k < set.numAlts ; k++) {
 		newLinks = alloca(sizeof(*newLinks) * base.numSlaves);
 		newLinks = memset(newLinks, 0, sizeof(*newLinks) * base.numSlaves);
-	        
+
 		for (j = 0; j < base.numSlaves; j++) {
 			for (i = 0; i < set.alts[k].numSlaves; i++) {
 				if (!strcmp(set.alts[k].slaves[i].title,
@@ -645,7 +645,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 		    set.best = set.numAlts;
 	    set.numAlts++;
     }
-    
+
     if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
 
     return 0;
@@ -654,7 +654,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 static int displayService(char * title, const char * altDir,
 		          const char * stateDir, int flags) {
     struct alternativeSet set;
-	
+
     int alt;
     int slave;
 
@@ -662,7 +662,7 @@ static int displayService(char * title, const char * altDir,
 
     if (set.mode == AUTO)
 	printf(_("%s - status is auto.\n"), title);
-    else	
+    else
 	printf(_("%s - status is manual.\n"), title);
 
     printf(_(" link currently points to %s\n"), set.currentLink);
@@ -682,7 +682,7 @@ static int displayService(char * title, const char * altDir,
     return 0;
 }
 
-static int autoService(char * title, const char * altDir, 
+static int autoService(char * title, const char * altDir,
 		       const char * stateDir, int flags) {
     struct alternativeSet set;
 
@@ -695,7 +695,7 @@ static int autoService(char * title, const char * altDir,
     return 0;
 }
 
-static int configService(char * title, const char * altDir, 
+static int configService(char * title, const char * altDir,
 		       const char * stateDir, int flags) {
     struct alternativeSet set;
     int i;
@@ -746,8 +746,8 @@ static int setService(const char * title, const char * target,
 	if (!strcmp(set.alts[i].master.target, target)) break;
 
     if (i == set.numAlts) {
-	fprintf(stderr, 
-	        _("%s has not been configured as an alternative for %s\n"), 
+	fprintf(stderr,
+	        _("%s has not been configured as an alternative for %s\n"),
 		target, title);
 	return 2;
     }
@@ -772,8 +772,8 @@ static int removeService(const char * title, const char * target,
 	if (!strcmp(set.alts[i].master.target, target)) break;
 
     if (i == set.numAlts) {
-	fprintf(stderr, 
-	        _("%s has not been configured as an alternative for %s\n"), 
+	fprintf(stderr,
+	        _("%s has not been configured as an alternative for %s\n"),
 		target, title);
 	return 2;
     }
@@ -791,11 +791,11 @@ static int removeService(const char * title, const char * target,
 	if (FL_TEST(flags)) {
 	    printf(_("(would remove %s\n"), path);
 	} else if (unlink(path)) {
-	    fprintf(stderr, _("failed to remove %s: %s\n"), path, 
+	    fprintf(stderr, _("failed to remove %s: %s\n"), path,
 		    strerror(errno));
 	    rc |= 1;
 	}
-	
+
 	if (rc) return 2; else return 0;
     }
 
@@ -835,9 +835,9 @@ int main(int argc, const char ** argv) {
     char * stateDir = "/var/lib/alternatives";
     struct stat sb;
 
-    setlocale(LC_ALL, ""); 
-    bindtextdomain("chkconfig","/usr/share/locale"); 
-    textdomain("chkconfig"); 
+    setlocale(LC_ALL, "");
+    bindtextdomain("chkconfig","/usr/share/locale");
+    textdomain("chkconfig");
 
     if (!argv[1])
 	return usage(2);
@@ -867,7 +867,7 @@ int main(int argc, const char ** argv) {
 	} else if (!strcmp(*nextArg, "--initscript")) {
 	    if (mode != MODE_UNKNOWN && mode != MODE_INSTALL) usage(2);
 	    nextArg++;
-	    
+
 	    if (!*nextArg) usage(2);
 	    newAlt.initscript = strdup(*nextArg);
 	    nextArg++;
@@ -881,12 +881,12 @@ int main(int argc, const char ** argv) {
 	    setupSingleArg(&mode, &nextArg, MODE_DISPLAY, &title);
 	} else if (!strcmp(*nextArg, "--config")) {
 	    setupSingleArg(&mode, &nextArg, MODE_CONFIG, &title);
-	} else if (!strcmp(*nextArg, "--help") || 
+	} else if (!strcmp(*nextArg, "--help") ||
 		   !strcmp(*nextArg, "--usage")) {
 	    if (mode != MODE_UNKNOWN) usage(2);
 	    mode = MODE_USAGE;
 	    nextArg++;
-	} else if (!strcmp(*nextArg, "--test")) { 
+	} else if (!strcmp(*nextArg, "--test")) {
 	    flags |= FLAGS_TEST;
 	    nextArg++;
 	} else if (!strcmp(*nextArg, "--verbose")) {

@@ -17,8 +17,8 @@
 #include <dirent.h>
 #include <errno.h>
 #include <glob.h>
-#include <libintl.h> 
-#include <locale.h> 
+#include <libintl.h>
+#include <locale.h>
 #include <popt.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,7 +28,7 @@
 
 static char *progname;
 
-#define _(String) gettext((String)) 
+#define _(String) gettext((String))
 
 #include "leveldb.h"
 
@@ -245,7 +245,7 @@ static int frobDependencies(struct service *s) {
 	do {
 	  	nResolved = 0;
 		int i;
-		
+
 		for (i = 0; i < numservs ; i++) {
 			if ((servs+i)->isLSB && strcmp((servs+i)->name, s->name))
 				nResolved += frobOneDependencies(servs+i, servs, numservs, 0, 0);
@@ -266,7 +266,7 @@ static int addService(char * name, int type) {
 	readServiceError(rc, name);
 	return 1;
     }
-	
+
     if (s.type == TYPE_XINETD) return 0;
     checkRoot();
 
@@ -300,7 +300,7 @@ static int overrideService(char * name, int srvtype) {
     if ((rc = readServiceDifferences(name, srvtype, &s, &o, 0))) {
 	return 0;
     }
-	
+
     if (s.type == TYPE_XINETD) return 0;
 
     checkRoot();
@@ -321,7 +321,7 @@ static int overrideService(char * name, int srvtype) {
      * being added, and not if the service has never been configured
      * at all.
      */
-    
+
     for (level = 0; level < 7; level++) {
 	thisLevelAdded = isConfigured(name, level, &priority, &type);
         thisLevelOn = s.levels & 1<<level;
@@ -412,7 +412,7 @@ static int showServiceInfoByName(char * name, int type, int forgiving) {
 static int isXinetdEnabled() {
 	int i;
 	struct service s;
-	
+
 	if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
 		return 0;
 	}
@@ -448,19 +448,19 @@ static int listService(char * item, int type) {
 
     if (type & TYPE_INIT_D) {
         numServices = readServices(&services);
-    
+
         qsort(services, numServices, sizeof(*services), serviceNameCmp);
-	
+
         for (i = 0; i < numServices ; i++) {
 	    if (showServiceInfo(services[i], 1)) {
 		    return 1;
 	    }
         }
     }
-		    
+
     if (isXinetdEnabled() && type & TYPE_XINETD) {
 	    struct service *s, *t;
-	  
+
 	    printf("\n");
 	    printf(_("xinetd based services:\n"));
 	    if (!(dir = opendir(XINETDDIR))) {
@@ -471,7 +471,7 @@ static int listService(char * item, int type) {
 	    numServices = 0;
 	    numServicesAlloced = 10;
 	    s = malloc(sizeof (*s) * numServicesAlloced);
-	    
+
 	    while ((ent = readdir(dir))) {
 		    const char *dn;
 
@@ -486,7 +486,7 @@ static int listService(char * item, int type) {
 		    dn = ent->d_name + strlen(ent->d_name) - 1;
 		    if (*dn == '~' || *dn == ',')
 		      continue;
-	    
+
 		    if (numServices == numServicesAlloced) {
 			    numServicesAlloced += 10;
 			    s = realloc(s, numServicesAlloced * sizeof (*s));
@@ -494,7 +494,7 @@ static int listService(char * item, int type) {
 		    if (readXinetdServiceInfo(ent->d_name, s + numServices) != -1)
 			    numServices ++;
 	    }
-	    
+
 	    qsort(s, numServices, sizeof(*s), xinetdNameCmp);
 	    t = s;
 	    for (i = 0; i < numServices; i++, s++) {
@@ -512,7 +512,7 @@ int setService(char * name, int type, int where, int state) {
     int i, rc;
     int what;
     struct service s;
-    
+
     if (!where && state != -1) {
 	/* levels 2, 3, 4, 5 */
 	where = (1 << 2) | (1 << 3) | (1 << 4) | (1 << 5);
@@ -530,11 +530,11 @@ int setService(char * name, int type, int where, int state) {
 
     if (s.type == TYPE_INIT_D) {
 	    int rc = 0;
-	    
+
 	    if (s.isLSB)
 		    frobDependencies(&s);
 	    for (i = 0; i < 7; i++) {
-		    
+
 		    if (!((1 << i) & where)) continue;
 
 		    if (state == 1 || state == 0)
@@ -577,7 +577,7 @@ int main(int argc, const char ** argv) {
 	    { "type", '\0', POPT_ARG_STRING, &typeString, 0 },
 	    { "help", 'h', POPT_ARG_NONE, &help, 0 },
 	    { "version", 'v', POPT_ARG_NONE, &version, 0 },
-	    { 0, 0, 0, 0, 0 } 
+	    { 0, 0, 0, 0, 0 }
     };
 
     if ((progname = strrchr(argv[0], '/')) != NULL)
@@ -593,16 +593,16 @@ int main(int argc, const char ** argv) {
 	    LSB++;
     }
 
-    setlocale(LC_ALL, ""); 
-    bindtextdomain("chkconfig","/usr/share/locale"); 
-    textdomain("chkconfig"); 
+    setlocale(LC_ALL, "");
+    bindtextdomain("chkconfig","/usr/share/locale");
+    textdomain("chkconfig");
 
     optCon = poptGetContext("chkconfig", argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
 
     if ((rc = poptGetNextOpt(optCon)) < -1) {
-	fprintf(stderr, "%s: %s\n", 
-		poptBadOption(optCon, POPT_BADOPTION_NOALIAS), 
+	fprintf(stderr, "%s: %s\n",
+		poptBadOption(optCon, POPT_BADOPTION_NOALIAS),
 		poptStrerror(rc));
 	exit(1);
     }
@@ -636,9 +636,9 @@ int main(int argc, const char ** argv) {
     if (addItem) {
 	char * name = (char *)poptGetArg(optCon);
 
-	if (!name || !*name || poptGetArg(optCon)) 
+	if (!name || !*name || poptGetArg(optCon))
 	    usage();
-	
+
 	name = basename(name);
 	return addService(name, type);
     } else if (delItem) {
@@ -692,7 +692,7 @@ int main(int argc, const char ** argv) {
 			    "a chkconfig query\n"));
 		    exit(1);
 		}
-	    } 
+	    }
 	    rc = readServiceInfo(name, type, &s, 0);
 	    if (rc)
 	       return 1;
@@ -701,7 +701,7 @@ int main(int argc, const char ** argv) {
 		       return !s.levels;
 	       else
 		       return 1;
-	    } else	
+	    } else
 	       return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
 	    return setService(name, type, where, 1);

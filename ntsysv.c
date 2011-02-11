@@ -17,8 +17,8 @@
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
-#include <libintl.h> 
-#include <locale.h> 
+#include <libintl.h>
+#include <locale.h>
 #include <newt.h>
 #include <popt.h>
 #include <stdio.h>
@@ -27,7 +27,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#define _(String) gettext((String)) 
+#define _(String) gettext((String))
 
 #include "leveldb.h"
 
@@ -48,8 +48,8 @@ static int servicesWindow(struct service * services, int numServices,
     newtGetScreenSize(&width, &height);
     width = width > 80 ? width - 60 : 20;
     height = height > 25 ? height - 17 : 8;
-	
-	
+
+
     sb = newtVerticalScrollbar(-1, -1, height, NEWT_COLORSET_CHECKBOX,
 				    NEWT_COLORSET_ACTCHECKBOX);
 
@@ -59,11 +59,11 @@ static int servicesWindow(struct service * services, int numServices,
 
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
-    
+
     for (i = 0; i < numServices; i++) {
 	if (services[i].type == TYPE_XINETD) {
-		checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
-				     services[i].levels ? '*' : ' ', NULL, 
+		checkboxes[i] = newtCheckbox(-1, i, services[i].name,
+				     services[i].levels ? '*' : ' ', NULL,
 				     states + i);
 	} else {
 		for (j = 0; j < 7; j++) {
@@ -71,8 +71,8 @@ static int servicesWindow(struct service * services, int numServices,
 				if (isOn(services[i].name, j)) break;
 			}
 		}
-		checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
-					     (j != 7) ? '*' : ' ', NULL, 
+		checkboxes[i] = newtCheckbox(-1, i, services[i].name,
+					     (j != 7) ? '*' : ' ', NULL,
 					     states + i);
 	}
 	newtFormAddComponent(subform, checkboxes[i]);
@@ -116,7 +116,7 @@ static int servicesWindow(struct service * services, int numServices,
 		for (i = 0; i < numServices; i++)
 		    if (curr == checkboxes[i]) break;
 
-		if (i < numServices && services[i].desc) 
+		if (i < numServices && services[i].desc)
 		    newtWinMessage(services[i].name, _("Ok"), services[i].desc);
 	    }
 	} else {
@@ -124,10 +124,10 @@ static int servicesWindow(struct service * services, int numServices,
 	    update = (e.u.co == ok);
 	}
     }
-    
+
     newtPopWindow();
     newtFormDestroy(form);
-    
+
     if (!update) return 1;
 
     for (i = 0; i < numServices; i++) {
@@ -188,15 +188,15 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 
 	if (numServices == numServicesAlloced) {
 	    numServicesAlloced += 10;
-	    services = realloc(services, 
+	    services = realloc(services,
 				numServicesAlloced * sizeof(*services));
 	}
 
 	rc = readServiceInfo(ent->d_name, TYPE_INIT_D, services + numServices, honorHide);
-        
+
 	if (!rc) {
 		int i;
-		
+
 		rc = -2;
 		for (i = 0 ; i < 7 ; i++) {
 			if (isConfigured(ent->d_name, i, NULL, NULL)) {
@@ -205,7 +205,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 			}
 		}
 	}
-	 
+
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));
@@ -237,12 +237,12 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 
 	if (numServices == numServicesAlloced) {
 	    numServicesAlloced += 10;
-	    services = realloc(services, 
+	    services = realloc(services,
 				numServicesAlloced * sizeof(*services));
 	}
 
 	rc = readXinetdServiceInfo(ent->d_name, services + numServices);
-	
+
 	if (rc == -1) {
 	    fprintf(stderr, _("error reading info for service %s: %s\n"),
 			ent->d_name, strerror(errno));
@@ -279,12 +279,12 @@ int main(int argc, const char ** argv) {
 	    { "back", '\0', 0, &backButton, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levelsStr, 0 },
 	    { "hide", '\0', 0, &hide, 0 },
-	    { 0, 0, 0, 0, 0 } 
+	    { 0, 0, 0, 0, 0 }
     };
 
-    setlocale(LC_ALL, ""); 
-    bindtextdomain("chkconfig", "/usr/share/locale"); 
-    textdomain("chkconfig"); 
+    setlocale(LC_ALL, "");
+    bindtextdomain("chkconfig", "/usr/share/locale");
+    textdomain("chkconfig");
 
     progName = (char *)argv[0];
 
@@ -292,13 +292,13 @@ int main(int argc, const char ** argv) {
 	fprintf(stderr, _("You must be root to run %s.\n"),progName);
 	exit(1);
     }
-    
+
     optCon = poptGetContext(progName, argc, argv, optionsTable, 0);
     poptReadDefaultConfig(optCon, 1);
 
     if ((rc = poptGetNextOpt(optCon)) < -1) {
-	fprintf(stderr, "%s: %s\n", 
-		poptBadOption(optCon, POPT_BADOPTION_NOALIAS), 
+	fprintf(stderr, "%s: %s\n",
+		poptBadOption(optCon, POPT_BADOPTION_NOALIAS),
 		poptStrerror(rc));
 	exit(1);
     }
@@ -323,8 +323,8 @@ int main(int argc, const char ** argv) {
     newtPushHelpLine(NULL);
     newtDrawRootText(0, 0,
 		     "ntsysv " VERSION " - (C) 2000-2001 Red Hat, Inc. ");
-   
-    if (levels==-1) 
+
+    if (levels==-1)
      levels=(1<<currentRunlevel());
 
     rc = servicesWindow(services, numServices, levels, backButton);
