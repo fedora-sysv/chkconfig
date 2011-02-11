@@ -558,6 +558,31 @@ int setService(char * name, int type, int where, int state) {
     return 0;
 }
 
+#ifndef SYSTEMD_SERVICE_PATH
+#define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
+#endif
+
+void forwardSystemd(const char *name, int type, const char *verb) {
+    char *p;
+
+    if (type == TYPE_XINETD)
+        return;
+
+    asprintf(&p, SYSTEMD_SERVICE_PATH "/%s.service", name);
+
+    if (access(p, F_OK) >= 0) {
+
+        fprintf(stderr, _("Note: Forwarding request to 'systemctl %s %s'.\n"),
+                verb, p + sizeof(SYSTEMD_SERVICE_PATH));
+
+        execlp("systemctl", "systemctl", verb, p + sizeof(SYSTEMD_SERVICE_PATH), NULL);
+        fprintf(stderr, _("Failed to forward service request to systemctl: %m\n"));
+        exit(1);
+    }
+
+    free(p);
+}
+
 int main(int argc, const char ** argv) {
     int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
     int type = TYPE_ANY;
@@ -660,6 +685,12 @@ int main(int argc, const char ** argv) {
 
 	if (item && poptGetArg(optCon)) usage();
 
+        if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0) {
+	    fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
+                              "      systemd services. SysV configuration data might be overriden by native\n"
+                              "      systemd configuration.\n\n"));
+        }
+
 	return listService(item, type);
     } else {
 	char * name = (char *)poptGetArg(optCon);
@@ -675,6 +706,9 @@ int main(int argc, const char ** argv) {
 	}
 
 	if (!state) {
+
+            forwardSystemd(name, type, "is-enabled");
+
 	    if (where) {
 		rc = x = 0;
 		i = where;
@@ -703,11 +737,13 @@ int main(int argc, const char ** argv) {
 		       return 1;
 	    } else
 	       return isOn(name, level) ? 0 : 1;
-	} else if (!strcmp(state, "on"))
-	    return setService(name, type, where, 1);
-	else if (!strcmp(state, "off"))
+	} else if (!strcmp(state, "on")) {
+            forwardSystemd(name, type, "enable");
+            return setService(name, type, where, 1);
+        } else if (!strcmp(state, "off")) {
+            forwardSystemd(name, type, "disable");
 	    return setService(name, type, where, 0);
-	else if (!strcmp(state, "reset"))
+        } else if (!strcmp(state, "reset"))
 	    return setService(name, type, where, -1);
 	else if (!strcmp(state, "resetpriorities"))
 	    return setService(name, type, where, -2);
