@@ -244,7 +244,8 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 	*service = serv;
 	return 0;
 out_err:
-        close(fd);
+        if (fd >= 0)
+            close(fd);
         free(buf);
         free(filename);
         return -1;
