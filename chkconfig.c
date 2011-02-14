@@ -34,6 +34,10 @@ static char *progname;
 
 static int LSB = 0;
 
+#ifndef SYSTEMD_SERVICE_PATH
+#define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
+#endif
+
 static void usage(void) {
     fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
@@ -66,6 +70,14 @@ static void checkRoot() {
 		fprintf(stderr, _("You do not have enough privileges to perform this operation.\n"));
 		exit(1);
 	}
+}
+
+static void reloadSystemd(void) {
+
+    if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0) {
+        fprintf(stderr, "reloading...\n");
+        system("systemctl daemon-reload > /dev/null 2>&1");
+    }
 }
 
 static int delService(char *name, int type, int level) {
@@ -547,7 +559,10 @@ int setService(char * name, int type, int where, int state) {
 		      what = 0;
 		    rc |= doSetService(s, i, what);
 	    }
-	    return rc;
+
+            reloadSystemd();
+
+            return rc;
     } else if (s.type == TYPE_XINETD) {
 	    if (setXinetdService(s, state)) {
 		    return 1;
@@ -557,10 +572,6 @@ int setService(char * name, int type, int where, int state) {
 
     return 0;
 }
-
-#ifndef SYSTEMD_SERVICE_PATH
-#define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
-#endif
 
 void forwardSystemd(const char *name, int type, const char *verb) {
     char *p;
@@ -660,26 +671,38 @@ int main(int argc, const char ** argv) {
 
     if (addItem) {
 	char * name = (char *)poptGetArg(optCon);
+        int r;
 
 	if (!name || !*name || poptGetArg(optCon))
 	    usage();
 
 	name = basename(name);
-	return addService(name, type);
+	r = addService(name, type);
+        reloadSystemd();
+
+        return r;
     } else if (delItem) {
 	char * name = (char *)poptGetArg(optCon);
+        int r;
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	name = basename(name);
-	return delService(name, type, -1);
+	r = delService(name, type, -1);
+        reloadSystemd();
+
+        return r;
     } else if (overrideItem) {
 	char * name = (char *)poptGetArg(optCon);
+        int r;
 
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
         name = basename(name);
-	return overrideService(name, type);
+	r = overrideService(name, type);
+        reloadSystemd();
+
+        return r;
     } else if (listItem) {
 	char * item = (char *)poptGetArg(optCon);
 
@@ -747,8 +770,6 @@ int main(int argc, const char ** argv) {
 	    return setService(name, type, where, -1);
 	else if (!strcmp(state, "resetpriorities"))
 	    return setService(name, type, where, -2);
-	else
-	    usage();
     }
 
     usage();
