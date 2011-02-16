@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-04 00:13-0400\n"
+"POT-Creation-Date: 2011-02-14 17:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,22 +93,43 @@ msgstr ""
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:611
+#: ../chkconfig.c:575
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:579
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:636
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:623
+#: ../chkconfig.c:648
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:631
+#: ../chkconfig.c:656
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:691
+#: ../chkconfig.c:689
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overriden by "
+"native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:725
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -162,22 +183,22 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:262
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../leveldb.c:670
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:713
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:801
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

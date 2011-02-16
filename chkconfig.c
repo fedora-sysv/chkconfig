@@ -75,7 +75,6 @@ static void checkRoot() {
 static void reloadSystemd(void) {
 
     if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0) {
-        fprintf(stderr, "reloading...\n");
         system("systemctl daemon-reload > /dev/null 2>&1");
     }
 }
