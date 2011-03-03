@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.net
+
+[chkconfig.default]
+file_filter = po/<lang>.po
+source_file = po/chkconfig.pot
+source_lang = en
+
