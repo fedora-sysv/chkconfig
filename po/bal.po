@@ -389,7 +389,7 @@ msgstr "%s حالت اتونت.\n"
 #: ../alternatives.c:662
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%a حالت دستینت.\n"
+msgstr "%s حالت دستینت.\n"
 
 #: ../alternatives.c:664
 #, c-format
