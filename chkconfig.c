@@ -38,6 +38,10 @@ static int LSB = 0;
 #define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
 #endif
 
+#ifndef SYSTEMD_BINARY_PATH
+#define SYSTEMD_BINARY_PATH "/bin/systemd"
+#endif
+
 static void usage(void) {
     fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
@@ -74,7 +78,7 @@ static void checkRoot() {
 
 static void reloadSystemd(void) {
 
-    if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0) {
+    if (access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
         system("systemctl daemon-reload > /dev/null 2>&1");
     }
 }
@@ -669,6 +673,10 @@ int main(int argc, const char ** argv) {
 	exit(1);
     }
 
+    if (getenv("SYSTEMCTL_SKIP_REDIRECT") != NULL) {
+        noRedirectItem = 1;
+    }
+
     if (addItem) {
 	char * name = (char *)poptGetArg(optCon);
         int r;
@@ -708,7 +716,8 @@ int main(int argc, const char ** argv) {
 
 	if (item && poptGetArg(optCon)) usage();
 
-        if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0) {
+        if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0 &&
+            access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
 	    fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
                               "      systemd services. SysV configuration data might be overriden by native\n"
                               "      systemd configuration.\n\n"));
