@@ -594,7 +594,7 @@ void forwardSystemd(const char *name, int type, const char *verb) {
 }
 
 int main(int argc, const char ** argv) {
-    int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0;
+    int listItem = 0, addItem = 0, delItem = 0, overrideItem = 0, noRedirectItem = 0;
     int type = TYPE_ANY;
     int rc, i, x;
     char * levels = NULL;
@@ -606,6 +606,7 @@ int main(int argc, const char ** argv) {
 	    { "add", '\0', 0, &addItem, 0 },
 	    { "del", '\0', 0, &delItem, 0 },
 	    { "override", '\0', 0, &overrideItem, 0 },
+	    { "no-redirect", '\0', 0, &noRedirectItem, 0},
 	    { "list", '\0', 0, &listItem, 0 },
 	    { "level", '\0', POPT_ARG_STRING, &levels, 0 },
 	    { "levels", '\0', POPT_ARG_STRING, &levels, 0 },
@@ -728,8 +729,9 @@ int main(int argc, const char ** argv) {
 	}
 
 	if (!state) {
-
-            forwardSystemd(name, type, "is-enabled");
+	    if (!noRedirectItem) {
+		forwardSystemd(name, type, "is-enabled");
+	    }
 
 	    if (where) {
 		rc = x = 0;
@@ -760,10 +762,14 @@ int main(int argc, const char ** argv) {
 	    } else
 	       return isOn(name, level) ? 0 : 1;
 	} else if (!strcmp(state, "on")) {
-            forwardSystemd(name, type, "enable");
-            return setService(name, type, where, 1);
+	    if (!noRedirectItem) {
+		forwardSystemd(name, type, "enable");
+	    }
+	    return setService(name, type, where, 1);
         } else if (!strcmp(state, "off")) {
-            forwardSystemd(name, type, "disable");
+	    if (!noRedirectItem) {
+		forwardSystemd(name, type, "disable");
+	    }
 	    return setService(name, type, where, 0);
         } else if (!strcmp(state, "reset"))
 	    return setService(name, type, where, -1);

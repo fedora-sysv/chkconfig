@@ -4,7 +4,7 @@
 chkconfig \- updates and queries runlevel information for system services
 
 .SH SYNOPSIS
-\fBchkconfig\fR [\fB--list\fR] [\fB--type\fR \fItype\fR][\fIname\fR]
+\fBchkconfig\fR [\fB--list\fR] [\fB--type\fR \fItype\fR] [\fIname\fR]
 .br
 \fBchkconfig\fR \fB--add\fR \fIname\fR
 .br
@@ -12,9 +12,9 @@ chkconfig \- updates and queries runlevel information for system services
 .br
 \fBchkconfig\fR \fB--override\fR \fIname\fR
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] \fIname\fR 
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR 
 .br
 
 .SH DESCRIPTION
@@ -79,6 +79,15 @@ and \fIxinetd\fR.
 Specifies the run levels an operation should pertain to. It is given as
 a string of numbers from 0 to 6. For example, \fB--level 35\fR specifies
 runlevels 3 and 5.
+
+.TP
+\fB-\-no-redirect\fR
+When chkconfig is run on a system that uses systemd as its init system,
+chkconfig will forward commands to systemd if a systemd service
+file exists for it.  This switch turns off the redirection to systemd and
+only operates on the symlinks in /etc/rc[0-6].d. This option is only
+valid when \fBon\fR, \fBoff\fR, or no command (to check enablement)
+is passed to a service.
 
 .TP
 \fB-\-add\fR \fIname\fR
