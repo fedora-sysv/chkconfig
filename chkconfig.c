@@ -24,6 +24,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 static char *progname;
@@ -77,10 +79,16 @@ static void checkRoot() {
 }
 
 static void reloadSystemd(void) {
+    struct stat a, b;
 
-    if (access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
-        system("systemctl daemon-reload > /dev/null 2>&1");
-    }
+    if (lstat("/sys/fs/cgroup", &a) < 0)
+	return;
+    if (lstat("/sys/fs/cgroup/systemd", &b) < 0)
+	return;
+    if (a.st_dev == b.st_dev)
+	return;
+
+    system("systemctl daemon-reload");
 }
 
 static int delService(char *name, int type, int level) {
