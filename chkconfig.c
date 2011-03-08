@@ -746,7 +746,7 @@ int main(int argc, const char ** argv) {
 	}
 
 	if (!state) {
-	    if (!noRedirectItem) {
+	    if (!noRedirectItem && !levels) {
 		forwardSystemd(name, type, "is-enabled");
 	    }
 
