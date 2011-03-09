@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.50
+Version: 1.3.51
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Mar 09 2011 Bill Nottingham <notting@redhat.com> 1.3.51-1
+- further fixes to systemctl integration (<lennart@poettering.net>, <arvidjaar@gmail.com>)
+
 * Wed Feb 16 2011 Bill Nottingham <notting@redhat.com> 1.3.50-1
 - forward actions to systemctl when necessary (<lennart@poettering.net>)
 - assorted translation updates
