@@ -590,6 +590,9 @@ void forwardSystemd(const char *name, int type, const char *verb) {
     if (type == TYPE_XINETD)
         return;
 
+    if (access(SYSTEMD_BINARY_PATH, F_OK) < 0)
+	return;
+
     asprintf(&p, SYSTEMD_SERVICE_PATH "/%s.service", name);
 
     if (access(p, F_OK) >= 0) {
