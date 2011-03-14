@@ -88,7 +88,7 @@ static void reloadSystemd(void) {
     if (a.st_dev == b.st_dev)
 	return;
 
-    system("systemctl daemon-reload");
+    system("systemctl daemon-reload > /dev/null 2>&1");
 }
 
 static int delService(char *name, int type, int level) {
