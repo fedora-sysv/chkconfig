@@ -1,116 +1,139 @@
-# Greek translation of chkconf.
-# Copyright (C) 2002, 2004 Free Software Foundation, Inc.
-# Simos Xenitellis <simos@hellug.gr>, 2002.
-# Nikos Charonitakis <charosn@her.forthnet.gr>, 2004.
-# jiannis bonatakis <california17@gmail.com>,2008	Nikos Charonitakis <charosn@her.forthnet.gr>, 2008.
-# Pierros Papadeas <ppapadeas@gmail.com>, 2008
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: el.po\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-09 15:56-0400\n"
-"PO-Revision-Date: 2009-11-04 11:15+0200\n"
-"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
-"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Greek\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s έκδοση %s - Πνευματικά δικαιώματα (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Μπορείτε να το αναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας GNU.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
+msgstr ""
+"Μπορείτε να το αναδιανείμετε σύμφωνα με τους όρους της Δημόσιας Άδειας "
+"GNU.\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "χρήση:   %s [--list] [--type <τύπος>] [όνομα]\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <όνομα>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <όνομα>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <όνομα>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <επίπεδα>]  [--type <τύπος>] <όνομα> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί σε κανένα runlevel (εκτελέστε 'chkconfig --add %s')\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"η υπηρεσία %s υποστηρίζει το chkconfig αλλά δεν έχει καταχωρηθεί σε κανένα "
+"runlevel (εκτελέστε 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "η υπηρεσία %s δεν υποστηρίζει το chkconfig\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "σφάλμα ανάγνωσης πληροφοριών επί της υπηρεσίας %s: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Δεν έχετε επαρκή δικαιώματα για να εκτελέσετε αυτή την λειτουργία.\n"
 
-#: ../chkconfig.c:379
-#: ../chkconfig.c:384
-#: ../chkconfig.c:498
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "ενεργό"
 
-#: ../chkconfig.c:379
-#: ../chkconfig.c:384
-#: ../chkconfig.c:498
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "ανενεργό"
 
-#: ../chkconfig.c:460
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "υπηρεσίες βασισμένες στο xinetd:\n"
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s\n"
 
-#: ../chkconfig.c:606
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s έκδοση %s\n"
 
-#: ../chkconfig.c:618
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "το --type πρέπει να είναι 'sysv' ή 'xinetd'\n"
 
-#: ../chkconfig.c:626
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "μπορούν να καθοριστούν μόνο ένα από τα --list, --add ή --del\n"
 
-#: ../chkconfig.c:686
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -121,8 +144,7 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr "Πατήστε <F1> για περισσότερες πληροφορίες για μια υπηρεσία."
 
-#: ../ntsysv.c:83
-#: ../ntsysv.c:120
+#: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
 msgstr "Εντάξει"
 
@@ -142,49 +164,47 @@ msgstr "Ποιες υπηρεσίες θέλετε να εκκινούνται �
 msgid "Services"
 msgstr "Υπηρεσίες"
 
-#: ../ntsysv.c:183
-#: ../ntsysv.c:210
-#: ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "σφάλμα ανάγνωσης πληροφοριών για την υπηρεσία %s: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Πρέπει να είστε υπερχρήστης για να εκτελέσετε το %s.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "εσφαλμένο όρισμα στο --levels\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Δεν υπάρχουν υπηρεσίες που μπορεί να διαχειριστεί το ntsysv!\n"
 
-#: ../leveldb.c:259
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "αποτυχία ανοίγματος του %s/init.d: %s\n"
 
-#: ../leveldb.c:667
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "αποτυχία ανάπτυξης σχεδίου %s: %s\n"
 
-#: ../leveldb.c:710
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
 
-#: ../leveldb.c:798
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "αποτυχία δημιουργίας συμβολικού συνδέσμου %s: %s\n"
@@ -206,7 +226,8 @@ msgstr ""
 #: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "χρήση:·alternatives·--install·<σύνδεση>·<όνομα>·<διαδρομή>·<προτεραιότητα>\n"
+msgstr ""
+"χρήση:·alternatives·--install·<σύνδεση>·<όνομα>·<διαδρομή>·<προτεραιότητα>\n"
 
 #: ../alternatives.c:66
 #, c-format
@@ -308,143 +329,142 @@ msgstr "απρόσμενο τέλος αρχείου στη %s\n"
 msgid "path to alternate expected in %s\n"
 msgstr "αναμένεται διαδρομή για αλλαγή στο %s\n"
 
-#: ../alternatives.c:270
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "αναμένεται αριθμητική προτεραιότητα στο %s\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "αναμονή δευτερεύουσας διαδρομής στο·%s\n"
-
-#: ../alternatives.c:311
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
+#: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "απρόσμενη γραμμή στη %s: %s\n"
 
-#: ../alternatives.c:319
+#: ../alternatives.c:271
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "αναμένεται αριθμητική προτεραιότητα στο %s\n"
+
+#: ../alternatives.c:294
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "αναμονή δευτερεύουσας διαδρομής στο·%s\n"
+
+#: ../alternatives.c:322
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "αποτυχία ανάγνωσης σύνδεσης %s: %s\n"
 
-#: ../alternatives.c:333
+#: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "οι συνδέσεις δεν δείχνουν σε alternative -- ορισμός χειρωνακτικής κατάστασης\n"
+msgstr ""
+"οι συνδέσεις δεν δείχνουν σε alternative -- ορισμός χειρωνακτικής "
+"κατάστασης\n"
 
-#: ../alternatives.c:338
+#: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "η σύνδεση τροποποιήθηκε -- ορισμός χειρωνακτικής κατάστασης\n"
 
-#: ../alternatives.c:366
-#: ../alternatives.c:373
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "προς μετακίνηση %s\n"
 
-#: ../alternatives.c:368
-#: ../alternatives.c:375
-#: ../alternatives.c:406
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "αποτυχία διαγραφής σύνδεσης %s: %s\n"
 
-#: ../alternatives.c:391
-#: ../alternatives.c:403
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "προς σύνδεση %s -> %s\n"
 
-#: ../alternatives.c:395
-#: ../alternatives.c:412
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "αποτυχία δημιουργίας σύνδεσης %s -> %s: %s\n"
 
-#: ../alternatives.c:444
+#: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
 msgstr "το %s υπάρχει ήδη\n"
 
-#: ../alternatives.c:446
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "αποτυχία δημιουργίας %s: %s\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "αποτυχία αντικατάστασης %s με %s: %s\n"
 
-#: ../alternatives.c:503
-#: ../alternatives.c:512
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr "εκτελείται %s\n"
 
-#: ../alternatives.c:539
+#: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "η κύρια σύνδεση για·%s·πρέπει να είναι·%s\n"
 
-#: ../alternatives.c:619
+#: ../alternatives.c:623
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "σύνδεση·%s·λανθασμένη για δευτερεύουσα·%s·(%s·%s)\n"
 
-#: ../alternatives.c:660
+#: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s·-· αυτόματη κατάσταση.\n"
 
-#: ../alternatives.c:662
+#: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s·- χειροκίνητη κατάσταση.\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "η σύνδεση αυτή τη στιγμή δείχνει στο·%s\n"
 
-#: ../alternatives.c:667
+#: ../alternatives.c:671
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - προτεραιότητα %d\n"
 
-#: ../alternatives.c:670
+#: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " δευτερεύουσα %s: %s\n"
 
-#: ../alternatives.c:675
+#: ../alternatives.c:679
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Τωρινή 'καλύτερη' έκδοση είναι·%s.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Υπάρχει %d πρόγραμμα που παρέχει '%s'.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Υπάρχουν %d προγράμματα που παρέχουν '%s'.\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
 msgstr " Επιλογή   Εντολή\n"
 
-#: ../alternatives.c:716
+#: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Πατήστε Enter για να διατηρήσετε την τρέχουσα επιλογή[+], ή πληκτρολόγησε αριθμό επιλογής·"
+msgstr ""
+"Πατήστε Enter για να διατηρήσετε την τρέχουσα επιλογή[+], ή πληκτρολόγησε "
+"αριθμό επιλογής·"
 
-#: ../alternatives.c:719
+#: ../alternatives.c:723
 #, c-format
 msgid ""
 "\n"
@@ -453,37 +473,32 @@ msgstr ""
 "\n"
 "σφάλμα ανάγνωσης επιλογής\n"
 
-#: ../alternatives.c:746
-#: ../alternatives.c:772
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s δεν έχει ρυθμιστεί ως μια εναλλακτική για·%s\n"
 
-#: ../alternatives.c:788
+#: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(προς απομάκρυνση %s\n"
 
-#: ../alternatives.c:790
+#: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "αποτυχία απομάκρυνσης του %s: %s\n"
 
-#: ../alternatives.c:912
+#: ../alternatives.c:916
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s δεν είναι έγκυρο\n"
 
-#: ../alternatives.c:918
+#: ../alternatives.c:922
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s δεν είναι έγκυρο\n"
 
-#: ../alternatives.c:928
+#: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "έκδοση alternatives  %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "σφάλμα ανάγνωσης από τον κατάλογο %s/init.d: %s\n"
-

@@ -1,115 +1,139 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2002 Free Software Foundation, Inc.
-# pclouds <pclouds@gmx.net>, 2002.
-#
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig VERSION\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2003-10-18 20:39+0700\n"
-"Last-Translator: pclouds <pclouds@gmx.net>\n"
-"Language-Team: GnomeVI <gnomevi-list@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s phiên bản %s - Bản quyền (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
-"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU "
-"Public License.\n"
+"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU"
+" Public License.\n"
 
-#: ../chkconfig.c:42
-#, fuzzy, c-format
+#: ../chkconfig.c:50
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "cách dùng:   %s --list [tên]\n"
+msgstr ""
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <tên>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <tên>\n"
 
-#: ../chkconfig.c:45
-#, fuzzy, c-format
-msgid "         %s --override <name>\n"
-msgstr "         %s --del <tên>\n"
-
-#: ../chkconfig.c:46
-#, fuzzy, c-format
-msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <mức>] <tên> %s)\n"
-
 #: ../chkconfig.c:53
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:54
+#, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr ""
+
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"dịch vụ %s hỗ trợ chkconfig, nhưng không được dùng trong bất kỳ runlevel nào "
-"(chạy 'chkconfig --add %s')\n"
+"dịch vụ %s hỗ trợ chkconfig, nhưng không được dùng trong bất kỳ runlevel nào"
+" (chạy 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "dịch vụ %s không hỗ trợ chkconfig\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "lỗi đọc thông tin về dịch vụ %s: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "bật"
 
-#: ../chkconfig.c:351 ../chkconfig.c:356 ../chkconfig.c:470
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "tắt"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "dịch vụ dựa trên xinetd:\n"
 
-#: ../chkconfig.c:434
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "lỗi mở thư mục %s: %s\n"
 
-#: ../chkconfig.c:578
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s phiên bản %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:598
-#, fuzzy, c-format
+#: ../chkconfig.c:671
+#, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "chỉ có thể dùng một trong --list, --add, --del\n"
+msgstr ""
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chỉ có thể xác định một runlevel trong truy vấn chkconfig\n"
@@ -138,47 +162,47 @@ msgstr "Dịch vụ nào nên được khởi động tự động?"
 msgid "Services"
 msgstr "Dịch vụ"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "lỗi đọc thông tin dịch vụ %s: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "lỗi đọc từ thư mục %s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Bạn phải là root mới có thể chạy %s.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "tham số --levels sai\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Không có dịch vụ nào được quản lý bởi ntsysv!\n"
 
-#: ../leveldb.c:260
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "lỗi mở %s/init.d: %s\n"
 
-#: ../leveldb.c:668
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "lỗi glob mẫu %s: %s\n"
 
-#: ../leveldb.c:711
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "không thể xác định runlevel hiện thời\n"
 
-#: ../leveldb.c:799
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "lỗi tạo symlink %s: %s\n"
@@ -194,15 +218,15 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU "
-"Public License.\n"
+"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
-"cách dùng: alternatives --install <liên kết> <tên> <đường dẫn> <độ ưu tiên>\n"
+"cách dùng: alternatives --install <liên kết> <tên> <đường dẫn> <độ ưu "
+"tiên>\n"
 
 #: ../alternatives.c:66
 #, c-format
@@ -304,137 +328,138 @@ msgstr "kết thúc tập tin không mong đợi trong %s\n"
 msgid "path to alternate expected in %s\n"
 msgstr "cần đường dẫn thay thế trong %s\n"
 
-#: ../alternatives.c:270
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "cần độ ưu tiên dạng số trong %s\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "cần đường dẫn slave trong %s\n"
-
-#: ../alternatives.c:311
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
+#: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "dòng không mong đợi %s: %s\n"
 
-#: ../alternatives.c:319
-#, fuzzy, c-format
-msgid "failed to read link %s: %s\n"
-msgstr "lỗi đọc %s: %s\n"
+#: ../alternatives.c:271
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "cần độ ưu tiên dạng số trong %s\n"
 
-#: ../alternatives.c:333
+#: ../alternatives.c:294
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "cần đường dẫn slave trong %s\n"
+
+#: ../alternatives.c:322
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr ""
+
+#: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 
-#: ../alternatives.c:338
+#: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "liên kết đã thay đổi -- đặt chế độ thủ công\n"
 
-#: ../alternatives.c:366 ../alternatives.c:373
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "cần loại bỏ %s\n"
 
-#: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "lỗi loại bỏ liên kết %s: %s\n"
 
-#: ../alternatives.c:391 ../alternatives.c:403
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "liên kết %s -> %s\n"
 
-#: ../alternatives.c:395 ../alternatives.c:412
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "lỗi liên kết %s -> %s: %s\n"
 
-#: ../alternatives.c:444
+#: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s đã tồn tại rồi\n"
 
-#: ../alternatives.c:446
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "lỗi tạo %s: %s\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "lỗi thay thế liên kết %s bằng %s: %s\n"
 
-#: ../alternatives.c:503 ../alternatives.c:512
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr ""
 
-#: ../alternatives.c:539
+#: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "liên kết chính cho %s phải là %s\n"
 
-#: ../alternatives.c:619
+#: ../alternatives.c:623
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "liên kết %s không đúng cho slave %s (%s %s)\n"
 
-#: ../alternatives.c:660
+#: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - trạng thái tự động.\n"
 
-#: ../alternatives.c:662
+#: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - trạng thái thủ công.\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " liên kết hiện thời trỏ đến %s\n"
 
-#: ../alternatives.c:667
+#: ../alternatives.c:671
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - độ ưu tiên %d\n"
 
-#: ../alternatives.c:670
+#: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slave %s: %s\n"
 
-#: ../alternatives.c:675
+#: ../alternatives.c:679
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Phiên bản `tốt nhất' hiện thời là %s.\n"
 
-#: ../alternatives.c:705
-#, fuzzy, c-format
+#: ../alternatives.c:709
+#, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "Có %d chương trình cung cấp '%s\".\n"
+msgstr ""
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Có %d chương trình cung cấp '%s\".\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
 msgstr ""
 
-#: ../alternatives.c:716
+#: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
-#: ../alternatives.c:719
+#: ../alternatives.c:723
 #, c-format
 msgid ""
 "\n"
@@ -443,38 +468,32 @@ msgstr ""
 "\n"
 "lỗi đọc lựa chọn\n"
 
-#: ../alternatives.c:746 ../alternatives.c:772
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr ""
 
-#: ../alternatives.c:788
+#: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(loại bỏ %s\n"
 
-#: ../alternatives.c:790
+#: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "lỗi loại bỏ %s: %s\n"
 
-#: ../alternatives.c:912
+#: ../alternatives.c:916
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:918
+#: ../alternatives.c:922
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:928
+#: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "phiên bản thay thế %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s\n"
-#~ msgstr "lỗi đọc từ thư mục %s/init.d: %s\n"
-
-#~ msgid "error reading from directory %s/init.d: %s"
-#~ msgstr "lỗi đọc từ thư mục %s/init.d: %s"

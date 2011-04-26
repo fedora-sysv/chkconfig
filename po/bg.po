@@ -1,99 +1,143 @@
-# translation of bg.po to Bulgarian
-# translation of bg.po to
-# translation of bg.po to
-# translation of bg.po to
-# translation of chkconfig.po to
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Николай Сърмаджиев,преносим <nikolayds@msn.com>, 2004.
-# Doncho N. Gunchev <mr700@globalnet.bg>, 2005.
-# Doncho N. Gunchev <gunchev@gmail.com>, 2007.
-# Alexander Todorov <atodorov@redhat.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: bg\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2008-03-11 10:41+0100\n"
-"Last-Translator: Alexander Todorov <atodorov@redhat.com>\n"
-"Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: Bulgarian <trans-bg@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s версия %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "Програмата се разпространява свободно под условията на GPL.\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:50
+#, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
+msgstr "usage: %s [--list] [--type <тип>] [име]\n"
+
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <име>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <име>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <име>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:54
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "услугата %s поддържа chkconfig, но не е включена в никое работно ниво (runlevel) (изпълнете chkconfig --add %s')\n"
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr "%s [--level <нива>] [--type <тип>] <име> %s\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:61
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"услугата %s поддържа chkconfig, но не е включена в никое работно ниво "
+"(runlevel) (изпълнете chkconfig --add %s')\n"
+
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "услугата %s не поддържа chkconfig\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "грешка при четене на информацията за услуга %s: %s\n"
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:74
+#, c-format
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr "Нямате достатъчно права за да изпълнявате тази операция.\n"
+
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "да"
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "не "
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd базирани услуги:\n"
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "неуспех при отваряне на директория %s: %s\n"
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:663
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr "--type трябва да бъде 'sysv' или 'xinetd'\n"
+
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "може да бъде зададена само една от опциите --list, --add, --del или --override\n"
+msgstr ""
+"може да бъде зададена само една от опциите --list, --add, --del или "
+"--override\n"
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "може да бъде зададено само едно работно ниво при запитване към chkconfig\n"
+msgstr ""
+"може да бъде зададено само едно работно ниво при запитване към chkconfig\n"
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
@@ -119,47 +163,47 @@ msgstr "Кои услуги да се стартират автоматично?
 msgid "Services"
 msgstr "Услуги"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "грешка при четене на информацията за услуга %s: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "грешка при четене от директория %s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "За да изпълните %s трябва да бъдете root.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "лош аргумент за --levels\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Няма услуги, които биха могли да се управляват от ntsysv!\n"
 
-#: ../leveldb.c:261
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "неуспех при отваряне на %s/init.d: %s\n"
 
-#: ../leveldb.c:662
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "невъзможно е ползването на шаблона %s: %s\n"
 
-#: ../leveldb.c:705
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "не може да се определи текущото работно ниво\n"
 
-#: ../leveldb.c:793
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "неуспех при създаване на символна връзка %s: %s\n"
@@ -452,23 +496,3 @@ msgstr "admindir %s е невалидна\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives версия %s\n"
-
-#: ../chkconfig.c:42
-#, c-format
-msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "usage: %s [--list] [--type <тип>] [име]\n"
-
-#: ../chkconfig.c:46
-#, c-format
-msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "%s [--level <нива>] [--type <тип>] <име> %s\n"
-
-#: ../chkconfig.c:66
-#, c-format
-msgid "You do not have enough privileges to perform this operation.\n"
-msgstr "Нямате достатъчно права за да изпълнявате тази операция.\n"
-
-#: ../chkconfig.c:650
-#, c-format
-msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr "--type трябва да бъде 'sysv' или 'xinetd'\n"

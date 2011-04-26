@@ -1,121 +1,144 @@
-# translation of chkconfig.master.po to Marathi
-# Marathi translations for PACKAGE package.
-# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Automatically generated, 2004.
-# Rahul Bhalerao <rbhalera@redhat.com>, 2006.
-# Rahul Bhalerao <b.rahul.pm@gmail.com>, 2006.
-# sandeep shedmake <sandeep.shedmake@gmail.com>, 2007.
-# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
-# Sandeep Shedmake <sshedmak@redhat.com>, 2009.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig.master\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-09 15:56-0400\n"
-"PO-Revision-Date: 2009-09-22 14:09+0530\n"
-"Last-Translator: Sandeep Shedmake <sshedmak@redhat.com>\n"
-"Language-Team: Marathi <fedora-trans-mr@redhat.com>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-29 04:41+0000\n"
+"Last-Translator: sandeeps <sshedmak@redhat.com>\n"
+"Language-Team: Marathi <None>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s आवृत्ती %s - सर्वहक्काधिकार (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "GNU Public License च्या शर्तींअंतर्गत यांस मुक्तपणे पुनःवितरित करणे शक्य आहे.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
+msgstr ""
+"GNU Public License च्या शर्तींअंतर्गत यांस मुक्तपणे पुनःवितरित करणे शक्य "
+"आहे.\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "वापरणी:   %s [--list] [--type <type>] [name]\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <name>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s सेवा chkconfig ला समर्थन करते, पण कोणत्याही रनलेवलला संदर्भीत केलेली नाही "
-"('chkconfig --add %s' चालवा)\n"
+"%s सेवा chkconfig ला समर्थन करते, पण कोणत्याही रनलेवलला संदर्भीत केलेली नाही"
+" ('chkconfig --add %s' चालवा)\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "सेवा %s chkconfig ला समर्थन करत नाही\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s सेवेवर माहिती वाचण्यात चूक: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "हे कार्य करण्याकरीता तुमच्याकडे अतिरीक्त परवानगी नाही.\n"
 
-#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "चालू"
 
-#: ../chkconfig.c:379 ../chkconfig.c:384 ../chkconfig.c:498
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "बंद"
 
-#: ../chkconfig.c:460
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd आधारित सेवा:\n"
 
-#: ../chkconfig.c:462
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s निर्देशिका उघडण्यास अपयशी: %s\n"
 
-#: ../chkconfig.c:606
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr "टिप: विनंती 'systemctl %s %s' करीता फॉरवर्ड करा.\n"
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr "सर्व्हिस विनंतीला systemctl करीता फॉरवर्ड करण्यास अपयशी: %m\n"
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s आवृत्ती %s\n"
 
-#: ../chkconfig.c:618
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 'sysv' किंवा 'xinetd' नुरूप असयाला हवे\n"
 
-#: ../chkconfig.c:626
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del किंवा --override पैकी फक्त एकच दर्शवावा\n"
 
-#: ../chkconfig.c:686
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+"\n"
+"टिप: हे आऊटपुट फक्त SysV सर्व्हिसेस् दाखवतो व मुळ \n"
+"      systemd सर्व्हिसेस् समाविष्ट करत नाही. SysV संरचना डाटा मुळ\n"
+"      systemd संरचनाद्वारे खोडून पुनः लिहणे शक्य आहे.\n"
+"\n"
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig प्रश्नासाठी फक्त एकच रनलेवल दर्शवावी\n"
@@ -144,47 +167,47 @@ msgstr "कोणत्या सेवा आपोआप सुरू व्�
 msgid "Services"
 msgstr "सेवा"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s सेवेसाठी माहिती वाचण्यात चूक: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s निर्देशिकेतून वाचण्यात चूक: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s चालवण्यासाठी तुम्ही रूट असायला हवे.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels ला वाईट आर्ग्यूमेंट\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv द्वारे कोणत्याही सेवा व्यवस्थापित होणार नाहीत!\n"
 
-#: ../leveldb.c:259
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d उघडण्यात अपयशी: %s\n"
 
-#: ../leveldb.c:667
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s स्वरूप एकत्रित करण्यात अपयश: %s\n"
 
-#: ../leveldb.c:710
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "चालू रनलेवल ठरवू शकत नाही\n"
 
-#: ../leveldb.c:798
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s सिमलिंक बनवण्यात अपयशी: %s\n"
@@ -308,137 +331,141 @@ msgstr "%s मध्ये फाइलचा अनपेक्षित अं
 msgid "path to alternate expected in %s\n"
 msgstr "%s मध्ये विकल्पास पथ अपेक्षित\n"
 
-#: ../alternatives.c:270
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "%s मध्ये सांख्यिक प्राधान्यक्रम अपेक्षित\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "%s मध्ये स्लेव पथ अपेक्षित\n"
-
-#: ../alternatives.c:311
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
+#: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s मध्ये अनपेक्षित ओळ: %s\n"
 
-#: ../alternatives.c:319
+#: ../alternatives.c:271
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "%s मध्ये सांख्यिक प्राधान्यक्रम अपेक्षित\n"
+
+#: ../alternatives.c:294
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "%s मध्ये स्लेव पथ अपेक्षित\n"
+
+#: ../alternatives.c:322
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "%s लिंक वाचण्यास अपयशी: %s\n"
 
-#: ../alternatives.c:333
+#: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "लिंक कोणत्याही विकल्पास निर्देशित करत नाही -- रीत स्वहस्तेवर निर्धारित करत आहे\n"
+msgstr ""
+"लिंक कोणत्याही विकल्पास निर्देशित करत नाही -- रीत स्वहस्तेवर निर्धारित करत "
+"आहे\n"
 
-#: ../alternatives.c:338
+#: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "लिंक बदलली -- रीत स्वहस्तेवर निर्धारित करत आहे\n"
 
-#: ../alternatives.c:366 ../alternatives.c:373
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s काढून टाकेल\n"
 
-#: ../alternatives.c:368 ../alternatives.c:375 ../alternatives.c:406
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "लिंक %s काढून टाकण्यात अपयशी: %s\n"
 
-#: ../alternatives.c:391 ../alternatives.c:403
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s ला लिंक करेल -> %s\n"
 
-#: ../alternatives.c:395 ../alternatives.c:412
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s ला लिंक करण्यात अपयशी -> %s: %s\n"
 
-#: ../alternatives.c:444
+#: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s आधिच अस्तित्वात\n"
 
-#: ../alternatives.c:446
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s निर्माण करण्यास अपयशी: %s\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ला %s ने बदलण्यात अपयशी: %s\n"
 
-#: ../alternatives.c:503 ../alternatives.c:512
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr "%s चालवत आहे\n"
 
-#: ../alternatives.c:539
+#: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s साठी प्राथमिक लिंक %s असायला हवी\n"
 
-#: ../alternatives.c:619
+#: ../alternatives.c:623
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "लिंक %s %s स्लेव साठी अयोग्य (%s %s)\n"
 
-#: ../alternatives.c:660
+#: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - स्थिती स्वयं आहे.\n"
 
-#: ../alternatives.c:662
+#: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - स्थिती स्वहस्ते आहे.\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " लिंक सध्या %s ला निर्देश करते\n"
 
-#: ../alternatives.c:667
+#: ../alternatives.c:671
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - प्राधान्य %d\n"
 
-#: ../alternatives.c:670
+#: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " स्लेव %s: %s\n"
 
-#: ../alternatives.c:675
+#: ../alternatives.c:679
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "सध्याची 'उत्तम' आवृत्ती आहे %s.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d कार्यक्रम आहे जो '%s' पुरवतो.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d कार्यक्रम आहेत जो '%s' पुरवतो.\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  निवड    आदेश\n"
 
-#: ../alternatives.c:716
+#: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "सध्याची निवड[+] राहू देण्यासाठी दाखल करा, किंवा निवड क्रमांक टाइप करा. "
+msgstr ""
+"सध्याची निवड[+] राहू देण्यासाठी दाखल करा, किंवा निवड क्रमांक टाइप करा. "
 
-#: ../alternatives.c:719
+#: ../alternatives.c:723
 #, c-format
 msgid ""
 "\n"
@@ -447,33 +474,32 @@ msgstr ""
 "\n"
 "निवड वाचण्यात चूक\n"
 
-#: ../alternatives.c:746 ../alternatives.c:772
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s %s साठी विकल्प म्हणून व्यूहरचित केलेला नाही\n"
 
-#: ../alternatives.c:788
+#: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(%s काढून टाकेल\n"
 
-#: ../alternatives.c:790
+#: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s काढून टाकण्यात अपयशी: %s\n"
 
-#: ../alternatives.c:912
+#: ../alternatives.c:916
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s अवैध\n"
 
-#: ../alternatives.c:918
+#: ../alternatives.c:922
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s अवैध\n"
 
-#: ../alternatives.c:928
+#: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "पर्यायी आवृत्ती %s\n"
-

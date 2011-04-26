@@ -1,63 +1,62 @@
-# translation of chkconfig.master.po to Italiano
-#
-# Bettina De Monti  <bdemonti@redhat.it>, 2000.
-# Paolo Dona' <vik@3jv.com>, 2004.
-# Francesco Valente <fvalen@redhat.com>, 2004.
-# Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005.
-# Francesco Tombolini <tombo@adamantio.net>, 2006, 2007, 2008.
-# Guido Grazioli <guido.grazioli@gmail.com>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig.master\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2010-10-02 19:09+0100\n"
-"Last-Translator: Guido Grazioli <guido.grazioli@gmail.com>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
 "Language-Team: Italian <trans-it@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versione %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
 "Questo software è liberamente distribuibile secondo i termini della GNU "
 "Public License.\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "uso:   %s [--list] [--type·<tipo>] [nome]\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <nome>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <nome>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <nome>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <livelli>] [--type <tipo>] <nome> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -66,57 +65,77 @@ msgstr ""
 "il servizio %s supporta chkconfig, ma non è referenziato in nessun runlevel "
 "(eseguire 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "il servizio %s non supporta chkconfig\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "errore durante la lettura delle informazioni sul servizio %s: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Non si hanno privilegi sufficienti per eseguire questa operazione.\n"
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "servizi basati su xinetd:\n"
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "impossibile aprire la directory %s: %s\n"
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versione %s\n"
 
-#: ../chkconfig.c:650
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type deve essere 'sysv' o 'xinetd'\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "può essere specificata solo una delle opzioni --list, --add, --del o "
 "--override\n"
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "può essere specificato un solo runlevel per una query chkconfig\n"
@@ -145,47 +164,47 @@ msgstr "Quale servizi dovrebbero essere avviati automaticamente?"
 msgid "Services"
 msgstr "Servizi"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "errore durante la lettura delle informazioni per il servizio %s: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "errore durante la lettura dalla directory %s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "E' necessario essere root per eseguire %s.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "argomento errato per --levels\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "I servizi potrebbero non essere gestiti da ntsysv!\n"
 
-#: ../leveldb.c:261
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "impossibile aprire %s/init.d: %s\n"
 
-#: ../leveldb.c:662
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "impossibile eseguire il glob del pattern %s: %s\n"
 
-#: ../leveldb.c:705
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "impossibile determinare il runlevel attuale\n"
 
-#: ../leveldb.c:793
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "impossibile creare il link simbolico %s: %s\n"
@@ -201,8 +220,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Questo software è liberamente distribuibile secondo i termini della GNU "
-"Public License.\n"
+"Questo software è liberamente distribuibile secondo i termini della GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:65

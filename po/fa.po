@@ -1,113 +1,142 @@
-# Sinhalese translations for PACKAGE package.
-# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2004.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2010-11-22 09:04+0330\n"
-"Last-Translator: sihi <sohi666@gmail.com>\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: nano <nanopqr@gmail.com>\n"
+"Language-Team: Persian <None>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s نسخه %s -کپی رایت (C) 1997-2000 رد هت, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "این برنامه می تواند آزادانه تحت لیسانس GNU منتشر شود.\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "کاربرد:   %s [--list] [--type <type>] [name]\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --اضافه کردن <name>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --حذف <name>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --جایگزین کردن <name>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "سرویس %s chkconfig  را ساپورت میکند. ولی به تمام Runlevel ها ارجاع نمی شود   (run 'chkconfig --add %s')\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"سرویس %s chkconfig  را ساپورت میکند. ولی به تمام Runlevel ها ارجاع نمی شود"
+"   (run 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "سرویس %s  chkconfig  را پشتیبانی نمی کند\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "خطا در خواندن اطلاعات در سرویس %s: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "شما سطح دسترسی لازم برای انجام این عملیات راندارید .\n"
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "روشن"
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "خاموش"
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "سرویس های بر پایه xinetd :\n"
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "خطا در باز کردن دایرکتوری  %s: %s\n"
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr "توجه: درخواست را به 'systemctl %s %s' بفرستید.\n"
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr "فرستادن درخواست سرویس به systemctl: %m شکست خورد\n"
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s نسخه %s\n"
 
-#: ../chkconfig.c:650
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--نوع باید باشد 'sysv' یا 'xinetd'\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "فقط یکی از گزینه های  --لیست, --اضافه کردن, --حذف, یا --جایگزین کردن قابل اعمال است\n"
+msgstr ""
+"فقط یکی از گزینه های  --لیست, --اضافه کردن, --حذف, یا --جایگزین کردن قابل "
+"اعمال است\n"
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+"\nتوجه: این خروجی تنها سرویس‌های SysV را نمایش می‌دهد و شامل سرویس‌های ذاتی "
+"systemd نمی‌شود. داده پیکره‌بندی SysV ممکن است با پیکره‌بندی ذاتی systemd "
+"جایگزین شود.\n"
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "فقط یک runlevel  می تواند در chkconfig query اعمال گردد\n"
@@ -116,8 +145,7 @@ msgstr "فقط یک runlevel  می تواند در chkconfig query اعمال گ
 msgid "Press <F1> for more information on a service."
 msgstr "برای اطلاعات بیشتر در مورد سرویس <F1> را فشار دهید ."
 
-#: ../ntsysv.c:83
-#: ../ntsysv.c:120
+#: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
 msgstr "Ok"
 
@@ -137,49 +165,47 @@ msgstr "کدام سرویس ها باید بطور اتوماتیک استارت
 msgid "Services"
 msgstr "سرویس ها "
 
-#: ../ntsysv.c:183
-#: ../ntsysv.c:210
-#: ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "خطا در خواندن اطلاعات سرویس %s: %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "خطا در خواندن از دایرکتوری%s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "شما باید برای اجرای  %s دسترسی روت داشته باشید.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "استدلال غلط از  --levels\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "هیچ سرویسی با ntsysv مدیریت نشده است !\n"
 
-#: ../leveldb.c:261
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "خطا در بازکردن %s/init.d: %s\n"
 
-#: ../leveldb.c:662
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "خطا در قطعه الگوی %s: %s\n"
 
-#: ../leveldb.c:705
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "محیط اجرای جاری قابل تشخیص نیست \n"
 
-#: ../leveldb.c:793
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "خطا در ایجاد symlink %s: %s\n"
@@ -251,7 +277,8 @@ msgstr "گزینه های معمول: --verbose --test --help --usage --version\
 #: ../alternatives.c:75
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --دایرکتوری جایگزین <directory> --admindir <directory>\n"
+msgstr ""
+"                --دایرکتوری جایگزین <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:172
 #, c-format
@@ -303,9 +330,7 @@ msgstr "خطای پیش بینی نشده در انتهای فایل %s\n"
 msgid "path to alternate expected in %s\n"
 msgstr "پیش بینی مسیر جایگزین در  %s\n"
 
-#: ../alternatives.c:251
-#: ../alternatives.c:272
-#: ../alternatives.c:295
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
 #: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
@@ -336,27 +361,22 @@ msgstr "لینک به مسیر جایگزین اشاره ندارد -- در حا
 msgid "link changed -- setting mode to manual\n"
 msgstr "لینک تغییر یافته -- در حال تغییر به حالت دستی\n"
 
-#: ../alternatives.c:369
-#: ../alternatives.c:376
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "با ید حذف شود %s\n"
 
-#: ../alternatives.c:371
-#: ../alternatives.c:378
-#: ../alternatives.c:410
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "خطا در حذف لینک  %s: %s\n"
 
-#: ../alternatives.c:394
-#: ../alternatives.c:407
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "لینک خواهد شد %s -> %s\n"
 
-#: ../alternatives.c:399
-#: ../alternatives.c:416
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "خطا در لینک کردن  %s -> %s: %s\n"
@@ -376,8 +396,7 @@ msgstr "خطا در ایجاد %s: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "خطا در جایگزین کردن %s با %s: %s\n"
 
-#: ../alternatives.c:507
-#: ../alternatives.c:516
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr "اجرای %s\n"
@@ -440,7 +459,8 @@ msgstr "انتخاب    دستور\n"
 #: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "برای باقیماندن انتخاب جاری enter کنید [+], یا عدد دلخواه واردنمایید : "
+msgstr ""
+"برای باقیماندن انتخاب جاری enter کنید [+], یا عدد دلخواه واردنمایید : "
 
 #: ../alternatives.c:723
 #, c-format
@@ -451,8 +471,7 @@ msgstr ""
 "\n"
 "خطا در خواندن انتخاب \n"
 
-#: ../alternatives.c:750
-#: ../alternatives.c:776
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s برای نسخه جایگزین تنظیم نشده است %s\n"
@@ -481,4 +500,3 @@ msgstr "دایرکتوری ادمین %s نامعتبر\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "نسخه جایگزین %s\n"
-

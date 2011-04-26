@@ -1,219 +1,210 @@
-# translation of de.po to 
-# Copyright (C) 2001 Red Hat, Inc.
-# Ronny Buchmann <ronny-vlug@vlugnet.org> 2005
-# Claudia Krug <fhonig@redhat.it>, 2001.
-# Bernd Groh <bgroh@redhat.com>, 2003,2004.
-# Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
-# Timo Trinks <ttrinks@redhat.com>, 2007.
-# Fabian Affolter <fab@fedoraproject.org>, 2008.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: de\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-04 23:29-0500\n"
-"PO-Revision-Date: 2008-12-09 21:38+0100\n"
-"Last-Translator: Fabian Affolter <fab@fedoraproject.org>\n"
-"Language-Team: German <fedora-trans-de@redhat.com>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: German <trans-de@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"X-Poedit-Language: German\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s Version %s - Copyright (C) 1997-2008 Red Hat, Inc.\n"
 
-# ../chkconfig.c:23
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
+msgstr ""
+"Kostenlose Weitergabe unter den Bedingungen der GNU Public License "
+"erlaubt.\n"
 
-# ../chkconfig.c:26
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "Verwendung:   %s [--list] [--type <type>] [name]\n"
 
-# ../chkconfig.c:27
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <Name>\n"
 
-# ../chkconfig.c:28
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <Name>\n"
 
-# ../chkconfig.c:28
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <Name>\n"
 
-# ../chkconfig.c:29
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <Name> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "Dienst %s unterstützt chkconfig, besitzt aber keinen Bezug auf einen Runlevel (führen Sie 'chkconfig --add %s' aus)\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"Dienst %s unterstützt chkconfig, besitzt aber keinen Bezug auf einen "
+"Runlevel (führen Sie 'chkconfig --add %s' aus)\n"
 
-# ../chkconfig.c:36
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "Dienst %s unterstützt chkconfig nicht\n"
 
-# ../chkconfig.c:38
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
 
-# ../chkconfig.c:100
-#: ../chkconfig.c:351
-#: ../chkconfig.c:356
-#: ../chkconfig.c:470
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "Ein"
 
-# ../chkconfig.c:100
-#: ../chkconfig.c:351
-#: ../chkconfig.c:356
-#: ../chkconfig.c:470
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "Aus"
 
-#: ../chkconfig.c:432
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-basierende Dienste:\n"
 
-# ../chkconfig.c:117
-#: ../chkconfig.c:434
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "Fehler beim Öffnen des Verzeichnises %s: %s\n"
 
-# ../chkconfig.c:231
-#: ../chkconfig.c:578
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s Version %s\n"
 
-#: ../chkconfig.c:590
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type muss 'sysv' oder 'xinetd' sein\n"
 
-# ../chkconfig.c:238
-#: ../chkconfig.c:598
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "nur eines der Argumente --list, --add, --del oder --override darf angegeben werden\n"
+msgstr ""
+"nur eines der Argumente --list, --add, --del oder --override darf angegeben "
+"werden\n"
 
-# ../chkconfig.c:286
-#: ../chkconfig.c:658
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "für eine chkconfig-Anfrage kann nur ein Runlevel festgelegt werden\n"
 
-# ../ntsysv.c:30
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
 msgstr "Weitere Informationen zu einem Dienst erhalten Sie mit <F1>."
 
-# ../ntsysv.c:56 ../ntsysv.c:93
-#: ../ntsysv.c:83
-#: ../ntsysv.c:120
+#: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
 msgstr "OK"
 
-# ../ntsysv.c:56
 #: ../ntsysv.c:83
 msgid "Back"
 msgstr "Zurück"
 
-# ../ntsysv.c:56
 #: ../ntsysv.c:83
 msgid "Cancel"
 msgstr "Abbrechen"
 
-# ../ntsysv.c:68
 #: ../ntsysv.c:95
 msgid "What services should be automatically started?"
 msgstr "Welche Dienste sollen automatisch gestartet werden?"
 
-# ../ntsysv.c:74
 #: ../ntsysv.c:101
 msgid "Services"
 msgstr "Dienste"
 
-# ../ntsysv.c:164
-#: ../ntsysv.c:183
-#: ../ntsysv.c:210
-#: ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "Fehler beim Lesen von Informationen des Dienstes %s: %s\n"
 
-# ../ntsysv.c:173
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "Fehler beim Lesen von Verzeichnis %s: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Sie müssen als root angemeldet sein, um %s auszuführen.\n"
 
-# ../ntsysv.c:219
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "Ungültiges Argument bei --levels\n"
 
-# ../ntsysv.c:226
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Mit ntsysv können keine Dienste verwaltet werden!\n"
 
-# ../chkconfig.c:117
-#: ../leveldb.c:260
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "Fehler beim Öffnen von %s/init.d: %s\n"
 
-# ../leveldb.c:265
-#: ../leveldb.c:668
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "Fehler beim Mustervergleich des Musters %s: %s\n"
 
-# ../leveldb.c:296
-#: ../leveldb.c:711
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
-# ../leveldb.c:330
-#: ../leveldb.c:799
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "Fehler beim Erstellen der symbolischen Verknüpfung %s: %s\n"
@@ -223,7 +214,6 @@ msgstr "Fehler beim Erstellen der symbolischen Verknüpfung %s: %s\n"
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives Version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
-# ../chkconfig.c:23
 #: ../alternatives.c:64
 #, c-format
 msgid ""
@@ -243,7 +233,6 @@ msgstr "Verwendung: alternatives --install <Link> <Name> <Pfad> <Priorität>\n"
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <Dienst>]\n"
 
-# ../chkconfig.c:29
 #: ../alternatives.c:67
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
@@ -254,25 +243,21 @@ msgstr "                    [--slave <Link> <Name> <Pfad>]*\n"
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <Name> <Pfad>\n"
 
-# ../chkconfig.c:27
 #: ../alternatives.c:69
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <Name>\n"
 
-# ../chkconfig.c:27
 #: ../alternatives.c:70
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <Name>\n"
 
-# ../chkconfig.c:28
 #: ../alternatives.c:71
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <Name>\n"
 
-# ../chkconfig.c:28
 #: ../alternatives.c:72
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
@@ -298,13 +283,11 @@ msgstr "                --altdir <Verzeichnis> --admindir <Verzeichnis>\n"
 msgid "reading %s\n"
 msgstr "lese %s\n"
 
-# ../chkconfig.c:117
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "Fehler beim Öffnen von %s: %s\n"
 
-# ../chkconfig.c:117
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
@@ -345,149 +328,140 @@ msgstr "Unerwartetes Dateiende in %s\n"
 msgid "path to alternate expected in %s\n"
 msgstr "Pfad zum Wechseln in %s erwartet\n"
 
-#: ../alternatives.c:270
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "Numerische Priorität in %s erwartet\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "Slave-Pfad in %s erwartet\n"
-
-#: ../alternatives.c:311
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
+#: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "Unerwartete Zeile in %s: %s\n"
 
-# ../chkconfig.c:117
-#: ../alternatives.c:319
+#: ../alternatives.c:271
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "Numerische Priorität in %s erwartet\n"
+
+#: ../alternatives.c:294
+#, c-format
+msgid "slave path expected in %s\n"
+msgstr "Slave-Pfad in %s erwartet\n"
+
+#: ../alternatives.c:322
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "Fehler beim Lesen von Link %s: %s\n"
 
-#: ../alternatives.c:333
+#: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "Link zeigt zu keiner Alternative -- setze Modus auf manuell\n"
 
-#: ../alternatives.c:338
+#: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "Link geändert -- setze Modus auf manuell\n"
 
-#: ../alternatives.c:366
-#: ../alternatives.c:373
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "würde %s entfernen\n"
 
-# ../leveldb.c:330
-#: ../alternatives.c:368
-#: ../alternatives.c:375
-#: ../alternatives.c:406
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "Fehler beim Entfernen des Link %s: %s\n"
 
-#: ../alternatives.c:391
-#: ../alternatives.c:403
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "würde Link %s -> %s erstellen\n"
 
-# ../leveldb.c:330
-#: ../alternatives.c:395
-#: ../alternatives.c:412
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "Fehler beim Erstellen des Link %s -> %s: %s\n"
 
-#: ../alternatives.c:444
+#: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s bereits vorhanden\n"
 
-# ../leveldb.c:265
-#: ../alternatives.c:446
+#: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "Fehler beim Erzeugen von %s: %s\n"
 
-# ../leveldb.c:330
-#: ../alternatives.c:477
+#: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "Fehler beim Ersetzen von %s mit %s: %s\n"
 
-#: ../alternatives.c:503
-#: ../alternatives.c:512
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr "läuft %s\n"
 
-#: ../alternatives.c:539
+#: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "Der primäre Link für %s muss %s sein\n"
 
-#: ../alternatives.c:619
+#: ../alternatives.c:623
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "Link %s nicht richtig für Slave %s (%s %s)\n"
 
-#: ../alternatives.c:660
+#: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - Status ist automatisch.\n"
 
-#: ../alternatives.c:662
+#: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - Status ist manuell.\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " Link verweist auf %s\n"
 
-#: ../alternatives.c:667
+#: ../alternatives.c:671
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - Priorität %d\n"
 
-#: ../alternatives.c:670
+#: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " Slave %s: %s\n"
 
-#: ../alternatives.c:675
+#: ../alternatives.c:679
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Zur Zeit ist die `best' Version %s.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Es gibt %d Programm, welches '%s' zur Verfügung stellen.\n"
 
-#: ../alternatives.c:705
+#: ../alternatives.c:709
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Es gibt %d Programme, welche '%s' zur Verfügung stellen.\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Auswahl    Befehl\n"
 
-#: ../alternatives.c:716
+#: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Eingabe um die vorgegebene Auswahl[+] zu behalten oder geben Sie die Nummer an:"
+msgstr ""
+"Eingabe um die vorgegebene Auswahl[+] zu behalten oder geben Sie die Nummer "
+"an:"
 
-# ../ntsysv.c:164
-#: ../alternatives.c:719
+#: ../alternatives.c:723
 #, c-format
 msgid ""
 "\n"
@@ -496,36 +470,32 @@ msgstr ""
 "\n"
 "Fehler beim Lesen der Auswahl\n"
 
-#: ../alternatives.c:746
-#: ../alternatives.c:772
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s wurde nicht als eine Alternative für %s konfiguriert\n"
 
-#: ../alternatives.c:788
+#: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(würde %s entfernen\n"
 
-# ../chkconfig.c:117
-#: ../alternatives.c:790
+#: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "Fehler beim Entfernen von %s: %s\n"
 
-#: ../alternatives.c:912
+#: ../alternatives.c:916
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s ungültig\n"
 
-#: ../alternatives.c:918
+#: ../alternatives.c:922
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s ungültig\n"
 
-# ../chkconfig.c:231
-#: ../alternatives.c:928
+#: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternative Version %s\n"
-

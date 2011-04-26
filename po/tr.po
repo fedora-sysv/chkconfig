@@ -1,131 +1,149 @@
-# translation of tr.po to Turkish
-#
-# Turkish translations for chkconfig messages.
-# Copyright (C) 2002,2003, 2004, 2007 Free Software Foundation, Inc.
-# $Id: tr.po,v 1.40 2007/02/04 03:05:01 emturanb Exp $
-#
-#
-# Nilgün Belma Bugüner <nilgun@superonline.com>, 2002,2003.
-# Devrim GUNDUZ <devrim@gunduz.org>, 2003.
-# Hasan Umit Ezerce <humit@tr.net>, 2004.
-# Hasan Umit Ezerce <humit@linuxmail.org>, 2004.
-# Egemen Metin Turan <mturan@aegee-ankara.org>, 2007.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2010-10-20 13:08+0200\n"
-"Last-Translator: Hasan Alp iNAN <hasanalpinan@gmail.com>\n"
-"Language-Team: Turkish <none>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: Turkish <None>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
+msgstr ""
+"Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "kullanımı:   %s [--list]  [--type <tip>] [isim]\n"
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "             %s --add <isim>\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "             %s --del <isim>\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <isim>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <düzeyler>] [--type <tip>] <isim> %s\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
-msgstr "%s chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden çağırılmıyor ('chkconfig --add %s çalıştırın')\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"%s chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden çağırılmıyor "
+"('chkconfig --add %s çalıştırın')\n"
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s servisi chkconfig'i desteklemiyor\n"
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s servisi hakkında bilgi alınırken hata: %s\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Bu işlemi gerçekleştirmek için yeterli yetkilere sahip değilsiniz.\n"
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "açık"
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "kapalı"
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd tabanlı hizmetler:\n"
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s dizini açılamıyor: %s\n"
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s sürüm %s\n"
 
-#: ../chkconfig.c:650
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 'sysv' veya 'xinetd' olmalıdır\n"
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "--list, --add veya --override seçeneklerinden sadece biri belirtilebilir\n"
+msgstr ""
+"--list, --add veya --override seçeneklerinden sadece biri belirtilebilir\n"
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+msgstr ""
+"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
 msgstr "Servis hakkında daha fazla bilgi almak için <F1> tuşuna basın."
 
-#: ../ntsysv.c:83
-#: ../ntsysv.c:120
+#: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
 msgstr "Tamam"
 
@@ -145,49 +163,47 @@ msgstr "Hangi servisler otomatik olarak çalıştırılsın?"
 msgid "Services"
 msgstr "Servisler"
 
-#: ../ntsysv.c:183
-#: ../ntsysv.c:210
-#: ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s servisi hakkında bilgi alırken hata : %s\n"
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s dizininden okurken hata: %s\n"
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s in çalıştırılabilmesi için root yetkileri gerekiyor.\n"
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels için hatalı argüman\n"
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv tarafından yönetilebilecek hizmet yok!\n"
 
-#: ../leveldb.c:261
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d açılamıyor: %s\n"
 
-#: ../leveldb.c:662
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "kalıp %s genelleştirilemedi: %s\n"
 
-#: ../leveldb.c:705
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "şu anki çalışma düzeyi belirlenemiyor\n"
 
-#: ../leveldb.c:793
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s sembolik bağı yapılamadı: %s\n"
@@ -311,9 +327,7 @@ msgstr "%s içinde beklenmeyen dosya sonu\n"
 msgid "path to alternate expected in %s\n"
 msgstr "%s içinde alternatif bir yol bekleniyor \n"
 
-#: ../alternatives.c:251
-#: ../alternatives.c:272
-#: ../alternatives.c:295
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
 #: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
@@ -337,34 +351,30 @@ msgstr "%s bağlantısı okunamıyor: %s\n"
 #: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
+msgstr ""
+"bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
 
 #: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "bağlantı değiştirildi-- elle ayarlama moduna geçiliyor\n"
 
-#: ../alternatives.c:369
-#: ../alternatives.c:376
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s silinecektir\n"
 
-#: ../alternatives.c:371
-#: ../alternatives.c:378
-#: ../alternatives.c:410
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "sembolik bağ kaldırılamadı %s: %s\n"
 
-#: ../alternatives.c:394
-#: ../alternatives.c:407
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s -> %s bağı kurulacaktır\n"
 
-#: ../alternatives.c:399
-#: ../alternatives.c:416
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s->%s sembolik bağı yapılamadı: %s\n"
@@ -384,8 +394,7 @@ msgstr "%s yaratılamadı: %s\n"
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s'nin yerine %s konamadı: %s\n"
 
-#: ../alternatives.c:507
-#: ../alternatives.c:516
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr "%s çalışıyor\n"
@@ -448,7 +457,9 @@ msgstr "  Seçim        Komut\n"
 #: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını girin:"
+msgstr ""
+"Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını "
+"girin:"
 
 #: ../alternatives.c:723
 #, c-format
@@ -459,8 +470,7 @@ msgstr ""
 "\n"
 "seçimi okumada hata\n"
 
-#: ../alternatives.c:750
-#: ../alternatives.c:776
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s, %s için bir alternatif olarak yapılandırılmadı\n"
@@ -489,4 +499,3 @@ msgstr "%s yönetici dizini geçersiz\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives %s sürümü\n"
-

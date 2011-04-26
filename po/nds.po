@@ -1,114 +1,135 @@
-# translation of nds.po to 
-# Copyright (C) 2001 Red Hat, Inc.
-# Nils-Christoph Fiedler <ncfiedler@fedoraproject.org>, 2010.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: de\n"
+"Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-03 17:22-0500\n"
-"PO-Revision-Date: 2010-12-05 09:33+0100\n"
-"Last-Translator: Nils-Christoph Fiedler <ncfiedler@gnome.org>\n"
-"Language-Team: Fedora Low German <nds-lowgerman@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2011-03-04 15:08-0500\n"
+"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"Last-Translator: notting <notting@redhat.com>\n"
+"Language-Team: Low German <nds-lowgerman@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"X-Poedit-Language: Low German\n"
+"Language: nds\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:38
+#: ../chkconfig.c:46
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr ""
 
-#: ../chkconfig.c:39
+#: ../chkconfig.c:47
 #, c-format
-msgid "This may be freely redistributed under the terms of the GNU Public License.\n"
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
 
-#: ../chkconfig.c:42
+#: ../chkconfig.c:50
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr ""
 
-#: ../chkconfig.c:43
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:61
 #, c-format
-msgid "service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
 msgstr ""
 
-#: ../chkconfig.c:55
+#: ../chkconfig.c:63
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
-#: ../chkconfig.c:57
+#: ../chkconfig.c:65
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:74
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "on"
 msgstr "an"
 
-#: ../chkconfig.c:411
-#: ../chkconfig.c:416
-#: ../chkconfig.c:530
+#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
 msgid "off"
 msgstr "ut"
 
-#: ../chkconfig.c:492
+#: ../chkconfig.c:480
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:494
+#: ../chkconfig.c:482
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:638
+#: ../chkconfig.c:589
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:593
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:651
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:650
+#: ../chkconfig.c:663
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:658
+#: ../chkconfig.c:671
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:718
+#: ../chkconfig.c:721
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -117,8 +138,7 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:83
-#: ../ntsysv.c:120
+#: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
 msgstr "OK"
 
@@ -138,49 +158,47 @@ msgstr ""
 msgid "Services"
 msgstr "Deenste"
 
-#: ../ntsysv.c:183
-#: ../ntsysv.c:210
-#: ../ntsysv.c:248
+#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:257
+#: ../ntsysv.c:256
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:293
+#: ../ntsysv.c:292
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:310
+#: ../ntsysv.c:309
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:317
+#: ../ntsysv.c:316
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:261
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../leveldb.c:662
+#: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:705
+#: ../leveldb.c:714
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:793
+#: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
@@ -302,9 +320,7 @@ msgstr ""
 msgid "path to alternate expected in %s\n"
 msgstr ""
 
-#: ../alternatives.c:251
-#: ../alternatives.c:272
-#: ../alternatives.c:295
+#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
 #: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
@@ -335,27 +351,22 @@ msgstr ""
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
 
-#: ../alternatives.c:369
-#: ../alternatives.c:376
+#: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
 msgid "would remove %s\n"
 msgstr ""
 
-#: ../alternatives.c:371
-#: ../alternatives.c:378
-#: ../alternatives.c:410
+#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:394
-#: ../alternatives.c:407
+#: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr ""
 
-#: ../alternatives.c:399
-#: ../alternatives.c:416
+#: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr ""
@@ -375,8 +386,7 @@ msgstr ""
 msgid "failed to replace %s with %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:507
-#: ../alternatives.c:516
+#: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
 msgid "running %s\n"
 msgstr ""
@@ -448,8 +458,7 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 
-#: ../alternatives.c:750
-#: ../alternatives.c:776
+#: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr ""
@@ -478,670 +487,3 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
-
-#~ msgid ""
-#~ "A lightweight desktop environment that works well on low end machines."
-#~ msgstr ""
-#~ "Un mediu de lucru lejer care funcționează bine pe calculatoare mai slabe."
-
-#~ msgid "Administration Tools"
-#~ msgstr "Unelte de administrare"
-
-#~ msgid "Afrikaans Support"
-#~ msgstr "Suport pentru africană"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicații"
-
-#~ msgid "Applications to perform a variety of tasks"
-#~ msgstr "Aplicații pentru executarea unor sarcini diverse"
-
-#~ msgid "Arabic Support"
-#~ msgstr "Suport pentru arabă"
-
-#~ msgid "Armenian Support"
-#~ msgstr "Suport pentru armeană"
-
-#~ msgid "Assamese Support"
-#~ msgstr "Suport pentru asameză"
-
-#~ msgid "Authoring and Publishing"
-#~ msgstr "Creare și publicare documente"
-
-#~ msgid "Base"
-#~ msgstr "Bază"
-
-#~ msgid "Base System"
-#~ msgstr "Sistem de bază"
-
-#~ msgid "Basic support for the Ruby programming language."
-#~ msgstr "Suport de bază pentru limbajul de programare Ruby."
-
-#~ msgid "Basque Support"
-#~ msgstr "Suport pentru bască"
-
-#~ msgid "Bengali Support"
-#~ msgstr "Suport pentru bengaleză"
-
-#~ msgid "Brazilian Portuguese Support"
-#~ msgstr "Suport pentru portugheză braziliană"
-
-#~ msgid "Breton Support"
-#~ msgstr "Suport pentru bretonă"
-
-#~ msgid "Bulgarian Support"
-#~ msgstr "Suport pentru bulgară"
-
-#~ msgid "Catalan Support"
-#~ msgstr "Suport pentru catalană"
-
-#~ msgid "Chinese Support"
-#~ msgstr "Suport pentru chineză"
-
-#~ msgid "Clustering Support"
-#~ msgstr "Suport pentru clustering"
-
-#~ msgid "Core"
-#~ msgstr "Nucleu"
-
-#~ msgid "Croatian Support"
-#~ msgstr "Suport pentru croată"
-
-#~ msgid "Czech Support"
-#~ msgstr "Suport pentru cehă"
-
-#~ msgid "DNS Name Server"
-#~ msgstr "Server de nume DNS"
-
-#~ msgid "Danish Support"
-#~ msgstr "Suport pentru olandeză"
-
-#~ msgid "Desktop Environments"
-#~ msgstr "Medii pentru Spațiul de lucru"
-
-#~ msgid "Desktop environments"
-#~ msgstr "Medii pentru spațiul de lucru"
-
-#~ msgid "Development"
-#~ msgstr "Dezvoltare"
-
-#~ msgid "Development Libraries"
-#~ msgstr "Librării pentru dezvoltare"
-
-#~ msgid "Development Tools"
-#~ msgstr "Unelte pentru dezvoltare"
-
-#~ msgid "Dial-up Networking Support"
-#~ msgstr "Suport pentru acces la rețea prin telefon"
-
-#~ msgid "Dutch Support"
-#~ msgstr "Suport pentru olandeză"
-
-#~ msgid "Editors"
-#~ msgstr "Editoare"
-
-#~ msgid "Educational Software"
-#~ msgstr "Programe educaționale"
-
-#~ msgid "Educational software for learning"
-#~ msgstr "Programe educaționale pentru învățat"
-
-#~ msgid "Engineering and Scientific"
-#~ msgstr "Inginerie și Științific"
-
-#~ msgid "English (UK) Support"
-#~ msgstr "Suport pentru engleză (UK)"
-
-#~ msgid "Estonian Support"
-#~ msgstr "Suport pentru estonă"
-
-#~ msgid "Ethiopic Support"
-#~ msgstr "Suport pentru etiopeană"
-
-#~ msgid "FTP Server"
-#~ msgstr "Server FTP"
-
-#~ msgid "Faeroese Support"
-#~ msgstr "Suport pentru faroeză"
-
-#~ msgid "Finnish Support"
-#~ msgstr "Suport pentru finlandeză"
-
-#~ msgid "French Support"
-#~ msgstr "Suport pentru franceză"
-
-#~ msgid ""
-#~ "From CD recording to playing audio CDs and multimedia files, this package "
-#~ "group allows you to work with sound and video on the system."
-#~ msgstr ""
-#~ "De la înregistrare CD la ascultare CD și fișiere multimedia, acest grup "
-#~ "de pachete vă permite să lucrați cu sunet și video pe sistem."
-
-#~ msgid "GNOME Desktop Environment"
-#~ msgstr "Mediul de lucru GNOME"
-
-#~ msgid "GNOME Software Development"
-#~ msgstr "Dezvoltare programe GNOME"
-
-#~ msgid ""
-#~ "GNOME is a powerful graphical user interface which includes a panel, "
-#~ "desktop, system icons, and a graphical file manager."
-#~ msgstr ""
-#~ "GNOME este o puternică interfață grafică cu utilizatorul care include un "
-#~ "panou, spațiu de lucru, icoane pentru sistem precum și un manager grafic "
-#~ "de fișiere."
-
-#~ msgid "Gaelic Support"
-#~ msgstr "Suport pentru galeză"
-
-#~ msgid "Galician Support"
-#~ msgstr "Suport pentru galiciană"
-
-#~ msgid "Games and Entertainment"
-#~ msgstr "Jocuri și Distracție"
-
-#~ msgid "German Support"
-#~ msgstr "Suport pentru germană"
-
-#~ msgid "Graphical Internet"
-#~ msgstr "Internet grafic"
-
-#~ msgid "Graphics"
-#~ msgstr "Grafică"
-
-#~ msgid "Greek Support"
-#~ msgstr "Suport pentru greacă"
-
-#~ msgid "Gujarati Support"
-#~ msgstr "Suport pentru gujurati"
-
-#~ msgid "Hardware Support"
-#~ msgstr "Suport hardware"
-
-#~ msgid "Hebrew Support"
-#~ msgstr "Suport pentru ebraică"
-
-#~ msgid "Hindi Support"
-#~ msgstr "Suport pentru hindusă"
-
-#~ msgid "Hungarian Support"
-#~ msgstr "Suport pentru maghiară"
-
-#~ msgid "Icelandic Support"
-#~ msgstr "Suport pentru islandeză"
-
-#~ msgid "Indonesian Support"
-#~ msgstr "Suport pentru indoneză"
-
-#~ msgid ""
-#~ "Install these packages in order to develop GTK+ and GNOME graphical "
-#~ "applications."
-#~ msgstr ""
-#~ "Instalați aceste pachete pentru a putea dezvolta aplicații grafice GTK+ "
-#~ "și GNOME."
-
-#~ msgid ""
-#~ "Install these packages in order to develop GTK+ and XFCE graphical "
-#~ "applications."
-#~ msgstr ""
-#~ "Instalați aceste pachete pentru a putea dezvolta aplicații grafice GTK+ "
-#~ "și aplicații grafice XFCE."
-
-#~ msgid "Install these packages to develop QT and KDE graphical applications."
-#~ msgstr ""
-#~ "Instalați aceste pachete pentru a dezvolta aplicații grafice QT și KDE."
-
-#~ msgid ""
-#~ "Install these tools to enable the system to print or act as a print "
-#~ "server."
-#~ msgstr ""
-#~ "Instalați aceste unelte pentru a permite sistemului să tipărească sau să "
-#~ "funcționeze ca un server de tipărire."
-
-#~ msgid ""
-#~ "Install this group of packages to use the base graphical (X) user "
-#~ "interface."
-#~ msgstr ""
-#~ "Instalați acest grup de pachete pentru a folosi interfața grafică primară "
-#~ "(X)."
-
-#~ msgid "Irish Support"
-#~ msgstr "Suport pentru irlandeză"
-
-#~ msgid "Italian Support"
-#~ msgstr "Suport pentru italiană"
-
-#~ msgid "Japanese Support"
-#~ msgstr "Suport pentru japoneză"
-
-#~ msgid "Java Development"
-#~ msgstr "Dezvoltare Java"
-
-#~ msgid "KDE (K Desktop Environment)"
-#~ msgstr "KDE (Mediul de lucru K)"
-
-#~ msgid "KDE Software Development"
-#~ msgstr "Dezvoltare programe KDE"
-
-#~ msgid ""
-#~ "KDE is a powerful graphical user interface which includes a panel, "
-#~ "desktop, system icons, and a graphical file manager."
-#~ msgstr ""
-#~ "KDE este o puternică interfață grafică cu utilizatorul care include un "
-#~ "panou, spațiu de lucru, icoane pentru sistem și un manager grafic de "
-#~ "fișiere."
-
-#~ msgid "Kannada Support"
-#~ msgstr "Suport pentru kannada"
-
-#~ msgid "Korean Support"
-#~ msgstr "Suport pentru coreeană"
-
-#~ msgid "Languages"
-#~ msgstr "Limbi"
-
-#~ msgid "Legacy Network Server"
-#~ msgstr "Servere de rețea depreciate"
-
-#~ msgid "Legacy Software Development"
-#~ msgstr "Dezvoltare programe depreciate"
-
-#~ msgid "Legacy Software Support"
-#~ msgstr "Suport programe depreciate"
-
-#~ msgid "Lithuanian Support"
-#~ msgstr "Suport pentru lituaniană"
-
-#~ msgid "Mail Server"
-#~ msgstr "Server de mail"
-
-#~ msgid "Malay Support"
-#~ msgstr "Suport pentru malteză"
-
-#~ msgid "Malayalam Support"
-#~ msgstr "Suport pentru malayalam"
-
-#~ msgid "Marathi Support"
-#~ msgstr "Suport pentru marathi"
-
-#~ msgid "MySQL Database"
-#~ msgstr "Baza de date MySQL"
-
-#~ msgid "Network Servers"
-#~ msgstr "Servere de rețea"
-
-#~ msgid "News Server"
-#~ msgstr "Server de știri"
-
-#~ msgid "Northern Sotho Support"
-#~ msgstr "Suport pentru Sotho de Nord"
-
-#~ msgid "Norwegian Support"
-#~ msgstr "Suport pentru norvegiană"
-
-#~ msgid "Office/Productivity"
-#~ msgstr "Birou/Productivitate"
-
-#~ msgid "Oriya Support"
-#~ msgstr "Suport pentru oriază"
-
-#~ msgid ""
-#~ "Packages which provide functionality for developing and building "
-#~ "applications."
-#~ msgstr ""
-#~ "Pachete care oferă funcționalități pentru dezvoltarea și construirea de "
-#~ "aplicații."
-
-#~ msgid "Polish Support"
-#~ msgstr "Suport pentru poloneză"
-
-#~ msgid "Portuguese Support"
-#~ msgstr "Suport pentru portugheză"
-
-#~ msgid "PostgreSQL Database"
-#~ msgstr "Baza de date PostgreSQL"
-
-#~ msgid "Printing Support"
-#~ msgstr "Suport pentru tipărire"
-
-#~ msgid "Punjabi Support"
-#~ msgstr "Suport pentru punjabi"
-
-#~ msgid "Romanian Support"
-#~ msgstr "Suport pentru română"
-
-#~ msgid "Russian Support"
-#~ msgstr "Suport pentru rusă"
-
-#~ msgid "Serbian Support"
-#~ msgstr "Suport pentru sârbă"
-
-#~ msgid "Server Configuration Tools"
-#~ msgstr "Unelte de configurat servere"
-
-#~ msgid ""
-#~ "Simple window managers that aren't part of a larger desktop environment."
-#~ msgstr ""
-#~ "Manageri de ferestre simpli care nu sunt parte a unui mediu de lucru mai "
-#~ "mare."
-
-#~ msgid "Sinhala Support"
-#~ msgstr "Suport pentru sinhaleză"
-
-#~ msgid "Slovak Support"
-#~ msgstr "Suport pentru slovacă"
-
-#~ msgid "Slovenian Support"
-#~ msgstr "Suport pentru slovenă"
-
-#~ msgid "Smallest possible installation"
-#~ msgstr "Cea mai mică instalare posibilă"
-
-#~ msgid "Software used for running network servers"
-#~ msgstr "Programe folosite pentru a rula servere de rețea"
-
-#~ msgid ""
-#~ "Sometimes called text editors, these are programs that allow you to "
-#~ "create and edit text files. This includes Emacs and Vi."
-#~ msgstr ""
-#~ "Uneori numite editoare de texte, acestea sunt programe care vă permit să "
-#~ "creați și editați fișiere text. Acestea includ Emacs și Vi."
-
-#~ msgid "Sound and Video"
-#~ msgstr "Sunet și Video"
-
-#~ msgid "Southern Ndebele Support"
-#~ msgstr "Suport pentru Ndebele de Sud"
-
-#~ msgid "Southern Sotho Support"
-#~ msgstr "Suport pentru Sotho de Sud"
-
-#~ msgid "Spanish Support"
-#~ msgstr "Suport pentru spaniolă"
-
-#~ msgid "Support for developing programs in the Java programming language."
-#~ msgstr ""
-#~ "Suport pentru dezvoltarea programelor în limbajul de programare Java."
-
-#~ msgid ""
-#~ "Support for running programs written in the Java programming language."
-#~ msgstr ""
-#~ "Suport pentru rularea programelor scrise în limbajul de programare Java."
-
-#~ msgid "Swati Support"
-#~ msgstr "Suport pentru Swati"
-
-#~ msgid "Swedish Support"
-#~ msgstr "Suport pentru suedeză"
-
-#~ msgid "System Tools"
-#~ msgstr "Unelte sistem"
-
-#~ msgid "Tamil Support"
-#~ msgstr "Suport pentru tamil"
-
-#~ msgid "Telugu Support"
-#~ msgstr "Suport pentru telugu"
-
-#~ msgid "Text-based Internet"
-#~ msgstr "Internet în mod text"
-
-#~ msgid "Thai Support"
-#~ msgstr "Suport pentru tailandeză"
-
-#~ msgid "The Eclipse Integrated Development Environment."
-#~ msgstr "Mediul integrat de lucru și dezvoltare Eclipse."
-
-#~ msgid "The applications include office suites, PDF viewers, and more."
-#~ msgstr "Aplicațiile includ suite de birou, vizualizatoare PDF și altele."
-
-#~ msgid ""
-#~ "The packages in this group are core libraries needed to develop "
-#~ "applications."
-#~ msgstr ""
-#~ "Pachetele din acest grup sunt librării de bază necesare pentru a dezvolta "
-#~ "aplicații."
-
-#~ msgid "These packages allow you to configure an IMAP or SMTP mail server."
-#~ msgstr ""
-#~ "Aceste pachete vă permit să configurați un server de mail IMAP sau SMTP."
-
-#~ msgid ""
-#~ "These packages allow you to develop applications for the X Window System."
-#~ msgstr ""
-#~ "Aceste pachete vă permit să dezvoltați aplicații pentru sistemul de "
-#~ "ferestre X."
-
-#~ msgid ""
-#~ "These packages are helpful when developing web applications or web pages."
-#~ msgstr ""
-#~ "Aceste pachete vă sunt de folos dacă dezvoltați aplicații sau pagini web."
-
-#~ msgid ""
-#~ "These packages include network-based servers such as DHCP, Kerberos and "
-#~ "NIS."
-#~ msgstr ""
-#~ "Aceste pachete includ servere bazate pe rețea cum ar fi DHCP, Kerberos și "
-#~ "NIS."
-
-#~ msgid ""
-#~ "These packages include servers for old network protocols such as rsh and "
-#~ "telnet."
-#~ msgstr ""
-#~ "Aceste pachete includ servere pentru protocoale vechi de rețea cum ar fi "
-#~ "rsh și telnet."
-
-#~ msgid "These packages provide a virtualization environment."
-#~ msgstr "Aceste pachete oferă un mediu de virtualizare."
-
-#~ msgid "These packages provide compatibility with previous releases."
-#~ msgstr "Aceste pachete oferă compatibilitate cu lansările anterioare."
-
-#~ msgid ""
-#~ "These packages provide support for various locales including fonts and "
-#~ "input methods."
-#~ msgstr ""
-#~ "Aceste pachete oferă suport pentru diverse localizări, acesta incluzând "
-#~ "fonturi și metode de introducere."
-
-#~ msgid ""
-#~ "These tools allow you to create documents in the DocBook format and "
-#~ "convert them into HTML, PDF, Postscript, and text."
-#~ msgstr ""
-#~ "Aceste unelte vă permit să creați documente în formatul DocBook și să le "
-#~ "convertiți în HTML, PDF, Postscript și text."
-
-#~ msgid "These tools allow you to run a Web server on the system."
-#~ msgstr "Aceste unelte vă permit să rulați un server web pe sistem."
-
-#~ msgid "These tools allow you to run an FTP server on the system."
-#~ msgstr "Aceste unelte vă permit să rulați un server FTP pe sistem."
-
-#~ msgid ""
-#~ "These tools include core development tools such as automake, gcc, perl, "
-#~ "python, and debuggers."
-#~ msgstr ""
-#~ "Aceste unelte includ unelte de bază pentru dezvoltare cum ar fi automake, "
-#~ "gcc, perl, python și deploșnițori."
-
-#~ msgid "This group allows you to configure the system as a news server."
-#~ msgstr ""
-#~ "Acest grup vă permite să configurați sistemul ca un server de știri."
-
-#~ msgid ""
-#~ "This group contains all of Red Hat's custom server configuration tools."
-#~ msgstr ""
-#~ "Acest grup conține toate uneltele personalizate de configurare a "
-#~ "serverelor de la Red Hat."
-
-#~ msgid ""
-#~ "This group includes a minimal set of packages. Useful for creating small "
-#~ "router/firewall boxes, for example."
-#~ msgstr ""
-#~ "Acest grup include un set minimal de pachete. Util pentru a crea mici "
-#~ "mașini router/firewall, de exemplu."
-
-#~ msgid "This group includes graphical email, Web, and chat clients."
-#~ msgstr "Acest grup include mail grafic, web și clienți pentru discuții."
-
-#~ msgid ""
-#~ "This group includes packages for performing mathematical and scientific "
-#~ "computations and plotting, as well as unit conversion."
-#~ msgstr ""
-#~ "Acest grup include pachete pentru a efectua calcule și grafice matematice "
-#~ "și științifice precum și conversie între unități de măsură."
-
-#~ msgid "This group includes packages to help you manipulate and scan images."
-#~ msgstr ""
-#~ "Acest grup include pachete care vă ajută să manipulați și scanați imagini."
-
-#~ msgid ""
-#~ "This group includes text-based email, Web, and chat clients. These "
-#~ "applications do not require the X Window System."
-#~ msgstr ""
-#~ "Acest grup include mail în mod text, web și clienți pentru discuții. "
-#~ "Aceste aplicații nu au nevoie de sistemul de ferestre X."
-
-#~ msgid ""
-#~ "This group is a collection of graphical administration tools for the "
-#~ "system, such as for managing user accounts and configuring system "
-#~ "hardware."
-#~ msgstr ""
-#~ "Acest grup este o colecție de unelte grafice de administrare pentru "
-#~ "sistem, cum ar fi administrarea conturilor de utilizator și configurarea "
-#~ "hardware."
-
-#~ msgid ""
-#~ "This group is a collection of tools and resources of Armenian "
-#~ "environments."
-#~ msgstr ""
-#~ "Acest grup este o colecție de unelte și resurse ale mediilor Armenian."
-
-#~ msgid ""
-#~ "This group is a collection of tools for various hardware specific "
-#~ "utilities."
-#~ msgstr ""
-#~ "Acest grup este o colecție de unelte pentru diferite unelte cu specific "
-#~ "hardware."
-
-#~ msgid ""
-#~ "This group is a collection of various tools for the system, such as the "
-#~ "client for connecting to SMB shares and tools to monitor network traffic."
-#~ msgstr ""
-#~ "Acest grup este o colecție de unelte diverse pentru sistem, cum ar fi un "
-#~ "client pentru conectare la partajări SMB și unelte pentru a monitoriza "
-#~ "traficul din rețea."
-
-#~ msgid ""
-#~ "This package group allows you to run a DNS name server (BIND) on the "
-#~ "system."
-#~ msgstr ""
-#~ "Acest grup de pachete vă permite să rulați pe sistem un server de nume "
-#~ "DNS (BIND)."
-
-#~ msgid ""
-#~ "This package group allows you to share files between Linux and MS Windows"
-#~ "(tm) systems."
-#~ msgstr ""
-#~ "Acest grup de pachete vă permite să partajați fișiere între sisteme Linux "
-#~ "și MS Windows(tm)."
-
-#~ msgid "This package group contains packages useful for use with MySQL."
-#~ msgstr "Acest grup de pachete conține pachete utile pentru lucrul cu MySQL."
-
-#~ msgid "This package group includes packages useful for use with Postgresql."
-#~ msgstr ""
-#~ "Acest grup de pachete include pachete utile pentru lucrul cu PostgreSQL."
-
-#~ msgid "Tsonga Support"
-#~ msgstr "Suport pentru tsonga"
-
-#~ msgid "Tswana Support"
-#~ msgstr "Suport pentru tsawana"
-
-#~ msgid "Turkish Support"
-#~ msgstr "Suport pentru turcă"
-
-#~ msgid "Ukrainian Support"
-#~ msgstr "Suport pentru ucraineană"
-
-#~ msgid "Various core pieces of the system."
-#~ msgstr "Diverse componente cheie ale sistemului."
-
-#~ msgid "Various ways to relax and spend your free time."
-#~ msgstr "Moduri diverse de a vă relaxa și petrece timpul liber."
-
-#~ msgid "Venda Support"
-#~ msgstr "Suport pentru venda"
-
-#~ msgid "Virtualization"
-#~ msgstr "Virtualizare"
-
-#~ msgid "Web Development"
-#~ msgstr "Dezvoltare web"
-
-#~ msgid "Web Server"
-#~ msgstr "Server Web"
-
-#~ msgid "Welsh Support"
-#~ msgstr "Suport pentru galeză"
-
-#~ msgid "Window Managers"
-#~ msgstr "Manageri de ferestre"
-
-#~ msgid "Windows File Server"
-#~ msgstr "Server de partajare Windows"
-
-#~ msgid "X Software Development"
-#~ msgstr "Dezvoltare programe X"
-
-#~ msgid "X Window System"
-#~ msgstr "Sistemul de ferestre X"
-
-#~ msgid "XFCE Software Development"
-#~ msgstr "Dezvoltare programe XFCE"
-
-#~ msgid "Xhosa Support"
-#~ msgstr "Suport pentru xhosa"
-
-#~ msgid "Zulu Support"
-#~ msgstr "Suport pentru zulu"
-
-#~ msgid "Applications for a variety of tasks"
-#~ msgstr "Aplicații pentru diverse treburi"
-
-#~ msgid "Dialup Networking Support"
-#~ msgstr "Suport pentru acces la rețea prin telefon"
-
-#~ msgid ""
-#~ "GNOME is a powerful, graphical user interface which includes a panel, "
-#~ "desktop, system icons, and a graphical file manager."
-#~ msgstr ""
-#~ "GNOME este o puternică interfață grafică cu utilizatorul care include un "
-#~ "panou, spațiu de lucru, icoane pentru sistem precum și un manager grafic "
-#~ "de fișiere."
-
-#~ msgid ""
-#~ "KDE is a powerful, graphical user interface which includes a panel, "
-#~ "desktop, system icons, and a graphical file manager."
-#~ msgstr ""
-#~ "KDE este o puternică interfață grafică cu utilizatorul care include un "
-#~ "panou, spațiu de lucru, icoane pentru sistem și un manager grafic de "
-#~ "fișiere."
-
-#~ msgid ""
-#~ "Sometimes called text editors, these are programs that allow you to "
-#~ "create and edit files. These include Emacs and Vi."
-#~ msgstr ""
-#~ "Uneori numite editoare de texte, acestea sunt programe care vă permit să "
-#~ "creați și să editați fișiere. Acestea includ Emacs și Vi."
-
-#~ msgid "The XEmacs text editor."
-#~ msgstr "Editorul de texte XEmacs."
-
-#~ msgid ""
-#~ "These tools allow you to create documentation in the DocBook format and "
-#~ "convert them to HTML, PDF, Postscript, and text."
-#~ msgstr ""
-#~ "Aceste unelte vă permit să creați documentație în formatul DocBook și să "
-#~ "le convertiți în HTML, PDF, Postscript și text."
