@@ -806,3 +806,30 @@ int doSetService(struct service s, int level, int on) {
 
     return 0;
 }
+
+int systemdActive() {
+    struct stat a, b;
+
+    if (lstat("/sys/fs/cgroup", &a) < 0)
+        return 0;
+    if (lstat("/sys/fs/cgroup/systemd", &b) < 0)
+        return 0;
+    if (a.st_dev == b.st_dev)
+        return 0;
+    if (access(SYSTEMD_BINARY_PATH, F_OK) < 0)
+        return 0;
+    return 1;
+}
+
+int isOverriddenBySystemd(const char *service) {
+    char *p;
+    int rc = 0;
+
+    asprintf(&p, SYSTEMD_SERVICE_PATH "/%s.service", service);
+
+    if (access(p, F_OK) >= 0) {
+        rc = 1;
+    }
+    free(p);
+    return rc;
+}

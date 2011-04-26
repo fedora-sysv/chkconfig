@@ -36,14 +36,6 @@ static char *progname;
 
 static int LSB = 0;
 
-#ifndef SYSTEMD_SERVICE_PATH
-#define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
-#endif
-
-#ifndef SYSTEMD_BINARY_PATH
-#define SYSTEMD_BINARY_PATH "/bin/systemd"
-#endif
-
 static void usage(void) {
     fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
@@ -79,16 +71,8 @@ static void checkRoot() {
 }
 
 static void reloadSystemd(void) {
-    struct stat a, b;
-
-    if (lstat("/sys/fs/cgroup", &a) < 0)
-	return;
-    if (lstat("/sys/fs/cgroup/systemd", &b) < 0)
-	return;
-    if (a.st_dev == b.st_dev)
-	return;
-
-    system("systemctl daemon-reload > /dev/null 2>&1");
+    if (systemdActive())
+        system("systemctl daemon-reload > /dev/null 2>&1");
 }
 
 static int delService(char *name, int type, int level) {
@@ -420,6 +404,10 @@ static int showServiceInfoByName(char * name, int type, int forgiving) {
     int rc;
     struct service s;
 
+    if (systemdActive() && isOverriddenBySystemd(name)) {
+        return forgiving ? 0 : 1;
+    }
+
     rc = readServiceInfo(name, type, &s, 0);
 
     if (rc) {
@@ -466,6 +454,7 @@ static int listService(char * item, int type) {
     int numServices = 0;
     int numServicesAlloced;
     int err = 0;
+    int systemd = systemdActive();
 
     if (item) return showServiceInfoByName(item, type, 0);
 
@@ -475,6 +464,8 @@ static int listService(char * item, int type) {
         qsort(services, numServices, sizeof(*services), serviceNameCmp);
 
         for (i = 0; i < numServices ; i++) {
+            if (systemd && isOverriddenBySystemd(services[i].name))
+                continue;
 	    if (showServiceInfo(services[i], 1)) {
 		    return 1;
 	    }
@@ -585,7 +576,6 @@ int setService(char * name, int type, int where, int state) {
 }
 
 void forwardSystemd(const char *name, int type, const char *verb) {
-    char *p;
 
     if (type == TYPE_XINETD)
         return;
@@ -593,19 +583,19 @@ void forwardSystemd(const char *name, int type, const char *verb) {
     if (access(SYSTEMD_BINARY_PATH, F_OK) < 0)
 	return;
 
-    asprintf(&p, SYSTEMD_SERVICE_PATH "/%s.service", name);
+    if (isOverriddenBySystemd(name)) {
+        char *p;
 
-    if (access(p, F_OK) >= 0) {
+        asprintf(&p, "%s.service", name);
 
         fprintf(stderr, _("Note: Forwarding request to 'systemctl %s %s'.\n"),
-                verb, p + sizeof(SYSTEMD_SERVICE_PATH));
+                verb, p);
 
-        execlp("systemctl", "systemctl", verb, p + sizeof(SYSTEMD_SERVICE_PATH), NULL);
+        execlp("systemctl", "systemctl", verb, p, NULL);
+        free(p);
         fprintf(stderr, _("Failed to forward service request to systemctl: %m\n"));
         exit(1);
     }
-
-    free(p);
 }
 
 int main(int argc, const char ** argv) {

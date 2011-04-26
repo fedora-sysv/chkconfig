@@ -25,6 +25,14 @@
 #define TYPE_XINETD	0x2
 #define TYPE_ANY	(TYPE_INIT_D | TYPE_XINETD)
 
+#ifndef SYSTEMD_SERVICE_PATH
+#define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
+#endif
+
+#ifndef SYSTEMD_BINARY_PATH
+#define SYSTEMD_BINARY_PATH "/bin/systemd"
+#endif
+
 struct dep {
     char *name;
     int handled;
@@ -59,5 +67,6 @@ int doSetService(struct service s, int level, int on);
 int findServiceEntries(char * name, int level, glob_t * globresptr);
 int readXinetdServiceInfo(char *name, struct service *service);
 int setXinetdService(struct service s, int on);
-
+int systemdActive();
+int isOverriddenBySystemd(const char *service);
 #endif
