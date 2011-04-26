@@ -163,6 +163,7 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
     int numServices = 0;
     int numServicesAlloced, rc;
     int err = 0;
+    int systemd = systemdActive();
 
     numServicesAlloced = 10;
     services = malloc(sizeof(*services) * numServicesAlloced);
@@ -177,6 +178,8 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
 	if (strchr(ent->d_name, '~') || strchr(ent->d_name, ',') ||
 	    (ent->d_name[0] == '.')) continue;
 
+        if (systemd && isOverriddenBySystemd(ent->d_name))
+                continue;
 	sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
 	if (stat(fn, &sb))
 	{
