@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.51
+Version: 1.3.52
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Apr 27 2011 Bill Nottingham <notting@redhat.com> 1.3.52-1
+- set state before frobbing dependencies (#693202)
+- ntsysv: don't list or configure service overridden by systemd (#691224)
+- chkconfig: don't show services overridden by systemd in --list (#693504, #693500)
+- don't forward to systemd if it's not installed (<arvidjaar@gmail.com>)
+- update translations
+
 * Wed Mar 09 2011 Bill Nottingham <notting@redhat.com> 1.3.51-1
 - further fixes to systemctl integration (<lennart@poettering.net>, <arvidjaar@gmail.com>)
 
