@@ -545,6 +545,20 @@ int setService(char * name, int type, int where, int state) {
     if (s.type == TYPE_INIT_D) {
 	    int rc = 0;
 
+	    for (i = 0; i < 7; i++) {
+
+		    if (!((1 << i) & where)) continue;
+
+		    if (state == 1 || state == 0)
+		      what = state;
+		    else if (state == -2)
+		      what = isOn(name, i);
+		    else if (s.levels & (1 << i))
+		      what = 1;
+		    else
+		      what = 0;
+		    rc |= doSetService(s, i, what);
+	    }
 	    if (s.isLSB)
 		    frobDependencies(&s);
 	    for (i = 0; i < 7; i++) {
