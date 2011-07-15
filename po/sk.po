@@ -1,28 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Marcel Telka <marcel@telka.sk>, 2003, 2004, 2005.
+# Stanislav Meduna <stano@eunet.sk>, 1999.
+# Marek Mahut <mmahut@fedoraproject.org>, 2008.
+# notting <notting@redhat.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-04-26 21:43+0000\n"
 "Last-Translator: notting <notting@redhat.com>\n"
-"Language-Team: Slovak <None>\n"
+"Language-Team: Slovak (http://www.transifex.net/projects/p/fedora/team/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s verzia %s - Autorské práva © 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
@@ -30,32 +33,32 @@ msgid ""
 msgstr ""
 "Program môže byť voľne šírený za podmienok určených GNU Public License.\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "použitie:   %s [--list] [--type <typ>] [názov]\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "            %s --add <názov>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "            %s --del <názov>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <názov>\n"
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "            %s [--level <úrovne>] [--type <typ>] <názov> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -64,66 +67,66 @@ msgstr ""
 "služba %s podporuje chkconfig, ale nie je na ňu odkazované zo žiadnej úrovne"
 " (spustite 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "služba %s nepodporuje chkconfig\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Na vykonanie tejto operácie nemáte dostatočné oprávnenia.\n"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "zap"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "vyp"
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "služby spúšťané pomocou xinetd:\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "nepodarilo sa otvoriť adresár %s: %s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verzia %s\n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type musí byť 'sysv' alebo 'xinetd'\n"
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "môže byť zadaná iba jedna z volieb --list, --add, --del alebo --override\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -133,7 +136,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "pre chkconfig otázku môže byť zadaná iba jedna úroveň\n"
@@ -162,27 +165,27 @@ msgstr "Ktoré služby majú byť automaticky spúšťané?"
 msgid "Services"
 msgstr "Služby"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "chyba pri čítaní informácií o službe %s: %s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "chyba pri čítaní z adresára %s: %s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Musíte byť správca, aby ste mohli spustiť %s.\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "chybný argument pre --levels\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Žiadne služby nemôžu byť spravované ntsysv!\n"
@@ -496,3 +499,5 @@ msgstr "admindir %s je neplatný\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives verzia %s\n"
+
+

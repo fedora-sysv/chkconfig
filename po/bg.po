@@ -1,15 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Alexander Todorov <atodorov@redhat.com>, 2008.
+# notting <notting@redhat.com>, 2011.
+# Valentin Laskov <laskov@festa.bg>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-03-22 15:12+0000\n"
-"Last-Translator: notting <notting@redhat.com>\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-05-06 20:47+0000\n"
+"Last-Translator: laskov <laskov@festa.bg>\n"
 "Language-Team: Bulgarian <trans-bg@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,44 +19,44 @@ msgstr ""
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s версия %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
 "License.\n"
 msgstr "Програмата се разпространява свободно под условията на GPL.\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "usage: %s [--list] [--type <тип>] [име]\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <име>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <име>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <име>\n"
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "%s [--level <нива>] [--type <тип>] <име> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -63,67 +65,69 @@ msgstr ""
 "услугата %s поддържа chkconfig, но не е включена в никое работно ниво "
 "(runlevel) (изпълнете chkconfig --add %s')\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "услугата %s не поддържа chkconfig\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "грешка при четене на информацията за услуга %s: %s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Нямате достатъчно права за да изпълнявате тази операция.\n"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "да"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "не "
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd базирани услуги:\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "неуспех при отваряне на директория %s: %s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
+"Забележка: пренасочване на заявката към systemctl %s %s.\n"
+"\n"
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "Неуспех при пренасочване на заявка за обслужване към systemctl: %m\n"
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type трябва да бъде 'sysv' или 'xinetd'\n"
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "може да бъде зададена само една от опциите --list, --add, --del или "
 "--override\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -132,8 +136,13 @@ msgid ""
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"Забележка: В този текст са показани само SysV услугите и не са включени native\n"
+"      systemd услугите. Данните за конфигуриране на SysV моge да са подтиснати от native\n"
+"      systemd конфигурацията.\n"
+"\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -163,27 +172,27 @@ msgstr "Кои услуги да се стартират автоматично?
 msgid "Services"
 msgstr "Услуги"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "грешка при четене на информацията за услуга %s: %s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "грешка при четене от директория %s: %s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "За да изпълните %s трябва да бъдете root.\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "лош аргумент за --levels\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Няма услуги, които биха могли да се управляват от ntsysv!\n"
@@ -496,3 +505,5 @@ msgstr "admindir %s е невалидна\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives версия %s\n"
+
+

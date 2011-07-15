@@ -1,14 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# notting <notting@redhat.com>, 2011.
+# George Machitidze <giomac@gmail.com>, 2006, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-04-26 21:43+0000\n"
 "Last-Translator: notting <notting@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +18,12 @@ msgstr ""
 "Language: ka\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s ვერსია %s - საავტორო უფლებები (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
@@ -31,32 +32,32 @@ msgstr ""
 "შეიძლება თავისუფლად გავრცელდეს GNU Public License-ის პირობების და წესების "
 "მიხედვით.\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr ""
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <სახელი>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <სახელი>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -65,65 +66,65 @@ msgstr ""
 "%s-ს აქვს chkconfig-ის მხარდაჭერა, მაგრამ არ არის განსაზღვრული არცერთ "
 "გაშვების დონეზე (გაუშვით 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s სერვისს არ აქვს chkconfig-ის მხარდაჭერა\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "შეცდომა %s სერვისის შესახებ ინფორმაციის წაკითხვისას: %s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "ჩართვა"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "გათიშვა"
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-ზე დაფუძნებულოი სერვისები:\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "შეცდომა %s დირექტორიის გახსნისას: %s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ვერსია %s\n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -133,7 +134,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
@@ -162,27 +163,27 @@ msgstr "რომელმა სერვისები უნდა გაი
 msgid "Services"
 msgstr "სერვისები"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "შეცდომა %s სერვისის შესახებ ინფორმაციის წაკითხვისას: %s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "შეცდომა %s დირექტორიიდან წაკითხვისას: %s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "თქვენ უნდა იყოთ root რომ გაუშვათ %s.\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "ცუდი არგუმენტი პარამეტრისთვის --levels\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv-ის მიერ მართვადი სერვისები არაა!\n"
@@ -495,3 +496,5 @@ msgstr ""
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives, ვერსია %s\n"
+
+

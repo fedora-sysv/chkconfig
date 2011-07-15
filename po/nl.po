@@ -1,28 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Peter van Egdom <p.van.egdom@gmail.com>, 2003, 2005, 2007.
+# Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004.
+# notting <notting@redhat.com>, 2011.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-04-27 08:11+0000\n"
 "Last-Translator: warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Dutch <>\n"
+"Language-Team: Dutch (http://www.transifex.net/projects/p/fedora/team/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versie %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
@@ -31,32 +34,32 @@ msgstr ""
 "Dit mag vrijelijk worden verspreid onder de voorwaarden van de GNU Public "
 "License.\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "gebruik:   %s [--list] [--type <type>] [naam]\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <naam>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <naam>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <naam>\n"
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <naam> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -65,66 +68,66 @@ msgstr ""
 "service %s ondersteunt chkconfig, maar in geen enkel runlevel staat een "
 "verwijzing naar deze service (voer 'chkconfig --add %s' uit)\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "service %s ondersteunt chkconfig niet\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "fout bij lezen van informatie over service %s: %s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Je hebt niet genoeg rechten om deze actie uit te voeren.\n"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "aan"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "uit"
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "services gebaseerd op xinetd:\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "openen van map %s mislukt: %s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Opmerking: Verzoek doorsturen naar 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "Service aanvraag doorsturen naar systemctl mislukte: %m\n"
+msgstr "Service aanvraag doorsturen naar systemctl mislukte: %m"
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versie %s\n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type moet zijn 'sysv' of 'xinetd'\n"
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "slechts één van --list, --add, --del of --override mag worden opgegeven\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -134,12 +137,12 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Opmerking: Deze output toont alleen SysV services en bevat geen native\n"
+"Opmerking: Deze output laat alleen SysV services zien en bevat geen native\n"
 "      systemd services. SysV configuratie data kan overschreven worden\n"
 "      door native systemd configuratie.\n"
 "\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -169,27 +172,27 @@ msgstr "Welke services moeten automatisch worden gestart?"
 msgid "Services"
 msgstr "Services"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fout bij lezen van informatie over service %s: %s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "fout bij lezen uit map %s: %s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Je moet root zijn om %s uit te kunnen voeren.\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "verkeerd argument voor --levels\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Er mogen geen services worden beheerd door ntsysv!\n"
@@ -504,3 +507,5 @@ msgstr "admindir %s is ongeldig\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives versie %s\n"
+
+

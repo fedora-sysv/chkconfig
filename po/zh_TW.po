@@ -1,125 +1,131 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Jouston Huang <jouston@jouston.no-ip.com>, 2004.
+# Ben Wu <hpwu@redhat.com>, 2002, 2003.
+# Walter Cheuk <wwycheuk@gmail.com>, 2007.
+# notting <notting@redhat.com>, 2011.
+# Chester Cheng <ccheng@redhat.com>, 2005.
+# Terry Chuang <tchuang@redhat.com>, 2008, 2009.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-03-22 15:12+0000\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-04-30 07:25+0000\n"
 "Last-Translator: zerng07 <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) <None>\n"
+"Language-Team: Chinese (Taiwan) <trans-zh_TW@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 版本 %s - 版權所有 (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
 "License.\n"
 msgstr "在遵守 GNU 通用公共許可證 (GPL) 的條款下，可以自由散布這個程式。\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "用法：%s [--list] [--type <類型>] [名稱]\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <名稱>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <名稱>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <名稱>\n"
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <層級>] [--type <類型>] <名稱> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr "%s 服務支援 chkconfig，但未向任何執行層級註冊 (請執行「chkconfig --add %s」)\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s 服務不支援 chkconfig\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "在 %s 服務上讀取訊息錯誤：%s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "您沒有足夠的權力進行這項操作。\n"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "開啟"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "關閉"
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "以 xinetd 為主的服務：\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "無法開啟 %s 目錄：%s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "注意：正在轉送請求至「systemctl %s %s」。\n"
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "無法轉送服務請求至 systemctl：%m\n"
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 版本 %s\n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 必須要是「sysv」或是「xinetd」\n"
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "只能指定 --list, --add, --del, 或 --override 中的其中一個\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -129,11 +135,11 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"注意：此輸出顯示 SysV 服務僅且不包含原生 systemd 服務。\n"
-"      SysV 組態資料可能被原生的 systemd 組態覆寫。\n"
+"注意：本輸出僅顯示 SysV 服務，並且不包含原生的 systemd 服務。\n"
+"      SysV 組態資料可能會被原生的 systemd 組態凌駕。\n"
 "\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "只能對 chkconfig 查詢指定一種執行層級\n"
@@ -162,27 +168,27 @@ msgstr "那些服務應被自動啟動？"
 msgid "Services"
 msgstr "服務"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "讀取 %s 服務的資訊錯誤：%s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "讀取 %s 目錄錯誤：%s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "您必須是 root 才能執行 %s。\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "在 --levels 處有不當參數\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "無任何服務可被 ntsysv 管理！\n"
@@ -493,3 +499,5 @@ msgstr "admindir %s 無效\n"
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "替代版本 %s\n"
+
+

@@ -1,125 +1,128 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Leah Liu <lliu@redhat.com>, 2008.
+# Sarah Wang <sarahs@redhat.com>, 2003, 2004, 2005.
+# notting <notting@redhat.com>, 2011.
+# Huan Chen <chenhuan126@126.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-04 15:08-0500\n"
-"PO-Revision-Date: 2011-04-22 13:20+0000\n"
+"POT-Creation-Date: 2011-04-26 17:35-0400\n"
+"PO-Revision-Date: 2011-05-02 02:58+0000\n"
 "Last-Translator: chen_tx <chenhuan126@126.com>\n"
-"Language-Team: Chinese (China) <None>\n"
+"Language-Team: Chinese (China) (http://www.transifex.net/projects/p/fedora/team/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 版本 %s - 版权 (C) 1997-2000 红帽公司.\n"
+msgstr "%s 版本 %s - 版权 (C) 1997-2000 红帽公司\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
 "License.\n"
-msgstr "在 GNU 公共许可条款下，本软件可被自由地重发行。\n"
+msgstr "在 GNU 公共许可条款下，本软件可以自由重发行。\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:44
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "用法：   %s [--list] [--type <类型>] [名称]\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <名称>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:46
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <名称>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:47
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <名称>\n"
 
-#: ../chkconfig.c:54
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <级别>] [--type <类型>] <名称> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:55
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "服务 %s 支持 chkconfig，但它未在任何运行级别中引用（请运行“chkconfig --add %s”添加引用）\n"
+msgstr "服务 %s 支持 chkconfig，但它未在任何运行级别中被引用（请运行“chkconfig --add %s”）\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "服务 %s 不支持 chkconfig\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:59
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "读取服务 %s 信息出错：%s\n"
+msgstr "服务 %s 信息读取出错：%s\n"
 
-#: ../chkconfig.c:74
+#: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr "您无足够权限执行此操作。\n"
+msgstr "您没有足够权限执行这项操作。\n"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
 msgstr "开"
 
-#: ../chkconfig.c:399 ../chkconfig.c:404 ../chkconfig.c:518
+#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "off"
 msgstr "关"
 
-#: ../chkconfig.c:480
+#: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "基于 xinetd 的服务：\n"
 
-#: ../chkconfig.c:482
+#: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "打开目录 %s 失败：%s\n"
+msgstr "目录 %s 打开失败：%s\n"
 
-#: ../chkconfig.c:589
+#: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "注意：正在将请求转发到“systemctl %s %s”。\n"
 
-#: ../chkconfig.c:593
+#: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "将服务请求转发到 systemctl 失败：%m\n"
+msgstr "未能将服务请求转发至 systemctl：%m\n"
 
-#: ../chkconfig.c:651
+#: ../chkconfig.c:652
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 版本 %s \n"
 
-#: ../chkconfig.c:663
+#: ../chkconfig.c:664
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 必须是“sysv”或“xinetd”\n"
 
-#: ../chkconfig.c:671
+#: ../chkconfig.c:672
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list、--add、--del 和 --override 只能指定其中之一\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:722
 #, c-format
 msgid ""
 "\n"
@@ -129,19 +132,16 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"注意：该输出结果只显示 SysV 服务，并不包含原生\n"
-"           systemd 服务。SysV 配置数据可能被原生\n"
-"           systemd 配置覆盖。\n"
-"\n"
+"注意：该输出结果只显示 SysV 服务，并不包含原生 systemd 服务。SysV 配置数据可能被原生 systemd 配置覆盖。 "
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:759
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig 查询只能指定一个运行级别\n"
+msgstr "只能为 chkconfig 查询指定一个运行级别\n"
 
 #: ../ntsysv.c:46
 msgid "Press <F1> for more information on a service."
-msgstr "按 <F1> 以获取一个服务的详情。"
+msgstr "按 <F1> 获取服务详情。"
 
 #: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
@@ -157,46 +157,46 @@ msgstr "取消"
 
 #: ../ntsysv.c:95
 msgid "What services should be automatically started?"
-msgstr "哪些服务应自动启动？"
+msgstr "哪些服务应该自动启动？"
 
 #: ../ntsysv.c:101
 msgid "Services"
 msgstr "服务"
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "读取服务 %s 信息出错：%s\n"
+msgstr "服务 %s 信息读取出错：%s\n"
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:259
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "从目录 %s 读取出错：%s\n"
+msgstr "从目录 %s 中读取出错：%s\n"
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:295
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "您必须是根用户才能运行 %s。\n"
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:312
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels 参数错误⏎\n"
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:319
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "无服务可由 ntsysv 管理！\n"
+msgstr "没有服务可由 ntsysv 管理！\n"
 
 #: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "打开 %s/init.d 失败：%s\n"
+msgstr "%s/init.d 打开失败：%s\n"
 
 #: ../leveldb.c:671
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "glob 模式 %s 失败：%s\n"
+msgstr "glob 模式 %s 执行失败：%s\n"
 
 #: ../leveldb.c:714
 #, c-format
@@ -206,12 +206,12 @@ msgstr "无法判断当前运行级别\n"
 #: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "制作符号链接 %s 失败：%s\n"
+msgstr "符号链接 %s 建立失败：%s\n"
 
 #: ../alternatives.c:63
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives（替换选择）版本 %s - 版权 (C) 2001 红帽公司\n"
+msgstr "alternatives（备用）版本 %s - 版权 (C) 2001 红帽公司\n"
 
 #: ../alternatives.c:64
 #, c-format
@@ -265,12 +265,12 @@ msgstr "       alternatives --set <名称> <路径>\n"
 #: ../alternatives.c:73
 #, c-format
 msgid "\n"
-msgstr "\n"
+msgstr " \n"
 
 #: ../alternatives.c:74
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "普通选项：--verbose --test --help --usage --version\n"
+msgstr "公用选项：--verbose --test --help --usage --version\n"
 
 #: ../alternatives.c:75
 #, c-format
@@ -285,32 +285,32 @@ msgstr "正在读取 %s\n"
 #: ../alternatives.c:176
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "打开 %s 失败：%s\n"
+msgstr "%s 打开失败：%s\n"
 
 #: ../alternatives.c:185
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "读取 %s 失败：%s\n"
+msgstr "%s 读取失败：%s\n"
 
 #: ../alternatives.c:194
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s 空白！\n"
+msgstr "%s 为空！\n"
 
 #: ../alternatives.c:203
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s 在第1行的模式错误\n"
+msgstr "%s 第1行的模式错误\n"
 
 #: ../alternatives.c:210
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%s 中的一级链接错误\n"
+msgstr "%s 中的首要链接错误\n"
 
 #: ../alternatives.c:222
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "意外路径 %s 存在于 %s 中\n"
+msgstr "路径 %s 意外出现在 %s 中\n"
 
 #: ../alternatives.c:231
 #, c-format
@@ -320,43 +320,43 @@ msgstr "从 %s 的路径缺失于 %s 中\n"
 #: ../alternatives.c:241
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s 中存在意外文件结束\n"
+msgstr "%s 中意外出现文件结束符\n"
 
 #: ../alternatives.c:250
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr " %s 中期望存在替换选择的路径\n"
+msgstr " %s 中预期出现备用路径\n"
 
 #: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
 #: ../alternatives.c:314
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s 中存在意外行：%s\n"
+msgstr "%s 中意外出现行：%s\n"
 
 #: ../alternatives.c:271
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%s 中期望存在数字优先度\n"
+msgstr "%s 中预期出现数字优先度\n"
 
 #: ../alternatives.c:294
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "%s 中期望存在从路径\n"
+msgstr "%s 中预期出现从路径\n"
 
 #: ../alternatives.c:322
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "读取链接 %s 失败：%s\n"
+msgstr "链接 %s 读取失败：%s\n"
 
 #: ../alternatives.c:336
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "链接未指向任何替换选择 -- 正将模式设置为手工\n"
+msgstr "链接未指向任何备用项 -- 正在将模式设为手工\n"
 
 #: ../alternatives.c:341
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "链接已更改 -- 正将模式设置为手工\n"
+msgstr "链接已更改 -- 正将模式设为手工\n"
 
 #: ../alternatives.c:369 ../alternatives.c:376
 #, c-format
@@ -366,7 +366,7 @@ msgstr "将移除 %s\n"
 #: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "移除链接 %s 失败：%s\n"
+msgstr "链接 %s 移除失败：%s\n"
 
 #: ../alternatives.c:394 ../alternatives.c:407
 #, c-format
@@ -376,22 +376,22 @@ msgstr "将链接 %s -> %s\n"
 #: ../alternatives.c:399 ../alternatives.c:416
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "链接 %s -> %s 失败：%s\n"
+msgstr "%s -> %s 链接失败：%s\n"
 
 #: ../alternatives.c:448
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s 已存在\n"
+msgstr "%s 已经存在\n"
 
 #: ../alternatives.c:450
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "创建 %s 失败：%s\n"
+msgstr "%s 创建失败：%s\n"
 
 #: ../alternatives.c:481
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "将 %s 替换为 %s 失败：%s\n"
+msgstr "未能将 %s 替换为 %s：%s\n"
 
 #: ../alternatives.c:507 ../alternatives.c:516
 #, c-format
@@ -401,7 +401,7 @@ msgstr "正在运行 %s\n"
 #: ../alternatives.c:543
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "%s 的一级链接必须是 %s\n"
+msgstr "%s 的首要链接必须是 %s\n"
 
 #: ../alternatives.c:623
 #, c-format
@@ -411,17 +411,17 @@ msgstr "从 %s 的链接 %s 不正确（%s %s）\n"
 #: ../alternatives.c:664
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s - 状态是自动。\n"
+msgstr "%s - 状态为自动。\n"
 
 #: ../alternatives.c:666
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s - 状态是手工。\n"
+msgstr "%s - 状态为手工。\n"
 
 #: ../alternatives.c:668
 #, c-format
 msgid " link currently points to %s\n"
-msgstr " 链接当前指向 %s\n"
+msgstr "链接当前指向 %s\n"
 
 #: ../alternatives.c:671
 #, c-format
@@ -431,7 +431,7 @@ msgstr "%s - 优先度 %d\n"
 #: ../alternatives.c:674
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " 从 %s：%s\n"
+msgstr "从 %s：%s\n"
 
 #: ../alternatives.c:679
 #, c-format
@@ -451,34 +451,36 @@ msgstr "共有 %d 个提供“%s”的程序。\n"
 #: ../alternatives.c:711
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "  选择    命令\n"
+msgstr "  选项    命令\n"
 
 #: ../alternatives.c:720
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "按 Enter 来保持当前选择[+]，或键入选择编号："
+msgstr "按 Enter 保留当前选项[+]，或者键入选项编号："
 
 #: ../alternatives.c:723
 #, c-format
 msgid ""
 "\n"
 "error reading choice\n"
-msgstr "\n读取选择出错\n"
+msgstr ""
+"\n"
+"选项读取出错\n"
 
 #: ../alternatives.c:750 ../alternatives.c:776
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s 未被配置为 %s 的替换选择\n"
+msgstr "未将 %s 配置为 %s 的备用项\n"
 
 #: ../alternatives.c:792
 #, c-format
 msgid "(would remove %s\n"
-msgstr "（将会移除 %s\n"
+msgstr "将移除 %s\n"
 
 #: ../alternatives.c:794
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr "移除 %s 失败：%s\n"
+msgstr "%s 移除失败：%s\n"
 
 #: ../alternatives.c:916
 #, c-format
@@ -493,4 +495,6 @@ msgstr "admindir %s 无效\n"
 #: ../alternatives.c:932
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "alternatives（替换选择）版本 %s\n"
+msgstr "alternatives（备用）版本 %s\n"
+
+
