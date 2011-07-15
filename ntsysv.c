@@ -328,7 +328,7 @@ int main(int argc, const char ** argv) {
 		     "ntsysv " VERSION " - (C) 2000-2001 Red Hat, Inc. ");
 
     if (levels==-1)
-     levels=(1<<currentRunlevel());
+     levels = parseLevels("2345", 0);
 
     rc = servicesWindow(services, numServices, levels, backButton);
 
