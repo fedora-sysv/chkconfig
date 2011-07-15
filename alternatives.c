@@ -44,6 +44,7 @@ struct alternative {
     struct linkSet master;
     struct linkSet * slaves;
     char *initscript;
+    int isSystemd;
     int numSlaves;
 };
 
@@ -267,6 +268,7 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	set->alts[set->numAlts].priority = -1;
 	set->alts[set->numAlts].priority = strtol(line, &end, 0);
 	set->alts[set->numAlts].initscript = NULL;
+	set->alts[set->numAlts].isSystemd = -1;
 	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
 	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
@@ -281,6 +283,12 @@ static int readConfig(struct alternativeSet * set, const char * title,
 			snprintf(tmppath, 500, "/etc/init.d/%s", end);
 			if (!stat(tmppath, &sbuf)) {
 				set->alts[set->numAlts].initscript = strdup(end);
+				set->alts[set->numAlts].isSystemd = 0;
+			}
+			snprintf(tmppath, 500, "/lib/systemd/system/%s.service", end);
+			if (!stat(tmppath, &sbuf)) {
+				set->alts[set->numAlts].initscript = strdup(end);
+				set->alts[set->numAlts].isSystemd = 1;
 			}
 		}
 	}
@@ -501,20 +509,36 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     if (!FL_TEST(flags)) {
 	    if (alt->initscript) {
-		    path = alloca(strlen("/sbin/chkconfig --add ") + strlen(alt->initscript) + 1);
-		    sprintf(path, "/sbin/chkconfig --add %s", alt->initscript);
-		    if (FL_VERBOSE(flags))
-			    printf(_("running %s\n"), path);
-		    system(path);
+	            if (alt->isSystemd == 1) {
+                            asprintf(&path, "/bin/systemctl enable %s.service", alt->initscript);
+                            if (FL_VERBOSE(flags))
+                                    printf(_("running %s\n"), path);
+                            system(path);
+                            free(path);
+                    } else {
+                            asprintf(&path, "/sbin/chkconfig --add %s", alt->initscript);
+                            if (FL_VERBOSE(flags))
+                                    printf(_("running %s\n"), path);
+                            system(path);
+                            free(path);
+                    }
 	    }
 	    for (i = 0; i < set->numAlts ; i++) {
 		    struct alternative * tmpalt = set->alts + i;
 		    if (tmpalt != alt && tmpalt->initscript) {
-			    path = alloca(strlen("/sbin/chkconfig --del ") + strlen(tmpalt->initscript) + 1);
-			    sprintf(path, "/sbin/chkconfig --del %s", tmpalt->initscript);
-			    if (FL_VERBOSE(flags))
-				    printf(_("running %s\n"), path);
-			    system(path);
+		            if (tmpalt->isSystemd == 1) {
+                                    asprintf(&path, "/bin/systemctl disable %s.service", tmpalt->initscript);
+                                    if (FL_VERBOSE(flags))
+				            printf(_("running %s\n"), path);
+                                    system(path);
+                                    free(path);
+                            } else {
+                                    asprintf(&path, "/sbin/chkconfig --del %s", tmpalt->initscript);
+                                    if (FL_VERBOSE(flags))
+				            printf(_("running %s\n"), path);
+                                    system(path);
+                                    free(path);
+                            }
 		    }
 	    }
     }
