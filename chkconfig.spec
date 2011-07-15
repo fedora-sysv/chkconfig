@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.52
+Version: 1.3.53
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Jul 15 2011 Bill Nottingham <notting@redhat.com> 1.3.53-1
+- ntsysv: change the default to configure runlevels 2/3/4/5 (#709254)
+- alternatives: check whether the --initscript param is a systemd service, act appropriately (#714830)
+- forward chkconfig --del to systemctl disable where necessary
+
 * Wed Apr 27 2011 Bill Nottingham <notting@redhat.com> 1.3.52-1
 - set state before frobbing dependencies (#693202)
 - ntsysv: don't list or configure service overridden by systemd (#691224)
