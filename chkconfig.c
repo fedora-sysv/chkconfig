@@ -711,6 +711,7 @@ int main(int argc, const char ** argv) {
 	if (!name || !*name || poptGetArg(optCon)) usage();
 
 	name = basename(name);
+	forwardSystemd(name, type, "disable");
 	r = delService(name, type, -1);
         reloadSystemd();
 
