@@ -109,7 +109,7 @@ msgstr "Opmerking: Verzoek doorsturen naar 'systemctl %s %s'.\n"
 #: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "Service aanvraag doorsturen naar systemctl mislukte: %m"
+msgstr "Service aanvraag doorsturen naar systemctl mislukte: %m\n"
 
 #: ../chkconfig.c:652
 #, c-format

@@ -100,12 +100,12 @@ msgstr "gat ekki opnað möppuna %s: %s\n"
 #: ../chkconfig.c:591
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr "Athugið: Áframsendi beiðni í 'systemctl %s %s'."
+msgstr "Athugið: Áframsendi beiðni í 'systemctl %s %s'.\n"
 
 #: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "Ekki tókst að áframsenda þjónustubeiðni í systemctl: %m"
+msgstr "Ekki tókst að áframsenda þjónustubeiðni í systemctl: %m\n"
 
 #: ../chkconfig.c:652
 #, c-format

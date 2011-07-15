@@ -132,7 +132,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"注意：该输出结果只显示 SysV 服务，并不包含原生 systemd 服务。SysV 配置数据可能被原生 systemd 配置覆盖。 "
+"注意：该输出结果只显示 SysV 服务，并不包含原生 systemd 服务。SysV 配置数据可能被原生 systemd 配置覆盖。 \n"
 
 #: ../chkconfig.c:759
 #, c-format
@@ -265,7 +265,7 @@ msgstr "       alternatives --set <名称> <路径>\n"
 #: ../alternatives.c:73
 #, c-format
 msgid "\n"
-msgstr " \n"
+msgstr "\n"
 
 #: ../alternatives.c:74
 #, c-format

@@ -111,9 +111,7 @@ msgstr "Nota: Inoltro richiesta a 'systemctl %s %s'.\n"
 #: ../chkconfig.c:596
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
-"Fallita la richiesta di inoltro del servizio a systemctl: %m\n"
-" "
+msgstr "Fallita la richiesta di inoltro del servizio a systemctl: %m\n"
 
 #: ../chkconfig.c:652
 #, c-format
