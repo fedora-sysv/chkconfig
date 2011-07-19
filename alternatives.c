@@ -44,7 +44,6 @@ struct alternative {
     struct linkSet master;
     struct linkSet * slaves;
     char *initscript;
-    int isSystemd;
     int numSlaves;
 };
 
@@ -76,6 +75,16 @@ static int usage(int rc) {
     printf(_("                --altdir <directory> --admindir <directory>\n"));
 
     exit(rc);
+}
+
+static int isSystemd(char *initscript) {
+    char tmppath[500];
+    struct stat sbuf;
+
+    snprintf(tmppath, 500, "/lib/systemd/system/%s.service", initscript);
+    if (!stat(tmppath, &sbuf))
+        return 1;
+    return 0;
 }
 
 static void setupSingleArg(enum programModes * mode, const char *** nextArgPtr,
@@ -268,28 +277,15 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	set->alts[set->numAlts].priority = -1;
 	set->alts[set->numAlts].priority = strtol(line, &end, 0);
 	set->alts[set->numAlts].initscript = NULL;
-	set->alts[set->numAlts].isSystemd = -1;
 	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
 	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
 	    return 1;
 	}
 	if (end) {
-		char tmppath[500];
-		struct stat sbuf;
-
 		while (*end && isspace(*end)) end++;
 		if (strlen(end)) {
-			snprintf(tmppath, 500, "/etc/init.d/%s", end);
-			if (!stat(tmppath, &sbuf)) {
-				set->alts[set->numAlts].initscript = strdup(end);
-				set->alts[set->numAlts].isSystemd = 0;
-			}
-			snprintf(tmppath, 500, "/lib/systemd/system/%s.service", end);
-			if (!stat(tmppath, &sbuf)) {
-				set->alts[set->numAlts].initscript = strdup(end);
-				set->alts[set->numAlts].isSystemd = 1;
-			}
+                        set->alts[set->numAlts].initscript = strdup(end);
 		}
 	}
 
@@ -509,8 +505,8 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     if (!FL_TEST(flags)) {
 	    if (alt->initscript) {
-	            if (alt->isSystemd == 1) {
-                            asprintf(&path, "/bin/systemctl enable %s.service", alt->initscript);
+	            if (isSystemd(alt->initscript)) {
+                            asprintf(&path, "/bin/systemctl -q enable %s.service", alt->initscript);
                             if (FL_VERBOSE(flags))
                                     printf(_("running %s\n"), path);
                             system(path);
@@ -526,8 +522,8 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 	    for (i = 0; i < set->numAlts ; i++) {
 		    struct alternative * tmpalt = set->alts + i;
 		    if (tmpalt != alt && tmpalt->initscript) {
-		            if (tmpalt->isSystemd == 1) {
-                                    asprintf(&path, "/bin/systemctl disable %s.service", tmpalt->initscript);
+		            if (isSystemd(tmpalt->initscript)) {
+                                    asprintf(&path, "/bin/systemctl -q disable %s.service", tmpalt->initscript);
                                     if (FL_VERBOSE(flags))
 				            printf(_("running %s\n"), path);
                                     system(path);
