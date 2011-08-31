@@ -2,6 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
+# Daniyal Yousefi <da.yousefi@gmail.com>, 2011.
 # notting <notting@redhat.com>, 2011.
 #   <nanopqr@gmail.com>, 2011.
 # nano <nanopqr@gmail.com>, 2011.
@@ -9,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-26 17:35-0400\n"
-"PO-Revision-Date: 2011-06-17 14:51+0000\n"
-"Last-Translator: nano <nanopqr@gmail.com>\n"
+"POT-Creation-Date: 2011-07-15 16:35-0400\n"
+"PO-Revision-Date: 2011-07-30 19:54+0000\n"
+"Last-Translator: danialyousefi <da.yousefi@gmail.com>\n"
 "Language-Team: Persian (http://www.transifex.net/projects/p/fedora/team/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,14 +23,14 @@ msgstr ""
 #: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s نسخه %s -کپی رایت (C) 1997-2000 رد هت, Inc.\n"
+msgstr "%s نسخه %s -کپی‌رایت (C) 1997-2000 رد هت, Inc.\n"
 
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public "
 "License.\n"
-msgstr "این برنامه می تواند آزادانه تحت لیسانس GNU منتشر شود.\n"
+msgstr "این برنامه می‌تواند آزادانه تحت مجوز GNU منتشر شود.\n"
 
 #: ../chkconfig.c:44
 #, c-format
@@ -39,7 +40,7 @@ msgstr "کاربرد:   %s [--list] [--type <type>] [name]\n"
 #: ../chkconfig.c:45
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --اضافه کردن <name>\n"
+msgstr "         %s --افزودن <name>\n"
 
 #: ../chkconfig.c:46
 #, c-format
@@ -62,13 +63,13 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"سرویس %s chkconfig  را ساپورت میکند. ولی به تمام Runlevel ها ارجاع نمی شود"
+"سرویس %s chkconfig  را پشتیبانی میکند. ولی به تمام Runlevel ها ارجاع نمی‌شود"
 "   (run 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:57
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "سرویس %s  chkconfig  را پشتیبانی نمی کند\n"
+msgstr "سرویس %s  chkconfig  را پشتیبانی نمی‌کند\n"
 
 #: ../chkconfig.c:59
 #, c-format
@@ -78,7 +79,7 @@ msgstr "خطا در خواندن اطلاعات در سرویس %s: %s\n"
 #: ../chkconfig.c:68
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr "شما سطح دسترسی لازم برای انجام این عملیات راندارید .\n"
+msgstr "شما دسترسی لازم را برای انجام این عملیات ندارید .\n"
 
 #: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
 msgid "on"
@@ -91,41 +92,41 @@ msgstr "خاموش"
 #: ../chkconfig.c:479
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "سرویس های بر پایه xinetd :\n"
+msgstr "سرویس‌های بر پایهٔ xinetd:\n"
 
 #: ../chkconfig.c:481
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "خطا در باز کردن دایرکتوری  %s: %s\n"
 
-#: ../chkconfig.c:591
+#: ../chkconfig.c:605
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "توجه: درخواست را به 'systemctl %s %s' بفرستید.\n"
 
-#: ../chkconfig.c:596
+#: ../chkconfig.c:610
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "فرستادن درخواست سرویس به systemctl: %m شکست خورد\n"
 
-#: ../chkconfig.c:652
+#: ../chkconfig.c:666
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s نسخه %s\n"
 
-#: ../chkconfig.c:664
+#: ../chkconfig.c:678
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--نوع باید باشد 'sysv' یا 'xinetd'\n"
 
-#: ../chkconfig.c:672
+#: ../chkconfig.c:686
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
-"فقط یکی از گزینه های  --لیست, --اضافه کردن, --حذف, یا --جایگزین کردن قابل "
+"فقط یکی از گزینه های  --فهرست‌کردن, --افزودن, --حذف, یا --جایگزین‌کردن قابل "
 "اعمال است\n"
 
-#: ../chkconfig.c:722
+#: ../chkconfig.c:737
 #, c-format
 msgid ""
 "\n"
@@ -140,7 +141,7 @@ msgstr ""
 "      systemd بازنویسی شود.\n"
 "\n"
 
-#: ../chkconfig.c:759
+#: ../chkconfig.c:774
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "فقط یک runlevel  می تواند در chkconfig query اعمال گردد\n"
@@ -151,7 +152,7 @@ msgstr "برای اطلاعات بیشتر در مورد سرویس <F1> را ف
 
 #: ../ntsysv.c:83 ../ntsysv.c:120
 msgid "Ok"
-msgstr "Ok"
+msgstr "تأیید"
 
 #: ../ntsysv.c:83
 msgid "Back"
@@ -167,7 +168,7 @@ msgstr "کدام سرویس ها باید بطور اتوماتیک استارت
 
 #: ../ntsysv.c:101
 msgid "Services"
-msgstr "سرویس ها "
+msgstr "سرویس‌ها"
 
 #: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
 #, c-format
@@ -214,259 +215,260 @@ msgstr "محیط اجرای جاری قابل تشخیص نیست \n"
 msgid "failed to make symlink %s: %s\n"
 msgstr "خطا در ایجاد symlink %s: %s\n"
 
-#: ../alternatives.c:63
+#: ../alternatives.c:64
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "نسخه جایگزین %s - کپی رایت  (C) 2001 رد هت, شرکت.\n"
+msgstr "نسخهٔ جایگزین %s - کپی‌رایت  (C) 2001 رد هت, شرکت.\n"
 
-#: ../alternatives.c:64
+#: ../alternatives.c:65
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"این برنامه می تواند آزادانه تحت لیسانس GNU منتشر شود\n"
+"این برنامه می‌تواند آزادانه تحت مجوز GNU منتشر شود\n"
 "\n"
 
-#: ../alternatives.c:65
+#: ../alternatives.c:66
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "کاربرد: جایگزین --نصب <link> <name> <path> <priority>\n"
 
-#: ../alternatives.c:66
+#: ../alternatives.c:67
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
-#: ../alternatives.c:67
+#: ../alternatives.c:68
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--پیرو <link> <name> <path>]*\n"
 
-#: ../alternatives.c:68
-#, c-format
-msgid "       alternatives --remove <name> <path>\n"
-msgstr "  جایگزین ها --حذف <name> <path>\n"
-
 #: ../alternatives.c:69
 #, c-format
-msgid "       alternatives --auto <name>\n"
-msgstr "      جایگزین ها --auto <name>\n"
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "  جایگزین‌ها --حذف <name> <path>\n"
 
 #: ../alternatives.c:70
 #, c-format
-msgid "       alternatives --config <name>\n"
-msgstr "     جایگزین ها --config <name>\n"
+msgid "       alternatives --auto <name>\n"
+msgstr "      جایگزین‌ها --auto <name>\n"
 
 #: ../alternatives.c:71
 #, c-format
-msgid "       alternatives --display <name>\n"
-msgstr "     جایگزین ها --display <name>\n"
+msgid "       alternatives --config <name>\n"
+msgstr "     جایگزین‌ها --config <name>\n"
 
 #: ../alternatives.c:72
 #, c-format
-msgid "       alternatives --set <name> <path>\n"
-msgstr "   جایگزین ها --set <name> <path>\n"
+msgid "       alternatives --display <name>\n"
+msgstr "     جایگزین‌ها --display <name>\n"
 
 #: ../alternatives.c:73
+#, c-format
+msgid "       alternatives --set <name> <path>\n"
+msgstr "   جایگزین‌ها --set <name> <path>\n"
+
+#: ../alternatives.c:74
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:74
+#: ../alternatives.c:75
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "گزینه های معمول: --verbose --test --help --usage --version\n"
+msgstr "گزینه‌های معمول: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:75
+#: ../alternatives.c:76
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr ""
 "                --دایرکتوری جایگزین <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:172
+#: ../alternatives.c:173
 #, c-format
 msgid "reading %s\n"
 msgstr "در حال خواندن  %s\n"
 
-#: ../alternatives.c:176
+#: ../alternatives.c:177
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "خطا در باز کردن %s: %s\n"
 
-#: ../alternatives.c:185
+#: ../alternatives.c:186
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "خطا در خواندن %s: %s\n"
 
-#: ../alternatives.c:194
+#: ../alternatives.c:195
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s خالی!\n"
 
-#: ../alternatives.c:203
+#: ../alternatives.c:204
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "خطا در خط  1 از %s\n"
 
-#: ../alternatives.c:210
+#: ../alternatives.c:211
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "خطای لینک اصلی در %s\n"
 
-#: ../alternatives.c:222
+#: ../alternatives.c:223
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "مسیر %s پیش بینی نشده در %s\n"
+msgstr "مسیر %s پیشبینی‌نشده در %s\n"
 
-#: ../alternatives.c:231
+#: ../alternatives.c:232
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "اشکال مسیر پیرو %s در %s\n"
 
-#: ../alternatives.c:241
+#: ../alternatives.c:242
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "خطای پیش بینی نشده در انتهای فایل %s\n"
+msgstr "خطای پیشبینی‌نشده در انتهای فایل %s\n"
 
-#: ../alternatives.c:250
+#: ../alternatives.c:251
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "پیش بینی مسیر جایگزین در  %s\n"
+msgstr "پیشبینی مسیر جایگزین در  %s\n"
 
-#: ../alternatives.c:251 ../alternatives.c:272 ../alternatives.c:295
-#: ../alternatives.c:314
+#: ../alternatives.c:252 ../alternatives.c:274 ../alternatives.c:303
+#: ../alternatives.c:322
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "ورودی پیش بینی نشده در %s: %s\n"
+msgstr "ورودی پیشبینی‌نشده در %s: %s\n"
 
-#: ../alternatives.c:271
+#: ../alternatives.c:273
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "انتظار اولویت عددی در %s\n"
 
-#: ../alternatives.c:294
+#: ../alternatives.c:302
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "انتظار مسیر پیرو در %s\n"
 
-#: ../alternatives.c:322
+#: ../alternatives.c:330
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "خطا در خواندن لینک %s: %s\n"
 
-#: ../alternatives.c:336
+#: ../alternatives.c:344
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "لینک به مسیر جایگزین اشاره ندارد -- در حال تغییر حالت به دستی\n"
 
-#: ../alternatives.c:341
+#: ../alternatives.c:349
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "لینک تغییر یافته -- در حال تغییر به حالت دستی\n"
 
-#: ../alternatives.c:369 ../alternatives.c:376
+#: ../alternatives.c:377 ../alternatives.c:384
 #, c-format
 msgid "would remove %s\n"
-msgstr "با ید حذف شود %s\n"
+msgstr "باید حذف شود %s\n"
 
-#: ../alternatives.c:371 ../alternatives.c:378 ../alternatives.c:410
+#: ../alternatives.c:379 ../alternatives.c:386 ../alternatives.c:418
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "خطا در حذف لینک  %s: %s\n"
 
-#: ../alternatives.c:394 ../alternatives.c:407
+#: ../alternatives.c:402 ../alternatives.c:415
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "لینک خواهد شد %s -> %s\n"
 
-#: ../alternatives.c:399 ../alternatives.c:416
+#: ../alternatives.c:407 ../alternatives.c:424
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "خطا در لینک کردن  %s -> %s: %s\n"
 
-#: ../alternatives.c:448
+#: ../alternatives.c:456
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s از قبل وحود دارد\n"
 
-#: ../alternatives.c:450
+#: ../alternatives.c:458
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "خطا در ایجاد %s: %s\n"
 
-#: ../alternatives.c:481
+#: ../alternatives.c:489
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "خطا در جایگزین کردن %s با %s: %s\n"
 
-#: ../alternatives.c:507 ../alternatives.c:516
+#: ../alternatives.c:515 ../alternatives.c:521 ../alternatives.c:532
+#: ../alternatives.c:538
 #, c-format
 msgid "running %s\n"
 msgstr "اجرای %s\n"
 
-#: ../alternatives.c:543
+#: ../alternatives.c:567
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr "لینک اصلی برای  %s با ید باشد %s\n"
+msgstr "لینک اصلی برای  %s باید باشد %s\n"
 
-#: ../alternatives.c:623
+#: ../alternatives.c:647
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "لینک %s برای لینک پیرو غلط است %s (%s %s)\n"
 
-#: ../alternatives.c:664
+#: ../alternatives.c:688
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - وضعیت اتوماتیک است .\n"
 
-#: ../alternatives.c:666
+#: ../alternatives.c:690
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - وضعیت دستی است.\n"
 
-#: ../alternatives.c:668
+#: ../alternatives.c:692
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "لینک در حال حاظر اشاره دارد به %s\n"
 
-#: ../alternatives.c:671
+#: ../alternatives.c:695
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - اولویت %d\n"
 
-#: ../alternatives.c:674
+#: ../alternatives.c:698
 #, c-format
 msgid " slave %s: %s\n"
 msgstr "پیرو %s: %s\n"
 
-#: ../alternatives.c:679
+#: ../alternatives.c:703
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "حاری `best' نسخه ای است از %s.\n"
+msgstr "حاری `best' نسخه‌ای است از %s.\n"
 
-#: ../alternatives.c:709
+#: ../alternatives.c:733
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "وجود دارد %d برنامه ای که در حال ایجاد  '%s'.\n"
+msgstr "وجود دارد %d برنامه‌ای که در حال ایجاد  '%s'.\n"
 
-#: ../alternatives.c:709
+#: ../alternatives.c:733
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "وجود دارد  %d برنامه ای برای ایجاد '%s'.\n"
+msgstr "وجود دارد  %d برنامه‌ای برای ایجاد '%s'.\n"
 
-#: ../alternatives.c:711
+#: ../alternatives.c:735
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "انتخاب    دستور\n"
 
-#: ../alternatives.c:720
+#: ../alternatives.c:744
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"برای باقیماندن انتخاب جاری enter کنید [+], یا عدد دلخواه واردنمایید : "
+"برای باقی‌ماندن انتخاب جاری enter کنید [+], یا عدد دلخواه وارد نمایید : "
 
-#: ../alternatives.c:723
+#: ../alternatives.c:747
 #, c-format
 msgid ""
 "\n"
@@ -475,34 +477,34 @@ msgstr ""
 "\n"
 "خطا در خواندن انتخاب \n"
 
-#: ../alternatives.c:750 ../alternatives.c:776
+#: ../alternatives.c:774 ../alternatives.c:800
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s برای نسخه جایگزین تنظیم نشده است %s\n"
 
-#: ../alternatives.c:792
+#: ../alternatives.c:816
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(حذف خواهد شد %s\n"
 
-#: ../alternatives.c:794
+#: ../alternatives.c:818
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "خطا در حذف %s: %s\n"
 
-#: ../alternatives.c:916
+#: ../alternatives.c:940
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr "دایکتوری جایگزین  %s iنامعتبر است \n"
+msgstr "دایرکتوری جایگزین  %s نامعتبر است \n"
 
-#: ../alternatives.c:922
+#: ../alternatives.c:946
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "دایرکتوری ادمین %s نامعتبر\n"
 
-#: ../alternatives.c:932
+#: ../alternatives.c:956
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "نسخه جایگزین %s\n"
+msgstr "نسخهٔ جایگزین %s\n"
 
 
