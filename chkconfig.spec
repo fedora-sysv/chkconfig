@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.54
+Version: 1.3.55
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Aug 31 2011 Bill Nottingham <notting@redhat.com> 1.3.55-1
+- update translations (#734631)
+
 * Tue Jul 19 2011 Bill Nottingham <notting@redhat.com> 1.3.54-1
 - alternatives: fix --initscript systemd support (#714830)
 - revert forwarding of 'chkconfig --del' to 'systemctl disable'
