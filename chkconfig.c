@@ -50,6 +50,15 @@ static void usage(void) {
     exit(1);
 }
 
+static void display_list_systemd_note() {
+	if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0 &&
+	    access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
+		fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
+				  "      systemd services. SysV configuration data might be overridden by native\n"
+				  "      systemd configuration.\n\n"));
+	}
+}
+
 static void readServiceError(int rc, char * name) {
     if (rc == 2) {
 	fprintf(stderr, _("service %s supports chkconfig, but is not referenced in any runlevel (run 'chkconfig --add %s')\n"), name, name);
@@ -680,7 +689,10 @@ int main(int argc, const char ** argv) {
 	}
     }
 
-    if (argc == 1) return listService(NULL, type);
+    if (argc == 1) {
+	    display_list_systemd_note();
+	    return listService(NULL, type);
+    }
 
     if ((listItem + addItem + delItem + overrideItem) > 1) {
 	fprintf(stderr, _("only one of --list, --add, --del, or --override"
@@ -731,12 +743,7 @@ int main(int argc, const char ** argv) {
 
 	if (item && poptGetArg(optCon)) usage();
 
-        if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0 &&
-            access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
-	    fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
-                              "      systemd services. SysV configuration data might be overridden by native\n"
-                              "      systemd configuration.\n\n"));
-        }
+	display_list_systemd_note();
 
 	return listService(item, type);
     } else {
