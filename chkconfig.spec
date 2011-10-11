@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.55
+Version: 1.3.56
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Oct 11 2011 Bill Nottingham <notting@redhat.com> 1.3.56-1
+- add the systemd warning when no arguments are passed (<harald@redhat.com>)
+
 * Wed Aug 31 2011 Bill Nottingham <notting@redhat.com> 1.3.55-1
 - update translations (#734631)
 
