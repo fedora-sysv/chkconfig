@@ -140,7 +140,7 @@ static inline int earlierThan(int i, int j) {
 }
 
 static int isSimilarlyConfigured(struct service s, struct service t, int start) {
-        int i, state_s, state_t;
+        int i, state_s, state_t, started = 0;
 
         for (i = 0; i <= 6; i ++) {
                 if (isConfigured(s.name, i, NULL, NULL)) {
@@ -149,9 +149,11 @@ static int isSimilarlyConfigured(struct service s, struct service t, int start) 
                         state_s = ((1<<i) & s.levels) ? 1 : 0;
                 }
                 state_t = isOn(t.name, i);
+                if (state_s) started++;
                 if (state_s == state_t && state_s == start)
                         return 1;
         }
+        if (start && !started) return 1;
         return 0;
 }
 
