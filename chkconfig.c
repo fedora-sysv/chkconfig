@@ -188,7 +188,7 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 	int k0 = s->kPriority;
 
 	if (s->sPriority < 0) s->sPriority = 50;
-	if (s->kPriority < 0) s->kPriority = 50;
+	if (s->kPriority > 99) s->kPriority = 50;
 	for (i = 0; i < numservs ; i++) {
 		if (s->startDeps) {
 			checkDeps(s, s->startDeps, &servs[i], 1);
@@ -314,9 +314,9 @@ static int overrideService(char * name, int srvtype) {
 	return 0;
     }
 
-    if (s.isLSB && (s.sPriority <= -1) && (s.kPriority <= -1))
+    if (s.isLSB && (s.sPriority <= -1) && (s.kPriority >= 100))
 		frobDependencies(&s);
-    if ((s.isLSB || o.isLSB) && (o.sPriority <= -1) && (o.kPriority <= -1))
+    if ((s.isLSB || o.isLSB) && (o.sPriority <= -1) && (o.kPriority >= 100))
 		frobDependencies(&o);
 
     /* Apply overrides only if the service has not been changed since

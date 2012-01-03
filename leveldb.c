@@ -156,7 +156,7 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 	struct service serv = { 
 			name: NULL,
 			levels: -1,
-			kPriority: -1,
+			kPriority: 100,
 			sPriority: -1, 
 			desc: NULL, 
 			startDeps: NULL, 
@@ -421,7 +421,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     struct service serv = { 
 	    	    name: NULL, 
 		    levels: -1, 
-		    kPriority: -1, 
+		    kPriority: 100, 
 		    sPriority: -1, 
 		    desc: NULL, 
 		    startDeps: NULL, 
@@ -516,7 +516,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	    }
 	    if (serv.sPriority == -1)
 			serv.sPriority = spri;
-	    if (serv.kPriority == -1)
+	    if (serv.kPriority == 100)
 			serv.kPriority = kpri;
 
 	    if (serv.levels == -1) {
@@ -622,7 +622,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     } else if (english_desc)
 	free (english_desc);
 
-    if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == -1)))) {
+    if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == 100)))) {
 	return 1;
     } 
 
