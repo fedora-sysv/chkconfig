@@ -33,6 +33,7 @@ struct dep {
 struct service {
     char * name;
     int levels, kPriority, sPriority;
+    int currentLevels;
     char * desc;
     struct dep *startDeps;
     struct dep *stopDeps;
@@ -55,6 +56,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 int currentRunlevel(void);
 int isOn(char * name, int where);
 int isConfigured(char * name, int level, int *priority, char *type);
+int whatLevels(char * name);
 int doSetService(struct service s, int level, int on);
 int findServiceEntries(char * name, int level, glob_t * globresptr);
 int readXinetdServiceInfo(char *name, struct service *service);
