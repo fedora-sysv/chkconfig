@@ -329,6 +329,7 @@ int readServiceInfo(char * name, int type, struct service * service, int honorHi
             if (serv_overrides.isLSB || serv.isLSB) serv.isLSB = 1;
         }
     }
+    serv.currentLevels = whatLevels(name);
 
     free(filename);
     *service = serv;
@@ -423,6 +424,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 		    levels: -1,
 		    kPriority: 100,
 		    sPriority: -1,
+		    currentLevels: 0,
 		    desc: NULL,
 		    startDeps: NULL,
 		    stopDeps: NULL,
@@ -724,6 +726,15 @@ int isOn(char * name, int level) {
 
     globfree(&globres);
     return 1;
+}
+
+int whatLevels(char *name) {
+    int i, ret = 0;
+
+    for (i = 0; i < 7; i++) {
+        ret |= (isOn(name, i) << i);
+    }
+    return ret;
 }
 
 int setXinetdService(struct service s, int on) {
