@@ -139,21 +139,18 @@ static inline int earlierThan(int i, int j) {
 }
 
 static int isSimilarlyConfigured(struct service s, struct service t, int start) {
-        int i, state_s, state_t, started = 0;
+        int state_s, state_t;
 
-        for (i = 0; i <= 6; i ++) {
-                if (isConfigured(s.name, i, NULL, NULL)) {
-                        state_s = isOn(s.name, i);
-                } else {
-                        state_s = ((1<<i) & s.levels) ? 1 : 0;
-                }
-                state_t = isOn(t.name, i);
-                if (state_s) started++;
-                if (state_s == state_t && state_s == start)
-                        return 1;
+        state_s = s.currentLevels;
+        state_t = t.currentLevels;
+        if (!start) {
+                state_s = ~state_s;
+                state_t = ~state_t;
         }
-        if (start && !started) return 1;
-        return 0;
+        if ((state_s & state_t) == state_s)
+                return 1;
+        else
+                return 0;
 }
 
 static void checkDeps(struct service *s, struct dep *deps, struct service *serv, int start) {
@@ -240,12 +237,19 @@ static int frobDependencies(struct service *s) {
 	struct service *servs = NULL;
 	int numservs = 0;
 	int nResolved = 0;
+	int i;
 
 	numservs = readServices(&servs);
+        /* In the full service list, replace the target script's current
+           runlevels with the desired output runlevels, which are passed in */
+	for (i = 0; i < numservs; i++) {
+	        if (!strcmp((servs+i)->name, s->name)) {
+	                (servs+i)->currentLevels = s->currentLevels;
+	        }
+	}
 	/* Resolve recursively the other dependancies */
 	do {
 	  	nResolved = 0;
-		int i;
 		
 		for (i = 0; i < numservs ; i++) {
 			if ((servs+i)->isLSB)
@@ -271,9 +275,16 @@ static int addService(char * name, int type) {
     if (s.type == TYPE_XINETD) return 0;
     checkRoot();
 
-    if (s.isLSB)
+    if (s.isLSB) {
+                for (i = 0; i < 7; i++) {
+                        if (isConfigured(s.name, i, NULL, NULL))
+                                break;
+                }
+                if (i == 7) {
+                        s.currentLevels = s.levels;
+                }
 		rc = frobDependencies(&s);
-    else
+    } else
     for (i = 0; i < 7; i++) {
 	if (!isConfigured(name, i, NULL, NULL)) {
 	    if ((1 << i) & s.levels)
@@ -529,19 +540,19 @@ int setService(char * name, int type, int where, int state) {
     if (s.type == TYPE_INIT_D) {
 	    int rc = 0;
 
-	    for (i = 0; i < 7; i++) {
+	    if (state == -1)
+                s.currentLevels = s.levels;
+            else if (state != -2) {
+                /* If we're enabling/disabling, set currentLevels to
+                   desired state */
+                for (i = 0; i < 7; i++) {
+                    if (!((1 << i) & where)) continue;
 
-		    if (!((1 << i) & where)) continue;
-
-		    if (state == 1 || state == 0)
-		      what = state;
-		    else if (state == -2)
-		      what = isOn(name, i);
-		    else if (s.levels & (1 << i))
-		      what = 1;
-		    else
-		      what = 0;
-		    rc |= doSetService(s, i, what);
+		    if (state == 1)
+		        s.currentLevels |= (1 << i);
+                    else if (state == 0)
+                        s.currentLevels |= ~(1 << i);
+                }
 	    }
 	    if (s.isLSB)
 		    frobDependencies(&s);
