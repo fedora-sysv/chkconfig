@@ -431,7 +431,6 @@ static int showServiceInfoByName(char * name, int type, int forgiving) {
 
 
 static int isXinetdEnabled() {
-	int i;
 	struct service s;
 
 	if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
