@@ -99,7 +99,7 @@ static int delService(char *name, int type, int level) {
 			for (j = 0; services[i].stopDeps[j].name ; j++) {
 				if (!strcmp(services[i].stopDeps[j].name, s.name)) {
 				        for (k = 0 ; k <= 6; k++) {
-				                if (!(services[i].currentLevels & (1 << k)))
+				                if (isConfigured(services[i].name, k, NULL, NULL) && !(services[i].currentLevels & (1 << k)))
 				                    return 1;
                                         }
 				}
