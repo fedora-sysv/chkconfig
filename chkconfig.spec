@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.49
+Version: 1.3.49.1
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Jan  4 2011 Bill Nottingham <notting@redhat.com> 1.3.49.1-1
+- backport LSB fixes from head
+- fixes: #693202/#771455, #649227/#771452, #750446/#771454, #701573/#771741, #696305 (<jbastian@redhat.com>)
+
 * Tue Nov  9 2010 Bill Nottingham <notting@redhat.com> 1.3.49-1
 - fix abort on free of uninitialized data. (#649227)
 
