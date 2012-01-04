@@ -89,8 +89,7 @@ static int delService(char *name, int type, int level) {
 		if (services[i].startDeps) {
 			for (j = 0; services[i].startDeps[j].name ; j++) {
 				if (!strcmp(services[i].startDeps[j].name, s.name)) {
-				        for (k = 0 ; k <= 6; k++) {
-				            if (isOn(services[i].name, k))
+				        if (services[i].currentLevels) {
 				                return 1;
                                         }
 				}
@@ -100,7 +99,7 @@ static int delService(char *name, int type, int level) {
 			for (j = 0; services[i].stopDeps[j].name ; j++) {
 				if (!strcmp(services[i].stopDeps[j].name, s.name)) {
 				        for (k = 0 ; k <= 6; k++) {
-				                if (!isOn(services[i].name, k))
+				                if (!(services[i].currentLevels & (1 << k)))
 				                    return 1;
                                         }
 				}
@@ -418,10 +417,8 @@ static int isXinetdEnabled() {
 	if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
 		return 0;
 	}
-	for (i = 0; i < 7; i++) {
-		if (isOn("xinetd", i))
-		  return 1;
-	}
+	if (s.currentLevels)
+		return 1;
 	return 0;
 }
 
@@ -718,7 +715,7 @@ int main(int argc, const char ** argv) {
 	       else
 		       return 1;
 	    } else	
-	       return isOn(name, level) ? 0 : 1;
+               return s.currentLevels & (1 << level) ? 0 : 1;
 	} else if (!strcmp(state, "on"))
 	    return setService(name, type, where, 1);
 	else if (!strcmp(state, "off"))
