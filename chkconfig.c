@@ -248,7 +248,7 @@ static int frobDependencies(struct service *s) {
 		int i;
 		
 		for (i = 0; i < numservs ; i++) {
-			if ((servs+i)->isLSB && strcmp((servs+i)->name, s->name))
+			if ((servs+i)->isLSB)
 				nResolved += frobOneDependencies(servs+i, servs, numservs, 0, 0);
 		}
 	} while (nResolved);
