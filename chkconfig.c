@@ -799,8 +799,11 @@ int main(int argc, const char ** argv) {
 		       return !s.levels;
 	       else
 		       return 1;
-	    } else
+	    } else {
+               if (level == -1)
+                   level = currentRunlevel();
 	       return s.currentLevels & (1 << level) ? 0 : 1;
+	    }
 	} else if (!strcmp(state, "on")) {
 	    if (!noRedirectItem) {
 		forwardSystemd(name, type, "enable");
