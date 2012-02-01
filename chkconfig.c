@@ -138,15 +138,11 @@ static inline int earlierThan(int i, int j) {
 	return i;
 }
 
-static int isSimilarlyConfigured(struct service s, struct service t, int start) {
+static int isSimilarlyConfigured(struct service s, struct service t) {
         int state_s, state_t;
 
         state_s = s.currentLevels;
         state_t = t.currentLevels;
-        if (!start) {
-                state_s = ~state_s;
-                state_t = ~state_t;
-        }
         if ((state_s & state_t) == state_s)
                 return 1;
         else
@@ -157,7 +153,7 @@ static void checkDeps(struct service *s, struct dep *deps, struct service *serv,
         int j,k;
 
         for (j = 0; deps[j].name ; j++) {
-                if (!strcmp(deps[j].name, serv->name) && isSimilarlyConfigured(*s, *serv, start)) {
+                if (!strcmp(deps[j].name, serv->name) && isSimilarlyConfigured(*s, *serv)) {
                         if (start)
                                 s->sPriority = laterThan(s->sPriority, serv->sPriority);
                         else
@@ -166,7 +162,7 @@ static void checkDeps(struct service *s, struct dep *deps, struct service *serv,
                 }
                 if (serv->provides) {
                         for (k = 0; serv->provides[k]; k++) {
-                                if (!strcmp(deps[j].name, serv->provides[k]) && isSimilarlyConfigured(*s, *serv, start)) {
+                                if (!strcmp(deps[j].name, serv->provides[k]) && isSimilarlyConfigured(*s, *serv)) {
                                         if (start)
                                                 s->sPriority = laterThan(s->sPriority, serv->sPriority);
                                         else
