@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.49.2
+Version: 1.3.49.3
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Feb  1 2012 Bill Nottingham <notting@redhat.com> 1.3.49.3-1
+- fix another regression, this one in 'install_initd' (#696305)
+
 * Tue Jan 17 2012 Bill Nottingham <notting@redhat.com> 1.3.49.2-1
 - backport fix for regression introduced in last set of fixes (#782152)
  
