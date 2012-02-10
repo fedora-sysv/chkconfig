@@ -818,6 +818,20 @@ int doSetService(struct service s, int level, int on) {
     return 0;
 }
 
+int systemdIsInit() {
+    char *path = realpath("/sbin/init", NULL);
+    char *base;
+
+    if (!path)
+        return 0;
+    base = basename(path);
+    if (!base)
+        return 0;
+    if (strcmp(base,"systemd"))
+        return 0;
+    return 1;
+}
+
 int systemdActive() {
     struct stat a, b;
 
@@ -827,10 +841,11 @@ int systemdActive() {
         return 0;
     if (a.st_dev == b.st_dev)
         return 0;
-    if (access(SYSTEMD_BINARY_PATH, F_OK) < 0)
+    if (!systemdIsInit())
         return 0;
     return 1;
 }
+
 
 int isOverriddenBySystemd(const char *service) {
     char *p;

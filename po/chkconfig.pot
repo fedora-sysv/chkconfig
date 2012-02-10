@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-17 11:46-0500\n"
+"POT-Creation-Date: 2012-02-10 14:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,50 +86,50 @@ msgstr ""
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:412 ../chkconfig.c:417 ../chkconfig.c:535
+#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:412 ../chkconfig.c:417 ../chkconfig.c:535
+#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:497
+#: ../chkconfig.c:493
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:499
+#: ../chkconfig.c:495
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:623
+#: ../chkconfig.c:619
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:628
+#: ../chkconfig.c:624
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:684
+#: ../chkconfig.c:680
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:696
+#: ../chkconfig.c:692
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:707
+#: ../chkconfig.c:703
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:789
+#: ../chkconfig.c:785
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""

@@ -29,10 +29,6 @@
 #define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
 #endif
 
-#ifndef SYSTEMD_BINARY_PATH
-#define SYSTEMD_BINARY_PATH "/bin/systemd"
-#endif
-
 struct dep {
     char *name;
     int handled;
@@ -69,6 +65,7 @@ int doSetService(struct service s, int level, int on);
 int findServiceEntries(char * name, int level, glob_t * globresptr);
 int readXinetdServiceInfo(char *name, struct service *service);
 int setXinetdService(struct service s, int on);
+int systemdIsInit();
 int systemdActive();
 int isOverriddenBySystemd(const char *service);
 #endif

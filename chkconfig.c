@@ -52,7 +52,7 @@ static void usage(void) {
 
 static void display_list_systemd_note() {
 	if (access(SYSTEMD_SERVICE_PATH, F_OK) >= 0 &&
-	    access(SYSTEMD_BINARY_PATH, F_OK) >= 0) {
+	    systemdIsInit()) {
 		fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
 				  "      systemd services. SysV configuration data might be overridden by native\n"
 				  "      systemd configuration.\n\n"));
@@ -608,7 +608,7 @@ void forwardSystemd(const char *name, int type, const char *verb) {
     if (type == TYPE_XINETD)
         return;
 
-    if (access(SYSTEMD_BINARY_PATH, F_OK) < 0)
+    if (!systemdIsInit())
 	return;
 
     if (isOverriddenBySystemd(name)) {
