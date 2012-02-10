@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.57
+Version: 1.3.58
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Feb 10 2012 Bill Nottingham <notting@redhat.com> 1.3.58-1
+- fix forwarding to systemctl with systemd >= 41 (#789256)
+- assorted regression fixes from 1.3.57 (#782152, etc.)
+
 * Wed Jan 04 2012 Bill Nottingham <notting@redhat.com> 1.3.57-1
 - assorted cleanups to LSB dependency support (#693202 fixed properly, #701573)
 - fix kill values for LSB-only scripts (#696305, <jbastian@redhat.com>)
