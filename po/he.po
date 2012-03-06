@@ -2,12 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-15 16:35-0400\n"
-"PO-Revision-Date: 2011-08-31 18:44+0000\n"
+"POT-Creation-Date: 2012-02-10 14:34-0500\n"
+"PO-Revision-Date: 2011-03-03 19:59+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Hebrew <he-users@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,72 +54,7 @@ msgstr ""
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:55
-#, c-format
-msgid ""
-"service %s supports chkconfig, but is not referenced in any runlevel (run "
-"'chkconfig --add %s')\n"
-msgstr ""
-
-#: ../chkconfig.c:57
-#, c-format
-msgid "service %s does not support chkconfig\n"
-msgstr ""
-
-#: ../chkconfig.c:59
-#, c-format
-msgid "error reading information on service %s: %s\n"
-msgstr ""
-
-#: ../chkconfig.c:68
-#, c-format
-msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
-
-#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
-msgid "on"
-msgstr ""
-
-#: ../chkconfig.c:391 ../chkconfig.c:396 ../chkconfig.c:517
-msgid "off"
-msgstr ""
-
-#: ../chkconfig.c:479
-#, c-format
-msgid "xinetd based services:\n"
-msgstr ""
-
-#: ../chkconfig.c:481
-#, c-format
-msgid "failed to open directory %s: %s\n"
-msgstr ""
-
-#: ../chkconfig.c:605
-#, c-format
-msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
-
-#: ../chkconfig.c:610
-#, c-format
-msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
-
-#: ../chkconfig.c:666
-#, c-format
-msgid "%s version %s\n"
-msgstr ""
-
-#: ../chkconfig.c:678
-#, c-format
-msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
-
-#: ../chkconfig.c:686
-#, c-format
-msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-
-#: ../chkconfig.c:737
+#: ../chkconfig.c:56
 #, c-format
 msgid ""
 "\n"
@@ -128,7 +64,72 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:774
+#: ../chkconfig.c:64
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+
+#: ../chkconfig.c:66
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr ""
+
+#: ../chkconfig.c:68
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr ""
+
+#: ../chkconfig.c:77
+#, c-format
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr ""
+
+#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+msgid "on"
+msgstr ""
+
+#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+msgid "off"
+msgstr ""
+
+#: ../chkconfig.c:493
+#, c-format
+msgid "xinetd based services:\n"
+msgstr ""
+
+#: ../chkconfig.c:495
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr ""
+
+#: ../chkconfig.c:619
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr ""
+
+#: ../chkconfig.c:624
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr ""
+
+#: ../chkconfig.c:680
+#, c-format
+msgid "%s version %s\n"
+msgstr ""
+
+#: ../chkconfig.c:692
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr ""
+
+#: ../chkconfig.c:703
+#, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
+msgstr ""
+
+#: ../chkconfig.c:785
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -137,47 +138,47 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:83 ../ntsysv.c:120
+#: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
 msgstr ""
 
-#: ../ntsysv.c:83
+#: ../ntsysv.c:78
 msgid "Back"
 msgstr ""
 
-#: ../ntsysv.c:83
+#: ../ntsysv.c:78
 msgid "Cancel"
 msgstr ""
 
-#: ../ntsysv.c:95
+#: ../ntsysv.c:90
 msgid "What services should be automatically started?"
 msgstr ""
 
-#: ../ntsysv.c:101
+#: ../ntsysv.c:96
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:186 ../ntsysv.c:213 ../ntsysv.c:250
+#: ../ntsysv.c:181 ../ntsysv.c:208 ../ntsysv.c:245
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:259
+#: ../ntsysv.c:254
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:295
+#: ../ntsysv.c:290
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:312
+#: ../ntsysv.c:307
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:319
+#: ../ntsysv.c:314
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
@@ -187,305 +188,303 @@ msgstr ""
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../leveldb.c:671
+#: ../leveldb.c:673
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:714
+#: ../leveldb.c:716
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:802
+#: ../leveldb.c:813
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:64
+#: ../alternatives.c:63
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr ""
 
-#: ../alternatives.c:65
+#: ../alternatives.c:64
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
 
-#: ../alternatives.c:66
+#: ../alternatives.c:65
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 
-#: ../alternatives.c:67
+#: ../alternatives.c:66
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr ""
 
-#: ../alternatives.c:68
+#: ../alternatives.c:67
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr ""
 
-#: ../alternatives.c:69
+#: ../alternatives.c:68
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr ""
 
-#: ../alternatives.c:70
+#: ../alternatives.c:69
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr ""
 
-#: ../alternatives.c:71
+#: ../alternatives.c:70
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr ""
 
-#: ../alternatives.c:72
+#: ../alternatives.c:71
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr ""
 
-#: ../alternatives.c:73
+#: ../alternatives.c:72
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr ""
 
-#: ../alternatives.c:74
+#: ../alternatives.c:73
 #, c-format
 msgid "\n"
 msgstr ""
 
-#: ../alternatives.c:75
+#: ../alternatives.c:74
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr ""
 
-#: ../alternatives.c:76
+#: ../alternatives.c:75
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr ""
 
-#: ../alternatives.c:173
+#: ../alternatives.c:182
 #, c-format
 msgid "reading %s\n"
 msgstr ""
 
-#: ../alternatives.c:177
+#: ../alternatives.c:186
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:186
+#: ../alternatives.c:195
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:195
+#: ../alternatives.c:204
 #, c-format
 msgid "%s empty!\n"
 msgstr ""
 
-#: ../alternatives.c:204
+#: ../alternatives.c:213
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr ""
 
-#: ../alternatives.c:211
+#: ../alternatives.c:220
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr ""
 
-#: ../alternatives.c:223
+#: ../alternatives.c:232
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr ""
 
-#: ../alternatives.c:232
+#: ../alternatives.c:241
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr ""
 
-#: ../alternatives.c:242
+#: ../alternatives.c:251
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr ""
 
-#: ../alternatives.c:251
+#: ../alternatives.c:260
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr ""
 
-#: ../alternatives.c:252 ../alternatives.c:274 ../alternatives.c:303
-#: ../alternatives.c:322
+#: ../alternatives.c:261 ../alternatives.c:282 ../alternatives.c:299
+#: ../alternatives.c:318
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:273
+#: ../alternatives.c:281
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr ""
 
-#: ../alternatives.c:302
+#: ../alternatives.c:298
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr ""
 
-#: ../alternatives.c:330
+#: ../alternatives.c:326
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:344
+#: ../alternatives.c:340
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 
-#: ../alternatives.c:349
+#: ../alternatives.c:345
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr ""
 
-#: ../alternatives.c:377 ../alternatives.c:384
+#: ../alternatives.c:373 ../alternatives.c:380
 #, c-format
 msgid "would remove %s\n"
 msgstr ""
 
-#: ../alternatives.c:379 ../alternatives.c:386 ../alternatives.c:418
+#: ../alternatives.c:375 ../alternatives.c:382 ../alternatives.c:414
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:402 ../alternatives.c:415
+#: ../alternatives.c:398 ../alternatives.c:411
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr ""
 
-#: ../alternatives.c:407 ../alternatives.c:424
+#: ../alternatives.c:403 ../alternatives.c:420
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:456
+#: ../alternatives.c:452
 #, c-format
 msgid "%s already exists\n"
 msgstr ""
 
-#: ../alternatives.c:458
+#: ../alternatives.c:454
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:489
+#: ../alternatives.c:485
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:515 ../alternatives.c:521 ../alternatives.c:532
-#: ../alternatives.c:538
+#: ../alternatives.c:511 ../alternatives.c:517 ../alternatives.c:528
+#: ../alternatives.c:534
 #, c-format
 msgid "running %s\n"
 msgstr ""
 
-#: ../alternatives.c:567
+#: ../alternatives.c:563
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr ""
 
-#: ../alternatives.c:647
+#: ../alternatives.c:643
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr ""
 
-#: ../alternatives.c:688
+#: ../alternatives.c:684
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr ""
 
-#: ../alternatives.c:690
+#: ../alternatives.c:686
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr ""
 
-#: ../alternatives.c:692
+#: ../alternatives.c:688
 #, c-format
 msgid " link currently points to %s\n"
 msgstr ""
 
-#: ../alternatives.c:695
+#: ../alternatives.c:691
 #, c-format
 msgid "%s - priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:698
+#: ../alternatives.c:694
 #, c-format
 msgid " slave %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:703
+#: ../alternatives.c:699
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr ""
 
-#: ../alternatives.c:733
+#: ../alternatives.c:729
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr ""
 
-#: ../alternatives.c:733
+#: ../alternatives.c:729
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr ""
 
-#: ../alternatives.c:735
+#: ../alternatives.c:731
 #, c-format
 msgid "  Selection    Command\n"
 msgstr ""
 
-#: ../alternatives.c:744
+#: ../alternatives.c:740
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
-#: ../alternatives.c:747
+#: ../alternatives.c:743
 #, c-format
 msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
 
-#: ../alternatives.c:774 ../alternatives.c:800
+#: ../alternatives.c:770 ../alternatives.c:796
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr ""
 
-#: ../alternatives.c:816
+#: ../alternatives.c:812
 #, c-format
 msgid "(would remove %s\n"
 msgstr ""
 
-#: ../alternatives.c:818
+#: ../alternatives.c:814
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:940
+#: ../alternatives.c:936
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:946
+#: ../alternatives.c:942
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:956
+#: ../alternatives.c:952
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
-
-
