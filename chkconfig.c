@@ -597,7 +597,7 @@ int setService(char * name, int type, int where, int state) {
 	    if (setXinetdService(s, state)) {
 		    return 1;
 	    }
-	    system("/etc/init.d/xinetd reload >/dev/null 2>&1");
+	    system("/sbin/service xinetd reload >/dev/null 2>&1");
     }
 
     return 0;
