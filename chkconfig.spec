@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.58
+Version: 1.3.59
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Mar  7 2012 Bill Nottingham <notting@redhat.com> 1.3.59-1
+- translation updates
+- xinetd may be a systemd service. Make sure we can still reload it (#800490)
+
 * Fri Feb 10 2012 Bill Nottingham <notting@redhat.com> 1.3.58-1
 - fix forwarding to systemctl with systemd >= 41 (#789256)
 - assorted regression fixes from 1.3.57 (#782152, etc.)
