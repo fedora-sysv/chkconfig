@@ -32,7 +32,7 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 
 %build
 
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" %{?_smp_mflags}
+make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS" %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
