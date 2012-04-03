@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-06 11:35-0500\n"
+"POT-Creation-Date: 2012-04-03 14:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,32 +28,37 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 
-#: ../chkconfig.c:44
-#, c-format
-msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr ""
-
 #: ../chkconfig.c:45
 #, c-format
-msgid "         %s --add <name>\n"
-msgstr ""
-
-#: ../chkconfig.c:46
-#, c-format
-msgid "         %s --del <name>\n"
+msgid "usage:   %s [name]\n"
 msgstr ""
 
 #: ../chkconfig.c:47
 #, c-format
-msgid "         %s --override <name>\n"
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr ""
 
 #: ../chkconfig.c:48
 #, c-format
+msgid "         %s --add <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:49
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:50
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:51
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:56
+#: ../chkconfig.c:59
 #, c-format
 msgid ""
 "\n"
@@ -64,72 +69,72 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:64
+#: ../chkconfig.c:67
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:69
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
-#: ../chkconfig.c:68
+#: ../chkconfig.c:71
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:77
+#: ../chkconfig.c:80
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:534
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:534
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:493
+#: ../chkconfig.c:496
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:495
+#: ../chkconfig.c:498
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:619
+#: ../chkconfig.c:622
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:624
+#: ../chkconfig.c:627
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:680
+#: ../chkconfig.c:683
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:692
+#: ../chkconfig.c:695
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:703
+#: ../chkconfig.c:702
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:785
+#: ../chkconfig.c:787
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""

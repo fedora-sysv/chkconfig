@@ -36,17 +36,20 @@ static char *progname;
 
 static int LSB = 0;
 
-static void usage(void) {
+static void usage(char *name) {
     fprintf(stderr, _("%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"), progname, VERSION);
     fprintf(stderr, _("This may be freely redistributed under the terms of "
 			"the GNU Public License.\n"));
     fprintf(stderr, "\n");
+    if (!strcmp(name,"install_initd") || !strcmp(name,"remove_initd")) {
+        fprintf(stderr, _("usage:   %s [name]\n"), progname);
+    } else {
     fprintf(stderr, _("usage:   %s [--list] [--type <type>] [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
     fprintf(stderr, _("         %s --del <name>\n"), progname);
     fprintf(stderr, _("         %s --override <name>\n"), progname);
     fprintf(stderr, _("         %s [--level <levels>] [--type <type>] <name> %s\n"), progname, "<on|off|reset|resetpriorities>");
-
+    }
     exit(1);
 }
 
@@ -681,7 +684,7 @@ int main(int argc, const char ** argv) {
 	exit(0);
     }
 
-    if (help) usage();
+    if (help) usage(progname);
 
     if (typeString) {
 	if (!strcmp(typeString, "xinetd"))
@@ -694,10 +697,6 @@ int main(int argc, const char ** argv) {
 	}
     }
 
-    if (argc == 1) {
-	    display_list_systemd_note();
-	    return listService(NULL, type);
-    }
 
     if ((listItem + addItem + delItem + overrideItem) > 1) {
 	fprintf(stderr, _("only one of --list, --add, --del, or --override"
@@ -714,7 +713,7 @@ int main(int argc, const char ** argv) {
         int r;
 
 	if (!name || !*name || poptGetArg(optCon))
-	    usage();
+	    usage(progname);
 
 	name = basename(name);
 	r = addService(name, type);
@@ -725,7 +724,7 @@ int main(int argc, const char ** argv) {
 	char * name = (char *)poptGetArg(optCon);
         int r;
 
-	if (!name || !*name || poptGetArg(optCon)) usage();
+	if (!name || !*name || poptGetArg(optCon)) usage(progname);
 
 	name = basename(name);
 	r = delService(name, type, -1);
@@ -736,7 +735,7 @@ int main(int argc, const char ** argv) {
 	char * name = (char *)poptGetArg(optCon);
         int r;
 
-	if (!name || !*name || poptGetArg(optCon)) usage();
+	if (!name || !*name || poptGetArg(optCon)) usage(progname);
 
         name = basename(name);
 	r = overrideService(name, type);
@@ -746,22 +745,25 @@ int main(int argc, const char ** argv) {
     } else if (listItem) {
 	char * item = (char *)poptGetArg(optCon);
 
-	if (item && poptGetArg(optCon)) usage();
+	if (item && poptGetArg(optCon)) usage(progname);
 
 	display_list_systemd_note();
 
 	return listService(item, type);
+    } else if (argc == 1) {
+        display_list_systemd_note();
+        return listService(NULL, type);
     } else {
 	char * name = (char *)poptGetArg(optCon);
 	char * state = (char *)poptGetArg(optCon);
 	int where = 0, level = -1;
 
 	if (!name) {
-		usage();
+		usage(progname);
 	}
 	if (levels) {
 	    where = parseLevels(levels, 0);
-	    if (where == -1) usage();
+	    if (where == -1) usage(progname);
 	}
 
 	if (!state) {
@@ -816,7 +818,7 @@ int main(int argc, const char ** argv) {
 	    return setService(name, type, where, -2);
     }
 
-    usage();
+    usage(progname);
 
     return 1;
 }
