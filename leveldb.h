@@ -29,6 +29,10 @@
 #define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
 #endif
 
+#ifndef SYSTEMD_LOCAL_SERVICE_PATH
+#define SYSTEMD_LOCAL_SERVICE_PATH "/etc/systemd/system"
+#endif
+
 struct dep {
     char *name;
     int handled;

@@ -855,7 +855,14 @@ int isOverriddenBySystemd(const char *service) {
 
     if (access(p, F_OK) >= 0) {
         rc = 1;
+        goto out;
     }
+    free(p);
+    asprintf(&p, SYSTEMD_LOCAL_SERVICE_PATH "/%s.service", service);
+    if (access(p, F_OK) >= 0) {
+        rc = 1;
+    }
+out:
     free(p);
     return rc;
 }
