@@ -60,6 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/alternatives
 /etc/chkconfig.d
 /etc/init.d
+/etc/rc.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
