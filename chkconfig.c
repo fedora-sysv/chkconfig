@@ -443,6 +443,9 @@ static int showServiceInfoByName(char * name, int type, int forgiving) {
 static int isXinetdEnabled() {
 	struct service s;
 
+        if (isOverriddenBySystemd("xinetd") && isEnabledInSystemd("xinetd"))
+                return 1;
+
 	if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
 		return 0;
 	}

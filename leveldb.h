@@ -72,4 +72,5 @@ int setXinetdService(struct service s, int on);
 int systemdIsInit();
 int systemdActive();
 int isOverriddenBySystemd(const char *service);
+int isEnabledInSystemd(const char *service);
 #endif

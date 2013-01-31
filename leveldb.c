@@ -866,3 +866,18 @@ out:
     free(p);
     return rc;
 }
+
+int isEnabledInSystemd(const char *service) {
+        char *c = NULL;
+        int r;
+        if(!systemdActive())
+                return 0;
+
+        if(asprintf(&c, "systemctl is-enabled %s.service --quiet", service)<0)
+                return 0;
+
+        r = system(c);
+        free(c);
+
+        return r == 0 ? 1 : 0;
+}
