@@ -84,6 +84,11 @@ static int isSystemd(char *initscript) {
     snprintf(tmppath, 500, "/lib/systemd/system/%s.service", initscript);
     if (!stat(tmppath, &sbuf))
         return 1;
+
+    snprintf(tmppath, 500, "/etc/systemd/system/%s.service", initscript);
+    if (!stat(tmppath, &sbuf))
+        return 1;
+
     return 0;
 }
 
