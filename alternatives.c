@@ -21,8 +21,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <dirent.h>
 #include <sys/stat.h>
 #include <sys/unistd.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 #define	FLAGS_TEST	(1 << 0)
@@ -57,7 +59,7 @@ struct alternativeSet {
 
 enum programModes { MODE_UNKNOWN, MODE_INSTALL, MODE_REMOVE, MODE_AUTO,
 		    MODE_DISPLAY, MODE_CONFIG, MODE_SET,
-		    MODE_SLAVE, MODE_VERSION, MODE_USAGE };
+		    MODE_SLAVE, MODE_VERSION, MODE_USAGE, MODE_LIST };
 
 static int usage(int rc) {
     printf(_("alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"), VERSION);
@@ -70,6 +72,7 @@ static int usage(int rc) {
     printf(_("       alternatives --config <name>\n"));
     printf(_("       alternatives --display <name>\n"));
     printf(_("       alternatives --set <name> <path>\n"));
+    printf(_("       alternatives --list\n"));
     printf(_("\n"));
     printf(_("common options: --verbose --test --help --usage --version\n"));
     printf(_("                --altdir <directory> --admindir <directory>\n"));
@@ -849,6 +852,31 @@ static int removeService(const char * title, const char * target,
     return 0;
 }
 
+static int listServices(const char * altDir, const char * stateDir, int flags) {
+        DIR *dir;
+        struct dirent *ent;
+        dir = opendir(stateDir);
+        struct alternativeSet set;
+
+        if(dir == NULL)
+                return 2;
+
+        while((ent = readdir(dir)) != NULL) {
+                if(!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
+                        continue;
+
+                if (readConfig(&set, ent->d_name, altDir, stateDir, flags))
+                        return 2;
+
+                printf("%s\t%s\t%s\n", ent->d_name, set.mode == AUTO?"auto":"manual", set.currentLink);
+        }
+
+        closedir(dir);
+
+        return 0;
+}
+
+
 int main(int argc, const char ** argv) {
     const char ** nextArg;
     char * end;
@@ -931,6 +959,10 @@ int main(int argc, const char ** argv) {
 	    if (!*nextArg) usage(2);
 	    stateDir = strdup(*nextArg);
 	    nextArg++;
+        } else if (!strcmp(*nextArg, "--list")) {
+	    if (mode != MODE_UNKNOWN) usage(2);
+	    mode = MODE_LIST;
+	    nextArg++;
 	} else {
 	    usage(2);
 	}
@@ -970,6 +1002,8 @@ int main(int argc, const char ** argv) {
 	return removeService(title, target, altDir, stateDir, flags);
       case MODE_SLAVE:
 	usage(2);
+      case MODE_LIST:
+        return listServices(altDir, stateDir, flags);
     }
 
     abort();
