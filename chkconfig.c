@@ -59,6 +59,10 @@ static void display_list_systemd_note() {
 		fprintf(stderr, _("\nNote: This output shows SysV services only and does not include native\n"
 				  "      systemd services. SysV configuration data might be overridden by native\n"
 				  "      systemd configuration.\n\n"));
+
+                fprintf(stderr, _("      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+                                  "      To see services enabled on particular target use\n"
+                                  "      'systemctl list-dependencies [target]'.\n\n"));
 	}
 }
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-20 13:51+0100\n"
+"POT-Creation-Date: 2013-02-22 18:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,72 +69,81 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:67
+#: ../chkconfig.c:63
+#, c-format
+msgid ""
+"      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+"      To see services enabled on particular target use\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:71
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
 
-#: ../chkconfig.c:69
+#: ../chkconfig.c:73
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
-#: ../chkconfig.c:71
+#: ../chkconfig.c:75
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:80
+#: ../chkconfig.c:84
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:537
+#: ../chkconfig.c:415 ../chkconfig.c:420 ../chkconfig.c:541
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:411 ../chkconfig.c:416 ../chkconfig.c:537
+#: ../chkconfig.c:415 ../chkconfig.c:420 ../chkconfig.c:541
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:499
+#: ../chkconfig.c:503
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:501
+#: ../chkconfig.c:505
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:625
+#: ../chkconfig.c:629
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:630
+#: ../chkconfig.c:634
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:686
+#: ../chkconfig.c:690
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:698
+#: ../chkconfig.c:702
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:705
+#: ../chkconfig.c:709
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:790
+#: ../chkconfig.c:794
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -484,17 +493,17 @@ msgstr ""
 msgid "failed to remove %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:971
+#: ../alternatives.c:973
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:977
+#: ../alternatives.c:979
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:987
+#: ../alternatives.c:989
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
