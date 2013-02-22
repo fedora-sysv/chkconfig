@@ -107,6 +107,8 @@ static int delService(char *name, int type, int level) {
 
     if (LSB && level == -1) {
 	numservs = readServices(&services);
+	if (numservs < 0)
+	    return 1;
 
 	for (i = 0; i < numservs ; i++) {
 		if (services[i].startDeps) {
@@ -259,6 +261,8 @@ static int frobDependencies(struct service *s) {
 	int i;
 
 	numservs = readServices(&servs);
+	if (numservs < 0)
+	    return 1;
         /* In the full service list, replace the target script's current
            runlevels with the desired output runlevels, which are passed in */
 	for (i = 0; i < numservs; i++) {
@@ -484,6 +488,8 @@ static int listService(char * item, int type) {
 
     if (type & TYPE_INIT_D) {
         numServices = readServices(&services);
+        if (numServices < 0)
+                return 1;
 
         qsort(services, numServices, sizeof(*services), serviceNameCmp);
 
