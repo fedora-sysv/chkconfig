@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.59
+Version: 1.3.60
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -75,6 +75,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Mar 12 2013 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.60-1
+- don't completely override LDFLAGS
+- pass along any rpm-configured LD flags
+- make sure install_initd/remove_initd provides appropriate help output for those commands (#803818)
+- check for overridden services in /etc too (#850899)
+- chconfig should own /etc/rc.d (#894328)
+- isXinetdEnabled should also ask systemd (#820363)
+- alternatives: look for service file also in /etc
+- alternatives: add --list option (#622635)
+- chkconfig: add hint to call systemctl list-unit-files and list-dependencies (#800334)
+- chkconfig: correctly handle unreadable init.d (#913807)
+- alternatives: call systemctl enable with --force (#915667)
+
 * Wed Mar  7 2012 Bill Nottingham <notting@redhat.com> 1.3.59-1
 - translation updates
 - xinetd may be a systemd service. Make sure we can still reload it (#800490)
