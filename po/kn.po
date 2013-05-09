@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# notting <notting@redhat.com>, 2011.
-# Omshivaprakash <omshivprakash@gmail.com>, 2007.
-#  <prasad.mvs@gmail.com>, 2013.
-#   <prasad.mvs@gmail.com>, 2012.
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2008, 2009.
-# shanky <prasad.mvs@gmail.com>, 2011, 2012.
+# notting <notting@redhat.com>, 2011
+# Omshivaprakash <omshivprakash@gmail.com>, 2007
+# shanky <prasad.mvs@gmail.com>, 2013
+# shanky <prasad.mvs@gmail.com>, 2012
+# shankar <svenkate@redhat.com>, 2007, 2008, 2009
+# shanky <prasad.mvs@gmail.com>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

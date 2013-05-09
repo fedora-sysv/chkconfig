@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Felix <ifelix@redhat.com>, 2006-2007.
-# Felix I <ifelix25@gmail.com>, 2011-2012.
-# Hariram Aatreya <hari@localhost.localdomain>, 2003.
-# Jayaradha N <jaya@pune.redhat.com>, 2004.
-# Jayaradha <njaya@redhat.com>, 2005.
-# notting <notting@redhat.com>, 2011.
-# Shantha kumar <shkumar@redhat.com>, 2012-2013.
-#  <shkumar@redhat.com>, 2013.
+# Felix <ifelix@redhat.com>, 2006-2007
+# Felix I <ifelix25@gmail.com>, 2011-2012
+# Hariram Aatreya <hari@localhost.localdomain>, 2003
+# Jayaradha N <jaya@pune.redhat.com>, 2004
+# Jayaradha <njaya@redhat.com>, 2005
+# notting <notting@redhat.com>, 2011
+# shkumar <shkumar@redhat.com>, 2012-2013
+# shkumar <shkumar@redhat.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

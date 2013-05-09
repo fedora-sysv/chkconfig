@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# David Barzilay <barzilay@redhat.com>, 2003, 2004.
-# Glaucia Freitas <gcintra@redhat.com>, 2013.
-# Igor Pires Soares <igorsoares@gmail.com>, 2006, 2007, 2008.
-# notting <notting@redhat.com>, 2011.
-# Rafael Neri <rafepel@gmail.com>, 2012.
-# Taylon Silmer <taylon@taylon.eti.br>, 2011.
-#   <ufa@technotroll.org>, 2011.
+# David Barzilay <barzilay@redhat.com>, 2003, 2004
+# Glaucia Freitas <gcintra@redhat.com>, 2013
+# Igor <igorsoares@gmail.com>, 2006, 2007, 2008
+# notting <notting@redhat.com>, 2011
+# Rafael Neri <rafepel@gmail.com>, 2012
+# Taylon Silmer <taylon@taylon.eti.br>, 2011
+# ufa <ufa@technotroll.org>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

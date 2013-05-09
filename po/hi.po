@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# hi <rranjan@redhat.com>, 2007.
-# notting <notting@redhat.com>, 2011.
-# rajesh <rajeshkajha@yahoo.com>, 2012.
-# Rajesh Ranjan <rranjan@redhat.com>, 2004-2006,2008-2009,2011,2013.
+# Rajesh Ranjan <rranjan@redhat.com>, 2007
+# notting <notting@redhat.com>, 2011
+# rajesh <rajeshkajha@yahoo.com>, 2012
+# Rajesh Ranjan <rranjan@redhat.com>, 2004-2006,2008-2009,2011,2013
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

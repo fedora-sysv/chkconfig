@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# gunawan wijaya <pusing85@gmail.com>, 2013.
-#   <jchendra@gmail.com>, 2012.
-# Mohammad DAMT <mdamt@linux.or.id>, 1999.
-# Nana Suryana <nana@suryana.or.id>, 2012.
-# notting <notting@redhat.com>, 2011.
-# Teguh DC <dheche@songolimo.net>, 2004.
+# pusing85 <pusing85@gmail.com>, 2013
+# chendra <jchendra@gmail.com>, 2012
+# Mohammad DAMT <mdamt@linux.or.id>, 1999
+# Nana Suryana <nana@suryana.or.id>, 2012
+# notting <notting@redhat.com>, 2011
+# Teguh Dwicaksana <dheche@songolimo.net>, 2004
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

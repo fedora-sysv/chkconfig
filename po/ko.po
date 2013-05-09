@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Eunju Kim <eukim@redhat.com>, 2007-2008.
-# Eun-Ju Kim <eukim@redhat.com>, 2012.
-# Hyunsok Oh <hoh@redhat.com>, 2010.
-# Michelle Ji Yeen Kim <mkim@redhat.com>, 2005.
-# Michelle J Kim <mkim@redhat.com>, 2003-2004.
-# notting <notting@redhat.com>, 2011,2013.
+# eukim <eukim@redhat.com>, 2007-2008
+# eukim <eukim@redhat.com>, 2012
+# Hyunsok Oh <hoh@redhat.com>, 2010
+# Michelle Ji Yeen Kim <mkim@redhat.com>, 2005
+# Michelle J Kim <mkim@redhat.com>, 2003-2004
+# notting <notting@redhat.com>, 2011,2013
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

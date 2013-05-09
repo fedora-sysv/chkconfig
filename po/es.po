@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>, 2011.
-# Gladys Guerrero <gguerrer@redhat.com>, 2012-2013.
-# Héctor Daniel Cabrera <logan@fedoraproject.org>, 2011.
-# Luis Mayoral <mayoral@linuxadicto.org>, 2003, 2004.
-# Manuel Ospina <mospina@redhat.com>, 2005, 2008.
-# notting <notting@redhat.com>, 2011.
-# Nuria Soriano <nsoriano@redhat.it>, 2000.
-# Yelitza Louze <ylouze@redhat.com>, 2004.
+# Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>, 2011
+# Gladys Guerrero <gguerrer@redhat.com>, 2012-2013
+# Daniel Cabrera <logan@fedoraproject.org>, 2011
+# Luis Mayoral <mayoral@linuxadicto.org>, 2003, 2004
+# Manuel Ospina <mospina@redhat.com>, 2005, 2008
+# notting <notting@redhat.com>, 2011
+# Nuria Soriano <nsoriano@redhat.it>, 2000
+# Yelitza Louze <ylouze@redhat.com>, 2004
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

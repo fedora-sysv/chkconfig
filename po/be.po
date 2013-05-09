@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# notting <notting@redhat.com>, 2011.
+# notting <notting@redhat.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-10 14:34-0500\n"
-"PO-Revision-Date: 2012-02-14 08:17+0000\n"
+"POT-Creation-Date: 2013-02-22 19:00+0100\n"
+"PO-Revision-Date: 2013-02-23 14:57+0000\n"
 "Last-Translator: notting <notting@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: be\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -30,32 +30,37 @@ msgid ""
 "License.\n"
 msgstr "Можа вольна распаўсюджвацца ў межах GNU Public License.\n"
 
-#: ../chkconfig.c:44
+#: ../chkconfig.c:45
+#, c-format
+msgid "usage:   %s [name]\n"
+msgstr ""
+
+#: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr ""
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:48
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <імя сэрвісу>\n"
 
-#: ../chkconfig.c:46
+#: ../chkconfig.c:49
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <імя сэрвісу>\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:50
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr ""
 
-#: ../chkconfig.c:48
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:56
+#: ../chkconfig.c:59
 #, c-format
 msgid ""
 "\n"
@@ -65,72 +70,81 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:64
+#: ../chkconfig.c:63
+#, c-format
+msgid ""
+"      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+"      To see services enabled on particular target use\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
+msgstr ""
+
+#: ../chkconfig.c:71
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr "сэрвіс %s падтрымлівае chkconfig, але не выкарыстоўваецца ні на адным з узроўняў выкананьня (запусьціце 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:66
+#: ../chkconfig.c:73
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "сэрвіс %s не падтрымлівае chkconfig\n"
 
-#: ../chkconfig.c:68
+#: ../chkconfig.c:75
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "памылка чытаньня інфармацыі аб сэрвісе %s: %s\n"
 
-#: ../chkconfig.c:77
+#: ../chkconfig.c:84
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
 msgid "on"
 msgstr "укл"
 
-#: ../chkconfig.c:408 ../chkconfig.c:413 ../chkconfig.c:531
+#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
 msgid "off"
 msgstr "адкл"
 
-#: ../chkconfig.c:493
+#: ../chkconfig.c:509
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "сэрвісы на базе xinetd:\n"
 
-#: ../chkconfig.c:495
+#: ../chkconfig.c:511
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "не атрымалася адкрыць каталёг %s: %s\n"
 
-#: ../chkconfig.c:619
+#: ../chkconfig.c:635
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:624
+#: ../chkconfig.c:640
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:680
+#: ../chkconfig.c:696
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s вэрсія %s\n"
 
-#: ../chkconfig.c:692
+#: ../chkconfig.c:708
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:703
+#: ../chkconfig.c:715
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:785
+#: ../chkconfig.c:800
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "Толькі адзін узровень выкананьня можа быць пазначаны для запыту chkconfig\n"
@@ -204,288 +218,293 @@ msgstr "немагчыма вызначыць бягучы узровень вы
 msgid "failed to make symlink %s: %s\n"
 msgstr "памылка стварэньня сымбалічнай спасылкі %s: %s\n"
 
-#: ../alternatives.c:63
+#: ../alternatives.c:65
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives вэрсія %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:64
+#: ../alternatives.c:66
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr "Можа вольна распаўсюджвацца ў межах GNU Public License.\n\n"
 
-#: ../alternatives.c:65
+#: ../alternatives.c:67
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "выкарыстаньне: alternatives --install <спасылка> <назва> <шлях> <прыярытэт>\n"
 
-#: ../alternatives.c:66
+#: ../alternatives.c:68
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <служба>]\n"
 
-#: ../alternatives.c:67
+#: ../alternatives.c:69
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <спасылка> <назва> <шлях>]*\n"
 
-#: ../alternatives.c:68
+#: ../alternatives.c:70
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <назва> <шлях>\n"
 
-#: ../alternatives.c:69
+#: ../alternatives.c:71
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <назва>\n"
 
-#: ../alternatives.c:70
+#: ../alternatives.c:72
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <назва>\n"
 
-#: ../alternatives.c:71
+#: ../alternatives.c:73
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <назва>\n"
 
-#: ../alternatives.c:72
+#: ../alternatives.c:74
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <назва> <шлях>\n"
 
-#: ../alternatives.c:73
+#: ../alternatives.c:75
+#, c-format
+msgid "       alternatives --list\n"
+msgstr ""
+
+#: ../alternatives.c:76
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:74
+#: ../alternatives.c:77
 #, c-format
 msgid "common options: --verbose --test --help --usage --version\n"
 msgstr "агульныя парамэтры: --verbose --test --help --usage --version\n"
 
-#: ../alternatives.c:75
+#: ../alternatives.c:78
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <каталёг> --admindir <каталёг>\n"
 
-#: ../alternatives.c:182
+#: ../alternatives.c:190
 #, c-format
 msgid "reading %s\n"
 msgstr "чытаньне %s\n"
 
-#: ../alternatives.c:186
+#: ../alternatives.c:194
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "не атрымліваецца адкрыць %s: %s\n"
 
-#: ../alternatives.c:195
+#: ../alternatives.c:203
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "не атрымліваецца прачытаць %s: %s\n"
 
-#: ../alternatives.c:204
+#: ../alternatives.c:212
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s пусты!\n"
 
-#: ../alternatives.c:213
+#: ../alternatives.c:221
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "памылковы рэжым у радку 1 %s\n"
 
-#: ../alternatives.c:220
+#: ../alternatives.c:228
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "памылковая першасная спасылка у %s\n"
 
-#: ../alternatives.c:232
+#: ../alternatives.c:240
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "нечаканы шлях %s у %s\n"
 
-#: ../alternatives.c:241
+#: ../alternatives.c:249
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "адсутнічае шлях да slave %s у %s\n"
 
-#: ../alternatives.c:251
+#: ../alternatives.c:259
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "нечаканы канец файла у %s\n"
 
-#: ../alternatives.c:260
+#: ../alternatives.c:268
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "шлях да альтэрнатывы чакаецца у %s\n"
 
-#: ../alternatives.c:261 ../alternatives.c:282 ../alternatives.c:299
-#: ../alternatives.c:318
+#: ../alternatives.c:269 ../alternatives.c:290 ../alternatives.c:307
+#: ../alternatives.c:326
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "нечаканы радок у %s: %s\n"
 
-#: ../alternatives.c:281
+#: ../alternatives.c:289
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s мусіць быць лічбавым прыярытэтам\n"
 
-#: ../alternatives.c:298
+#: ../alternatives.c:306
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "шлях да slave чакаецца у %s\n"
 
-#: ../alternatives.c:326
+#: ../alternatives.c:334
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "не атрымліваецца прачытаць спасылку %s: %s\n"
 
-#: ../alternatives.c:340
+#: ../alternatives.c:348
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "спасылка указвае на безальтэрнатыўны элемэнт - усталёўваецца ручны рэжым\n"
 
-#: ../alternatives.c:345
+#: ../alternatives.c:353
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "спасылка зьменена -- усталёўваецца ручны рэжым\n"
 
-#: ../alternatives.c:373 ../alternatives.c:380
+#: ../alternatives.c:381 ../alternatives.c:388
 #, c-format
 msgid "would remove %s\n"
 msgstr "будзе выдалены %s\n"
 
-#: ../alternatives.c:375 ../alternatives.c:382 ../alternatives.c:414
+#: ../alternatives.c:383 ../alternatives.c:390 ../alternatives.c:422
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "не атрымліваецца выдаліць спасылку %s: %s\n"
 
-#: ../alternatives.c:398 ../alternatives.c:411
+#: ../alternatives.c:406 ../alternatives.c:419
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "будзе створана спасылка %s -> %s\n"
 
-#: ../alternatives.c:403 ../alternatives.c:420
+#: ../alternatives.c:411 ../alternatives.c:428
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "памылка стварэньня спасылкі %s -> %s: %s\n"
 
-#: ../alternatives.c:452
+#: ../alternatives.c:460
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ужо існуе\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:462
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "не атрымліваецца стварыць %s: %s\n"
 
-#: ../alternatives.c:485
+#: ../alternatives.c:493
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "не атрымліваецца замяніць %s на %s: %s\n"
 
-#: ../alternatives.c:511 ../alternatives.c:517 ../alternatives.c:528
-#: ../alternatives.c:534
+#: ../alternatives.c:519 ../alternatives.c:525 ../alternatives.c:536
+#: ../alternatives.c:542
 #, c-format
 msgid "running %s\n"
 msgstr "запуск %s\n"
 
-#: ../alternatives.c:563
+#: ../alternatives.c:571
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "асноўнай спасылкай на %s мусіць быць %s\n"
 
-#: ../alternatives.c:643
+#: ../alternatives.c:651
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "спасылка %s памылковая для slave %s (%s %s)\n"
 
-#: ../alternatives.c:684
+#: ../alternatives.c:692
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - статус \"аўта\".\n"
 
-#: ../alternatives.c:686
+#: ../alternatives.c:694
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - статус \"ручная усталёўка\"\n"
 
-#: ../alternatives.c:688
+#: ../alternatives.c:696
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " спасылка зараз паказвае на %s\n"
 
-#: ../alternatives.c:691
+#: ../alternatives.c:699
 #, c-format
 msgid "%s - priority %d\n"
 msgstr "%s - прыярытэт %d\n"
 
-#: ../alternatives.c:694
+#: ../alternatives.c:702
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slave %s: %s\n"
 
-#: ../alternatives.c:699
+#: ../alternatives.c:707
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Бягучая `лепшая' вэрсія - %s.\n"
 
-#: ../alternatives.c:729
+#: ../alternatives.c:737
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr ""
 
-#: ../alternatives.c:729
+#: ../alternatives.c:737
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Маецца %d праграмаў, якія прадстаўляюць '%s'.\n"
 
-#: ../alternatives.c:731
+#: ../alternatives.c:739
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Выбар    Каманда\n"
 
-#: ../alternatives.c:740
+#: ../alternatives.c:748
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter - захаваць бягучае вылучэньне[+], ці пазначце нумар: "
 
-#: ../alternatives.c:743
+#: ../alternatives.c:751
 #, c-format
 msgid ""
 "\n"
 "error reading choice\n"
 msgstr "\nпамылка чытаньня выбару\n"
 
-#: ../alternatives.c:770 ../alternatives.c:796
+#: ../alternatives.c:778 ../alternatives.c:804
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s быў наладжаны як альтэрнатыва для %s\n"
 
-#: ../alternatives.c:812
+#: ../alternatives.c:820
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(будзе выдалены %s\n"
 
-#: ../alternatives.c:814
+#: ../alternatives.c:822
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "не атрымліваецца выдаліць %s: %s\n"
 
-#: ../alternatives.c:936
+#: ../alternatives.c:973
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "каталёг altdir %s памылковы\n"
 
-#: ../alternatives.c:942
+#: ../alternatives.c:979
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s памылковы\n"
 
-#: ../alternatives.c:952
+#: ../alternatives.c:989
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives вэрсія %s\n"

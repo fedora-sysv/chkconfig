@@ -3,17 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004.
-# Bernd Groh <bgroh@redhat.com>, 2003, 2004.
-# Claudia Krug <fhonig@redhat.it>, 2001.
-# Fabian Affolter <fab@fedoraproject.org>, 2008.
-# Gerd  <koenig.ulm@googlemail.com>, 2011.
-#  <hpeters@redhat.com>, 2013.
-# Mario Blättermann <mariobl@freenet.de>, 2011.
-# notting <notting@redhat.com>, 2011.
-# Roman Spirgi <bigant@fedoraproject.org>, 2012.
-# Ronny Buchmann <ronny-vlug@vlugnet.org>, 2005.
-# Timo Trinks <ttrinks@redhat.com>, 2007.
+# Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004
+# Bernd Groh <bgroh@redhat.com>, 2003, 2004
+# Claudia Krug <fhonig@redhat.it>, 2001
+# Fabian Affolter <fab@fedoraproject.org>, 2008
+# Gerd Koenig <koenig.ulm@googlemail.com>, 2011
+# hpeters <hpeters@redhat.com>, 2013
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2011
+# notting <notting@redhat.com>, 2011
+# Roman Spirgi <bigant@fedoraproject.org>, 2012
+# Ronny Buchmann <ronny-vlug@vlugnet.org>, 2005
+# Timo Trinks <ttrinks@redhat.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"

@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Andrew Martynov <andrewm@inventa.ru>, 2004.
-#   <iya777@yandex.ru>, 2012.
-# Leonid Kanter <leon@asplinux.ru>, 2004.
-# Leonid Kanter <leon@geon.donetsk.ua>, 2003.
-# notting <notting@redhat.com>, 2011.
-# Stanislav Darchinov <darchinov@gmail.com>, 2011.
-# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2009.
-# Yulia <yulia.poyarkova@redhat.com>, 2013.
+# Andrew Martynov <andrewm@inventa.ru>, 2004
+# triplepointfive <iya777@yandex.ru>, 2012
+# Leonid Kanter <leon@asplinux.ru>, 2004
+# Leonid Kanter <leon@geon.donetsk.ua>, 2003
+# notting <notting@redhat.com>, 2011
+# Stanislav Darchinov <darchinov@gmail.com>, 2011
+# Yulia <yulia.poyarkova@redhat.com>, 2009
+# Yulia <yulia.poyarkova@redhat.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: chkconfig\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-22 19:00+0100\n"
-"PO-Revision-Date: 2013-04-04 01:42+0000\n"
-"Last-Translator: Yulia <yulia.poyarkova@redhat.com>\n"
+"PO-Revision-Date: 2013-05-08 02:14+0000\n"
+"Last-Translator: Misha Shnurapet <shnurapet@fedoraproject.org>\n"
 "Language-Team: Russian <trans-ru@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
