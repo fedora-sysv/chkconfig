@@ -743,6 +743,7 @@ int setXinetdService(struct service s, int on) {
 	char tmpstr[50];
 	char *buf, *ptr, *tmp;
 	struct stat sb;
+        mode_t mode;
 
 	if (on == -1) {
 		on = s.enabled ? 1 : 0;
@@ -761,7 +762,9 @@ int setXinetdService(struct service s, int on) {
 	close(oldfd);
 	buf[sb.st_size] = '\0';
 	snprintf(newfname,100,"%s/%s.XXXXXX",XINETDDIR,s.name);
+        mode = umask(S_IRWXG | S_IRWXO);
 	newfd = mkstemp(newfname);
+        umask(mode);
 	if (newfd == -1) {
 		free(buf);
 		return -1;
@@ -786,7 +789,6 @@ int setXinetdService(struct service s, int on) {
 		buf = ptr;
 	}
 	close(newfd);
-	chmod(newfname,0644);
 	unlink(oldfname);
 	return(rename(newfname,oldfname));
 }
