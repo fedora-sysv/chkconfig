@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.60
+Version: 1.3.61
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -75,6 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Jul 31 2013 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.61-1
+- try to make install_initd work
+- fix permission issues with xinetd services
+
 * Tue Mar 12 2013 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.60-1
 - don't completely override LDFLAGS
 - pass along any rpm-configured LD flags
