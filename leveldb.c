@@ -881,3 +881,322 @@ int isEnabledInSystemd(const char *service) {
 
         return r == 0 ? 1 : 0;
 }
+
+int readSystemdUnitProperty(char *name, char *property, char **value) {
+        FILE *sys = NULL;
+        char *cmd = NULL;
+        char *line = NULL;
+        char *t = NULL;
+        int i;
+        int r = 0;
+        int c;
+
+        if (value == NULL)
+                return -1;
+
+        r = asprintf(&cmd, "systemctl show %s -p %s", name, property);
+        if (r < 0)
+                goto finish;
+        else
+                r = 0;
+
+        sys = popen(cmd, "r");
+        if (!sys) {
+                r = -1;
+                goto finish;
+        }
+
+        for (i = 0; (c = fgetc(sys)) != EOF; i++) {
+                t = realloc(line, i + 2);
+                if (t == NULL) {
+                        r = -ENOMEM;
+                        goto finish;
+                }
+                line = t;
+                line[i] = (char) c;
+                line[i + 1] = 0;
+        }
+
+        if (line == NULL) {
+                r = -ENOENT;
+                goto finish;
+        }
+        t = strchr(line, '\n');
+        if (t)
+                *t = 0;
+
+        t = strchr(line, '=');
+        if (t == NULL) {
+                r = -1;
+                goto finish;
+        }
+
+        *value = strdup(t + 1);
+        if (value == NULL)
+                r = -ENOMEM;
+
+finish:
+
+
+        if (sys)
+                pclose(sys);
+        if (cmd)
+                free(cmd);
+        if (line)
+                free(line);
+
+        return r;
+}
+
+
+static int cmpstringp(const void *p1, const void *p2){
+        return strcmp(* (char * const *) p1, * (char * const *) p2);
+}
+
+
+
+int runlevelsToTargets (int runlevels, char ***targets, int *n_targets) {
+        char runlevel[] = "runlevelX.target";
+        char **ret = NULL;
+        char **tmp;
+        int n_ret = 0;
+        int found = 0;
+        char *t;
+        int i,j;
+        int r;
+
+        for (i=0; i<=6; i++) {
+                if (1<<i & runlevels){
+                      runlevel[8] = '0' + i;
+                      r = readSystemdUnitProperty(runlevel, "Id", &t);
+                      if (r < 0)
+                              goto fail;
+                      for (j=0; j<n_ret; j++) {
+                              if(!strcmp(t, ret[j])) {
+                                      found = 1;
+                                      break;
+                              }
+                      }
+
+                      if (!found) {
+                              tmp = (char **) realloc(ret, sizeof(char *)*(n_ret+1));
+                              if (tmp == NULL) {
+                                      r = -ENOMEM;
+                                      goto fail;
+                              }
+                              ret = tmp;
+                              ret[n_ret] = t;
+                              n_ret++;
+                      } else
+                              free(t);
+
+                      found = 0;
+                }
+        }
+
+
+        *targets = ret;
+        *n_targets = n_ret;
+
+        return 0;
+
+fail:
+        if(ret){
+                for (j = 0; j < n_ret; j++)
+                        free(ret[j]);
+                free(ret);
+        }
+        return r;
+
+}
+
+int serviceNameToUnit(const char *service, char **unit) {
+//translation $* -> *.target taken from systemd src/core/special.h
+        char *ret = NULL;
+        if (!strcmp(service, "$local_fs")) {
+                ret = strdup("local-fs.target");
+        } else if (!strcmp(service, "$network")){
+                ret = strdup("network.target");
+        } else if (!strcmp(service, "$named")){
+                ret = strdup("nss-lookup.target");
+        } else if (!strcmp(service, "$portmap")){
+                ret = strdup("rpcbind.target");
+        } else if (!strcmp(service, "$remote_fs")){
+                ret = strdup("remote-fs.target");
+        } else if (!strcmp(service, "$syslog")){
+                //not nice
+                ret = strdup("systemd-journald.service");
+        } else if (!strcmp(service, "$time")){
+                ret = strdup("time-sync.target");
+        } else {
+                asprintf(&ret, "%s.service", service);
+        }
+
+        if (ret == NULL)
+                return -ENOMEM;
+
+        *unit = ret;
+        return 0;
+}
+
+int unitGetReverseDeps(char *unit, char ***deps, int *n_deps) {
+        FILE *sys = NULL;
+        char *cmd = NULL;
+        char **ret = NULL;
+        int n_ret = 0;
+        char *t = NULL;
+        char **tt = NULL;
+        int i,j;
+        int r = 0;
+        int c = 0;
+
+        r = asprintf(&cmd, "systemctl list-dependencies --reverse --all --plain %s", unit);
+        if (r < 0)
+                goto finish;
+        else
+                r = 0;
+
+        sys = popen(cmd, "r");
+
+        if (!sys) {
+                r = -1;
+                goto finish;
+        }
+
+        for (i = 0; !feof(sys); i++) {
+                tt = realloc(ret, sizeof(char *) * (n_ret + 1));
+                if (tt == NULL) {
+                        r = -ENOMEM;
+                        goto finish;
+                }
+                ret = tt;
+                ret[n_ret] = NULL;
+
+                for (j = 0; (c = fgetc(sys)) != EOF && c != '\n'; j++) {
+                        t = realloc(ret[n_ret], j + 2);
+                        if (t == NULL) {
+                                if(ret[n_ret])
+                                        n_ret++;
+                                r = -ENOMEM;
+                                goto finish;
+                        }
+                        ret[n_ret] = t;
+                        ret[n_ret][j] = (char) c;
+                        ret[n_ret][j + 1] = 0;
+                }
+
+                if(ret[n_ret])
+                        n_ret++;
+        }
+
+
+        *deps = ret;
+        *n_deps = n_ret;
+
+
+finish:
+        if (sys)
+                pclose(sys);
+        if (cmd)
+                free(cmd);
+
+        if(r) {
+                if(ret) {
+                        for (i = 0; i < n_ret; i++)
+                                free(ret[i]);
+                        free(ret);
+                }
+        }
+        return r;
+}
+
+int systemdIsSimilarlyConfiguredDeps(char **deps1, int n_deps1, char **deps2, int n_deps2) {
+        int i,j;
+        int r;
+        if (n_deps1 > n_deps2)
+                return 0;
+
+        for (i=0, j=0; i < n_deps1; i++){
+                while ((r = strcmp(deps1[i], deps2[j])) > 0)
+                        if(++j >= n_deps2)
+                                return 0;
+                if(r < 0)
+                        return 0;
+        }
+        return 1;
+}
+
+int unitIsSimilarlyConfigure(char **star, int n_star, char *unit) {
+        char **deps=NULL;
+        int n_deps=0;
+        int r;
+        int i;
+
+        r = unitGetReverseDeps(unit, &deps, &n_deps);
+
+        if (r)
+                return 0;
+
+        qsort(deps, n_deps, sizeof(char *), cmpstringp);
+
+        r = systemdIsSimilarlyConfiguredDeps(star, n_star, deps, n_deps);
+
+        if(deps) {
+                for (i = 0; i < n_deps; i++)
+                        free(deps[i]);
+                free(deps);
+        }
+
+        return r;
+
+
+}
+
+void checkSystemdDependencies(struct service *s) {
+        char **star = NULL;
+        int n_star = 0;
+        char *unit;
+        int r = 0;
+        int i;
+
+
+        r = runlevelsToTargets (s->levels , &star, &n_star);
+
+        if(r)
+                return;
+
+        qsort(star, n_star, sizeof(char *), cmpstringp);
+
+
+        if (s->startDeps) {
+                for (i = 0; s->startDeps[i].name; i++) {
+                        if (!s->startDeps[i].handled) {
+                                r = serviceNameToUnit(s->startDeps[i].name, &unit);
+                                if(r)
+                                        goto finish;
+                                s->startDeps[i].handled = unitIsSimilarlyConfigure(star, n_star, unit);
+                                free(unit);
+                        }
+                }
+        }
+        if (s->stopDeps) {
+                for (i = 0; s->stopDeps[i].name; i++) {
+                        if (!s->stopDeps[i].handled) {
+                                r = serviceNameToUnit(s->stopDeps[i].name, &unit);
+                                if(r)
+                                        goto finish;
+                                s->stopDeps[i].handled = unitIsSimilarlyConfigure(star, n_star, unit);
+                                free(unit);
+                        }
+                }
+        }
+        
+       
+finish:
+                
+        if(star) {
+                for (i = 0; i < n_star; i++)
+                        free(star[i]);
+                free(star);
+        }
+}

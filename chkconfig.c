@@ -221,6 +221,8 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 		}
 	}
 	if (depfail) {
+                //go through the missing dependecies and try to find matching systemd unit
+                checkSystemdDependencies(s);
 		if (s->startDeps) {
 			for (i = 0; s->startDeps[i].name; i++) {
 				if (!s->startDeps[i].handled && strcmp(s->startDeps[i].name,"$local_fs"))

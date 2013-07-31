@@ -73,4 +73,6 @@ int systemdIsInit();
 int systemdActive();
 int isOverriddenBySystemd(const char *service);
 int isEnabledInSystemd(const char *service);
+
+void checkSystemdDependencies(struct service *s);
 #endif
