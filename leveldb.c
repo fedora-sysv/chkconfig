@@ -869,6 +869,32 @@ out:
     return rc;
 }
 
+int isSocketActivatedBySystemd(const char *service) {
+    char *p;
+    char *s;
+    int rc = 0;
+
+    asprintf(&p, SYSTEMD_SERVICE_PATH "/%s@.service", service);
+    asprintf(&s, SYSTEMD_SERVICE_PATH "/%s.socket", service);
+
+    if (access(p, F_OK) >= 0 && access(s, F_OK) >= 0) {
+        rc = 1;
+        goto out;
+    }
+    free(p);
+    free(s);
+
+    asprintf(&p, SYSTEMD_LOCAL_SERVICE_PATH "/%s@.service", service);
+    asprintf(&s, SYSTEMD_LOCAL_SERVICE_PATH "/%s.socket", service);
+    if (access(p, F_OK) >= 0 && access(s, F_OK) >= 0) {
+        rc = 1;
+    }
+out:
+    free(p);
+    free(s);
+    return rc;
+}
+
 int isEnabledInSystemd(const char *service) {
         char *c = NULL;
         int r;
