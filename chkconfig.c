@@ -622,17 +622,20 @@ int setService(char * name, int type, int where, int state) {
 }
 
 void forwardSystemd(const char *name, int type, const char *verb) {
-
+    int socket = 0;
     if (type == TYPE_XINETD)
         return;
 
     if (!systemdIsInit())
 	return;
 
-    if (isOverriddenBySystemd(name)) {
+    if (isOverriddenBySystemd(name) || (socket = isSocketActivatedBySystemd(name))) {
         char *p;
 
-        asprintf(&p, "%s.service", name);
+        if(!socket)
+                asprintf(&p, "%s.service", name);
+        else
+                asprintf(&p, "%s.socket", name);
 
         fprintf(stderr, _("Note: Forwarding request to 'systemctl %s %s'.\n"),
                 verb, p);
