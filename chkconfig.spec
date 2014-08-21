@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.61
+Version: 1.3.62
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -53,7 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc COPYING
+%{!?_licensedir:%global license %%doc}
+%license COPYING
 %dir /etc/alternatives
 /sbin/chkconfig
 %{_sbindir}/update-alternatives
@@ -75,6 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Aug 12 2014 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.62-1
+- use systemctl preset, not systemctl enable
+- fix typo in manpage
+- partly support socket activated services
+
 * Wed Jul 31 2013 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.61-1
 - try to make install_initd work
 - fix permission issues with xinetd services
