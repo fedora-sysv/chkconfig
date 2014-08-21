@@ -81,3 +81,5 @@ tag:
 archive: tag
 	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(TAG) | bzip2 >chkconfig-$(VERSION).tar.bz2
 	@echo "The archive is in chkconfig-$(VERSION).tar.bz2"
+	@sha1sum chkconfig-$(VERSION).tar.bz2 > chkconfig-$(VERSION).sha1sum
+	@scp chkconfig-$(VERSION).tar.bz2 chkconfig-$(VERSIONION).sha1sum fedorahosted.org:chkconfig 2>/dev/null || true
