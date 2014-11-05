@@ -514,7 +514,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
     if (!FL_TEST(flags)) {
 	    if (alt->initscript) {
 	            if (isSystemd(alt->initscript)) {
-                            asprintf(&path, "/bin/systemctl -q preset %s.service", alt->initscript);
+                            asprintf(&path, "/bin/systemctl -q is-enabled %s.service || /bin/systemctl -q preset %s.service", alt->initscript, alt->initscript);
                             if (FL_VERBOSE(flags))
                                     printf(_("running %s\n"), path);
                             system(path);
