@@ -413,7 +413,9 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 			    return 1;
 		    }
 	    }
-    }
+    } else
+            fprintf(stderr, _("failed to link %s -> %s: %s exists and it is not a symlink\n"),
+				    l->facility, sl, l->facility);
 
     if (FL_TEST(flags)) {
 	printf(_("would link %s -> %s\n"), sl, l->target);
