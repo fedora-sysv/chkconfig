@@ -865,7 +865,6 @@ int systemdIsInit() {
     if (!path)
         return 0;
     base = basename(path);
-    puts(base);
     if (!base)
         return 0;
     if (strcmp(base,"systemd"))
