@@ -7,7 +7,7 @@ Group: System Environment/Base
 URL: https://git.fedorahosted.org/git/chkconfig.git
 Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext popt-devel
+BuildRequires: newt-devel gettext popt-devel libselinux-devel
 Conflicts: initscripts <= 5.30-1
 
 %description

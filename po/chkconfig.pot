@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-08 17:07+0200\n"
+"POT-Creation-Date: 2015-02-16 17:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,22 +197,27 @@ msgstr ""
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:263
+#: ../leveldb.c:296
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../leveldb.c:673
+#: ../leveldb.c:706
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:716
+#: ../leveldb.c:749
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:815
+#: ../leveldb.c:829
+#, c-format
+msgid "Unable to set selinux context for %s: %s\n"
+msgstr ""
+
+#: ../leveldb.c:853
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""
@@ -375,135 +380,140 @@ msgstr ""
 msgid "would remove %s\n"
 msgstr ""
 
-#: ../alternatives.c:383 ../alternatives.c:390 ../alternatives.c:422
+#: ../alternatives.c:383 ../alternatives.c:390 ../alternatives.c:423
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:406 ../alternatives.c:419
+#: ../alternatives.c:405 ../alternatives.c:420
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr ""
 
-#: ../alternatives.c:411 ../alternatives.c:428
+#: ../alternatives.c:410 ../alternatives.c:429
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:460
+#: ../alternatives.c:416
+#, c-format
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr ""
+
+#: ../alternatives.c:461
 #, c-format
 msgid "%s already exists\n"
 msgstr ""
 
-#: ../alternatives.c:462
+#: ../alternatives.c:463
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:493
+#: ../alternatives.c:494
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:519 ../alternatives.c:525 ../alternatives.c:536
-#: ../alternatives.c:542
+#: ../alternatives.c:520 ../alternatives.c:526 ../alternatives.c:537
+#: ../alternatives.c:543
 #, c-format
 msgid "running %s\n"
 msgstr ""
 
-#: ../alternatives.c:571
+#: ../alternatives.c:572
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr ""
 
-#: ../alternatives.c:651
+#: ../alternatives.c:652
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr ""
 
-#: ../alternatives.c:692
+#: ../alternatives.c:693
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr ""
 
-#: ../alternatives.c:694
+#: ../alternatives.c:695
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr ""
 
-#: ../alternatives.c:696
+#: ../alternatives.c:697
 #, c-format
 msgid " link currently points to %s\n"
 msgstr ""
 
-#: ../alternatives.c:699
+#: ../alternatives.c:700
 #, c-format
 msgid "%s - priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:702
+#: ../alternatives.c:703
 #, c-format
 msgid " slave %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:707
+#: ../alternatives.c:708
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr ""
 
-#: ../alternatives.c:737
+#: ../alternatives.c:738
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr ""
 
-#: ../alternatives.c:737
+#: ../alternatives.c:738
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr ""
 
-#: ../alternatives.c:739
+#: ../alternatives.c:740
 #, c-format
 msgid "  Selection    Command\n"
 msgstr ""
 
-#: ../alternatives.c:748
+#: ../alternatives.c:749
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 
-#: ../alternatives.c:751
+#: ../alternatives.c:752
 #, c-format
 msgid ""
 "\n"
 "error reading choice\n"
 msgstr ""
 
-#: ../alternatives.c:778 ../alternatives.c:804
+#: ../alternatives.c:779 ../alternatives.c:805
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr ""
 
-#: ../alternatives.c:820
+#: ../alternatives.c:821
 #, c-format
 msgid "(would remove %s\n"
 msgstr ""
 
-#: ../alternatives.c:822
+#: ../alternatives.c:823
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:973
+#: ../alternatives.c:974
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:979
+#: ../alternatives.c:980
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:989
+#: ../alternatives.c:990
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""
