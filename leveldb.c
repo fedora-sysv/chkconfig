@@ -27,6 +27,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <selinux/selinux.h>
+#include <selinux/label.h>
 
 /* Changes
    1998-09-22 - Arnaldo Carvalho de Melo <acme@conectiva.com.br>
@@ -37,6 +39,36 @@
 #define _(String) gettext((String)) 
 
 #include "leveldb.h"
+
+int selinux_restore(const char *name) {
+        struct selabel_handle *hnd = NULL;
+        struct stat buf;
+        security_context_t newcon = NULL;
+        int r = -1;
+
+        hnd = selabel_open(SELABEL_CTX_FILE, NULL, 0);
+        if (hnd == NULL)
+                goto out;
+
+        r = stat(name, &buf);
+        if (r < 0)
+                goto out;
+
+        r = selabel_lookup_raw(hnd, &newcon, name, buf.st_mode);
+        if (r < 0)
+                goto out;
+
+        r = setfilecon_raw(name, newcon);
+        if (r < 0)
+                goto out;
+
+        r = 0;
+
+ out:
+        selabel_close(hnd);
+        freecon(newcon);
+        return r;
+}
 
 int parseLevels(char * str, int emptyOk) {
     char * chptr = str;
@@ -743,7 +775,8 @@ int setXinetdService(struct service s, int on) {
 	char tmpstr[50];
 	char *buf, *ptr, *tmp;
 	struct stat sb;
-        mode_t mode;
+    mode_t mode;
+    int r;
 	
 	if (on == -1) {
 		on = s.enabled ? 1 : 0;
@@ -790,7 +823,11 @@ int setXinetdService(struct service s, int on) {
 	}
 	close(newfd);
 	unlink(oldfname);
-	return(rename(newfname,oldfname));
+	r = rename(newfname,oldfname);
+	if (selinux_restore(oldfname) != 0)
+			fprintf(stderr, _("Unable to set selinux context for %s: %s\n"), oldfname,
+			strerror(errno));
+	return(r);
 }
 
 int doSetService(struct service s, int level, int on) {

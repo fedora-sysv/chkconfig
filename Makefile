@@ -2,7 +2,7 @@ VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
 TAG = chkconfig-$(VERSION)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
-LDFLAGS=-g
+LDFLAGS=-g -lselinux -lsepol
 MAN=chkconfig.8 ntsysv.8 alternatives.8
 PROG=chkconfig
 BINDIR = /sbin
