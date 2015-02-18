@@ -434,7 +434,7 @@ static int showServiceInfoByName(char * name, int type, int forgiving) {
     int rc;
     struct service s;
 
-    if (systemdActive() && isOverriddenBySystemd(name)) {
+    if (systemdActive() && isOverriddenBySystemd(name) && !(type & TYPE_XINETD)) {
         return forgiving ? 0 : 1;
     }
 
