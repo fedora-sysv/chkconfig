@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-16 17:34+0100\n"
+"POT-Creation-Date: 2015-03-26 12:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,51 +148,51 @@ msgstr ""
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
-#: ../ntsysv.c:46
+#: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:94 ../ntsysv.c:131
 msgid "Ok"
 msgstr ""
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Back"
 msgstr ""
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Cancel"
 msgstr ""
 
-#: ../ntsysv.c:90
+#: ../ntsysv.c:106
 msgid "What services should be automatically started?"
 msgstr ""
 
-#: ../ntsysv.c:96
+#: ../ntsysv.c:112
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:181 ../ntsysv.c:208 ../ntsysv.c:245
+#: ../ntsysv.c:314 ../ntsysv.c:341 ../ntsysv.c:378
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:254
+#: ../ntsysv.c:387
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:290
+#: ../ntsysv.c:425
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:307
+#: ../ntsysv.c:442
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:314
+#: ../ntsysv.c:449
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
