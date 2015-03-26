@@ -2,7 +2,7 @@ VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
 TAG = chkconfig-$(VERSION)
 
 CFLAGS=-g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
-LDFLAGS+=-g -lselinux -lsepol
+LDFLAGS+=-g
 MAN=chkconfig.8 ntsysv.8 alternatives.8
 PROG=chkconfig
 BINDIR = /sbin
@@ -24,12 +24,12 @@ subdirs:
 	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
-	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt
+	$(CC) $(LDFLAGS) -lselinux -lsepol -o chkconfig $(OBJS) -lpopt
 
 alternatives: alternatives.o
 
 ntsysv: $(NTOBJS)
-	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
+	$(CC) $(LDFLAGS) -lselinux -lsepol -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
 
 chkconfig.o: chkconfig.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c chkconfig.c
