@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.63
+Version: 1.4
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -77,6 +77,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Mar 26 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.4-1
+- ntsysv: show systemd services and sockets
+- fix combination --type xinetd --list service
+- leveldb: restore selinux context for xinetd conf files
+- alternatives: remove unused variable
+- alternatives: warn if the target is not a symlink
+- spec: add link to git
+- lets simplify version
+
 * Wed Nov 05 2014 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.63-1
 - alternatives: during install don't call preset on enabled services
 
