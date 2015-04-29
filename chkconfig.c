@@ -239,10 +239,16 @@ static int frobOneDependencies(struct service *s, struct service *servs, int num
 
 	if (target || ((s0 != s->sPriority) || (k0 != s->kPriority))) {
 		for (i = 0; i < 7; i++) {
-			if (isConfigured(s->name, i, NULL, NULL)) {
+                        int priority;
+                        char type;
+			if (isConfigured(s->name, i, &priority, &type)) {
 				int on = isOn(s->name, i);
-				delService(s->name, TYPE_INIT_D, i);
-				doSetService(*s, i, on);
+                                int new_priority = on ? s->sPriority : s->kPriority;
+
+                                if (new_priority != priority || (on ? 'S' : 'K') != type) {
+                                        delService(s->name, TYPE_INIT_D, i);
+                                        doSetService(*s, i, on);
+                                }
 			} else if (target) {
 				delService(s->name, TYPE_INIT_D, i);
 				doSetService(*s, i, ((1<<i) & s->levels));
