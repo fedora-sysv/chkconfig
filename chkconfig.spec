@@ -70,6 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/chkconfig*
 %{_mandir}/*/update-alternatives*
 %{_mandir}/*/alternatives*
+%{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
 %defattr(-,root,root)

@@ -43,6 +43,8 @@ static void usage(char *name) {
     fprintf(stderr, "\n");
     if (!strcmp(name,"install_initd") || !strcmp(name,"remove_initd")) {
         fprintf(stderr, _("usage:   %s [name]\n"), progname);
+    } else if (!strcmp(name,"systemd-sysv-install")) {
+        fprintf(stderr, _("usage:   %s <enable|disable|is-enabled> [name] \n"), progname);
     } else {
     fprintf(stderr, _("usage:   %s [--list] [--type <type>] [name]\n"), progname);
     fprintf(stderr, _("         %s --add <name>\n"), progname);
@@ -774,13 +776,34 @@ int main(int argc, const char ** argv) {
 	display_list_systemd_note();
 
 	return listService(item, type);
-    } else if (argc == 1) {
+    } else if (argc == 1 && strcmp(progname, "systemd-sysv-install")) {
         display_list_systemd_note();
         return listService(NULL, type);
     } else {
 	char * name = (char *)poptGetArg(optCon);
 	char * state = (char *)poptGetArg(optCon);
 	int where = 0, level = -1;
+
+        if (!strcmp(progname, "systemd-sysv-install")) {
+                char *c;
+                if (!name || !state)
+                        usage(progname);
+
+                /* systemd-sysv-install has target and verb in reverse order */
+                c = name;
+                name = state;
+
+                if (!strcmp(c, "enable"))
+                        state = "on";
+                else if (!strcmp(c, "disable"))
+                        state = "off";
+                else if (!strcmp(c, "is-enabled")) {
+                        state = NULL;
+                        where = 1 << 5;
+                }
+                else
+                        usage(progname);
+        }
 
 	if (!name) {
 		usage(progname);
