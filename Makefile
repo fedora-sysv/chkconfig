@@ -56,7 +56,7 @@ install:
 	[ -d $(DESTDIR)/$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man5
 	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
-	[ -d $(DESTDIR)/usr/lib/systemd) ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
+	[ -d $(DESTDIR)/usr/lib/systemd ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
 
 	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
 	ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/usr/lib/systemd/systemd-sysv-install
