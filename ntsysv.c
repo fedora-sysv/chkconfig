@@ -193,7 +193,7 @@ int getSystemdServices(struct service ** servicesPtr, int * numServicesPtr) {
         struct service * p = NULL;
         int numServices = 0;
         int numServicesAlloced = 10;
-        
+
         numServicesAlloced = 10;
         services = malloc(sizeof(*services) * numServicesAlloced);
         if (services == NULL)
@@ -208,7 +208,7 @@ int getSystemdServices(struct service ** servicesPtr, int * numServicesPtr) {
         while (c != EOF) {
                 int enabled;
                 char *suffix;
-               
+
                 for (i = 0; (c = fgetc(sys)) != EOF && c != ' ' && i < UNIT_FILE_MAX; i++)
                         service[i]=c;
 
@@ -231,6 +231,9 @@ int getSystemdServices(struct service ** servicesPtr, int * numServicesPtr) {
 
                 if (enabled == -1)
                        continue;
+
+                if(strrchr(service, '@'))
+                        continue;
 
                 suffix = strrchr(service, '.');
                 if (suffix == NULL)
