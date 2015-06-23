@@ -75,6 +75,7 @@ int systemdActive();
 int isOverriddenBySystemd(const char *service);
 int isEnabledInSystemd(const char *service);
 int isSocketActivatedBySystemd(const char *service);
+int readSystemdUnitProperty(char *name, char *property, char **value);
 
 void checkSystemdDependencies(struct service *s);
 #endif

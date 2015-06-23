@@ -259,6 +259,9 @@ int getSystemdServices(struct service ** servicesPtr, int * numServicesPtr) {
                         r = -ENOMEM;
                         goto finish;
                 }
+
+                readSystemdUnitProperty(service, "Description", &services[numServices].desc);
+
                 services[numServices].enabled = enabled;
                 services[numServices].type = TYPE_SYSTEMD;
                 numServices++;
