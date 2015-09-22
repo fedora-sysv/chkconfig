@@ -789,6 +789,8 @@ int main(int argc, const char ** argv) {
                 if (!name || !state)
                         usage(progname);
 
+                noRedirectItem = 1;
+
                 /* systemd-sysv-install has target and verb in reverse order */
                 c = name;
                 name = state;
