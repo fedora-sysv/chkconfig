@@ -79,7 +79,9 @@ install:
 tag:
 	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
 	@echo "Tagged as $(TAG)"
-                
+
+check: alternatives
+	./test-alternatives.sh
 
 archive: tag
 	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(TAG) | bzip2 >chkconfig-$(VERSION).tar.bz2
