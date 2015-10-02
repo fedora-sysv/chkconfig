@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.5
+Version: 1.6
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -78,6 +78,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Oct 02 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.6-1
+- systemd-sysv-install: don't play ping-pong with systemctl
+- ntsysv: add description to systemd services
+- ntsysv: skip templates
+- Makefile: fix typo
+
 * Mon Jun 01 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.5-1
 - add systemd-sysv-install alias
 - don't create symlinks if they already exist
