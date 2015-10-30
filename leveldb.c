@@ -66,8 +66,10 @@ int selinux_restore(const char *name) {
         r = 0;
 
  out:
-        selabel_close(hnd);
-        freecon(newcon);
+        if (hnd)
+                selabel_close(hnd);
+        if (newcon)
+                freecon(newcon);
         return r;
 }
 
