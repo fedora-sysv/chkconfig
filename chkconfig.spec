@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.6
+Version: 1.7
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -32,8 +32,10 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 %setup -q
 
 %build
-
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS" %{?_smp_mflags}
+
+%check
+make check
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -78,6 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov 24 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7-1
+- leveldb: fix segfault when selinux policy is not present
+- alternatives: add family option
+
 * Fri Oct 02 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.6-1
 - systemd-sysv-install: don't play ping-pong with systemctl
 - ntsysv: add description to systemd services
