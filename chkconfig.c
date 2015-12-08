@@ -524,7 +524,7 @@ int setService(char * name, int type, int where, int state) {
     int what;
     struct service s;
     
-    if (!where && state != -1) {
+    if (!where && state != -1 && state != -2) {
 	/* levels 2, 3, 4, 5 */
 	where = (1 << 2) | (1 << 3) | (1 << 4) | (1 << 5);
     } else if (!where) {
