@@ -534,6 +534,7 @@ static int addService(struct alternative newAlt, const char * altDir,
     struct alternative base;
     struct linkSet * newLinks;
     int i, j, k, rc;
+    int forceLinks = 0;
 
     if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2) 
 	return 2;
@@ -569,6 +570,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 	for (i = 0 ; i < set.numAlts ; i++) {
 		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
 			set.alts[i] = newAlt;
+                        forceLinks=1;
 			break;
 		}
 		
@@ -646,7 +648,8 @@ static int addService(struct alternative newAlt, const char * altDir,
 	    set.numAlts++;
     }
     
-    if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
+
+    if (writeState(&set, altDir, stateDir, forceLinks, flags)) return 2;
 
     return 0;
 }
