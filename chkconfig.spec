@@ -1,12 +1,12 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.49.3
+Version: 1.3.49.4
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
 Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext popt-devel
+BuildRequires: newt-devel gettext popt-devel libselinux-devel
 Conflicts: initscripts <= 5.30-1
 
 %description
@@ -74,7 +74,22 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
-* Wed Feb  1 2012 Bill Nottingham <notting@redhat.com> 1.3.49.3-1
+* Fri Dec 11 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.49.4-1
+- chkconfig: don't create symlinks if they already exist
+- chkconfig: resetpriorities should work on all runlevels
+- leveldb: fix segfault when selinux policy is not present
+- alternatives: always recreate symlinks when the alternative is updated
+
+* Tue Feb 17 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.49.3-5
+- relabel xinetd.d files after change
+
+* Mon Jan 12 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.49.3-4
+- fix permission issues with xinetd services
+
+* Thu Sep 12 2013 Lukas Nykryn <lnykryn@redhat.com> - 1.3.49.3-3
+- check readServices return value (#905555)
+
+* Wed Feb  1 2012 Bill Nottingham <notting@redhat.com> 1.3.49.3-2
 - fix another regression, this one in 'install_initd' (#696305)
 
 * Tue Jan 17 2012 Bill Nottingham <notting@redhat.com> 1.3.49.2-1
