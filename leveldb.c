@@ -156,7 +156,7 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 	struct service serv = { 
 			name: NULL,
 			levels: -1,
-			kPriority: -1,
+			kPriority: 100,
 			sPriority: -1, 
 			desc: NULL, 
 			startDeps: NULL, 
@@ -244,7 +244,8 @@ int readXinetdServiceInfo(char *name, struct service * service) {
 	*service = serv;
 	return 0;
 out_err:
-        close(fd);
+        if (fd >= 0)
+            close(fd);
         free(buf);
         free(filename);
         return -1;
@@ -328,6 +329,7 @@ int readServiceInfo(char * name, int type, struct service * service, int honorHi
             if (serv_overrides.isLSB || serv.isLSB) serv.isLSB = 1;
         }
     }
+    serv.currentLevels = whatLevels(name);
 
     free(filename);
     *service = serv;
@@ -420,8 +422,9 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     struct service serv = { 
 	    	    name: NULL, 
 		    levels: -1, 
-		    kPriority: -1, 
+		    kPriority: 100, 
 		    sPriority: -1, 
+		    currentLevels: 0,
 		    desc: NULL, 
 		    startDeps: NULL, 
 		    stopDeps: NULL,
@@ -515,7 +518,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
 	    }
 	    if (serv.sPriority == -1)
 			serv.sPriority = spri;
-	    if (serv.kPriority == -1)
+	    if (serv.kPriority == 100)
 			serv.kPriority = kpri;
 
 	    if (serv.levels == -1) {
@@ -621,7 +624,7 @@ int parseServiceInfo(int fd, char * name, struct service * service, int honorHid
     } else if (english_desc)
 	free (english_desc);
 
-    if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == -1)))) {
+    if (!partialOk && ((serv.levels == -1) || !serv.desc || (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == 100)))) {
 	return 1;
     } 
 
@@ -723,6 +726,15 @@ int isOn(char * name, int level) {
 
     globfree(&globres);
     return 1;
+}
+
+int whatLevels(char *name) {
+    int i, ret = 0;
+
+    for (i = 0; i < 7; i++) {
+        ret |= (isOn(name, i) << i);
+    }
+    return ret;
 }
 
 int setXinetdService(struct service s, int on) {

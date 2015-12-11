@@ -66,13 +66,8 @@ static int servicesWindow(struct service * services, int numServices,
 				     services[i].levels ? '*' : ' ', NULL, 
 				     states + i);
 	} else {
-		for (j = 0; j < 7; j++) {
-			if (levels & (1 << j)) {
-				if (isOn(services[i].name, j)) break;
-			}
-		}
-		checkboxes[i] = newtCheckbox(-1, i, services[i].name, 
-					     (j != 7) ? '*' : ' ', NULL, 
+		checkboxes[i] = newtCheckbox(-1, i, services[i].name,
+					     (services[i].currentLevels & levels) ? '*' : ' ', NULL,
 					     states + i);
 	}
 	newtFormAddComponent(subform, checkboxes[i]);
