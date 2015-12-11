@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-04 00:13-0400\n"
+"POT-Creation-Date: 2013-09-12 10:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,40 +75,40 @@ msgstr ""
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:384 ../chkconfig.c:389 ../chkconfig.c:503
+#: ../chkconfig.c:396 ../chkconfig.c:401 ../chkconfig.c:515
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:384 ../chkconfig.c:389 ../chkconfig.c:503
+#: ../chkconfig.c:396 ../chkconfig.c:401 ../chkconfig.c:515
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:465
+#: ../chkconfig.c:477
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:467
+#: ../chkconfig.c:479
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:611
+#: ../chkconfig.c:637
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:623
+#: ../chkconfig.c:649
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:631
+#: ../chkconfig.c:657
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:691
+#: ../chkconfig.c:717
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -117,67 +117,67 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:83 ../ntsysv.c:120
+#: ../ntsysv.c:78 ../ntsysv.c:115
 msgid "Ok"
 msgstr ""
 
-#: ../ntsysv.c:83
+#: ../ntsysv.c:78
 msgid "Back"
 msgstr ""
 
-#: ../ntsysv.c:83
+#: ../ntsysv.c:78
 msgid "Cancel"
 msgstr ""
 
-#: ../ntsysv.c:95
+#: ../ntsysv.c:90
 msgid "What services should be automatically started?"
 msgstr ""
 
-#: ../ntsysv.c:101
+#: ../ntsysv.c:96
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:183 ../ntsysv.c:210 ../ntsysv.c:247
+#: ../ntsysv.c:178 ../ntsysv.c:205 ../ntsysv.c:242
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:256
+#: ../ntsysv.c:251
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:292
+#: ../ntsysv.c:287
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:309
+#: ../ntsysv.c:304
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:316
+#: ../ntsysv.c:311
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""
 
-#: ../leveldb.c:262
+#: ../leveldb.c:263
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr ""
 
-#: ../leveldb.c:670
+#: ../leveldb.c:673
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:713
+#: ../leveldb.c:716
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr ""
 
-#: ../leveldb.c:801
+#: ../leveldb.c:813
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr ""

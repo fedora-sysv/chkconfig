@@ -262,7 +262,7 @@ int readServices(struct service **services) {
 	if (!(dir = opendir(RUNLEVELS "/init.d"))) {
 		fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
 			strerror(errno));
-		return 1;
+		return -1;
 	}
 
 	while ((ent = readdir(dir))) {
