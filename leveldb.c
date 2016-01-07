@@ -70,6 +70,15 @@ int selinux_restore(const char *name) {
                 selabel_close(hnd);
         if (newcon)
                 freecon(newcon);
+
+        /* Lets ignore any errors when selinux is disabled.
+         * We still want to run the previous code though,
+         * since we only need selinux policy.
+         * Selinux itself can be turned off.
+         */
+        if (!is_selinux_enabled())
+                 return 0;
+
         return r;
 }
 
