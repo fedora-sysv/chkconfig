@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.49.4
+Version: 1.3.49.5
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -74,6 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Thu Jan 07 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.49.5-1
+- leveldb: suppress error messages when selinux is turned off
+
 * Fri Dec 11 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.49.4-1
 - chkconfig: don't create symlinks if they already exist
 - chkconfig: resetpriorities should work on all runlevels
