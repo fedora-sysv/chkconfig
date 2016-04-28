@@ -842,7 +842,7 @@ int main(int argc, const char ** argv) {
 	    if (rc)
 	       return 1;
 	    if (s.type == TYPE_XINETD) {
-	       if (isOn("xinetd",level))
+	       if (isXinetdEnabled())
 		       return !s.levels;
 	       else
 		       return 1;
