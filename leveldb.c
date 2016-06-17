@@ -66,8 +66,19 @@ int selinux_restore(const char *name) {
         r = 0;
 
  out:
-        selabel_close(hnd);
-        freecon(newcon);
+        if (hnd)
+                selabel_close(hnd);
+        if (newcon)
+                freecon(newcon);
+
+        /* Lets ignore any errors when selinux is disabled.
+         * We still want to run the previous code though,
+         * since we only need selinux policy.
+         * Selinux itself can be turned off.
+         */
+        if (!is_selinux_enabled())
+                 return 0;
+
         return r;
 }
 
@@ -1138,6 +1149,13 @@ int unitGetReverseDeps(char *unit, char ***deps, int *n_deps) {
                 ret = tt;
                 ret[n_ret] = NULL;
 
+		/* trim leading whitespaces */
+		while ((c = fgetc(sys)) != EOF) {
+			if (!isspace(c) || c == '\n') {
+				ungetc(c, sys);
+				break;
+			}
+		}
                 for (j = 0; (c = fgetc(sys)) != EOF && c != '\n'; j++) {
                         t = realloc(ret[n_ret], j + 2);
                         if (t == NULL) {

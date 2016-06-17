@@ -23,7 +23,8 @@
 
 #define TYPE_INIT_D	0x1
 #define TYPE_XINETD	0x2
-#define TYPE_ANY	(TYPE_INIT_D | TYPE_XINETD)
+#define TYPE_SYSTEMD	0x4
+#define TYPE_ANY	(TYPE_INIT_D | TYPE_XINETD | TYPE_SYSTEMD)
 
 #ifndef SYSTEMD_SERVICE_PATH
 #define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
@@ -74,6 +75,7 @@ int systemdActive();
 int isOverriddenBySystemd(const char *service);
 int isEnabledInSystemd(const char *service);
 int isSocketActivatedBySystemd(const char *service);
+int readSystemdUnitProperty(char *name, char *property, char **value);
 
 void checkSystemdDependencies(struct service *s);
 #endif

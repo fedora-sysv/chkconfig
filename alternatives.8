@@ -17,6 +17,8 @@ alternatives \- maintain symbolic links determining default commands
 .IR path ]...
 .RB [ --initscript
 .IR service ]
+.RB [ --family
+.IR name ]
 .PP
 .B alternatives
 .RI [ options ]
@@ -281,8 +283,8 @@ for a slave link, and
 .I service
 is the name of any associated initscript for the alternative.
 .B NOTE:
-.B --initscript
-is a Red Hat Linux specific option.
+.B --initscript and --family
+are a Red Hat Linux specific options.
 Zero or more
 .B --slave
 options, each followed by three arguments,
@@ -309,6 +311,17 @@ which alternative is active.
 
 .B NOTE:
 .B --initscript
+is a Red Hat Linux specific option.
+
+
+.B --family
+can be used to group similar alternatives. If the group is
+in manual mode and the alternative currently used is removed,
+alternatives will try to change links to different one
+with same family and highest priority.
+
+.B NOTE:
+.B --family
 is a Red Hat Linux specific option.
 .TP
 \fB--remove\fR \fIname path\fR

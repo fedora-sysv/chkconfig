@@ -47,6 +47,7 @@ struct alternative {
     struct linkSet * slaves;
     char *initscript;
     int numSlaves;
+    char *family;
 };
 
 struct alternativeSet {
@@ -66,6 +67,7 @@ static int usage(int rc) {
     printf(_("This may be freely redistributed under the terms of the GNU Public License.\n\n"));
     printf(_("usage: alternatives --install <link> <name> <path> <priority>\n"));
     printf(_("                    [--initscript <service>]\n"));
+    printf(_("                    [--family <family>]\n"));
     printf(_("                    [--slave <link> <name> <path>]*\n"));
     printf(_("       alternatives --remove <name> <path>\n"));
     printf(_("       alternatives --auto <name>\n"));
@@ -78,6 +80,26 @@ static int usage(int rc) {
     printf(_("                --altdir <directory> --admindir <directory>\n"));
 
     exit(rc);
+}
+
+int streq(const char *a, const char *b) {
+    if (a && b)
+        return strcmp(a, b) ? 0 : 1;
+
+    if (!a && !b)
+        return 1;
+
+    return 0;
+}
+
+int altBetter(struct alternative new, struct alternative old, char *family) {
+    if (!family || (streq(old.family, family) == streq(new.family, family)))
+        return new.priority > old.priority;
+
+    if (streq(new.family, family))
+        return 1;
+
+    return 0;
 }
 
 static int isSystemd(char *initscript) {
@@ -283,8 +305,24 @@ static int readConfig(struct alternativeSet * set, const char * title,
 
 	line = parseLine(&buf);
 	set->alts[set->numAlts].priority = -1;
-	set->alts[set->numAlts].priority = strtol(line, &end, 0);
-	set->alts[set->numAlts].initscript = NULL;
+        set->alts[set->numAlts].initscript = NULL;
+        set->alts[set->numAlts].family = NULL;
+
+        if (line && line[0] == '@') {
+            line++;
+            end = strchr(line, '@');
+	    if (!end || (end == line)) {
+	        fprintf(stderr, _("closing '@' missing or the family is empty in %s\n"), path);
+	        fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
+	        return 1;
+	    }
+            *end = '\0';
+            set->alts[set->numAlts].family = strdup(line);
+            line = end + 1;
+        }
+
+        set->alts[set->numAlts].priority = strtol(line, &end, 0);
+
 	if (!end || (end == line)) {
 	    fprintf(stderr, _("numeric priority expected in %s\n"), path);
 	    fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
@@ -348,10 +386,10 @@ static int readConfig(struct alternativeSet * set, const char * title,
 	    printf(_("link points to no alternative -- setting mode to manual\n"));
     } else {
 	if (i != set->best && set->mode == AUTO) {
-	    set->mode = MANUAL;
-	    if (FL_VERBOSE(flags))
-		printf(_("link changed -- setting mode to manual\n"));
-	}
+	set->mode = MANUAL;
+	if (FL_VERBOSE(flags))
+	    printf(_("link changed -- setting mode to manual\n"));
+    }
 	set->current = i;
     }
 
@@ -397,7 +435,6 @@ static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
 
 static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
     char * sl;
-    struct stat sb;
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
@@ -413,7 +450,9 @@ static int makeLinks(struct linkSet * l, const char * altDir, int flags) {
 			    return 1;
 		    }
 	    }
-    }
+    } else
+            fprintf(stderr, _("failed to link %s -> %s: %s exists and it is not a symlink\n"),
+				    l->facility, sl, l->facility);
 
     if (FL_TEST(flags)) {
 	printf(_("would link %s -> %s\n"), sl, l->target);
@@ -475,15 +514,17 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
 
     for (i = 0; i < set->numAlts; i++) {
 	fprintf(f, "%s\n", set->alts[i].master.target);
+        if (set->alts[i].family)
+            fprintf(f, "@%s@", set->alts[i].family);
+        fprintf(f, "%d", set->alts[i].priority);
 	if (set->alts[i].initscript)
-		    fprintf(f, "%d %s\n", set->alts[i].priority, set->alts[i].initscript);
-	else
-		    fprintf(f, "%d\n", set->alts[i].priority);
+	    fprintf(f, " %s", set->alts[i].initscript);
+        fprintf(f, "\n");
 
 	for (j = 0; j < set->alts[i].numSlaves; j++) {
-		if (set->alts[i].slaves[j].target)
-			fprintf(f, "%s", set->alts[i].slaves[j].target);
-		fprintf(f,"\n");
+	    if (set->alts[i].slaves[j].target)
+	        fprintf(f, "%s", set->alts[i].slaves[j].target);
+	    fprintf(f,"\n");
 	}
     }
 
@@ -514,7 +555,7 @@ static int writeState(struct alternativeSet *  set, const char * altDir,
     if (!FL_TEST(flags)) {
 	    if (alt->initscript) {
 	            if (isSystemd(alt->initscript)) {
-                            asprintf(&path, "/bin/systemctl -qf enable %s.service", alt->initscript);
+                            asprintf(&path, "/bin/systemctl -q is-enabled %s.service || /bin/systemctl -q preset %s.service", alt->initscript, alt->initscript);
                             if (FL_VERBOSE(flags))
                                     printf(_("running %s\n"), path);
                             system(path);
@@ -562,6 +603,7 @@ static int addService(struct alternative newAlt, const char * altDir,
     struct alternative base;
     struct linkSet * newLinks;
     int i, j, k, rc;
+    int forceLinks = 0;
 
     if ( (rc=readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) && rc != 3 && rc != 2)
 	return 2;
@@ -597,6 +639,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 	for (i = 0 ; i < set.numAlts ; i++) {
 		if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
 			set.alts[i] = newAlt;
+                        forceLinks=1;
 			break;
 		}
 
@@ -674,7 +717,7 @@ static int addService(struct alternative newAlt, const char * altDir,
 	    set.numAlts++;
     }
 
-    if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
+    if (writeState(&set, altDir, stateDir, forceLinks, flags)) return 2;
 
     return 0;
 }
@@ -696,8 +739,10 @@ static int displayService(char * title, const char * altDir,
     printf(_(" link currently points to %s\n"), set.currentLink);
 
     for (alt = 0; alt < set.numAlts; alt++) {
-	printf(_("%s - priority %d\n"), set.alts[alt].master.target,
-		    set.alts[alt].priority);
+        printf("%s - ", set.alts[alt].master.target);
+        if (set.alts[alt].family)
+            printf(_("family %s "), set.alts[alt].family);
+	printf(_("priority %d\n"), set.alts[alt].priority);
 	for (slave = 0; slave < set.alts[alt].numSlaves; slave++) {
 	    printf(_(" slave %s: %s\n"), set.alts[alt].slaves[slave].title,
 		   set.alts[alt].slaves[slave].target);
@@ -793,6 +838,8 @@ static int removeService(const char * title, const char * target,
     int rc;
     struct alternativeSet set;
     int i;
+    char *family = NULL;
+    int forceLinks = 0;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
 
@@ -827,6 +874,9 @@ static int removeService(const char * title, const char * target,
 	if (rc) return 2; else return 0;
     }
 
+    if (set.current != -1)
+        family = set.alts[set.current].family;
+
     /* If the current link is what we're removing, reset it. */
     if (set.current == i)
 	set.current = -1;
@@ -839,15 +889,18 @@ static int removeService(const char * title, const char * target,
 
     set.best = 0;
     for (i = 0; i < set.numAlts; i++)
-	if (set.alts[i].priority > set.alts[set.best].priority)
-	    set.best = i;
+        if (altBetter(set.alts[i],set.alts[set.best], family))
+            set.best = i;
 
     if (set.current == -1) {
-	set.mode = AUTO;
+        if (!family || !streq(family, set.alts[set.best].family))
+            set.mode = AUTO;
+        else
+            forceLinks = 1;
 	set.current = set.best;
     }
 
-    if (writeState(&set, altDir, stateDir, 0, flags)) return 2;
+    if (writeState(&set, altDir, stateDir, forceLinks, flags)) return 2;
 
     return 0;
 }
@@ -882,7 +935,7 @@ int main(int argc, const char ** argv) {
     char * end;
     char * title, * target;
     enum programModes mode = MODE_UNKNOWN;
-    struct alternative newAlt = { -1, { NULL, NULL, NULL }, NULL, NULL, 0 };
+    struct alternative newAlt = { -1, { NULL, NULL, NULL }, NULL, NULL, 0, NULL };
     int flags = 0;
     char * altDir = "/etc/alternatives";
     char * stateDir = "/var/lib/alternatives";
@@ -923,6 +976,18 @@ int main(int argc, const char ** argv) {
 
 	    if (!*nextArg) usage(2);
 	    newAlt.initscript = strdup(*nextArg);
+	    nextArg++;
+	} else if (!strcmp(*nextArg, "--family")) {
+	    if (mode != MODE_UNKNOWN && mode != MODE_INSTALL) usage(2);
+	    nextArg++;
+
+	    if (!*nextArg) usage(2);
+	    newAlt.family = strdup(*nextArg);
+
+            if (strchr(newAlt.family, '@')) {
+                printf(_("--family can't contain the symbol '@'\n"));
+                usage(2);
+            }
 	    nextArg++;
 	} else if (!strcmp(*nextArg, "--remove")) {
 	    setupDoubleArg(&mode, &nextArg, MODE_REMOVE, &title, &target);

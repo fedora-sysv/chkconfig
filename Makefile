@@ -56,12 +56,15 @@ install:
 	[ -d $(DESTDIR)/$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man5
 	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
+	[ -d $(DESTDIR)/usr/lib/systemd ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
 
 	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
+	ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/usr/lib/systemd/systemd-sysv-install
+
 	install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
 	install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives
 	ln -s alternatives $(DESTDIR)/$(SBINDIR)/update-alternatives
-	
+
 	for i in $(MAN); do \
 		install -m 644 $$i $(DESTDIR)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
 	done
@@ -76,8 +79,12 @@ install:
 tag:
 	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
 	@echo "Tagged as $(TAG)"
-                
+
+check: alternatives
+	./test-alternatives.sh
 
 archive: tag
 	git archive --format=tar --prefix=chkconfig-$(VERSION)/ $(TAG) | bzip2 >chkconfig-$(VERSION).tar.bz2
 	@echo "The archive is in chkconfig-$(VERSION).tar.bz2"
+	@sha1sum chkconfig-$(VERSION).tar.bz2 > chkconfig-$(VERSION).sha1sum
+	@scp chkconfig-$(VERSION).tar.bz2 chkconfig-$(VERSIONION).sha1sum fedorahosted.org:chkconfig 2>/dev/null || true

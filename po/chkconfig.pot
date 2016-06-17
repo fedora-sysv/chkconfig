@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-16 17:34+0100\n"
+"POT-Creation-Date: 2015-05-28 15:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,30 +35,35 @@ msgstr ""
 
 #: ../chkconfig.c:47
 #, c-format
-msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr ""
-
-#: ../chkconfig.c:48
-#, c-format
-msgid "         %s --add <name>\n"
+msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr ""
 
 #: ../chkconfig.c:49
 #, c-format
-msgid "         %s --del <name>\n"
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr ""
 
 #: ../chkconfig.c:50
 #, c-format
-msgid "         %s --override <name>\n"
+msgid "         %s --add <name>\n"
 msgstr ""
 
 #: ../chkconfig.c:51
 #, c-format
+msgid "         %s --del <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:52
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr ""
+
+#: ../chkconfig.c:53
+#, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr ""
 
-#: ../chkconfig.c:59
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "\n"
@@ -69,7 +74,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:65
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
@@ -78,121 +83,121 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ../chkconfig.c:71
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:75
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr ""
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:77
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:84
+#: ../chkconfig.c:86
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:421 ../chkconfig.c:426 ../chkconfig.c:549
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "on"
 msgstr ""
 
-#: ../chkconfig.c:421 ../chkconfig.c:426 ../chkconfig.c:549
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "off"
 msgstr ""
 
-#: ../chkconfig.c:511
+#: ../chkconfig.c:519
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:513
+#: ../chkconfig.c:521
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:640
+#: ../chkconfig.c:648
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:645
+#: ../chkconfig.c:653
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:701
+#: ../chkconfig.c:709
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:713
+#: ../chkconfig.c:721
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:720
+#: ../chkconfig.c:728
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:805
+#: ../chkconfig.c:834
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
 
-#: ../ntsysv.c:46
+#: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
 msgstr ""
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:94 ../ntsysv.c:131
 msgid "Ok"
 msgstr ""
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Back"
 msgstr ""
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Cancel"
 msgstr ""
 
-#: ../ntsysv.c:90
+#: ../ntsysv.c:106
 msgid "What services should be automatically started?"
 msgstr ""
 
-#: ../ntsysv.c:96
+#: ../ntsysv.c:112
 msgid "Services"
 msgstr ""
 
-#: ../ntsysv.c:181 ../ntsysv.c:208 ../ntsysv.c:245
+#: ../ntsysv.c:314 ../ntsysv.c:341 ../ntsysv.c:378
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:254
+#: ../ntsysv.c:387
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr ""
 
-#: ../ntsysv.c:290
+#: ../ntsysv.c:425
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr ""
 
-#: ../ntsysv.c:307
+#: ../ntsysv.c:442
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr ""
 
-#: ../ntsysv.c:314
+#: ../ntsysv.c:449
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr ""

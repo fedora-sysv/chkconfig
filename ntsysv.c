@@ -28,6 +28,7 @@
 #include <unistd.h>
 
 #define _(String) gettext((String))
+#define UNIT_FILE_MAX 256
 
 #include "leveldb.h"
 
@@ -42,6 +43,8 @@ static int servicesWindow(struct service * services, int numServices,
     int i, done = 0, update = 0, j;
     int width, height;
     struct newtExitStruct e;
+    int count = 0;
+    int last = 0;
 
     newtPushHelpLine(_("Press <F1> for more information on a service."));
 
@@ -60,13 +63,26 @@ static int servicesWindow(struct service * services, int numServices,
     checkboxes = alloca(sizeof(*checkboxes) * numServices);
     states = alloca(sizeof(*states) * numServices);
 
-    for (i = 0; i < numServices; i++) {
+    for (i = 0; i < numServices; i++, count++) {
+        if (last != services[i].type) {
+	        newtFormAddComponent(subform, newtCompactButton(-1, count,
+                                        services[i].type == TYPE_INIT_D ? "SysV initscripts":
+                                        services[i].type == TYPE_XINETD ? "xinetd services":
+                                        services[i].type == TYPE_SYSTEMD ? "systemd services":
+                                        "Unknown"));
+                count++;
+                last = services[i].type;
+        }
 	if (services[i].type == TYPE_XINETD) {
-		checkboxes[i] = newtCheckbox(-1, i, services[i].name,
+		checkboxes[i] = newtCheckbox(-1, count, services[i].name,
 				     services[i].levels ? '*' : ' ', NULL,
 				     states + i);
+	} else if (services[i].type == TYPE_SYSTEMD) {
+		checkboxes[i] = newtCheckbox(-1, count, services[i].name,
+				     services[i].enabled ? '*' : ' ', NULL,
+				     states + i);
 	} else {
-		checkboxes[i] = newtCheckbox(-1, i, services[i].name,
+		checkboxes[i] = newtCheckbox(-1, count, services[i].name,
 					     (services[i].currentLevels & levels) ? '*' : ' ', NULL,
 					     states + i);
 	}
@@ -114,10 +130,10 @@ static int servicesWindow(struct service * services, int numServices,
 		if (i < numServices && services[i].desc)
 		    newtWinMessage(services[i].name, _("Ok"), services[i].desc);
 	    }
-	} else {
-	    done = 1;
-	    update = (e.u.co == ok);
-	}
+	} else if (e.u.co == ok || e.u.co == cancel) {
+	        done = 1;
+	        update = (e.u.co == ok);
+        }
     }
 
     newtPopWindow();
@@ -130,10 +146,25 @@ static int servicesWindow(struct service * services, int numServices,
         if ((services[i].enabled && states[i] != '*') ||
 	    (!services[i].enabled && states[i] == '*'))
 	      setXinetdService(services[i], states[i] == '*');
-      } else {
+      } else if (services[i].type == TYPE_SYSTEMD) {
+              char *cmd = NULL;
+              int en = 0;
+              if (services[i].enabled && states[i] != '*')
+                      en = 0;
+	      else if (!services[i].enabled && states[i] == '*')
+                      en = 1;
+              else
+                      continue;
+              asprintf(&cmd, "/usr/bin/systemctl %s %s >/dev/null 2>&1", en ? "enable" : "disable", services[i].name);
+              if (cmd == NULL)
+                     return 1;
+              system(cmd);
+              free(cmd);
+      }
+      else {
 	      for (j = 0; j < 7; j++) {
 		      if (levels & (1 << j))
-			doSetService(services[i], j, states[i] == '*');
+                              doSetService(services[i], j, states[i] == '*');
 	      }
       }
     }
@@ -145,7 +176,115 @@ static int serviceNameCmp(const void * a, const void * b) {
     const struct service * first = a;
     const struct service * second = b;
 
+    if (first->type != second->type) {
+            return first->type - second->type;
+    }
+
     return strcmp(first->name, second->name);
+}
+
+int getSystemdServices(struct service ** servicesPtr, int * numServicesPtr) {
+        FILE *sys = NULL;
+        char service[UNIT_FILE_MAX + 1];
+        int i;
+        int r = 0;
+        int c = ' ';
+        struct service * services = NULL;
+        struct service * p = NULL;
+        int numServices = 0;
+        int numServicesAlloced = 10;
+
+        numServicesAlloced = 10;
+        services = malloc(sizeof(*services) * numServicesAlloced);
+        if (services == NULL)
+                return -ENOMEM;
+
+        sys = popen("systemctl list-unit-files --no-legend --no-pager", "r");
+        if (!sys) {
+                r = -1;
+                goto finish;
+        }
+
+        while (c != EOF) {
+                int enabled;
+                char *suffix;
+
+                for (i = 0; (c = fgetc(sys)) != EOF && c != ' ' && i < UNIT_FILE_MAX; i++)
+                        service[i]=c;
+
+                if (i == UNIT_FILE_MAX) {
+                        while ((c = fgetc(sys)) != '\n' && c != EOF);
+                        continue;
+                }
+
+                service[i]='\0';
+                if (c == EOF)
+                        break;
+
+                while ((c = fgetc(sys)) == ' ');
+                if (c == EOF)
+                        break;
+
+                enabled = c == 'e' ? 1 :
+                          c == 'd' ? 0 : -1;
+                while ((c = fgetc(sys)) != '\n' && c != EOF);
+
+                if (enabled == -1)
+                       continue;
+
+                if(strrchr(service, '@'))
+                        continue;
+
+                suffix = strrchr(service, '.');
+                if (suffix == NULL)
+                        continue;
+                suffix++;
+                if (strcmp(suffix, "service") && strcmp(suffix, "socket"))
+                        continue;
+
+                if (numServices == numServicesAlloced) {
+                    numServicesAlloced += 10;
+                    p = realloc(services, numServicesAlloced * sizeof(*services));
+                    if (p == NULL) {
+                            r = -ENOMEM;
+                            goto finish;
+                    }
+                    services = p;
+                }
+
+                bzero(services + numServices, sizeof(struct service));
+
+                services[numServices].name = strdup(service);
+                if (services[numServices].name == NULL) {
+                        r = -ENOMEM;
+                        goto finish;
+                }
+
+                readSystemdUnitProperty(service, "Description", &services[numServices].desc);
+
+                services[numServices].enabled = enabled;
+                services[numServices].type = TYPE_SYSTEMD;
+                numServices++;
+        }
+
+        p = realloc (*servicesPtr, (*numServicesPtr + numServices) * sizeof(struct service));
+        if (p == NULL) {
+                r = -ENOMEM;
+                goto finish;
+        }
+        *servicesPtr = p;
+        memcpy(*servicesPtr+*numServicesPtr, services, numServices * sizeof(struct service));
+        *numServicesPtr = *numServicesPtr + numServices;
+
+
+finish:
+        if (services)
+                free(services);
+
+        if (sys)
+                pclose(sys);
+
+        return r;
 }
 
 static int getServices(struct service ** servicesPtr, int * numServicesPtr,
@@ -256,6 +395,8 @@ static int getServices(struct service ** servicesPtr, int * numServicesPtr,
         return 1;
     }
     }
+
+    getSystemdServices(&services, &numServices);
 
     qsort(services, numServices, sizeof(*services), serviceNameCmp);
 

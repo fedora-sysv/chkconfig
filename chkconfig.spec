@@ -1,12 +1,13 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.3.61
+Version: 1.7
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
+URL: https://git.fedorahosted.org/git/chkconfig.git
 Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext popt-devel
+BuildRequires: newt-devel gettext popt-devel libselinux-devel
 Conflicts: initscripts <= 5.30-1
 
 %description
@@ -31,8 +32,10 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 %setup -q
 
 %build
-
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS" %{?_smp_mflags}
+
+%check
+make check
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -53,7 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc COPYING
+%{!?_licensedir:%global license %%doc}
+%license COPYING
 %dir /etc/alternatives
 /sbin/chkconfig
 %{_sbindir}/update-alternatives
@@ -68,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/chkconfig*
 %{_mandir}/*/update-alternatives*
 %{_mandir}/*/alternatives*
+%{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
 %defattr(-,root,root)
@@ -75,6 +80,38 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Tue Nov 24 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7-1
+- leveldb: fix segfault when selinux policy is not present
+- alternatives: add family option
+
+* Fri Oct 02 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.6-1
+- systemd-sysv-install: don't play ping-pong with systemctl
+- ntsysv: add description to systemd services
+- ntsysv: skip templates
+- Makefile: fix typo
+
+* Mon Jun 01 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.5-1
+- add systemd-sysv-install alias
+- don't create symlinks if they already exist
+- fix wrongly behaving LDFLAGS
+
+* Thu Mar 26 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.4-1
+- ntsysv: show systemd services and sockets
+- fix combination --type xinetd --list service
+- leveldb: restore selinux context for xinetd conf files
+- alternatives: remove unused variable
+- alternatives: warn if the target is not a symlink
+- spec: add link to git
+- lets simplify version
+
+* Wed Nov 05 2014 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.63-1
+- alternatives: during install don't call preset on enabled services
+
+* Tue Aug 12 2014 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.62-1
+- use systemctl preset, not systemctl enable
+- fix typo in manpage
+- partly support socket activated services
+
 * Wed Jul 31 2013 Lukáš Nykrýn <lnykryn@redhat.com> - 1.3.61-1
 - try to make install_initd work
 - fix permission issues with xinetd services
