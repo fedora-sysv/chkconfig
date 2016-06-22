@@ -143,7 +143,7 @@ static void setupDoubleArg(enum programModes * mode, const char *** nextArgPtr,
     *title = strdup(*nextArg);
     nextArg++;
 
-    if (!*nextArg || **nextArg != '/') usage(2);
+    if (!*nextArg) usage(2);
     *target = strdup(*nextArg);
     *nextArgPtr = nextArg + 1;
 }
@@ -774,6 +774,7 @@ static int configService(char * title, const char * altDir,
     int i;
     char choice[200];
     char * end = NULL;
+    char * nicer = NULL;;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
 
@@ -784,11 +785,16 @@ static int configService(char * title, const char * altDir,
 	printf(_("  Selection    Command\n"));
 	printf("-----------------------------------------------\n");
 
-	for (i = 0; i < set.numAlts; i++)
+	for (i = 0; i < set.numAlts; i++) {
+            if (set.alts[i].family)
+                asprintf(&nicer, "%s (%s)", set.alts[i].family, set.alts[i].master.target);
 	    printf("%c%c %-4d        %s\n",
 		   i == set.best ? '*' : ' ',
 		   i == set.current ? '+' : ' ',
-		   i + 1, set.alts[i].master.target);
+		   i + 1, nicer?:set.alts[i].master.target);
+            free(nicer);
+            nicer=NULL;;
+        }
 	printf("\n");
 	printf(_("Enter to keep the current selection[+], or type selection number: "));
 
@@ -811,21 +817,31 @@ static int configService(char * title, const char * altDir,
 static int setService(const char * title, const char * target,
 		      const char * altDir, const char * stateDir, int flags) {
     struct alternativeSet set;
+    int found = -1;
     int i;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
 
     for (i = 0; i < set.numAlts; i++)
-	if (!strcmp(set.alts[i].master.target, target)) break;
+	if (!strcmp(set.alts[i].master.target, target)) {
+                found = i;
+                break;
+        }
 
-    if (i == set.numAlts) {
+    if (found == -1)
+        for (i = 0; i < set.numAlts; i++)
+            if (set.alts[i].family && !strcmp(set.alts[i].family, target))
+                    if (found == -1 || (set.alts[i].priority > set.alts[found].priority))
+                            found = i;
+
+    if (found == -1) {
 	fprintf(stderr,
 	        _("%s has not been configured as an alternative for %s\n"),
 		target, title);
 	return 2;
     }
 
-    set.current = i;
+    set.current = found;
     set.mode = MANUAL;
 
     if (writeState(&set, altDir, stateDir, 1, flags)) return 2;
