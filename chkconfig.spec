@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.7.1
+Version: 1.7.2
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -80,6 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Jun 29 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.2-1
+- alternatives: introduce --keep-missing
+- alternatives: allow family in --set and display it in --config
+
 * Fri Jun 17 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.1-1
 - merge the upstream with rhel branch
 - remove the preset change
