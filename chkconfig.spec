@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.7
+Version: 1.8
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -80,6 +80,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Wed Jun 29 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.8-1
+- alternatives: introduce --keep-missing
+- alternatives: allow family in --set and display it in --config
+- chkconfig: use isXinetdEnabled instead of isOn
+- leveldb: trim leading whitespaces from systemctl
+- leveldb: suppress error messages when selinux is turned off
+- alternatives: always recreate symlinks when the alternative is updated
+- test-alternatives: basic tests for slave links
+- chkconfig: resetpriorities should work on all runlevels
+
 * Tue Nov 24 2015 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7-1
 - leveldb: fix segfault when selinux policy is not present
 - alternatives: add family option
