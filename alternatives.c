@@ -29,9 +29,11 @@
 
 #define	FLAGS_TEST	(1 << 0)
 #define	FLAGS_VERBOSE	(1 << 1)
+#define	FLAGS_KEEP_MISSING	(1 << 2)
 
 #define FL_TEST(flags)	    ((flags) & FLAGS_TEST)
 #define FL_VERBOSE(flags)   ((flags) & FLAGS_VERBOSE)
+#define FL_KEEP_MISSING(flags)   ((flags) & FLAGS_KEEP_MISSING)
 
 #define _(foo) gettext(foo)
 
@@ -76,7 +78,7 @@ static int usage(int rc) {
     printf(_("       alternatives --set <name> <path>\n"));
     printf(_("       alternatives --list\n"));
     printf(_("\n"));
-    printf(_("common options: --verbose --test --help --usage --version\n"));
+    printf(_("common options: --verbose --test --help --usage --version --keep-missing\n"));
     printf(_("                --altdir <directory> --admindir <directory>\n"));
 
     exit(rc);
@@ -412,6 +414,9 @@ static int isLink(char *path)  {
 
 static int removeLinks(struct linkSet * l, const char * altDir, int flags) {
     char * sl;
+
+    if (FL_KEEP_MISSING(flags))
+        return 0;
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
@@ -1025,6 +1030,9 @@ int main(int argc, const char ** argv) {
 	    nextArg++;
 	} else if (!strcmp(*nextArg, "--verbose")) {
 	    flags |= FLAGS_VERBOSE;
+	    nextArg++;
+	} else if (!strcmp(*nextArg, "--keep-missing")) {
+	    flags |= FLAGS_KEEP_MISSING;
 	    nextArg++;
 	} else if (!strcmp(*nextArg, "--version")) {
 	    if (mode != MODE_UNKNOWN) usage(2);
