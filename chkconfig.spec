@@ -4,8 +4,8 @@ Version: 1.7.2
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
-URL: https://git.fedorahosted.org/git/chkconfig.git
-Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
+URL: https://github.com/fedora-sysv/chkconfig
+Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel libselinux-devel
 Conflicts: initscripts <= 5.30-1
