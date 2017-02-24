@@ -1,11 +1,11 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.8
+Version: 1.9
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
-URL: https://git.fedorahosted.org/git/chkconfig.git
-Source: http://fedorahosted.org/releases/c/h/chkconfig/%{name}-%{version}.tar.bz2
+URL: https://github.com/fedora-sysv/chkconfig
+Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel libselinux-devel
 Conflicts: initscripts <= 5.30-1
@@ -80,6 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Feb 24 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.9-1
+- move sources to github
+
 * Wed Jun 29 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.8-1
 - alternatives: introduce --keep-missing
 - alternatives: allow family in --set and display it in --config
