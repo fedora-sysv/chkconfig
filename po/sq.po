@@ -4,19 +4,23 @@
 # 
 # Translators:
 # notting <notting@redhat.com>, 2011
+# Anxhelo Lushka <an_xhelo@hotmail.com>, 2016. #zanata
+# Lukáš Nykrýn <lnykryn@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 19:00+0100\n"
-"PO-Revision-Date: 2013-02-23 14:57+0000\n"
-"Last-Translator: notting <notting@redhat.com>\n"
-"Language-Team: Albanian (http://www.transifex.com/projects/p/fedora/language/sq/)\n"
+"POT-Creation-Date: 2016-06-29 14:31+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-02-27 05:02-0500\n"
+"Last-Translator: Anxhelo Lushka <an_xhelo@hotmail.com>\n"
+"Language-Team: Albanian (http://www.transifex.com/projects/p/fedora/language/"
+"sq/)\n"
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -26,51 +30,66 @@ msgstr "%s version %s - Të drejta Kopjimi (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public "
-"License.\n"
-msgstr "Mund të rishpërndahet lirisht sipas kushteve të Licensës Publike GNU.\n"
+"This may be freely redistributed under the terms of the GNU Public License."
+"\n"
+msgstr ""
+"Mund të rishpërndahet lirisht sipas kushteve të Licensës Publike GNU.\n"
 
 #: ../chkconfig.c:45
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr ""
+msgstr "përdorimi: %s [emri]\n"
 
 #: ../chkconfig.c:47
 #, c-format
-msgid "usage:   %s [--list] [--type <type>] [name]\n"
+msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr ""
-
-#: ../chkconfig.c:48
-#, c-format
-msgid "         %s --add <name>\n"
-msgstr "         %s --add <emër>\n"
 
 #: ../chkconfig.c:49
 #, c-format
-msgid "         %s --del <name>\n"
-msgstr "         %s --del <emër>\n"
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
+msgstr "përdorimi: %s [--list] [--type <type>] [emri]\n"
 
 #: ../chkconfig.c:50
 #, c-format
-msgid "         %s --override <name>\n"
-msgstr "         %s --override <emër>\n"
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <name>\n"
+"\n"
 
 #: ../chkconfig.c:51
 #, c-format
-msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr ""
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:59
+#: ../chkconfig.c:52
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr "         %s --override <name>\n"
+
+#: ../chkconfig.c:53
+#, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
+
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"Shënim: Ky rezultat tregon vetëm shërbimet SysV dhe nuk përfshin shërbimet "
+"native\n"
+"      systemd. Të dhënat e konfigurimit të SysV mund të mbishkruhen nga "
+"konfigurimet\n"
+"      native të systemd.\n"
+"\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:65
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
@@ -78,433 +97,479 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      Nëse doni të listoni shërbimet systemd përdorni 'systemctl list-unit-"
+"files'.\n"
+"      Për të parë shërbimet e aktivizuara në një objektiv të veçantë "
+"përdorni\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
 
-#: ../chkconfig.c:71
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "shërbimi %s e mbulon chkconfig-un, por nuk përmendet në ndonjë runlevel (xhironi 'chkconfig --add %s')\n"
+msgstr ""
+"shërbimi %s e mbulon chkconfig-un, por nuk përmendet në ndonjë runlevel "
+"(xhironi 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:75
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "shërbimi %s nuk e mbulon chkconfig-un\n"
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:77
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "gabim gjatë leximi të dhënash mbi shërbimin %s: %s\n"
 
-#: ../chkconfig.c:84
+#: ../chkconfig.c:86
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Ju nuk keni privilegje të mjaftueshme për të ekzekutuar këtë veprim.\n"
 
-#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:509
+#: ../chkconfig.c:519
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "shërbime me bazë xinetd:\n"
 
-#: ../chkconfig.c:511
+#: ../chkconfig.c:521
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "dështoi në hapjen e drejtorisë %s: %s\n"
 
-#: ../chkconfig.c:635
+#: ../chkconfig.c:648
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
+msgstr "Shënim: Duke dërguar kërkesën tek 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:640
+#: ../chkconfig.c:653
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "Dështoi dërgimi i kërkesës së shërbimit tek systemctl: %m\n"
 
-#: ../chkconfig.c:696
+#: ../chkconfig.c:709
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:708
+#: ../chkconfig.c:721
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type duhet të jetë 'sysv' ose 'xinetd'\n"
 
-#: ../chkconfig.c:715
+#: ../chkconfig.c:728
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "mund të jepet vetëm një nga --list, --add, --del, ose --override\n"
 
-#: ../chkconfig.c:800
+#: ../chkconfig.c:836
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
+"vetëm një nivel ekzekutimi mund të specifikohet për një radhitje chkconfig\n"
 
-#: ../ntsysv.c:46
+#: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
 msgstr "Shtypni <F1> për më tepër të dhëna rreth një shërbimi."
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:94 ../ntsysv.c:131
 msgid "Ok"
 msgstr "Ok"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Back"
 msgstr "Mbrapsht"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Cancel"
 msgstr "Anuloje"
 
-#: ../ntsysv.c:90
+#: ../ntsysv.c:106
 msgid "What services should be automatically started?"
 msgstr "Cilat shërbime duhen nisur vetvetiu?"
 
-#: ../ntsysv.c:96
+#: ../ntsysv.c:112
 msgid "Services"
 msgstr "Shërbime"
 
-#: ../ntsysv.c:181 ../ntsysv.c:208 ../ntsysv.c:245
+#: ../ntsysv.c:320 ../ntsysv.c:347 ../ntsysv.c:384
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "gabim gjatë leximit të të dhënave për shërbimin %s: %s\n"
 
-#: ../ntsysv.c:254
+#: ../ntsysv.c:393
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "gabim gjatë leximit prej drejtorisë %s: %s\n"
 
-#: ../ntsysv.c:290
+#: ../ntsysv.c:431
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Duhet të jeni rrënjë për të xhiruar %s.\n"
 
-#: ../ntsysv.c:307
+#: ../ntsysv.c:448
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "argument i gabuar për --levels\n"
 
-#: ../ntsysv.c:314
+#: ../ntsysv.c:455
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Nuk ka shërbime që të administrohen nga ntsysv!\n"
 
-#: ../leveldb.c:263
+#: ../leveldb.c:307
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "dështoi në hapjen e %s/init.d: %s\n"
 
-#: ../leveldb.c:673
+#: ../leveldb.c:717
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "dështoi marrja e modelit %s: %s\n"
 
-#: ../leveldb.c:716
-#, c-format
+#: ../leveldb.c:760
+#, fuzzy, c-format
 msgid "cannot determine current run level\n"
-msgstr ""
+msgstr "nuk mund të përcaktohet niveli i tanishëm i punimeve"
 
-#: ../leveldb.c:813
+#: ../leveldb.c:840
+#, c-format
+msgid "Unable to set selinux context for %s: %s\n"
+msgstr "E pamundur të vendoset konteksti selinux për %s: %s\n"
+
+#: ../leveldb.c:864
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "dështoi në krijim simlidhjeje %s: %s\n"
 
-#: ../alternatives.c:65
+#: ../alternatives.c:68
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr ""
+"versioni i alternativave %s - E drejta e autorit (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:66
+#: ../alternatives.c:69
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Mund të rishpërndahet lirisht sipas kushteve të Licensës Publike GNU.\n\n"
+msgstr ""
+"Mund të rishpërndahet lirisht sipas kushteve të Licensës Publike GNU.\n"
+"\n"
 
-#: ../alternatives.c:67
+#: ../alternatives.c:70
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "përdorimi: alternatives --install <lidhje> <emër> <shteg> <përparësi>\n"
+msgstr ""
+"përdorimi: alternatives --install <lidhje> <emër> <shteg> <përparësi>\n"
 
-#: ../alternatives.c:68
+#: ../alternatives.c:71
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <shërbim>]\n"
 
-#: ../alternatives.c:69
+#: ../alternatives.c:72
+#, c-format
+msgid "                    [--family <family>]\n"
+msgstr ""
+
+#: ../alternatives.c:73
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <lidhje> <emër> <shteg>]*\n"
 
-#: ../alternatives.c:70
+#: ../alternatives.c:74
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <emër> <shteg>\n"
 
-#: ../alternatives.c:71
+#: ../alternatives.c:75
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <emër>\n"
 
-#: ../alternatives.c:72
+#: ../alternatives.c:76
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <emër>\n"
 
-#: ../alternatives.c:73
+#: ../alternatives.c:77
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <emër>\n"
 
-#: ../alternatives.c:74
+#: ../alternatives.c:78
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <emër> <shteg>\n"
 
-#: ../alternatives.c:75
+#: ../alternatives.c:79
 #, c-format
 msgid "       alternatives --list\n"
-msgstr ""
+msgstr "       alternativat --list\n"
 
-#: ../alternatives.c:76
+#: ../alternatives.c:80
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:77
+#: ../alternatives.c:81
 #, c-format
-msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "mundësitë e zakonshme: --verbose --test --help --usage --version\n"
+msgid ""
+"common options: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
 
-#: ../alternatives.c:78
+#: ../alternatives.c:82
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <drejtori> --admindir <drejtori>\n"
 
-#: ../alternatives.c:190
+#: ../alternatives.c:214
 #, c-format
 msgid "reading %s\n"
 msgstr "po lexohet %s\n"
 
-#: ../alternatives.c:194
+#: ../alternatives.c:218
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "dështoi hapja e %s: %s\n"
 
-#: ../alternatives.c:203
+#: ../alternatives.c:227
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "dështoi në leximin e %s: %s\n"
 
-#: ../alternatives.c:212
+#: ../alternatives.c:236
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s bosh!\n"
 
-#: ../alternatives.c:221
+#: ../alternatives.c:245
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "mënyrë e gabuar te rreshti 1 i %s\n"
 
-#: ../alternatives.c:228
+#: ../alternatives.c:252
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "lidhje parësore e gabuar te %s\n"
 
-#: ../alternatives.c:240
+#: ../alternatives.c:264
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "shteg %s i papritur te %s\n"
 
-#: ../alternatives.c:249
+#: ../alternatives.c:273
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "shteg që mungon për skllavin %s te %s\n"
 
-#: ../alternatives.c:259
+#: ../alternatives.c:283
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "fund i papritur kartele te %s\n"
 
-#: ../alternatives.c:268
+#: ../alternatives.c:292
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "shtegu tek alternativat pritet në %s\n"
 
-#: ../alternatives.c:269 ../alternatives.c:290 ../alternatives.c:307
-#: ../alternatives.c:326
+#: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
+#: ../alternatives.c:347 ../alternatives.c:366
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "rresht i papritur te %s: %s\n"
 
-#: ../alternatives.c:289
+#: ../alternatives.c:317
+#, c-format
+msgid "closing '@' missing or the family is empty in %s\n"
+msgstr ""
+
+#: ../alternatives.c:329
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "pritej përparësi numerije te %s\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:346
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "pritej shteg skllavi te %s\n"
 
-#: ../alternatives.c:334
+#: ../alternatives.c:374
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "dështoi në leximin e lidhjes %s: %s\n"
 
-#: ../alternatives.c:348
+#: ../alternatives.c:388
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "lidhja nuk shpie te alternativa -- mënyra po caktohet si dorazi\n"
 
-#: ../alternatives.c:353
+#: ../alternatives.c:393
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "lidhja u ndryshua -- mënyra po caktohet si dorazi\n"
 
-#: ../alternatives.c:381 ../alternatives.c:388
+#: ../alternatives.c:424 ../alternatives.c:431
 #, c-format
 msgid "would remove %s\n"
 msgstr "do të hiqte %s\n"
 
-#: ../alternatives.c:383 ../alternatives.c:390 ../alternatives.c:422
+#: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "dështoi në heqjen e lidhjes %s: %s\n"
 
-#: ../alternatives.c:406 ../alternatives.c:419
+#: ../alternatives.c:448 ../alternatives.c:463
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "do të lidhte %s -> %s\n"
 
-#: ../alternatives.c:411 ../alternatives.c:428
+#: ../alternatives.c:453 ../alternatives.c:472
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "dështoi të lidhte %s -> %s: %s\n"
 
-#: ../alternatives.c:460
+#: ../alternatives.c:459
+#, c-format
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr "dështoi lidhja %s -> %s: %s ekziston dhe nuk është një symlink\n"
+
+#: ../alternatives.c:504
 #, c-format
 msgid "%s already exists\n"
 msgstr "ka tashmë një %s\n"
 
-#: ../alternatives.c:462
+#: ../alternatives.c:506
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "dështoi në krijimin e %s: %s\n"
 
-#: ../alternatives.c:493
+#: ../alternatives.c:539
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "dështoi të zëvendësojë %s me %s: %s\n"
 
-#: ../alternatives.c:519 ../alternatives.c:525 ../alternatives.c:536
-#: ../alternatives.c:542
+#: ../alternatives.c:565 ../alternatives.c:571 ../alternatives.c:582
+#: ../alternatives.c:588
 #, c-format
 msgid "running %s\n"
 msgstr "po xhirohet %s\n"
 
-#: ../alternatives.c:571
+#: ../alternatives.c:618
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "lidhja parësore për %s duhet të jetë %s\n"
 
-#: ../alternatives.c:651
+#: ../alternatives.c:699
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "lidhje %s e pasaktë për skllav %s (%s %s)\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:740
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - gjendja është auto.\n"
 
-#: ../alternatives.c:694
+#: ../alternatives.c:742
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - gjendja është dorazi.\n"
 
-#: ../alternatives.c:696
+#: ../alternatives.c:744
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " lidhja hëpërhë shpie te %s\n"
 
-#: ../alternatives.c:699
+#: ../alternatives.c:749
 #, c-format
-msgid "%s - priority %d\n"
-msgstr "%s - përparësi %d\n"
+msgid "family %s "
+msgstr ""
 
-#: ../alternatives.c:702
+#: ../alternatives.c:750
+#, c-format
+msgid "priority %d\n"
+msgstr ""
+
+#: ../alternatives.c:752
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " skllav %s: %s\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:757
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Versioni `më i mirë' i tanishëm është %s.\n"
 
-#: ../alternatives.c:737
+#: ../alternatives.c:788
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Ka një program %d që furnizon '%s'.\n"
 
-#: ../alternatives.c:737
+#: ../alternatives.c:788
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Ka %d programe që furnizojnë '%s'.\n"
 
-#: ../alternatives.c:739
+#: ../alternatives.c:790
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Përzgjedhje    Urdhër\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:804
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "\"Enter\" që rq mbahet përzgjedhja e tanishme[+], ose shtypni numër përzgjedhjeje: "
+msgstr ""
+"\"Enter\" që rq mbahet përzgjedhja e tanishme[+], ose shtypni numër "
+"përzgjedhjeje: "
 
-#: ../alternatives.c:751
+#: ../alternatives.c:807
 #, c-format
-msgid ""
-"\n"
+msgid "\n"
 "error reading choice\n"
-msgstr "\ngabim në leximin e zgjedhjes\n"
+msgstr "\n"
+"gabim në leximin e zgjedhjes\n"
 
-#: ../alternatives.c:778 ../alternatives.c:804
+#: ../alternatives.c:844 ../alternatives.c:872
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nuk është formësuar si alternativë për %s\n"
 
-#: ../alternatives.c:820
+#: ../alternatives.c:888
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(do të hiqte %s\n"
 
-#: ../alternatives.c:822
+#: ../alternatives.c:890
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "dështoi në heqjen e %s: %s\n"
 
-#: ../alternatives.c:973
+#: ../alternatives.c:1009
+#, c-format
+msgid "--family can't contain the symbol '@'\n"
+msgstr ""
+
+#: ../alternatives.c:1062
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s e pavlefshme\n"
 
-#: ../alternatives.c:979
+#: ../alternatives.c:1068
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s e pavlefshme\n"
 
-#: ../alternatives.c:989
+#: ../alternatives.c:1078
 #, c-format
 msgid "alternatives version %s\n"
-msgstr ""
+msgstr "versionet alternative %s\n"
