@@ -60,7 +60,7 @@ struct alternativeSet {
     char * currentLink;
 };
 
-enum programModes { MODE_UNKNOWN, MODE_INSTALL, MODE_REMOVE, MODE_AUTO,
+enum programModes { MODE_UNKNOWN, MODE_INSTALL, MODE_REMOVE, MODE_REMOVE_ALL, MODE_AUTO,
 		    MODE_DISPLAY, MODE_CONFIG, MODE_SET,
 		    MODE_SLAVE, MODE_VERSION, MODE_USAGE, MODE_LIST };
 
@@ -926,6 +926,21 @@ static int removeService(const char * title, const char * target,
     return 0;
 }
 
+
+static int removeAll(const char * title, const char * altDir, const char * stateDir, int flags) {
+    struct alternativeSet set;
+
+    int alt;
+
+    if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
+
+    for (alt = 0; alt < set.numAlts; alt++) {
+        removeService(title, set.alts[alt].master.target, altDir, stateDir, flags);
+    }
+
+    return 0;
+}
+
 static int listServices(const char * altDir, const char * stateDir, int flags) {
         DIR *dir;
         struct dirent *ent;
@@ -1012,6 +1027,8 @@ int main(int argc, const char ** argv) {
 	    nextArg++;
 	} else if (!strcmp(*nextArg, "--remove")) {
 	    setupDoubleArg(&mode, &nextArg, MODE_REMOVE, &title, &target);
+	} else if (!strcmp(*nextArg, "--remove-all")) {
+	    setupSingleArg(&mode, &nextArg, MODE_REMOVE_ALL, &title);
 	} else if (!strcmp(*nextArg, "--set")) {
 	    setupDoubleArg(&mode, &nextArg, MODE_SET, &title, &target);
 	} else if (!strcmp(*nextArg, "--auto")) {
@@ -1089,6 +1106,8 @@ int main(int argc, const char ** argv) {
 	return setService(title, target, altDir, stateDir, flags);
       case MODE_REMOVE:
 	return removeService(title, target, altDir, stateDir, flags);
+      case MODE_REMOVE_ALL:
+	return removeAll(title, altDir, stateDir, flags);
       case MODE_SLAVE:
 	usage(2);
       case MODE_LIST:
