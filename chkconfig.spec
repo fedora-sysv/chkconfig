@@ -79,6 +79,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/ntsysv
 %{_mandir}/*/ntsysv.8*
 
+%triggerin -- chkconfig < 1.7
+for i in  /var/lib/alternatives/* ; do
+    sed -i -e 's/^@.*@\([0-9]*\)$/\1/' $i
+done
+
 %changelog
 * Wed Jun 29 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.2-1
 - alternatives: introduce --keep-missing
