@@ -10,19 +10,23 @@
 # Tadashi Jokagi <fedora@elf.no-ip.org>, 2004
 # Tomoyuki KATO <tomo@dream.daynight.jp>, 2012-2013
 # 高一人参 @欠陥遺伝子 <www.carrotsoft@gmail.com>, 2011
+# Hajime Taira <htaira@fedoraproject.org>, 2016. #zanata
+# Noriko Mizumoto <noriko@redhat.com>, 2016. #zanata
+# Lukáš Nykrýn <lnykryn@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: chkconfig\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 19:00+0100\n"
-"PO-Revision-Date: 2013-02-25 13:17+0000\n"
-"Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
-"Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
+"POT-Creation-Date: 2016-06-29 14:31+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-03-16 10:04-0400\n"
+"Last-Translator: Hajime Taira <htaira@fedoraproject.org>\n"
+"Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.9.6\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -32,8 +36,8 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public "
-"License.\n"
+"This may be freely redistributed under the terms of the GNU Public License."
+"\n"
 msgstr "このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することができます。\n"
 
 #: ../chkconfig.c:45
@@ -43,474 +47,522 @@ msgstr "使用法:   %s [名前]\n"
 
 #: ../chkconfig.c:47
 #, c-format
+msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
+msgstr ""
+
+#: ../chkconfig.c:49
+#, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "使用法:   %s [--list] [--type <タイプ>] [名前]\n"
 
-#: ../chkconfig.c:48
+#: ../chkconfig.c:50
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <名前>\n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:51
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <名前>\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:52
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <名前>\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:53
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <レベル>] [--type <タイプ>] <名前> %s\n"
 
-#: ../chkconfig.c:59
+#: ../chkconfig.c:61
 #, c-format
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
 "      systemd configuration.\n"
 "\n"
-msgstr "\n注記: この出力は SysV サービスのみであり、ネイティブな systemd のサービスは含まれていません。\n      systemd services. SysV 設定のデータはネイティブな systemd の設定によって上書きされます。\n"
+msgstr ""
+"\n"
+"注記: この出力に含まれるのは SysV サービスのみです。ネイティブな \n"
+"      systemd サービスは含まれません。SysV の設定データはネイティブな\n"
+"        systemd 設定で上書きされる場合があります。\n"
 
-#: ../chkconfig.c:63
+#: ../chkconfig.c:65
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
 "      To see services enabled on particular target use\n"
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
-msgstr "      systemd サービスを一覧表示するには 'systemctl list-unit-files' を使用してください。\n      特定のターゲットにおいて有効化されているサービスを確認するには、\n      'systemctl list-dependencies [target]' 。\n\n"
+msgstr ""
+"      systemd サービスを一覧表示する場合は 'systemctl list-unit-files' を使用します。\n"
+"      特定のターゲットで有効になっているサービスを確認する場合は\n"
+"      'systemctl list-dependencies [target]'を使用します。\n"
+"\n"
 
-#: ../chkconfig.c:71
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "サービス %s は chkconfig をサポートしますが実行レベルで参照されていません (run 'chkconfig --add %s')\n"
+msgstr ""
+"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません (run 'chkconfig --add %s')\n"
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:75
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "サービス %s は、chkconfig をサポートしていません。\n"
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:77
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました: %s\n"
 
-#: ../chkconfig.c:84
+#: ../chkconfig.c:86
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "この操作を実行するためには権限が十分ではありません。\n"
 
-#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:419 ../chkconfig.c:424 ../chkconfig.c:547
+#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:509
+#: ../chkconfig.c:519
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ベースのサービス:\n"
 
-#: ../chkconfig.c:511
+#: ../chkconfig.c:521
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "ディレクトリ %s を開くことができませんでした: %s\n"
 
-#: ../chkconfig.c:635
+#: ../chkconfig.c:648
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "情報:'systemctl %s %s'へ転送しています。\n"
 
-#: ../chkconfig.c:640
+#: ../chkconfig.c:653
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "systemctl への要求の転送に失敗しました: %m\n"
 
-#: ../chkconfig.c:696
+#: ../chkconfig.c:709
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s バージョン %s\n"
 
-#: ../chkconfig.c:708
+#: ../chkconfig.c:721
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type は 'sysv' か 'xinetd' でなければなりません\n"
 
-#: ../chkconfig.c:715
+#: ../chkconfig.c:728
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけです。\n"
 
-#: ../chkconfig.c:800
+#: ../chkconfig.c:836
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig クエリに対して指定できるランレベルは 1 つだけです。\n"
 
-#: ../ntsysv.c:46
+#: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
 msgstr "サービスに関する詳細については、<F1> を押してください。"
 
-#: ../ntsysv.c:78 ../ntsysv.c:115
+#: ../ntsysv.c:94 ../ntsysv.c:131
 msgid "Ok"
 msgstr "OK"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Back"
 msgstr "戻る"
 
-#: ../ntsysv.c:78
+#: ../ntsysv.c:94
 msgid "Cancel"
 msgstr "取り消し"
 
-#: ../ntsysv.c:90
+#: ../ntsysv.c:106
 msgid "What services should be automatically started?"
 msgstr "自動的に起動させるサービスを指定してください。"
 
-#: ../ntsysv.c:96
+#: ../ntsysv.c:112
 msgid "Services"
 msgstr "サービス"
 
-#: ../ntsysv.c:181 ../ntsysv.c:208 ../ntsysv.c:245
+#: ../ntsysv.c:320 ../ntsysv.c:347 ../ntsysv.c:384
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "サービス %s に関する情報の読み込み中にエラーが発生しました: %s\n"
 
-#: ../ntsysv.c:254
+#: ../ntsysv.c:393
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "ディレクトリ %s からの読み込み中にエラーが発生しました: %s\n"
 
-#: ../ntsysv.c:290
+#: ../ntsysv.c:431
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%sを実行する為にルートでなければなりません。\n"
 
-#: ../ntsysv.c:307
+#: ../ntsysv.c:448
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels の引数が不適当です。\n"
 
-#: ../ntsysv.c:314
+#: ../ntsysv.c:455
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv によって管理できるサービスがありません。\n"
 
-#: ../leveldb.c:263
+#: ../leveldb.c:307
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d を開くことができませんでした: %s\n"
 
-#: ../leveldb.c:673
+#: ../leveldb.c:717
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "パターン %s の解析に失敗しました: %s\n"
 
-#: ../leveldb.c:716
+#: ../leveldb.c:760
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません。\n"
 
-#: ../leveldb.c:813
+#: ../leveldb.c:840
+#, fuzzy, c-format
+msgid "Unable to set selinux context for %s: %s\n"
+msgstr "SELinux コンテキストを設定できません: %s"
+
+#: ../leveldb.c:864
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "シンボリックリンク %s をつくるのに失敗しました: %s\n"
 
-#: ../alternatives.c:65
+#: ../alternatives.c:68
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives バージョン %s - Copyright (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:66
+#: ../alternatives.c:69
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "これは GNU 一般公有使用許諾書の規定の元で自由に再配布することができます。\n\n"
+msgstr "これは GNU 一般公有使用許諾書の規定の元で自由に再配布することができます。\n"
+"\n"
 
-#: ../alternatives.c:67
+#: ../alternatives.c:70
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "使用法: alternatives --install <リンク> <名前> <パス> <優先度>\n"
 
-#: ../alternatives.c:68
+#: ../alternatives.c:71
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <サービス>]\n\n"
+msgstr "                    [--initscript <サービス>]\n"
+"\n"
 
-#: ../alternatives.c:69
+#: ../alternatives.c:72
+#, c-format
+msgid "                    [--family <family>]\n"
+msgstr ""
+
+#: ../alternatives.c:73
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
 msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
 
-#: ../alternatives.c:70
+#: ../alternatives.c:74
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <名前> <パス>\n"
 
-#: ../alternatives.c:71
+#: ../alternatives.c:75
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <名前>\n"
 
-#: ../alternatives.c:72
+#: ../alternatives.c:76
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <名前>\n"
 
-#: ../alternatives.c:73
+#: ../alternatives.c:77
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <名前>\n"
 
-#: ../alternatives.c:74
+#: ../alternatives.c:78
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <名前> <パス>\n"
 
-#: ../alternatives.c:75
+#: ../alternatives.c:79
 #, c-format
 msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
-#: ../alternatives.c:76
+#: ../alternatives.c:80
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:77
+#: ../alternatives.c:81
 #, c-format
-msgid "common options: --verbose --test --help --usage --version\n"
-msgstr "共通のオプション: --verbose --test --help --usage --version\n"
+msgid ""
+"common options: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
 
-#: ../alternatives.c:78
+#: ../alternatives.c:82
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <ディレクトリ> --admindir <ディレクトリ>\n"
 
-#: ../alternatives.c:190
+#: ../alternatives.c:214
 #, c-format
 msgid "reading %s\n"
 msgstr "%s 読み込み中\n"
 
-#: ../alternatives.c:194
+#: ../alternatives.c:218
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%s を開くのに失敗しました: %s\n"
 
-#: ../alternatives.c:203
+#: ../alternatives.c:227
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%s の読み込みに失敗しました: %s\n"
 
-#: ../alternatives.c:212
+#: ../alternatives.c:236
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s は空です!\n"
 
-#: ../alternatives.c:221
+#: ../alternatives.c:245
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s の 1 行目は不正なモードです。\n"
 
-#: ../alternatives.c:228
+#: ../alternatives.c:252
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s に不正な主要リンクがあります。\n"
 
-#: ../alternatives.c:240
+#: ../alternatives.c:264
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "%s に予想外のパス %s があります。\n"
 
-#: ../alternatives.c:249
+#: ../alternatives.c:273
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "%s にスレーブ %s のパスが欠如しています。\n"
 
-#: ../alternatives.c:259
+#: ../alternatives.c:283
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s が予想外なファイル終結です。\n"
 
-#: ../alternatives.c:268
+#: ../alternatives.c:292
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "%s に交替のパスが予想されます。\n"
 
-#: ../alternatives.c:269 ../alternatives.c:290 ../alternatives.c:307
-#: ../alternatives.c:326
+#: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
+#: ../alternatives.c:347 ../alternatives.c:366
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s に予想外の行があります: %s\n"
 
-#: ../alternatives.c:289
+#: ../alternatives.c:317
+#, c-format
+msgid "closing '@' missing or the family is empty in %s\n"
+msgstr ""
+
+#: ../alternatives.c:329
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s に数値の優先が予想されます。\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:346
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "%s にスレーブパスを予想されます。\n"
 
-#: ../alternatives.c:334
+#: ../alternatives.c:374
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "リンク %s の読み込みに失敗: %s\n"
 
-#: ../alternatives.c:348
+#: ../alternatives.c:388
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "リンクはどの代替も指定していません -- 手動に設定します。\n"
 
-#: ../alternatives.c:353
+#: ../alternatives.c:393
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "リンクの変更-- 手動に設定します。\n"
 
-#: ../alternatives.c:381 ../alternatives.c:388
+#: ../alternatives.c:424 ../alternatives.c:431
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s を削除する。\n"
 
-#: ../alternatives.c:383 ../alternatives.c:390 ../alternatives.c:422
+#: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "リンク %s の削除に失敗: %s\n"
 
-#: ../alternatives.c:406 ../alternatives.c:419
+#: ../alternatives.c:448 ../alternatives.c:463
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s から %s へリンク\n"
 
-#: ../alternatives.c:411 ../alternatives.c:428
+#: ../alternatives.c:453 ../alternatives.c:472
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s から %s へのリンク失敗: %s\n"
 
-#: ../alternatives.c:460
+#: ../alternatives.c:459
+#, c-format
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr "シンボリックリンク %s -> %s の作成に失敗しました。 %s がすでに存在しており、シンボリックリンクファイルではありません。\n"
+
+#: ../alternatives.c:504
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s は既に存在します。\n"
 
-#: ../alternatives.c:462
+#: ../alternatives.c:506
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s の作成に失敗です: %s\n"
 
-#: ../alternatives.c:493
+#: ../alternatives.c:539
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s を %s への交換に失敗しました: %s\n"
 
-#: ../alternatives.c:519 ../alternatives.c:525 ../alternatives.c:536
-#: ../alternatives.c:542
+#: ../alternatives.c:565 ../alternatives.c:571 ../alternatives.c:582
+#: ../alternatives.c:588
 #, c-format
 msgid "running %s\n"
 msgstr "%s 実行中\n"
 
-#: ../alternatives.c:571
+#: ../alternatives.c:618
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s の主要リンクは %s とします。\n"
 
-#: ../alternatives.c:651
+#: ../alternatives.c:699
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "リンク %s はスレーブ %s(%s %s)に不適切です。\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:740
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s -ステータスは自動です。\n"
 
-#: ../alternatives.c:694
+#: ../alternatives.c:742
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - ステータスは手動です。\n"
 
-#: ../alternatives.c:696
+#: ../alternatives.c:744
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "リンクは現在 %s を指しています。\n"
 
-#: ../alternatives.c:699
+#: ../alternatives.c:749
 #, c-format
-msgid "%s - priority %d\n"
-msgstr "%s - 優先項目 %d\n"
+msgid "family %s "
+msgstr ""
 
-#: ../alternatives.c:702
+#: ../alternatives.c:750
+#, c-format
+msgid "priority %d\n"
+msgstr ""
+
+#: ../alternatives.c:752
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " スレーブ %s: %s\n"
 
-#: ../alternatives.c:707
+#: ../alternatives.c:757
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "現在の「最適」バージョンは %s です。\n"
 
-#: ../alternatives.c:737
+#: ../alternatives.c:788
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d プログラムがあり '%s' を提供します。\n"
 
-#: ../alternatives.c:737
+#: ../alternatives.c:788
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d プログラムがあり '%s' を提供します。\n"
 
-#: ../alternatives.c:739
+#: ../alternatives.c:790
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  選択       コマンド\n"
 
-#: ../alternatives.c:748
+#: ../alternatives.c:804
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter を押して現在の選択 [+] を保持するか、選択番号を入力します:"
 
-#: ../alternatives.c:751
+#: ../alternatives.c:807
 #, c-format
-msgid ""
-"\n"
+msgid "\n"
 "error reading choice\n"
-msgstr "\n選択の読み込みでエラー\n"
+msgstr "\n"
+"選択の読み込みでエラー\n"
 
-#: ../alternatives.c:778 ../alternatives.c:804
+#: ../alternatives.c:844 ../alternatives.c:872
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s は %s の為の互換用として設定されていません。\n"
 
-#: ../alternatives.c:820
+#: ../alternatives.c:888
 #, c-format
 msgid "(would remove %s\n"
 msgstr "%s を削除する。\n"
 
-#: ../alternatives.c:822
+#: ../alternatives.c:890
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s の削除に失敗しました: %s\n"
 
-#: ../alternatives.c:973
+#: ../alternatives.c:1009
+#, c-format
+msgid "--family can't contain the symbol '@'\n"
+msgstr ""
+
+#: ../alternatives.c:1062
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s は無効です。\n"
 
-#: ../alternatives.c:979
+#: ../alternatives.c:1068
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s は無効です。\n"
 
-#: ../alternatives.c:989
+#: ../alternatives.c:1078
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives バージョン %s\n"
