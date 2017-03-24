@@ -49,6 +49,11 @@ alternatives \- maintain symbolic links determining default commands
 .RI [ options ]
 .B --list
 .I name
+.PP
+.B alternatives
+.RI [ options ]
+.B --remove-all
+.I name
 .SH DESCRIPTION
 .B alternatives
 creates, removes, maintains and displays information about the symbolic
@@ -374,6 +379,9 @@ and the highest priority alternative currently installed.
 .TP
 \fB--list \fR
 Display information about all link groups.
+.TP
+\fB--remove-all\fR \fIname\fR
+Remove the whole link group \fIname\fR. Use with caution.
 .SH FILES
 .TP
 .I /etc/alternatives/
