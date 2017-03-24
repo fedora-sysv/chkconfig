@@ -77,6 +77,7 @@ static int usage(int rc) {
     printf(_("       alternatives --display <name>\n"));
     printf(_("       alternatives --set <name> <path>\n"));
     printf(_("       alternatives --list\n"));
+    printf(_("       alternatives --remove-all <name>\n"));
     printf(_("\n"));
     printf(_("common options: --verbose --test --help --usage --version --keep-missing\n"));
     printf(_("                --altdir <directory> --admindir <directory>\n"));
