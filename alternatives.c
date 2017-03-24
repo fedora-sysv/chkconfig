@@ -932,14 +932,15 @@ static int removeAll(const char * title, const char * altDir, const char * state
     struct alternativeSet set;
 
     int alt;
+    int ret_val = 0;
 
     if (readConfig(&set, title, altDir, stateDir, flags)) return 2;
 
     for (alt = 0; alt < set.numAlts; alt++) {
-        removeService(title, set.alts[alt].master.target, altDir, stateDir, flags);
+        ret_val += removeService(title, set.alts[alt].master.target, altDir, stateDir, flags);
     }
 
-    return 0;
+    return (ret_val > 1) ? 2 : 0;
 }
 
 static int listServices(const char * altDir, const char * stateDir, int flags) {
