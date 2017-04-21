@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.9
+Version: 1.10
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -80,6 +80,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Apr 21 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.10-1
+- Introduce --remove-all option
+- po: update translations
+
 * Fri Feb 24 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.9-1
 - move sources to github
 
