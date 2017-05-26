@@ -946,11 +946,23 @@ static int removeAll(const char * title, const char * altDir, const char * state
 static int listServices(const char * altDir, const char * stateDir, int flags) {
         DIR *dir;
         struct dirent *ent;
-        dir = opendir(stateDir);
         struct alternativeSet set;
+        int max_name = 0;
+        int l;
 
+        dir = opendir(stateDir);
         if(dir == NULL)
                 return 2;
+
+        while((ent = readdir(dir)) != NULL) {
+                if(!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
+                        continue;
+
+                l = strlen(ent->d_name);
+                max_name = max_name > l ? max_name : l;
+        }
+
+        rewinddir(dir);
 
         while((ent = readdir(dir)) != NULL) {
                 if(!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
@@ -959,7 +971,7 @@ static int listServices(const char * altDir, const char * stateDir, int flags) {
                 if (readConfig(&set, ent->d_name, altDir, stateDir, flags))
                         return 2;
 
-                printf("%s\t%s\t%s\n", ent->d_name, set.mode == AUTO?"auto":"manual", set.currentLink);
+                printf("%-*s\t%s\t%s\n", max_name, ent->d_name, set.mode == AUTO?"auto  ":"manual", set.currentLink);
         }
 
         closedir(dir);
