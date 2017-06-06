@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.7.3
+Version: 1.7.4
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -85,6 +85,9 @@ for i in  /var/lib/alternatives/* ; do
 done
 
 %changelog
+* Tue Jun 06 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.4-1
+- po: update translations
+
 * Thu Mar 16 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.3-1
 - spec: make possible to downgrade to pre-family versions
 - po: update translations
