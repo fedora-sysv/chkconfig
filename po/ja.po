@@ -12,17 +12,17 @@
 # 高一人参 @欠陥遺伝子 <www.carrotsoft@gmail.com>, 2011
 # Hajime Taira <htaira@fedoraproject.org>, 2016. #zanata
 # Noriko Mizumoto <noriko@redhat.com>, 2016. #zanata
-# Lukáš Nykrýn <lnykryn@redhat.com>, 2017. #zanata
+# Ludek Janda <ljanda@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"POT-Creation-Date: 2017-06-05 10:07+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-03-16 10:04-0400\n"
-"Last-Translator: Hajime Taira <htaira@fedoraproject.org>\n"
+"PO-Revision-Date: 2017-06-06 06:19-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -48,32 +48,32 @@ msgstr "使用法:   %s [名前]\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "使用法:   %s <enable|disable|is-enabled> [名前] \n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "使用法:   %s [--list] [--type <タイプ>] [名前]\n"
+msgstr "使用法:   %s [--list] [--type <type>] [名前]\n"
 
 #: ../chkconfig.c:50
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <名前>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:51
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <名前>\n"
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:52
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <名前>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:53
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <レベル>] [--type <タイプ>] <名前> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:61
 #, c-format
@@ -239,9 +239,9 @@ msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません。\n"
 
 #: ../leveldb.c:840
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "SELinux コンテキストを設定できません: %s"
+msgstr "%s の SELinux コンテキストを設定できません: %s\n"
 
 #: ../leveldb.c:864
 #, c-format
@@ -264,48 +264,48 @@ msgstr "これは GNU 一般公有使用許諾書の規定の元で自由に再�
 #: ../alternatives.c:70
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "使用法: alternatives --install <リンク> <名前> <パス> <優先度>\n"
+msgstr "使用法: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:71
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <サービス>]\n"
+msgstr "                    [--initscript <service>]\n"
 "\n"
 
 #: ../alternatives.c:72
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:73
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:74
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <名前> <パス>\n"
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:75
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <名前>\n"
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:76
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <名前>\n"
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:77
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <名前>\n"
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:78
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <名前> <パス>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:79
 #, c-format
@@ -321,12 +321,12 @@ msgstr "\n"
 #, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
-msgstr ""
+msgstr "一般的なオプション: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:82
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <ディレクトリ> --admindir <ディレクトリ>\n"
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:214
 #, c-format
@@ -387,7 +387,7 @@ msgstr "%s に予想外の行があります: %s\n"
 #: ../alternatives.c:317
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "最後の '@' がないか、%s のファミリーが空です\n"
 
 #: ../alternatives.c:329
 #, c-format
@@ -488,12 +488,12 @@ msgstr "リンクは現在 %s を指しています。\n"
 #: ../alternatives.c:749
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "ファミリー %s "
 
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "優先度 %d\n"
 
 #: ../alternatives.c:752
 #, c-format
@@ -550,7 +550,7 @@ msgstr "%s の削除に失敗しました: %s\n"
 #: ../alternatives.c:1009
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--ファミリーには '@' 記号を含めることができません\n"
 
 #: ../alternatives.c:1062
 #, c-format
