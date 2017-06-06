@@ -13,16 +13,17 @@
 # Marco Aurélio Krause <ouesten@me.com>, 2015. #zanata
 # juranir dos santos <juranir.santos@gmail.com>, 2015. #zanata
 # Maria Andrada <msuppesd@redhat.com>, 2016. #zanata
+# Lukáš Nykrýn <lnykryn@redhat.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"POT-Creation-Date: 2017-06-05 10:07+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-30 02:26-0400\n"
-"Last-Translator: Maria Andrada <msuppesd@redhat.com>\n"
+"PO-Revision-Date: 2017-06-06 06:35-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Portuguese (Brazil) <trans-pt_br@lists.fedoraproject.org>\n"
 "Language: pt-BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -52,29 +53,29 @@ msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr ""
 
 #: ../chkconfig.c:49
-#, c-format
+#, fuzzy, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "uso:   %s [--list] [--type <tipo>] [nome]\n"
+msgstr "uso:   %s [--list] [--type <tipo>] [nome]"
 
 #: ../chkconfig.c:50
-#, c-format
+#, fuzzy, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <nome>\n"
+msgstr "%s --add <nome>"
 
 #: ../chkconfig.c:51
-#, c-format
+#, fuzzy, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <nome>\n"
+msgstr "%s --del <nome>"
 
 #: ../chkconfig.c:52
-#, c-format
+#, fuzzy, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <nome>\n"
 
 #: ../chkconfig.c:53
-#, c-format
+#, fuzzy, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <níveis>] [--type <tipo>] <nome> %s\n"
+msgstr "%s [--level <níveis>] [--type <tipo>] <nome> %s"
 
 #: ../chkconfig.c:61
 #, c-format
