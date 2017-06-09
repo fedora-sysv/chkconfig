@@ -705,23 +705,31 @@ int currentRunlevel(void) {
 }
 
 int findServiceEntries(char * name, int level, glob_t * globresptr) {
-    char match[200];
+    char *match;
     glob_t globres;
     int rc;
 
-    sprintf(match, "%s/rc%d.d/[SK][0-9][0-9]%s", RUNLEVELS, level, name);
+    rc = asprintf(&match, "%s/rc%d.d/[SK][0-9][0-9]%s", RUNLEVELS, level, name);
+
+    if (rc < 0) {
+        fprintf(stderr, _("failed to glob pattern %s: %s\n"), match,
+    		strerror(errno));
+        return 1;
+    }
 
     rc = glob(match, GLOB_ERR | GLOB_NOSORT, NULL, &globres);
 
     if (rc && rc != GLOB_NOMATCH) {
 	fprintf(stderr, _("failed to glob pattern %s: %s\n"), match,
 		strerror(errno));
+        free(match);
 	return 1;
     } else if (rc == GLOB_NOMATCH) {
 	globresptr->gl_pathc = 0;
+        free(match);
 	return 0;
     }
-
+    free(match);
     *globresptr = globres;
     return 0;
 }
