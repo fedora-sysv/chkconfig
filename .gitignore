@@ -1,0 +1,8 @@
+.tags
+alternatives
+*.o
+chkconfig
+ntsysv
+po/.zanata-cache/*
+po/*.mo
+
