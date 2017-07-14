@@ -21,10 +21,10 @@
 
 #include <glob.h>
 
-#define TYPE_INIT_D	0x1
-#define TYPE_XINETD	0x2
-#define TYPE_SYSTEMD	0x4
-#define TYPE_ANY	(TYPE_INIT_D | TYPE_XINETD | TYPE_SYSTEMD)
+#define TYPE_INIT_D 0x1
+#define TYPE_XINETD 0x2
+#define TYPE_SYSTEMD 0x4
+#define TYPE_ANY (TYPE_INIT_D | TYPE_XINETD | TYPE_SYSTEMD)
 
 #ifndef SYSTEMD_SERVICE_PATH
 #define SYSTEMD_SERVICE_PATH "/lib/systemd/system"
@@ -40,10 +40,10 @@ struct dep {
 };
 
 struct service {
-    char * name;
+    char *name;
     int levels, kPriority, sPriority;
     int currentLevels;
-    char * desc;
+    char *desc;
     struct dep *startDeps;
     struct dep *stopDeps;
     struct dep *softStartDeps;
@@ -54,20 +54,23 @@ struct service {
     int enabled;
 };
 
-int parseLevels(char * str, int emptyOk);
+int parseLevels(char *str, int emptyOk);
 
 /* returns 0 on success, 1 if the service is not chkconfig-able, -1 if an
    I/O error occurs (in which case errno can be checked) */
-int readServiceInfo(char * name, int type, struct service * service, int honorHide);
+int readServiceInfo(char *name, int type, struct service *service,
+                    int honorHide);
 int readServices(struct service **services);
-int readServiceDifferences(char * name, int type, struct service * service, struct service * service_overrides, int honorHide);
-int parseServiceInfo(int fd, char * name, struct service * service, int honorHide, int partialOk);
+int readServiceDifferences(char *name, int type, struct service *service,
+                           struct service *service_overrides, int honorHide);
+int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
+                     int partialOk);
 int currentRunlevel(void);
-int isOn(char * name, int where);
-int isConfigured(char * name, int level, int *priority, char *type);
-int whatLevels(char * name);
+int isOn(char *name, int where);
+int isConfigured(char *name, int level, int *priority, char *type);
+int whatLevels(char *name);
 int doSetService(struct service s, int level, int on);
-int findServiceEntries(char * name, int level, glob_t * globresptr);
+int findServiceEntries(char *name, int level, glob_t *globresptr);
 int readXinetdServiceInfo(char *name, struct service *service);
 int setXinetdService(struct service s, int on);
 int systemdIsInit();
