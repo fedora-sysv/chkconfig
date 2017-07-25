@@ -72,7 +72,9 @@ enum programModes {
     MODE_SLAVE,
     MODE_VERSION,
     MODE_USAGE,
-    MODE_LIST
+    MODE_LIST,
+    MODE_ADD_SLAVE,
+    MODE_REMOVE_SLAVE
 };
 
 static int usage(int rc) {
@@ -84,7 +86,7 @@ static int usage(int rc) {
         _("usage: alternatives --install <link> <name> <path> <priority>\n"));
     printf(_("                    [--initscript <service>]\n"));
     printf(_("                    [--family <family>]\n"));
-    printf(_("                    [--slave <link> <name> <path>]*\n"));
+    printf(_("                    [--slave <slave_link> <slave_name> <slave_path>]*\n"));
     printf(_("       alternatives --remove <name> <path>\n"));
     printf(_("       alternatives --auto <name>\n"));
     printf(_("       alternatives --config <name>\n"));
@@ -92,6 +94,8 @@ static int usage(int rc) {
     printf(_("       alternatives --set <name> <path>\n"));
     printf(_("       alternatives --list\n"));
     printf(_("       alternatives --remove-all <name>\n"));
+    printf(_("       alternatives --add-slave <name> <path> <slave_link> <slave_name> <slave_path>\n"));
+    printf(_("       alternatives --remove-slave <name> <path> <slave_name>\n"));
     printf(_("\n"));
     printf(_("common options: --verbose --test --help --usage --version "
              "--keep-missing\n"));
@@ -168,6 +172,32 @@ static void setupDoubleArg(enum programModes *mode, const char ***nextArgPtr,
     if (!*nextArg)
         usage(2);
     *target = strdup(*nextArg);
+    *nextArgPtr = nextArg + 1;
+}
+
+static void setupTripleArg(enum programModes *mode, const char ***nextArgPtr,
+                           enum programModes newMode, char **title,
+                           char **target, char **slaveTitle) {
+    const char **nextArg = *nextArgPtr;
+
+    if (*mode != MODE_UNKNOWN)
+        usage(2);
+    *mode = newMode;
+    nextArg++;
+
+    if (!*nextArg || **nextArg == '/')
+        usage(2);
+    *title = strdup(*nextArg);
+    nextArg++;
+
+    if (!*nextArg)
+        usage(2);
+    *target = strdup(*nextArg);
+    nextArg++;
+
+    if (!*nextArg)
+        usage(2);
+    *slaveTitle = strdup(*nextArg);
     *nextArgPtr = nextArg + 1;
 }
 
@@ -755,6 +785,79 @@ static void removeUnusedSlavesFromTemplate(struct alternativeSet set,
     }
 }
 
+static int removeSlave(char *title, char *target, char *slaveTitle,
+                       const char *altDir, const char *stateDir, int flags) {
+    struct alternative template, *a = NULL;
+    struct alternativeSet set;
+    int i;
+
+    if (readConfig(&set, title, altDir, stateDir, flags))
+        return 2;
+
+    a = findAlternativeInSet(set, target);
+    if (!a) {
+        fprintf(stderr,
+                _("%s has not been configured as an alternative for %s\n"),
+                target, title);
+        return 2;
+    }
+
+    for (i = 0; i < a->numSlaves; i++) {
+        if (streq(a->slaves[i].title, slaveTitle)) {
+            a->slaves[i].target = NULL;
+            fillTemplateFrom(*a, &template);
+            removeUnusedSlavesFromTemplate(set, &template, altDir, flags);
+            matchSlaves(&set, template);
+            if (writeState(&set, altDir, stateDir, 1, flags))
+                return 2;
+            return 0;
+        }
+    }
+    fprintf(
+        stderr,
+        _("%s has not been configured as an slave alternative for %s (%s)\n"),
+        slaveTitle, title, target);
+    return 2;
+}
+
+static int addSlave(char *title, char *target, struct linkSet newSlave,
+                    const char *altDir, const char *stateDir, int flags) {
+    struct alternativeSet set;
+    int i;
+    struct alternative *a = NULL;
+    struct alternative template;
+
+    if (readConfig(&set, title, altDir, stateDir, flags))
+        return 2;
+
+    a = findAlternativeInSet(set, target);
+
+    if (!a) {
+        fprintf(stderr,
+                _("%s has not been configured as an alternative for %s\n"),
+                target, title);
+        return 2;
+    }
+
+    fillTemplateFrom(*a, &template);
+    addSlaveToAlternative(&template, newSlave);
+    matchSlaves(&set, template);
+
+    /* let's check if such slave already exists, in this case we will just
+     * update the link */
+    for (i = 0; i < a->numSlaves; i++) {
+        if (streq(a->slaves[i].title, newSlave.title)) {
+            a->slaves[i].target = newSlave.target;
+            break;
+        }
+    }
+
+    if (writeState(&set, altDir, stateDir, 1, flags))
+        return 2;
+
+    return 0;
+}
+
 static int addService(struct alternative newAlt, const char *altDir,
                       const char *stateDir, int flags) {
     struct alternativeSet set;
@@ -1089,13 +1192,14 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
-    char *title, *target;
+    char *title, *target, *slaveTitle;
     enum programModes mode = MODE_UNKNOWN;
     struct alternative newAlt = {-1, {NULL, NULL, NULL}, NULL, NULL, 0, NULL};
     int flags = 0;
     char *altDir = "/etc/alternatives";
     char *stateDir = "/var/lib/alternatives";
     struct stat sb;
+    struct linkSet newSet = {NULL, NULL, NULL};
 
     setlocale(LC_ALL, "");
     bindtextdomain("chkconfig", "/usr/share/locale");
@@ -1120,6 +1224,11 @@ int main(int argc, const char **argv) {
             if (!end || *end)
                 usage(2);
             nextArg++;
+        } else if (!strcmp(*nextArg, "--add-slave")) {
+            setupDoubleArg(&mode, &nextArg, MODE_ADD_SLAVE, &title, &target);
+            setupLinkSet(&newSet, &nextArg);
+        } else if (!strcmp(*nextArg, "--remove-slave")) {
+            setupTripleArg(&mode, &nextArg, MODE_REMOVE_SLAVE, &title, &target, &slaveTitle);
         } else if (!strcmp(*nextArg, "--slave")) {
             if (mode != MODE_UNKNOWN && mode != MODE_INSTALL)
                 usage(2);
@@ -1228,6 +1337,10 @@ int main(int argc, const char **argv) {
         exit(0);
     case MODE_INSTALL:
         return addService(newAlt, altDir, stateDir, flags);
+    case MODE_ADD_SLAVE:
+        return addSlave(title, target, newSet, altDir, stateDir, flags);
+    case MODE_REMOVE_SLAVE:
+        return removeSlave(title, target, slaveTitle, altDir, stateDir, flags);
     case MODE_DISPLAY:
         return displayService(title, altDir, stateDir, flags);
     case MODE_AUTO:
