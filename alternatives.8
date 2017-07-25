@@ -54,6 +54,16 @@ alternatives \- maintain symbolic links determining default commands
 .RI [ options ]
 .B --remove-all
 .I name
+.PP
+.B alternatives
+.RI [ options ]
+.B --add-slave
+.I name path slink sname spath
+.PP
+.B alternatives
+.RI [ options ]
+.B --remove-slave 
+.I name path sname
 .SH DESCRIPTION
 .B alternatives
 creates, removes, maintains and displays information about the symbolic
@@ -382,6 +392,13 @@ Display information about all link groups.
 .TP
 \fB--remove-all\fR \fIname\fR
 Remove the whole link group \fIname\fR. Use with caution.
+.TP
+\fB--add-slave\fR \fIname\fR \fIpath\fR \fIslink\fR \fIsname\fr \fIspath\fR
+Add a slave link to an alternative identified by \fIname\fR and \fIpath\fR. \fIsname\fR, \fIslink\fR and \fIspath\fR are
+the generic name, symlink name and alternative for the slave.
+.TP
+\fB--remove-slave\fR \fIname\fR \fIpath\fR \fIsname\fR
+Remove slave with generic name \fIsname\fR from alternative identified by \fIname\fR and \fIpath\fR.
 .SH FILES
 .TP
 .I /etc/alternatives/
