@@ -637,12 +637,131 @@ static int linkCmp(const void *a, const void *b) {
     return strcmp(one->facility, two->facility);
 }
 
+static void fillTemplateFrom(struct alternative source,
+                             struct alternative *template) {
+    template->numSlaves = source.numSlaves;
+    template->slaves = malloc(source.numSlaves * sizeof(struct linkSet));
+    memcpy(template->slaves, source.slaves,
+           source.numSlaves * sizeof(struct linkSet));
+}
+
+static void addSlaveToAlternative(struct alternative *template,
+                                  struct linkSet slave) {
+    int i;
+    for (i = 0; i < template->numSlaves; i++) {
+        if (streq(slave.facility, template->slaves[i].facility))
+            break;
+    }
+    if (i == template->numSlaves) {
+        template->slaves =
+            realloc(template->slaves,
+                    (template->numSlaves + 1) * sizeof(struct linkSet));
+
+        memcpy(&template->slaves[i], &slave, sizeof(struct linkSet));
+
+        template->numSlaves++;
+    }
+}
+
+static int matchSlaves(struct alternativeSet *set,
+                       struct alternative template) {
+    int i, j, k;
+    struct linkSet *newLinks;
+
+    /* Sort the list for file legibility */
+    qsort(template.slaves, template.numSlaves, sizeof(struct linkSet), linkCmp);
+
+    /* need to match the slaves up; newLinks will parallel the original
+       ordering */
+    for (k = 0; k < set->numAlts; k++) {
+        newLinks = malloc(sizeof(struct linkSet) * template.numSlaves);
+        if (!newLinks)
+            return 3;
+
+        newLinks =
+            memset(newLinks, 0, sizeof(struct linkSet) * template.numSlaves);
+
+        for (j = 0; j < template.numSlaves; j++) {
+            for (i = 0; i < set->alts[k].numSlaves; i++) {
+                if (!strcmp(set->alts[k].slaves[i].title,
+                            template.slaves[j].title))
+                    break;
+            }
+            /* check if the slave in alternatives exist they have same name
+             * and link*/
+            if (i < set->alts[k].numSlaves) {
+                if (strcmp(set->alts[k].slaves[i].facility,
+                           template.slaves[j].facility)) {
+                    fprintf(
+                        stderr, _("link %s incorrect for slave %s (%s %s)\n"),
+                        set->alts[k].slaves[i].facility,
+                        set->alts[k].slaves[i].title,
+                        template.slaves[j].facility, template.slaves[j].title);
+                    return 2;
+                }
+                newLinks[j] = set->alts[k].slaves[i];
+            } else {
+                /* alternative did not have a record about a slave, let's add it
+                 * with empty target */
+                newLinks[j].title = template.slaves[j].title;
+                newLinks[j].facility = template.slaves[j].facility;
+                newLinks[j].target = NULL;
+            }
+        }
+        /* memory link */
+        free(set->alts[k].slaves);
+        set->alts[k].slaves = newLinks;
+        set->alts[k].numSlaves = template.numSlaves;
+    }
+    return 0;
+}
+
+static struct alternative *findAlternativeInSet(struct alternativeSet set,
+                                                char *target) {
+    int i;
+
+    for (i = 0; i < set.numAlts; i++)
+        if (streq(set.alts[i].master.target, target))
+            return set.alts + i;
+    return NULL;
+}
+
+static void removeUnusedSlavesFromTemplate(struct alternativeSet set,
+                                           struct alternative *template,
+                                           const char *altDir, int flags) {
+    int i, j, k = 0;
+    int found;
+
+    if (set.numAlts == 0)
+        return;
+
+    for (i = 0; i < template->numSlaves; i++) {
+        found = 0;
+        for (j = 0; j < set.numAlts && !found; j++)
+            for (k = 0; k < set.alts[j].numSlaves && !found; k++)
+                if (streq(template->slaves[i].title,
+                          set.alts[j].slaves[k].title) &&
+                    set.alts[j].slaves[k].target)
+                    found = 1;
+
+        if (!found) {
+            removeLinks(template->slaves + i, altDir, flags);
+            template->numSlaves--;
+            if (i != template->numSlaves) {
+                template->slaves[i] = template->slaves[template->numSlaves];
+                i--;
+            }
+        }
+    }
+}
+
 static int addService(struct alternative newAlt, const char *altDir,
                       const char *stateDir, int flags) {
     struct alternativeSet set;
-    struct alternative base;
-    struct linkSet *newLinks;
-    int i, j, k, rc;
+    struct alternative template;
+    struct alternative *alt = NULL;
+
+    int i, rc;
     int forceLinks = 0;
 
     if ((rc = readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) &&
@@ -657,100 +776,27 @@ static int addService(struct alternative newAlt, const char *altDir,
         }
 
         /* Determine the maximal set of slave links. */
-        base.numSlaves = set.alts[0].numSlaves;
-        base.slaves = malloc(set.alts[0].numSlaves * sizeof(struct linkSet));
-        memcpy(base.slaves, set.alts[0].slaves,
-               set.alts[0].numSlaves * sizeof(struct linkSet));
+        fillTemplateFrom(set.alts[0], &template);
+        for (i = 0; i < newAlt.numSlaves; i++)
+            addSlaveToAlternative(&template, newAlt.slaves[i]);
 
-        for (i = 0; i < newAlt.numSlaves; i++) {
-            for (j = 0; j < base.numSlaves; j++) {
-                if (!strcmp(newAlt.slaves[i].facility, base.slaves[j].facility))
-                    break;
-            }
-            if (j == base.numSlaves) {
-                base.slaves = realloc(base.slaves,
-                                      (base.numSlaves + 1) * sizeof(*newLinks));
-                base.slaves[base.numSlaves].facility =
-                    newAlt.slaves[i].facility;
-                base.slaves[base.numSlaves].title = newAlt.slaves[i].title;
-                base.slaves[base.numSlaves].target = NULL;
-                base.numSlaves++;
-            }
-        }
+        alt = findAlternativeInSet(set, newAlt.master.target);
 
-        /* Insert new set into the set of alternatives */
-        for (i = 0; i < set.numAlts; i++) {
-            if (!strcmp(set.alts[i].master.target, newAlt.master.target)) {
-                set.alts[i] = newAlt;
-                forceLinks = 1;
-                break;
-            }
-        }
-        if (i == set.numAlts) {
+        if (alt) {
+            *alt = newAlt;
+            forceLinks = 1;
+            /* Check for slaves no alternative provides */
+            removeUnusedSlavesFromTemplate(set, &template, altDir, flags);
+        } else {
             set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
             set.alts[set.numAlts] = newAlt;
             if (set.alts[set.best].priority < newAlt.priority)
                 set.best = set.numAlts;
             set.numAlts++;
-        } else {
-            /* Check for slaves no alternative provides */
-            i = 0;
-            while (i < base.numSlaves) {
-                for (j = 0; j < set.numAlts; j++) {
-                    for (k = 0; k < set.alts[j].numSlaves; k++) {
-                        if (strcmp(set.alts[j].slaves[k].title,
-                                   base.slaves[i].title) == 0 &&
-                            set.alts[j].slaves[k].target)
-                            goto found;
-                    }
-                }
-                removeLinks(base.slaves + i, altDir, flags);
-                base.numSlaves--;
-                if (i != base.numSlaves)
-                    base.slaves[i] = base.slaves[base.numSlaves];
-                continue;
-
-            found:
-                i++;
-            }
         }
 
-        /* Sort the list for file legibility */
-        qsort(base.slaves, base.numSlaves, sizeof(struct linkSet), linkCmp);
-
-        /* need to match the slaves up; newLinks will parallel the original
-           ordering */
-        for (k = 0; k < set.numAlts; k++) {
-            newLinks = alloca(sizeof(*newLinks) * base.numSlaves);
-            newLinks = memset(newLinks, 0, sizeof(*newLinks) * base.numSlaves);
-
-            for (j = 0; j < base.numSlaves; j++) {
-                for (i = 0; i < set.alts[k].numSlaves; i++) {
-                    if (!strcmp(set.alts[k].slaves[i].title,
-                                base.slaves[j].title))
-                        break;
-                }
-                if (i < set.alts[k].numSlaves) {
-                    if (strcmp(set.alts[k].slaves[i].facility,
-                               base.slaves[j].facility)) {
-                        fprintf(stderr,
-                                _("link %s incorrect for slave %s (%s %s)\n"),
-                                set.alts[k].slaves[i].facility,
-                                set.alts[k].slaves[i].title,
-                                base.slaves[j].facility, base.slaves[j].title);
-                        return 2;
-                    }
-                    newLinks[j] = set.alts[k].slaves[i];
-                } else {
-                    newLinks[j].title = base.slaves[j].title;
-                    newLinks[j].facility = base.slaves[j].facility;
-                    newLinks[j].target = NULL;
-                }
-            }
-            /* memory link */
-            set.alts[k].slaves = newLinks;
-            set.alts[k].numSlaves = base.numSlaves;
-        }
+        if (matchSlaves(&set, template))
+            return 2;
     } else {
         set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
         set.alts[set.numAlts] = newAlt;
