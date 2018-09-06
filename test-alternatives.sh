@@ -256,6 +256,38 @@ rlJournalStart
         clean_dir
     rlPhaseEnd
 
+    rlPhaseStart FAIL "Dynamic Slave Add Auto"
+        add_alternative link_a 10 ""
+        add_alternative link_b 20 ""
+        add_alternative link_c 5 ""
+        add_slave link_a slave_a
+        add_slave link_b slave_b
+        check_alternative link_b auto slave_b
+        clean_dir
+    rlPhaseEnd
+
+    rlPhaseStart FAIL "Dynamic Slave Add Manual"
+        add_alternative link_a 10 ""
+        add_alternative link_b 20 ""
+        add_alternative link_c 5 ""
+        add_slave link_a slave_a
+        add_slave link_b slave_b
+        set_alternative link_a
+        check_alternative link_a manual link_b slave_a
+        clean_dir
+    rlPhaseEnd
+
+    rlPhaseStart FAIL "Dynamic Slave Add And Remove Master"
+        add_alternative link_a 10 ""
+        add_alternative link_b 20 ""
+        add_alternative link_c 5 ""
+        add_slave link_a slave_a
+        add_slave link_b slave_b
+        remove_alternative link_b
+        check_alternative link_a auto slave_a
+        clean_dir
+    rlPhaseEnd
+
     rlPhaseStart FAIL "Dynamic Slave Remove"
         add_alternative link_a 10 ""
         add_slave link_a slave_a
