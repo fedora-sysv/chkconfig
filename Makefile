@@ -24,12 +24,12 @@ subdirs:
 	done && test -z "$$fail"
 
 chkconfig: $(OBJS)
-	$(CC) $(LDFLAGS) -lselinux -lsepol -o chkconfig $(OBJS) -lpopt
+	$(CC) $(LDFLAGS) -o chkconfig $(OBJS) -lpopt -lselinux -lsepol
 
 alternatives: alternatives.o
 
 ntsysv: $(NTOBJS)
-	$(CC) $(LDFLAGS) -lselinux -lsepol -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK)
+	$(CC) $(LDFLAGS) -o ntsysv $(NTOBJS) -lnewt -lpopt $(LIBMHACK) -lselinux -lsepol
 
 chkconfig.o: chkconfig.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c chkconfig.c
