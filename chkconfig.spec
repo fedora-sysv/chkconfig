@@ -9,6 +9,7 @@ Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{na
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
 Conflicts: initscripts <= 5.30-1
+Provides: alternatives = %{version}-%{release}
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
