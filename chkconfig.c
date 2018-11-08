@@ -661,13 +661,18 @@ int setService(char *name, int type, int where, int state) {
     return 0;
 }
 
-void forwardSystemd(const char *name, int type, const char *verb) {
+void forwardSystemd(const char *name, int type, const char *verb, char *root_path) {
     int socket = 0;
+    char *root;
     if (type == TYPE_XINETD)
         return;
 
     if (!systemdIsInit())
         return;
+
+    if(root_path) {
+        asprintf(&root, "--root=%s", root_path);
+    }
 
     if (isOverriddenBySystemd(name) ||
         (socket = isSocketActivatedBySystemd(name))) {
@@ -681,7 +686,7 @@ void forwardSystemd(const char *name, int type, const char *verb) {
         fprintf(stderr, _("Note: Forwarding request to 'systemctl %s %s'.\n"),
                 verb, p);
 
-        execlp("systemctl", "systemctl", verb, p, NULL);
+        execlp("systemctl", "systemctl", verb, p, root, NULL);
         free(p);
         fprintf(stderr,
                 _("Failed to forward service request to systemctl: %m\n"));
@@ -695,6 +700,7 @@ int main(int argc, const char **argv) {
     int type = TYPE_ANY;
     int rc, i, x;
     char *levels = NULL;
+    char *root_path = NULL;
     char *typeString = NULL;
     int help = 0, version = 0;
     struct service s;
@@ -707,6 +713,7 @@ int main(int argc, const char **argv) {
         {"list", '\0', 0, &listItem, 0},
         {"level", '\0', POPT_ARG_STRING, &levels, 0},
         {"levels", '\0', POPT_ARG_STRING, &levels, 0},
+        {"root", '\0', POPT_ARG_STRING, &root_path, 0},
         {"type", '\0', POPT_ARG_STRING, &typeString, 0},
         {"help", 'h', POPT_ARG_NONE, &help, 0},
         {"version", 'v', POPT_ARG_NONE, &version, 0},
@@ -852,9 +859,15 @@ int main(int argc, const char **argv) {
                 usage(progname);
         }
 
+        if(root_path) {
+            if (*root_path != '/') {
+                usage(progname);
+            }
+        }
+
         if (!state) {
             if (!noRedirectItem && !levels) {
-                forwardSystemd(name, type, "is-enabled");
+                forwardSystemd(name, type, "is-enabled", root_path);
             }
 
             if (where) {
@@ -890,12 +903,12 @@ int main(int argc, const char **argv) {
             }
         } else if (!strcmp(state, "on")) {
             if (!noRedirectItem) {
-                forwardSystemd(name, type, "enable");
+                forwardSystemd(name, type, "enable", root_path);
             }
             return setService(name, type, where, 1);
         } else if (!strcmp(state, "off")) {
             if (!noRedirectItem) {
-                forwardSystemd(name, type, "disable");
+                forwardSystemd(name, type, "disable", root_path);
             }
             return setService(name, type, where, 0);
         } else if (!strcmp(state, "reset"))
