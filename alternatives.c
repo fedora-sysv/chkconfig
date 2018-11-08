@@ -104,6 +104,20 @@ static int usage(int rc) {
     exit(rc);
 }
 
+const char *normalize_path(const char *s) {
+    if (s) {
+        const char *src = s;
+        char *dst = (char *)s;
+        while ((*dst = *src) != '\0') {
+            do {
+                src++;
+            } while (*dst == '/' && *src == '/');
+            dst++;
+        }
+    }  
+    return (const char *)s;
+}
+
 int streq(const char *a, const char *b) {
     if (a && b)
         return strcmp(a, b) ? 0 : 1;
@@ -171,7 +185,7 @@ static void setupDoubleArg(enum programModes *mode, const char ***nextArgPtr,
 
     if (!*nextArg)
         usage(2);
-    *target = strdup(*nextArg);
+    *target = strdup(normalize_path(*nextArg));
     *nextArgPtr = nextArg + 1;
 }
 
@@ -192,7 +206,7 @@ static void setupTripleArg(enum programModes *mode, const char ***nextArgPtr,
 
     if (!*nextArg)
         usage(2);
-    *target = strdup(*nextArg);
+    *target = strdup(normalize_path(*nextArg));
     nextArg++;
 
     if (!*nextArg)
@@ -206,7 +220,7 @@ static void setupLinkSet(struct linkSet *set, const char ***nextArgPtr) {
 
     if (!*nextArg || **nextArg != '/')
         usage(2);
-    set->facility = strdup(*nextArg);
+    set->facility = strdup(normalize_path(*nextArg));
     nextArg++;
 
     if (!*nextArg || **nextArg == '/')
@@ -216,7 +230,7 @@ static void setupLinkSet(struct linkSet *set, const char ***nextArgPtr) {
 
     if (!*nextArg || **nextArg != '/')
         usage(2);
-    set->target = strdup(*nextArg);
+    set->target = strdup(normalize_path(*nextArg));
     *nextArgPtr = nextArg + 1;
 }
 
@@ -349,7 +363,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             return 1;
         }
 
-        set->alts[set->numAlts].master.facility = strdup(groups[0].facility);
+        set->alts[set->numAlts].master.facility = strdup(normalize_path(groups[0].facility));
         set->alts[set->numAlts].master.title = strdup(groups[0].title);
         set->alts[set->numAlts].master.target = line;
         set->alts[set->numAlts].numSlaves = numGroups - 1;
@@ -408,7 +422,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             set->alts[set->numAlts].slaves[i - 1].title =
                 strdup(groups[i].title);
             set->alts[set->numAlts].slaves[i - 1].facility =
-                strdup(groups[i].facility);
+                strdup(normalize_path(groups[i].facility));
             set->alts[set->numAlts].slaves[i - 1].target =
                 (line && strlen(line)) ? line : NULL;
         }
@@ -455,7 +469,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
         set->current = i;
     }
 
-    set->currentLink = strdup(linkBuf);
+    set->currentLink = strdup(normalize_path(linkBuf));
 
     return 0;
 }
@@ -1299,13 +1313,13 @@ int main(int argc, const char **argv) {
             nextArg++;
             if (!*nextArg)
                 usage(2);
-            altDir = strdup(*nextArg);
+            altDir = strdup(normalize_path(*nextArg));
             nextArg++;
         } else if (!strcmp(*nextArg, "--admindir")) {
             nextArg++;
             if (!*nextArg)
                 usage(2);
-            stateDir = strdup(*nextArg);
+            stateDir = strdup(normalize_path(*nextArg));
             nextArg++;
         } else if (!strcmp(*nextArg, "--list")) {
             if (mode != MODE_UNKNOWN)
