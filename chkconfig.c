@@ -44,18 +44,18 @@ static void usage(char *name) {
                       "the GNU Public License.\n"));
     fprintf(stderr, "\n");
     if (!strcmp(name, "install_initd") || !strcmp(name, "remove_initd")) {
-        fprintf(stderr, _("usage:   %s [name]\n"), progname);
+        fprintf(stderr, _("usage:   %s [name] [--root <path>]\n"), progname);
     } else if (!strcmp(name, "systemd-sysv-install")) {
-        fprintf(stderr, _("usage:   %s <enable|disable|is-enabled> [name] \n"),
+        fprintf(stderr, _("usage:   %s <enable|disable|is-enabled> [name] [--root <path>] \n"),
                 progname);
     } else {
         fprintf(stderr, _("usage:   %s [--list] [--type <type>] [name]\n"),
                 progname);
-        fprintf(stderr, _("         %s --add <name>\n"), progname);
-        fprintf(stderr, _("         %s --del <name>\n"), progname);
-        fprintf(stderr, _("         %s --override <name>\n"), progname);
+        fprintf(stderr, _("         %s --add <name> [--root <path>]\n"), progname);
+        fprintf(stderr, _("         %s --del <name> [--root <path>]\n"), progname);
+        fprintf(stderr, _("         %s --override <name> [--root <path>]\n"), progname);
         fprintf(stderr,
-                _("         %s [--level <levels>] [--type <type>] <name> %s\n"),
+                _("         %s [--level <levels>] [--root <path>] [--type <type>] <name> %s\n"),
                 progname, "<on|off|reset|resetpriorities>");
     }
     exit(1);
@@ -106,13 +106,13 @@ static void reloadSystemd(void) {
         system("systemctl daemon-reload > /dev/null 2>&1");
 }
 
-static int delService(char *name, int type, int level) {
+static int delService(char *name, int type, int level, char *root_path) {
     int i, j, k, numservs, rc;
     glob_t globres;
     struct service s;
     struct service *services;
 
-    if ((rc = readServiceInfo(name, type, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0, root_path))) {
         readServiceError(rc, name);
         return 1;
     }
@@ -122,7 +122,7 @@ static int delService(char *name, int type, int level) {
     checkRoot();
 
     if (LSB && level == -1) {
-        numservs = readServices(&services);
+        numservs = readServices(&services, root_path);
         if (numservs < 0)
             return 1;
 
@@ -222,7 +222,7 @@ static void checkDeps(struct service *s, struct dep *deps, struct service *serv,
 }
 
 static int frobOneDependencies(struct service *s, struct service *servs,
-                               int numservs, int target, int depfail) {
+                               int numservs, int target, int depfail, char *root_path) {
     int i;
     int s0 = s->sPriority;
     int k0 = s->kPriority;
@@ -274,12 +274,12 @@ static int frobOneDependencies(struct service *s, struct service *servs,
                 int new_priority = on ? s->sPriority : s->kPriority;
 
                 if (new_priority != priority || (on ? 'S' : 'K') != type) {
-                    delService(s->name, TYPE_INIT_D, i);
-                    doSetService(*s, i, on);
+                    delService(s->name, TYPE_INIT_D, i, root_path);
+                    doSetService(*s, i, on, root_path);
                 }
             } else if (target) {
-                delService(s->name, TYPE_INIT_D, i);
-                doSetService(*s, i, ((1 << i) & s->levels));
+                delService(s->name, TYPE_INIT_D, i, root_path);
+                doSetService(*s, i, ((1 << i) & s->levels), root_path);
             }
         }
         return 1; /* Resolved something */
@@ -290,13 +290,13 @@ static int frobOneDependencies(struct service *s, struct service *servs,
 /* LSB-style dependency frobber. Calculates a usable start priority
  * and stop priority.
  * This algorithm will almost certainly break horribly at some point. */
-static int frobDependencies(struct service *s) {
+static int frobDependencies(struct service *s, char *root_path) {
     struct service *servs = NULL;
     int numservs = 0;
     int nResolved = 0;
     int i;
 
-    numservs = readServices(&servs);
+    numservs = readServices(&servs, root_path);
     if (numservs < 0)
         return 1;
     /* In the full service list, replace the target script's current
@@ -313,21 +313,21 @@ static int frobDependencies(struct service *s) {
         for (i = 0; i < numservs; i++) {
             if ((servs + i)->isLSB)
                 nResolved +=
-                    frobOneDependencies(servs + i, servs, numservs, 0, 0);
+                    frobOneDependencies(servs + i, servs, numservs, 0, 0, root_path);
         }
     } while (nResolved);
 
     /* Resolve our target */
-    if (frobOneDependencies(s, servs, numservs, 1, LSB) == -1)
+    if (frobOneDependencies(s, servs, numservs, 1, LSB, root_path) == -1)
         return 1;
     return 0;
 }
 
-static int addService(char *name, int type) {
+static int addService(char *name, int type, char *root_path) {
     int i, rc;
     struct service s;
 
-    if ((rc = readServiceInfo(name, type, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0, root_path))) {
         readServiceError(rc, name);
         return 1;
     }
@@ -344,21 +344,21 @@ static int addService(char *name, int type) {
         if (i == 7) {
             s.currentLevels = s.levels;
         }
-        rc = frobDependencies(&s);
+        rc = frobDependencies(&s, root_path);
     } else
         for (i = 0; i < 7; i++) {
             if (!isConfigured(name, i, NULL, NULL)) {
                 if ((1 << i) & s.levels)
-                    doSetService(s, i, 1);
+                    doSetService(s, i, 1, root_path);
                 else
-                    doSetService(s, i, 0);
+                    doSetService(s, i, 0, root_path);
             }
         }
 
     return rc;
 }
 
-static int overrideService(char *name, int srvtype) {
+static int overrideService(char *name, int srvtype, char *root_path) {
     /* Apply overrides if available; no available overrides is no error */
     int level, i, rc;
     glob_t globres;
@@ -370,7 +370,7 @@ static int overrideService(char *name, int srvtype) {
     int configured = 0;
     int thisLevelAdded, thisLevelOn;
 
-    if ((rc = readServiceDifferences(name, srvtype, &s, &o, 0))) {
+    if ((rc = readServiceDifferences(name, srvtype, &s, &o, 0, root_path))) {
         return 0;
     }
 
@@ -386,9 +386,9 @@ static int overrideService(char *name, int srvtype) {
     }
 
     if (s.isLSB && (s.sPriority <= -1) && (s.kPriority >= 100))
-        frobDependencies(&s);
+        frobDependencies(&s, root_path);
     if ((s.isLSB || o.isLSB) && (o.sPriority <= -1) && (o.kPriority >= 100))
-        frobDependencies(&o);
+        frobDependencies(&o, root_path);
 
     /* Apply overrides only if the service has not been changed since
      * being added, and not if the service has never been configured
@@ -422,9 +422,9 @@ static int overrideService(char *name, int srvtype) {
                 if (globres.gl_pathc)
                     globfree(&globres);
                 if ((1 << level) & o.levels)
-                    doSetService(o, level, 1);
+                    doSetService(o, level, 1, root_path);
                 else
-                    doSetService(o, level, 0);
+                    doSetService(o, level, 0, root_path);
             }
         }
     }
@@ -466,7 +466,7 @@ static int showServiceInfo(struct service s, int forgiving) {
     return 0;
 }
 
-static int showServiceInfoByName(char *name, int type, int forgiving) {
+static int showServiceInfoByName(char *name, int type, int forgiving, char *root_path) {
     int rc;
     struct service s;
 
@@ -475,7 +475,7 @@ static int showServiceInfoByName(char *name, int type, int forgiving) {
         return forgiving ? 0 : 1;
     }
 
-    rc = readServiceInfo(name, type, &s, 0);
+    rc = readServiceInfo(name, type, &s, 0, root_path);
 
     if (rc) {
         if (!forgiving)
@@ -486,13 +486,13 @@ static int showServiceInfoByName(char *name, int type, int forgiving) {
     return showServiceInfo(s, forgiving);
 }
 
-static int isXinetdEnabled() {
+static int isXinetdEnabled(char *root_path) {
     struct service s;
 
     if (isOverriddenBySystemd("xinetd") && isEnabledInSystemd("xinetd"))
         return 1;
 
-    if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0)) {
+    if (readServiceInfo("xinetd", TYPE_INIT_D, &s, 0, root_path)) {
         return 0;
     }
     if (s.currentLevels)
@@ -511,7 +511,7 @@ static int xinetdNameCmp(const void *a, const void *b) {
     return strcmp(first->name, second->name);
 }
 
-static int listService(char *item, int type) {
+static int listService(char *item, int type, char *root_path) {
     DIR *dir;
     struct dirent *ent;
     struct service *services;
@@ -522,10 +522,10 @@ static int listService(char *item, int type) {
     int systemd = systemdActive();
 
     if (item)
-        return showServiceInfoByName(item, type, 0);
+        return showServiceInfoByName(item, type, 0, root_path);
 
     if (type & TYPE_INIT_D) {
-        numServices = readServices(&services);
+        numServices = readServices(&services, root_path);
         if (numServices < 0)
             return 1;
 
@@ -540,13 +540,19 @@ static int listService(char *item, int type) {
         }
     }
 
-    if (isXinetdEnabled() && type & TYPE_XINETD) {
+    if (isXinetdEnabled(root_path) && type & TYPE_XINETD) {
         struct service *s, *t;
+        char *filename = NULL;
 
         printf("\n");
         printf(_("xinetd based services:\n"));
+        if(root_path) {
+            sprintf(filename, root_path);
+        } else {
+            sprintf(filename, XINETDDIR);
+        }
         if (!(dir = opendir(XINETDDIR))) {
-            fprintf(stderr, _("failed to open directory %s: %s\n"), XINETDDIR,
+            fprintf(stderr, _("failed to open directory %s: %s\n"), filename,
                     strerror(err));
             return 1;
         }
@@ -575,7 +581,7 @@ static int listService(char *item, int type) {
                 numServicesAlloced += 10;
                 s = realloc(s, numServicesAlloced * sizeof(*s));
             }
-            if (readXinetdServiceInfo(ent->d_name, s + numServices) != -1)
+            if (readXinetdServiceInfo(ent->d_name, s + numServices, root_path) != -1)
                 numServices++;
         }
 
@@ -592,7 +598,7 @@ static int listService(char *item, int type) {
     return 0;
 }
 
-int setService(char *name, int type, int where, int state) {
+int setService(char *name, int type, int where, int state, char *root_path) {
     int i, rc;
     int what;
     struct service s;
@@ -605,7 +611,7 @@ int setService(char *name, int type, int where, int state) {
                 (1 << 5) | (1 << 6);
     }
 
-    if ((rc = readServiceInfo(name, type, &s, 0))) {
+    if ((rc = readServiceInfo(name, type, &s, 0, root_path))) {
         readServiceError(rc, name);
         return 1;
     }
@@ -631,7 +637,7 @@ int setService(char *name, int type, int where, int state) {
             }
         }
         if (s.isLSB)
-            frobDependencies(&s);
+            frobDependencies(&s, root_path);
         for (i = 0; i < 7; i++) {
 
             if (!((1 << i) & where))
@@ -645,14 +651,14 @@ int setService(char *name, int type, int where, int state) {
                 what = 1;
             else
                 what = 0;
-            rc |= doSetService(s, i, what);
+            rc |= doSetService(s, i, what, root_path);
         }
 
         reloadSystemd();
 
         return rc;
     } else if (s.type == TYPE_XINETD) {
-        if (setXinetdService(s, state)) {
+        if (setXinetdService(s, state, root_path)) {
             return 1;
         }
         system("/sbin/service xinetd reload >/dev/null 2>&1");
@@ -661,13 +667,18 @@ int setService(char *name, int type, int where, int state) {
     return 0;
 }
 
-void forwardSystemd(const char *name, int type, const char *verb) {
+void forwardSystemd(const char *name, int type, const char *verb, char *root_path) {
     int socket = 0;
+    char *root;
     if (type == TYPE_XINETD)
         return;
 
     if (!systemdIsInit())
         return;
+
+    if(root_path) {
+        asprintf(&root, "--root=%s", root_path);
+    }
 
     if (isOverriddenBySystemd(name) ||
         (socket = isSocketActivatedBySystemd(name))) {
@@ -681,7 +692,7 @@ void forwardSystemd(const char *name, int type, const char *verb) {
         fprintf(stderr, _("Note: Forwarding request to 'systemctl %s %s'.\n"),
                 verb, p);
 
-        execlp("systemctl", "systemctl", verb, p, NULL);
+        execlp("systemctl", "systemctl", verb, p, root, NULL);
         free(p);
         fprintf(stderr,
                 _("Failed to forward service request to systemctl: %m\n"));
@@ -695,6 +706,7 @@ int main(int argc, const char **argv) {
     int type = TYPE_ANY;
     int rc, i, x;
     char *levels = NULL;
+    char *root_path = NULL;
     char *typeString = NULL;
     int help = 0, version = 0;
     struct service s;
@@ -707,6 +719,7 @@ int main(int argc, const char **argv) {
         {"list", '\0', 0, &listItem, 0},
         {"level", '\0', POPT_ARG_STRING, &levels, 0},
         {"levels", '\0', POPT_ARG_STRING, &levels, 0},
+        {"root", '\0', POPT_ARG_STRING, &root_path, 0},
         {"type", '\0', POPT_ARG_STRING, &typeString, 0},
         {"help", 'h', POPT_ARG_NONE, &help, 0},
         {"version", 'v', POPT_ARG_NONE, &version, 0},
@@ -768,6 +781,12 @@ int main(int argc, const char **argv) {
         noRedirectItem = 1;
     }
 
+    if(root_path) {
+        if (*root_path != '/') {
+            usage(progname);
+        }
+    }
+
     if (addItem) {
         char *name = (char *)poptGetArg(optCon);
         int r;
@@ -776,7 +795,7 @@ int main(int argc, const char **argv) {
             usage(progname);
 
         name = basename(name);
-        r = addService(name, type);
+        r = addService(name, type, root_path);
         reloadSystemd();
 
         return r;
@@ -788,7 +807,7 @@ int main(int argc, const char **argv) {
             usage(progname);
 
         name = basename(name);
-        r = delService(name, type, -1);
+        r = delService(name, type, -1, root_path);
         reloadSystemd();
 
         return r;
@@ -800,7 +819,7 @@ int main(int argc, const char **argv) {
             usage(progname);
 
         name = basename(name);
-        r = overrideService(name, type);
+        r = overrideService(name, type, root_path);
         reloadSystemd();
 
         return r;
@@ -812,10 +831,10 @@ int main(int argc, const char **argv) {
 
         display_list_systemd_note();
 
-        return listService(item, type);
+        return listService(item, type, root_path);
     } else if (argc == 1 && strcmp(progname, "systemd-sysv-install")) {
         display_list_systemd_note();
-        return listService(NULL, type);
+        return listService(NULL, type, root_path);
     } else {
         char *name = (char *)poptGetArg(optCon);
         char *state = (char *)poptGetArg(optCon);
@@ -854,7 +873,7 @@ int main(int argc, const char **argv) {
 
         if (!state) {
             if (!noRedirectItem && !levels) {
-                forwardSystemd(name, type, "is-enabled");
+                forwardSystemd(name, type, "is-enabled", root_path);
             }
 
             if (where) {
@@ -875,11 +894,11 @@ int main(int argc, const char **argv) {
                     exit(1);
                 }
             }
-            rc = readServiceInfo(name, type, &s, 0);
+            rc = readServiceInfo(name, type, &s, 0, root_path);
             if (rc)
                 return 1;
             if (s.type == TYPE_XINETD) {
-                if (isXinetdEnabled())
+                if (isXinetdEnabled(root_path))
                     return !s.levels;
                 else
                     return 1;
@@ -890,18 +909,18 @@ int main(int argc, const char **argv) {
             }
         } else if (!strcmp(state, "on")) {
             if (!noRedirectItem) {
-                forwardSystemd(name, type, "enable");
+                forwardSystemd(name, type, "enable", root_path);
             }
-            return setService(name, type, where, 1);
+            return setService(name, type, where, 1, root_path);
         } else if (!strcmp(state, "off")) {
             if (!noRedirectItem) {
-                forwardSystemd(name, type, "disable");
+                forwardSystemd(name, type, "disable", root_path);
             }
-            return setService(name, type, where, 0);
+            return setService(name, type, where, 0, root_path);
         } else if (!strcmp(state, "reset"))
-            return setService(name, type, where, -1);
+            return setService(name, type, where, -1, root_path);
         else if (!strcmp(state, "resetpriorities"))
-            return setService(name, type, where, -2);
+            return setService(name, type, where, -2, root_path);
     }
 
     usage(progname);

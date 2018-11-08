@@ -59,20 +59,20 @@ int parseLevels(char *str, int emptyOk);
 /* returns 0 on success, 1 if the service is not chkconfig-able, -1 if an
    I/O error occurs (in which case errno can be checked) */
 int readServiceInfo(char *name, int type, struct service *service,
-                    int honorHide);
-int readServices(struct service **services);
+                    int honorHide, char *root_path);
+int readServices(struct service **services, char *root_path);
 int readServiceDifferences(char *name, int type, struct service *service,
-                           struct service *service_overrides, int honorHide);
+                           struct service *service_overrides, int honorHide, char *root_path);
 int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
                      int partialOk);
 int currentRunlevel(void);
 int isOn(char *name, int where);
 int isConfigured(char *name, int level, int *priority, char *type);
 int whatLevels(char *name);
-int doSetService(struct service s, int level, int on);
+int doSetService(struct service s, int level, int on, char *root_path);
 int findServiceEntries(char *name, int level, glob_t *globresptr);
-int readXinetdServiceInfo(char *name, struct service *service);
-int setXinetdService(struct service s, int on);
+int readXinetdServiceInfo(char *name, struct service *service, char *root_path);
+int setXinetdService(struct service s, int on, char *root_path);
 int systemdIsInit();
 int systemdActive();
 int isOverriddenBySystemd(const char *service);

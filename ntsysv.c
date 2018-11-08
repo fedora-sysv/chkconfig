@@ -34,7 +34,7 @@
 
 /* return 1 on cancel, 2 on error, 0 on success */
 static int servicesWindow(struct service *services, int numServices, int levels,
-                          int backButton) {
+                          int backButton, char *root_path) {
     newtComponent label, subform, ok, cancel;
     newtComponent *checkboxes, form, curr, blank;
     newtComponent sb = NULL;
@@ -153,7 +153,7 @@ static int servicesWindow(struct service *services, int numServices, int levels,
         if (services[i].type == TYPE_XINETD) {
             if ((services[i].enabled && states[i] != '*') ||
                 (!services[i].enabled && states[i] == '*'))
-                setXinetdService(services[i], states[i] == '*');
+                setXinetdService(services[i], states[i] == '*', root_path);
         } else if (services[i].type == TYPE_SYSTEMD) {
             char *cmd = NULL;
             int en = 0;
@@ -163,8 +163,14 @@ static int servicesWindow(struct service *services, int numServices, int levels,
                 en = 1;
             else
                 continue;
-            asprintf(&cmd, "/usr/bin/systemctl %s %s >/dev/null 2>&1",
-                     en ? "enable" : "disable", services[i].name);
+            if(root_path) {
+                asprintf(&cmd, "/usr/bin/systemctl --root=%s %s %s >/dev/null 2>&1",
+                         root_path, en ? "enable" : "disable", services[i].name);
+            } else {
+                asprintf(&cmd, "/usr/bin/systemctl %s %s >/dev/null 2>&1",
+                         en ? "enable" : "disable", services[i].name);
+            }
+
             if (cmd == NULL)
                 return 1;
             system(cmd);
@@ -172,7 +178,7 @@ static int servicesWindow(struct service *services, int numServices, int levels,
         } else {
             for (j = 0; j < 7; j++) {
                 if (levels & (1 << j))
-                    doSetService(services[i], j, states[i] == '*');
+                    doSetService(services[i], j, states[i] == '*', root_path);
             }
         }
     }
@@ -191,12 +197,13 @@ static int serviceNameCmp(const void *a, const void *b) {
     return strcmp(first->name, second->name);
 }
 
-int getSystemdServices(struct service **servicesPtr, int *numServicesPtr) {
+int getSystemdServices(struct service **servicesPtr, int *numServicesPtr, char *root_path) {
     FILE *sys = NULL;
     char service[UNIT_FILE_MAX + 1];
     int i;
     int r = 0;
     int c = ' ';
+    char *cmd = NULL;
     struct service *services = NULL;
     struct service *p = NULL;
     int numServices = 0;
@@ -207,7 +214,12 @@ int getSystemdServices(struct service **servicesPtr, int *numServicesPtr) {
     if (services == NULL)
         return -ENOMEM;
 
-    sys = popen("systemctl list-unit-files --no-legend --no-pager", "r");
+    if(root_path) {
+        asprintf(&cmd, "systemctl --root=%s list-unit-files --no-legend --no-pager", root_path);
+    } else {
+        asprintf(&cmd, "systemctl list-unit-files --no-legend --no-pager");
+    }
+    sys = popen(cmd, "r");
     if (!sys) {
         r = -1;
         goto finish;
@@ -301,11 +313,12 @@ finish:
 }
 
 static int getServices(struct service **servicesPtr, int *numServicesPtr,
-                       int backButton, int honorHide) {
+                       int backButton, int honorHide, char *root_path) {
     DIR *dir;
     struct dirent *ent;
     struct stat sb;
     char fn[1024];
+    char *filename = NULL;
     struct service *services;
     int numServices = 0;
     int numServicesAlloced, rc;
@@ -315,8 +328,14 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
     numServicesAlloced = 10;
     services = malloc(sizeof(*services) * numServicesAlloced);
 
-    if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-        fprintf(stderr, "failed to open " RUNLEVELS "/init.d: %s\n",
+    if(root_path) {
+        asprintf(&filename, "%s", root_path);
+    } else {
+        asprintf(&filename, RUNLEVELS "/init.d");
+    }
+
+    if (!(dir = opendir(filename))) {
+        fprintf(stderr, "failed to open %s: %s\n", filename,
                 strerror(errno));
         return 2;
     }
@@ -328,7 +347,13 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
 
         if (systemd && isOverriddenBySystemd(ent->d_name))
             continue;
-        sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+
+        if(root_path) {
+            sprintf(fn, "%s/%s", root_path, ent->d_name);
+        } else {
+            sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+        }
+
         if (stat(fn, &sb)) {
             fprintf(stderr, _("error reading info for service %s: %s\n"),
                     ent->d_name, strerror(errno));
@@ -344,7 +369,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
         }
 
         rc = readServiceInfo(ent->d_name, TYPE_INIT_D, services + numServices,
-                             honorHide);
+                             honorHide, root_path);
 
         if (!rc) {
             int i;
@@ -368,10 +393,16 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
 
     closedir(dir);
 
-    if (!stat("/usr/sbin/xinetd", &sb)) {
+    if(root_path) {
+        asprintf(&filename, "%s", root_path);
+    } else {
+        asprintf(&filename, "/usr/sbin/xinetd");
+    }
+
+    if (!stat(filename, &sb)) {
         if (!(dir = opendir(XINETDDIR))) {
-            fprintf(stderr, "failed to open " XINETDDIR ": %s\n",
-                    strerror(errno));
+            fprintf(stderr, "failed to open %s: %s\n",
+                    filename, strerror(errno));
             return 2;
         }
 
@@ -380,7 +411,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
                 strchr(ent->d_name, '.'))
                 continue;
 
-            sprintf(fn, "%s/%s", XINETDDIR, ent->d_name);
+            sprintf(fn, "%s/%s", (root_path) ? root_path : XINETDDIR, ent->d_name);
             if (stat(fn, &sb)) {
                 err = errno;
                 continue;
@@ -394,7 +425,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
                     realloc(services, numServicesAlloced * sizeof(*services));
             }
 
-            rc = readXinetdServiceInfo(ent->d_name, services + numServices);
+            rc = readXinetdServiceInfo(ent->d_name, services + numServices, root_path);
 
             if (rc == -1) {
                 fprintf(stderr, _("error reading info for service %s: %s\n"),
@@ -407,12 +438,12 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
 
         if (err) {
             fprintf(stderr, _("error reading from directory %s: %s\n"),
-                    XINETDDIR, strerror(err));
+                    (root_path) ? root_path : XINETDDIR, strerror(err));
             return 1;
         }
     }
 
-    getSystemdServices(&services, &numServices);
+    getSystemdServices(&services, &numServices, root_path);
 
     qsort(services, numServices, sizeof(*services), serviceNameCmp);
 
@@ -427,12 +458,14 @@ int main(int argc, const char **argv) {
     int numServices;
     int levels = -1;
     char *levelsStr = NULL;
+    char *root_path = NULL;
     char *progName;
     poptContext optCon;
     int rc, backButton = 0, hide = 0;
     struct poptOption optionsTable[] = {
         {"back", '\0', 0, &backButton, 0},
         {"level", '\0', POPT_ARG_STRING, &levelsStr, 0},
+        {"root", '\0', POPT_ARG_STRING, &root_path, 0},
         {"hide", '\0', 0, &hide, 0},
         {0, 0, 0, 0, 0}};
 
@@ -457,6 +490,13 @@ int main(int argc, const char **argv) {
         exit(1);
     }
 
+    if(root_path) {
+        if (*root_path != '/') {
+            fprintf(stderr, _("bad argument to --root\n"));
+            exit(2);
+        }
+    }
+
     if (levelsStr) {
         levels = parseLevels(levelsStr, 0);
         if (levels == -1) {
@@ -465,7 +505,7 @@ int main(int argc, const char **argv) {
         }
     }
 
-    if (getServices(&services, &numServices, backButton, hide))
+    if (getServices(&services, &numServices, backButton, hide, root_path))
         return 1;
     if (!numServices) {
         fprintf(stderr, _("No services may be managed by ntsysv!\n"));
@@ -481,7 +521,7 @@ int main(int argc, const char **argv) {
     if (levels == -1)
         levels = parseLevels("2345", 0);
 
-    rc = servicesWindow(services, numServices, levels, backButton);
+    rc = servicesWindow(services, numServices, levels, backButton, root_path);
 
     newtFinished();
 

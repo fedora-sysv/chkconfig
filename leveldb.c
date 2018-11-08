@@ -201,7 +201,7 @@ int readDescription(char *start, char *bufstop, char **english_desc,
     return 0;
 }
 
-int readXinetdServiceInfo(char *name, struct service *service) {
+int readXinetdServiceInfo(char *name, struct service *service, char *root_path) {
     char *filename;
     int fd;
     struct service serv = {
@@ -223,7 +223,11 @@ int readXinetdServiceInfo(char *name, struct service *service) {
     char *buf = NULL, *ptr;
     char *eng_desc = NULL, *start;
 
-    asprintf(&filename, XINETDDIR "/%s", name);
+    if(root_path) {
+        asprintf(&filename, "%s/%s", root_path, name);
+    } else {
+        asprintf(&filename, XINETDDIR "/%s", name);
+    }
 
     if ((fd = open(filename, O_RDONLY)) < 0)
         goto out_err;
@@ -309,16 +313,23 @@ out_err:
     return -1;
 }
 
-int readServices(struct service **services) {
+int readServices(struct service **services, char *root_path) {
     DIR *dir;
     struct dirent *ent;
     struct stat sb;
     struct service *servs = NULL;
     int numservs = 0;
     char fn[1024];
+    char *filename = NULL;
 
-    if (!(dir = opendir(RUNLEVELS "/init.d"))) {
-        fprintf(stderr, _("failed to open %s/init.d: %s\n"), RUNLEVELS,
+    if(root_path) {
+        asprintf(&filename, root_path);
+    } else {
+        asprintf(&filename, RUNLEVELS "/init.d");
+    }
+
+    if (!(dir = opendir(filename))) {
+        fprintf(stderr, _("failed to open %s: %s\n"), filename,
                 strerror(errno));
         return -1;
     }
@@ -340,14 +351,19 @@ int readServices(struct service **services) {
         if (*dn == '~' || *dn == ',')
             continue;
 
-        sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+        if(root_path) {
+            sprintf(fn, "%s/%s", root_path, ent->d_name);
+        } else {
+            sprintf(fn, RUNLEVELS "/init.d/%s", ent->d_name);
+        }
+
         if (stat(fn, &sb)) {
             continue;
         }
         if (!S_ISREG(sb.st_mode))
             continue;
         servs = realloc(servs, (numservs + 1) * sizeof(struct service));
-        if (!readServiceInfo(ent->d_name, TYPE_INIT_D, servs + numservs, 0))
+        if (!readServiceInfo(ent->d_name, TYPE_INIT_D, servs + numservs, 0, root_path))
             numservs++;
     }
     *services = servs;
@@ -355,7 +371,7 @@ int readServices(struct service **services) {
 }
 
 int readServiceInfo(char *name, int type, struct service *service,
-                    int honorHide) {
+                    int honorHide, char *root_path) {
     char *filename = NULL;
     int fd;
     struct service serv, serv_overrides;
@@ -364,7 +380,11 @@ int readServiceInfo(char *name, int type, struct service *service,
     if (!(type & TYPE_INIT_D))
         goto try_xinetd;
 
-    asprintf(&filename, RUNLEVELS "/init.d/%s", name);
+    if(root_path) {
+        asprintf(&filename, "%s/%s", root_path, name);
+    } else {
+        asprintf(&filename, RUNLEVELS "/init.d/%s", name);
+    }
 
     if ((fd = open(filename, O_RDONLY)) < 0)
         goto try_xinetd;
@@ -375,6 +395,7 @@ int readServiceInfo(char *name, int type, struct service *service,
         return parseret;
 
     asprintf(&filename, RUNLEVELS "/chkconfig.d/%s", name);
+
     if ((fd = open(filename, O_RDONLY)) >= 0) {
         parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
         if (parseret >= 0) {
@@ -412,11 +433,11 @@ try_xinetd:
     free(filename);
     if (!(type & TYPE_XINETD))
         return -1;
-    return readXinetdServiceInfo(name, service);
+    return readXinetdServiceInfo(name, service, root_path);
 }
 
 int readServiceDifferences(char *name, int type, struct service *service,
-                           struct service *service_overrides, int honorHide) {
+                           struct service *service_overrides, int honorHide, char *root_path) {
     char *filename = NULL;
     int fd;
     struct service serv, serv_overrides;
@@ -425,7 +446,11 @@ int readServiceDifferences(char *name, int type, struct service *service,
     if (!(type & TYPE_INIT_D))
         goto try_xinetd;
 
-    asprintf(&filename, RUNLEVELS "/init.d/%s", name);
+    if(root_path) {
+        asprintf(&filename, "%s/%s", root_path, name);
+    } else {
+        asprintf(&filename, RUNLEVELS "/init.d/%s", name);
+    }
 
     if ((fd = open(filename, O_RDONLY)) < 0) {
         goto try_xinetd;
@@ -457,7 +482,7 @@ try_xinetd:
     free(filename);
     if (!(type & TYPE_XINETD))
         return -1;
-    return readXinetdServiceInfo(name, service);
+    return readXinetdServiceInfo(name, service, root_path);
 }
 
 static struct dep *parseDeps(char *pos, char *end) {
@@ -841,7 +866,7 @@ int whatLevels(char *name) {
     return ret;
 }
 
-int setXinetdService(struct service s, int on) {
+int setXinetdService(struct service s, int on, char *root_path) {
     int oldfd, newfd;
     char oldfname[100], newfname[100];
     char tmpstr[50];
@@ -853,7 +878,11 @@ int setXinetdService(struct service s, int on) {
     if (on == -1) {
         on = s.enabled ? 1 : 0;
     }
-    snprintf(oldfname, 100, "%s/%s", XINETDDIR, s.name);
+    if(root_path) {
+        snprintf(oldfname, 100, "%s/%s", root_path, s.name);
+    } else {
+        snprintf(oldfname, 100, "%s/%s", XINETDDIR, s.name);
+    }
     if ((oldfd = open(oldfname, O_RDONLY)) == -1) {
         return -1;
     }
@@ -866,7 +895,11 @@ int setXinetdService(struct service s, int on) {
     }
     close(oldfd);
     buf[sb.st_size] = '\0';
-    snprintf(newfname, 100, "%s/%s.XXXXXX", XINETDDIR, s.name);
+    if(root_path) {
+        snprintf(newfname, 100, "%s/%s.XXXXXX", root_path, s.name);
+    } else {
+        snprintf(newfname, 100, "%s/%s.XXXXXX", XINETDDIR, s.name);
+    }
     mode = umask(S_IRWXG | S_IRWXO);
     newfd = mkstemp(newfname);
     umask(mode);
@@ -903,7 +936,7 @@ int setXinetdService(struct service s, int on) {
     return (r);
 }
 
-int doSetService(struct service s, int level, int on) {
+int doSetService(struct service s, int level, int on, char *root_path) {
     int priority = on ? s.sPriority : s.kPriority;
     char linkname[200];
     char linkto[200];
@@ -919,7 +952,11 @@ int doSetService(struct service s, int level, int on) {
 
     sprintf(linkname, "%s/rc%d.d/%c%02d%s", RUNLEVELS, level, on ? 'S' : 'K',
             priority, s.name);
-    sprintf(linkto, "../init.d/%s", s.name);
+    if(root_path) {
+        sprintf(linkto, "%s/%s", root_path, s.name);
+    } else {
+        sprintf(linkto, "../init.d/%s", s.name);
+    }
 
     unlink(linkname); /* just in case */
     if (symlink(linkto, linkname)) {
