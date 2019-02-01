@@ -499,19 +499,26 @@ static int removeLinks(struct linkSet *l, const char *altDir, int flags) {
 
 static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     char *sl;
+    char buf[256];
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
+
     if (isLink(l->facility)) {
         if (FL_TEST(flags)) {
             printf(_("would link %s -> %s\n"), l->facility, sl);
         } else {
-            unlink(l->facility);
+            memset(buf, 0, sizeof(buf));
+            readlink(l->facility, buf, sizeof(buf));
 
-            if (symlink(sl, l->facility)) {
-                fprintf(stderr, _("failed to link %s -> %s: %s\n"), l->facility,
-                        sl, strerror(errno));
-                return 1;
+            if(strcmp(sl, buf) != 0) {
+                unlink(l->facility);
+
+                if (symlink(sl, l->facility)) {
+                    fprintf(stderr, _("failed to link %s -> %s: %s\n"), l->facility,
+                            sl, strerror(errno));
+                    return 1;
+                }
             }
         }
     } else
@@ -523,16 +530,21 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     if (FL_TEST(flags)) {
         printf(_("would link %s -> %s\n"), sl, l->target);
     } else {
-        if (unlink(sl) && errno != ENOENT) {
-            fprintf(stderr, _("failed to remove link %s: %s\n"), sl,
-                    strerror(errno));
-            return 1;
-        }
+        memset(buf, 0, sizeof(buf));
+        readlink(sl, buf, sizeof(buf));
 
-        if (symlink(l->target, sl)) {
-            fprintf(stderr, _("failed to link %s -> %s: %s\n"), sl, l->target,
-                    strerror(errno));
-            return 1;
+        if(strcmp(l->target, buf) != 0) {
+            if (unlink(sl) && errno != ENOENT) {
+                fprintf(stderr, _("failed to remove link %s: %s\n"), sl,
+                        strerror(errno));
+                return 1;
+            }
+
+            if (symlink(l->target, sl)) {
+                fprintf(stderr, _("failed to link %s -> %s: %s\n"), sl, l->target,
+                        strerror(errno));
+                return 1;
+            }
         }
     }
 
