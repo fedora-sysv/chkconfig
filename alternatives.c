@@ -255,7 +255,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
         char *title;
     } *groups = NULL;
     int numGroups = 0;
-    char linkBuf[1024];
+    char linkBuf[PATH_MAX];
 
     set->alts = NULL;
     set->numAlts = 0;
@@ -511,7 +511,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
             memset(buf, 0, sizeof(buf));
             readlink(l->facility, buf, sizeof(buf));
 
-            if(strcmp(sl, buf) != 0) {
+            if(!streq(sl, buf)) {
                 unlink(l->facility);
 
                 if (symlink(sl, l->facility)) {
@@ -533,7 +533,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
         memset(buf, 0, sizeof(buf));
         readlink(sl, buf, sizeof(buf));
 
-        if(strcmp(l->target, buf) != 0) {
+        if(!streq(l->target, buf)) {
             if (unlink(sl) && errno != ENOENT) {
                 fprintf(stderr, _("failed to remove link %s: %s\n"), sl,
                         strerror(errno));
