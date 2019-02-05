@@ -513,7 +513,7 @@ static int removeLinks(struct linkSet *l, const char *altDir, int flags) {
 
 static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     char *sl;
-    char buf[256];
+    char buf[PATH_MAX];
 
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
