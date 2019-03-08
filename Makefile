@@ -53,7 +53,6 @@ install:
 	[ -d $(DESTDIR)/$(SBINDIR) ] || mkdir -p $(DESTDIR)/$(SBINDIR)
 	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
-	[ -d $(DESTDIR)/$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man5
 	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 	[ -d $(DESTDIR)/usr/lib/systemd ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
