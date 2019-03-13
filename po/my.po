@@ -201,3 +201,4 @@ msgstr ""
 #: ../leveldb.c:802
 #, c-format
 msgid "failed to make symlink %s: %s\n"
+msgstr ""
