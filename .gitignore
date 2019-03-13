@@ -1,5 +1,4 @@
 .tags
-alternatives
 *.o
 chkconfig
 ntsysv
