@@ -9,7 +9,6 @@ Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{na
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
 Conflicts: initscripts <= 5.30-1
-Provides: alternatives = %{version}-%{release}
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -59,20 +58,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{!?_licensedir:%global license %%doc}
 %license COPYING
-%dir /etc/alternatives
 /sbin/chkconfig
-%{_sbindir}/update-alternatives
-%{_sbindir}/alternatives
 /etc/chkconfig.d
 /etc/init.d
 /etc/rc.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
-%dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
-%{_mandir}/*/update-alternatives*
-%{_mandir}/*/alternatives*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
