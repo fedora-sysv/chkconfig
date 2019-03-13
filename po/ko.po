@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # eukim <eukim@redhat.com>, 2007-2008
 # eukim <eukim@redhat.com>, 2012
@@ -14,66 +14,66 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-07-25 13:31+0200\n"
 "PO-Revision-Date: 2015-12-10 09:50-0500\n"
 "Last-Translator: MinWoo Joh <igtzhsou@naver.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/fedora/language/"
 "ko/)\n"
 "Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../chkconfig.c:40
+#: ../chkconfig.c:41
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s 버전 %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
-msgstr "이 프로그램은 GNU Public License(GPL)하에 자유롭게 재배포될 수 있습니다.\n"
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr ""
+"이 프로그램은 GNU Public License(GPL)하에 자유롭게 재배포될 수 있습니다.\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
 msgstr "사용법:   %s [name]\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr ""
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "사용법:   %s [--list] [--type <type>] [name]\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <name>\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <name>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <name>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:66
 #, c-format
 msgid ""
 "\n"
@@ -89,7 +89,7 @@ msgstr ""
 "덮어쓰여질 수 있습니다. \n"
 "\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
@@ -97,79 +97,80 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      'systemctl list-unit-files'를 사용하여 systemd 서비스를 나열하실 수 있습니다.\n"
+"      'systemctl list-unit-files'를 사용하여 systemd 서비스를 나열하실 수 있"
+"습니다.\n"
 "       특정 대상에 활성화된 서비스를 확인하려면\n"
 "       'systemctl list-dependencies [target]'을 사용하십시오.\n"
 "\n"
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:83
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s 서비스는 chkconfig를 지원하지만 어떠한 런레벨에도 등록되지 않았습니다 ( 'chkconfig --add %s'를 "
-"실행하십시오)\n"
+"%s 서비스는 chkconfig를 지원하지만 어떠한 런레벨에도 등록되지 않았습니다 "
+"( 'chkconfig --add %s'를 실행하십시오)\n"
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s 서비스는 chkconfig 를 지원하지 않습니다\n"
 
-#: ../chkconfig.c:77
+#: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 도중 오류가 발생했습니다: %s\n"
 
-#: ../chkconfig.c:86
+#: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "이 작업을 실행할 권한이 없습니다.\n"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
 msgstr "활성"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "off"
 msgstr "해제"
 
-#: ../chkconfig.c:519
+#: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd 기반의 서비스:\n"
 
-#: ../chkconfig.c:521
+#: ../chkconfig.c:549
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s 디렉토리를 여는데 실패했습니다: %s\n"
 
-#: ../chkconfig.c:648
+#: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "알림: 'systemctl %s %s'에 요청을 전송하고 있습니다.\n"
 
-#: ../chkconfig.c:653
+#: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "systemctl에 서비스 요청을 전송하는데 실패했습니다: %m\n"
 
-#: ../chkconfig.c:709
+#: ../chkconfig.c:743
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 버전 %s\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:756
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type은 'sysv' 또는 'xinetd'여야만 합니다\n"
 
-#: ../chkconfig.c:728
+#: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del, --override의 옵션 중 하나만 지정해야 합니다\n"
 
-#: ../chkconfig.c:836
+#: ../chkconfig.c:873
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig 질의에 대해 하나의 런레벨만 지정해야 합니다\n"
@@ -178,390 +179,72 @@ msgstr "chkconfig 질의에 대해 하나의 런레벨만 지정해야 합니다
 msgid "Press <F1> for more information on a service."
 msgstr "서비스에 대한 자세한 내용을 보려면 <F1> 키를 누르십시오."
 
-#: ../ntsysv.c:94 ../ntsysv.c:131
+#: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
 msgstr "확인"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Back"
 msgstr "뒤로"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Cancel"
 msgstr "취소"
 
-#: ../ntsysv.c:106
+#: ../ntsysv.c:111
 msgid "What services should be automatically started?"
 msgstr "어떤 서비스를 자동으로 시작하도록 하겠습니까?"
 
-#: ../ntsysv.c:112
+#: ../ntsysv.c:118
 msgid "Services"
 msgstr "서비스"
 
-#: ../ntsysv.c:320 ../ntsysv.c:347 ../ntsysv.c:384
+#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s 서비스의 정보를 읽는 중 오류가 발생했습니다: %s\n"
 
-#: ../ntsysv.c:393
+#: ../ntsysv.c:409
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s 디렉토리를 읽는 중 오류가 발생했습니다: %s\n"
 
-#: ../ntsysv.c:431
+#: ../ntsysv.c:446
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s는 root 계정으로 실행해야 합니다.\n"
 
-#: ../ntsysv.c:448
+#: ../ntsysv.c:463
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels 옵션에 잘못된 인수값이 주어졌습니다\n"
 
-#: ../ntsysv.c:455
+#: ../ntsysv.c:471
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv 명령으로 관리할 서비스가 없습니다!\n"
 
-#: ../leveldb.c:307
+#: ../leveldb.c:321
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d 를 여는데 실패했습니다: %s\n"
 
-#: ../leveldb.c:717
+#: ../leveldb.c:766 ../leveldb.c:774
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s 패턴을 glob 명령에 사용하는데 실패했습니다: %s\n"
 
-#: ../leveldb.c:760
+#: ../leveldb.c:820
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "현재의 런레벨을 확인할 수 없습니다\n"
 
-#: ../leveldb.c:840
+#: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
 msgstr "%s에 대한 SELinux 설정을 적용할 수 없습니다: %s\n"
 
-#: ../leveldb.c:864
+#: ../leveldb.c:926
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s 심볼릭 링크 파일을 생성하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:68
-#, c-format
-msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "대체 버전 %s - Copyright (C) 2001 Red Hat, Inc.\n"
-
-#: ../alternatives.c:69
-#, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-"\n"
-msgstr "GNU Public License하에 이 프로그램을\n"
-"자유롭게 재배포 할 수 있습니다.\n"
-
-#: ../alternatives.c:70
-#, c-format
-msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "usage: alternatives --install <link> <name> <path> <priority>\n"
-
-#: ../alternatives.c:71
-#, c-format
-msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <service>]\n"
-
-#: ../alternatives.c:72
-#, c-format
-msgid "                    [--family <family>]\n"
-msgstr ""
-
-#: ../alternatives.c:73
-#, c-format
-msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <link> <name> <path>]*\n"
-
-#: ../alternatives.c:74
-#, c-format
-msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
-
-#: ../alternatives.c:75
-#, c-format
-msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <name>\n"
-
-#: ../alternatives.c:76
-#, c-format
-msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <name>\n"
-
-#: ../alternatives.c:77
-#, c-format
-msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <name>\n"
-
-#: ../alternatives.c:78
-#, c-format
-msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <name> <path>\n"
-
-#: ../alternatives.c:79
-#, c-format
-msgid "       alternatives --list\n"
-msgstr "       alternatives --list\n"
-
-#: ../alternatives.c:80
-#, c-format
-msgid "\n"
-msgstr "\n"
-
-#: ../alternatives.c:81
-#, c-format
-msgid ""
-"common options: --verbose --test --help --usage --version --keep-missing\n"
-msgstr ""
-
-#: ../alternatives.c:82
-#, c-format
-msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <directory> --admindir <directory>\n"
-
-#: ../alternatives.c:214
-#, c-format
-msgid "reading %s\n"
-msgstr "%s를 읽는 중\n"
-
-#: ../alternatives.c:218
-#, c-format
-msgid "failed to open %s: %s\n"
-msgstr "%s를 여는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:227
-#, c-format
-msgid "failed to read %s: %s\n"
-msgstr "%s를 여는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:236
-#, c-format
-msgid "%s empty!\n"
-msgstr "%s가 비어있습니다!\n"
-
-#: ../alternatives.c:245
-#, c-format
-msgid "bad mode on line 1 of %s\n"
-msgstr "%s의 첫번째 줄이 부적절한 모드입니다.\n"
-
-#: ../alternatives.c:252
-#, c-format
-msgid "bad primary link in %s\n"
-msgstr "%s가 부적절한 일차 링크를 포함하고 있습니다\n"
-
-#: ../alternatives.c:264
-#, c-format
-msgid "path %s unexpected in %s\n"
-msgstr "예상치 못한 경로 %s가 %s에 들어가 있습니다\n"
-
-#: ../alternatives.c:273
-#, c-format
-msgid "missing path for slave %s in %s\n"
-msgstr "슬레이브 %s로의 경로가 %s에서 빠져있습니다\n"
-
-#: ../alternatives.c:283
-#, c-format
-msgid "unexpected end of file in %s\n"
-msgstr "%s에 예기치 않은 파일 끝 (EOF)이 있습니다\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "path to alternate expected in %s\n"
-msgstr "%s에 대체 경로가 필요합니다\n"
-
-#: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
-#: ../alternatives.c:347 ../alternatives.c:366
-#, c-format
-msgid "unexpected line in %s: %s\n"
-msgstr "%s에 잘못된 줄이 있습니다: %s\n"
-
-#: ../alternatives.c:317
-#, c-format
-msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
-
-#: ../alternatives.c:329
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "%s에 수치 우선 순위가 필요합니다\n"
-
-#: ../alternatives.c:346
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "%s에 슬레이브 경로가 필요합니다\n"
-
-#: ../alternatives.c:374
-#, c-format
-msgid "failed to read link %s: %s\n"
-msgstr "%s 링크를 읽기에 실패했습니다: %s\n"
-
-#: ../alternatives.c:388
-#, c-format
-msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "링크가 아무런 대체 경로와도 연결되지 않습니다 -- 수동으로 모드를 설정합니다\n"
-
-#: ../alternatives.c:393
-#, c-format
-msgid "link changed -- setting mode to manual\n"
-msgstr "링크가 변경되었습니다 -- 수동으로 모드를 설정합니다\n"
-
-#: ../alternatives.c:424 ../alternatives.c:431
-#, c-format
-msgid "would remove %s\n"
-msgstr "%s를 삭제합니다\n"
-
-#: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
-#, c-format
-msgid "failed to remove link %s: %s\n"
-msgstr "%s 링크를 삭제하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:448 ../alternatives.c:463
-#, c-format
-msgid "would link %s -> %s\n"
-msgstr "%s -> %s로 링크합니다\n"
-
-#: ../alternatives.c:453 ../alternatives.c:472
-#, c-format
-msgid "failed to link %s -> %s: %s\n"
-msgstr "%s -> %s로 링크하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:459
-#, c-format
-msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "%s -> %s 링크를 걸지 못하였습니다: %s 는 존재하며 심링크가 아닙니다\n"
-
-#: ../alternatives.c:504
-#, c-format
-msgid "%s already exists\n"
-msgstr "%s이 이미 존재합니다\n"
-
-#: ../alternatives.c:506
-#, c-format
-msgid "failed to create %s: %s\n"
-msgstr "%s를 생성하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:539
-#, c-format
-msgid "failed to replace %s with %s: %s\n"
-msgstr "%s를 %s로 대체하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:565 ../alternatives.c:571 ../alternatives.c:582
-#: ../alternatives.c:588
-#, c-format
-msgid "running %s\n"
-msgstr "%s를 실행 중\n"
-
-#: ../alternatives.c:618
-#, c-format
-msgid "the primary link for %s must be %s\n"
-msgstr "%s의 일차 링크는 %s이어야 합니다\n"
-
-#: ../alternatives.c:699
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "%s가 슬레이브 %s에 잘못 링크되었습니다 (%s %s)\n"
-
-#: ../alternatives.c:740
-#, c-format
-msgid "%s - status is auto.\n"
-msgstr "%s - 상태가 자동입니다.\n"
-
-#: ../alternatives.c:742
-#, c-format
-msgid "%s - status is manual.\n"
-msgstr "%s - 상태가 수동입니다.\n"
-
-#: ../alternatives.c:744
-#, c-format
-msgid " link currently points to %s\n"
-msgstr "현재 %s로 링크되어 있습니다\n"
-
-#: ../alternatives.c:749
-#, c-format
-msgid "family %s "
-msgstr ""
-
-#: ../alternatives.c:750
-#, c-format
-msgid "priority %d\n"
-msgstr ""
-
-#: ../alternatives.c:752
-#, c-format
-msgid " slave %s: %s\n"
-msgstr " 슬레이브 %s: %s\n"
-
-#: ../alternatives.c:757
-#, c-format
-msgid "Current `best' version is %s.\n"
-msgstr "현재 '최고' 버전은 %s입니다.\n"
-
-#: ../alternatives.c:788
-#, c-format
-msgid "There is %d program that provides '%s'.\n"
-msgstr "%d 개의 프로그램이 '%s'를 제공합니다.\n"
-
-#: ../alternatives.c:788
-#, c-format
-msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d 개의 프로그램이 '%s'를 제공합니다.\n"
-
-#: ../alternatives.c:790
-#, c-format
-msgid "  Selection    Command\n"
-msgstr "  선택    명령\n"
-
-#: ../alternatives.c:804
-#, c-format
-msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "현재 선택[+]을 유지하려면 엔터키를 누르고, 아니면 선택 번호를 입력하십시오:"
-
-#: ../alternatives.c:807
-#, c-format
-msgid "\n"
-"error reading choice\n"
-msgstr "\n"
-"선택을 읽는 중 오류가 발생했습니다\n"
-
-#: ../alternatives.c:844 ../alternatives.c:872
-#, c-format
-msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s는 %s의 대체로 설정되지 않았습니다\n"
-
-#: ../alternatives.c:888
-#, c-format
-msgid "(would remove %s\n"
-msgstr "(%s를 삭제합니다\n"
-
-#: ../alternatives.c:890
-#, c-format
-msgid "failed to remove %s: %s\n"
-msgstr "%s를 삭제하는데 실패했습니다: %s\n"
-
-#: ../alternatives.c:1009
-#, c-format
-msgid "--family can't contain the symbol '@'\n"
-msgstr ""
-
-#: ../alternatives.c:1062
-#, c-format
-msgid "altdir %s invalid\n"
-msgstr "altdir %s가 올바르지 않습니다\n"
-
-#: ../alternatives.c:1068
-#, c-format
-msgid "admindir %s invalid\n"
-msgstr "admindir %s가 올바르지 않습니다\n"
-
-#: ../alternatives.c:1078
-#, c-format
-msgid "alternatives version %s\n"
-msgstr "대체 버전 %s\n"

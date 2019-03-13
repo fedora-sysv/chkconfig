@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Manoj Kumar Giri <giri.manojkr@gmail.com>, 2008
 # Manoj Kumar Giri <mgiri@redhat.com>, 2008-2009,2011-2012
@@ -12,66 +12,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"POT-Creation-Date: 2017-07-25 13:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:05-0500\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Oriya (http://www.transifex.com/projects/p/fedora/language/"
+"or/)\n"
+"Language: or\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:05-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Oriya (http://www.transifex.com/projects/p/fedora/language/or/"
-")\n"
-"Language: or\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Zanata 3.9.6\n"
 
-#: ../chkconfig.c:40
+#: ../chkconfig.c:41
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr "ଏହା ଜି.ଏନ.ୟୁ. ସାର୍ବଜନୀନ ଲାଇସେନ୍ସ ଅଧୀନ ରେ ମାଗଣା ରେ ପୂନଃବଣ୍ଟିତ କରିହେବ।\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
 msgstr "ବ୍ୟବହାର ବିଧି:   %s [name]\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr ""
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "ବ୍ୟବହାର ବିଧି:   %s [--list] [--type <type>] [name]\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
 msgstr "         %s --add <ନାମ>\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
 msgstr "         %s --del <ନାମ>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
 msgstr "         %s --override <ନାମ>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:66
 #, c-format
 msgid ""
 "\n"
@@ -83,12 +82,11 @@ msgid ""
 msgstr ""
 "\n"
 "ଟିପ୍ପଣୀ: ଏହି ଫଳାଫଳଟି SysV ସର୍ଭିସଗୁଡ଼ିକୁ କେବଳ ଦର୍ଶାଇଥାଏ ଏବଂ ସ୍ଥାନୀୟ\n"
-"      systemd ସର୍ଭିସଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିନଥାଏ। SysV ସଂରଚନା ତଥ୍ୟ ହୁଏତଃ "
-"ସ୍ଥାନୀୟ\n"
+"      systemd ସର୍ଭିସଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିନଥାଏ। SysV ସଂରଚନା ତଥ୍ୟ ହୁଏତଃ ସ୍ଥାନୀୟ\n"
 "      systemd ସଂରଚନା ସହିତ ନବଲିଖିତ ହୋଇନଥାଏ।\n"
 "\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
@@ -96,13 +94,13 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      ଯଦି ଆପଣ systemd ସର୍ଭିସଗୁଡ଼ିକୁ ତାଲିକଭୁକ୍ତ କରିବାକୁ ଚାହାନ୍ତି ତେବେ "
-"'systemctl list-unit-files' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
+"      ଯଦି ଆପଣ systemd ସର୍ଭିସଗୁଡ଼ିକୁ ତାଲିକଭୁକ୍ତ କରିବାକୁ ଚାହାନ୍ତି ତେବେ 'systemctl list-unit-"
+"files' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
 "      ନିର୍ଦ୍ଦିଷ୍ଟ ଲକ୍ଷ୍ଯସ୍ଥଳରେ ସକ୍ରିୟ ଥିବା ସର୍ଭିସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ\n"
 "      'systemctl list-dependencies [target]' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
 "\n"
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:83
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -111,68 +109,65 @@ msgstr ""
 "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉଛି, କିନ୍ତୁ ଏହା କୌଣସ୍ ରନଲେବଲ ଦ୍ବାରା ସନ୍ଦର୍ପିତ "
 "ହୋଇନାହିଁ('chkconfig --add %s' ଏହାକୁ ଚଲାନ୍ତୁ)\n"
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "%s ସେବା ଟି chkconfig ସହାୟକ ହେଉ ନାହିଁ\n"
 
-#: ../chkconfig.c:77
+#: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "%s କୁ ପଢିବା ସମୟରେ ତୃଟି: %s\n"
 
-#: ../chkconfig.c:86
+#: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
-"ଏହି ପ୍ରୟୋଗକୁ କାର୍ଯ୍ୟକାରୀ କରିବା ପାଇଁ ଆପଣଙ୍କ ପାଖରେ ଯଥେଷ୍ଟ ଅନୁମତି ନାହିଁ।\n"
+msgstr "ଏହି ପ୍ରୟୋଗକୁ କାର୍ଯ୍ୟକାରୀ କରିବା ପାଇଁ ଆପଣଙ୍କ ପାଖରେ ଯଥେଷ୍ଟ ଅନୁମତି ନାହିଁ।\n"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
 msgstr "ଚଳାନ୍ତୁ"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "off"
 msgstr "ବନ୍ଦ କରନ୍ତୁ"
 
-#: ../chkconfig.c:519
+#: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ଆଧାରିତ ତୃଟି:\n"
 
-#: ../chkconfig.c:521
+#: ../chkconfig.c:549
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s ଡିରେକ୍ଟୋରି କୁ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
 
-#: ../chkconfig.c:648
+#: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "ଟିପ୍ପଣୀ: ଅନୁରୋଧକୁ 'systemctl %s %s' କୁ ପଠାଉଅଛି।\n"
 
-#: ../chkconfig.c:653
+#: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "ସର୍ଭିସ ଅନୁରୋଧକୁ systemctl କୁ ପଠାଇବାରେ ବିଫଳ: %m\n"
 
-#: ../chkconfig.c:709
+#: ../chkconfig.c:743
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ସଂସ୍କରଣ %s\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:756
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type ନିଶ୍ଚିତ ଭାବରେ 'sysv' କିମ୍ବା 'xinetd' ହୋଇଥିବ\n"
 
-#: ../chkconfig.c:728
+#: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-" --list, --add, --del, କିମ୍ବା --override ମଧ୍ଯରୁ କେବଳ ଗୋଟିକୁ ଉଲ୍ଲେକ୍ଷିତ "
-"କରିହେବ\n"
+msgstr " --list, --add, --del, କିମ୍ବା --override ମଧ୍ଯରୁ କେବଳ ଗୋଟିକୁ ଉଲ୍ଲେକ୍ଷିତ କରିହେବ\n"
 
-#: ../chkconfig.c:836
+#: ../chkconfig.c:873
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig ପ୍ରଶ୍ନ ପାଇଁ କେବଳ ଗୋଟିଏ ରନଲେବଲ ଉଲ୍ଲେକ୍ଷିତ କରିହେବ\n"
@@ -181,394 +176,72 @@ msgstr "chkconfig ପ୍ରଶ୍ନ ପାଇଁ କେବଳ ଗୋଟିଏ �
 msgid "Press <F1> for more information on a service."
 msgstr "ସେବା ବିଷୟ ରେ ଅଧିକ ସୂଚନା ପାଇବା ପାଇଁ <F1> କୁ ଦବାନ୍ତୁ।"
 
-#: ../ntsysv.c:94 ../ntsysv.c:131
+#: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
 msgstr "ଠିକ ଅଛି"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Back"
 msgstr "ପୂର୍ବବର୍ତ୍ତି"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Cancel"
 msgstr "ବାତିଲ"
 
-#: ../ntsysv.c:106
+#: ../ntsysv.c:111
 msgid "What services should be automatically started?"
 msgstr "କେଉଁ ସେବା ଗୁଡିକ ଆପଣାଛାଏଁ ପ୍ରାରମ୍ଭିତ ହେବା ଉଚିତ?"
 
-#: ../ntsysv.c:112
+#: ../ntsysv.c:118
 msgid "Services"
 msgstr "ସେବା"
 
-#: ../ntsysv.c:320 ../ntsysv.c:347 ../ntsysv.c:384
+#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s ସେବା ପାଇଁ ସୂଚନା ପଢିବା ସମୟରେ ତୃଟି: %s\n"
 
-#: ../ntsysv.c:393
+#: ../ntsysv.c:409
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "%s ଡିରେକ୍ଟୋରିରୁ ପଢିବା ସମୟରେ ତୃଟି: %s\n"
 
-#: ../ntsysv.c:431
+#: ../ntsysv.c:446
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s କୁ ଚଳାଇବା ପାଇଁ ଆପଣ ଗୋଟିଏ ମୂଖ୍ଯ ଚାଳକ ହେବା ଉଚିତ\n"
 
-#: ../ntsysv.c:448
+#: ../ntsysv.c:463
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--level ପାଇଁ ତ୍ରୁଚିପୂର୍ଣ୍ଣ ସନ୍ଦେଶ\n"
 
-#: ../ntsysv.c:455
+#: ../ntsysv.c:471
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsys ଦ୍ବାରା କୌଣସି ସେବା ପରିଚାଳିତ ହୋଇ ନ ପାରେ!\n"
 
-#: ../leveldb.c:307
+#: ../leveldb.c:321
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr " %s/init.d କୁ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
 
-#: ../leveldb.c:717
+#: ../leveldb.c:766 ../leveldb.c:774
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "%s ନମୁନା କୁ ଆବରୋଧ କରିବାରେ ଅସଫଳ: %s\n"
 
-#: ../leveldb.c:760
+#: ../leveldb.c:820
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "ସାମ୍ପ୍ରତିକ ରନଲେବଲ କୁ ସ୍ଥିର କରି ପାରୁନାହିଁ\n"
 
-#: ../leveldb.c:840
+#: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
 msgstr ""
 
-#: ../leveldb.c:864
+#: ../leveldb.c:926
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "%s ସିମଲିଙ୍କ ସ୍ରୁଷ୍ଟି କରିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:68
-#, c-format
-msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "ବିକଲ୍ପ ସଂସ୍କରଣ %s - ସତ୍ବାଧୀକାର (C) 2001 Red Hat, Inc.\n"
-
-#: ../alternatives.c:69
-#, c-format
-msgid ""
-"This may be freely redistributed under the terms of the GNU Public License.\n"
-"\n"
-msgstr "ଏହା ଜି.ଏନ.ୟୁ. ସାର୍ବଜନୀନ ଲାଇସେନ୍ସ ଅଧୀନ ରେ ମାଗଣା ରେ ପୂନଃବଣ୍ଟିତ କରିହେବ\n"
-"\n"
-
-#: ../alternatives.c:70
-#, c-format
-msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "ବ୍ଯବହାର: ବିକଲ୍ପ --install <ସଂଯୋଗ> <ନାମ> <ପଥ> <ଅଗ୍ରାଧିକାର>\n"
-
-#: ../alternatives.c:71
-#, c-format
-msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <ସେବା>]\n"
-
-#: ../alternatives.c:72
-#, c-format
-msgid "                    [--family <family>]\n"
-msgstr ""
-
-#: ../alternatives.c:73
-#, c-format
-msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <ସଂଯୋଗ> <ନାମ> <ପଥ>]*\n"
-
-#: ../alternatives.c:74
-#, c-format
-msgid "       alternatives --remove <name> <path>\n"
-msgstr "       ବିକଲ୍ପ --remove <ନାମ> <ପଥ>\n"
-
-#: ../alternatives.c:75
-#, c-format
-msgid "       alternatives --auto <name>\n"
-msgstr "       ବିକଲ୍ପ --auto <ନାମ>\n"
-
-#: ../alternatives.c:76
-#, c-format
-msgid "       alternatives --config <name>\n"
-msgstr "       ବିକଲ୍ପ --config <ନାମ>\n"
-
-#: ../alternatives.c:77
-#, c-format
-msgid "       alternatives --display <name>\n"
-msgstr "       ବିକଲ୍ପ --display <ନାମ>\n"
-
-#: ../alternatives.c:78
-#, c-format
-msgid "       alternatives --set <name> <path>\n"
-msgstr "       ବିକଲ୍ପ --set <ନାମ> <ପଥ>\n"
-
-#: ../alternatives.c:79
-#, c-format
-msgid "       alternatives --list\n"
-msgstr "       alternatives --list\n"
-
-#: ../alternatives.c:80
-#, c-format
-msgid "\n"
-msgstr "\n"
-
-#: ../alternatives.c:81
-#, c-format
-msgid ""
-"common options: --verbose --test --help --usage --version --keep-missing\n"
-msgstr ""
-
-#: ../alternatives.c:82
-#, c-format
-msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <ଡିରେକ୍ଟୋରି> --admindir <ଡିରେକ୍ଟୋରି>\n"
-
-#: ../alternatives.c:214
-#, c-format
-msgid "reading %s\n"
-msgstr "%s କୁ ପଢୁଅଛି\n"
-
-#: ../alternatives.c:218
-#, c-format
-msgid "failed to open %s: %s\n"
-msgstr "%s କୁ ଖୋଲିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:227
-#, c-format
-msgid "failed to read %s: %s\n"
-msgstr "%s କୁ ପଢିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:236
-#, c-format
-msgid "%s empty!\n"
-msgstr "%s ଖାଲି ଅଛି!\n"
-
-#: ../alternatives.c:245
-#, c-format
-msgid "bad mode on line 1 of %s\n"
-msgstr "%s ର ଲାଇନ ୧ ରେ ତୃଟିପୂର୍ଣ୍ଣ ଧରା\n"
-
-#: ../alternatives.c:252
-#, c-format
-msgid "bad primary link in %s\n"
-msgstr "%s ରେ ତୃଟିପୂର୍ଣ୍ଣ ମୌଳିକ ସଂଯୋଗ\n"
-
-#: ../alternatives.c:264
-#, c-format
-msgid "path %s unexpected in %s\n"
-msgstr "%s ପଥ ଟି %s ରେ ଅପ୍ରତ୍ଯାଶିତ ଅଟେ\n"
-
-#: ../alternatives.c:273
-#, c-format
-msgid "missing path for slave %s in %s\n"
-msgstr "%s ପାଇଁ %s ରେ ପଥ ଟି ମିଳୁ ନାହିଁ\n"
-
-#: ../alternatives.c:283
-#, c-format
-msgid "unexpected end of file in %s\n"
-msgstr "%s ରେ ଫାଇଲ ର ଅପ୍ରତ୍ଯାଶିତ ସମାପ୍ତି\n"
-
-#: ../alternatives.c:292
-#, c-format
-msgid "path to alternate expected in %s\n"
-msgstr "%s େର ପଥ ର ପ୍ରତ୍ଯାଶିତ ବିକଲ୍ପ\n"
-
-#: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
-#: ../alternatives.c:347 ../alternatives.c:366
-#, c-format
-msgid "unexpected line in %s: %s\n"
-msgstr "%s େର ଅପ୍ରତ୍ଯାଶିତ ଲାଇନ: %s\n"
-
-#: ../alternatives.c:317
-#, c-format
-msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
-
-#: ../alternatives.c:329
-#, c-format
-msgid "numeric priority expected in %s\n"
-msgstr "%s େର ସଂାଖ୍ଯେକ ଅଗ୍ରାଧୀକାର ଟି ପ୍ରତ୍ଯାଶିତ ଅଟେ\n"
-
-#: ../alternatives.c:346
-#, c-format
-msgid "slave path expected in %s\n"
-msgstr "%s େର ଅଧୀନସ୍ଥ ପଥ ଟି ପ୍ରତ୍ଯାଶିତ ଅଟେ\n"
-
-#: ../alternatives.c:374
-#, c-format
-msgid "failed to read link %s: %s\n"
-msgstr "ସଂଯୋଗ %s କୁ ପଢିବା ରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:388
-#, c-format
-msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"ସଂଯୋଗ ଟି କୌଣସି ବିକଲ୍ପ କୁ ସୂଚାଉ ନାହିଁ -- ଧାରା କୁ ମେନ୍ଯୁାଲ ରେ ପରିବର୍ତ୍ତନ "
-"କରୁଛି\n"
-
-#: ../alternatives.c:393
-#, c-format
-msgid "link changed -- setting mode to manual\n"
-msgstr "ସଂଯୋଗ ଟି ପରିବର୍ତ୍ତିତ ହେଲା -- ଧାରା କୁ ମେନ୍ଯୁାଲ ରେ ପରିବର୍ତ୍ତନ କରୁଛି\n"
-
-#: ../alternatives.c:424 ../alternatives.c:431
-#, c-format
-msgid "would remove %s\n"
-msgstr "%s କୁ କାଢିବ\n"
-
-#: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
-#, c-format
-msgid "failed to remove link %s: %s\n"
-msgstr "%s ସଂଯୋଗ କୁ କାଢିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:448 ../alternatives.c:463
-#, c-format
-msgid "would link %s -> %s\n"
-msgstr "%s -> %s କୁ ସଂଯୋଗ କରିବ\n"
-
-#: ../alternatives.c:453 ../alternatives.c:472
-#, c-format
-msgid "failed to link %s -> %s: %s\n"
-msgstr "%s -> %s କୁ ସଂଯୋଗ କରିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:459
-#, c-format
-msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr ""
-
-#: ../alternatives.c:504
-#, c-format
-msgid "%s already exists\n"
-msgstr "%s ପୂର୍ବରୁ ରହିଛି\n"
-
-#: ../alternatives.c:506
-#, c-format
-msgid "failed to create %s: %s\n"
-msgstr "%s କୁ ସ୍ରୁଷ୍ଟି କରିବାରେ ଅସଫଳ: %s\n"
-
-#: ../alternatives.c:539
-#, c-format
-msgid "failed to replace %s with %s: %s\n"
-msgstr "%s କୁ%s ସହିତ ବଦଳାଇ ପାରିଲା ନାହିଁ: %s\n"
-
-#: ../alternatives.c:565 ../alternatives.c:571 ../alternatives.c:582
-#: ../alternatives.c:588
-#, c-format
-msgid "running %s\n"
-msgstr "%s ଚାଲୁଅଛି\n"
-
-#: ../alternatives.c:618
-#, c-format
-msgid "the primary link for %s must be %s\n"
-msgstr "%s ପାଇଁ %s ମୌଳିକ ସଂଯୋଗ ଅଟେ\n"
-
-#: ../alternatives.c:699
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "%s ଟି %s ପାଇଁ ତୃଟିପୂର୍ଣ୍ଣ ଅଟେ(%s %s)\n"
-
-#: ../alternatives.c:740
-#, c-format
-msgid "%s - status is auto.\n"
-msgstr "%s - ଏହାର ଅବସ୍ଥିତି ଟି ଅଟୋ\n"
-
-#: ../alternatives.c:742
-#, c-format
-msgid "%s - status is manual.\n"
-msgstr "%s - ଏହାର ଅବସ୍ଥିତି ଟି ମେନ୍ଯୁାଲ\n"
-
-#: ../alternatives.c:744
-#, c-format
-msgid " link currently points to %s\n"
-msgstr " ସଂଯୋଗ ଟି ବର୍ତ୍ତମାନ ପାଇଁ %s କୁ ସୂଚାଉଛି\n"
-
-#: ../alternatives.c:749
-#, c-format
-msgid "family %s "
-msgstr ""
-
-#: ../alternatives.c:750
-#, c-format
-msgid "priority %d\n"
-msgstr ""
-
-#: ../alternatives.c:752
-#, c-format
-msgid " slave %s: %s\n"
-msgstr " ଅଧୀନସ୍ଥ %s: %s\n"
-
-#: ../alternatives.c:757
-#, c-format
-msgid "Current `best' version is %s.\n"
-msgstr "ବର୍ତ୍ତମାନ ର `ସର୍ବଶ୍ରେଷ୍ଠ' ସଂସ୍କରଣ %s ଅଟେ\n"
-
-#: ../alternatives.c:788
-#, c-format
-msgid "There is %d program that provides '%s'.\n"
-msgstr "ସେଠାରେ %d ପ୍ରୋଗ୍ରାମ ଟି ଅଛି ଯାହାକି '%s' ଯୋଗାଇ ଥାଏ\n"
-
-#: ../alternatives.c:788
-#, c-format
-msgid "There are %d programs which provide '%s'.\n"
-msgstr "ସେଠାରେ %d ପ୍ରୋଗ୍ରାମ ଗୁଟିକ ଅଛନ୍ତି ଯେଉଁମାନେ '%s' ଯୋଗାଇ ଥାଆନ୍ତି\n"
-
-#: ../alternatives.c:790
-#, c-format
-msgid "  Selection    Command\n"
-msgstr "  ଚୟନ ପାଇଁ ନିର୍ଦ୍ଦେଶ\n"
-
-#: ../alternatives.c:804
-#, c-format
-msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"ବର୍ତ୍ତମାନ ର ଚୟନ[+] କୁ ରଖିବା ପାଇଁ ପ୍ରବେଶ କରନ୍ତୁ, କିମ୍ବା ଚୟନ ପାଇଁ ଉପଯୁକ୍ତ "
-"ସଂଖ୍ଯା ପ୍ରଦାନ କରନ୍ତୁ: "
-
-#: ../alternatives.c:807
-#, c-format
-msgid "\n"
-"error reading choice\n"
-msgstr "\n"
-"ଆପଣଙ୍କ ପସନ୍ଦକୁ ପଢିବା ସମୟରେ ତୃଟି\n"
-
-#: ../alternatives.c:844 ../alternatives.c:872
-#, c-format
-msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s ଟି %s ର ବିକଲ୍ପ ଭାବରେ ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ\n"
-
-#: ../alternatives.c:888
-#, c-format
-msgid "(would remove %s\n"
-msgstr "(%s କୁ କାଢିବ\n"
-
-#: ../alternatives.c:890
-#, c-format
-msgid "failed to remove %s: %s\n"
-msgstr "%s କୁ କାଢିବାରେ ବିଫଳ: %s\n"
-
-#: ../alternatives.c:1009
-#, c-format
-msgid "--family can't contain the symbol '@'\n"
-msgstr ""
-
-#: ../alternatives.c:1062
-#, c-format
-msgid "altdir %s invalid\n"
-msgstr "altdir %s ଅବୈଧ ଅଟେ\n"
-
-#: ../alternatives.c:1068
-#, c-format
-msgid "admindir %s invalid\n"
-msgstr "admindir %s ଅବୈଧ ଅଟେ\n"
-
-#: ../alternatives.c:1078
-#, c-format
-msgid "alternatives version %s\n"
-msgstr "ବିକଲ୍ପ ସଂସ୍କରଣ %s\n"
