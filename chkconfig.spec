@@ -1,15 +1,12 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
 Version: 1.11
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2
-Group: System Environment/Base
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
 Conflicts: initscripts <= 5.30-1
-Provides: alternatives = %{version}-%{release}
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -19,7 +16,6 @@ of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
 Summary: A tool to set the stop/start of system services in a runlevel
-Group: System Environment/Base
 Requires: chkconfig = %{version}-%{release}
 
 %description -n ntsysv
@@ -28,6 +24,15 @@ are started or stopped in various runlevels (instead of directly
 manipulating the numerous symbolic links in /etc/rc.d). Unless you
 specify a runlevel or runlevels on the command line (see the man
 page), ntsysv configures the current runlevel (5 if you're using X).
+
+%package -n alternatives
+Summary: A tool to maintain symbolic links determining default commands
+
+%description -n alternatives
+alternatives creates, removes, maintains and displays information about the
+symbolic links comprising the alternatives system. It is possible for several
+programs fulfilling the same or similar functions to be installed on a single
+system at the same time.
 
 %prep
 %setup -q
@@ -52,27 +57,18 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 
 %find_lang %{name}
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files -f %{name}.lang
 %defattr(-,root,root)
 %{!?_licensedir:%global license %%doc}
 %license COPYING
-%dir /etc/alternatives
 /sbin/chkconfig
-%{_sbindir}/update-alternatives
-%{_sbindir}/alternatives
 /etc/chkconfig.d
 /etc/init.d
 /etc/rc.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
-%dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
-%{_mandir}/*/update-alternatives*
-%{_mandir}/*/alternatives*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
@@ -80,7 +76,19 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/ntsysv
 %{_mandir}/*/ntsysv.8*
 
+%files -n alternatives
+%license COPYING
+%dir /etc/alternatives
+%{_sbindir}/update-alternatives
+%{_sbindir}/alternatives
+%{_mandir}/*/update-alternatives*
+%{_mandir}/*/alternatives*
+%dir /var/lib/alternatives
+
 %changelog
+* Thu Mar 14 2019 Peter Robinson <pbrobinson@fedoraproject.org> 1.11-2
+- Split out alternatives into it's own package
+
 * Mon Sep 10 2018 Lukas Nykryn <lnykryn@redhat.com> - 1.11-1
 - Add tests for --add/remove-slave and use beakerlib
 - alternatives: add-slave and remove-slave
