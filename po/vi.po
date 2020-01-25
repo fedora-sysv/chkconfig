@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # notting <notting@redhat.com>, 2011
 # pclouds <pclouds@gmx.net>, 2002
@@ -10,16 +10,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:08+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Vietnamese (http://www.transifex.com/projects/p/fedora/language/vi/)\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:08-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Vietnamese (http://www.transifex.com/projects/p/fedora/"
-"language/vi/)\n"
-"Language: vi\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -29,11 +28,11 @@ msgstr "%s phiên bản %s - Bản quyền (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
-"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU "
-"Public License.\n"
+"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU"
+" Public License.\n"
 
 #: ../chkconfig.c:45
 #, c-format
@@ -75,8 +74,7 @@ msgstr ""
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -96,8 +94,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"dịch vụ %s hỗ trợ chkconfig, nhưng không được dùng trong bất kỳ runlevel nào "
-"(chạy 'chkconfig --add %s')\n"
+"dịch vụ %s hỗ trợ chkconfig, nhưng không được dùng trong bất kỳ runlevel nào"
+" (chạy 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:75
 #, c-format
@@ -247,8 +245,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU "
-"Public License.\n"
+"Chương trình này có thể được phân phối tự do theo những điều khoản trong GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -518,9 +515,11 @@ msgstr ""
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "lỗi đọc lựa chọn\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

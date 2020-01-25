@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # notting <notting@redhat.com>, 2011
 # Omshivaprakash <omshivprakash@gmail.com>, 2007
@@ -14,16 +14,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:04+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Kannada (http://www.transifex.com/projects/p/fedora/language/kn/)\n"
+"Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:04-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Kannada (http://www.transifex.com/projects/p/fedora/language/"
-"kn/)\n"
-"Language: kn\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -33,8 +32,8 @@ msgstr "%s ಆವೃತ್ತಿ %s - ಹಕ್ಕು (C) 1997-2000 Red Hat, Inc
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "ಇದನ್ನು GNU ಸಾರ್ವತ್ರಿಕ ಪರವಾನಗಿಯಡಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
 
 #: ../chkconfig.c:45
@@ -77,15 +76,13 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
 "ಸೂಚನೆ: ಈ ನೀಡಿಕೆಯು SysV ಸೇವೆಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ ಮತ್ತು ಸ್ಥಳೀಯ systemd\n"
-"      ಸೇವೆಗಳನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ. SysV ಸಂರಚನಾ ದತ್ತಾಂಶವು ಸ್ಥಳೀಯ systemd "
-"ಸಂರಚನೆಯಿಂದ\n"
+"      ಸೇವೆಗಳನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ. SysV ಸಂರಚನಾ ದತ್ತಾಂಶವು ಸ್ಥಳೀಯ systemd ಸಂರಚನೆಯಿಂದ\n"
 "      ತಿದ್ದಿ ಬರೆಯಲ್ಪಡಬಹುದು.\n"
 "\n"
 
@@ -260,8 +257,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯ ಕರಾರುಗಳಡಿಯಲ್ಲಿ ಉಚಿತವಾಗಿ ಮರು ಹಂಚಿಕೆ "
-"ಮಾಡಬಹುದಾಗಿದೆ.\n"
+"ಇದನ್ನು ಜಿ ಎನ್ ಯು ಸಾರ್ವರ್ತಿಕ ಪರವಾನಗಿಯ ಕರಾರುಗಳಡಿಯಲ್ಲಿ ಉಚಿತವಾಗಿ ಮರು ಹಂಚಿಕೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -532,9 +528,11 @@ msgstr ""
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "ಆಯ್ಕೆಯನ್ನು ಓದುವಲ್ಲಿ ದೋಷ\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

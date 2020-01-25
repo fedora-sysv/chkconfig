@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Bettina De Monti <bdemonti@redhat.it>, 2000
 # Francesco D'Aluisio <fdaluisio@fedoraproject.org>, 2011
@@ -12,20 +12,21 @@
 # Lorenzo Stobbione <lorenzo.stobbione@clsengineering.it>, 2005
 # Lukáš Nykrýn <lnykryn@redhat.com>, 2013
 # notting <notting@redhat.com>, 2011
+# Elena Metelli <byruit@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2017-10-26 10:30+0000\n"
+"Last-Translator: Elena Metelli <byruit@gmail.com>\n"
+"Language-Team: Italian <trans-it@lists.fedoraproject.org>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:04-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Italian <trans-it@lists.fedoraproject.org>\n"
-"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -35,8 +36,8 @@ msgstr "%s versione %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
 "Questo software è liberamente distribuibile secondo i termini della GNU "
 "Public License.\n"
@@ -49,12 +50,12 @@ msgstr "utilizzo: %s [nome]⏎\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "utilizzo: %s <enable|disable|is-enabled> [nome]\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "uso:   %s [--list] [--type·<tipo>] [nome]\n"
+msgstr "uso:   %s [--list] [--type·<type>] [nome]\n"
 
 #: ../chkconfig.c:50
 #, c-format
@@ -81,16 +82,13 @@ msgstr "         %s [--level <livelli>] [--type <tipo>] <nome> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
-"Nota: Questo output mostra i servizi SysV solo e non iclude i servizi nativi."
-"\n"
-"      servizi systemd. Dati di configurazione SysV posso essere sovrascritti "
-"dai nativi\n"
+"Nota: Questo output mostra i servizi SysV solo e non iclude i servizi nativi.\n"
+"      servizi systemd. Dati di configurazione SysV posso essere sovrascritti dai nativi\n"
 "      configurazione systemd.\n"
 "\n"
 
@@ -102,9 +100,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Se desideri elencare i servizi systemd usa 'systemctl list-unit-files'.⏎ Per "
-"visualizzare i servizi abilitati in un target particolare usa ⏎ 'systemctl "
-"list-dependencies [target]'. \n"
+"Se desideri elencare i servizi systemd usa 'systemctl list-unit-files'.⏎ Per visualizzare i servizi abilitati in un target particolare usa ⏎ 'systemctl list-dependencies [target]'. \n"
 "\n"
 
 #: ../chkconfig.c:73
@@ -173,8 +169,8 @@ msgstr "--type deve essere 'sysv' o 'xinetd'\n"
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
-"può essere specificata solo una delle opzioni --list, --add, --del o --"
-"override\n"
+"può essere specificata solo una delle opzioni --list, --add, --del o "
+"--override\n"
 
 #: ../chkconfig.c:836
 #, c-format
@@ -248,7 +244,7 @@ msgstr "impossibile determinare il runlevel attuale\n"
 #: ../leveldb.c:840
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr ""
+msgstr "Impossibile impostare il contesto SELinux per %s: %s\n"
 
 #: ../leveldb.c:864
 #, c-format
@@ -266,14 +262,13 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Questo software è liberamente distribuibile secondo i termini della GNU "
-"Public License.\n"
+"Questo software è liberamente distribuibile secondo i termini della GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso:   alternatives --install <link> <nome> <percorso> <priorità>\n"
+msgstr "uso:   alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:71
 #, c-format
@@ -283,7 +278,7 @@ msgstr "                    [--initscript <servizio>]\n"
 #: ../alternatives.c:72
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "--family <family>\n"
 
 #: ../alternatives.c:73
 #, c-format
@@ -330,6 +325,7 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"opzioni comuni: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:82
 #, c-format
@@ -395,7 +391,7 @@ msgstr "riga imprevista in %s: %s\n"
 #: ../alternatives.c:317
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "'@' di chiusura mancante o famiglia vuota in %s\n"
 
 #: ../alternatives.c:329
 #, c-format
@@ -446,7 +442,7 @@ msgstr "impossibile creare il link %s -> %s: %s\n"
 #: ../alternatives.c:459
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr ""
+msgstr "impossibile collegare %s ->%s: %s esiste e non è un link simbolico\n"
 
 #: ../alternatives.c:504
 #, c-format
@@ -497,12 +493,12 @@ msgstr " il link attualmente punta a %s\n"
 #: ../alternatives.c:749
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "famiglia %s"
 
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "priorità %d\n"
 
 #: ../alternatives.c:752
 #, c-format
@@ -538,9 +534,11 @@ msgstr ""
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "errore durante la lettura della scelta\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872
@@ -561,7 +559,7 @@ msgstr "impossibile rimuovere %s: %s\n"
 #: ../alternatives.c:1009
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family non può contenere il simbolo '@'\n"
 
 #: ../alternatives.c:1062
 #, c-format

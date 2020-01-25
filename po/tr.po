@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003
 # Egemen Metin Turan <mturan@aegee-ankara.org>, 2007
@@ -10,22 +10,21 @@
 # ismail yenigül <ismail.yenigul@surgate.com>, 2013
 # notting <notting@redhat.com>, 2011
 # Onuralp SEZER <thunderbirdtr@gmail.com>, 2012
-# Lukáš Nykrýn <lnykryn@redhat.com>, 2017. #zanata
+# Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2019-05-13 12:35+0000\n"
+"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/fedora/language/tr/)\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-27 05:46-0500\n"
-"Last-Translator: Altan Unsal <altanunsal@gmail.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/fedora/language/"
-"tr/)\n"
-"Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -35,30 +34,30 @@ msgstr "%s sürüm %s - Telif Hakkı (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
 "Bu program GNU Kamu Lisansı koşulları altında serbestçe dağıtılabilir.\n"
 
 #: ../chkconfig.c:45
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr "kullanım: %s[isim]\n"
+msgstr "kullanım:   %s [isim]\n"
 
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "kullanım:   %s <enable|disable|is-enabled> [isim] \n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "kullanımı:   %s [--list]  [--type <tip>] [isim]\n"
+msgstr "kullanım:   %s [--list] [--type <type>] [isim]\n"
 
 #: ../chkconfig.c:50
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "             %s --add <isim>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:51
 #, c-format
@@ -80,29 +79,27 @@ msgstr "         %s [--level <düzeyler>] [--type <tip>] <isim> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
-"Not:Bu çıktı sadece SysV servislerini gösterir, systemd servislerini içermez."
-" \n"
+"Not:Bu çıktı sadece SysV servislerini gösterir, systemd servislerini içermez. \n"
 "SyssV yapılandırması systemd yapılandırması tarafından ezilebilir.\n"
 "\n"
 
 #: ../chkconfig.c:65
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
 "      To see services enabled on particular target use\n"
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Systemd servislerini listelemek istiyorsanız 'systemctl list-unit-files' "
-"komutunu kullanınız.\n"
-"Belirli hedef için devreye konulmuş olan servisleri görmek için  'systemctl "
-"list-dependencies [hedef]' komutunu kullanın."
+"      Systemd servislerini listelemek için 'systemctl list-unit-files' kullan.\n"
+"      Belirli hedef kullanımda etkin olan hizmetleri görmek için\n"
+"       'systemctl list-dependencies [hedef]'.\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -243,9 +240,9 @@ msgid "cannot determine current run level\n"
 msgstr "şu anki çalışma düzeyi belirlenemiyor\n"
 
 #: ../leveldb.c:840
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "%s: %s için selinux içeriği ayarlanamadı"
+msgstr "%s için selinux bağlamı ayarlanamadı: %s\n"
 
 #: ../leveldb.c:864
 #, c-format
@@ -312,9 +309,9 @@ msgid "       alternatives --set <name> <path>\n"
 msgstr "       alternatives --set <isim> <yol>\n"
 
 #: ../alternatives.c:79
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --list\n"
-msgstr "alternatives --list"
+msgstr "       alternatifleri --list\n"
 
 #: ../alternatives.c:80
 #, c-format
@@ -440,9 +437,10 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "%s->%s sembolik bağı yapılamadı: %s\n"
 
 #: ../alternatives.c:459
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "%s -> %s sembolik bağı yapılamadı: %s mevcut ve sembolik bağ değil"
+msgstr ""
+"%s bağlantısı başarısız oldu -> %s: %s var ve bir sembolik bağlantı değil\n"
 
 #: ../alternatives.c:504
 #, c-format
@@ -498,7 +496,7 @@ msgstr ""
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "öncelik %d\n"
 
 #: ../alternatives.c:752
 #, c-format
@@ -534,9 +532,11 @@ msgstr ""
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "seçimi okumada hata\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

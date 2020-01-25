@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # notting <notting@redhat.com>, 2011
 # tommi <tommi@tommi.org>, 2011
@@ -10,16 +10,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:03+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Icelandic (http://www.transifex.com/projects/p/fedora/language/is/)\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:03-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Icelandic (http://www.transifex.com/projects/p/fedora/"
-"language/is/)\n"
-"Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -29,8 +28,8 @@ msgstr "%s útgáfa %s - Höfundarréttur (C) 1997-2000 Red Hat HF.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 
 #: ../chkconfig.c:45
@@ -73,15 +72,13 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
 "Athugið: Úttakið sýnir einungis SysV þjónustur og ekki fullgildar\n"
-"      systemd þjónustur. SysV stillingar geta verið yfirskrifaðar af "
-"fullgildum\n"
+"      systemd þjónustur. SysV stillingar geta verið yfirskrifaðar af fullgildum\n"
 "      systemd þjónustum.\n"
 "\n"
 
@@ -251,7 +248,8 @@ msgstr "alternatives útgáfa %s - Höfundarréttur (C) 1997-2000 Red Hat HF.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
+msgstr ""
+"Þessu má dreifa samkvæmt skilmálum GNU Public License.\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -519,9 +517,11 @@ msgstr "'Enter' til að halda núverandi vali[+] eða sláðu inn númer: "
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "villa við lestur vals\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

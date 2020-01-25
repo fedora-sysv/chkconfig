@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ayesha Akhtar <ayesha@ankur.org.bd>, 2012
 # Mahay Alam Khan <mak@ankur.org.bd>, 2012
@@ -17,15 +17,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:02-0500\n"
+"PO-Revision-Date: 2015-01-05 06:02+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Bengali <info@ankur.org.bd>\n"
 "Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -35,8 +35,8 @@ msgstr "%s সংস্করণ %s - স্বত্বাধিকার (C) �
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "এটি GNU Public License-র শর্ত অনুযায়ী বিতরণের জন্য অনুমোদিত।\n"
 
 #: ../chkconfig.c:45
@@ -79,15 +79,13 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
 "উল্লেখ্য: এই ফলাফলের মধ্যে শুধুমাত্র SysV পরিসেবাগুলি প্রদর্শন করা হয় ও\n"
-"      নেটিভ systemd পরিসেবা অন্তর্ভ করা হয় না। SysV কনফিগারেশনের তথ্যগুলির "
-"পরিবর্তে নেটিভ\n"
+"      নেটিভ systemd পরিসেবা অন্তর্ভ করা হয় না। SysV কনফিগারেশনের তথ্যগুলির পরিবর্তে নেটিভ\n"
 "      systemd কনফিগারেশন লেখা হতে পারে।\n"
 "\n"
 
@@ -258,7 +256,8 @@ msgstr "বিকল্প সংস্করণ %s - কপিরাইট (C) 
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "এটি GNU পাবলিক লাইসেন্সের শর্ত অনুযায়ী বিতরণের জন্য অনুমোদিত।\n"
+msgstr ""
+"এটি GNU পাবলিক লাইসেন্সের শর্ত অনুযায়ী বিতরণের জন্য অনুমোদিত।\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -525,14 +524,16 @@ msgstr "  নির্বাচন    কমান্ড\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ "
-"করুন: "
+"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ"
+" করুন: "
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "নির্বাচিত মান পড়তে সমস্যা\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872
