@@ -1,27 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
 # notting <notting@redhat.com>, 2011
 # Yuri Chornoivan <yurchor@ukr.net>, 2011-2013
 # Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-04-05 02:01-0400\n"
+"PO-Revision-Date: 2017-02-27 01:16+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Zanata 3.9.6\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -31,8 +31,8 @@ msgstr "%s версія %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
 
 #: ../chkconfig.c:45
@@ -43,7 +43,7 @@ msgstr "користування:   %s [назва]\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "Користування:   %s <enable|disable|is-enabled> [назва] \n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -75,8 +75,7 @@ msgstr "         %s [--level <рівні>] [--type <тип] <служба> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -93,10 +92,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Якщо вам потрібен список служб systemd, скористайтеся командою "
-"«systemctl list-unit-files».\n"
-"      Щоб переглянути служби, увімкнені для певної мети, скористайтеся "
-"командою\n"
+"      Якщо вам потрібен список служб systemd, скористайтеся командою «systemctl list-unit-files».\n"
+"      Щоб переглянути служби, увімкнені для певної мети, скористайтеся командою\n"
 "      «systemctl list-dependencies [мета]».\n"
 "\n"
 
@@ -274,7 +271,7 @@ msgstr "                    [--initscript <служба>]\n"
 #: ../alternatives.c:72
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <сімейство>]\n"
 
 #: ../alternatives.c:73
 #, c-format
@@ -321,6 +318,8 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"загальні параметри: --verbose --test --help --usage --version --keep-"
+"missing\n"
 
 #: ../alternatives.c:82
 #, c-format
@@ -386,7 +385,7 @@ msgstr "неочікуваний рядок у %s: %s\n"
 #: ../alternatives.c:317
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "пропущено завершальний символ «@» або порожнє сімейство у %s\n"
 
 #: ../alternatives.c:329
 #, c-format
@@ -491,12 +490,12 @@ msgstr " посилання наразі вказує на %s\n"
 #: ../alternatives.c:749
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "сімейство %s "
 
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "пріоритетність %d\n"
 
 #: ../alternatives.c:752
 #, c-format
@@ -530,9 +529,11 @@ msgstr "Enter - зберегти поточний вибір[+], або вкаж
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "помилка читання вибору\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872
@@ -553,7 +554,7 @@ msgstr "не вдається видалити %s: %s\n"
 #: ../alternatives.c:1009
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family не може містити символу «@»\n"
 
 #: ../alternatives.c:1062
 #, c-format

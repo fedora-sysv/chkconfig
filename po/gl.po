@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Fran Diéguez <frandieguez@ubuntu.com>, 2012
 # notting <notting@redhat.com>, 2011
@@ -11,16 +11,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:03+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/fedora/language/gl/)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:03-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Galician (http://www.transifex.com/projects/p/fedora/language/"
-"gl/)\n"
-"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -30,8 +29,8 @@ msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
 "Isto pódese redistribuír libremente baixo os termos da Licencia Pública de "
 "GNU.\n"
@@ -76,15 +75,13 @@ msgstr "         %s [--level <niveis>] [--type <tipo>] <nome> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
 "Nota: Isto só mostra os servizos de SysV e non inclúen os \n"
-"      servizos de systemd. Os datos de configuración de SysV poden ser "
-"sobrescritos pola\n"
+"      servizos de systemd. Os datos de configuración de SysV poden ser sobrescritos pola\n"
 "      configuración nativa de systemd.\n"
 "\n"
 
@@ -96,8 +93,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Se desexa enumerar os servizos de systemd empregue «systemctl list-unit-"
-"files».\n"
+"Se desexa enumerar os servizos de systemd empregue «systemctl list-unit-files».\n"
 "Para ver os servizos activados sobre un destino en concreto, empregue\n"
 "«systemctl list-dependencies [destino]».\n"
 
@@ -531,9 +527,11 @@ msgstr ""
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "produciuse un erro ao ler a elección\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

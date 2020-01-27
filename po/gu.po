@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ankit Patel <ankit644@yahoo.com>, 2011
 # Ankit Patel <ankit@redhat.com>, 2004-2005,2007-2009
@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:03-0500\n"
+"PO-Revision-Date: 2015-01-05 06:03+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Gujarati <trans-gu@lists.fedoraproject.org>\n"
 "Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -31,8 +31,8 @@ msgstr "%s આવૃત્તિ %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "આ કદાચ GNU Public License ની શરતો હેઠળ મુક્તપણે વહેંચી શકાશે.\n"
 
 #: ../chkconfig.c:45
@@ -75,14 +75,12 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
 "\n"
-"નોંધ: આ આઉટપુટ માત્ર SysV સેવાઓ જ બતાવે છે અને નેટીવ systemd સેવાઓ સમાવતું "
-"નથી. SysV રૂપરેખાંકન માહીતિ નેટીવ systemd રૂપરેખાંકન દ્વારા ફરીથી લખાઇ શકે.\n"
+"નોંધ: આ આઉટપુટ માત્ર SysV સેવાઓ જ બતાવે છે અને નેટીવ systemd સેવાઓ સમાવતું નથી. SysV રૂપરેખાંકન માહીતિ નેટીવ systemd રૂપરેખાંકન દ્વારા ફરીથી લખાઇ શકે.\n"
 "\n"
 
 #: ../chkconfig.c:65
@@ -93,8 +91,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      જો તમે systemd સેવાઓની યાદી કરવા માંગતા હોય તો 'systemctl list-unit-"
-"files' વાપરો.\n"
+"      જો તમે systemd સેવાઓની યાદી કરવા માંગતા હોય તો 'systemctl list-unit-files' વાપરો.\n"
 "      ખાસ લક્ષ્ય પર સેવાઓને સક્રિય જોવા માટે \n"
 "      'systemctl list-dependencies [target]' વાપરો.\n"
 "\n"
@@ -256,7 +253,8 @@ msgstr "વૈકલ્પિક આવૃત્તિ %s - Copyright (C) 2001 R
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "આ કદાચ GNU Public License ની શરતો હેઠળ મુક્તપણે વહેંચી શકાશે.\n"
+msgstr ""
+"આ કદાચ GNU Public License ની શરતો હેઠળ મુક્તપણે વહેંચી શકાશે.\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -525,9 +523,11 @@ msgstr "વર્તમાન પસંદગી રાખવા માટે �
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "પસંદ વાંચવામાં ભૂલ\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

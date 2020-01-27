@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Krishnababu Krothapalli <kkrothap@redhat.com>, 2007-2009
 # Krishnababu Krothapalli <krisnababu@gmail.com>, 2011-2012
@@ -12,16 +12,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2015-01-05 06:07+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Telugu (http://www.transifex.com/projects/p/fedora/language/te/)\n"
+"Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:07-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Telugu (http://www.transifex.com/projects/p/fedora/language/"
-"te/)\n"
-"Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -31,8 +30,8 @@ msgstr "%s ప్రతి %s - కాపీహక్కు (C) 1997-2000 Red Ha
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "GNU పబ్లిక్ లైసెన్సుకింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
 
 #: ../chkconfig.c:45
@@ -75,8 +74,7 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -95,8 +93,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      మీరు systemd సేవలను జాబితా చేయవలెనంటే 'systemctl list-unit-files' "
-"వుపయోగించండి.\n"
+"      మీరు systemd సేవలను జాబితా చేయవలెనంటే 'systemctl list-unit-files' వుపయోగించండి.\n"
 "      ఫలానా లక్ష్యముపై చేతనపరచిన సేవలను చూడుటకు\n"
 "      'systemctl list-dependencies [target]' వుపయోగించండి.\n"
 "\n"
@@ -257,7 +254,8 @@ msgstr "ప్రత్యామ్నాయ ప్రతి %s - కాపీ�
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "GNU పబ్లిక్ లైసెన్సు కింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
+msgstr ""
+"GNU పబ్లిక్ లైసెన్సు కింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -522,14 +520,16 @@ msgstr "  ఎన్నిక    ఆదేశం\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"ప్రస్తుత ఎన్నికలను[+] ఉంచటానికి, లేదా ఎన్నిక సంఖ్యను ముద్రించటానికి ప్రవేశం: "
-""
+"ప్రస్తుత ఎన్నికలను[+] ఉంచటానికి, లేదా ఎన్నిక సంఖ్యను ముద్రించటానికి ప్రవేశం:"
+" "
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "ఐచ్ఛికాన్ని చదవటంలో దోషం\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

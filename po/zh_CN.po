@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Christopher Meng <cickumqt@gmail.com>, 2013
 # Huan Chen <chenhuan126@126.com>, 2011
@@ -10,20 +10,21 @@
 # Sarah Wang <sarahs@redhat.com>, 2003, 2004, 2005
 # Wei Liu <LLIU@REDHAT.COM>, 2012
 # Leah Liu <lliu@redhat.com>, 2015. #zanata
+# Charles Lee <lchopn@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2017-07-17 07:12+0000\n"
+"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
+"Language-Team: Chinese (China) <trans-zh_cn@lists.fedoraproject.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-09-22 07:09-0400\n"
-"Last-Translator: Leah Liu <lliu@redhat.com>\n"
-"Language-Team: Chinese (China) <trans-zh_cn@lists.fedoraproject.org>\n"
-"Language: zh-CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -33,8 +34,8 @@ msgstr "%s 版本 %s - 版权 (C) 1997-2000 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr "在 GNU 公共许可条款下，本软件可以免费重新发布。\n"
 
 #: ../chkconfig.c:45
@@ -45,7 +46,7 @@ msgstr "用法：%s [名称]\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "用法： %s <enable|disable|is-enabled> [name] \n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -77,8 +78,7 @@ msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -255,7 +255,8 @@ msgstr "alternatives（备用）版本 %s - 版权 (C) 2001 红帽公司\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在 GNU 公共许可条款下，本软件可被自由地重发行。\n"
+msgstr ""
+"在 GNU 公共许可条款下，本软件可被自由地重发行。\n"
 "\n"
 
 #: ../alternatives.c:70
@@ -523,9 +524,11 @@ msgstr "按 Enter 保留当前选项[+]，或者键入选项编号："
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "选项读取出错\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Bernd Bartmann <Bernd.Bartmann@sohanet.de>, 2004
 # Bernd Groh <bgroh@redhat.com>, 2003, 2004
@@ -14,21 +14,22 @@
 # Roman Spirgi <bigant@fedoraproject.org>, 2012
 # Ronny Buchmann <ronny-vlug@vlugnet.org>, 2005
 # Timo Trinks <ttrinks@redhat.com>, 2007
-# Roman Spirgi <rspirgi@gmail.com>, 2015. #zanata
+# Roman Spirgi <bigant@fedoraproject.org>, 2015. #zanata
+# Roman Spirgi <bigant@fedoraproject.org>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2017-06-14 03:05+0000\n"
+"Last-Translator: Roman Spirgi <bigant@fedoraproject.org>\n"
+"Language-Team: German <trans-de@lists.fedoraproject.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-08-19 02:48-0400\n"
-"Last-Translator: Roman Spirgi <rspirgi@gmail.com>\n"
-"Language-Team: German <trans-de@lists.fedoraproject.org>\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
@@ -38,11 +39,11 @@ msgstr "%s Version %s - Copyright (C) 1997-2008 Red Hat, Inc.\n"
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
 msgstr ""
-"Kostenlose Weitergabe unter den Bedingungen der GNU Public License erlaubt."
-"\n"
+"Kostenlose Weitergabe unter den Bedingungen der GNU Public License "
+"erlaubt.\n"
 
 #: ../chkconfig.c:45
 #, c-format
@@ -52,7 +53,7 @@ msgstr "Aufruf:   %s [Name]\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "Verwendung:   %s <enable|disable|is-enabled> [name] \n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -84,8 +85,7 @@ msgstr "         %s [--level <levels>] [--type <type>] <Name> %s\n"
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -103,10 +103,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Verwenden Sie zum Auflisten von systemd-Diensten 'systemctl list-unit-"
-"files'.\n"
-"      Verwenden Sie zum Auflisten von Diensten, die auf einem bestimmten "
-"Ziel aktiviert sind, \n"
+"      Verwenden Sie zum Auflisten von systemd-Diensten 'systemctl list-unit-files'.\n"
+"      Verwenden Sie zum Auflisten von Diensten, die auf einem bestimmten Ziel aktiviert sind, \n"
 "      'systemctl list-dependencies [Ziel]'.\n"
 "\n"
 
@@ -132,8 +130,7 @@ msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
 #: ../chkconfig.c:86
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
-"Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
+msgstr "Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
 
 #: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
 msgid "on"
@@ -286,7 +283,7 @@ msgstr "                    [--initscript <Dienst>]\n"
 #: ../alternatives.c:72
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:73
 #, c-format
@@ -333,6 +330,8 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"Allgemeine Optionen: --verbose --test --help --usage --version --keep-"
+"missing\n"
 
 #: ../alternatives.c:82
 #, c-format
@@ -398,7 +397,7 @@ msgstr "Unerwartete Zeile in %s: %s\n"
 #: ../alternatives.c:317
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "»@« fehlt am Ende oder die Familie ist leer bei %s\n"
 
 #: ../alternatives.c:329
 #, c-format
@@ -500,12 +499,12 @@ msgstr " Link verweist auf %s\n"
 #: ../alternatives.c:749
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "Familie %s"
 
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "Priorität %d\n"
 
 #: ../alternatives.c:752
 #, c-format
@@ -536,14 +535,16 @@ msgstr "  Auswahl    Befehl\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Eingabe um die vorgegebene Auswahl[+] zu behalten, oder geben Sie die Nummer "
-"an:"
+"Eingabe um die vorgegebene Auswahl[+] zu behalten, oder geben Sie die Nummer"
+" an:"
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "Fehler beim Lesen der Auswahl\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872
@@ -564,7 +565,7 @@ msgstr "Fehler beim Entfernen von %s: %s\n"
 #: ../alternatives.c:1009
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family darf das »@«-Symbol nicht enthalten\n"
 
 #: ../alternatives.c:1062
 #, c-format

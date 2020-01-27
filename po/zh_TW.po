@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ben Wu <hpwu@redhat.com>, 2002, 2003
 # Cheng-Chia Tseng <pswo10680@gmail.com>, 2011
@@ -10,32 +10,33 @@
 # notting <notting@redhat.com>, 2011
 # Terry Chuang <tchuang@redhat.com>, 2008-2009,2012-2013
 # Walter Cheuk <wwycheuk@gmail.com>, 2007
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-29 14:31+0200\n"
+"PO-Revision-Date: 2017-09-05 06:11+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Chinese (Taiwan) <trans-zh_TW@lists.fedoraproject.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-01-05 06:02-0500\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Chinese (Taiwan) <trans-zh_TW@lists.fedoraproject.org>\n"
-"Language: zh-TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: ../chkconfig.c:40
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s 版本 %s - 版權所有 (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s 版本 %s - 著作權所有 (C) 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:41
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public License."
-"\n"
-msgstr "在遵守 GNU 通用公共許可證 (GPL) 的條款下，可以自由散布這個程式。\n"
+"This may be freely redistributed under the terms of the GNU Public "
+"License.\n"
+msgstr "在遵守 GNU 通用公共授權 (GPL) 的條款下，可以自由散布這個程式。\n"
 
 #: ../chkconfig.c:45
 #, c-format
@@ -45,40 +46,39 @@ msgstr "用法：  %s [name]\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "用法：  %s <enable|disable|is-enabled> [name] \n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "用法：%s [--list] [--type <類型>] [名稱]\n"
+msgstr "用法：%s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:50
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <名稱>\n"
+msgstr "         %s --add <name>\n"
 
 #: ../chkconfig.c:51
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <名稱>\n"
+msgstr "         %s --del <name>\n"
 
 #: ../chkconfig.c:52
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <名稱>\n"
+msgstr "         %s --override <name>\n"
 
 #: ../chkconfig.c:53
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <層級>] [--type <類型>] <名稱> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:61
 #, c-format
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by "
-"native\n"
+"      systemd services. SysV configuration data might be overridden by native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -105,7 +105,7 @@ msgstr ""
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s 服務支援 chkconfig，但未向任何執行層級註冊 (請執行「chkconfig --add %s」)\n"
+msgstr "%s 服務支援 chkconfig，但未向任何執行層級註冊（請執行「chkconfig --add %s」）\n"
 
 #: ../chkconfig.c:75
 #, c-format
@@ -180,7 +180,7 @@ msgstr "確定"
 
 #: ../ntsysv.c:94
 msgid "Back"
-msgstr "上一步"
+msgstr "返回"
 
 #: ../ntsysv.c:94
 msgid "Cancel"
@@ -212,7 +212,7 @@ msgstr "您必須是 root 才能執行 %s。\n"
 #: ../ntsysv.c:448
 #, c-format
 msgid "bad argument to --levels\n"
-msgstr "在 --levels 處有不當參數\n"
+msgstr "在 --levels 處有不良引數\n"
 
 #: ../ntsysv.c:455
 #, c-format
@@ -227,7 +227,7 @@ msgstr "無法開啟 %s/init.d：%s\n"
 #: ../leveldb.c:717
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "設定全域設定值 %s 失敗：%s\n"
+msgstr "設定 glob 樣式 %s：%s\n"
 
 #: ../leveldb.c:760
 #, c-format
@@ -237,7 +237,7 @@ msgstr "無法取得目前的執行層級\n"
 #: ../leveldb.c:840
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr ""
+msgstr "無法為 %s 設定 selinux 情境：%s\n"
 
 #: ../leveldb.c:864
 #, c-format
@@ -247,59 +247,59 @@ msgstr "建立 %s 符號連結失敗：%s\n"
 #: ../alternatives.c:68
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives 版本 %s - 版權所有 (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives 版本 %s - 著作權所有 (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:69
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在遵守 GNU 通用公共許可證 (GPL) 的條款下，可以自由的散佈這個程式。\n"
+msgstr "在遵守 GNU 通用公共授權 (GPL) 的條款下，可以自由的散佈這個程式。\n"
 
 #: ../alternatives.c:70
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "用法：alternatives --install <連結> <名稱> <路徑> <優先順序>\n"
+msgstr "用法：alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:71
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <服務名稱>]\n"
+msgstr "                    [--initscript <service>]\n"
 
 #: ../alternatives.c:72
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:73
 #, c-format
 msgid "                    [--slave <link> <name> <path>]*\n"
-msgstr "                    [--slave <連結> <名稱> <路徑>]*\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:74
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <名稱> <路徑>\n"
+msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:75
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <名稱>\n"
+msgstr "       alternatives --auto <name>\n"
 
 #: ../alternatives.c:76
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <名稱>\n"
+msgstr "       alternatives --config <name>\n"
 
 #: ../alternatives.c:77
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <名稱>\n"
+msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:78
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <名稱> <路徑>\n"
+msgstr "       alternatives --set <name> <path>\n"
 
 #: ../alternatives.c:79
 #, c-format
@@ -315,17 +315,17 @@ msgstr "\n"
 #, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
-msgstr ""
+msgstr "常用選項：--verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:82
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <目錄> --admindir <目錄>\n"
+msgstr "                --altdir <directory> --admindir <directory>\n"
 
 #: ../alternatives.c:214
 #, c-format
 msgid "reading %s\n"
-msgstr "讀取中 %s\n"
+msgstr "正在讀取 %s\n"
 
 #: ../alternatives.c:218
 #, c-format
@@ -340,58 +340,58 @@ msgstr "無法讀取 %s：%s\n"
 #: ../alternatives.c:236
 #, c-format
 msgid "%s empty!\n"
-msgstr "%s 是空的！\n"
+msgstr "%s 空白！\n"
 
 #: ../alternatives.c:245
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s 的第一行有不當的模式\n"
+msgstr "%s 的第一列模式不良\n"
 
 #: ../alternatives.c:252
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "%s 有不當的主要連結\n"
+msgstr "%s 的主要連結不良\n"
 
 #: ../alternatives.c:264
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%s 路徑是錯誤的在 %s 中\n"
+msgstr "%2$s 中沒有預期 %1$s 路徑\n"
 
 #: ../alternatives.c:273
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "遺失從屬裝置 %s 的路徑在 %s 中\n"
+msgstr "遺失 %2$s 中的從屬 %1$s 路徑\n"
 
 #: ../alternatives.c:283
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "在 %s 中的檔案結尾有錯誤\n"
+msgstr "%s 中沒有預期檔案結尾\n"
 
 #: ../alternatives.c:292
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "在 %s 中請輸入至 alternate 的路徑\n"
+msgstr "%s 中有預期 alternate 路徑\n"
 
 #: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
 #: ../alternatives.c:347 ../alternatives.c:366
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s 中有錯誤的行列：%s\n"
+msgstr "%s 中有未預期的一列：%s\n"
 
 #: ../alternatives.c:317
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "關閉用的 '@' 遺失，或家族在 %s 中空白\n"
 
 #: ../alternatives.c:329
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "請輸入數值的優先順序到 %s\n"
+msgstr "%s 中預期有優先度數字\n"
 
 #: ../alternatives.c:346
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "請輸入從屬裝置路徑到 %s\n"
+msgstr "%s 中預期有從屬路徑\n"
 
 #: ../alternatives.c:374
 #, c-format
@@ -401,7 +401,7 @@ msgstr "無法讀取連結 %s：%s\n"
 #: ../alternatives.c:388
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "連結未指向任何 alternative -- 設定為手動模式\n"
+msgstr "連結未指向任何替代選項 -- 設定為手動模式\n"
 
 #: ../alternatives.c:393
 #, c-format
@@ -411,17 +411,17 @@ msgstr "連結已改變 -- 設定為手動模式\n"
 #: ../alternatives.c:424 ../alternatives.c:431
 #, c-format
 msgid "would remove %s\n"
-msgstr "將移除 %s\n"
+msgstr "會移除 %s\n"
 
 #: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "移除 %s 的連結失敗：%s\n"
+msgstr "移除 %s 連結失敗：%s\n"
 
 #: ../alternatives.c:448 ../alternatives.c:463
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr "將連結 %s -> %s\n"
+msgstr "會連結 %s -> %s\n"
 
 #: ../alternatives.c:453 ../alternatives.c:472
 #, c-format
@@ -431,7 +431,7 @@ msgstr "建立 %s -> %s 的連結失敗：%s\n"
 #: ../alternatives.c:459
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr ""
+msgstr "無法連結 %s -> %s：%s 已存在，而且不是符號連結\n"
 
 #: ../alternatives.c:504
 #, c-format
@@ -462,7 +462,7 @@ msgstr "%s 的主要連結必須是 %s\n"
 #: ../alternatives.c:699
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "%s 連結在從屬裝置 %s 上是錯誤的 (%s %s)\n"
+msgstr "%s 連結在從屬 %s 上是錯誤的 (%s %s)\n"
 
 #: ../alternatives.c:740
 #, c-format
@@ -482,17 +482,17 @@ msgstr " 目前連結指向 %s\n"
 #: ../alternatives.c:749
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "家族 %s "
 
 #: ../alternatives.c:750
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "優先度 %d\n"
 
 #: ../alternatives.c:752
 #, c-format
 msgid " slave %s: %s\n"
-msgstr " 從屬裝置 %s：%s\n"
+msgstr " 從屬 %s：%s\n"
 
 #: ../alternatives.c:757
 #, c-format
@@ -521,15 +521,17 @@ msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼："
 
 #: ../alternatives.c:807
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "error reading choice\n"
-msgstr "\n"
+msgstr ""
+"\n"
 "讀取選擇發生錯誤\n"
 
 #: ../alternatives.c:844 ../alternatives.c:872
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s 尚未被設定為 %s 的替代選擇\n"
+msgstr "%s 尚未被設定為 %s 的替代選項\n"
 
 #: ../alternatives.c:888
 #, c-format
@@ -544,7 +546,7 @@ msgstr "無法移除 %s：%s\n"
 #: ../alternatives.c:1009
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family 無法取得符號 '@'\n"
 
 #: ../alternatives.c:1062
 #, c-format
@@ -559,4 +561,4 @@ msgstr "admindir %s 無效\n"
 #: ../alternatives.c:1078
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "替代版本 %s\n"
+msgstr "alternatives 版本 %s\n"
