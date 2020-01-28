@@ -16,7 +16,7 @@
 # Stephane Raimbault <stephane.raimbault@free.fr>, 2004
 # Thomas Canniot <mrtom@fedoraproject.org>, 2007, 2008
 # José Fournier <jaaf64@zoraldia.com>, 2017. #zanata
-# Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2020.
+# Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2020, 2022.
 # Julien Humbert <julroy67@gmail.com>, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fr/>\n"
 "Language: fr\n"
