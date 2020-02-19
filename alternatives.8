@@ -266,6 +266,10 @@ Tell which version of
 .B alternatives
 this is (and give some usage information).
 .TP
+.B --keep-missing
+When switching between alternatives, if the new variant does not provide some files, keep the links pointed to the previous implementation.
+It prevents issues with missing files due to switching between versions.
+.TP
 \fB--altdir\fR \fIdirectory\fR
 Specifies the alternatives directory, when this is to be
 different from the default.
