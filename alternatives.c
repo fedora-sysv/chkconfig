@@ -185,9 +185,28 @@ char * parseLine(char ** buf) {
     return strdup(start);
 }
 
-static int readConfig(struct alternativeSet * set, const char * title,
-		      const char * altDir, const char * stateDir, int flags) {
-    char * path;
+/* Function to clean path form unnecessary backslashes
+ * It will make from //abcd///efgh/ -> /abcd/efgh/
+ */
+void clean_path(char *path) {
+    char *pr = path;  // reading pointer
+    char *pw = path;  // writing pointer
+  
+    while (*pr) {
+        *pw = *pr;
+        pr++;
+        if ((*pw == '/') && (*pr != '/')) {
+            pw++;
+        } else if (*pw != '/') {
+            pw++;
+        }
+    }
+    *pw = '\0';
+}
+
+static int readConfig(struct alternativeSet *set, const char *title,
+                      const char *altDir, const char *stateDir, int flags) {
+    char *path;
     int fd;
     int i;
     struct stat sb;
@@ -209,6 +228,8 @@ static int readConfig(struct alternativeSet * set, const char * title,
 
     path = alloca(strlen(stateDir) + strlen(title) + 2);
     sprintf(path, "%s/%s", stateDir, title);
+
+    clean_path(path);
 
     if (FL_VERBOSE(flags))
 	printf(_("reading %s\n"), path);
