@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.7.4
+Version: 1.7.5
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -85,6 +85,10 @@ for i in  /var/lib/alternatives/* ; do
 done
 
 %changelog
+* Thu Mar 19 2020 Jan Macku <jamacku@redhat.com> - 1.7.5-1
+- Fix issues with extra backslashes in path string - (#1485304)
+- Add documentation for --keep-missing option - (#1371146)
+
 * Tue Jun 06 2017 Lukáš Nykrýn <lnykryn@redhat.com> - 1.7.4-1
 - po: update translations
 
