@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Geert Warrink <geert.warrink@onsnet.nu>, 2011-2013, 2020.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2011-2013, 2020, 2022.
 # notting <notting@redhat.com>, 2011
 # Peter van Egdom <p.van.egdom@gmail.com>, 2003, 2005, 2007
 # Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2016. #zanata
-# Geert Warrink <geert.warrink@onsnet.nu>, 2017. #zanata, 2020.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2017. #zanata, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/nl/>\n"
 "Language: nl\n"
