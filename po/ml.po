@@ -7,20 +7,22 @@
 # Ani Peter <apeter@redhat.com>, 2013
 # notting <notting@redhat.com>, 2011
 # Naveej Ahamed <naveej.ahamed@wipro.com>, 2016. #zanata
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2016-04-01 02:31+0000\n"
-"Last-Translator: Naveej Ahamed <naveej.ahamed@wipro.com>\n"
-"Language-Team: Malayalam <discuss@lists.smc.org.in>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Malayalam <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/ml/>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -237,7 +239,7 @@ msgstr "നിലവിലുള്ള റണ്‍ ലവല്‍ കണ്ട
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "%s:%s ഇന്റെ  SELinux കോണ്ടെക്സ്റ്റ് സജ്ജമാക്കുവാന്‍ സാധ്യമല്ല\n"
+msgstr "%s:%s ഇന്റെ SELinux കോണ്ടെക്സ്റ്റ് സജ്ജമാക്കുവാന്‍ സാധ്യമല്ല\n"
 
 #: ../leveldb.c:926
 #, c-format

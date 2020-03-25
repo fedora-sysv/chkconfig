@@ -7,21 +7,23 @@
 # notting <notting@redhat.com>, 2011
 # Rui Gouveia <rui.gouveia@gmail.com>, 2011-2012
 # Ricardo Pinto <ricardo.bigote@gmail.com>, 2016. #zanata
-# Manuela Silva <mmsrs@sky.com>, 2019. #zanata
+# Manuela Silva <mmsrs@sky.com>, 2019. #zanata, 2020.
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2019-08-22 06:47+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Portuguese <trans-pt@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2020-05-27 16:40+0000\n"
+"Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
+"Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -242,7 +244,7 @@ msgstr "não foi possível determinar o nível de execução actual\n"
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "Incapaz de definir contexto selinux para %s: %s\n"
+msgstr "Incapaz de definir contexto SELinux para %s: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -282,10 +284,9 @@ msgid "                    [--family <family>]\n"
 msgstr ""
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <ligação simbólica> <nome> <caminho>]*\n"
+msgstr "                    [--slave <ligação> <nome> <caminho>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -318,8 +319,7 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <nome> <caminho>\n"
 
@@ -499,10 +499,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s não foi configurado como uma alternativa para o %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s não foi configurado como uma alternativa para o %s\n"
+msgstr "%s não foi configurado como uma alternativa escrava para %s (%s)\n"
 
 #: ../alternatives.c:876
 #, c-format

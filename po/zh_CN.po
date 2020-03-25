@@ -11,20 +11,22 @@
 # Wei Liu <LLIU@REDHAT.COM>, 2012
 # Leah Liu <lliu@redhat.com>, 2015. #zanata
 # Charles Lee <lchopn@gmail.com>, 2017. #zanata
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2017-07-17 07:12+0000\n"
-"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
-"Language-Team: Chinese (China) <trans-zh_cn@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
+"projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -240,7 +242,7 @@ msgstr "无法判断当前运行级别\n"
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "无法为 %s 设置 selinux 上下文：%s\n"
+msgstr "无法为 %s 设置 SELinux 上下文：%s\n"
 
 #: ../leveldb.c:926
 #, c-format

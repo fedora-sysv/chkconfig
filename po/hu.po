@@ -8,20 +8,23 @@
 # Zoltan Hoppár <hopparz@gmail.com>, 2012-2013
 # Meskó Balázs <meskobalazs@gmail.com>, 2018. #zanata
 # Meskó Balázs <meskobalazs@gmail.com>, 2019. #zanata
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020.
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2019-08-22 02:35+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hungarian <trans-hu@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -178,7 +181,7 @@ msgstr "csak egy futási szintet lehet megadni egy chkconfig lekérdezésben\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
-msgstr "Egy szolgáltatás további információiért nyomjon <F1>-et!"
+msgstr "Egy szolgáltatás további információiért nyomjon <F1>-et."
 
 #: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
@@ -243,7 +246,7 @@ msgstr "nem lehet megállapítani az aktuális futási szintet\n"
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "A(z) %s selinux környezete nem állítható be: %s\n"
+msgstr "A(z) %s SELinux környezete nem állítható be: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -269,7 +272,7 @@ msgstr ""
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
-"Használat: alternatives --install <link> <név> <elérési út> <prioritás>\n"
+"Használat: alternatives --install <link> <név> <elérési_út> <prioritás>\n"
 
 #: ../alternatives.c:87
 #, c-format
@@ -282,15 +285,16 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <család>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <link> <név> <elérési út>]*\n"
+msgstr ""
+"                    [--slave <szolga_link> <szolga_név> <szolga_elérési_út>]*"
+"\n"
 
 #: ../alternatives.c:90
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <név> <elérési út>\n"
+msgstr "       alternatives --remove <név> <elérési_út>\n"
 
 #: ../alternatives.c:91
 #, c-format
@@ -310,32 +314,31 @@ msgstr "       alternatives --display <név>\n"
 #: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <név> <elérési út>\n"
+msgstr "       alternatives --set <név> <elérési_út>\n"
 
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "alternatives --list\n"
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <név> <elérési út>\n"
+msgstr "       alternatives --remove-all <név>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <név> <elérési út>\n"
+msgstr ""
+"       alternatives --add-slave <név> <elérési_út> <szolga_link> <szolga_név>"
+" <szolga_név>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <név> <elérési út>\n"
+msgstr "       alternatives --remove-slave <név> <elérési_út> <szolga_név>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -499,10 +502,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "a(z) %s nincs beállítva a(z) %s alternatívájának\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "a(z) %s nincs beállítva a(z) %s alternatívájának\n"
+msgstr "a(z) %s nincs beállítva a(z) %s (%s) szolga alternatívájának\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -522,12 +524,12 @@ msgstr "%s – az állapot kézi.\n"
 #: ../alternatives.c:932
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "a link jelenleg ide mutat: %s\n"
+msgstr " a link jelenleg ide mutat: %s\n"
 
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr "%s család"
+msgstr "%s család "
 
 #: ../alternatives.c:938
 #, c-format

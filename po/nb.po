@@ -6,20 +6,22 @@
 # Kjartan Maraas <kmaraas@gnome.org>, 2012
 # Kjartan Maraas <kmaraas@gnome.org>, 2011
 # notting <notting@redhat.com>, 2011
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2015-01-05 06:05+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://translate.fedoraproject.org/"
+"projects/fedora-sysv/chkconfig/nb_NO/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -42,7 +44,7 @@ msgstr "bruk: %s [navn]\n"
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "bruk:   %s <enable|disable|is-enabled> [navn] \n"
 
 #: ../chkconfig.c:52
 #, c-format
@@ -92,6 +94,11 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      Hvis du ønsker å lise opp systemd-tjenester, bruk 'systemctl list-unit-"
+"files'.\n"
+"      For å se tjenester påskrudd for et angitt mål, bruk\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -233,7 +240,7 @@ msgstr "klarer ikke å bestemme nåværende runlevel\n"
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr ""
+msgstr "Kunne ikke sette SELinux-kontekts for %s: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -267,15 +274,12 @@ msgstr "                    [--initscript <tjeneste>]\n"
 #: ../alternatives.c:88
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <familie>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <lenke> <navn> <sti>]*\n"
-"\n"
+msgstr "                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -305,27 +309,26 @@ msgstr "       alternatives --set <navn> <sti>\n"
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr ""
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <navn> <sti>\n"
+msgstr "       alternatives --remove-all <navn>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <navn> <sti>\n"
+msgstr ""
+"       alternatives --add-slave <navn> <sti> <slave_lenke> <slave_navn> "
+"<slave_sti>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <navn> <sti>\n"
+msgstr "       alternatives --remove-slave <navn> <sti> <slave_navn>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -337,6 +340,7 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"Vanlige flagg: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:102
 #, c-format
@@ -402,7 +406,7 @@ msgstr "uventet linje i %s: %s\n"
 #: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "Avsluttende \"@\" mangler, eller så er familien ikke deklarert i %s\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -452,7 +456,7 @@ msgstr "klarte ikke å lage den symbolske lenken %s -> %s: %s\n"
 #: ../alternatives.c:520
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr ""
+msgstr "klarte ikke å lenke %s -> %s: %s finnes og er ikke en symbolsk lenke\n"
 
 #: ../alternatives.c:565
 #, c-format
@@ -487,10 +491,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s er ikke konfigurert som et alternativ for %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s er ikke konfigurert som et alternativ for %s\n"
+msgstr "%s er ikke satt opp som et slave-alternativ for %s (%s)\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -510,17 +513,17 @@ msgstr "%s - status manuell.\n"
 #: ../alternatives.c:932
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "lenken peker nå til %s\n"
+msgstr " lenken peker nå til %s\n"
 
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "familie %s "
 
 #: ../alternatives.c:938
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "prioritet %d\n"
 
 #: ../alternatives.c:940
 #, c-format
@@ -545,7 +548,7 @@ msgstr "Det finnes %d programmer som har «%s».\n"
 #: ../alternatives.c:985
 #, c-format
 msgid "  Selection    Command\n"
-msgstr "      Valg    Kommando\n"
+msgstr "  Utvalg    Kommando\n"
 
 #: ../alternatives.c:1000
 #, c-format
@@ -575,7 +578,7 @@ msgstr "kunne ikke fjerne %s: %s\n"
 #: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family kan ikke inneholde symbolet «@»\n"
 
 #: ../alternatives.c:1321
 #, c-format

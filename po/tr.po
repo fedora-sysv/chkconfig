@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003
 # Egemen Metin Turan <mturan@aegee-ankara.org>, 2007
@@ -12,13 +12,14 @@
 # Onuralp SEZER <thunderbirdtr@gmail.com>, 2012
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
 # Oğuz Ersen <oguzersen@protonmail.com>, 2020.
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-03-24 13:38+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/tr/>\n"
 "Language: tr\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -53,7 +54,7 @@ msgstr "kullanım:   %s <enable|disable|is-enabled> [isim] \n"
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "kullanım:   %s [--list] [--type <tip>] [isim]\n"
+msgstr "kullanım:   %s [--list] [--type <tür>] [isim]\n"
 
 #: ../chkconfig.c:54
 #, c-format
@@ -86,8 +87,8 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Not: Bu çıktı sadece SysV servislerini gösterir ve yerel sistemd "
-"servislerini\n"
+"Not: Bu çıktı sadece SysV hizmetlerini gösterir ve yerel sistemd "
+"hizmetlerini\n"
 "      içermez. SysV yapılandırma verileri yerel systemd yapılandırması "
 "tarafından\n"
 "      geçersiz kılınabilir.\n"
@@ -101,9 +102,9 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      systemd servislerini listelemek istiyorsanız 'systemctl list-unit-"
+"      systemd hizmetlerini listelemek istiyorsanız 'systemctl list-unit-"
 "files' kullanın.\n"
-"      Belirli bir hedef için etkin olan servisleri görmek için\n"
+"      Belirli bir hedef için etkin olan hizmetleri görmek için\n"
 "       'systemctl list-dependencies [hedef]' kullanın.\n"
 "\n"
 
@@ -113,18 +114,18 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s servisi chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden "
+"%s hizmeti chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden "
 "çağırılmıyor ('chkconfig --add %s' komutunu çalıştırın)\n"
 
 #: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "%s servisi chkconfig'i desteklemiyor\n"
+msgstr "%s hizmeti chkconfig'i desteklemiyor\n"
 
 #: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s servisi hakkındaki bilgileri okuma hatası: %s\n"
+msgstr "%s hizmeti hakkındaki bilgiler okunurken hata oluştu: %s\n"
 
 #: ../chkconfig.c:98
 #, c-format
@@ -142,7 +143,7 @@ msgstr "kapalı"
 #: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "xinetd tabanlı servisler:\n"
+msgstr "xinetd tabanlı hizmetler:\n"
 
 #: ../chkconfig.c:549
 #, c-format
@@ -157,7 +158,7 @@ msgstr "Not: İstek yönlendiriliyor 'systemctl %s %s'.\n"
 #: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "Servis isteği systemctl'ye iletilemedi: %m\n"
+msgstr "Hizmet isteği systemctl'ye iletilemedi: %m\n"
 
 #: ../chkconfig.c:743
 #, c-format
@@ -183,7 +184,7 @@ msgstr ""
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
-msgstr "Bir servis hakkında daha fazla bilgi almak için <F1> tuşuna basın."
+msgstr "Bir hizmet hakkında daha fazla bilgi almak için <F1> tuşuna basın."
 
 #: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
@@ -199,21 +200,21 @@ msgstr "İptal"
 
 #: ../ntsysv.c:111
 msgid "What services should be automatically started?"
-msgstr "Hangi servisler otomatik olarak başlatılmalı?"
+msgstr "Hangi hizmetler otomatik olarak başlatılmalı?"
 
 #: ../ntsysv.c:118
 msgid "Services"
-msgstr "Servisler"
+msgstr "Hizmetler"
 
 #: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s servisi için bilgi okuma hatası: %s\n"
+msgstr "%s hizmeti için bilgi okunurken hata oluştu: %s\n"
 
 #: ../ntsysv.c:409
 #, c-format
 msgid "error reading from directory %s: %s\n"
-msgstr "%s dizininden okurken hata: %s\n"
+msgstr "%s dizininden okurken hata oluştu: %s\n"
 
 #: ../ntsysv.c:446
 #, c-format
@@ -228,7 +229,7 @@ msgstr "--levels için hatalı argüman\n"
 #: ../ntsysv.c:471
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv tarafından yönetilebilecek servis yok!\n"
+msgstr "ntsysv tarafından yönetilebilecek hizmet yok!\n"
 
 #: ../leveldb.c:321
 #, c-format
@@ -248,7 +249,7 @@ msgstr "geçerli çalışma seviyesi belirlenemiyor\n"
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "%s için selinux bağlamı ayarlanamadı: %s\n"
+msgstr "%s için SELinux bağlamı ayarlanamadı: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -277,7 +278,7 @@ msgstr "kullanım: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n
 #: ../alternatives.c:87
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <servis>]\n"
+msgstr "                    [--initscript <hizmet>]\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -380,7 +381,7 @@ msgstr "%s boş!\n"
 #: ../alternatives.c:300
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr "%s'nin 1.satırında kötü kip\n"
+msgstr "%s'nin 1. satırında kötü mod\n"
 
 #: ../alternatives.c:307
 #, c-format
@@ -437,7 +438,8 @@ msgstr "%s bağlantısı okunamıyor: %s\n"
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
-"bağlantı herhangi bir alternatifi göstermiyor -- manuel moda geçiliyor\n"
+"bağlantı herhangi bir alternatifi göstermiyor -- elle ayarlama moduna "
+"geçiliyor\n"
 
 #: ../alternatives.c:453
 #, c-format
@@ -577,7 +579,7 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"seçimi okumada hata\n"
+"seçimi okumada hata oluştu\n"
 
 #: ../alternatives.c:1092
 #, c-format

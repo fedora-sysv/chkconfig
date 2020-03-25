@@ -6,20 +6,22 @@
 # Jaswinder Singh <jsingh@redhat.com>, 2009,2012
 # notting <notting@redhat.com>, 2011
 # A S Alam <aalam@fedoraproject.org>, 2017. #zanata
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2017-08-18 07:03+0000\n"
-"Last-Translator: A S Alam <aalam@fedoraproject.org>\n"
-"Language-Team: Panjabi (Punjabi) <punjabi-users@lists.sf.net>\n"
+"PO-Revision-Date: 2020-05-18 22:40+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Punjabi <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/pa/>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.0.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -232,7 +234,7 @@ msgstr "ਮੌਜੂਦਾ ਰਨ ਲੈਵਲ ਦਾ ਪਤਾ ਨਹੀਂ ਲ
 #: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
-msgstr "%s ਲਈ selinux ਕਨਟੈਕਸਟ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %s\n"
+msgstr "%s ਲਈ SELinux ਕਨਟੈਕਸਟ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
