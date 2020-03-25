@@ -17,14 +17,15 @@
 # Thomas Canniot <mrtom@fedoraproject.org>, 2007, 2008
 # José Fournier <jaaf64@zoraldia.com>, 2017. #zanata
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2020.
+# Julien Humbert <julroy67@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-01-28 21:49+0000\n"
-"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
-"Language-Team: French <https://translate.fedoraproject.org/projects/"
+"PO-Revision-Date: 2020-02-08 06:16+0000\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Language-Team: French <https://translate.stg.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +93,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Avertissement : cette sortie n'affiche que les services SysV et n'inclut pas "
+"Avertissement : cette sortie n’affiche que les services SysV et n’inclut pas "
 "les services\n"
 "                natifs systemd. Les données de configuration de SysV peuvent "
 "être surchargées par la configuration\n"
@@ -107,10 +108,10 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Si vous désirez répertorier les services systemd, utilisez 'systemctl "
-"list-unit-files'.\n"
+"      Si vous désirez répertorier les services systemd, utilisez « systemctl "
+"list-unit-files ».\n"
 "      Pour voir les services activés par une cible particulière, utiliser\n"
-"      'systemctl list-dependencies [target]'.\n"
+"      « systemctl list-dependencies [target] ».\n"
 "\n"
 
 #: ../chkconfig.c:83
@@ -119,8 +120,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"le service %s prend en charge chkconfig, mais il n'est enregistré à aucun "
-"niveau (exécutez « chkconfig --add %s »)\n"
+"le service %s prend en charge chkconfig, mais il n’est enregistré à aucun "
+"niveau (exécutez « chkconfig --add %s »)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -130,13 +131,13 @@ msgstr "le service %s ne prend pas en charge chkconfig\n"
 #: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "erreur lors de la lecture d'informations sur le service %s : %s\n"
+msgstr "erreur lors de la lecture d’informations sur le service %s : %s\n"
 
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
-"Vous n'avez pas les privilèges nécessaires pour effectuer cette opération.\n"
+"Vous n’avez pas les privilèges nécessaires pour effectuer cette opération.\n"
 
 #: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
@@ -154,7 +155,7 @@ msgstr "services basés sur xinetd :\n"
 #: ../chkconfig.c:549
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr "impossible d'ouvrir le répertoire %s : %s\n"
+msgstr "impossible d’ouvrir le répertoire %s : %s\n"
 
 #: ../chkconfig.c:681
 #, c-format
@@ -187,12 +188,12 @@ msgstr ""
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"vous ne pouvez spécifier qu'un seul niveau d'exécution pour une requête "
+"vous ne pouvez spécifier qu’un seul niveau d’exécution pour une requête "
 "chkconfig\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
-msgstr "Appuyez sur <F1> pour plus d'informations sur un service."
+msgstr "Appuyez sur <F1> pour plus d’informations sur un service."
 
 #: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
@@ -217,7 +218,7 @@ msgstr "Services"
 #: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "erreur lors de la lecture d'informations sur le service %s : %s\n"
+msgstr "erreur lors de la lecture d’informations sur le service %s : %s\n"
 
 #: ../ntsysv.c:409
 #, c-format
@@ -242,17 +243,17 @@ msgstr "Aucun service ne peut être administré par ntsysv !\n"
 #: ../leveldb.c:321
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "impossible d'ouvrir %s/init.d : %s\n"
+msgstr "impossible d’ouvrir %s/init.d : %s\n"
 
 #: ../leveldb.c:766 ../leveldb.c:774
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "échec d'interprétation du motif %s : %s\n"
+msgstr "échec d’interprétation du motif %s : %s\n"
 
 #: ../leveldb.c:820
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "impossible de déterminer le niveau d'exécution en cours\n"
+msgstr "impossible de déterminer le niveau d’exécution en cours\n"
 
 #: ../leveldb.c:901
 #, c-format
@@ -377,7 +378,7 @@ msgstr "lecture de %s\n"
 #: ../alternatives.c:275
 #, c-format
 msgid "failed to open %s: %s\n"
-msgstr "impossible d'ouvrir %s : %s\n"
+msgstr "impossible d’ouvrir %s : %s\n"
 
 #: ../alternatives.c:283
 #, c-format
@@ -407,7 +408,7 @@ msgstr "chemin %s inattendu dans %s\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "chemin manquant pour l'esclave %s dans %s\n"
+msgstr "chemin manquant pour l’esclave %s dans %s\n"
 
 #: ../alternatives.c:338
 #, c-format
@@ -417,7 +418,7 @@ msgstr "fin de fichier inattendue dans %s\n"
 #: ../alternatives.c:347
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "chemin de l'alternative attendu dans %s\n"
+msgstr "chemin de l’alternative attendu dans %s\n"
 
 #: ../alternatives.c:348 ../alternatives.c:374 ../alternatives.c:386
 #: ../alternatives.c:404 ../alternatives.c:424
@@ -429,7 +430,7 @@ msgstr "ligne inattendue dans %s : %s\n"
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
-"le caractère '@' de fermeture est manquant ou la famille est vide dans %s\n"
+"le caractère « @ » de fermeture est manquant ou la famille est vide dans %s\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -439,7 +440,7 @@ msgstr "priorité numérique attendue dans %s\n"
 #: ../alternatives.c:403
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "chemin d'esclave attendu dans %s\n"
+msgstr "chemin d’esclave attendu dans %s\n"
 
 #: ../alternatives.c:432
 #, c-format
@@ -480,7 +481,7 @@ msgstr "Impossible de lier %s -> %s : %s\n"
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
-"Impossible de lier %s -> %s : %s existe et n'est pas un lien symbolique\n"
+"Impossible de lier %s -> %s : %s existe et n’est pas un lien symbolique\n"
 
 #: ../alternatives.c:565
 #, c-format
@@ -501,18 +502,18 @@ msgstr "Impossible de remplacer %s avec %s : %s\n"
 #: ../alternatives.c:653
 #, c-format
 msgid "running %s\n"
-msgstr "%s en cours d'exécution\n"
+msgstr "%s en cours d’exécution\n"
 
 #: ../alternatives.c:726
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "le lien %s est incorrect pour l'esclave %s (%s %s)\n"
+msgstr "le lien %s est incorrect pour l’esclave %s (%s %s)\n"
 
 #: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
 #: ../alternatives.c:1076
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s n'a pas encore été configuré en tant qu'alternative à %s\n"
+msgstr "%s n’a pas encore été configuré en tant qu’alternative à %s\n"
 
 #: ../alternatives.c:818
 #, fuzzy, c-format
@@ -528,12 +529,12 @@ msgstr "le lien primaire pour %s doit être %s\n"
 #: ../alternatives.c:928
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s est dans l'état auto.\n"
+msgstr "%s est dans l’état auto.\n"
 
 #: ../alternatives.c:930
 #, c-format
 msgid "%s - status is manual.\n"
-msgstr "%s est dans l'état manuel.\n"
+msgstr "%s est dans l’état manuel.\n"
 
 #: ../alternatives.c:932
 #, c-format
@@ -604,7 +605,7 @@ msgstr "impossible de supprimer %s : %s\n"
 #: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr "--family ne peut pas contenir le caractère '@'\n"
+msgstr "--family ne peut pas contenir le caractère « @ »\n"
 
 #: ../alternatives.c:1321
 #, c-format
