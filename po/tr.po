@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Devrim GUNDUZ <devrim@gunduz.org>, 2003
 # Egemen Metin Turan <mturan@aegee-ankara.org>, 2007
@@ -11,21 +11,22 @@
 # notting <notting@redhat.com>, 2011
 # Onuralp SEZER <thunderbirdtr@gmail.com>, 2012
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2019-05-13 12:35+0000\n"
-"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/fedora/language/"
-"tr/)\n"
+"PO-Revision-Date: 2020-03-24 13:38+0000\n"
+"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+"X-Generator: Weblate 3.11.3\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -52,17 +53,17 @@ msgstr "kullanım:   %s <enable|disable|is-enabled> [isim] \n"
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "kullanım:   %s [--list] [--type <type>] [isim]\n"
+msgstr "kullanım:   %s [--list] [--type <tip>] [isim]\n"
 
 #: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "         %s --add <isim>\n"
 
 #: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "             %s --del <isim>\n"
+msgstr "         %s --del <isim>\n"
 
 #: ../chkconfig.c:56
 #, c-format
@@ -72,7 +73,7 @@ msgstr "         %s --override <isim>\n"
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <düzeyler>] [--type <tip>] <isim> %s\n"
+msgstr "         %s [--level <seviye>] [--type <tür>] <isim> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
@@ -85,9 +86,11 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Not:Bu çıktı sadece SysV servislerini gösterir, systemd servislerini "
-"içermez. \n"
-"SyssV yapılandırması systemd yapılandırması tarafından ezilebilir.\n"
+"Not: Bu çıktı sadece SysV servislerini gösterir ve yerel sistemd "
+"servislerini\n"
+"      içermez. SysV yapılandırma verileri yerel systemd yapılandırması "
+"tarafından\n"
+"      geçersiz kılınabilir.\n"
 "\n"
 
 #: ../chkconfig.c:73
@@ -98,10 +101,10 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Systemd servislerini listelemek için 'systemctl list-unit-files' "
-"kullan.\n"
-"      Belirli hedef kullanımda etkin olan hizmetleri görmek için\n"
-"       'systemctl list-dependencies [hedef]'.\n"
+"      systemd servislerini listelemek istiyorsanız 'systemctl list-unit-"
+"files' kullanın.\n"
+"      Belirli bir hedef için etkin olan servisleri görmek için\n"
+"       'systemctl list-dependencies [hedef]' kullanın.\n"
 "\n"
 
 #: ../chkconfig.c:83
@@ -110,8 +113,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden çağırılmıyor "
-"('chkconfig --add %s çalıştırın')\n"
+"%s servisi chkconfig'i destekliyor, ama hiçbir çalışma seviyesinden "
+"çağırılmıyor ('chkconfig --add %s' komutunu çalıştırın)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -121,7 +124,7 @@ msgstr "%s servisi chkconfig'i desteklemiyor\n"
 #: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr "%s servisi hakkında bilgi alınırken hata: %s\n"
+msgstr "%s servisi hakkındaki bilgileri okuma hatası: %s\n"
 
 #: ../chkconfig.c:98
 #, c-format
@@ -139,7 +142,7 @@ msgstr "kapalı"
 #: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
-msgstr "xinetd tabanlı hizmetler:\n"
+msgstr "xinetd tabanlı servisler:\n"
 
 #: ../chkconfig.c:549
 #, c-format
@@ -154,7 +157,7 @@ msgstr "Not: İstek yönlendiriliyor 'systemctl %s %s'.\n"
 #: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr "Failed to forward service request to systemctl: %m\n"
+msgstr "Servis isteği systemctl'ye iletilemedi: %m\n"
 
 #: ../chkconfig.c:743
 #, c-format
@@ -176,11 +179,11 @@ msgstr ""
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma düzeyi belirtilebilir\n"
+"chkconfig sorgulaması için sadece tek bir çalışma seviyesi belirtilebilir\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
-msgstr "Servis hakkında daha fazla bilgi almak için <F1> tuşuna basın."
+msgstr "Bir servis hakkında daha fazla bilgi almak için <F1> tuşuna basın."
 
 #: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
@@ -196,7 +199,7 @@ msgstr "İptal"
 
 #: ../ntsysv.c:111
 msgid "What services should be automatically started?"
-msgstr "Hangi servisler otomatik olarak çalıştırılsın?"
+msgstr "Hangi servisler otomatik olarak başlatılmalı?"
 
 #: ../ntsysv.c:118
 msgid "Services"
@@ -205,7 +208,7 @@ msgstr "Servisler"
 #: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
-msgstr "%s servisi hakkında bilgi alırken hata : %s\n"
+msgstr "%s servisi için bilgi okuma hatası: %s\n"
 
 #: ../ntsysv.c:409
 #, c-format
@@ -225,7 +228,7 @@ msgstr "--levels için hatalı argüman\n"
 #: ../ntsysv.c:471
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
-msgstr "ntsysv tarafından yönetilebilecek hizmet yok!\n"
+msgstr "ntsysv tarafından yönetilebilecek servis yok!\n"
 
 #: ../leveldb.c:321
 #, c-format
@@ -240,7 +243,7 @@ msgstr "kalıp %s genelleştirilemedi: %s\n"
 #: ../leveldb.c:820
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "şu anki çalışma düzeyi belirlenemiyor\n"
+msgstr "geçerli çalışma seviyesi belirlenemiyor\n"
 
 #: ../leveldb.c:901
 #, c-format
@@ -269,7 +272,7 @@ msgstr ""
 #: ../alternatives.c:86
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "kullanımı: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n"
+msgstr "kullanım: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n"
 
 #: ../alternatives.c:87
 #, c-format
@@ -279,7 +282,7 @@ msgstr "                    [--initscript <servis>]\n"
 #: ../alternatives.c:88
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <aile>]\n"
 
 #: ../alternatives.c:89
 #, fuzzy, c-format
@@ -347,6 +350,7 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"ortak seçenekler: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:102
 #, c-format
@@ -412,7 +416,7 @@ msgstr "%s içinde beklenmeyen satır: %s\n"
 #: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "sondaki '@' eksik veya %s'de aile boş\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -433,7 +437,7 @@ msgstr "%s bağlantısı okunamıyor: %s\n"
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
-"bağlantı hiçbir  alternatif sağlamıyor -- elle ayarlama moduna geçiliyor\n"
+"bağlantı herhangi bir alternatifi göstermiyor -- manuel moda geçiliyor\n"
 
 #: ../alternatives.c:453
 #, c-format
@@ -522,12 +526,12 @@ msgstr "%s - durumu manual.\n"
 #: ../alternatives.c:932
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "bağlantı %s'yi gösteriyor.\n"
+msgstr " bağlantı şu anda %s'yi gösteriyor.\n"
 
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "%s ailesi "
 
 #: ../alternatives.c:938
 #, c-format
@@ -537,7 +541,7 @@ msgstr "öncelik %d\n"
 #: ../alternatives.c:940
 #, c-format
 msgid " slave %s: %s\n"
-msgstr "ikincil %s: %s\n"
+msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:945
 #, c-format
@@ -563,8 +567,8 @@ msgstr "  Seçim        Komut\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Mevcut seçimi[+] saklamak için enter tuşuna basın, ya da seçim numarasını "
-"girin:"
+"Mevcut seçimi korumak için enter tuşuna basın[+], ya da seçim numarasını "
+"girin: "
 
 #: ../alternatives.c:1004
 #, c-format
@@ -588,7 +592,7 @@ msgstr "%s kaldırılamadı: %s\n"
 #: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family '@' sembolünü içeremez\n"
 
 #: ../alternatives.c:1321
 #, c-format
