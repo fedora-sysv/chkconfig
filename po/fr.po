@@ -17,14 +17,15 @@
 # Thomas Canniot <mrtom@fedoraproject.org>, 2007, 2008
 # José Fournier <jaaf64@zoraldia.com>, 2017. #zanata
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2020.
+# Julien Humbert <julroy67@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-01-28 21:49+0000\n"
-"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
-"Language-Team: French <https://translate.fedoraproject.org/projects/"
+"PO-Revision-Date: 2020-02-08 06:16+0000\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Language-Team: French <https://translate.stg.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +93,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Avertissement : cette sortie n'affiche que les services SysV et n'inclut pas "
+"Avertissement : cette sortie n’affiche que les services SysV et n’inclut pas "
 "les services\n"
 "                natifs systemd. Les données de configuration de SysV peuvent "
 "être surchargées par la configuration\n"
@@ -107,8 +108,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Si vous désirez répertorier les services systemd, utilisez 'systemctl "
-"list-unit-files'.\n"
+"      Si vous désirez répertorier les services systemd, utilisez « systemctl "
+"list-unit-files ».\n"
 "      Pour voir les services activés par une cible particulière, utiliser\n"
 "      « systemctl list-dependencies [target] ».\n"
 "\n"
@@ -505,14 +506,14 @@ msgstr "%s en cours d’exécution\n"
 
 #: ../alternatives.c:726
 #, c-format
-msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s n’a pas encore été configuré en tant qu’alternative à %s\n"
+msgid "link %s incorrect for slave %s (%s %s)\n"
+msgstr "le lien %s est incorrect pour l’esclave %s (%s %s)\n"
 
 #: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
 #: ../alternatives.c:1076
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s n'a pas encore été configuré en tant qu'alternative à %s\n"
+msgstr "%s n’a pas encore été configuré en tant qu’alternative à %s\n"
 
 #: ../alternatives.c:818
 #, fuzzy, c-format
