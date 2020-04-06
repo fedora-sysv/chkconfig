@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.7.5
+Version: 1.7.6
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -85,6 +85,9 @@ for i in  /var/lib/alternatives/* ; do
 done
 
 %changelog
+* Mon Apr 06 2020 Jan Macku <jamacku@redhat.com> - 1.7.6-1
+- alternatives setService(): Add missing error mesg - (#1711171)
+
 * Thu Mar 19 2020 Jan Macku <jamacku@redhat.com> - 1.7.5-1
 - Fix issues with extra backslashes in path string - (#1485304)
 - Add documentation for --keep-missing option - (#1371146)
