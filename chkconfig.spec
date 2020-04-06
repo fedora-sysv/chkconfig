@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.11
+Version: 1.12
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -81,6 +81,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon Apr 06 2020 Jan Macku <jamacku@redhat.com> - 1.12-1
+- alternatives setService(): Add missing error mesg - (#1820089)
+- po: update translations
+- rebase
+
 * Mon Sep 10 2018 Lukas Nykryn <lnykryn@redhat.com> - 1.11-1
 - Add tests for --add/remove-slave and use beakerlib
 - alternatives: add-slave and remove-slave
