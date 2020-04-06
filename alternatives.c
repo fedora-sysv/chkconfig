@@ -1069,10 +1069,16 @@ static int setService(const char *title, const char *target, const char *altDir,
                       const char *stateDir, int flags) {
     struct alternativeSet set;
     int found = -1;
-    int i;
+    int i, r;
 
-    if (readConfig(&set, title, altDir, stateDir, flags))
+    r = readConfig(&set, title, altDir, stateDir, flags);
+    if (r) {
+        if (r == 3) {
+            fprintf(stderr,
+                _("cannot access %s/%s: No such file or directory\n"), stateDir, title);
+        }
         return 2;
+    }
 
     for (i = 0; i < set.numAlts; i++)
         if (!strcmp(set.alts[i].master.target, target)) {
