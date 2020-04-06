@@ -1,84 +1,85 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Geert Warrink <geert.warrink@onsnet.nu>, 2011-2013
+# Geert Warrink <geert.warrink@onsnet.nu>, 2011-2013, 2020.
 # notting <notting@redhat.com>, 2011
 # Peter van Egdom <p.van.egdom@gmail.com>, 2003, 2005, 2007
 # Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2016. #zanata
-# Geert Warrink <geert.warrink@onsnet.nu>, 2017. #zanata
+# Geert Warrink <geert.warrink@onsnet.nu>, 2017. #zanata, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-29 14:31+0200\n"
-"PO-Revision-Date: 2017-03-08 01:50+0000\n"
+"POT-Creation-Date: 2017-07-25 13:31+0200\n"
+"PO-Revision-Date: 2020-03-25 15:38+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/nl/)\n"
+"Language-Team: Dutch <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 
-#: ../chkconfig.c:40
+#: ../chkconfig.c:41
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgstr "%s versie %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
-#: ../chkconfig.c:41
+#: ../chkconfig.c:43
 #, c-format
 msgid ""
-"This may be freely redistributed under the terms of the GNU Public "
-"License.\n"
+"This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
 "Dit mag vrijelijk worden verspreid onder voorwaarden van GNU Public "
 "License.\n"
 
-#: ../chkconfig.c:45
+#: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
 msgstr "gebruik:   %s [name]\n"
 
-#: ../chkconfig.c:47
+#: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
 msgstr "gebruik:   %s <enable|disable|is-enabled> [naam] \n"
 
-#: ../chkconfig.c:49
+#: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
 msgstr "gebruik:   %s [--list] [--type <type>] [naam]\n"
 
-#: ../chkconfig.c:50
+#: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <name>\n"
+msgstr "         %s --add <naam>\n"
 
-#: ../chkconfig.c:51
+#: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <name>\n"
+msgstr "         %s --del <naam>\n"
 
-#: ../chkconfig.c:52
+#: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <name>\n"
+msgstr "         %s --override <naam>\n"
 
-#: ../chkconfig.c:53
+#: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <naam> %s\n"
 
-#: ../chkconfig.c:61
+#: ../chkconfig.c:66
 #, c-format
 msgid ""
 "\n"
 "Note: This output shows SysV services only and does not include native\n"
-"      systemd services. SysV configuration data might be overridden by native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
 "      systemd configuration.\n"
 "\n"
 msgstr ""
@@ -88,7 +89,7 @@ msgstr ""
 "      door native-systemdconfiguratie.\n"
 "\n"
 
-#: ../chkconfig.c:65
+#: ../chkconfig.c:73
 #, c-format
 msgid ""
 "      If you want to list systemd services use 'systemctl list-unit-files'.\n"
@@ -96,12 +97,14 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Voor het bekijken van de systemd-services gebruik je 'systemctl list-unit-files'.\n"
-"Voor het bekijken van de services die voor een bepaald doel aangezet zijn\n"
-"gebruik je 'systemctl list-dependencies [doel]'.\n"
+"      Voor het bekijken van de systemd-services gebruik je 'systemctl list-"
+"unit-files'.\n"
+"      Voor het bekijken van de services die voor een bepaald doel aangezet "
+"zijn\n"
+"      gebruik je 'systemctl list-dependencies [doel]'.\n"
 "\n"
 
-#: ../chkconfig.c:73
+#: ../chkconfig.c:83
 #, c-format
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
@@ -110,66 +113,66 @@ msgstr ""
 "service %s ondersteunt chkconfig, maar in geen enkel runlevel staat een "
 "verwijzing naar deze service (voer 'chkconfig --add %s' uit)\n"
 
-#: ../chkconfig.c:75
+#: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
 msgstr "service %s ondersteunt chkconfig niet\n"
 
-#: ../chkconfig.c:77
+#: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
 msgstr "fout bij lezen van informatie over service %s: %s\n"
 
-#: ../chkconfig.c:86
+#: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Je hebt niet genoeg rechten om deze actie uit te voeren.\n"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
 msgstr "aan"
 
-#: ../chkconfig.c:429 ../chkconfig.c:434 ../chkconfig.c:557
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "off"
 msgstr "uit"
 
-#: ../chkconfig.c:519
+#: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "services gebaseerd op xinetd:\n"
 
-#: ../chkconfig.c:521
+#: ../chkconfig.c:549
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "openen van map %s mislukt: %s\n"
 
-#: ../chkconfig.c:648
+#: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Opmerking: Verzoek wordt doorgestuurd naar 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:653
+#: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Service-aanvraag doorsturen naar systemctl mislukte: %m\n"
 
-#: ../chkconfig.c:709
+#: ../chkconfig.c:743
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versie %s\n"
 
-#: ../chkconfig.c:721
+#: ../chkconfig.c:756
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type moet zijn 'sysv' of 'xinetd'\n"
 
-#: ../chkconfig.c:728
+#: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "slechts één van --list, --add, --del of --override mag worden opgegeven\n"
 
-#: ../chkconfig.c:836
+#: ../chkconfig.c:873
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -179,146 +182,168 @@ msgstr ""
 msgid "Press <F1> for more information on a service."
 msgstr "Druk op <F1> voor meer informatie over een service."
 
-#: ../ntsysv.c:94 ../ntsysv.c:131
+#: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
 msgstr "Ok"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Back"
 msgstr "Terug"
 
-#: ../ntsysv.c:94
+#: ../ntsysv.c:99
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../ntsysv.c:106
+#: ../ntsysv.c:111
 msgid "What services should be automatically started?"
 msgstr "Welke services moeten automatisch worden gestart?"
 
-#: ../ntsysv.c:112
+#: ../ntsysv.c:118
 msgid "Services"
 msgstr "Services"
 
-#: ../ntsysv.c:320 ../ntsysv.c:347 ../ntsysv.c:384
+#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "fout bij lezen van informatie over service %s: %s\n"
 
-#: ../ntsysv.c:393
+#: ../ntsysv.c:409
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "fout bij lezen uit map %s: %s\n"
 
-#: ../ntsysv.c:431
+#: ../ntsysv.c:446
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Je moet root zijn om %s uit te kunnen voeren.\n"
 
-#: ../ntsysv.c:448
+#: ../ntsysv.c:463
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "verkeerd argument voor --levels\n"
 
-#: ../ntsysv.c:455
+#: ../ntsysv.c:471
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Er mogen geen services worden beheerd door ntsysv!\n"
 
-#: ../leveldb.c:307
+#: ../leveldb.c:321
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "openen van %s/init.d mislukt: %s\n"
 
-#: ../leveldb.c:717
+#: ../leveldb.c:766 ../leveldb.c:774
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "klonteren van patroon %s mislukt: %s\n"
 
-#: ../leveldb.c:760
+#: ../leveldb.c:820
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "kan het huidige runlevel niet bepalen\n"
 
-#: ../leveldb.c:840
+#: ../leveldb.c:901
 #, c-format
 msgid "Unable to set selinux context for %s: %s\n"
 msgstr "Kan selinuxcontext niet instellen voor %s: %s\n"
 
-#: ../leveldb.c:864
+#: ../leveldb.c:926
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "maken van symbolische link %s mislukt: %s\n"
 
-#: ../alternatives.c:68
+#: ../alternatives.c:81
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives versie %s - Copyright © 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:69
+#: ../alternatives.c:83
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Dit mag vrijelijk worden verspreid onder voorwaarden van GNU Public License.\n"
+"Dit mag vrijelijk worden verspreid onder voorwaarden van GNU Public "
+"License.\n"
 "\n"
 
-#: ../alternatives.c:70
+#: ../alternatives.c:86
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "gebruik: alternatives --install <link> <name> <path> <priority>\n"
 
-#: ../alternatives.c:71
+#: ../alternatives.c:87
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
-#: ../alternatives.c:72
+#: ../alternatives.c:88
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr "                    [--family <family>]\n"
+msgstr "                    [--family <familie>]\n"
 
-#: ../alternatives.c:73
-#, c-format
-msgid "                    [--slave <link> <name> <path>]*\n"
+#: ../alternatives.c:89
+#, fuzzy, c-format
+#| msgid "                    [--slave <link> <name> <path>]*\n"
+msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
-#: ../alternatives.c:74
+#: ../alternatives.c:90
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove <naam> <pad>\n"
 
-#: ../alternatives.c:75
+#: ../alternatives.c:91
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <naam>\n"
 
-#: ../alternatives.c:76
+#: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <name>\n"
+msgstr "       alternatives --config <naam>\n"
 
-#: ../alternatives.c:77
+#: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <name>\n"
+msgstr "       alternatives --display <naam>\n"
 
-#: ../alternatives.c:78
+#: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <naam> <pad>\n"
 
-#: ../alternatives.c:79
+#: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "alternatives --list\n"
+msgstr "       alternatives --list\n"
 
-#: ../alternatives.c:80
+#: ../alternatives.c:96
+#, fuzzy, c-format
+#| msgid "       alternatives --remove <name> <path>\n"
+msgid "       alternatives --remove-all <name>\n"
+msgstr "       alternatives --remove <name> <path>\n"
+
+#: ../alternatives.c:97
+#, fuzzy, c-format
+#| msgid "       alternatives --remove <name> <path>\n"
+msgid ""
+"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+"<slave_path>\n"
+msgstr "       alternatives --remove <name> <path>\n"
+
+#: ../alternatives.c:98
+#, fuzzy, c-format
+#| msgid "       alternatives --remove <name> <path>\n"
+msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgstr "       alternatives --remove <name> <path>\n"
+
+#: ../alternatives.c:99
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:81
+#: ../alternatives.c:100
 #, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
@@ -326,211 +351,223 @@ msgstr ""
 "gebruikelijke opties: --verbose --test --help --usage --version --keep-"
 "missing\n"
 
-#: ../alternatives.c:82
+#: ../alternatives.c:102
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <map> --admindir <map>\n"
 
-#: ../alternatives.c:214
+#: ../alternatives.c:270
 #, c-format
 msgid "reading %s\n"
 msgstr "lezen van %s\n"
 
-#: ../alternatives.c:218
+#: ../alternatives.c:275
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "openen van %s mislukt: %s\n"
 
-#: ../alternatives.c:227
+#: ../alternatives.c:283
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "lezen van %s mislukt: %s\n"
 
-#: ../alternatives.c:236
+#: ../alternatives.c:291
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s is leeg!\n"
 
-#: ../alternatives.c:245
+#: ../alternatives.c:300
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "verkeerde modus op regel 1 van %s\n"
 
-#: ../alternatives.c:252
+#: ../alternatives.c:307
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "verkeerde primaire link in %s\n"
 
-#: ../alternatives.c:264
+#: ../alternatives.c:319
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "pad %s niet verwacht in %s\n"
 
-#: ../alternatives.c:273
+#: ../alternatives.c:328
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "ontbrekend pad voor slaaf %s in %s\n"
 
-#: ../alternatives.c:283
+#: ../alternatives.c:338
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "onverwacht einde van bestand in %s\n"
 
-#: ../alternatives.c:292
+#: ../alternatives.c:347
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "pad voor alternatief verwacht in %s\n"
 
-#: ../alternatives.c:293 ../alternatives.c:318 ../alternatives.c:330
-#: ../alternatives.c:347 ../alternatives.c:366
+#: ../alternatives.c:348 ../alternatives.c:374 ../alternatives.c:386
+#: ../alternatives.c:404 ../alternatives.c:424
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "onverwachte regel in %s: %s\n"
 
-#: ../alternatives.c:317
+#: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr "afsluitende '@' ontbreekt of de family is leeg in %s\n"
+msgstr "afsluitende '@' ontbreekt of de familie is leeg in %s\n"
 
-#: ../alternatives.c:329
+#: ../alternatives.c:385
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "numerieke prioriteit verwacht in %s\n"
 
-#: ../alternatives.c:346
+#: ../alternatives.c:403
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "pad voor slaaf verwacht in %s\n"
 
-#: ../alternatives.c:374
+#: ../alternatives.c:432
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "lezen van link %s mislukt: %s\n"
 
-#: ../alternatives.c:388
+#: ../alternatives.c:448
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "link verwijst niet naar alternatief -- modus wordt op handmatig ingesteld\n"
 
-#: ../alternatives.c:393
+#: ../alternatives.c:453
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "link veranderd -- modus wordt op handmatig ingesteld\n"
 
-#: ../alternatives.c:424 ../alternatives.c:431
+#: ../alternatives.c:483 ../alternatives.c:490
 #, c-format
 msgid "would remove %s\n"
 msgstr "zou %s verwijderen\n"
 
-#: ../alternatives.c:426 ../alternatives.c:433 ../alternatives.c:466
+#: ../alternatives.c:485 ../alternatives.c:492 ../alternatives.c:527
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "verwijderen van link %s mislukt: %s\n"
 
-#: ../alternatives.c:448 ../alternatives.c:463
+#: ../alternatives.c:507 ../alternatives.c:524
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "zou %s linken -> %s\n"
 
-#: ../alternatives.c:453 ../alternatives.c:472
+#: ../alternatives.c:512 ../alternatives.c:533
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "aanmaken van link %s -> %s mislukt: %s\n"
 
-#: ../alternatives.c:459
+#: ../alternatives.c:520
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "de link %s -> %s mislukte: %s bestaat en is geen symlink\n"
 
-#: ../alternatives.c:504
+#: ../alternatives.c:565
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s bestaat al\n"
 
-#: ../alternatives.c:506
+#: ../alternatives.c:567
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "aanmaken van %s mislukt: %s\n"
 
-#: ../alternatives.c:539
+#: ../alternatives.c:600
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "vervangen van %s door %s mislukt: %s\n"
 
-#: ../alternatives.c:565 ../alternatives.c:571 ../alternatives.c:582
-#: ../alternatives.c:588
+#: ../alternatives.c:628 ../alternatives.c:634 ../alternatives.c:646
+#: ../alternatives.c:653
 #, c-format
 msgid "running %s\n"
 msgstr "uitvoeren van %s\n"
 
-#: ../alternatives.c:618
-#, c-format
-msgid "the primary link for %s must be %s\n"
-msgstr "de primaire link voor %s moet zijn %s\n"
-
-#: ../alternatives.c:699
+#: ../alternatives.c:726
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "link %s is incorrect voor slaaf %s (%s %s)\n"
 
-#: ../alternatives.c:740
+#: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
+#: ../alternatives.c:1076
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "%s is niet geconfigureerd als alternatief voor %s\n"
+
+#: ../alternatives.c:818
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an alternative for %s\n"
+msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgstr "%s is niet geconfigureerd als alternatief voor %s\n"
+
+#: ../alternatives.c:876
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "de primaire link voor %s moet zijn %s\n"
+
+#: ../alternatives.c:928
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - status is auto.\n"
 
-#: ../alternatives.c:742
+#: ../alternatives.c:930
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - status is handmatig.\n"
 
-#: ../alternatives.c:744
+#: ../alternatives.c:932
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " link wijst momenteel naar %s\n"
 
-#: ../alternatives.c:749
+#: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr "family %s "
+msgstr "familie %s "
 
-#: ../alternatives.c:750
+#: ../alternatives.c:938
 #, c-format
 msgid "priority %d\n"
 msgstr "prioriteit %d\n"
 
-#: ../alternatives.c:752
+#: ../alternatives.c:940
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " slaaf %s: %s\n"
 
-#: ../alternatives.c:757
+#: ../alternatives.c:945
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Huidige 'beste' versie is %s.\n"
 
-#: ../alternatives.c:788
+#: ../alternatives.c:980
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Er is %d programma dat '%s' levert.\n"
 
-#: ../alternatives.c:788
+#: ../alternatives.c:981
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Er zijn %d programma's die '%s' leveren.\n"
 
-#: ../alternatives.c:790
+#: ../alternatives.c:985
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Selectie    Commando\n"
 
-#: ../alternatives.c:804
+#: ../alternatives.c:1000
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Enter om de huidige selectie te bewaren[+], of type een selectienummer: "
 
-#: ../alternatives.c:807
+#: ../alternatives.c:1004
 #, c-format
 msgid ""
 "\n"
@@ -539,37 +576,32 @@ msgstr ""
 "\n"
 "fout bij lezen van keuze\n"
 
-#: ../alternatives.c:844 ../alternatives.c:872
-#, c-format
-msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s is niet geconfigureerd als alternatief voor %s\n"
-
-#: ../alternatives.c:888
+#: ../alternatives.c:1092
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(zou %s verwijderen\n"
 
-#: ../alternatives.c:890
+#: ../alternatives.c:1094
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "verwijderen van %s mislukt: %s\n"
 
-#: ../alternatives.c:1009
+#: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family mag het symbool '@' niet bevatten\n"
 
-#: ../alternatives.c:1062
+#: ../alternatives.c:1321
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s is ongeldig\n"
 
-#: ../alternatives.c:1068
+#: ../alternatives.c:1326
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s is ongeldig\n"
 
-#: ../alternatives.c:1078
+#: ../alternatives.c:1336
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives versie %s\n"
