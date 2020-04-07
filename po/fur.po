@@ -463,7 +463,7 @@ msgstr ""
 #: ../alternatives.c:565
 #, c-format
 msgid "%s already exists\n"
-msgstr "%s al esist za"
+msgstr "%s al esist za\n"
 
 #: ../alternatives.c:567
 #, c-format
