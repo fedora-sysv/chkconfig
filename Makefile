@@ -10,6 +10,7 @@ SBINDIR = /usr/sbin
 MANDIR = /usr/man
 ALTDIR = /var/lib/alternatives
 ALTDATADIR = /etc/alternatives
+SYSTEMUTILDIR = $(shell pkg-config --variable=systemdutildir systemd)
 SUBDIRS = po
 
 OBJS=chkconfig.o leveldb.o
@@ -55,10 +56,10 @@ install:
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
 	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
-	[ -d $(DESTDIR)/usr/lib/systemd ] || mkdir -p -m 755 $(DESTDIR)/usr/lib/systemd
+	[ -d $(DESTDIR)/$(SYSTEMUTILDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(SYSTEMUTILDIR)
 
 	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
-	ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/usr/lib/systemd/systemd-sysv-install
+	ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/$(SYSTEMUTILDIR)/systemd-sysv-install
 
 	install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
 	install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives

@@ -7,7 +7,7 @@ Group: System Environment/Base
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc
+BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc systemd-devel
 Conflicts: initscripts <= 5.30-1
 Provides: alternatives = %{version}-%{release}
 
