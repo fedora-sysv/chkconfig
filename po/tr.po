@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-03-24 13:38+0000\n"
+"PO-Revision-Date: 2020-04-13 14:40+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/tr/>\n"
@@ -437,7 +437,8 @@ msgstr "%s bağlantısı okunamıyor: %s\n"
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
-"bağlantı herhangi bir alternatifi göstermiyor -- manuel moda geçiliyor\n"
+"bağlantı herhangi bir alternatifi göstermiyor -- elle ayarlama moduna "
+"geçiliyor\n"
 
 #: ../alternatives.c:453
 #, c-format
