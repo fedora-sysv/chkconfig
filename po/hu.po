@@ -8,7 +8,7 @@
 # Zoltan Hoppár <hopparz@gmail.com>, 2012-2013
 # Meskó Balázs <meskobalazs@gmail.com>, 2018. #zanata
 # Meskó Balázs <meskobalazs@gmail.com>, 2019. #zanata
-# Balázs Meskó <meskobalazs@mailbox.org>, 2020.
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
@@ -289,8 +289,8 @@ msgstr "                    [--family <család>]\n"
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr ""
-"                    [--slave <szolga_link> <szolga_név> "
-"<szolga_elérési_út>]*\n"
+"                    [--slave <szolga_link> <szolga_név> <szolga_elérési_út>]*"
+"\n"
 
 #: ../alternatives.c:92
 #, c-format
