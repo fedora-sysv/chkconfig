@@ -6,14 +6,14 @@
 # Kjartan Maraas <kmaraas@gnome.org>, 2012
 # Kjartan Maraas <kmaraas@gnome.org>, 2011
 # notting <notting@redhat.com>, 2011
-# Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Allan Nordhøy <epost@anotheragency.no>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/nb_NO/>\n"
 "Language: nb\n"
@@ -280,8 +280,7 @@ msgstr "                    [--family <familie>]\n"
 #: ../alternatives.c:91
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
+msgstr "                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
