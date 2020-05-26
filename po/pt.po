@@ -7,7 +7,7 @@
 # notting <notting@redhat.com>, 2011
 # Rui Gouveia <rui.gouveia@gmail.com>, 2011-2012
 # Ricardo Pinto <ricardo.bigote@gmail.com>, 2016. #zanata
-# Manuela Silva <mmsrs@sky.com>, 2019. #zanata, 2020.
+# Manuela Silva <mmsrs@sky.com>, 2019. #zanata, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/pt/>\n"
 "Language: pt\n"
