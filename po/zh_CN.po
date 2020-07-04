@@ -10,7 +10,7 @@
 # Sarah Wang <sarahs@redhat.com>, 2003, 2004, 2005
 # Wei Liu <LLIU@REDHAT.COM>, 2012
 # Leah Liu <lliu@redhat.com>, 2015. #zanata
-# Charles Lee <lchopn@gmail.com>, 2017. #zanata, 2020.
+# Charles Lee <lchopn@gmail.com>, 2017. #zanata, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -324,9 +324,8 @@ msgstr "       alternatives --remove-all <名称>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr ""
-"       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径"
-">\n"
+msgstr "       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> "
+"<从属路径>\n"
 
 #: ../alternatives.c:100
 #, c-format
