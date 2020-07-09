@@ -13,14 +13,14 @@
 # Lukáš Nykrýn <lnykryn@redhat.com>, 2013
 # notting <notting@redhat.com>, 2011
 # Elena Metelli <byruit@gmail.com>, 2017. #zanata
-# Enrico Bella <enric@e.email>, 2020.
+# Enrico Bella <enric@e.email>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Enrico Bella <enric@e.email>\n"
 "Language-Team: Italian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/it/>\n"
 "Language: it\n"
@@ -104,8 +104,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Se desideri elencare i servizi systemd usa 'systemctl list-unit-"
-"files'.\n"
+"      Se desideri elencare i servizi systemd usa 'systemctl list-unit-files'."
+"\n"
 "      Per visualizzare i servizi abilitati in un target particolare usa\n"
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
