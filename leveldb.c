@@ -898,7 +898,7 @@ int setXinetdService(struct service s, int on) {
     unlink(oldfname);
     r = rename(newfname, oldfname);
     if (selinux_restore(oldfname) != 0)
-        fprintf(stderr, _("Unable to set selinux context for %s: %s\n"),
+        fprintf(stderr, _("Unable to set SELinux context for %s: %s\n"),
                 oldfname, strerror(errno));
     return (r);
 }
