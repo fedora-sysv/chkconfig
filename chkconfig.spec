@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.13
+Version: 1.14
 Release: 1%{?dist}
 License: GPLv2
 Group: System Environment/Base
@@ -81,6 +81,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Fri Jul 17 2020 Jan Macku <jamacku@redhat.com> - 1.14-1
+- Fix spelling of SELinux
+- Remove hardcoded systemd path
+
 * Tue Apr 14 2020 Jan Macku <jamacku@redhat.com> - 1.13-1
 - fix typo in translations and fix bogus dates in changelog
 
