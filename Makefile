@@ -1,10 +1,11 @@
-VERSION=$(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
+VERSION := $(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
+NEXT_VERSION := $(shell awk '/Version:/ { print $$2 + 0.01 }' chkconfig.spec)
 TAG = $(VERSION)
 
-CFLAGS=-g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
-LDFLAGS+=-g
-MAN=chkconfig.8 ntsysv.8 alternatives.8
-PROG=chkconfig
+CFLAGS = -g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
+LDFLAGS += -g
+MAN = chkconfig.8 ntsysv.8 alternatives.8
+PROG = chkconfig
 BINDIR = /sbin
 SBINDIR = /usr/sbin
 MANDIR = /usr/man
@@ -13,8 +14,8 @@ ALTDATADIR = /etc/alternatives
 SYSTEMDUTILDIR = $(shell pkg-config --variable=systemdutildir systemd)
 SUBDIRS = po
 
-OBJS=chkconfig.o leveldb.o
-NTOBJS=ntsysv.o leveldb.o
+OBJS = chkconfig.o leveldb.o
+NTOBJS = ntsysv.o leveldb.o
 
 all: subdirs $(PROG) ntsysv alternatives
 
@@ -76,9 +77,26 @@ install:
 	    || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\
 	done && test -z "$$fail"
 
+check: alternatives
+	./test-alternatives.sh
+
 tag:
 	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
 	@echo "Tagged as $(TAG)"
 
-check: alternatives
-	./test-alternatives.sh
+release-commit:
+	@git log --decorate=no --format="- %s" $(VERSION)..HEAD > .changelog.tmp
+	@rpmdev-bumpspec -n $(NEXT_VERSION) -f .changelog.tmp chkconfig.spec
+	@rm -f .changelog.tmp
+	@git add chkconfig.spec
+	@git commit --message="$(NEXT_VERSION)"
+	@echo -e "\n       New release commit ($(NEXT_VERSION)) created:\n"
+	@git show
+
+archive: clean
+	@git archive --format=tar --prefix=chkconfig-$(VERSION)/ HEAD > chkconfig-$(VERSION).tar
+	@mkdir -p chkconfig-$(VERSION)/
+	@tar --append -f chkconfig-$(VERSION).tar chkconfig-$(VERSION)
+	@gzip -f chkconfig-$(VERSION).tar
+	@rm -rf chkconfig-$(VERSION)
+	@echo "The archive is at chkconfig-$(VERSION).tar.gz"
