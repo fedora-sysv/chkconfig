@@ -4,11 +4,11 @@
 #
 # Translators:
 # Christian Rose <menthos@menthos.com>, 2005
-# Göran Uddeborg <goeran@uddeborg.se>, 2011-2013, 2020.
-# Göran Uddeborg <goeran@uddeborg.se>, 2009, 2011, 2020.
+# Göran Uddeborg <goeran@uddeborg.se>, 2011-2013, 2020, 2022.
+# Göran Uddeborg <goeran@uddeborg.se>, 2009, 2011, 2020, 2022.
 # notting <notting@redhat.com>, 2011
-# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata, 2020.
-# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata, 2020.
+# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata, 2020, 2022.
+# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Luna Jernberg <bittin@reimu.nl>, 2022.
 # Anders Jonsson <anders.jonsson@norsjovallen.se>, 2022.
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:53+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/sv/>\n"
 "Language: sv\n"
