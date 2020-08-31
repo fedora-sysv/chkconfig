@@ -9,14 +9,14 @@
 # Zdenek <chmelarz@gmail.com>, 2016. #zanata
 # Zdenek <chmelarz@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
-# Daniel Rusek <mail@asciiwolf.com>, 2020.
+# Daniel Rusek <mail@asciiwolf.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/cs/>\n"
 "Language: cs\n"
