@@ -86,7 +86,7 @@ tag:
 
 release-commit:
 	@git log --decorate=no --format="- %s" $(VERSION)..HEAD > .changelog.tmp
-	@rpmdev-bumpspec -n $(NEXT_VERSION) -f .changelog.tmp chkconfig.spec
+	@rpmdev-bumpspec -D -n $(NEXT_VERSION) -f .changelog.tmp chkconfig.spec
 	@rm -f .changelog.tmp
 	@git add chkconfig.spec
 	@git commit --message="$(NEXT_VERSION)"
