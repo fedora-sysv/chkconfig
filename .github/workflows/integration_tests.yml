@@ -1,0 +1,34 @@
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+name: Integration tests
+on: [release, pull_request]
+
+jobs:
+  buildCheck:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
+      - name: Build & install
+        run: make all && make install DESTDIR=/tmp/chkconfig
+
+  unitTests:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash
+    needs: buildcheck
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v2
+      - name: Clone beakerlib repository
+        run: git clone https://github.com/beakerlib/beakerlib.git
+      - name: Build and install beakerlib
+        run: cd beakerlib && sudo make && sudo make install && cd -
+      - name: Install dependencies required by Makefile
+        run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
+      - name: Install dependencies required by test-alternatives.sh
+        run: sudo apt install -y libxml2-dev libxslt-dev python-dev python3-lxml
+      - name: Build && Test
+        run: make check
