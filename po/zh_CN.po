@@ -323,7 +323,9 @@ msgstr "       alternatives --remove-all <名称>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径>\n"
+msgstr ""
+"       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径"
+">\n"
 
 #: ../alternatives.c:98
 #, c-format
