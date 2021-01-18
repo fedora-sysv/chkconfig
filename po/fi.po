@@ -10,13 +10,14 @@
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2016. #zanata
 # Toni Rantala <trantalafilo@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-05-18 22:40+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2021-01-13 12:36+0000\n"
+"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fi/>\n"
 "Language: fi\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.4.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -46,7 +47,7 @@ msgstr "käyttö:   %s [nimi]\n"
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "käyttö:   %s <enable|disable|is-enabled> [nimi] \n"
 
 #: ../chkconfig.c:52
 #, c-format
@@ -97,7 +98,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"        Käytä systemd-palvelujen listaamiseen komentoa\n"
+"      Käytä systemd-palvelujen listaamiseen komentoa\n"
 "        'systemctl list-unit-files'. Nähdäksesi tietyn kohteen käyttöön\n"
 "        ottamat palvelut käytä komentoa 'systemctl list-dependencies "
 "[kohde]'.\n"
@@ -278,13 +279,13 @@ msgstr "                    [--initscript <palvelu>]\n"
 #: ../alternatives.c:88
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr "                    [--family <family>]\n"
+msgstr "                    [--family <perhe>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <linkki> <nimi> <polku>]*\n"
+msgstr ""
+"                    [--slave <slave_linkki> <slave_nimi> <slave_polku>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -314,27 +315,26 @@ msgstr "       alternatives --set <nimi> <polku>\n"
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "       alternatives --list\n"
+msgstr "       vaihtoehdot --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <nimi> <polku>\n"
+msgstr "       alternatives --remove-all <nimi>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <nimi> <polku>\n"
+msgstr ""
+"       alternatives --add-slave <nimi> <polku> <slave_linkki> <slave_nimi> "
+"<slave_polku>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <nimi> <polku>\n"
+msgstr "       alternatives --remove-slave <nimi> <polku> <slave_nimi>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -346,6 +346,8 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgstr ""
+"yleiset vaihtoehdot: --verbose --test --help --usage --version --keep-"
+"missing\n"
 
 #: ../alternatives.c:102
 #, c-format
@@ -411,7 +413,7 @@ msgstr "odottamaton rivi tiedostossa %s: %s\n"
 #: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "lopettava '@' puuttuu tai perhe on tyhjä %s\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -498,10 +500,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "ohjelmaa %s ei ole asetettu sovelluksen %s vaihtoehdoksi\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "ohjelmaa %s ei ole asetettu sovelluksen %s vaihtoehdoksi\n"
+msgstr "ohjelmaa %s ei ole asetettu sovelluksen %s (%s) slave vaihtoehdoksi\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -526,12 +527,12 @@ msgstr " linkki viittaa tällä hetkellä tiedostoon %s\n"
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "perhe %s "
 
 #: ../alternatives.c:938
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "prioriteetti %d\n"
 
 #: ../alternatives.c:940
 #, c-format
@@ -546,7 +547,7 @@ msgstr "Nykyinen \"paras\" versio on %s.\n"
 #: ../alternatives.c:980
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "%.0dYksi ohjelma tarjoaa sovelluksen \"%s\".\n"
+msgstr "%d Yksi ohjelma tarjoaa sovelluksen \"%s\".\n"
 
 #: ../alternatives.c:981
 #, c-format
@@ -585,7 +586,7 @@ msgstr "tiedoston %s poistaminen epäonnistui: %s\n"
 #: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family ei voi sisältää symboolia '@'\n"
 
 #: ../alternatives.c:1321
 #, c-format
