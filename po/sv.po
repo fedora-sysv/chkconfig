@@ -4,19 +4,19 @@
 #
 # Translators:
 # Christian Rose <menthos@menthos.com>, 2005
-# Göran Uddeborg <goeran@uddeborg.se>, 2011-2013
-# Göran Uddeborg <goeran@uddeborg.se>, 2009, 2011
+# Göran Uddeborg <goeran@uddeborg.se>, 2011-2013, 2020.
+# Göran Uddeborg <goeran@uddeborg.se>, 2009, 2011, 2020.
 # notting <notting@redhat.com>, 2011
-# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata
-# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata
+# Göran Uddeborg <goeran@uddeborg.se>, 2015. #zanata, 2020.
+# Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata, 2020.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-05-18 22:40+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-08-31 09:29+0000\n"
+"Last-Translator: Göran Uddeborg <goeran@uddeborg.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/sv/>\n"
 "Language: sv\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.2.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -56,22 +56,22 @@ msgstr "användning:   %s [--list] [--type <typ>] [namn]\n"
 #: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "              %s --add <namn>\n"
+msgstr "         %s --add <namn>\n"
 
 #: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "              %s --del <namn>\n"
+msgstr "         %s --del <namn>\n"
 
 #: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "              %s --override <namn>\n"
+msgstr "         %s --override <namn>\n"
 
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "              %s [--level <nivåer>] [--type <typ>] <namn> %s\n"
+msgstr "         %s [--level <nivåer>] [--type <typ>] <namn> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
@@ -98,9 +98,9 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Om du vill lista systemd-tjänster använd ”systemctl list-unit-files”.\n"
-"För att se tjänster aktiverade av ett visst mål använd\n"
-"”systemctl list-dependencies [mål]”.\n"
+"      Om du vill lista systemd-tjänster använd ”systemctl list-unit-files”.\n"
+"      För att se tjänster aktiverade av ett visst mål använd\n"
+"      ”systemctl list-dependencies [mål]”.\n"
 "\n"
 
 #: ../chkconfig.c:83
@@ -272,7 +272,7 @@ msgstr ""
 #: ../alternatives.c:87
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                         [--initscript <tjänst>]\n"
+msgstr "                    [--initscript <tjänst>]\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -280,60 +280,58 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <familj>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                         [--slave <länk> <namn> <sökväg>]*\n"
+msgstr "                    [--slave <länk> <slavnamn> <slavsökväg>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "            alternatives --remove <namn> <sökväg>\n"
+msgstr "       alternatives --remove <namn> <sökväg>\n"
 
 #: ../alternatives.c:91
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "            alternatives --auto <namn>\n"
+msgstr "       alternatives --auto <namn>\n"
 
 #: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "            alternatives --config <namn>\n"
+msgstr "       alternatives --config <namn>\n"
 
 #: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "            alternatives --display <namn>\n"
+msgstr "       alternatives --display <namn>\n"
 
 #: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "            alternatives --set <namn> <sökväg>\n"
+msgstr "       alternatives --set <namn> <sökväg>\n"
 
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "alternatives --list\n"
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "            alternatives --remove <namn> <sökväg>\n"
+msgstr "       alternatives --remove-all <namn>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "            alternatives --remove <namn> <sökväg>\n"
+msgstr ""
+"       alternatives --add-slave <namn> <sökväg> <slavlänk> <slavnamn> "
+"<slavsökväg>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "            alternatives --remove <namn> <sökväg>\n"
+msgstr "       alternatives --remove-slave <namn> <sökväg> <slavnamn>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -350,7 +348,7 @@ msgstr ""
 #: ../alternatives.c:102
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                    --altdir <katalog> --admindir <katalog>\n"
+msgstr "                --altdir <katalog> --admindir <katalog>\n"
 
 #: ../alternatives.c:270
 #, c-format
@@ -497,10 +495,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s har inte konfigurerats som ett alternativ för %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s har inte konfigurerats som ett alternativ för %s\n"
+msgstr "%s har inte konfigurerats som ett slavalternativ för %s (%s)\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -525,7 +522,7 @@ msgstr " länk pekar för tillfället på %s\n"
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr "familj %s"
+msgstr "familj %s "
 
 #: ../alternatives.c:938
 #, c-format
