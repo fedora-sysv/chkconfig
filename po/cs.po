@@ -9,13 +9,14 @@
 # Zdenek <chmelarz@gmail.com>, 2016. #zanata
 # Zdenek <chmelarz@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Daniel Rusek <mail@asciiwolf.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-05-18 22:40+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-09-01 12:29+0000\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/cs/>\n"
 "Language: cs\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.2.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -39,7 +40,7 @@ msgstr "Program může být volně šířen podle podmínek GNU Public License.\
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr "využití:   %s [name]\n"
+msgstr "použití:   %s [jméno]\n"
 
 #: ../chkconfig.c:49
 #, c-format
@@ -95,9 +96,10 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Pro přehled služeb systemd použijte  'systemctl list-unit-files'.\n"
-"Pro zobrazení povolených služeb pro konkrétní cíl použijte\n"
-"'systemctl list-dependencies [cíl]'.\n"
+"      Pro přehled služeb systemd použijte  'systemctl list-unit-files'.\n"
+"      Pro zobrazení povolených služeb pro konkrétní cíl použijte\n"
+"      'systemctl list-dependencies [cíl]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -268,7 +270,7 @@ msgstr "použití: alternatives --install <linka> <jméno> <cesta> <priorita>\n"
 #: ../alternatives.c:87
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                      [--initscript <služba>]\n"
+msgstr "                    [--initscript <služba>]\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -276,60 +278,59 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--rodina <family>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                      [--slave <linka> <jméno> <cesta>]*\n"
+msgstr ""
+"                    [--slave <slave_linka> <slave_jméno> <slave_cesta>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "         alternatives --remove <jméno> <cesta>\n"
+msgstr "       alternatives --remove <jméno> <cesta>\n"
 
 #: ../alternatives.c:91
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "         alternatives --auto <jméno>\n"
+msgstr "       alternatives --auto <jméno>\n"
 
 #: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "         alternatives --config <jméno>\n"
+msgstr "       alternatives --config <jméno>\n"
 
 #: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "         alternatives --display <jméno>\n"
+msgstr "       alternatives --display <jméno>\n"
 
 #: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --set <name> <path>\n"
-msgstr "         alternatives --set <jméno> <cesta>\n"
+msgstr "       alternatives --set <jméno> <cesta>\n"
 
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "alternatives --list\n"
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "         alternatives --remove <jméno> <cesta>\n"
+msgstr "       alternatives --remove-all <jméno>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "         alternatives --remove <jméno> <cesta>\n"
+msgstr ""
+"       alternatives --add-slave <jméno> <cesta> <slave_linka> <slave_jméno> "
+"<slave_cesta>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "         alternatives --remove <jméno> <cesta>\n"
+msgstr "       alternatives --remove-slave <jméno> <cesta> <slave_jméno>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -346,7 +347,7 @@ msgstr ""
 #: ../alternatives.c:102
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
-msgstr "                    --altdir <adresář> --admindir <adresář>\n"
+msgstr "                --altdir <adresář> --admindir <adresář>\n"
 
 #: ../alternatives.c:270
 #, c-format
@@ -407,7 +408,7 @@ msgstr "neočekávaný řádek v %s: %s\n"
 #: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr "uzavírací '@' chybí nebo je rodina v  %s prázdná\n"
+msgstr "uzavírací '@' chybí nebo je rodina v %s prázdná\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -458,8 +459,7 @@ msgstr "nemohu vytvořit linku %s -> %s: %s\n"
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
-"nemohu vytvořit odkaz %s -> %s: %s existuje a nejedná se o symbolický odkaz\n"
-"\n"
+"nelze vytvořit odkaz %s -> %s: %s existuje a nejedná se o symbolický odkaz\n"
 
 #: ../alternatives.c:565
 #, c-format
@@ -494,10 +494,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nebyl nastaven jako alternativa pro %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s nebyl nastaven jako alternativa pro %s\n"
+msgstr "%s nebyl nastaven jako slave alternativa pro %s (%s)\n"
 
 #: ../alternatives.c:876
 #, c-format
