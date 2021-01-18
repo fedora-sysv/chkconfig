@@ -6,66 +6,70 @@
 # Gaute Hvoslef Kvalnes <ai98ghk@stud.hib.no>, 2000
 # Kjartan Maraas <kmaraas@gnome.org>, 2001
 # notting <notting@redhat.com>, 2011
+# Andreas-Johann Ø Ulvestad <aj@aju.no>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2015-01-05 06:05+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"PO-Revision-Date: 2021-01-18 22:36+0000\n"
+"Last-Translator: Andreas-Johann Ø Ulvestad <aj@aju.no>\n"
+"Language-Team: Norwegian Nynorsk <https://translate.fedoraproject.org/"
+"projects/fedora-sysv/chkconfig/nn/>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr ""
+msgstr "%s versjon %s - Copyright (C) 1997-2000 Red Hat, Inc\n"
 
 #: ../chkconfig.c:43
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
+"Programmet kan bli fritt distribuert under vilkåra i \"GNU Public License\"."
+"\n"
 
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr ""
+msgstr "bruk: %s [namn]\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "bruk:   %s <enable|disable|is-enabled> [namn] \n"
 
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr ""
+msgstr "bruk:   %s [--list] [--type <type>] [namn]\n"
 
 #: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr ""
+msgstr "         %s --add <namn>\n"
 
 #: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr ""
+msgstr "         %s --del <namn>\n"
 
 #: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr ""
+msgstr "         %s --override <namn>\n"
 
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <levels>] [--type <type>] <namn> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
@@ -77,6 +81,10 @@ msgid ""
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"Merk: Her visast berre SysV-tenester - ikkje systemd-tenester\n"
+"      SysV-konfigurasjonsdata kan bli overskrive av systemd-konfigurasjon.\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -86,6 +94,11 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      Dersom du vil liste opp systemd-tenester, bruk 'systemctl list-unit-"
+"files'.\n"
+"      For å sjå tenester skrudd på for eit spesifisert mål, bruk\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -93,21 +106,23 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
+"tenesta %s støtter chkconfig men er ikkje nemnt i noko køyrenivå (køyr "
+"'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr ""
+msgstr "teneste %s støttar ikkje chkconfig\n"
 
 #: ../chkconfig.c:89
 #, c-format
 msgid "error reading information on service %s: %s\n"
-msgstr ""
+msgstr "kjarte ikkje å finne informasjon om teneste %s: %s\n"
 
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Du har ikkje nok rettar for å utføyre denne handlinga.\n"
 
 #: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
@@ -120,37 +135,38 @@ msgstr "av"
 #: ../chkconfig.c:547
 #, c-format
 msgid "xinetd based services:\n"
-msgstr ""
+msgstr "xinetd-baserte tenester:\n"
 
 #: ../chkconfig.c:549
 #, c-format
 msgid "failed to open directory %s: %s\n"
-msgstr ""
+msgstr "kjarte ikkje å opne katalog %s: %s\n"
 
 #: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
+msgstr "Merk: Vidaresender førespurnad til «systemctll %s %s'.\n"
 
 #: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "Klarte ikkje å vidareformidle tenesteførespurnad til systemctl: %m\n"
 
 #: ../chkconfig.c:743
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s versjon %s\n"
 
 #: ../chkconfig.c:756
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type må vere «sysv» eller «xinetd»\n"
 
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
+"du kan berre bruke eitt av flagga --list, --add, --del eller --override\n"
 
 #: ../chkconfig.c:873
 #, c-format
