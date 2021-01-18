@@ -10,15 +10,15 @@
 # Sarah Wang <sarahs@redhat.com>, 2003, 2004, 2005
 # Wei Liu <LLIU@REDHAT.COM>, 2012
 # Leah Liu <lliu@redhat.com>, 2015. #zanata
-# Charles Lee <lchopn@gmail.com>, 2017. #zanata
+# Charles Lee <lchopn@gmail.com>, 2017. #zanata, 2020.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-05-18 22:40+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-07-05 11:27+0000\n"
+"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.1.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -276,13 +276,12 @@ msgstr "                    [--initscript <服务>]\n"
 #: ../alternatives.c:88
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <家族>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <链接> <名称> <路径>]*\n"
+msgstr "                    [--slave <从属链接> <从属名称> <从属路径>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -315,24 +314,23 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <名称> <路径>\n"
+msgstr "       alternatives --remove-all <名称>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <名称> <路径>\n"
+msgstr ""
+"       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径"
+">\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <名称> <路径>\n"
+msgstr "       alternatives --remove-slave <名称> <路径> <从属名称>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -343,7 +341,7 @@ msgstr "\n"
 #, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing\n"
-msgstr ""
+msgstr "常见选项: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:102
 #, c-format
@@ -388,7 +386,7 @@ msgstr "路径 %s 意外出现在 %s 中\n"
 #: ../alternatives.c:328
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr "从 %s 的路径缺失于 %s 中\n"
+msgstr "从属 %s 的路径缺失于 %s 中\n"
 
 #: ../alternatives.c:338
 #, c-format
@@ -398,7 +396,7 @@ msgstr "%s 中意外出现文件结束符\n"
 #: ../alternatives.c:347
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr " %s 中预期出现备用路径\n"
+msgstr "%s 中应当出现备用路径\n"
 
 #: ../alternatives.c:348 ../alternatives.c:374 ../alternatives.c:386
 #: ../alternatives.c:404 ../alternatives.c:424
@@ -409,7 +407,7 @@ msgstr "%s 中意外出现行：%s\n"
 #: ../alternatives.c:372
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "%s 中结尾的 ‘@’ 缺失或者家族项目为空\n"
 
 #: ../alternatives.c:385
 #, c-format
@@ -419,7 +417,7 @@ msgstr "%s 中预期出现数字优先度\n"
 #: ../alternatives.c:403
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr "%s 中预期出现从路径\n"
+msgstr "%s 中预期出现从属路径\n"
 
 #: ../alternatives.c:432
 #, c-format
@@ -485,7 +483,7 @@ msgstr "正在运行 %s\n"
 #: ../alternatives.c:726
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr "从 %s 的链接 %s 不正确（%s %s）\n"
+msgstr "从属 %s 的链接 %s 不正确（%s %s）\n"
 
 #: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
 #: ../alternatives.c:1076
@@ -494,10 +492,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "未将 %s 配置为 %s 的备用项\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "未将 %s 配置为 %s 的备用项\n"
+msgstr "%s 没有被配置为%s(%s) 的从属替代\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -517,22 +514,22 @@ msgstr "%s - 状态为手工。\n"
 #: ../alternatives.c:932
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "链接当前指向 %s\n"
+msgstr " 链接当前指向 %s\n"
 
 #: ../alternatives.c:937
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "家族 %s "
 
 #: ../alternatives.c:938
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "优先度 %d\n"
 
 #: ../alternatives.c:940
 #, c-format
 msgid " slave %s: %s\n"
-msgstr "从 %s：%s\n"
+msgstr " 从属 %s：%s\n"
 
 #: ../alternatives.c:945
 #, c-format
@@ -557,7 +554,7 @@ msgstr "  选项    命令\n"
 #: ../alternatives.c:1000
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "按 Enter 保留当前选项[+]，或者键入选项编号："
+msgstr "按 Enter 保留当前选项[+]，或者键入选项编号： "
 
 #: ../alternatives.c:1004
 #, c-format
@@ -581,7 +578,7 @@ msgstr "%s 移除失败：%s\n"
 #: ../alternatives.c:1262
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family 不能包含 ‘@’ 符号\n"
 
 #: ../alternatives.c:1321
 #, c-format

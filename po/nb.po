@@ -279,7 +279,8 @@ msgstr "                    [--family <familie>]\n"
 #: ../alternatives.c:89
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
+msgstr ""
+"                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
 
 #: ../alternatives.c:90
 #, c-format

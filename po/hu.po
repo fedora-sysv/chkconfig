@@ -288,8 +288,8 @@ msgstr "                    [--family <család>]\n"
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr ""
-"                    [--slave <szolga_link> <szolga_név> <szolga_elérési_út>]*"
-"\n"
+"                    [--slave <szolga_link> <szolga_név> "
+"<szolga_elérési_út>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -332,8 +332,8 @@ msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
 msgstr ""
-"       alternatives --add-slave <név> <elérési_út> <szolga_link> <szolga_név>"
-" <szolga_név>\n"
+"       alternatives --add-slave <név> <elérési_út> <szolga_link> "
+"<szolga_név> <szolga_név>\n"
 
 #: ../alternatives.c:98
 #, c-format

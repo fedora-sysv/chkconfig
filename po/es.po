@@ -13,20 +13,22 @@
 # Yelitza Louze <ylouze@redhat.com>, 2004
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2015. #zanata
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2017. #zanata
+# Emilio Herrera <ehespinosa57@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2017-02-27 10:46+0000\n"
-"Last-Translator: Máximo Castañeda Riloba <mcrcctm@gmail.com>\n"
-"Language-Team: Spanish <trans-es@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2020-07-10 17:27+0000\n"
+"Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
+"Language-Team: Spanish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.1.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -286,15 +288,16 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <familia>]\n"
 
 #: ../alternatives.c:89
-#, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <enlace> <nombre> <ruta>]*\n"
+msgstr ""
+"                    [--slave <enlace_esclavo> <nombre_esclavo> "
+"<ruta_esclavo>]*\n"
 
 #: ../alternatives.c:90
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove <nombre> <ruta>\n"
 
 #: ../alternatives.c:91
 #, c-format
@@ -322,24 +325,23 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-all <nombre>\n"
 
 #: ../alternatives.c:97
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr ""
+"       alternatives --add-slave <nombre> <ruta> <enlace_esclavo> "
+"<nombre_esclavo> <ruta_esclavo>\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-slave <nombre> <ruta> <nombre_esclavo>\n"
 
 #: ../alternatives.c:99
 #, c-format
@@ -483,7 +485,7 @@ msgstr "error al crear %s: %s\n"
 #: ../alternatives.c:600
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "no se pudo reemplazar  %s con %s: %s\n"
+msgstr "no se pudo reemplazar %s con %s: %s\n"
 
 #: ../alternatives.c:628 ../alternatives.c:634 ../alternatives.c:646
 #: ../alternatives.c:653
@@ -503,10 +505,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s no ha sido configurado como una alternativa para %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s no ha sido configurado como una alternativa para %s\n"
+msgstr "%s no ha sido configurado como un esclavo alternativa para %s (%s)\n"
 
 #: ../alternatives.c:876
 #, c-format
@@ -568,7 +569,7 @@ msgstr "  Selección    Comando\n"
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Presione Intro para mantener la selección actual[+], o escriba el número de "
-"la selección:  "
+"la selección: "
 
 #: ../alternatives.c:1004
 #, c-format
