@@ -3,13 +3,11 @@ Name: chkconfig
 Version: 1.14
 Release: 1%{?dist}
 License: GPLv2
-Group: System Environment/Base
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc systemd-devel
+BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc systemd-devel make
 Conflicts: initscripts <= 5.30-1
-Provides: alternatives = %{version}-%{release}
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -19,7 +17,6 @@ of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
 Summary: A tool to set the stop/start of system services in a runlevel
-Group: System Environment/Base
 Requires: chkconfig = %{version}-%{release}
 
 %description -n ntsysv
@@ -29,18 +26,27 @@ manipulating the numerous symbolic links in /etc/rc.d). Unless you
 specify a runlevel or runlevels on the command line (see the man
 page), ntsysv configures the current runlevel (5 if you're using X).
 
+%package -n alternatives
+Summary: A tool to maintain symbolic links determining default commands
+
+%description -n alternatives
+alternatives creates, removes, maintains and displays information about the
+symbolic links comprising the alternatives system. It is possible for several
+programs fulfilling the same or similar functions to be installed on a single
+system at the same time.
+
 %prep
 %setup -q
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS" %{?_smp_mflags}
+%make_build RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS"
 
 %check
 make check
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT MANDIR=%{_mandir} SBINDIR=%{_sbindir} install
+%make_install MANDIR=%{_mandir} SBINDIR=%{_sbindir}
 
 mkdir -p $RPM_BUILD_ROOT/etc/rc.d/init.d
 ln -s rc.d/init.d $RPM_BUILD_ROOT/etc/init.d
@@ -52,27 +58,18 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 
 %find_lang %{name}
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files -f %{name}.lang
 %defattr(-,root,root)
 %{!?_licensedir:%global license %%doc}
 %license COPYING
-%dir /etc/alternatives
 /sbin/chkconfig
-%{_sbindir}/update-alternatives
-%{_sbindir}/alternatives
 /etc/chkconfig.d
 /etc/init.d
 /etc/rc.d
 /etc/rc.d/init.d
 /etc/rc[0-6].d
 /etc/rc.d/rc[0-6].d
-%dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
-%{_mandir}/*/update-alternatives*
-%{_mandir}/*/alternatives*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
@@ -80,7 +77,20 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/ntsysv
 %{_mandir}/*/ntsysv.8*
 
+%files -n alternatives
+%license COPYING
+%dir /etc/alternatives
+%{_sbindir}/update-alternatives
+%{_sbindir}/alternatives
+%{_mandir}/*/update-alternatives*
+%{_mandir}/*/alternatives*
+%dir /var/lib/alternatives
+
 %changelog
+* Tue Jul 21 2020 Tom Stellard <tstellar@redhat.com> - 1.14-2
+- Use make macros
+- https://fedoraproject.org/wiki/Changes/UseMakeBuildInstallMacro
+
 * Fri Jul 17 2020 Jan Macku <jamacku@redhat.com> - 1.14-1
 - Fix spelling of SELinux
 - Remove hardcoded systemd path
@@ -92,6 +102,12 @@ rm -rf $RPM_BUILD_ROOT
 - alternatives setService(): Add missing error mesg - (#1820089)
 - po: update translations
 - rebase
+
+* Thu Mar 14 2019 Peter Robinson <pbrobinson@fedoraproject.org> 1.11-4
+- Split out alternatives into it's own package
+
+* Mon Oct 08 2018 Lukas Nykryn <lnykryn@redhat.com> - 1.11-2
+- add Provides: alternatives
 
 * Mon Sep 10 2018 Lukas Nykryn <lnykryn@redhat.com> - 1.11-1
 - Add tests for --add/remove-slave and use beakerlib
@@ -366,7 +382,7 @@ rm -rf $RPM_BUILD_ROOT
 * Fri Jun  4 2004 Bill Nottingham <notting@redhat.com> 1.3.11-1
 - fix LSB comment parsing (#85678)
 
-* Sat May 29 2004 Bill Nottingham <notting@redhat.com> 1.3.10-1
+* Wed May 29 2004 Bill Nottingham <notting@redhat.com> 1.3.10-1
 - mark alternatives help output for translation (#110526)
 
 * Wed Oct 22 2003 Bill Nottingham <notting@redhat.com> 1.3.9-1
@@ -436,7 +452,7 @@ rm -rf $RPM_BUILD_ROOT
 * Sun Jan 27 2002 Erik Troan <ewt@redhat.com>
 - reimplemented update-alternatives as just alternatives
 
-* Fri Jan 25 2002 Bill Nottingham <notting@redhat.com>
+* Thu Jan 25 2002 Bill Nottingham <notting@redhat.com>
 - add in update-alternatives stuff (perl ATM)
 
 * Mon Aug 27 2001 Trond Eivind Glomsrød <teg@redhat.com>
@@ -481,10 +497,10 @@ rm -rf $RPM_BUILD_ROOT
 * Sun Aug 20 2000 Matt Wilson <msw@redhat.com>
 - new translations
 
-* Wed Aug 16 2000 Nalin Dahyabhai <nalin@redhat.com>
+* Tue Aug 16 2000 Nalin Dahyabhai <nalin@redhat.com>
 - don't worry about extra whitespace on chkconfig: lines (#16150)
 
-* Thu Aug 10 2000 Trond Eivind Glomsrød <teg@redhat.com>
+* Wed Aug 10 2000 Trond Eivind Glomsrød <teg@redhat.com>
 - i18n merge
 
 * Wed Jul 26 2000 Matt Wilson <msw@redhat.com>
