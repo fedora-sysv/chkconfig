@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.14
+Version: 1.15
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -87,6 +87,11 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Thu Jan 21 2021 Jan Macku <jamacku@redhat.com> - 1.15-1
+- spec: sync specfile with Fedora
+- makefile: Use rpmdev-bumpspec's legacy date option
+- Add feature to generate specfile entry, commit and archive
+
 * Tue Jul 21 2020 Tom Stellard <tstellar@redhat.com> - 1.14-2
 - Use make macros
 - https://fedoraproject.org/wiki/Changes/UseMakeBuildInstallMacro
