@@ -23,7 +23,7 @@ jobs:
       - name: Repository checkout
         uses: actions/checkout@v2
       - name: Clone beakerlib repository
-        run: git clone https://github.com/beakerlib/beakerlib.git
+        run: git clone --depth=1 https://github.com/beakerlib/beakerlib.git
       - name: Build and install beakerlib
         run: cd beakerlib && sudo make && sudo make install && cd -
       - name: Install dependencies required by Makefile
