@@ -1,6 +1,15 @@
 # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 name: Integration tests
-on: [release, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      - rhel*-branch
+  release:
+    types: [published, created]
 
 jobs:
   buildCheck:
