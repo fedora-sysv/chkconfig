@@ -104,6 +104,10 @@ static int usage(int rc) {
     exit(rc);
 }
 
+/* 
+ * Function to clean path form unnecessary backslashes
+ * It will make from //abcd///efgh/ -> /abcd/efgh/
+ */
 const char *normalize_path(const char *s) {
     if (s) {
         const char *src = s;
@@ -255,25 +259,6 @@ char *parseLine(char **buf) {
     return strdup(start);
 }
 
-/* Function to clean path form unnecessary backslashes
- * It will make from //abcd///efgh/ -> /abcd/efgh/
- */
-void clean_path(char *path) {
-    char *pr = path;  // reading pointer
-    char *pw = path;  // writing pointer
-  
-    while (*pr) {
-        *pw = *pr;
-        pr++;
-        if ((*pw == '/') && (*pr != '/')) {
-            pw++;
-        } else if (*pw != '/') {
-            pw++;
-        }
-    }
-    *pw = '\0';
-}
-
 static int readConfig(struct alternativeSet *set, const char *title,
                       const char *altDir, const char *stateDir, int flags) {
     char *path;
@@ -299,7 +284,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     path = alloca(strlen(stateDir) + strlen(title) + 2);
     sprintf(path, "%s/%s", stateDir, title);
 
-    clean_path(path);
+    path = normalize_path(path);
 
     if (FL_VERBOSE(flags))
         printf(_("reading %s\n"), path);
