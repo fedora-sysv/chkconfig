@@ -323,9 +323,9 @@ int readServices(struct service **services, char *root_path) {
     char *filename = NULL;
 
     if(root_path) {
-        asprintf(&filename, root_path);
+        asprintf(&filename, "%s", root_path);
     } else {
-        asprintf(&filename, RUNLEVELS "/init.d");
+        asprintf(&filename, "%s", RUNLEVELS "/init.d");
     }
 
     if (!(dir = opendir(filename))) {
