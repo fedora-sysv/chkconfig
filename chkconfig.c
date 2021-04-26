@@ -547,9 +547,9 @@ static int listService(char *item, int type, char *root_path) {
         printf("\n");
         printf(_("xinetd based services:\n"));
         if(root_path) {
-            sprintf(filename, root_path);
+            sprintf(filename, "%s", root_path);
         } else {
-            sprintf(filename, XINETDDIR);
+            sprintf(filename, "%s", XINETDDIR);
         }
         if (!(dir = opendir(XINETDDIR))) {
             fprintf(stderr, _("failed to open directory %s: %s\n"), filename,
