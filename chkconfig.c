@@ -49,7 +49,7 @@ static void usage(char *name) {
         fprintf(stderr, _("usage:   %s <enable|disable|is-enabled> [name] [--root <path>] \n"),
                 progname);
     } else {
-        fprintf(stderr, _("usage:   %s [--list] [--type <type>] [name]\n"),
+        fprintf(stderr, _("usage:   %s [--list] [--root <path>] [--type <type>] [name]\n"),
                 progname);
         fprintf(stderr, _("         %s --add <name> [--root <path>]\n"), progname);
         fprintf(stderr, _("         %s --del <name> [--root <path>]\n"), progname);
