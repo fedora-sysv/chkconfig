@@ -4,17 +4,17 @@
 chkconfig \- updates and queries runlevel information for system services
 
 .SH SYNOPSIS
-\fBchkconfig\fR [\fB--list\fR] [\fB--type\fR \fItype\fR] [\fIname\fR]
+\fBchkconfig\fR [\fB--root\fR \fIpath\fR] [\fB--list\fR] [\fB--type\fR \fItype\fR] [\fIname\fR]
 .br
-\fBchkconfig\fR \fB--add\fR \fIname\fR
+\fBchkconfig\fR [\fB--root\fR \fIpath\fR] \fB--add\fR \fIname\fR
 .br
-\fBchkconfig\fR \fB--del\fR \fIname\fR
+\fBchkconfig\fR [\fB--root\fR \fIpath\fR] \fB--del\fR \fIname\fR
 .br
-\fBchkconfig\fR \fB--override\fR \fIname\fR
+\fBchkconfig\fR [\fB--root\fR \fIpath\fR] \fB--override\fR \fIname\fR
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--root\fR \fIpath\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
 .br
-\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR 
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--root\fR \fIpath\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR 
 .br
 
 .SH DESCRIPTION
@@ -79,6 +79,11 @@ and \fIxinetd\fR.
 Specifies the run levels an operation should pertain to. It is given as
 a string of numbers from 0 to 6. For example, \fB--level 35\fR specifies
 runlevels 3 and 5.
+
+.TP
+\fB-\-root \fIpath\fR
+When used with on/off, use alternative root path when looking for unit 
+files same as by \fBsystemctl\fR.
 
 .TP
 \fB-\-no-redirect\fR
