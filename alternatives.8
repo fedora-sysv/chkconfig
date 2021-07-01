@@ -270,6 +270,10 @@ this is (and give some usage information).
 When switching between alternatives, if the new variant does not provide some files, keep the links pointed to the previous implementation.
 It prevents issues with missing files due to switching between versions.
 .TP
+.B --keep-foreign
+When removing, adding or switching between alternatives, check if the facility does not point to some other location than altdir.
+In such case the link is not modified.
+.TP
 \fB--altdir\fR \fIdirectory\fR
 Specifies the alternatives directory, when this is to be
 different from the default.
