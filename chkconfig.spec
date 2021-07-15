@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.15
+Version: 1.16
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -86,6 +86,17 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Thu Jul 15 2021 Jan Macku <jamacku@redhat.com> - 1.16-1
+- alternatives: add --keep-foreign (#57)
+- Translations update from Weblate
+- ci: Onboard chkconfig to Packit
+- zanata: remove zanata related stuff
+- Use make macros
+- alternatives: use one function for path cleaning
+- CI: specify more closely when to run CI
+- Add basic CI and README
+- spec: sync specfile with Fedora
+
 * Thu Jan 21 2021 Jan Macku <jamacku@redhat.com> - 1.15-1
 - spec: sync specfile with Fedora
 - makefile: Use rpmdev-bumpspec's legacy date option
