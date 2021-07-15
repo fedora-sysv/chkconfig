@@ -30,10 +30,12 @@
 #define FLAGS_TEST (1 << 0)
 #define FLAGS_VERBOSE (1 << 1)
 #define FLAGS_KEEP_MISSING (1 << 2)
+#define FLAGS_KEEP_FOREIGN (1 << 3)
 
 #define FL_TEST(flags) ((flags)&FLAGS_TEST)
 #define FL_VERBOSE(flags) ((flags)&FLAGS_VERBOSE)
 #define FL_KEEP_MISSING(flags) ((flags)&FLAGS_KEEP_MISSING)
+#define FL_KEEP_FOREIGN(flags) ((flags)&FLAGS_KEEP_FOREIGN)
 
 #define _(foo) gettext(foo)
 
@@ -98,7 +100,7 @@ static int usage(int rc) {
     printf(_("       alternatives --remove-slave <name> <path> <slave_name>\n"));
     printf(_("\n"));
     printf(_("common options: --verbose --test --help --usage --version "
-             "--keep-missing\n"));
+             "--keep-missing --keep-foreign\n"));
     printf(_("                --altdir <directory> --admindir <directory>\n"));
 
     exit(rc);
@@ -491,6 +493,13 @@ static int isLink(char *path) {
     return rc;
 }
 
+static int facilityBelongsToUs(char *facility, const char *altDir) {
+    char buf[PATH_MAX];
+    if (readlink(facility, buf, sizeof(buf)) <= 0)
+        return 0;
+    return strncmp(buf, altDir, strlen(altDir)) ? 0 : 1;
+}
+
 static int removeLinks(struct linkSet *l, const char *altDir, int flags) {
     char *sl;
 
@@ -508,10 +517,13 @@ static int removeLinks(struct linkSet *l, const char *altDir, int flags) {
     }
     if (FL_TEST(flags)) {
         printf(_("would remove %s\n"), l->facility);
-    } else if (isLink(l->facility) && unlink(l->facility) && errno != ENOENT) {
-        fprintf(stderr, _("failed to remove link %s: %s\n"), l->facility,
+    } else {
+        if (isLink(l->facility) && (!FL_KEEP_FOREIGN(flags) || facilityBelongsToUs(l->facility, altDir)))
+            if (unlink(l->facility) && errno != ENOENT) {
+                fprintf(stderr, _("failed to remove link %s: %s\n"), l->facility,
                 strerror(errno));
-        return 1;
+                return 1;
+            }
     }
 
     return 0;
@@ -524,7 +536,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
 
-    if (isLink(l->facility)) {
+    if (isLink(l->facility) && (!FL_KEEP_FOREIGN(flags) || facilityBelongsToUs(l->facility, altDir)) ) {
         if (FL_TEST(flags)) {
             printf(_("would link %s -> %s\n"), l->facility, sl);
         } else {
@@ -544,8 +556,8 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     } else
         fprintf(
             stderr,
-            _("failed to link %s -> %s: %s exists and it is not a symlink\n"),
-            l->facility, sl, l->facility);
+            _("failed to link %s -> %s: %s exists and it is either not a symlink or --keep-foreign was set and link points outside %s\n"),
+            l->facility, sl, l->facility, altDir);
 
     if (FL_TEST(flags)) {
         printf(_("would link %s -> %s\n"), sl, l->target);
@@ -1327,6 +1339,9 @@ int main(int argc, const char **argv) {
             nextArg++;
         } else if (!strcmp(*nextArg, "--keep-missing")) {
             flags |= FLAGS_KEEP_MISSING;
+            nextArg++;
+        } else if (!strcmp(*nextArg, "--keep-foreign")) {
+            flags |= FLAGS_KEEP_FOREIGN;
             nextArg++;
         } else if (!strcmp(*nextArg, "--version")) {
             if (mode != MODE_UNKNOWN)
