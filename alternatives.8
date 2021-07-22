@@ -271,7 +271,7 @@ When switching between alternatives, if the new variant does not provide some fi
 It prevents issues with missing files due to switching between versions.
 .TP
 .B --keep-foreign
-When removing, adding or switching between alternatives, check if the facility does not point to some other location than altdir.
+When removing, adding or switching between alternatives, check if the \fIlink\fR does not point to some other location than altdir (/etc/alternatives/ by default).
 In such case the link is not modified.
 .TP
 \fB--altdir\fR \fIdirectory\fR
@@ -361,9 +361,7 @@ is indeed linked to
 will be updated to point to another appropriate alternative, or
 removed if there is no such alternative left.
 Associated slave links will be updated or removed, correspondingly.
-If the link is not currently pointing to
-.IR path ,
-no links are changed;
+If the \fIlink\fR is not a symlink, no links are changed;
 only the information about the alternative is removed.
 .TP
 \fB--set\fR \fIname path\fR
