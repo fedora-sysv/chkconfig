@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.16
+Version: 1.17
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -86,6 +86,9 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Thu Jul 22 2021 Jan Macku <jamacku@redhat.com> - 1.17-1
+- alternatives: tweak manpage to match the real 'remove' behavior (#58)
+
 * Thu Jul 15 2021 Jan Macku <jamacku@redhat.com> - 1.16-1
 - alternatives: add --keep-foreign (#57)
 - Translations update from Weblate
