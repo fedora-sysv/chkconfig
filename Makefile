@@ -59,8 +59,8 @@ install:
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 	[ -d $(DESTDIR)/$(SYSTEMDUTILDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(SYSTEMDUTILDIR)
 
-	install -m 755 $(PROG) $(DESTDIR)/$(BINDIR)/$(PROG)
-	ln -s ../../../$(BINDIR)/$(PROG) $(DESTDIR)/$(SYSTEMDUTILDIR)/systemd-sysv-install
+	install -m 755 $(PROG) $(DESTDIR)/$(SBINDIR)/$(PROG)
+	ln -s ../../../$(SBINDIR)/$(PROG) $(DESTDIR)/$(SYSTEMDUTILDIR)/systemd-sysv-install
 
 	install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
 	install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives

@@ -61,13 +61,13 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %defattr(-,root,root)
 %{!?_licensedir:%global license %%doc}
 %license COPYING
-/sbin/chkconfig
-/etc/chkconfig.d
-/etc/init.d
-/etc/rc.d
-/etc/rc.d/init.d
-/etc/rc[0-6].d
-/etc/rc.d/rc[0-6].d
+%{_sbindir}/chkconfig
+%{_sysconfdir}/chkconfig.d
+%{_sysconfdir}/init.d
+%{_sysconfdir}/rc.d
+%{_sysconfdir}/rc.d/init.d
+%{_sysconfdir}/rc[0-6].d
+%{_sysconfdir}/rc.d/rc[0-6].d
 %{_mandir}/*/chkconfig*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
