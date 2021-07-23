@@ -8,6 +8,8 @@ Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{na
 BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc systemd-devel make
 Conflicts: initscripts <= 5.30-1
 
+Provides: /sbin/chkconfig
+
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
