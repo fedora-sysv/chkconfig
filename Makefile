@@ -1,5 +1,5 @@
 VERSION := $(shell awk '/Version:/ { print $$2 }' chkconfig.spec)
-NEXT_VERSION := $(shell awk '/Version:/ { print $$2 + 0.01 }' chkconfig.spec)
+NEXT_VERSION := $(shell sed -nr 's/Version:[ ]*([0-9]*)\.([0-9]*)\.([0-9]*)/echo "\1\.\2\.$$((\3+1))"/gep' chkconfig.spec)
 TAG = $(VERSION)
 
 CFLAGS = -g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
