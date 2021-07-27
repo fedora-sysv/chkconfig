@@ -9,6 +9,7 @@ BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc syst
 Conflicts: initscripts <= 5.30-1
 
 Provides: /sbin/chkconfig
+Provides: alternatives = %{version}-%{release}
 
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
@@ -26,15 +27,6 @@ are started or stopped in various runlevels (instead of directly
 manipulating the numerous symbolic links in /etc/rc.d). Unless you
 specify a runlevel or runlevels on the command line (see the man
 page), ntsysv configures the current runlevel (5 if you're using X).
-
-%package -n alternatives
-Summary: A tool to maintain symbolic links determining default commands
-
-%description -n alternatives
-alternatives creates, removes, maintains and displays information about the
-symbolic links comprising the alternatives system. It is possible for several
-programs fulfilling the same or similar functions to be installed on a single
-system at the same time.
 
 %prep
 %setup -q
@@ -63,29 +55,26 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %defattr(-,root,root)
 %{!?_licensedir:%global license %%doc}
 %license COPYING
+%dir /etc/alternatives
 %{_sbindir}/chkconfig
+%{_sbindir}/update-alternatives
+%{_sbindir}/alternatives
 %{_sysconfdir}/chkconfig.d
 %{_sysconfdir}/init.d
 %{_sysconfdir}/rc.d
 %{_sysconfdir}/rc.d/init.d
 %{_sysconfdir}/rc[0-6].d
 %{_sysconfdir}/rc.d/rc[0-6].d
+%dir /var/lib/alternatives
 %{_mandir}/*/chkconfig*
+%{_mandir}/*/update-alternatives*
+%{_mandir}/*/alternatives*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
 %files -n ntsysv
 %defattr(-,root,root)
 %{_sbindir}/ntsysv
 %{_mandir}/*/ntsysv.8*
-
-%files -n alternatives
-%license COPYING
-%dir /etc/alternatives
-%{_sbindir}/update-alternatives
-%{_sbindir}/alternatives
-%{_mandir}/*/update-alternatives*
-%{_mandir}/*/alternatives*
-%dir /var/lib/alternatives
 
 %changelog
 * Fri Jul 23 2021 Jan Macku <jamacku@redhat.com> - 1.19-1
