@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.19
+Version: 1.20
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -88,6 +88,9 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Wed Jul 28 2021 Jan Macku <jamacku@redhat.com> - 1.20-1
+- spec: Replace not working awk command with sed (#62)
+
 * Fri Jul 23 2021 Jan Macku <jamacku@redhat.com> - 1.19-1
 - spec: Add Provides /sbin/chkconfig in order to stay backwards compatible (#60)
 
