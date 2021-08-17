@@ -11,13 +11,14 @@
 # notting <notting@redhat.com>, 2011,2013
 # MinWoo Joh <igtzhsou@naver.com>, 2015. #zanata
 # simmon <simmon@nplob.com>, 2021.
+# Kim InSoo <simmon@nplob.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Kim InSoo <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ko/>\n"
 "Language: ko\n"
@@ -282,8 +283,7 @@ msgstr "                    [--family <family>]\n"
 #: ../alternatives.c:91
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgstr "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -563,8 +563,7 @@ msgstr "  선택    명령\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"현재 선택[+]을 유지하려면 엔터키를 누르고, 아니면 선택 번호를 입력하십시오: "
+msgstr "현재 선택[+]을 유지하려면 엔터키를 누르고, 아니면 선택 번호를 입력하십시오: "
 
 #: ../alternatives.c:1048
 #, c-format
