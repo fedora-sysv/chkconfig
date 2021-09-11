@@ -11,13 +11,14 @@
 # Teguh Dwicaksana <dheche@songolimo.net>, 2004
 # Andika Triwidada <andika@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Didik Supriadi <didiksupriadi41@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-25 13:31+0200\n"
-"PO-Revision-Date: 2020-05-18 22:40+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2021-09-13 00:04+0000\n"
+"Last-Translator: Didik Supriadi <didiksupriadi41@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/id/>\n"
 "Language: id\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.0.4\n"
+"X-Generator: Weblate 4.8\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -52,27 +53,27 @@ msgstr "cara pakai:   %s <enable|disable|is-enabled> [nama] \n"
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "pemakaian :  %s [--list] [--type <type>] [name]\n"
+msgstr "pemakaian :  %s [--list] [--type <type>] [nama]\n"
 
 #: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "          %s --add <name>\n"
+msgstr "         %s --add <nama>\n"
 
 #: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "           %s --del <name>\n"
+msgstr "         %s --del <nama>\n"
 
 #: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "           %s --override <name>\n"
+msgstr "         %s --override <nama>\n"
 
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "          %s [--level <levels>] [--type <type>] <name> %s)\n"
+msgstr "         %s [--level <level>] [--type <tipe>] <nama> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
