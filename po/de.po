@@ -16,14 +16,14 @@
 # Timo Trinks <ttrinks@redhat.com>, 2007
 # Roman Spirgi <bigant@fedoraproject.org>, 2015. #zanata
 # Roman Spirgi <bigant@fedoraproject.org>, 2017. #zanata
-# Ettore Atalan <atalanttore@googlemail.com>, 2021.
+# Ettore Atalan <atalanttore@googlemail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:52+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/de/>\n"
 "Language: de\n"
@@ -294,8 +294,7 @@ msgstr "                    [--family <family>]\n"
 #, fuzzy, c-format
 #| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgstr "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
