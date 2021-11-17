@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/de/>\n"
 "Language: de\n"
@@ -292,8 +292,7 @@ msgstr "                    [--family <family>]\n"
 #: ../alternatives.c:91
 #, fuzzy, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgstr "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
