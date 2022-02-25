@@ -93,7 +93,7 @@ static int usage(int rc) {
     printf(_("       alternatives --auto <name>\n"));
     printf(_("       alternatives --config <name>\n"));
     printf(_("       alternatives --display <name>\n"));
-    printf(_("       alternatives --set <name> <path>\n"));
+    printf(_("       alternatives --set <name> <path/family>\n"));
     printf(_("       alternatives --list\n"));
     printf(_("       alternatives --remove-all <name>\n"));
     printf(_("       alternatives --add-slave <name> <path> <slave_link> <slave_name> <slave_path>\n"));

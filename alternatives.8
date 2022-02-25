@@ -28,7 +28,7 @@ alternatives \- maintain symbolic links determining default commands
 .B alternatives
 .RI [ options ]
 .B --set
-.I name path
+.I name path/family
 .PP
 .B alternatives
 .RI [ options ]
@@ -364,9 +364,11 @@ Associated slave links will be updated or removed, correspondingly.
 If the \fIlink\fR is not a symlink, no links are changed;
 only the information about the alternative is removed.
 .TP
-\fB--set\fR \fIname path\fR
+\fB--set\fR \fIname path/family\fR
 The symbolic link and slaves for link group \fIname\fR set to those
 configured for \fIpath\fR, and the link group is set to manual mode.
+If you use \fIfamily\fR, then the links and group is configured to the
+member of given family with highest priority (and moved to manual mode).
 This option is not in the original Debian implementation.
 .TP
 \fB--config\fR \fIname\fR
