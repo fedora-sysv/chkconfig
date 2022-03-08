@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 13:31+0200\n"
+"POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2020-05-18 22:40+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Punjabi <https://translate.fedoraproject.org/projects/fedora-"
@@ -232,8 +232,9 @@ msgid "cannot determine current run level\n"
 msgstr "ਮੌਜੂਦਾ ਰਨ ਲੈਵਲ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ ਹੈ\n"
 
 #: ../leveldb.c:901
-#, c-format
-msgid "Unable to set selinux context for %s: %s\n"
+#, fuzzy, c-format
+#| msgid "Unable to set selinux context for %s: %s\n"
+msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s ਲਈ SELinux ਕਨਟੈਕਸਟ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %s\n"
 
 #: ../leveldb.c:926
@@ -241,12 +242,12 @@ msgstr "%s ਲਈ SELinux ਕਨਟੈਕਸਟ ਸੈੱਟ ਕਰਨ ਲਈ �
 msgid "failed to make symlink %s: %s\n"
 msgstr "symlink %s ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:81
+#: ../alternatives.c:83
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "ਬਦਲਵਾਂ ਵਰਜਨ %s - (C) 2001 Red Hat, Inc ਕੋਲ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।\n"
 
-#: ../alternatives.c:83
+#: ../alternatives.c:85
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -255,64 +256,65 @@ msgstr ""
 "ਇਹ GNU ਪਬਲਿਕ ਲਸੰਸ ਦੇ ਰੂਪ ਵਿੱਚ ਮੁਫਤ ਮੁਡ਼-ਪ੍ਰਸਾਰਿਤ ਕੀਤਾ ਹੈ।\n"
 "\n"
 
-#: ../alternatives.c:86
+#: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr "ਵਰਤੋ: alternatives --install <link> <name> <path> <priority>\n"
 
-#: ../alternatives.c:87
+#: ../alternatives.c:89
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <service>]\n"
 
-#: ../alternatives.c:88
+#: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
 msgstr "                    [--family <family>]\n"
 
-#: ../alternatives.c:89
+#: ../alternatives.c:91
 #, fuzzy, c-format
 #| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
-#: ../alternatives.c:90
+#: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
-#: ../alternatives.c:91
+#: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <name>\n"
 
-#: ../alternatives.c:92
+#: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <name>\n"
 
-#: ../alternatives.c:93
+#: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
-#: ../alternatives.c:94
-#, c-format
-msgid "       alternatives --set <name> <path>\n"
+#: ../alternatives.c:96
+#, fuzzy, c-format
+#| msgid "       alternatives --set <name> <path>\n"
+msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
-#: ../alternatives.c:95
+#: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
-#: ../alternatives.c:96
+#: ../alternatives.c:98
 #, fuzzy, c-format
 #| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
-#: ../alternatives.c:97
+#: ../alternatives.c:99
 #, fuzzy, c-format
 #| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
@@ -320,238 +322,241 @@ msgid ""
 "<slave_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
-#: ../alternatives.c:98
+#: ../alternatives.c:100
 #, fuzzy, c-format
 #| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
-#: ../alternatives.c:99
+#: ../alternatives.c:101
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:100
+#: ../alternatives.c:102
 #, c-format
 msgid ""
-"common options: --verbose --test --help --usage --version --keep-missing\n"
+"common options: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
 msgstr ""
 
-#: ../alternatives.c:102
+#: ../alternatives.c:104
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:270
+#: ../alternatives.c:292
 #, c-format
 msgid "reading %s\n"
 msgstr "%s ਨੂੰ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ\n"
 
-#: ../alternatives.c:275
+#: ../alternatives.c:297
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%s ਨੂੰ ਖੋਲ੍ਹਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:283
+#: ../alternatives.c:305
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%s ਨੂੰ ਪਡ਼੍ਹਨ ਵਿੱਚ ਅਸਫ਼ਲ: %s\n"
 
-#: ../alternatives.c:291
+#: ../alternatives.c:313
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s ਖਾਲੀ ਹੈ!\n"
 
-#: ../alternatives.c:300
+#: ../alternatives.c:322
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s ਦੀ ਲਾਈਨ 1 ਉੱਤੇ ਗਲਤ ਮੋਡ\n"
 
-#: ../alternatives.c:307
+#: ../alternatives.c:329
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s ਵਿੱਚ ਗਲਤ ਮੁੱਖ ਲਿੰਕ\n"
 
-#: ../alternatives.c:319
+#: ../alternatives.c:341
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "%s ਮਾਰਗ %s ਵਿੱਚ ਅਣਜਾਣ ਹੈ\n"
 
-#: ../alternatives.c:328
+#: ../alternatives.c:350
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "%s ਸਲੇਵ, %s ਵਿੱਚ, ਲਈ ਮਾਰਗ ਗੁੰਮ ਹੈ\n"
 
-#: ../alternatives.c:338
+#: ../alternatives.c:360
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s ਵਿੱਚ ਫਾਇਲ ਦਾ ਅਚਾਨਕ ਅੰਤ\n"
 
-#: ../alternatives.c:347
+#: ../alternatives.c:369
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "ਤਬਦੀਲ ਕਰਨ ਲਈ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
-#: ../alternatives.c:348 ../alternatives.c:374 ../alternatives.c:386
-#: ../alternatives.c:404 ../alternatives.c:424
+#: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
+#: ../alternatives.c:426 ../alternatives.c:446
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s ਵਿੱਚ ਅਣਜਾਣ ਲਾਈਨ: %s\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:394
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr "ਬੰਦ ਕਰਨ ਵਾਲਾ '@' ਗੁੰਮ ਹੈ ਜਾਂ %s ਵਿੱਚ ਫੈਮਲੀ ਖਾਲੀ ਹੈ\n"
 
-#: ../alternatives.c:385
+#: ../alternatives.c:407
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "ਅੰਕਾਂ ਵਾਲੀ ਤਰਜੀਹ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
-#: ../alternatives.c:403
+#: ../alternatives.c:425
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "ਸਲੇਵ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
-#: ../alternatives.c:432
+#: ../alternatives.c:454
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "%s ਸੰਬੰਧ ਨੂੰ ਪੜ੍ਹਨ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:448
+#: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "ਲਿੰਕ ਕਿਸੇ ਬਦਲ ਵੱਲ ਇਸ਼ਾਰਾ ਨਹੀਂ ਕਰਦਾ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਤਹਿ ਕਰਦਾ ਹੈ\n"
 
-#: ../alternatives.c:453
+#: ../alternatives.c:475
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "ਲਿੰਕ ਤਬਦੀਲ ਹੋ ਗਿਆ -- ਦਸਤਾਵੇਜ਼ੀ ਰੂਪ ਸੈੱਟ ਕਰ ਰਿਹਾ ਹੈ\n"
 
-#: ../alternatives.c:483 ../alternatives.c:490
+#: ../alternatives.c:512 ../alternatives.c:519
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s ਨੂੰ ਹਟਾਏਗਾ\n"
 
-#: ../alternatives.c:485 ../alternatives.c:492 ../alternatives.c:527
+#: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "%s ਲਿੰਕ ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:507 ../alternatives.c:524
+#: ../alternatives.c:541 ../alternatives.c:563
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s -> %s ਲਿੰਕ ਬਣਾਏਗਾ\n"
 
-#: ../alternatives.c:512 ../alternatives.c:533
+#: ../alternatives.c:550 ../alternatives.c:576
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s -> %s ਵਿੱਚ ਲਿੰਕ ਬਣਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:520
+#: ../alternatives.c:559
 #, c-format
-msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgid ""
+"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
+"foreign was set and link points outside %s\n"
 msgstr ""
 
-#: ../alternatives.c:565
+#: ../alternatives.c:609
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ\n"
 
-#: ../alternatives.c:567
+#: ../alternatives.c:611
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s ਬਣਾਉ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:600
+#: ../alternatives.c:644
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ਨੂੰ %s ਨਾਲ ਬਦਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:628 ../alternatives.c:634 ../alternatives.c:646
-#: ../alternatives.c:653
+#: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
+#: ../alternatives.c:697
 #, c-format
 msgid "running %s\n"
 msgstr "%s ਚੱਲਦਾ ਹੈ\n"
 
-#: ../alternatives.c:726
+#: ../alternatives.c:770
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "ਸਲੇਵ %s (%s %s) ਲਈ ਗਲਤ ਲਿੰਕ %s\n"
 
-#: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
-#: ../alternatives.c:1076
+#: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
+#: ../alternatives.c:1126
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ਦੀ %s ਲਈ ਬਦਲ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹੀਂ ਕੀਤੀ\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:862
 #, fuzzy, c-format
 #| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s ਦੀ %s ਲਈ ਬਦਲ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹੀਂ ਕੀਤੀ\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:920
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s ਲਈ ਮੁੱਖ ਲਿੰਕ %s ਹੋਣਾ ਜਰੂਰੀ ਹੈ\n"
 
-#: ../alternatives.c:928
+#: ../alternatives.c:972
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - ਹਾਲਤ ਆਟੋ ਹੈ।\n"
 
-#: ../alternatives.c:930
+#: ../alternatives.c:974
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - ਹਾਲਤ ਦਸਤੀ ਹੈ।\n"
 
-#: ../alternatives.c:932
+#: ../alternatives.c:976
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "ਹੁਣ ਲਿੰਕ %s ਨੂੰ ਸੰਕੇਤ ਕਰ ਰਿਹਾ ਹੈ\n"
 
-#: ../alternatives.c:937
+#: ../alternatives.c:981
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:938
+#: ../alternatives.c:982
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:940
+#: ../alternatives.c:984
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " ਸਲੇਵ %s: %s\n"
 
-#: ../alternatives.c:945
+#: ../alternatives.c:989
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "ਮੌਜੂਦਾ `best' ਵਰਜਨ %s ਹੈ।\n"
 
-#: ../alternatives.c:980
+#: ../alternatives.c:1024
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "ਇੱਥੇ %d ਪ੍ਰੋਗਰਾਮ ਹਨ, ਜੋ '%s' ਦਿੰਦੇ ਹਨ।\n"
 
-#: ../alternatives.c:981
+#: ../alternatives.c:1025
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "ਇੱਥੇ %d ਪ੍ਰੋਗਰਾਮ ਹਨ, ਜੋ '%s' ਦਿੰਦੇ ਹਨ।\n"
 
-#: ../alternatives.c:985
+#: ../alternatives.c:1029
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  ਚੋਣ    ਕਮਾਂਡ\n"
 
-#: ../alternatives.c:1000
+#: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "ਮੌਜੂਦਾ ਚੋਣ[+] ਜਾਰੀ ਰੱਖਣ ਵਿੱਚ ਗਲਤੀ, ਜਾਂ ਚੋਣ ਨੰਬਰ ਦਿਓ:"
 
-#: ../alternatives.c:1004
+#: ../alternatives.c:1048
 #, c-format
 msgid ""
 "\n"
@@ -560,32 +565,37 @@ msgstr ""
 "\n"
 "ਪਸੰਦ ਪੜ੍ਹਨ ਵਿੱਚ ਗਲਤੀ\n"
 
-#: ../alternatives.c:1092
+#: ../alternatives.c:1075
+#, c-format
+msgid "cannot access %s/%s: No such file or directory\n"
+msgstr ""
+
+#: ../alternatives.c:1142
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(%s ਨੂੰ ਹਟਾਏਗਾ\n"
 
-#: ../alternatives.c:1094
+#: ../alternatives.c:1144
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../alternatives.c:1262
+#: ../alternatives.c:1312
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1321
+#: ../alternatives.c:1374
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s ਗਲਤ ਹੈ\n"
 
-#: ../alternatives.c:1326
+#: ../alternatives.c:1379
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s ਗਲਤ ਹੈ\n"
 
-#: ../alternatives.c:1336
+#: ../alternatives.c:1389
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives ਵਰਜ਼ਨ %s\n"
