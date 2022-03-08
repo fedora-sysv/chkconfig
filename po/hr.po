@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 13:31+0200\n"
+"POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2020-06-19 16:40+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/fedora-"
@@ -238,8 +238,9 @@ msgid "cannot determine current run level\n"
 msgstr "nije moguće odrediti trenutačnu razinu izvršavanja\n"
 
 #: ../leveldb.c:901
-#, c-format
-msgid "Unable to set selinux context for %s: %s\n"
+#, fuzzy, c-format
+#| msgid "Unable to set selinux context for %s: %s\n"
+msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Neuspjelo postavljanje selinux konteksta za %s: %s\n"
 
 #: ../leveldb.c:926
@@ -247,12 +248,12 @@ msgstr "Neuspjelo postavljanje selinux konteksta za %s: %s\n"
 msgid "failed to make symlink %s: %s\n"
 msgstr "neuspjela izrada simbolične veze %s: %s\n"
 
-#: ../alternatives.c:81
+#: ../alternatives.c:83
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
 msgstr "alternatives verzija %s - Autorska prava (C) 2001 Red Hat, Inc.\n"
 
-#: ../alternatives.c:83
+#: ../alternatives.c:85
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
@@ -261,65 +262,66 @@ msgstr ""
 "Ovaj se program može slobodno distribuirati pod uvjetima GNU javne licence.\n"
 "\n"
 
-#: ../alternatives.c:86
+#: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
 msgstr ""
 "upotreba: alternatives --install <veza> <naziv> <putanja> <prioritet>\n"
 
-#: ../alternatives.c:87
+#: ../alternatives.c:89
 #, c-format
 msgid "                    [--initscript <service>]\n"
 msgstr "                    [--initscript <usluga>]\n"
 
-#: ../alternatives.c:88
+#: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
 msgstr "                    [--family <obitelj>]\n"
 
-#: ../alternatives.c:89
+#: ../alternatives.c:91
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr ""
 "                    [--slave <veza_podređenog> <naziv_podređenog> "
 "<putanja_podređenog>]*\n"
 
-#: ../alternatives.c:90
+#: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
 msgstr "       alternatives --remove <naziv> <putanja>\n"
 
-#: ../alternatives.c:91
+#: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --auto <name>\n"
 msgstr "       alternatives --auto <naziv>\n"
 
-#: ../alternatives.c:92
+#: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --config <name>\n"
 msgstr "       alternatives --config <naziv>\n"
 
-#: ../alternatives.c:93
+#: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <naziv>\n"
 
-#: ../alternatives.c:94
-#, c-format
-msgid "       alternatives --set <name> <path>\n"
+#: ../alternatives.c:96
+#, fuzzy, c-format
+#| msgid "       alternatives --set <name> <path>\n"
+msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <naziv> <putanja>\n"
 
-#: ../alternatives.c:95
+#: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
-#: ../alternatives.c:96
+#: ../alternatives.c:98
 #, c-format
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <naziv>\n"
 
-#: ../alternatives.c:97
+#: ../alternatives.c:99
 #, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
@@ -328,241 +330,247 @@ msgstr ""
 "       alternatives --add-slave <naziv> <putanja> <veza_podređenog> "
 "<naziv_podređenog> <putanja_podređenog>\n"
 
-#: ../alternatives.c:98
+#: ../alternatives.c:100
 #, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr ""
 "       alternatives --remove-slave <naziv> <putanja> <naziv_podređenog>\n"
 
-#: ../alternatives.c:99
+#: ../alternatives.c:101
 #, c-format
 msgid "\n"
 msgstr "\n"
 
-#: ../alternatives.c:100
-#, c-format
+#: ../alternatives.c:102
+#, fuzzy, c-format
+#| msgid ""
+#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
-"common options: --verbose --test --help --usage --version --keep-missing\n"
+"common options: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
 msgstr ""
 "uobičajene mogućnosti: --verbose --test --help --usage --version --keep-"
 "missing\n"
 
-#: ../alternatives.c:102
+#: ../alternatives.c:104
 #, c-format
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <mapa> --admindir <mapa>\n"
 
-#: ../alternatives.c:270
+#: ../alternatives.c:292
 #, c-format
 msgid "reading %s\n"
 msgstr "čitanje %s\n"
 
-#: ../alternatives.c:275
+#: ../alternatives.c:297
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "neuspjelo otvaranje %s: %s\n"
 
-#: ../alternatives.c:283
+#: ../alternatives.c:305
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "neuspjelo čitanje %s: %s\n"
 
-#: ../alternatives.c:291
+#: ../alternatives.c:313
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s je prazan!\n"
 
-#: ../alternatives.c:300
+#: ../alternatives.c:322
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "loš način u retku 1 od %s\n"
 
-#: ../alternatives.c:307
+#: ../alternatives.c:329
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "loša primarna veza u %s\n"
 
-#: ../alternatives.c:319
+#: ../alternatives.c:341
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "neočekivana putanja %s u %s\n"
 
-#: ../alternatives.c:328
+#: ../alternatives.c:350
 #, c-format
 msgid "missing path for slave %s in %s\n"
 msgstr "za podređenog %s nedostaje putanja u %s\n"
 
-#: ../alternatives.c:338
+#: ../alternatives.c:360
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "neočekivani završetak datoteke u %s\n"
 
-#: ../alternatives.c:347
+#: ../alternatives.c:369
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "očekuje se putanja alternative u %s\n"
 
-#: ../alternatives.c:348 ../alternatives.c:374 ../alternatives.c:386
-#: ../alternatives.c:404 ../alternatives.c:424
+#: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
+#: ../alternatives.c:426 ../alternatives.c:446
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "neočekivani redak u %s: %s\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:394
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr "nedostaje završni znak '@' ili je obitelj prazna u %s\n"
 
-#: ../alternatives.c:385
+#: ../alternatives.c:407
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "očekuje se brojčani prioritet u %s\n"
 
-#: ../alternatives.c:403
+#: ../alternatives.c:425
 #, c-format
 msgid "slave path expected in %s\n"
 msgstr "očekuje se putanja podređenog u %s\n"
 
-#: ../alternatives.c:432
+#: ../alternatives.c:454
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "neuspjelo čitanje veze %s: %s\n"
 
-#: ../alternatives.c:448
+#: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "veza upućuje na nijednu alternativu -- postavlja se ručni način\n"
 
-#: ../alternatives.c:453
+#: ../alternatives.c:475
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "veza je izmijenjena -- postavlja se ručni način\n"
 
-#: ../alternatives.c:483 ../alternatives.c:490
+#: ../alternatives.c:512 ../alternatives.c:519
 #, c-format
 msgid "would remove %s\n"
 msgstr "uklonit će %s\n"
 
-#: ../alternatives.c:485 ../alternatives.c:492 ../alternatives.c:527
+#: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "neuspjelo uklanjanje veze %s: %s\n"
 
-#: ../alternatives.c:507 ../alternatives.c:524
+#: ../alternatives.c:541 ../alternatives.c:563
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "povezat će %s -> %s\n"
 
-#: ../alternatives.c:512 ../alternatives.c:533
+#: ../alternatives.c:550 ../alternatives.c:576
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "neuspjelo povezivanje %s -> %s: %s\n"
 
-#: ../alternatives.c:520
-#, c-format
-msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+#: ../alternatives.c:559
+#, fuzzy, c-format
+#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgid ""
+"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
+"foreign was set and link points outside %s\n"
 msgstr "neuspjelo povezivanje %s -> %s: %s postoji i nije simbolička veza\n"
 
-#: ../alternatives.c:565
+#: ../alternatives.c:609
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s već postoji\n"
 
-#: ../alternatives.c:567
+#: ../alternatives.c:611
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "neuspjela izrada %s: %s\n"
 
-#: ../alternatives.c:600
+#: ../alternatives.c:644
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "neuspjela zamjena %s s %s: %s\n"
 
-#: ../alternatives.c:628 ../alternatives.c:634 ../alternatives.c:646
-#: ../alternatives.c:653
+#: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
+#: ../alternatives.c:697
 #, c-format
 msgid "running %s\n"
 msgstr "pokretanje %s\n"
 
-#: ../alternatives.c:726
+#: ../alternatives.c:770
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
 msgstr "veza %s nije točna za podređenog %s (%s %s)\n"
 
-#: ../alternatives.c:800 ../alternatives.c:837 ../alternatives.c:1045
-#: ../alternatives.c:1076
+#: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
+#: ../alternatives.c:1126
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nije bila kofigurirana kao alternativa za %s\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:862
 #, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s nije bila kofigurirana kao alternativa podređenog za %s (%s)\n"
 
-#: ../alternatives.c:876
+#: ../alternatives.c:920
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "primarna veza za %s mora biti %s\n"
 
-#: ../alternatives.c:928
+#: ../alternatives.c:972
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - stanje je automatsko.\n"
 
-#: ../alternatives.c:930
+#: ../alternatives.c:974
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - stanje je ručno.\n"
 
-#: ../alternatives.c:932
+#: ../alternatives.c:976
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " veza trenutačno upućuje prema %s\n"
 
-#: ../alternatives.c:937
+#: ../alternatives.c:981
 #, c-format
 msgid "family %s "
 msgstr "obitelj %s "
 
-#: ../alternatives.c:938
+#: ../alternatives.c:982
 #, c-format
 msgid "priority %d\n"
 msgstr "prioritet %d\n"
 
-#: ../alternatives.c:940
+#: ../alternatives.c:984
 #, c-format
 msgid " slave %s: %s\n"
 msgstr " podređeni %s: %s\n"
 
-#: ../alternatives.c:945
+#: ../alternatives.c:989
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Trenutačna 'najbolja' verzija je %s.\n"
 
-#: ../alternatives.c:980
+#: ../alternatives.c:1024
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d program koji omogućuje '%s'.\n"
 
-#: ../alternatives.c:981
+#: ../alternatives.c:1025
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d programa koji omogućuju '%s'.\n"
 
-#: ../alternatives.c:985
+#: ../alternatives.c:1029
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Odabir     Naredba\n"
 
-#: ../alternatives.c:1000
+#: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Za zadržavanje trenutačnu odabira [+] pritisnite ENTER ili upišite broj "
 "odabira: "
 
-#: ../alternatives.c:1004
+#: ../alternatives.c:1048
 #, c-format
 msgid ""
 "\n"
@@ -571,32 +579,37 @@ msgstr ""
 "\n"
 "pogreška pri čitanju odabira\n"
 
-#: ../alternatives.c:1092
+#: ../alternatives.c:1075
+#, c-format
+msgid "cannot access %s/%s: No such file or directory\n"
+msgstr ""
+
+#: ../alternatives.c:1142
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(uklonit će %s\n"
 
-#: ../alternatives.c:1094
+#: ../alternatives.c:1144
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "neuspjelo uklanjanje %s: %s\n"
 
-#: ../alternatives.c:1262
+#: ../alternatives.c:1312
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family ne može sadržati znak '@'\n"
 
-#: ../alternatives.c:1321
+#: ../alternatives.c:1374
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "neispravni altdir %s\n"
 
-#: ../alternatives.c:1326
+#: ../alternatives.c:1379
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "neispravni admindir %s\n"
 
-#: ../alternatives.c:1336
+#: ../alternatives.c:1389
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternativna verzija %s\n"
