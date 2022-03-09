@@ -5,16 +5,16 @@
 # Translators:
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
 # notting <notting@redhat.com>, 2011
-# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021.
-# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021.
-# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2021-08-16 14:21+0000\n"
+"PO-Revision-Date: 2022-03-09 08:29+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/uk/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -242,8 +242,7 @@ msgid "cannot determine current run level\n"
 msgstr "не вдається визначити поточний рівень виконання\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Не вдалося встановити контекст SELinux для %s: %s\n"
 
@@ -310,10 +309,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <назва>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <назва> <шлях>\n"
+msgstr "       alternatives --set <назва> <шлях/сімейство>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -345,15 +343,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"загальні параметри: --verbose --test --help --usage --version --keep-"
-"missing\n"
+"загальні параметри: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -468,14 +464,14 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "не вдається створити посилання %s -> %s: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"не вдалося створити посилання %s -> %s: %s вже існує і не є символічним "
-"посиланням\n"
+"не вдалося створити посилання %s -> %s: %s вже існує і або не є символічним "
+"посиланням, або встановлено --keep-foreign і посилання вказує на місце поза %"
+"s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -586,7 +582,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "не вдалося отримати доступ до %s/%s: немає такого файла або каталогу\n"
 
 #: ../alternatives.c:1142
 #, c-format
