@@ -11,16 +11,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2015-01-05 06:07+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Welsh <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/cy/>\n"
 "Language: cy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != "
 "11) ? 2 : 3;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -158,8 +159,7 @@ msgstr "dim ond un o --list, --add, --del, neu --override y ceir ei benodi\n"
 #: ../chkconfig.c:873
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"dim ond un lefel rhedeg y ceir ei phenodi ar gyfer chwiliad chkconfig\n"
+msgstr "dim ond un lefel rhedeg y ceir ei phenodi ar gyfer chwiliad chkconfig\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
