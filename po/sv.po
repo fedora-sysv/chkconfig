@@ -11,13 +11,14 @@
 # Göran Uddeborg <goeran@uddeborg.se>, 2017. #zanata, 2020.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Luna Jernberg <bittin@reimu.nl>, 2022.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-09 13:33+0000\n"
-"Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
+"PO-Revision-Date: 2022-03-10 00:10+0000\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/sv/>\n"
 "Language: sv\n"
@@ -466,8 +467,8 @@ msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"misslyckades att länga %s → %s: %s finns och det är antingen inte en symlänk "
-"eller ---keep-foreign var satt och länkar till en punkt utanför %s\n"
+"misslyckades att länka %s → %s: %s finns och det är antingen inte en symlänk "
+"eller så var --keep-foreign satt och länkar till punkter utanför %s\n"
 
 #: ../alternatives.c:609
 #, c-format
