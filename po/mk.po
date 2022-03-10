@@ -32,8 +32,8 @@ msgstr "%s верзија %s - Сите права задржани 1997-2000 Re
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Може да биде слободно дистрибурано под условите во GNU Public License (GPL)."
-"\n"
+"Може да биде слободно дистрибурано под условите во GNU Public License "
+"(GPL).\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -155,7 +155,8 @@ msgstr ""
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "само еден од --list, --add, --del или --override може да биде наведен\n"
+msgstr ""
+"само еден од --list, --add, --del или --override може да биде наведен\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -229,7 +230,6 @@ msgstr "не можам да го одредам тековното ниво н�
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "не успеав да го отворам директориумот %s: %s\n"
 
@@ -269,7 +269,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <врска> <име> <патека>]*\n"
 
@@ -295,7 +294,6 @@ msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
@@ -306,13 +304,11 @@ msgstr ""
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -320,7 +316,6 @@ msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
@@ -488,7 +483,6 @@ msgstr "%s не е конфигуриран како алтернатива за
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s не е конфигуриран како алтернатива за %s\n"
 
@@ -551,8 +545,8 @@ msgstr "  Избор    Команда\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Enter за да го задржите тековниот избор[+], или внесете го бројот на изборот:"
-" "
+"Enter за да го задржите тековниот избор[+], или внесете го бројот на "
+"изборот: "
 
 #: ../alternatives.c:1048
 #, c-format

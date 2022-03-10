@@ -16,8 +16,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Kannada <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/kn/>\n"
+"Language-Team: Kannada <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/kn/>\n"
 "Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,8 +97,8 @@ msgid ""
 "\n"
 msgstr ""
 " systemd ಸೇವೆಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಲು ನೀವು ಬಯಸಿದಲ್ಲಿ 'systemctl list-unit-files' "
-"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು "
-"ನೋಡಲು ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
+"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು ನೋಡಲು "
+"ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -106,8 +106,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ "
-"ಕ್ರಿಯಾಹಂತದಲ್ಲಿ ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
+"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ ಕ್ರಿಯಾಹಂತದಲ್ಲಿ "
+"ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -240,7 +240,6 @@ msgstr "ಈಗಿನ ಕ್ರಿಯಾ ಹಂತವನ್ನು ಕಂಡುಹ
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr " %s ಕಡತಕೋಶವನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
@@ -281,7 +280,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -307,7 +305,6 @@ msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
@@ -318,13 +315,11 @@ msgstr " alternatives --list⏎\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -332,7 +327,6 @@ msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
@@ -502,7 +496,6 @@ msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂ�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂರಚಿತವಾಗಿಲ್ಲ\n"
 
@@ -564,8 +557,7 @@ msgstr "  ಆಯ್ಕೆ    ಆಜ್ಞೆ\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
+msgstr "ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
 
 #: ../alternatives.c:1048
 #, c-format

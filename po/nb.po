@@ -239,7 +239,6 @@ msgstr "klarer ikke å bestemme nåværende runlevel\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Kunne ikke sette SELinux-kontekts for %s: %s\n"
 
@@ -280,7 +279,8 @@ msgstr "                    [--family <familie>]\n"
 #: ../alternatives.c:91
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
+msgstr ""
+"                    [--slave <slave_lenke> <slave_navn> <slave_sti>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -304,7 +304,6 @@ msgstr "       alternatives --display <navn>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <navn> <sti>\n"
 
@@ -339,8 +338,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -460,7 +457,6 @@ msgstr "klarte ikke å lage den symbolske lenken %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

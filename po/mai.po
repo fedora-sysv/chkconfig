@@ -12,8 +12,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Maithili <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/mai/>\n"
+"Language-Team: Maithili <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/mai/>\n"
 "Language: mai\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,7 +226,6 @@ msgstr "वर्तमान रनलेवल निर्णय नहि �
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s निर्देशिका खोलबा मे असफल छल: %s\n"
 
@@ -246,8 +245,7 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"जीएनयू सार्वजनिक लाइसेंस क' नियमानुसार मुक्त रूपेँ एकरा पुन:बाँट कए सकैत छी."
-"\n"
+"जीएनयू सार्वजनिक लाइसेंस क' नियमानुसार मुक्त रूपेँ एकरा पुन:बाँट कए सकैत छी.\n"
 "\n"
 
 #: ../alternatives.c:88
@@ -267,7 +265,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -293,7 +290,6 @@ msgstr "       विकल्प --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       विकल्प --set <name> <path>\n"
 
@@ -304,13 +300,11 @@ msgstr ""
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       विकल्प --हटाउ <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -318,7 +312,6 @@ msgstr "       विकल्प --हटाउ <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       विकल्प --हटाउ <name> <path>\n"
 
@@ -418,8 +411,7 @@ msgstr "%s पढ़ने मे असफल: %s\n"
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"कोनो वैकल्पिक क' लेल संकलन नहि अछि -- मैनुअल मे मोड केँ सेट कए रहल अछि\n"
+msgstr "कोनो वैकल्पिक क' लेल संकलन नहि अछि -- मैनुअल मे मोड केँ सेट कए रहल अछि\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -487,7 +479,6 @@ msgstr "%s क' लेल एकटा वैकल्पिक क' रूप�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s क' लेल एकटा वैकल्पिक क' रूपेँ %s विन्यसित नहि अछि\n"
 
@@ -549,8 +540,7 @@ msgstr "  चयनित    कमाँड\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"[+] वर्तमान चयनित केँ रखबाक लेल Enter दबाउ, अथवा चयनित अंक मुद्रित करू :"
+msgstr "[+] वर्तमान चयनित केँ रखबाक लेल Enter दबाउ, अथवा चयनित अंक मुद्रित करू :"
 
 #: ../alternatives.c:1048
 #, c-format

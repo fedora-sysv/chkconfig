@@ -21,8 +21,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
-"Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/es/>\n"
+"Language-Team: Spanish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,8 +89,8 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Nota: Esta salida muestra sólo servicios SysV y no incluye servicios nativos "
-"\n"
+"Nota: Esta salida muestra sólo servicios SysV y no incluye servicios "
+"nativos \n"
 "      de systemd. Los datos de configuración SysV pueden verse invalidados "
 "por \n"
 "      la configuración nativa de systemd.\n"
@@ -249,7 +249,6 @@ msgstr "No se puede determinar el nivel de ejecución actual\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "No se pudo establecer el contexto SELinux para %s: %s\n"
 
@@ -317,7 +316,6 @@ msgstr "       alternatives --display <nombre>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <nombre> <ruta>\n"
 
@@ -352,8 +350,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -473,11 +469,11 @@ msgstr "no se pudo enlazar %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "no se pudo enlazar %s -> %s: %s ya existe y no es un enlace simbólico\n"
+msgstr ""
+"no se pudo enlazar %s -> %s: %s ya existe y no es un enlace simbólico\n"
 
 #: ../alternatives.c:609
 #, c-format

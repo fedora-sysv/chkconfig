@@ -14,8 +14,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Telugu <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/te/>\n"
+"Language-Team: Telugu <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/te/>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,8 +94,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      మీరు systemd సేవలను జాబితా చేయవలెనంటే 'systemctl list-unit-files' "
-"వుపయోగించండి.\n"
+"      మీరు systemd సేవలను జాబితా చేయవలెనంటే 'systemctl list-unit-files' వుపయోగించండి.\n"
 "      ఫలానా లక్ష్యముపై చేతనపరచిన సేవలను చూడుటకు\n"
 "      'systemctl list-dependencies [target]' వుపయోగించండి.\n"
 "\n"
@@ -106,8 +105,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"వినియీగం %s chkconfigకి మద్దతిస్తుంది, కానీ ఏ వినియోగ స్థాయిలోనూ ఇది "
-"సంప్రదించదగ్గది కాదు (ఉపయోగించు 'chkconfig --కలుపు %s')\n"
+"వినియీగం %s chkconfigకి మద్దతిస్తుంది, కానీ ఏ వినియోగ స్థాయిలోనూ ఇది సంప్రదించదగ్గది కాదు (ఉపయోగించు "
+"'chkconfig --కలుపు %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -238,7 +237,6 @@ msgstr "ప్రస్తుత వినియోగస్థాయి ని�
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s డైరెక్టరీని తెరవటంలో వైఫల్యం: %s\n"
 
@@ -278,7 +276,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -304,7 +301,6 @@ msgstr "       ప్రత్యామ్నాయాలు --ప్రదర�
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       ప్రత్యామ్నాయాలు --సమితి <name> <path>\n"
 
@@ -315,13 +311,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -329,7 +323,6 @@ msgstr "       ప్రత్యామ్నాయాలు --తొలగి�
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
 
@@ -497,7 +490,6 @@ msgstr "%s కోసం ప్రత్యామ్నాయంగా %s ఇం�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s కోసం ప్రత్యామ్నాయంగా %s ఇంకా ఆకృతీకరించబడలేదు\n"
 
@@ -559,8 +551,7 @@ msgstr "  ఎన్నిక    ఆదేశం\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"ప్రస్తుత ఎన్నికలను[+] ఉంచటానికి, లేదా ఎన్నిక సంఖ్యను ముద్రించటానికి ప్రవేశం: "
+msgstr "ప్రస్తుత ఎన్నికలను[+] ఉంచటానికి, లేదా ఎన్నిక సంఖ్యను ముద్రించటానికి ప్రవేశం: "
 
 #: ../alternatives.c:1048
 #, c-format

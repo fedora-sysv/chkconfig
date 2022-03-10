@@ -36,8 +36,8 @@ msgstr "%s %s verzió – Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint."
-"\n"
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -245,7 +245,6 @@ msgstr "nem lehet megállapítani az aktuális futási szintet\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "A(z) %s SELinux környezete nem állítható be: %s\n"
 
@@ -265,8 +264,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint."
-"\n"
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 "\n"
 
 #: ../alternatives.c:88
@@ -289,8 +288,8 @@ msgstr "                    [--family <család>]\n"
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr ""
-"                    [--slave <szolga_link> <szolga_név> <szolga_elérési_út>]*"
-"\n"
+"                    [--slave <szolga_link> <szolga_név> "
+"<szolga_elérési_út>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -314,7 +313,6 @@ msgstr "       alternatives --display <név>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <név> <elérési_út>\n"
 
@@ -349,8 +347,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -470,7 +466,6 @@ msgstr "a(z) %s -> %s linkelés sikertelen: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

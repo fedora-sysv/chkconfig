@@ -108,7 +108,8 @@ msgstr ""
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "服务 %s 支持 chkconfig，但它未在任何运行级别中被引用（请运行“chkconfig --add "
+msgstr ""
+"服务 %s 支持 chkconfig，但它未在任何运行级别中被引用（请运行“chkconfig --add "
 "%s”）\n"
 
 #: ../chkconfig.c:87
@@ -240,7 +241,6 @@ msgstr "无法判断当前运行级别\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "无法为 %s 设置 SELinux 上下文：%s\n"
 
@@ -305,7 +305,6 @@ msgstr "       alternatives --display <名称>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <名称> <路径>\n"
 
@@ -324,8 +323,9 @@ msgstr "       alternatives --remove-all <名称>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> "
-"<从属路径>\n"
+msgstr ""
+"       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径"
+">\n"
 
 #: ../alternatives.c:100
 #, c-format
@@ -339,8 +339,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -459,7 +457,6 @@ msgstr "%s -> %s 链接失败：%s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

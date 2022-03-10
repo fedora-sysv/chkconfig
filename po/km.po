@@ -73,9 +73,9 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម "
-"របស់សេវា systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV "
-"ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ systemd ។\n"
+"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម របស់សេវា "
+"systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ "
+"systemd ។\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -85,8 +85,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-"
-"files' ។\n"
+"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-files' ។\n"
 "      ដើម្បីមើលសេវាកម្មណាដែលបានបើកជាពិសេសគោលដៅប្រើប្រាស់\n"
 "      'systemctl list-dependencies [target]' ។\n"
 "\n"
@@ -97,8 +96,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run "
-"'chhkconfig -- add %s')\n"
+"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run 'chhkconfig -- add "
+"%s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -229,7 +228,6 @@ msgstr "មិនអាចកំណត់កំរិតរត់ពេលបច
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "មិនអាចកំណត់បរិបទ SELinux សម្រាប់ %s: %s\n"
 
@@ -269,7 +267,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -295,7 +292,6 @@ msgstr "       ការជំនួស --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       ការជំនួស --set <name> <path>\n"
 
@@ -306,13 +302,11 @@ msgstr "       ការជំនួស --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       ការជំនួស --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -320,7 +314,6 @@ msgstr "       ការជំនួស --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       ការជំនួស --remove <name> <path>\n"
 
@@ -449,13 +442,10 @@ msgstr "បរាជ័យក្នុងការភ្ជាប់ទៅកា
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr ""
-"បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា "
-"\n"
+msgstr "បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា \n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -491,7 +481,6 @@ msgstr "%s មិនបានកំណត់ជាការជំនួសសម
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s មិនបានកំណត់ជាការជំនួសសម្រាប់ %s\n"
 
