@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2015-01-05 06:02+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Assamese (http://www.transifex.com/projects/p/fedora/language/"
-"as/)\n"
+"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Assamese <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/as/>\n"
 "Language: as\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -95,8 +95,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      যদি আপুনি systemd সেৱাসমূহ তালিকাভুক্ত কৰিব বিচাৰে 'systemctl list-unit-"
-"files' ব্যৱহাৰ কৰক।\n"
+"      যদি আপুনি systemd সেৱাসমূহ তালিকাভুক্ত কৰিব বিচাৰে 'systemctl list-"
+"unit-files' ব্যৱহাৰ কৰক।\n"
 "      নিৰ্দিষ্ট লক্ষ্যত সামৰ্থবান সেৱাসমূহ চাবলে\n"
 "      'systemctl list-dependencies [target]' ব্যৱহাৰ কৰক।\n"
 "\n"
@@ -107,8 +107,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run 'chkconfig "
-"--add %s')\n"
+"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run "
+"'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -432,7 +432,8 @@ msgstr "%s সংযোগ পঢ়িব'লৈ অক্ষম: %s\n"
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
-"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
+"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা "
+"হৈছে\n"
 
 #: ../alternatives.c:475
 #, c-format
