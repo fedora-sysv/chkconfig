@@ -19,8 +19,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 07:53+0000\n"
 "Last-Translator: Luna Jernberg <bittin@reimu.nl>\n"
-"Language-Team: Swedish <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/sv/>\n"
+"Language-Team: Swedish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -268,7 +268,8 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
+msgstr ""
+"användning: alternatives --install <länk> <namn> <sökväg> <prioritet>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -345,8 +346,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"vanliga flaggor: --verbose --test --help --usage --version --keep-missing "
-"--keep-foreign\n"
+"vanliga flaggor: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
