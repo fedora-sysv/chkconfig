@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2015-01-05 06:04+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Maithili (http://www.transifex.com/projects/p/fedora/language/"
-"mai/)\n"
+"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Maithili <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/mai/>\n"
 "Language: mai\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -246,7 +246,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"जीएनयू सार्वजनिक लाइसेंस क' नियमानुसार मुक्त रूपेँ एकरा पुन:बाँट कए सकैत छी.\n"
+"जीएनयू सार्वजनिक लाइसेंस क' नियमानुसार मुक्त रूपेँ एकरा पुन:बाँट कए सकैत छी."
+"\n"
 "\n"
 
 #: ../alternatives.c:88
@@ -417,7 +418,8 @@ msgstr "%s पढ़ने मे असफल: %s\n"
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "कोनो वैकल्पिक क' लेल संकलन नहि अछि -- मैनुअल मे मोड केँ सेट कए रहल अछि\n"
+msgstr ""
+"कोनो वैकल्पिक क' लेल संकलन नहि अछि -- मैनुअल मे मोड केँ सेट कए रहल अछि\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -547,7 +549,8 @@ msgstr "  चयनित    कमाँड\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "[+] वर्तमान चयनित केँ रखबाक लेल Enter दबाउ, अथवा चयनित अंक मुद्रित करू :"
+msgstr ""
+"[+] वर्तमान चयनित केँ रखबाक लेल Enter दबाउ, अथवा चयनित अंक मुद्रित करू :"
 
 #: ../alternatives.c:1048
 #, c-format
