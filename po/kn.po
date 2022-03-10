@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2015-01-05 06:04+0000\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Kannada (http://www.transifex.com/projects/p/fedora/language/"
-"kn/)\n"
+"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Kannada <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/kn/>\n"
 "Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -97,8 +97,8 @@ msgid ""
 "\n"
 msgstr ""
 " systemd ಸೇವೆಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಲು ನೀವು ಬಯಸಿದಲ್ಲಿ 'systemctl list-unit-files' "
-"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು ನೋಡಲು "
-"ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
+"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು "
+"ನೋಡಲು ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -106,8 +106,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ ಕ್ರಿಯಾಹಂತದಲ್ಲಿ "
-"ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
+"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ "
+"ಕ್ರಿಯಾಹಂತದಲ್ಲಿ ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -564,7 +564,8 @@ msgstr "  ಆಯ್ಕೆ    ಆಜ್ಞೆ\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
+msgstr ""
+"ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
 
 #: ../alternatives.c:1048
 #, c-format
