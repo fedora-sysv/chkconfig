@@ -13,10 +13,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:04+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Odia <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/or/>\n"
+"Language-Team: Odia <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/or/>\n"
 "Language: or\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,7 +82,8 @@ msgid ""
 msgstr ""
 "\n"
 "ଟିପ୍ପଣୀ: ଏହି ଫଳାଫଳଟି SysV ସର୍ଭିସଗୁଡ଼ିକୁ କେବଳ ଦର୍ଶାଇଥାଏ ଏବଂ ସ୍ଥାନୀୟ\n"
-"      systemd ସର୍ଭିସଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିନଥାଏ। SysV ସଂରଚନା ତଥ୍ୟ ହୁଏତଃ ସ୍ଥାନୀୟ\n"
+"      systemd ସର୍ଭିସଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିନଥାଏ। SysV ସଂରଚନା ତଥ୍ୟ ହୁଏତଃ "
+"ସ୍ଥାନୀୟ\n"
 "      systemd ସଂରଚନା ସହିତ ନବଲିଖିତ ହୋଇନଥାଏ।\n"
 "\n"
 
@@ -94,8 +95,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      ଯଦି ଆପଣ systemd ସର୍ଭିସଗୁଡ଼ିକୁ ତାଲିକଭୁକ୍ତ କରିବାକୁ ଚାହାନ୍ତି ତେବେ 'systemctl list-unit-"
-"files' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
+"      ଯଦି ଆପଣ systemd ସର୍ଭିସଗୁଡ଼ିକୁ ତାଲିକଭୁକ୍ତ କରିବାକୁ ଚାହାନ୍ତି ତେବେ "
+"'systemctl list-unit-files' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
 "      ନିର୍ଦ୍ଦିଷ୍ଟ ଲକ୍ଷ୍ଯସ୍ଥଳରେ ସକ୍ରିୟ ଥିବା ସର୍ଭିସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ\n"
 "      'systemctl list-dependencies [target]' କୁ ବ୍ୟବହାର କରନ୍ତୁ।\n"
 "\n"
@@ -165,7 +166,9 @@ msgstr "--type ନିଶ୍ଚିତ ଭାବରେ 'sysv' କିମ୍ବା '
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr " --list, --add, --del, କିମ୍ବା --override ମଧ୍ଯରୁ କେବଳ ଗୋଟିକୁ ଉଲ୍ଲେକ୍ଷିତ କରିହେବ\n"
+msgstr ""
+" --list, --add, --del, କିମ୍ବା --override ମଧ୍ଯରୁ କେବଳ ଗୋଟିକୁ ଉଲ୍ଲେକ୍ଷିତ କରିହେ"
+"ବ\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -423,7 +426,9 @@ msgstr "ସଂଯୋଗ %s କୁ ପଢିବା ରେ ଅସଫଳ: %s\n"
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "ସଂଯୋଗ ଟି କୌଣସି ବିକଲ୍ପ କୁ ସୂଚାଉ ନାହିଁ -- ଧାରା କୁ ମେନ୍ଯୁାଲ ରେ ପରିବର୍ତ୍ତନ କରୁଛି\n"
+msgstr ""
+"ସଂଯୋଗ ଟି କୌଣସି ବିକଲ୍ପ କୁ ସୂଚାଉ ନାହିଁ -- ଧାରା କୁ ମେନ୍ଯୁାଲ ରେ ପରିବର୍ତ୍ତନ କରୁଛି"
+"\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -553,7 +558,8 @@ msgstr "  ଚୟନ ପାଇଁ ନିର୍ଦ୍ଦେଶ\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"ବର୍ତ୍ତମାନ ର ଚୟନ[+] କୁ ରଖିବା ପାଇଁ ପ୍ରବେଶ କରନ୍ତୁ, କିମ୍ବା ଚୟନ ପାଇଁ ଉପଯୁକ୍ତ ସଂଖ୍ଯା ପ୍ରଦାନ କରନ୍ତୁ: "
+"ବର୍ତ୍ତମାନ ର ଚୟନ[+] କୁ ରଖିବା ପାଇଁ ପ୍ରବେଶ କରନ୍ତୁ, କିମ୍ବା ଚୟନ ପାଇଁ ଉପଯୁକ୍ତ "
+"ସଂଖ୍ଯା ପ୍ରଦାନ କରନ୍ତୁ: "
 
 #: ../alternatives.c:1048
 #, c-format
