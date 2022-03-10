@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:53+0000\n"
+"PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
 "Language-Team: Portuguese <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/pt/>\n"
@@ -243,7 +243,6 @@ msgstr "não foi possível determinar o nível de execução actual\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Incapaz de definir contexto SELinux para %s: %s\n"
 
@@ -263,8 +262,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Isto pode ser redistribuído livremente sob os termos da Licença Pública GNU."
-"\n"
+"Isto pode ser redistribuído livremente sob os termos da Licença Pública "
+"GNU.\n"
 "\n"
 
 #: ../alternatives.c:88
@@ -311,7 +310,6 @@ msgstr "       alternatives --display <nome>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <nome> <caminho>\n"
 
@@ -327,7 +325,6 @@ msgstr "       alternatives --remove <nome> <caminho>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -335,7 +332,6 @@ msgstr "       alternatives --remove <nome> <caminho>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <nome> <caminho>\n"
 
@@ -466,7 +462,6 @@ msgstr "não foi possível criar a ligação %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

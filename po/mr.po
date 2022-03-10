@@ -15,10 +15,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Marathi <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/mr/>\n"
+"Language-Team: Marathi <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,9 +35,7 @@ msgstr "%s आवृत्ती %s - सर्वहक्काधिकार
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"GNU Public License च्या शर्तींअंतर्गत यांस मुक्तपणे पुनःवितरित करणे शक्य आहे."
-"\n"
+msgstr "GNU Public License च्या शर्तींअंतर्गत यांस मुक्तपणे पुनःवितरित करणे शक्य आहे.\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -98,8 +96,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      systemd सर्व्हिसेसची सूची दाखवण्याकरिता 'systemctl list-unit-files' "
-"याचा वापर करा.\n"
+"      systemd सर्व्हिसेसची सूची दाखवण्याकरिता 'systemctl list-unit-files' याचा "
+"वापर करा.\n"
 "      ठराविक लक्ष्यवर सर्व्हिसेस सुरू करण्याकरिता\n"
 "      'systemctl list-dependencies [target]' याचा वापर.\n"
 "\n"
@@ -242,7 +240,6 @@ msgstr "चालू रनलेवल ठरवू शकत नाही\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s निर्देशिका उघडण्यास अपयशी: %s\n"
 
@@ -282,7 +279,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -308,7 +304,6 @@ msgstr "       विक्लप --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       विकल्प--set <name> <path>\n"
 
@@ -319,13 +314,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       विकल्प --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -333,7 +326,6 @@ msgstr "       विकल्प --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       विकल्प --remove <name> <path>\n"
 
@@ -433,9 +425,7 @@ msgstr "%s लिंक वाचण्यास अपयशी: %s\n"
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"लिंक कोणत्याही विकल्पास निर्देशित करत नाही -- रीत स्वहस्तेवर निर्धारित करत "
-"आहे\n"
+msgstr "लिंक कोणत्याही विकल्पास निर्देशित करत नाही -- रीत स्वहस्तेवर निर्धारित करत आहे\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -503,7 +493,6 @@ msgstr "%s %s साठी विकल्प म्हणून व्यूह
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s %s साठी विकल्प म्हणून व्यूहरचित केलेला नाही\n"
 

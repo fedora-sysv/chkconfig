@@ -15,10 +15,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/da/>\n"
+"Language-Team: Danish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,8 +98,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Hvis du vil vise systemd-tjenster, så brug 'systemctl list-unit-files'."
-"\n"
+"      Hvis du vil vise systemd-tjenster, så brug 'systemctl list-unit-"
+"files'.\n"
 "      For at se tjenester som er aktiveret på et bestemt mål, brug\n"
 "      'systemctl list-dependencies [mål]'.\n"
 "\n"
@@ -242,7 +242,6 @@ msgstr "kan ikke afgøre nuværende kørselsniveau\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Kan ikke sætte SELinux-kontekst for %s: %s\n"
 
@@ -283,7 +282,8 @@ msgstr "                    [--family <familje>]\n"
 #: ../alternatives.c:91
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <slave_lænke> <slave_navn> <slave_sti>]*\n"
+msgstr ""
+"                    [--slave <slave_lænke> <slave_navn> <slave_sti>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -307,7 +307,6 @@ msgstr "       alternatives --display <navn>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <navn> <sti>\n"
 
@@ -342,8 +341,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -464,7 +461,6 @@ msgstr "kunne ikke lænke %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

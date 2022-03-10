@@ -6,10 +6,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:53+0000\n"
+"PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Jan Macku <jamacku@redhat.com>\n"
-"Language-Team: Friulian <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/fur/>\n"
+"Language-Team: Friulian <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/fur/>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -238,7 +238,6 @@ msgstr "impussibil determinâ il nivel di esecuzion atuâl\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impussibil stabilî il contest SELinux par %s: %s\n"
 
@@ -279,7 +278,6 @@ msgstr "                    [--family <famee>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <colegament> <non> <percors>]*\n"
 
@@ -305,7 +303,6 @@ msgstr "       alternatives --display <non>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <non> <percors>\n"
 
@@ -316,13 +313,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <non> <percors>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -330,7 +325,6 @@ msgstr "       alternatives --remove <non> <percors>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <non> <percors>\n"
 
@@ -341,8 +335,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -463,7 +455,6 @@ msgstr "no si è rivâts a colegâ %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
@@ -505,7 +496,6 @@ msgstr "%s nol è stât configurât come une alternative par %s\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s nol è stât configurât come une alternative par %s\n"
 

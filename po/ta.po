@@ -16,10 +16,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:53+0000\n"
+"PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Tamil <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/ta/>\n"
+"Language-Team: Tamil <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,8 +37,7 @@ msgstr "%s பதிப்பு %s - பதிப்புரிமை (C) 1997
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"GNU பொது உரிமத்தின் விதிமுறைகளின் படி இதனை தடையின்றி மறுவிநியோகம் செய்யலாம்."
-"\n"
+"GNU பொது உரிமத்தின் விதிமுறைகளின் படி இதனை தடையின்றி மறுவிநியோகம் செய்யலாம்.\n"
 "\n"
 
 #: ../chkconfig.c:47
@@ -87,8 +86,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"குறிப்பு: இந்த வெளிப்பாடானது SysV சேவைகளை மட்டும் காட்டுகிறது மற்றும் இது "
-"சொந்த \n"
+"குறிப்பு: இந்த வெளிப்பாடானது SysV சேவைகளை மட்டும் காட்டுகிறது மற்றும் இது சொந்த \n"
 "      systemd சேவைகளை சேர்க்கவில்லை. SysV கட்டமைப்பு தரவு சொந்த\n"
 "      systemd கட்டமைப்பால் மேலாணை செய்யப்பட்டது.\n"
 "\n"
@@ -101,8 +99,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      systemd சேவைகளைப் பட்டியலிட விரும்பினால் 'systemctl list-unit-files' "
-"ஐப் பயன்படுத்தவும்.\n"
+"      systemd சேவைகளைப் பட்டியலிட விரும்பினால் 'systemctl list-unit-files' ஐப் "
+"பயன்படுத்தவும்.\n"
 "      குறிப்பிட்ட இலக்கில் செயல்படுத்தப்பட்டுள்ள சேவைகளைப் பார்க்க \n"
 "      'systemctl list-dependencies [target]' ஐப் பயன்படுத்தவும்.\n"
 "\n"
@@ -113,8 +111,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"சேவை %s chkconfigக்கு துணைபுரியும், ஆனால் இயக்க நிலை குறிப்பிடப்படவில்லை ("
-"'chkconfig --add %s'ஐ இயக்கவும்)\n"
+"சேவை %s chkconfigக்கு துணைபுரியும், ஆனால் இயக்க நிலை குறிப்பிடப்படவில்லை "
+"('chkconfig --add %s'ஐ இயக்கவும்)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -246,7 +244,6 @@ msgstr "நடப்பு இயக்க நிலையை வரையறு
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "அடைவு %s ஐ திறக்க முடியவில்லை: %s\n"
 
@@ -286,7 +283,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -312,7 +308,6 @@ msgstr "       மாற்று --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       மாற்று --set <name> <path>\n"
 
@@ -323,13 +318,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       மாற்றுகளை --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -337,7 +330,6 @@ msgstr "       மாற்றுகளை --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       மாற்றுகளை --remove <name> <path>\n"
 
@@ -505,7 +497,6 @@ msgstr "%s க்கு மாற்றாக %s கட்டமைக்கப�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s க்கு மாற்றாக %s கட்டமைக்கப்படவில்லை\n"
 
@@ -568,8 +559,7 @@ msgstr "  தேர்ந்தெடுப்பு    கட்டளை\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"தற்போது உள்ள தேர்ந்தெடுப்பு [+]ஐ வைக்க உள்ளீடவும், அல்லது தேர்ச்சி எண்ணை "
-"தட்டச்சு செய்யவும்: "
+"தற்போது உள்ள தேர்ந்தெடுப்பு [+]ஐ வைக்க உள்ளீடவும், அல்லது தேர்ச்சி எண்ணை தட்டச்சு செய்யவும்: "
 
 #: ../alternatives.c:1048
 #, c-format

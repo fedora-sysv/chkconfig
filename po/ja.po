@@ -18,10 +18,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/ja/>\n"
+"Language-Team: Japanese <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,8 +38,9 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr "このソフトウェアは GNU "
-"一般公共使用許諾契約書に従って無償で再配布することができます。\n"
+msgstr ""
+"このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
+"きます。\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -99,8 +100,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      systemd サービスを一覧表示する場合は 'systemctl list-unit-files' "
-"を使用します。\n"
+"      systemd サービスを一覧表示する場合は 'systemctl list-unit-files' を使用"
+"します。\n"
 "      特定のターゲットで有効になっているサービスを確認する場合は\n"
 "      'systemctl list-dependencies [target]'を使用します。\n"
 "\n"
@@ -111,8 +112,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません ("
-"run 'chkconfig --add %s')\n"
+"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません "
+"(run 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -170,8 +171,9 @@ msgstr "--type は 'sysv' か 'xinetd' でなければなりません\n"
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr "指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけです。"
-"\n"
+msgstr ""
+"指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけで"
+"す。\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -244,7 +246,6 @@ msgstr "現在のランレベルを識別できません。\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s のためのSELinux コンテキストを設定できません: %s\n"
 
@@ -286,7 +287,6 @@ msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
 
@@ -312,7 +312,6 @@ msgstr "       alternatives --display <名前>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <名前> <パス>\n"
 
@@ -323,13 +322,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <名前> <パス>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -337,7 +334,6 @@ msgstr "       alternatives --remove <名前> <パス>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <名前> <パス>\n"
 
@@ -348,12 +344,11 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "一般的なオプション: --verbose --test --help --usage --version --keep-"
+msgstr ""
+"一般的なオプション: --verbose --test --help --usage --version --keep-"
 "missing\n"
 
 #: ../alternatives.c:104
@@ -469,12 +464,12 @@ msgstr "%s から %s へのリンク失敗: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "シンボリックリンク %s -> %s の作成に失敗しました。 %s "
-"がすでに存在しており、シンボリックリンクファイルではありません。\n"
+msgstr ""
+"シンボリックリンク %s -> %s の作成に失敗しました。 %s がすでに存在しており、"
+"シンボリックリンクファイルではありません。\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -510,7 +505,6 @@ msgstr "%s は %s の為の互換用として設定されていません。\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s は %s の為の互換用として設定されていません。\n"
 

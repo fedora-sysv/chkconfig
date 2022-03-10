@@ -22,10 +22,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/de/>\n"
+"Language-Team: German <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,7 +134,8 @@ msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr "Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
+msgstr ""
+"Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
 
 #: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
@@ -252,7 +253,6 @@ msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Selinux-Kontext konnte nicht für %s gesetzt werden: %s\n"
 
@@ -292,9 +292,9 @@ msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgstr ""
+"                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -318,7 +318,6 @@ msgstr "       alternatives --display <Name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <Name> <Pfad>\n"
 
@@ -334,7 +333,6 @@ msgstr "       alternatives --remove-all <Name>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -344,7 +342,6 @@ msgstr ""
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove-slave <Name> <Pfad> <slave_name>\n"
 
@@ -355,8 +352,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -477,7 +472,6 @@ msgstr "Fehler beim Erstellen des Link %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
@@ -518,7 +512,6 @@ msgstr "%s wurde nicht als eine Alternative für %s konfiguriert\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s wurde nicht als eine Alternative für %s konfiguriert\n"
 

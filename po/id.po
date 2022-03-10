@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Didik Supriadi <didiksupriadi41@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/id/>\n"
@@ -247,7 +247,6 @@ msgstr "tidak dapat menentukan run level yang aktif\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Tidak bisa menata konteks SELinux untuk %s: %s\n"
 
@@ -267,8 +266,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Program ini dapat didistribusikan bebas di bawah Lisensi GNU Public License."
-"\n"
+"Program ini dapat didistribusikan bebas di bawah Lisensi GNU Public "
+"License.\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -287,7 +286,6 @@ msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path> *\n"
 
@@ -313,7 +311,6 @@ msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
@@ -324,13 +321,11 @@ msgstr "       cara lainnya --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -338,7 +333,6 @@ msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
@@ -349,8 +343,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -469,7 +461,6 @@ msgstr "gagal untuk membuat link %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
@@ -509,7 +500,6 @@ msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
 

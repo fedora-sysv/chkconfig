@@ -19,10 +19,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Enrico Bella <enric@e.email>\n"
-"Language-Team: Italian <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/it/>\n"
+"Language-Team: Italian <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,8 +89,8 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Nota: Questo output mostra i servizi SysV solo e non iclude i servizi nativi."
-"\n"
+"Nota: Questo output mostra i servizi SysV solo e non iclude i servizi "
+"nativi.\n"
 "      servizi systemd. Dati di configurazione SysV posso essere sovrascritti "
 "dai nativi\n"
 "      configurazione systemd.\n"
@@ -104,8 +104,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Se desideri elencare i servizi systemd usa 'systemctl list-unit-files'."
-"\n"
+"      Se desideri elencare i servizi systemd usa 'systemctl list-unit-"
+"files'.\n"
 "      Per visualizzare i servizi abilitati in un target particolare usa\n"
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
@@ -116,8 +116,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"il servizio %s supporta chkconfig, ma non è referenziato in nessun runlevel ("
-"eseguire 'chkconfig --add %s')\n"
+"il servizio %s supporta chkconfig, ma non è referenziato in nessun runlevel "
+"(eseguire 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -250,7 +250,6 @@ msgstr "impossibile determinare il runlevel attuale\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impossibile impostare il contesto SELinux per %s: %s\n"
 
@@ -291,7 +290,6 @@ msgstr "                    --family <family>\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <nome> <percorso>]*\n"
 
@@ -317,7 +315,6 @@ msgstr "       alternatives --display <nome>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <nome> <percorso>\n"
 
@@ -328,13 +325,11 @@ msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <nome> <percorso>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -342,7 +337,6 @@ msgstr "       alternatives --remove <nome> <percorso>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <nome> <percorso>\n"
 
@@ -353,8 +347,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -475,7 +467,6 @@ msgstr "impossibile creare il link %s -> %s: %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
@@ -515,7 +506,6 @@ msgstr "%s non è stato configurato come alternativa per %s\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s non è stato configurato come alternativa per %s\n"
 

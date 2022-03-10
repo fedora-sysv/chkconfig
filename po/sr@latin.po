@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:53+0000\n"
+"PO-Revision-Date: 2022-03-10 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian (latin) <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/sr_Latn/>\n"
@@ -96,8 +96,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"servis %s podržava chkconfig, ali nije poznat ni u jednom nivou izvršavanja ("
-"izvršite „chkconfig --add %s“)\n"
+"servis %s podržava chkconfig, ali nije poznat ni u jednom nivou izvršavanja "
+"(izvršite „chkconfig --add %s“)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -228,7 +228,6 @@ msgstr "ne mogu da odredim trenutni nivo izvršavanja\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "neuspešno otvaranje direktorijuma %s: %s\n"
 
@@ -268,7 +267,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                      [--slave <veza> <ime> <putanja>]*\n"
 
@@ -294,7 +292,6 @@ msgstr "          alternatives --display <ime>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "          alternatives --set <ime> <putanja>\n"
 
@@ -305,13 +302,11 @@ msgstr ""
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "          alternatives --remove <ime> <putanja>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -319,7 +314,6 @@ msgstr "          alternatives --remove <ime> <putanja>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "          alternatives --remove <ime> <putanja>\n"
 
@@ -487,7 +481,6 @@ msgstr "%s nije podešeno kao alternativa za %s\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s nije podešeno kao alternativa za %s\n"
 

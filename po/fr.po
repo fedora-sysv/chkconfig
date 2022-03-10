@@ -24,10 +24,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
-"Language-Team: French <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/fr/>\n"
+"Language-Team: French <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -258,7 +258,6 @@ msgstr "impossible de déterminer le niveau d’exécution en cours\n"
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impossible de définir le contexte SELinux pour %s : %s\n"
 
@@ -285,7 +284,8 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
+msgstr ""
+"utilisation : alternatives --install <lien> <nom> <chemin> <priorité>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -301,8 +301,8 @@ msgstr "                    [--family <famille>]\n"
 #, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr ""
-"                    [--slave <lien_esclave> <nom_esclave> <chemin_esclave>]*"
-"\n"
+"                    [--slave <lien_esclave> <nom_esclave> "
+"<chemin_esclave>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -326,7 +326,6 @@ msgstr "       alternatives --display <nom>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <nom> <chemin>\n"
 
@@ -361,8 +360,6 @@ msgstr "\n"
 
 #: ../alternatives.c:102
 #, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
@@ -484,7 +481,6 @@ msgstr "Impossible de lier %s -> %s : %s\n"
 
 #: ../alternatives.c:559
 #, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"

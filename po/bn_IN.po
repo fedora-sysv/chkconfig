@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 07:52+0000\n"
+"PO-Revision-Date: 2022-03-10 09:03+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Bengali (India) <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/bn_IN/>\n"
@@ -101,8 +101,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s পরিসেবার দ্বারা chkconfig সমর্থিত, কিন্তু কোনো রান-লেভেলে উল্লিখিত হয় না ("
-"'chkconfig --add %s' ব্যবহার করুন)\n"
+"%s পরিসেবার দ্বারা chkconfig সমর্থিত, কিন্তু কোনো রান-লেভেলে উল্লিখিত হয় না "
+"('chkconfig --add %s' ব্যবহার করুন)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -161,8 +161,8 @@ msgstr "--type-র ক্ষেত্রে 'sysv' অথবা 'xinetd' প্�
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
-"--list, --add, --del, অথবা --override, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ "
-"করা যাবে\n"
+"--list, --add, --del, অথবা --override, এই তিনটির মধ্যে যে কোনও একটি উল্লেখ করা "
+"যাবে\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -235,7 +235,6 @@ msgstr "বর্তমান রান লেভেল জানা যায়�
 
 #: ../leveldb.c:901
 #, fuzzy, c-format
-#| msgid "failed to open directory %s: %s\n"
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s ডিরেক্টরি খুলতে ব্যর্থ: %s\n"
 
@@ -261,8 +260,7 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"ব্যবহার পদ্ধতি: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "ব্যবহার পদ্ধতি: alternatives --install <link> <name> <path> <priority>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -276,7 +274,6 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-#| msgid "                    [--slave <link> <name> <path>]*\n"
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
@@ -302,7 +299,6 @@ msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
 #, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
@@ -313,13 +309,11 @@ msgstr ""
 
 #: ../alternatives.c:98
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
@@ -327,7 +321,6 @@ msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-#| msgid "       alternatives --remove <name> <path>\n"
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
@@ -427,8 +420,7 @@ msgstr "%s লিঙ্ক পড়া সম্ভব হয়নি: %s\n"
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"লিঙ্কটি কোনও বিকল্প চিহ্নিত করে না -- ম্যানুয়েল মোডে নির্ধারণ করা হচ্ছে\n"
+msgstr "লিঙ্কটি কোনও বিকল্প চিহ্নিত করে না -- ম্যানুয়েল মোডে নির্ধারণ করা হচ্ছে\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -496,7 +488,6 @@ msgstr "%s কে %s-র বিকল্প হিসাবে কনফিগ�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-#| msgid "%s has not been configured as an alternative for %s\n"
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
 msgstr "%s কে %s-র বিকল্প হিসাবে কনফিগার করা হয়নি\n"
 
@@ -559,8 +550,7 @@ msgstr "  নির্বাচন    কমান্ড\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ "
-"করুন: "
+"বর্তমান নির্বাচন [+] রাখতে হলে Enter টিপুন অথবা নির্বাচিত বস্তুর সংখ্যা টাইপ করুন: "
 
 #: ../alternatives.c:1048
 #, c-format
