@@ -17,10 +17,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:03+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/fi/>\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,8 +111,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"palvelulla %s on chkconfig-tuki, mutta siihen ei viitata millään ajotasolla "
-"(aja \"chkconfig --add %s\")\n"
+"palvelulla %s on chkconfig-tuki, mutta siihen ei viitata millään ajotasolla ("
+"aja \"chkconfig --add %s\")\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -270,8 +270,7 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"käyttö: alternatives --install <linkki> <nimi> <polku> <prioriteetti>\n"
+msgstr "käyttö: alternatives --install <linkki> <nimi> <polku> <prioriteetti>\n"
 
 #: ../alternatives.c:89
 #, c-format

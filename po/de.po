@@ -22,10 +22,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:03+0000\n"
+"PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/de/>\n"
+"Language-Team: German <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,8 +134,7 @@ msgstr "Fehler beim Lesen der Informationen über den Dienst %s: %s\n"
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
-"Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
+msgstr "Sie besitzen nicht die nötigen Rechte zum Ausführen dieser Operation.\n"
 
 #: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
@@ -293,8 +292,7 @@ msgstr "                    [--family <family>]\n"
 #: ../alternatives.c:91
 #, fuzzy, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr ""
-"                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgstr "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format

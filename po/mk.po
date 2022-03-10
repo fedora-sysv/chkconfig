@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:04+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Macedonian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/mk/>\n"
@@ -32,8 +32,8 @@ msgstr "%s верзија %s - Сите права задржани 1997-2000 Re
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Може да биде слободно дистрибурано под условите во GNU Public License "
-"(GPL).\n"
+"Може да биде слободно дистрибурано под условите во GNU Public License (GPL)."
+"\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -155,8 +155,7 @@ msgstr ""
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"само еден од --list, --add, --del или --override може да биде наведен\n"
+msgstr "само еден од --list, --add, --del или --override може да биде наведен\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -545,8 +544,8 @@ msgstr "  Избор    Команда\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Enter за да го задржите тековниот избор[+], или внесете го бројот на "
-"изборот: "
+"Enter за да го задржите тековниот избор[+], или внесете го бројот на изборот:"
+" "
 
 #: ../alternatives.c:1048
 #, c-format

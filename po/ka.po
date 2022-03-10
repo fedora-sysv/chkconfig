@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:03+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Georgian <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/ka/>\n"
+"Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,8 +159,7 @@ msgstr ""
 #: ../chkconfig.c:873
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
+msgstr "chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
@@ -253,8 +252,7 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"გამოყენება: alternatives --install <ბმა> <სახელი> <გეზი> <პრიორიტეტი>\n"
+msgstr "გამოყენება: alternatives --install <ბმა> <სახელი> <გეზი> <პრიორიტეტი>\n"
 
 #: ../alternatives.c:89
 #, c-format
