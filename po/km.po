@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:04+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Khmer (Central) <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/km/>\n"
@@ -73,9 +73,9 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម របស់សេវា "
-"systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ "
-"systemd ។\n"
+"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម "
+"របស់សេវា systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV "
+"ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ systemd ។\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -85,7 +85,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-files' ។\n"
+"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-"
+"files' ។\n"
 "      ដើម្បីមើលសេវាកម្មណាដែលបានបើកជាពិសេសគោលដៅប្រើប្រាស់\n"
 "      'systemctl list-dependencies [target]' ។\n"
 "\n"
@@ -96,8 +97,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run 'chhkconfig -- add "
-"%s')\n"
+"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run "
+"'chhkconfig -- add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -445,7 +446,9 @@ msgstr "បរាជ័យក្នុងការភ្ជាប់ទៅកា
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា \n"
+msgstr ""
+"បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា "
+"\n"
 
 #: ../alternatives.c:609
 #, c-format
