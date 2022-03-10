@@ -10,23 +10,23 @@
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2016. #zanata
 # Toni Rantala <trantalafilo@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
-# Jan Kuparinen <copper_fin@hotmail.com>, 2021.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2021, 2022.
 # Ricky Tigg <ricky.tigg@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2021-09-03 10:04+0000\n"
-"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
-"Language-Team: Finnish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/fi/>\n"
+"PO-Revision-Date: 2022-03-10 00:10+0000\n"
+"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
+"Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -244,8 +244,7 @@ msgid "cannot determine current run level\n"
 msgstr "nykyisen ajotason määritys ei onnistu\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
-#| msgid "Unable to set selinux context for %s: %s\n"
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Ei voitu asettaa SELinux-kontekstia kohteelle %s: %s\n"
 
@@ -311,10 +310,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <nimi>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
-#| msgid "       alternatives --set <name> <path>\n"
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <nimi> <polku>\n"
+msgstr "       alternatives --set <nimi> <polku/perhe>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -346,15 +344,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
-#| msgid ""
-#| "common options: --verbose --test --help --usage --version --keep-missing\n"
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
 "yleiset vaihtoehdot: --verbose --test --help --usage --version --keep-"
-"missing\n"
+"missing --keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -468,14 +464,13 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "linkin %s -> %s luominen epäonnistui: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"linkin %s -> %s luominen epäonnistui: %s on olemassa eikä ole symbolinen "
-"linkki\n"
+"%s -> %s linkittäminen epäonnistui: %s on olemassa, eikä se ole symbolinen "
+"linkki tai --keep-foreign on asetettu ja linkki osoittaa %s:n ulkopuolelle\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -587,7 +582,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "ei voi käyttää %s/%s: Ei tällaista tiedostoa tai hakemistoa\n"
 
 #: ../alternatives.c:1142
 #, c-format
