@@ -18,10 +18,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:03+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/ja/>\n"
+"Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,9 +38,8 @@ msgstr "%s バージョン %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"このソフトウェアは GNU 一般公共使用許諾契約書に従って無償で再配布することがで"
-"きます。\n"
+msgstr "このソフトウェアは GNU "
+"一般公共使用許諾契約書に従って無償で再配布することができます。\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -100,8 +99,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      systemd サービスを一覧表示する場合は 'systemctl list-unit-files' を使用"
-"します。\n"
+"      systemd サービスを一覧表示する場合は 'systemctl list-unit-files' "
+"を使用します。\n"
 "      特定のターゲットで有効になっているサービスを確認する場合は\n"
 "      'systemctl list-dependencies [target]'を使用します。\n"
 "\n"
@@ -112,8 +111,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません "
-"(run 'chkconfig --add %s')\n"
+"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません ("
+"run 'chkconfig --add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -171,9 +170,8 @@ msgstr "--type は 'sysv' か 'xinetd' でなければなりません\n"
 #: ../chkconfig.c:762
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
-msgstr ""
-"指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけで"
-"す。\n"
+msgstr "指定できるのは、 --list、 --add、 --del、 --override の中から 1 つだけです。"
+"\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -347,8 +345,7 @@ msgstr "\n"
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr ""
-"一般的なオプション: --verbose --test --help --usage --version --keep-"
+msgstr "一般的なオプション: --verbose --test --help --usage --version --keep-"
 "missing\n"
 
 #: ../alternatives.c:104
@@ -467,9 +464,8 @@ msgstr "%s から %s へのリンク失敗: %s\n"
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr ""
-"シンボリックリンク %s -> %s の作成に失敗しました。 %s がすでに存在しており、"
-"シンボリックリンクファイルではありません。\n"
+msgstr "シンボリックリンク %s -> %s の作成に失敗しました。 %s "
+"がすでに存在しており、シンボリックリンクファイルではありません。\n"
 
 #: ../alternatives.c:609
 #, c-format
