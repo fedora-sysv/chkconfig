@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:04+0000\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Tajik <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/tg/>\n"
+"Language-Team: Tajik <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/tg/>\n"
 "Language: tg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -262,8 +262,7 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr ""
-"истифодабарӣ: alternatives --install <алоқа> <ном> <роҳча> <афзалият>\n"
+msgstr "истифодабарӣ: alternatives --install <алоқа> <ном> <роҳча> <афзалият>\n"
 
 #: ../alternatives.c:89
 #, c-format
