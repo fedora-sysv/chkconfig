@@ -12,13 +12,14 @@
 # MinWoo Joh <igtzhsou@naver.com>, 2015. #zanata
 # simmon <simmon@nplob.com>, 2021.
 # Kim InSoo <simmon@nplob.com>, 2022.
+# 김인수 <simmon@nplob.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Kim InSoo <simmon@nplob.com>\n"
+"PO-Revision-Date: 2022-03-10 11:59+0000\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ko/>\n"
 "Language: ko\n"
@@ -241,9 +242,9 @@ msgid "cannot determine current run level\n"
 msgstr "현재의 런레벨을 확인할 수 없습니다\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "%s에 대한 SELinux 설정을 적용할 수 없습니다: %s\n"
+msgstr "%s에 대한 SELinux 문맥을 설정 할 수 없습니다: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -305,9 +306,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <name> <path/family>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -339,11 +340,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "공통 옵션: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
+"공통 옵션: --verbose --test --help --usage --version --keep-missing --keep-"
+"foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -457,11 +460,13 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "%s -> %s로 링크하는데 실패했습니다: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "%s -> %s 링크를 걸지 못하였습니다: %s 는 존재하며 심링크가 아닙니다\n"
+msgstr ""
+"%s 연결에 실패함 -> %s: %s 존재하고 이는 심볼릭 링크가 아니거나 --keep-"
+"foreign는 설정되고 외부 %s 지점에 연결됩니다\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -572,7 +577,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "%s/%s에 접근 할 수 없습니다: 그런 파일이나 디렉토리가 없습니다\n"
 
 #: ../alternatives.c:1142
 #, c-format
