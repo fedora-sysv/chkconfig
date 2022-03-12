@@ -17,8 +17,8 @@ msgstr ""
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
-"Language-Team: Czech <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/cs/>\n"
+"Language-Team: Czech <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -239,7 +239,7 @@ msgid "cannot determine current run level\n"
 msgstr "nemohu určit aktuální runlevel\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Nelze nastavit kontext SELinux pro %s: %s\n"
 
@@ -304,7 +304,7 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <jméno>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <jméno> <cesta>\n"
 
@@ -338,11 +338,12 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "běžné volby: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
+"běžné volby: --verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -456,12 +457,13 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "nemohu vytvořit linku %s -> %s: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"nelze vytvořit odkaz %s -> %s: %s existuje a nejedná se o symbolický odkaz\n"
+"nelze vytvořit odkaz %s -> %s: %s existuje a nejedná se o symbolický odkaz, "
+"nebo byl použit --keep-foreign odkazující mimo %s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -572,7 +574,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "Chyba přístupu k %s/%s: Žádný soubor, nebo adresář\n"
 
 #: ../alternatives.c:1142
 #, c-format
