@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
+"PO-Revision-Date: 2022-03-12 10:00+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/pl/>\n"
@@ -244,7 +244,7 @@ msgid "cannot determine current run level\n"
 msgstr "nie można ustalić bieżącego poziomu uruchamiania\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Nie można ustawić kontekstu SELinuksa dla %s: %s\n"
 
@@ -312,9 +312,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <nazwa>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <nazwa> <ścieżka>\n"
+msgstr "       alternatives --set <nazwa> <ścieżka/rodzina>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -347,12 +347,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"wspólne opcje: --verbose --test --help --usage --version --keep-missing\n"
+"wspólne opcje: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -466,13 +467,14 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "dowiązanie %s → %s się nie powiodło: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
 "dowiązanie %s → %s się nie powiodło: %s istnieje i nie jest dowiązaniem "
-"symbolicznym\n"
+"symbolicznym lub --keep-foreign zostało ustawione i dowiązanie wskazuje poza "
+"%s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -585,7 +587,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "nie można uzyskać dostępu do %s/%s: nie ma takiego pliku ani katalogu\n"
 
 #: ../alternatives.c:1142
 #, c-format
