@@ -5,13 +5,14 @@
 # Translators:
 # George Machitidze <giomac@gmail.com>, 2006-2007,2013
 # notting <notting@redhat.com>, 2011
+# Temuri Doghonadze <temuri.doghonadze@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-04-16 19:17+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ka/>\n"
 "Language: ka\n"
@@ -42,7 +43,7 @@ msgstr "გამოყენება:   %s [სახელი]\n"
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "გამოყენება:  %s <enable|disable|is-enabled> [სახელი] \n"
 
 #: ../chkconfig.c:52
 #, c-format
@@ -79,6 +80,11 @@ msgid ""
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"შენიშვნა: ეს ტექსტი მხოლოდ SysV-ის სერვისებს აჩვენებს და არ მოიცავს\n"
+"     systemd-ის სერვსებს. SysV-ის კონფიგურაცია შეიძლება \n"
+"     systemd-ის სერვისმა გადადაფაროს.\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -88,6 +94,12 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      თუ გნებავთ systemd-ის სერვისების სიის გამოტანა, გამოიყენეთ 'systemctl "
+"list-unit-files'.\n"
+"     თუ გნებავთ, ნახოთ, რომელი სერვისებია ჩართული მითითებულ სამიზნეში, "
+"გამოიყენეთ\n"
+"     'systemctl list-dependencies [სამიზნე]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -111,7 +123,7 @@ msgstr "შეცდომა %s სერვისის შესახებ 
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "ამ ოპერაციის ჩასატარებლად საკმარისი წვდომები არ გაგაჩნიათ.\n"
 
 #: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
 msgid "on"
@@ -134,12 +146,12 @@ msgstr "შეცდომა %s დირექტორიის გახს�
 #: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
+msgstr "გაფრთხილება: მოთხოვნის გადაგზავნა ბრძანებასთან 'systemctl %s %s'.\n"
 
 #: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "მოთხოვნის systemctl-სთან გადაგზავნის შეცდომა: %m\n"
 
 #: ../chkconfig.c:743
 #, c-format
@@ -155,6 +167,7 @@ msgstr "--type უნდა იყოს 'sysv' ან 'xinetd'\n"
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
+"მხოლოდ ერთერთი შეიძლება იყოს მითითებული: --list, --add, --del ან --override\n"
 
 #: ../chkconfig.c:873
 #, c-format
@@ -218,7 +231,7 @@ msgstr "%s/init.d-ის გახსნა შუძლებელია: %s\n
 #: ../leveldb.c:766 ../leveldb.c:774
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr ""
+msgstr "შაბლონის გამოყენება შეუძლებელია %s: %s\n"
 
 #: ../leveldb.c:820
 #, c-format
@@ -226,9 +239,9 @@ msgid "cannot determine current run level\n"
 msgstr "მიმდინარე გაშვების დონის დადგენა შეუძლებელია\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "შეცდომა %s დირექტორიის გახსნისას: %s\n"
+msgstr "%s-ის კონტექსტის დაყენება შეუძლებელია: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -248,6 +261,7 @@ msgid ""
 msgstr ""
 "შეიძლება თავისუფლად გავრცელდეს GNU Public License-ის პირობების და წესების "
 "მიხედვით.\n"
+"\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -262,12 +276,14 @@ msgstr "                    [--initscript <სერვისი>]\n"
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <ოჯახი>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <ბმა> <სახელი> <გეზი>]*\n"
+msgstr ""
+"                    [--slave <მეორადის_ბმული> <მეორადის_სახელი> "
+"<მეორადის_ბილიკი>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -290,31 +306,33 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <სახელი>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <სახელი> <გეზი>\n"
+msgstr "       alternatives --set <სახელი> <ბილიკი/family>\n"
 
 #: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
-msgstr ""
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <სახელი> <გეზი>\n"
+msgstr "       alternatives --remove-all <სახელი>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <სახელი> <გეზი>\n"
+msgstr ""
+"       alternatives --add-slave <სახელი> <ბილიკი> <მეორადი_ბმული> "
+"<მეორადი_სახელი> <მეორადი_ბილიკი>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <სახელი> <გეზი>\n"
+msgstr "       alternatives --remove-slave <სახელი> <ბილიკი> <მეორადი_სახელი>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -327,6 +345,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
+"ჩვეულებრივ გამოყენებული პარამეტრები: --verbose --test --help --usage --"
+"version --keep-missing --keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -356,88 +376,89 @@ msgstr "%s ცარიელია!\n"
 #: ../alternatives.c:322
 #, c-format
 msgid "bad mode on line 1 of %s\n"
-msgstr ""
+msgstr "არასწორი რეჟიმი %s-ის პირველ სტრიქონზე\n"
 
 #: ../alternatives.c:329
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr ""
+msgstr "არასწორი პირველადი ბმული %s-ში\n"
 
 #: ../alternatives.c:341
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr ""
+msgstr "მოულოდნელი ბილიკი %s %s-ში\n"
 
 #: ../alternatives.c:350
 #, c-format
 msgid "missing path for slave %s in %s\n"
-msgstr ""
+msgstr "მეორადისთვის %s აკლია ბილიკი %s-ში\n"
 
 #: ../alternatives.c:360
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr ""
+msgstr "ფაილის მოულოდნელი დასასრული: %s\n"
 
 #: ../alternatives.c:369
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr ""
+msgstr "ალტერნატივასთან ბილიკი %s-ში\n"
 
 #: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
 #: ../alternatives.c:426 ../alternatives.c:446
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr ""
+msgstr "მოულოდნელი ხაზი %s-ში: %s\n"
 
 #: ../alternatives.c:394
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "აკლია '@', ან family ცარიელია %s-ში\n"
 
 #: ../alternatives.c:407
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr ""
+msgstr "%s რიცხობრივი პრიორიტეტი უნდა იყოს\n"
 
 #: ../alternatives.c:425
 #, c-format
 msgid "slave path expected in %s\n"
-msgstr ""
+msgstr "%s-ში საჭირო მეორადი ბილიკი\n"
 
 #: ../alternatives.c:454
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr ""
+msgstr "ბმულის %s გახსნის შეცდომა: %s\n"
 
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
+"ბმული არ მიუთითებს alternative-ზე -- რეჟიმის ხელით მითითებულზე დაყენება\n"
 
 #: ../alternatives.c:475
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr ""
+msgstr "ბმული შეიცვალა -- რეჟიმი შეიცვლება ხელით მითითებულზე\n"
 
 #: ../alternatives.c:512 ../alternatives.c:519
 #, c-format
 msgid "would remove %s\n"
-msgstr ""
+msgstr "წაიშლება %s\n"
 
 #: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr ""
+msgstr "ბმულის წაშლის შეცდომა %s: %s\n"
 
 #: ../alternatives.c:541 ../alternatives.c:563
 #, c-format
 msgid "would link %s -> %s\n"
-msgstr ""
+msgstr "შეიქმნება ბმული %s -> %s\n"
 
 #: ../alternatives.c:550 ../alternatives.c:576
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr ""
+msgstr "%s -დან %s-მდე ბმულის შექმნის შეცდომა: %s\n"
 
 #: ../alternatives.c:559
 #, c-format
@@ -445,6 +466,8 @@ msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
+"%s -> %s ბმულის შექმნა: %s არსებობს და არ წარმოადგენს სიმბმას, ან --keep-"
+"foreign არის მითითებულიდა მიუთითებს %s-ს გარეთ\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -454,12 +477,12 @@ msgstr "%s უკვე არსებობს\n"
 #: ../alternatives.c:611
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr ""
+msgstr "შეცდომა %s-ის გახსნისას: %s\n"
 
 #: ../alternatives.c:644
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr ""
+msgstr "%s-ის %s-ით ჩანაცვლების შეცდომა: %s\n"
 
 #: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
 #: ../alternatives.c:697
@@ -470,23 +493,23 @@ msgstr "%s-ი გაშვება...\n"
 #: ../alternatives.c:770
 #, c-format
 msgid "link %s incorrect for slave %s (%s %s)\n"
-msgstr ""
+msgstr "ბმული %s არასწორია მეორადისთვის %s (%s%s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
 #: ../alternatives.c:1126
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr ""
+msgstr "%s არაა დაყენებული %s-ის ალტერნატივად\n"
 
 #: ../alternatives.c:862
 #, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr ""
+msgstr "%s არაა დაყეებული, როგორც %s-ის ალტერნატივა (%s)\n"
 
 #: ../alternatives.c:920
 #, c-format
 msgid "the primary link for %s must be %s\n"
-msgstr ""
+msgstr "%s-ის ძირითადი ბმული %s უნდა იყოს\n"
 
 #: ../alternatives.c:972
 #, c-format
@@ -501,22 +524,22 @@ msgstr "%s - მდგომარეობა ხელითაა მით�
 #: ../alternatives.c:976
 #, c-format
 msgid " link currently points to %s\n"
-msgstr ""
+msgstr " ბმული ამჟამად მიუთითებს %s-ზე\n"
 
 #: ../alternatives.c:981
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "ოჯახი %s "
 
 #: ../alternatives.c:982
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "პრიორიტეტი %d\n"
 
 #: ../alternatives.c:984
 #, c-format
 msgid " slave %s: %s\n"
-msgstr ""
+msgstr " მეორადი %s: %s\n"
 
 #: ../alternatives.c:989
 #, c-format
@@ -526,22 +549,23 @@ msgstr "მიმდინარე `საუკეთესო' ვერს�
 #: ../alternatives.c:1024
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr ""
+msgstr "პროგრამა %d, რომელიც მოგვაწოდებს '%s'-ს.\n"
 
 #: ../alternatives.c:1025
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr ""
+msgstr "არის %d პროგრამა, რომელიც მოგვაწოდებს '%s'-ს.\n"
 
 #: ../alternatives.c:1029
 #, c-format
 msgid "  Selection    Command\n"
-msgstr ""
+msgstr "  არჩეული     ბრძანება\n"
 
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
+"მიმდინარე მონიშნულის დასატოვებლად დააწექით Enter-ს[+], ან შეიყვანეთ ნომერი: "
 
 #: ../alternatives.c:1048
 #, c-format
@@ -555,32 +579,32 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "%s/%s-სთან წვდომის შეცდომა: არ არსებობს\n"
 
 #: ../alternatives.c:1142
 #, c-format
 msgid "(would remove %s\n"
-msgstr ""
+msgstr "(წაიშლება %s\n"
 
 #: ../alternatives.c:1144
 #, c-format
 msgid "failed to remove %s: %s\n"
-msgstr ""
+msgstr "%s-ის წაშლის შეცდომა: %s\n"
 
 #: ../alternatives.c:1312
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family არ შეიძლება შეიცავდეს სიმბოლოს '@'\n"
 
 #: ../alternatives.c:1374
 #, c-format
 msgid "altdir %s invalid\n"
-msgstr ""
+msgstr "altdir %s არასწორია\n"
 
 #: ../alternatives.c:1379
 #, c-format
 msgid "admindir %s invalid\n"
-msgstr ""
+msgstr "admindir %s არასწორია\n"
 
 #: ../alternatives.c:1389
 #, c-format
