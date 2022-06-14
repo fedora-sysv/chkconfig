@@ -7,13 +7,14 @@
 # Marek Laane <bald@smail.ee>, 2011
 # notting <notting@redhat.com>, 2011
 # mihkel <turakas@gmail.com>, 2012
+# H A <contact+fedora@hen.ee>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-06-12 21:18+0000\n"
+"Last-Translator: H A <contact+fedora@hen.ee>\n"
 "Language-Team: Estonian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/et/>\n"
 "Language: et\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.12.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -484,9 +485,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ei ole seadistatud kui %s alternatiiv\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s ei ole seadistatud kui %s alternatiiv\n"
+msgstr "%s ei ole seadistatud kui %s (%s) alternatiiv\n"
 
 #: ../alternatives.c:920
 #, c-format
