@@ -1,4 +1,4 @@
-# Fabio Tomat <f.t.public@gmail.com>, 2017. #zanata
+# Fabio Tomat <f.t.public@gmail.com>, 2017. #zanata, 2022.
 # Jan Macku <jamacku@redhat.com>, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Jan Macku <jamacku@redhat.com>\n"
+"PO-Revision-Date: 2022-06-14 12:22+0000\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fur/>\n"
 "Language: fur\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.12.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -237,7 +237,7 @@ msgid "cannot determine current run level\n"
 msgstr "impussibil determinâ il nivel di esecuzion atuâl\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impussibil stabilî il contest SELinux par %s: %s\n"
 
@@ -277,9 +277,11 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <famee>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
-msgstr "                    [--slave <colegament> <non> <percors>]*\n"
+msgstr ""
+"                    [--slave <colegament_sclâf> <non_sclâf> <percors_sclâf>]*"
+"\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -302,9 +304,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <non>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <non> <percors>\n"
+msgstr "       alternatives --set <non> <percors/famee>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -312,21 +314,23 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <non> <percors>\n"
+msgstr "       alternatives --remove-all <non>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
 "<slave_path>\n"
-msgstr "       alternatives --remove <non> <percors>\n"
+msgstr ""
+"       alternatives --add-slave <non> <percors> <colegament_sclâf> "
+"<non_sclâf> <percors_sclâf>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove <non> <percors>\n"
+msgstr "       alternatives --remove-slave <non> <percors> <non_sclâf>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -334,12 +338,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"opzions comuns: --verbose --test --help --usage --version --keep-missing\n"
+"opzions comuns: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -454,13 +459,13 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "no si è rivâts a colegâ %s -> %s: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"no si è rivâts a colegâ %s -> %s: %s al esist e nol è un colegament "
-"simbolic\n"
+"impussibil colegâ %s -> %s: %s al esist e, o nol è un colegament simbolic, o "
+"--keep-foreign al è stât stabilît e il colegament al ponte fûr di %s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -495,9 +500,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nol è stât configurât come une alternative par %s\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an slave alternative for %s (%s)\n"
-msgstr "%s nol è stât configurât come une alternative par %s\n"
+msgstr "%s nol è stât configurât come une alternative sclâf par %s (%s)\n"
 
 #: ../alternatives.c:920
 #, c-format
@@ -571,7 +576,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "impussibil acedi a %s/%s: nissun file o cartele dal gjenar\n"
 
 #: ../alternatives.c:1142
 #, c-format
