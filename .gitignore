@@ -4,4 +4,4 @@ alternatives
 chkconfig
 ntsysv
 po/*.mo
-
+.vscode/
