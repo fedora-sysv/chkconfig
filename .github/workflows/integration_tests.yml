@@ -1,24 +1,23 @@
-# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 name: Integration tests
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
   pull_request:
-    branches:
-      - master
-      - rhel*-branch
+    branches: [ master, rhel*-branch ]
   release:
-    types: [published, created]
+    types: [ published, created ]
 
 jobs:
   buildCheck:
     runs-on: ubuntu-20.04
+
     steps:
       - name: Repository checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
       - name: Install dependencies
         run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
+
       - name: Build & install
         run: make all && make install DESTDIR=/tmp/chkconfig
 
@@ -27,17 +26,24 @@ jobs:
     defaults:
       run:
         shell: bash
+
     needs: buildcheck
+
     steps:
       - name: Repository checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
       - name: Clone beakerlib repository
         run: git clone --depth=1 https://github.com/beakerlib/beakerlib.git
+
       - name: Build and install beakerlib
         run: cd beakerlib && sudo make && sudo make install && cd -
+
       - name: Install dependencies required by Makefile
         run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
+
       - name: Install dependencies required by test-alternatives.sh
         run: sudo apt install -y libxml2-dev libxslt-dev python-dev python3-lxml
+
       - name: Build && Test
         run: make check

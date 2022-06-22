@@ -1,13 +1,14 @@
-# Packit config
 # doc: https://packit.dev/docs/
 ---
 
 specfile_path: ./chkconfig.spec
 
 jobs:
-- job: copr_build
-  trigger: pull_request
-  metadata:
+  - &copr
+    job: copr_build
+    trigger: pull_request
     targets:
-    - fedora-development
+      - fedora-rawhide-x86_64
 
+  - <<: *copr
+    trigger: release
