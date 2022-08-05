@@ -9,6 +9,9 @@ TEST="Test Alternatives"
 # Package being tested
 PACKAGE="chkconfig"
 
+# We need to test both new "leader/follower" and legacy "master/slave" options
+FOLLOWER_OR_SLAVE="follower"
+
 function clean_dir {
     [ -n ${altdir} -a -d ${altdir} ] && rm ${altdir}/* &> /dev/null
     [ -n ${admindir} -a -d ${admindir} ] && rm ${admindir}/* &> /dev/null
@@ -25,18 +28,18 @@ function add_alternative {
     path="${testdir}/$1/main"
     prio=$2
     family=
-    slave=slave
+    follower=follower
     mkdir -p "${testdir}/$1"
     touch $path
 
     [ -n "$3" ] && family="--family $3"
 
-    [ -n "$4" ] && slave=${4}
+    [ -n "$4" ] && follower=${4}
 
-    spath="${testdir}/$1/$slave"
+    spath="${testdir}/$1/$follower"
     touch ${spath}
 
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --install ${link} ${name} ${path} ${prio} --slave ${slink} ${sname} ${spath} ${family}" 0 "NEW\tlink: $1\tPrio: $prio\tFamily: $3"
+    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --install ${link} ${name} ${path} ${prio} --${FOLLOWER_OR_SLAVE} ${slink} ${sname} ${spath} ${family}" 0 "NEW\tlink: $1\tPrio: $prio\tFamily: $3"
 }
 
 function remove_alternative {
@@ -53,25 +56,25 @@ function set_alternative {
     rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --set ${name} ${path}" 0 "SET\tlink: $1"
 }
 
-function add_slave {
+function add_follower {
     path="${testdir}/$1/main"
-    slave=slave
+    follower=follower
     touch $path
 
-    [ -n "$2" ] && slave=${2}
+    [ -n "$2" ] && follower=${2}
 
-    spath="${testdir}/$1/$slave"
+    spath="${testdir}/$1/$follower"
     touch ${spath}
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --add-slave ${name} ${path} ${slink} ${sname} ${spath}" 0 "NEW_SLAVE\tlink: $spath"
+    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --add-${FOLLOWER_OR_SLAVE} ${name} ${path} ${slink} ${sname} ${spath}" 0 "NEW_FOLLOWER\tlink: $spath"
 }
 
-function remove_slave {
+function remove_follower {
     path="${testdir}/$1/main"
-    slave=slave
+    follower=follower
     touch $path
 
-    [ -n "$2" ] && slave=${2}
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --remove-slave ${name} ${path} ${sname}" 0 "NEW_SLAVE\tlink: $spath"
+    [ -n "$2" ] && follower=${2}
+    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --remove-${FOLLOWER_OR_SLAVE} ${name} ${path} ${sname}" 0 "NEW_FOLLOWER\tlink: $spath"
 }
 
 function check_alternative {
@@ -79,7 +82,7 @@ function check_alternative {
     shift
     state=$1
     shift
-    slave=slave
+    follower=follower
 
     if [ "$state" = "manual" ] ; then
          best=${1}
@@ -89,9 +92,9 @@ function check_alternative {
     fi
 
     if [ "$1" = EMPTY ] ; then
-        slave=
+        follower=
     elif [ -n "$1" ] ; then
-        slave=$1
+        follower=$1
     fi
 
     cur_path=$(readlink ${altdir}/${name} | xargs dirname | xargs basename)
@@ -102,7 +105,7 @@ function check_alternative {
     rlAssertEquals "Mode:" "${state}" "${cur_state}"
     rlAssertEquals "Highest Priority:" "${best}" "${cur_best}"
     rlAssertEquals "Selected:" "${path}" "${cur_path}"
-    rlAssertEquals "Slave:" "${cur_spath}" "${slave}"
+    rlAssertEquals "Follower:" "${cur_spath}" "${follower}"
 }
 
 rlJournalStart
@@ -117,186 +120,190 @@ rlJournalStart
         rlRun 'link="${testdir}/main_link"'
 
         rlRun 'sname="STEST"'
-        rlRun 'slink="${testdir}/slave_link"'
+        rlRun 'slink="${testdir}/follower_link"'
     rlPhaseEnd
 
-    # Test phase: Testing touch, ls and rm commands
-    rlPhaseStart FAIL "Create Alternative"
-        add_alternative link_a 10 ""
-        check_alternative link_a auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Set Manual"
-        add_alternative link_a 10 ""
-        set_alternative link_a
-        check_alternative link_a manual link_a
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Auto Priority Ascendant"
-        add_alternative link_a 10 ""
-        add_alternative link_b  20
-        check_alternative link_b auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Auto Priority Descendant"
-        add_alternative link_a 20 ""
-        add_alternative link_b 10 ""
-        check_alternative link_a auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Manual Overrides Best"
-        add_alternative link_a 10 ""
-        set_alternative link_a
-        add_alternative link_b  20 ""
-        check_alternative link_a manual link_b
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Remove Manually Set"
-        add_alternative link_a 10 ""
-        set_alternative link_a
-        add_alternative link_b  20 ""
-        remove_alternative link_a
-        check_alternative link_b auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Slave"
-        add_alternative link_a 10 "" slave_a
-        add_alternative link_a 10 "" slave_b
-        check_alternative link_a auto slave_b
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Slave Manual"
-        add_alternative link_a 10 "" slave_a
-        set_alternative link_a
-        add_alternative link_a 10 "" slave_b
-        check_alternative link_a manual link_a slave_b
-        clean_dir
-    rlPhaseEnd
-        
-        ##########
-        
-    rlPhaseStart FAIL "Family Priority Ascendant"
-        add_alternative link_a 10 family_a
-        add_alternative link_b 20 family_a
-        check_alternative link_b auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Family Priority Descendant"
-        add_alternative link_a 20 family_a
-        add_alternative link_b 10 family_a
-        check_alternative link_a auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Families Priority Ascendant"
-        add_alternative link_a 10 family_a
-        add_alternative link_b 20 family_b
-        check_alternative link_b auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Families Priority Descendant"
-        add_alternative link_a 20 family_a
-        add_alternative link_b 10 family_b
-        check_alternative link_a auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Families Priority Ascendant Multiple"
-        add_alternative link_a 10 family_a
-        add_alternative link_b 20 family_a
-        add_alternative link_c 30 family_b
-        check_alternative link_c auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Families Remove Manually Set"
-        add_alternative link_a 10 family_a
-        set_alternative link_a
-        add_alternative link_c 30 family_b
-        remove_alternative link_a
-        check_alternative link_c auto
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Families Remove Link After Manually Set Multiple"
-        add_alternative link_a 10 family_a
-        set_alternative link_a
-        add_alternative link_b 20 family_a
-        add_alternative link_c 30 family_b
-        remove_alternative link_a
-        check_alternative link_b manual link_c
-        clean_dir
-    rlPhaseEnd
-        
-    rlPhaseStart FAIL "Family After Remove Manually Set"
-        add_alternative link_a 10 ""
-        set_alternative link_a
-        add_alternative link_b 20 ""
-        add_alternative link_c 30 family_a
-        remove_alternative link_a
-        check_alternative link_c auto
-        clean_dir
-    rlPhaseEnd
+    for n in "follower" "slave"  ; do
 
-        ##########
+    FOLLOWER_OR_SLAVE=$n
+        # Test phase: Testing touch, ls and rm commands
+        rlPhaseStart FAIL "Create Alternative"
+            add_alternative link_a 10 ""
+            check_alternative link_a auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Set Manual"
+            add_alternative link_a 10 ""
+            set_alternative link_a
+            check_alternative link_a manual link_a
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Auto Priority Ascendant"
+            add_alternative link_a 10 ""
+            add_alternative link_b  20
+            check_alternative link_b auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Auto Priority Descendant"
+            add_alternative link_a 20 ""
+            add_alternative link_b 10 ""
+            check_alternative link_a auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Manual Overrides Best"
+            add_alternative link_a 10 ""
+            set_alternative link_a
+            add_alternative link_b  20 ""
+            check_alternative link_a manual link_b
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Remove Manually Set"
+            add_alternative link_a 10 ""
+            set_alternative link_a
+            add_alternative link_b  20 ""
+            remove_alternative link_a
+            check_alternative link_b auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Follower"
+            add_alternative link_a 10 "" follower_a
+            add_alternative link_a 10 "" follower_b
+            check_alternative link_a auto follower_b
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Follower Manual"
+            add_alternative link_a 10 "" follower_a
+            set_alternative link_a
+            add_alternative link_a 10 "" follower_b
+            check_alternative link_a manual link_a follower_b
+            clean_dir
+        rlPhaseEnd
+            
+            ##########
+            
+        rlPhaseStart FAIL "Family Priority Ascendant"
+            add_alternative link_a 10 family_a
+            add_alternative link_b 20 family_a
+            check_alternative link_b auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Family Priority Descendant"
+            add_alternative link_a 20 family_a
+            add_alternative link_b 10 family_a
+            check_alternative link_a auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Families Priority Ascendant"
+            add_alternative link_a 10 family_a
+            add_alternative link_b 20 family_b
+            check_alternative link_b auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Families Priority Descendant"
+            add_alternative link_a 20 family_a
+            add_alternative link_b 10 family_b
+            check_alternative link_a auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Families Priority Ascendant Multiple"
+            add_alternative link_a 10 family_a
+            add_alternative link_b 20 family_a
+            add_alternative link_c 30 family_b
+            check_alternative link_c auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Families Remove Manually Set"
+            add_alternative link_a 10 family_a
+            set_alternative link_a
+            add_alternative link_c 30 family_b
+            remove_alternative link_a
+            check_alternative link_c auto
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Families Remove Link After Manually Set Multiple"
+            add_alternative link_a 10 family_a
+            set_alternative link_a
+            add_alternative link_b 20 family_a
+            add_alternative link_c 30 family_b
+            remove_alternative link_a
+            check_alternative link_b manual link_c
+            clean_dir
+        rlPhaseEnd
+            
+        rlPhaseStart FAIL "Family After Remove Manually Set"
+            add_alternative link_a 10 ""
+            set_alternative link_a
+            add_alternative link_b 20 ""
+            add_alternative link_c 30 family_a
+            remove_alternative link_a
+            check_alternative link_c auto
+            clean_dir
+        rlPhaseEnd
 
-    rlPhaseStart FAIL "Dynamic Slave Add"
-        add_alternative link_a 10 ""
-        add_slave link_a slave_a
-        check_alternative link_a auto slave_a
-        clean_dir
-    rlPhaseEnd
+            ##########
 
-    rlPhaseStart FAIL "Dynamic Slave Add Auto"
-        add_alternative link_a 10 ""
-        add_alternative link_b 20 ""
-        add_alternative link_c 5 ""
-        add_slave link_a slave_a
-        add_slave link_b slave_b
-        check_alternative link_b auto slave_b
-        clean_dir
-    rlPhaseEnd
+        rlPhaseStart FAIL "Dynamic Follower Add"
+            add_alternative link_a 10 ""
+            add_follower link_a follower_a
+            check_alternative link_a auto follower_a
+            clean_dir
+        rlPhaseEnd
 
-    rlPhaseStart FAIL "Dynamic Slave Add Manual"
-        add_alternative link_a 10 ""
-        add_alternative link_b 20 ""
-        add_alternative link_c 5 ""
-        add_slave link_a slave_a
-        add_slave link_b slave_b
-        set_alternative link_a
-        check_alternative link_a manual link_b slave_a
-        clean_dir
-    rlPhaseEnd
+        rlPhaseStart FAIL "Dynamic Follower Add Auto"
+            add_alternative link_a 10 ""
+            add_alternative link_b 20 ""
+            add_alternative link_c 5 ""
+            add_follower link_a follower_a
+            add_follower link_b follower_b
+            check_alternative link_b auto follower_b
+            clean_dir
+        rlPhaseEnd
 
-    rlPhaseStart FAIL "Dynamic Slave Add And Remove Master"
-        add_alternative link_a 10 ""
-        add_alternative link_b 20 ""
-        add_alternative link_c 5 ""
-        add_slave link_a slave_a
-        add_slave link_b slave_b
-        remove_alternative link_b
-        check_alternative link_a auto slave_a
-        clean_dir
-    rlPhaseEnd
+        rlPhaseStart FAIL "Dynamic Follower Add Manual"
+            add_alternative link_a 10 ""
+            add_alternative link_b 20 ""
+            add_alternative link_c 5 ""
+            add_follower link_a follower_a
+            add_follower link_b follower_b
+            set_alternative link_a
+            check_alternative link_a manual link_b follower_a
+            clean_dir
+        rlPhaseEnd
 
-    rlPhaseStart FAIL "Dynamic Slave Remove"
-        add_alternative link_a 10 ""
-        add_slave link_a slave_a
-        remove_slave link_a slave_a
-        check_alternative link_a auto EMPTY
-        clean_dir
-    rlPhaseEnd
+        rlPhaseStart FAIL "Dynamic Follower Add And Remove Leader"
+            add_alternative link_a 10 ""
+            add_alternative link_b 20 ""
+            add_alternative link_c 5 ""
+            add_follower link_a follower_a
+            add_follower link_b follower_b
+            remove_alternative link_b
+            check_alternative link_a auto follower_a
+            clean_dir
+        rlPhaseEnd
 
-    rlPhase
+        rlPhaseStart FAIL "Dynamic Follower Remove"
+            add_alternative link_a 10 ""
+            add_follower link_a follower_a
+            remove_follower link_a follower_a
+            check_alternative link_a auto EMPTY
+            clean_dir
+        rlPhaseEnd
+
+        rlPhase
+    done
 
     # Cleanup phase: Remove test directory
     rlPhaseStartCleanup
