@@ -47,10 +47,10 @@ struct linkSet {
 
 struct alternative {
     int priority;
-    struct linkSet master;
-    struct linkSet *slaves;
+    struct linkSet leader;
+    struct linkSet *followers;
     char *initscript;
-    int numSlaves;
+    int numFollowers;
     char *family;
 };
 
@@ -71,12 +71,12 @@ enum programModes {
     MODE_DISPLAY,
     MODE_CONFIG,
     MODE_SET,
-    MODE_SLAVE,
+    MODE_FOLLOWER,
     MODE_VERSION,
     MODE_USAGE,
     MODE_LIST,
-    MODE_ADD_SLAVE,
-    MODE_REMOVE_SLAVE
+    MODE_ADD_FOLLOWER,
+    MODE_REMOVE_FOLLOWER
 };
 
 static int usage(int rc) {
@@ -88,7 +88,7 @@ static int usage(int rc) {
         _("usage: alternatives --install <link> <name> <path> <priority>\n"));
     printf(_("                    [--initscript <service>]\n"));
     printf(_("                    [--family <family>]\n"));
-    printf(_("                    [--slave <slave_link> <slave_name> <slave_path>]*\n"));
+    printf(_("                    [--follower <follower_link> <follower_name> <follower_path>]*\n"));
     printf(_("       alternatives --remove <name> <path>\n"));
     printf(_("       alternatives --auto <name>\n"));
     printf(_("       alternatives --config <name>\n"));
@@ -96,8 +96,8 @@ static int usage(int rc) {
     printf(_("       alternatives --set <name> <path/family>\n"));
     printf(_("       alternatives --list\n"));
     printf(_("       alternatives --remove-all <name>\n"));
-    printf(_("       alternatives --add-slave <name> <path> <slave_link> <slave_name> <slave_path>\n"));
-    printf(_("       alternatives --remove-slave <name> <path> <slave_name>\n"));
+    printf(_("       alternatives --add-follower <name> <path> <follower_link> <follower_name> <follower_path>\n"));
+    printf(_("       alternatives --remove-follower <name> <path> <follower_name>\n"));
     printf(_("\n"));
     printf(_("common options: --verbose --test --help --usage --version "
              "--keep-missing --keep-foreign\n"));
@@ -197,7 +197,7 @@ static void setupDoubleArg(enum programModes *mode, const char ***nextArgPtr,
 
 static void setupTripleArg(enum programModes *mode, const char ***nextArgPtr,
                            enum programModes newMode, char **title,
-                           char **target, char **slaveTitle) {
+                           char **target, char **followerTitle) {
     const char **nextArg = *nextArgPtr;
 
     if (*mode != MODE_UNKNOWN)
@@ -217,7 +217,7 @@ static void setupTripleArg(enum programModes *mode, const char ***nextArgPtr,
 
     if (!*nextArg)
         usage(2);
-    *slaveTitle = strdup(*nextArg);
+    *followerTitle = strdup(*nextArg);
     *nextArgPtr = nextArg + 1;
 }
 
@@ -347,7 +347,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
 
         line = parseLine(&buf);
         if (!line || !*line) {
-            fprintf(stderr, _("missing path for slave %s in %s\n"), line, path);
+            fprintf(stderr, _("missing path for follower %s in %s\n"), line, path);
             return 1;
         }
 
@@ -371,15 +371,15 @@ static int readConfig(struct alternativeSet *set, const char *title,
             return 1;
         }
 
-        set->alts[set->numAlts].master.facility = strdup(normalize_path(groups[0].facility));
-        set->alts[set->numAlts].master.title = strdup(groups[0].title);
-        set->alts[set->numAlts].master.target = line;
-        set->alts[set->numAlts].numSlaves = numGroups - 1;
+        set->alts[set->numAlts].leader.facility = strdup(normalize_path(groups[0].facility));
+        set->alts[set->numAlts].leader.title = strdup(groups[0].title);
+        set->alts[set->numAlts].leader.target = line;
+        set->alts[set->numAlts].numFollowers = numGroups - 1;
         if (numGroups > 1)
-            set->alts[set->numAlts].slaves = malloc(
-                (numGroups - 1) * sizeof(*set->alts[set->numAlts].slaves));
+            set->alts[set->numAlts].followers = malloc(
+                (numGroups - 1) * sizeof(*set->alts[set->numAlts].followers));
         else
-            set->alts[set->numAlts].slaves = NULL;
+            set->alts[set->numAlts].followers = NULL;
 
         line = parseLine(&buf);
         set->alts[set->numAlts].priority = -1;
@@ -422,16 +422,16 @@ static int readConfig(struct alternativeSet *set, const char *title,
         for (i = 1; i < numGroups; i++) {
             line = parseLine(&buf);
             if (line && strlen(line) && *line != '/') {
-                fprintf(stderr, _("slave path expected in %s\n"), path);
+                fprintf(stderr, _("follower path expected in %s\n"), path);
                 fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
                 return 1;
             }
 
-            set->alts[set->numAlts].slaves[i - 1].title =
+            set->alts[set->numAlts].followers[i - 1].title =
                 strdup(groups[i].title);
-            set->alts[set->numAlts].slaves[i - 1].facility =
+            set->alts[set->numAlts].followers[i - 1].facility =
                 strdup(normalize_path(groups[i].facility));
-            set->alts[set->numAlts].slaves[i - 1].target =
+            set->alts[set->numAlts].followers[i - 1].target =
                 (line && strlen(line)) ? line : NULL;
         }
 
@@ -448,18 +448,18 @@ static int readConfig(struct alternativeSet *set, const char *title,
         }
     }
 
-    sprintf(path, "%s/%s", altDir, set->alts[0].master.title);
+    sprintf(path, "%s/%s", altDir, set->alts[0].leader.title);
 
     if (((i = readlink(path, linkBuf, sizeof(linkBuf) - 1)) < 0)) {
         fprintf(stderr, _("failed to read link %s: %s\n"),
-                set->alts[0].master.facility, strerror(errno));
+                set->alts[0].leader.facility, strerror(errno));
         return 2;
     }
 
     linkBuf[i] = '\0';
 
     for (i = 0; i < set->numAlts; i++)
-        if (!strcmp(linkBuf, set->alts[i].master.target))
+        if (!strcmp(linkBuf, set->alts[i].leader.target))
             break;
 
     if (i == set->numAlts) {
@@ -593,11 +593,11 @@ static int writeState(struct alternativeSet *set, const char *altDir,
     int rc = 0;
     struct alternative *alt;
 
-    path = alloca(strlen(stateDir) + strlen(set->alts[0].master.title) + 6);
-    sprintf(path, "%s/%s.new", stateDir, set->alts[0].master.title);
+    path = alloca(strlen(stateDir) + strlen(set->alts[0].leader.title) + 6);
+    sprintf(path, "%s/%s.new", stateDir, set->alts[0].leader.title);
 
-    path2 = alloca(strlen(stateDir) + strlen(set->alts[0].master.title) + 2);
-    sprintf(path2, "%s/%s", stateDir, set->alts[0].master.title);
+    path2 = alloca(strlen(stateDir) + strlen(set->alts[0].leader.title) + 2);
+    sprintf(path2, "%s/%s", stateDir, set->alts[0].leader.title);
 
     if (FL_TEST(flags))
         fd = dup(1);
@@ -615,15 +615,15 @@ static int writeState(struct alternativeSet *set, const char *altDir,
 
     f = fdopen(fd, "w");
     fprintf(f, "%s\n", set->mode == AUTO ? "auto" : "manual");
-    fprintf(f, "%s\n", set->alts[0].master.facility);
-    for (i = 0; i < set->alts[0].numSlaves; i++) {
-        fprintf(f, "%s\n", set->alts[0].slaves[i].title);
-        fprintf(f, "%s\n", set->alts[0].slaves[i].facility);
+    fprintf(f, "%s\n", set->alts[0].leader.facility);
+    for (i = 0; i < set->alts[0].numFollowers; i++) {
+        fprintf(f, "%s\n", set->alts[0].followers[i].title);
+        fprintf(f, "%s\n", set->alts[0].followers[i].facility);
     }
     fprintf(f, "\n");
 
     for (i = 0; i < set->numAlts; i++) {
-        fprintf(f, "%s\n", set->alts[i].master.target);
+        fprintf(f, "%s\n", set->alts[i].leader.target);
         if (set->alts[i].family)
             fprintf(f, "@%s@", set->alts[i].family);
         fprintf(f, "%d", set->alts[i].priority);
@@ -631,9 +631,9 @@ static int writeState(struct alternativeSet *set, const char *altDir,
             fprintf(f, " %s", set->alts[i].initscript);
         fprintf(f, "\n");
 
-        for (j = 0; j < set->alts[i].numSlaves; j++) {
-            if (set->alts[i].slaves[j].target)
-                fprintf(f, "%s", set->alts[i].slaves[j].target);
+        for (j = 0; j < set->alts[i].numFollowers; j++) {
+            if (set->alts[i].followers[j].target)
+                fprintf(f, "%s", set->alts[i].followers[j].target);
             fprintf(f, "\n");
         }
     }
@@ -653,12 +653,12 @@ static int writeState(struct alternativeSet *set, const char *altDir,
     alt = set->alts + (set->current > 0 ? set->current : 0);
 
     if (forceLinks || set->mode == AUTO) {
-        rc |= makeLinks(&alt->master, altDir, flags);
-        for (i = 0; i < alt->numSlaves; i++) {
-            if (alt->slaves[i].target)
-                rc |= makeLinks(alt->slaves + i, altDir, flags);
+        rc |= makeLinks(&alt->leader, altDir, flags);
+        for (i = 0; i < alt->numFollowers; i++) {
+            if (alt->followers[i].target)
+                rc |= makeLinks(alt->followers + i, altDir, flags);
             else
-                rc |= removeLinks(alt->slaves + i, altDir, flags);
+                rc |= removeLinks(alt->followers + i, altDir, flags);
         }
     }
 
@@ -713,79 +713,79 @@ static int linkCmp(const void *a, const void *b) {
 
 static void fillTemplateFrom(struct alternative source,
                              struct alternative *template) {
-    template->numSlaves = source.numSlaves;
-    template->slaves = malloc(source.numSlaves * sizeof(struct linkSet));
-    memcpy(template->slaves, source.slaves,
-           source.numSlaves * sizeof(struct linkSet));
+    template->numFollowers = source.numFollowers;
+    template->followers = malloc(source.numFollowers * sizeof(struct linkSet));
+    memcpy(template->followers, source.followers,
+           source.numFollowers * sizeof(struct linkSet));
 }
 
-static void addSlaveToAlternative(struct alternative *template,
-                                  struct linkSet slave) {
+static void addFollowerToAlternative(struct alternative *template,
+                                  struct linkSet follower) {
     int i;
-    for (i = 0; i < template->numSlaves; i++) {
-        if (streq(slave.facility, template->slaves[i].facility))
+    for (i = 0; i < template->numFollowers; i++) {
+        if (streq(follower.facility, template->followers[i].facility))
             break;
     }
-    if (i == template->numSlaves) {
-        template->slaves =
-            realloc(template->slaves,
-                    (template->numSlaves + 1) * sizeof(struct linkSet));
+    if (i == template->numFollowers) {
+        template->followers =
+            realloc(template->followers,
+                    (template->numFollowers + 1) * sizeof(struct linkSet));
 
-        memcpy(&template->slaves[i], &slave, sizeof(struct linkSet));
+        memcpy(&template->followers[i], &follower, sizeof(struct linkSet));
 
-        template->numSlaves++;
+        template->numFollowers++;
     }
 }
 
-static int matchSlaves(struct alternativeSet *set,
+static int matchFollowers(struct alternativeSet *set,
                        struct alternative template) {
     int i, j, k;
     struct linkSet *newLinks;
 
     /* Sort the list for file legibility */
-    qsort(template.slaves, template.numSlaves, sizeof(struct linkSet), linkCmp);
+    qsort(template.followers, template.numFollowers, sizeof(struct linkSet), linkCmp);
 
-    /* need to match the slaves up; newLinks will parallel the original
+    /* need to match the followers up; newLinks will parallel the original
        ordering */
     for (k = 0; k < set->numAlts; k++) {
-        newLinks = malloc(sizeof(struct linkSet) * template.numSlaves);
+        newLinks = malloc(sizeof(struct linkSet) * template.numFollowers);
         if (!newLinks)
             return 3;
 
         newLinks =
-            memset(newLinks, 0, sizeof(struct linkSet) * template.numSlaves);
+            memset(newLinks, 0, sizeof(struct linkSet) * template.numFollowers);
 
-        for (j = 0; j < template.numSlaves; j++) {
-            for (i = 0; i < set->alts[k].numSlaves; i++) {
-                if (!strcmp(set->alts[k].slaves[i].title,
-                            template.slaves[j].title))
+        for (j = 0; j < template.numFollowers; j++) {
+            for (i = 0; i < set->alts[k].numFollowers; i++) {
+                if (!strcmp(set->alts[k].followers[i].title,
+                            template.followers[j].title))
                     break;
             }
-            /* check if the slave in alternatives exist they have same name
+            /* check if the follower in alternatives exist they have same name
              * and link*/
-            if (i < set->alts[k].numSlaves) {
-                if (strcmp(set->alts[k].slaves[i].facility,
-                           template.slaves[j].facility)) {
+            if (i < set->alts[k].numFollowers) {
+                if (strcmp(set->alts[k].followers[i].facility,
+                           template.followers[j].facility)) {
                     fprintf(
-                        stderr, _("link %s incorrect for slave %s (%s %s)\n"),
-                        set->alts[k].slaves[i].facility,
-                        set->alts[k].slaves[i].title,
-                        template.slaves[j].facility, template.slaves[j].title);
+                        stderr, _("link %s incorrect for follower %s (%s %s)\n"),
+                        set->alts[k].followers[i].facility,
+                        set->alts[k].followers[i].title,
+                        template.followers[j].facility, template.followers[j].title);
                     return 2;
                 }
-                newLinks[j] = set->alts[k].slaves[i];
+                newLinks[j] = set->alts[k].followers[i];
             } else {
-                /* alternative did not have a record about a slave, let's add it
+                /* alternative did not have a record about a follower, let's add it
                  * with empty target */
-                newLinks[j].title = template.slaves[j].title;
-                newLinks[j].facility = template.slaves[j].facility;
+                newLinks[j].title = template.followers[j].title;
+                newLinks[j].facility = template.followers[j].facility;
                 newLinks[j].target = NULL;
             }
         }
         /* memory link */
-        free(set->alts[k].slaves);
-        set->alts[k].slaves = newLinks;
-        set->alts[k].numSlaves = template.numSlaves;
+        free(set->alts[k].followers);
+        set->alts[k].followers = newLinks;
+        set->alts[k].numFollowers = template.numFollowers;
     }
     return 0;
 }
@@ -795,12 +795,12 @@ static struct alternative *findAlternativeInSet(struct alternativeSet set,
     int i;
 
     for (i = 0; i < set.numAlts; i++)
-        if (streq(set.alts[i].master.target, target))
+        if (streq(set.alts[i].leader.target, target))
             return set.alts + i;
     return NULL;
 }
 
-static void removeUnusedSlavesFromTemplate(struct alternativeSet set,
+static void removeUnusedFollowersFromTemplate(struct alternativeSet set,
                                            struct alternative *template,
                                            const char *altDir, int flags) {
     int i, j, k = 0;
@@ -809,27 +809,27 @@ static void removeUnusedSlavesFromTemplate(struct alternativeSet set,
     if (set.numAlts == 0)
         return;
 
-    for (i = 0; i < template->numSlaves; i++) {
+    for (i = 0; i < template->numFollowers; i++) {
         found = 0;
         for (j = 0; j < set.numAlts && !found; j++)
-            for (k = 0; k < set.alts[j].numSlaves && !found; k++)
-                if (streq(template->slaves[i].title,
-                          set.alts[j].slaves[k].title) &&
-                    set.alts[j].slaves[k].target)
+            for (k = 0; k < set.alts[j].numFollowers && !found; k++)
+                if (streq(template->followers[i].title,
+                          set.alts[j].followers[k].title) &&
+                    set.alts[j].followers[k].target)
                     found = 1;
 
         if (!found) {
-            removeLinks(template->slaves + i, altDir, flags);
-            template->numSlaves--;
-            if (i != template->numSlaves) {
-                template->slaves[i] = template->slaves[template->numSlaves];
+            removeLinks(template->followers + i, altDir, flags);
+            template->numFollowers--;
+            if (i != template->numFollowers) {
+                template->followers[i] = template->followers[template->numFollowers];
                 i--;
             }
         }
     }
 }
 
-static int removeSlave(char *title, char *target, char *slaveTitle,
+static int removeFollower(char *title, char *target, char *followerTitle,
                        const char *altDir, const char *stateDir, int flags) {
     struct alternative template, *a = NULL;
     struct alternativeSet set;
@@ -846,12 +846,12 @@ static int removeSlave(char *title, char *target, char *slaveTitle,
         return 2;
     }
 
-    for (i = 0; i < a->numSlaves; i++) {
-        if (streq(a->slaves[i].title, slaveTitle)) {
-            a->slaves[i].target = NULL;
+    for (i = 0; i < a->numFollowers; i++) {
+        if (streq(a->followers[i].title, followerTitle)) {
+            a->followers[i].target = NULL;
             fillTemplateFrom(*a, &template);
-            removeUnusedSlavesFromTemplate(set, &template, altDir, flags);
-            matchSlaves(&set, template);
+            removeUnusedFollowersFromTemplate(set, &template, altDir, flags);
+            matchFollowers(&set, template);
             if (writeState(&set, altDir, stateDir, 1, flags))
                 return 2;
             return 0;
@@ -859,12 +859,12 @@ static int removeSlave(char *title, char *target, char *slaveTitle,
     }
     fprintf(
         stderr,
-        _("%s has not been configured as an slave alternative for %s (%s)\n"),
-        slaveTitle, title, target);
+        _("%s has not been configured as an follower alternative for %s (%s)\n"),
+        followerTitle, title, target);
     return 2;
 }
 
-static int addSlave(char *title, char *target, struct linkSet newSlave,
+static int addFollower(char *title, char *target, struct linkSet newFollower,
                     const char *altDir, const char *stateDir, int flags) {
     struct alternativeSet set;
     int i;
@@ -884,14 +884,14 @@ static int addSlave(char *title, char *target, struct linkSet newSlave,
     }
 
     fillTemplateFrom(*a, &template);
-    addSlaveToAlternative(&template, newSlave);
-    matchSlaves(&set, template);
+    addFollowerToAlternative(&template, newFollower);
+    matchFollowers(&set, template);
 
-    /* let's check if such slave already exists, in this case we will just
+    /* let's check if such follower already exists, in this case we will just
      * update the link */
-    for (i = 0; i < a->numSlaves; i++) {
-        if (streq(a->slaves[i].title, newSlave.title)) {
-            a->slaves[i].target = newSlave.target;
+    for (i = 0; i < a->numFollowers; i++) {
+        if (streq(a->followers[i].title, newFollower.title)) {
+            a->followers[i].target = newFollower.target;
             break;
         }
     }
@@ -911,29 +911,29 @@ static int addService(struct alternative newAlt, const char *altDir,
     int i, rc;
     int forceLinks = 0;
 
-    if ((rc = readConfig(&set, newAlt.master.title, altDir, stateDir, flags)) &&
+    if ((rc = readConfig(&set, newAlt.leader.title, altDir, stateDir, flags)) &&
         rc != 3 && rc != 2)
         return 2;
 
     if (set.numAlts) {
-        if (strcmp(newAlt.master.facility, set.alts[0].master.facility)) {
+        if (strcmp(newAlt.leader.facility, set.alts[0].leader.facility)) {
             fprintf(stderr, _("the primary link for %s must be %s\n"),
-                    set.alts[0].master.title, set.alts[0].master.facility);
+                    set.alts[0].leader.title, set.alts[0].leader.facility);
             return 2;
         }
 
-        /* Determine the maximal set of slave links. */
+        /* Determine the maximal set of follower links. */
         fillTemplateFrom(set.alts[0], &template);
-        for (i = 0; i < newAlt.numSlaves; i++)
-            addSlaveToAlternative(&template, newAlt.slaves[i]);
+        for (i = 0; i < newAlt.numFollowers; i++)
+            addFollowerToAlternative(&template, newAlt.followers[i]);
 
-        alt = findAlternativeInSet(set, newAlt.master.target);
+        alt = findAlternativeInSet(set, newAlt.leader.target);
 
         if (alt) {
             *alt = newAlt;
             forceLinks = 1;
-            /* Check for slaves no alternative provides */
-            removeUnusedSlavesFromTemplate(set, &template, altDir, flags);
+            /* Check for followers no alternative provides */
+            removeUnusedFollowersFromTemplate(set, &template, altDir, flags);
         } else {
             set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
             set.alts[set.numAlts] = newAlt;
@@ -942,7 +942,7 @@ static int addService(struct alternative newAlt, const char *altDir,
             set.numAlts++;
         }
 
-        if (matchSlaves(&set, template))
+        if (matchFollowers(&set, template))
             return 2;
     } else {
         set.alts = realloc(set.alts, sizeof(*set.alts) * (set.numAlts + 1));
@@ -963,7 +963,7 @@ static int displayService(char *title, const char *altDir, const char *stateDir,
     struct alternativeSet set;
 
     int alt;
-    int slave;
+    int follower;
 
     if (readConfig(&set, title, altDir, stateDir, flags))
         return 2;
@@ -976,18 +976,18 @@ static int displayService(char *title, const char *altDir, const char *stateDir,
     printf(_(" link currently points to %s\n"), set.currentLink);
 
     for (alt = 0; alt < set.numAlts; alt++) {
-        printf("%s - ", set.alts[alt].master.target);
+        printf("%s - ", set.alts[alt].leader.target);
         if (set.alts[alt].family)
             printf(_("family %s "), set.alts[alt].family);
         printf(_("priority %d\n"), set.alts[alt].priority);
-        for (slave = 0; slave < set.alts[alt].numSlaves; slave++) {
-            printf(_(" slave %s: %s\n"), set.alts[alt].slaves[slave].title,
-                   set.alts[alt].slaves[slave].target);
+        for (follower = 0; follower < set.alts[alt].numFollowers; follower++) {
+            printf(_(" follower %s: %s\n"), set.alts[alt].followers[follower].title,
+                   set.alts[alt].followers[follower].target);
         }
     }
 
     printf(_("Current `best' version is %s.\n"),
-           set.alts[set.best].master.target);
+           set.alts[set.best].leader.target);
 
     return 0;
 }
@@ -1024,7 +1024,7 @@ static int configService(char *title, const char *altDir, const char *stateDir,
         printf(ngettext(_("There is %d program that provides '%s'.\n"),
                         _("There are %d programs which provide '%s'.\n"),
                         set.numAlts),
-               set.numAlts, set.alts[0].master.title);
+               set.numAlts, set.alts[0].leader.title);
         printf("\n");
         printf(_("  Selection    Command\n"));
         printf("-----------------------------------------------\n");
@@ -1032,10 +1032,10 @@ static int configService(char *title, const char *altDir, const char *stateDir,
         for (i = 0; i < set.numAlts; i++) {
             if (set.alts[i].family)
                 asprintf(&nicer, "%s (%s)", set.alts[i].family,
-                         set.alts[i].master.target);
+                         set.alts[i].leader.target);
             printf("%c%c %-4d        %s\n", i == set.best ? '*' : ' ',
                    i == set.current ? '+' : ' ', i + 1,
-                   nicer ?: set.alts[i].master.target);
+                   nicer ?: set.alts[i].leader.target);
             free(nicer);
             nicer = NULL;
             ;
@@ -1078,7 +1078,7 @@ static int setService(const char *title, const char *target, const char *altDir,
     }
 
     for (i = 0; i < set.numAlts; i++)
-        if (!strcmp(set.alts[i].master.target, target)) {
+        if (!strcmp(set.alts[i].leader.target, target)) {
             found = i;
             break;
         }
@@ -1118,7 +1118,7 @@ static int removeService(const char *title, const char *target,
         return 2;
 
     for (i = 0; i < set.numAlts; i++)
-        if (!strcmp(set.alts[i].master.target, target))
+        if (!strcmp(set.alts[i].leader.target, target))
             break;
 
     if (i == set.numAlts) {
@@ -1131,10 +1131,10 @@ static int removeService(const char *title, const char *target,
     if (set.numAlts == 1) {
         char *path;
 
-        rc = removeLinks(&set.alts[0].master, altDir, flags);
+        rc = removeLinks(&set.alts[0].leader, altDir, flags);
 
-        for (i = 0; i < set.alts[0].numSlaves; i++)
-            rc |= removeLinks(set.alts[0].slaves + i, altDir, flags);
+        for (i = 0; i < set.alts[0].numFollowers; i++)
+            rc |= removeLinks(set.alts[0].followers + i, altDir, flags);
 
         path = alloca(strlen(stateDir) + strlen(title) + 2);
         sprintf(path, "%s/%s", stateDir, title);
@@ -1195,7 +1195,7 @@ static int removeAll(const char *title, const char *altDir,
         return 2;
 
     for (alt = 0; alt < set.numAlts; alt++) {
-        ret_val += removeService(title, set.alts[alt].master.target, altDir,
+        ret_val += removeService(title, set.alts[alt].leader.target, altDir,
                                  stateDir, flags);
     }
 
@@ -1242,7 +1242,7 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
-    char *title, *target, *slaveTitle;
+    char *title, *target, *followerTitle;
     enum programModes mode = MODE_UNKNOWN;
     struct alternative newAlt = {-1, {NULL, NULL, NULL}, NULL, NULL, 0, NULL};
     int flags = 0;
@@ -1261,12 +1261,12 @@ int main(int argc, const char **argv) {
     nextArg = argv + 1;
     while (*nextArg) {
         if (!strcmp(*nextArg, "--install")) {
-            if (mode != MODE_UNKNOWN && mode != MODE_SLAVE)
+            if (mode != MODE_UNKNOWN && mode != MODE_FOLLOWER)
                 usage(2);
             mode = MODE_INSTALL;
             nextArg++;
 
-            setupLinkSet(&newAlt.master, &nextArg);
+            setupLinkSet(&newAlt.leader, &nextArg);
 
             if (!*nextArg)
                 usage(2);
@@ -1274,22 +1274,22 @@ int main(int argc, const char **argv) {
             if (!end || *end)
                 usage(2);
             nextArg++;
-        } else if (!strcmp(*nextArg, "--add-slave")) {
-            setupDoubleArg(&mode, &nextArg, MODE_ADD_SLAVE, &title, &target);
+        } else if (!strcmp(*nextArg, "--add-follower") || !strcmp(*nextArg, "--add-slave")) {
+            setupDoubleArg(&mode, &nextArg, MODE_ADD_FOLLOWER, &title, &target);
             setupLinkSet(&newSet, &nextArg);
-        } else if (!strcmp(*nextArg, "--remove-slave")) {
-            setupTripleArg(&mode, &nextArg, MODE_REMOVE_SLAVE, &title, &target, &slaveTitle);
-        } else if (!strcmp(*nextArg, "--slave")) {
+        } else if (!strcmp(*nextArg, "--remove-follower") || !strcmp(*nextArg, "--remove-slave")) {
+            setupTripleArg(&mode, &nextArg, MODE_REMOVE_FOLLOWER, &title, &target, &followerTitle);
+        } else if (!strcmp(*nextArg, "--follower") || !strcmp(*nextArg, "--slave")) {
             if (mode != MODE_UNKNOWN && mode != MODE_INSTALL)
                 usage(2);
             if (mode == MODE_UNKNOWN)
-                mode = MODE_SLAVE;
+                mode = MODE_FOLLOWER;
             nextArg++;
 
-            newAlt.slaves = realloc(newAlt.slaves, sizeof(*newAlt.slaves) *
-                                                       (newAlt.numSlaves + 1));
-            setupLinkSet(newAlt.slaves + newAlt.numSlaves, &nextArg);
-            newAlt.numSlaves++;
+            newAlt.followers = realloc(newAlt.followers, sizeof(*newAlt.followers) *
+                                                       (newAlt.numFollowers + 1));
+            setupLinkSet(newAlt.followers + newAlt.numFollowers, &nextArg);
+            newAlt.numFollowers++;
         } else if (!strcmp(*nextArg, "--initscript")) {
             if (mode != MODE_UNKNOWN && mode != MODE_INSTALL)
                 usage(2);
@@ -1390,10 +1390,10 @@ int main(int argc, const char **argv) {
         exit(0);
     case MODE_INSTALL:
         return addService(newAlt, altDir, stateDir, flags);
-    case MODE_ADD_SLAVE:
-        return addSlave(title, target, newSet, altDir, stateDir, flags);
-    case MODE_REMOVE_SLAVE:
-        return removeSlave(title, target, slaveTitle, altDir, stateDir, flags);
+    case MODE_ADD_FOLLOWER:
+        return addFollower(title, target, newSet, altDir, stateDir, flags);
+    case MODE_REMOVE_FOLLOWER:
+        return removeFollower(title, target, followerTitle, altDir, stateDir, flags);
     case MODE_DISPLAY:
         return displayService(title, altDir, stateDir, flags);
     case MODE_AUTO:
@@ -1406,7 +1406,7 @@ int main(int argc, const char **argv) {
         return removeService(title, target, altDir, stateDir, flags);
     case MODE_REMOVE_ALL:
         return removeAll(title, altDir, stateDir, flags);
-    case MODE_SLAVE:
+    case MODE_FOLLOWER:
         usage(2);
     case MODE_LIST:
         return listServices(altDir, stateDir, flags);

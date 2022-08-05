@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2022-08-05 14:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,7 +256,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 
 #: ../alternatives.c:92
@@ -297,13 +299,13 @@ msgstr ""
 #: ../alternatives.c:99
 #, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 
 #: ../alternatives.c:100
 #, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr ""
 
 #: ../alternatives.c:101
@@ -360,7 +362,7 @@ msgstr ""
 
 #: ../alternatives.c:350
 #, c-format
-msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr ""
 
 #: ../alternatives.c:360
@@ -391,7 +393,7 @@ msgstr ""
 
 #: ../alternatives.c:425
 #, c-format
-msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr ""
 
 #: ../alternatives.c:454
@@ -459,7 +461,7 @@ msgstr ""
 
 #: ../alternatives.c:770
 #, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr ""
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -470,7 +472,7 @@ msgstr ""
 
 #: ../alternatives.c:862
 #, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr ""
 
 #: ../alternatives.c:920
@@ -505,7 +507,7 @@ msgstr ""
 
 #: ../alternatives.c:984
 #, c-format
-msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr ""
 
 #: ../alternatives.c:989

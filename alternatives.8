@@ -12,7 +12,7 @@ alternatives \- maintain symbolic links determining default commands
 .RI [ options ]
 .B --install
 .I link name path priority
-.RB [ --slave
+.RB [ --follower
 .I link name
 .IR path ]...
 .RB [ --initscript
@@ -56,13 +56,13 @@ alternatives \- maintain symbolic links determining default commands
 .PP
 .B alternatives
 .RI [ options ]
-.B --add-slave
-.I name path slink sname spath
+.B --add-follower
+.I name path follower_link follower_name follower_path
 .PP
 .B alternatives
 .RI [ options ]
-.B --remove-slave 
-.I name path sname
+.B --remove-follower 
+.I name path follower_name
 .SH DESCRIPTION
 .B alternatives
 creates, removes, maintains and displays information about the symbolic
@@ -134,12 +134,12 @@ should correspond to the executable referenced by
 .IR /usr/bin/vi .
 .B alternatives
 handles this by means of
-.I master
+.I leader
 and
-.I slave
-links; when the master is changed, any associated slaves are changed
+.I follower
+links; when the leader is changed, any associated followers are changed
 too.
-A master link and its associated slaves make up a
+A leader link and its associated followers make up a
 .I link
 .IR group .
 .PP
@@ -174,7 +174,7 @@ option,
 will list all of the choices for the link group
 of which given
 .I name
-is the master link.
+is the leader link.
 You will then be prompted for which of the choices to use
 for the link group. Once you make a change, the link group will no
 longer be in
@@ -218,13 +218,13 @@ state information.
 link group
 A set of related symlinks, intended to be updated as a group.
 .TP
-master link
+leader link
 The link in a link group which determines how the other links in the
 group are configured.
 .TP
-slave link
+follower link
 A link in a link group which is controlled by the setting of
-the master link.
+the leader link.
 .TP
 automatic mode
 When a link group is in automatic mode,
@@ -285,34 +285,34 @@ different from the default.
 .\" The names of the arguments should be identical with the ones
 .\" in SYNOPSIS section.
 .TP
-\fB--install\fR \fIlink name path priority\fR [\fB--slave\fR \fIslink sname spath\fR] [\fB--initscript\fR \fIservice\fR]...
+\fB--install\fR \fIlink name path priority\fR [\fB--follower\fR \fIfollower_link follower_name follower_path\fR] [\fB--initscript\fR \fIservice\fR]...
 Add a group of alternatives to the system.
 .I name
-is the generic name for the master link,
+is the generic name for the leader link,
 .I link
 is the name of its symlink,
 .I path
-is the alternative being introduced for the master link, and
+is the alternative being introduced for the leader link, and
 .I priority
 is the priority of the alternatives group. Higher priorities
 take precendence if no alternative is manually selected.
-.IR sname ,
-.I slink
+.IR follower_name ,
+.I follower_link
 and
-.I spath
+.I follower_path
 are the generic name, symlink name and alternative
-for a slave link, and
+for a follower link, and
 .I service
 is the name of any associated initscript for the alternative.
 .B NOTE:
 .B --initscript and --family
 are a Red Hat Linux specific options.
 Zero or more
-.B --slave
+.B --follower
 options, each followed by three arguments,
 may be specified.
 .IP
-If the master symlink specified exists already
+If the leader symlink specified exists already
 in the alternatives system's records,
 the information supplied will be added as a new
 set of alternatives for the group.
@@ -347,7 +347,7 @@ with same family and highest priority.
 is a Red Hat Linux specific option.
 .TP
 \fB--remove\fR \fIname path\fR
-Remove an alternative and all of its associated slave links.
+Remove an alternative and all of its associated follower links.
 .I name
 is a name in the alternatives directory, and
 .I path
@@ -360,12 +360,12 @@ is indeed linked to
 .I name
 will be updated to point to another appropriate alternative, or
 removed if there is no such alternative left.
-Associated slave links will be updated or removed, correspondingly.
+Associated follower links will be updated or removed, correspondingly.
 If the \fIlink\fR is not a symlink, no links are changed;
 only the information about the alternative is removed.
 .TP
 \fB--set\fR \fIname path/family\fR
-The symbolic link and slaves for link group \fIname\fR set to those
+The symbolic link and followers for link group \fIname\fR set to those
 configured for \fIpath\fR, and the link group is set to manual mode.
 If you use \fIfamily\fR, then the links and group is configured to the
 member of given family with highest priority (and moved to manual mode).
@@ -373,25 +373,25 @@ This option is not in the original Debian implementation.
 .TP
 \fB--config\fR \fIname\fR
 Present the user with a configuration menu for choosing
-the master link and slaves for link group \fIname\fR. Once
+the leader link and followers for link group \fIname\fR. Once
 chosen, the link group is set to manual mode.
 .TP
 \fB--auto\fR \fIname\fR
-Switch the master symlink
+Switch the leader symlink
 .I name
 to automatic mode.
-In the process, this symlink and its slaves are updated
+In the process, this symlink and its followers are updated
 to point to the highest priority installed alternatives.
 .TP
 \fB--display\fR \fIname\fR
 Display information about the link group of which
 .I name
-is the master link.
+is the leader link.
 Information displayed includes the group's mode
 (auto or manual),
 which alternative the symlink currently points to,
 what other alternatives are available
-(and their corresponding slave alternatives),
+(and their corresponding follower alternatives),
 and the highest priority alternative currently installed.
 .TP
 \fB--list \fR
@@ -400,12 +400,12 @@ Display information about all link groups.
 \fB--remove-all\fR \fIname\fR
 Remove the whole link group \fIname\fR. Use with caution.
 .TP
-\fB--add-slave\fR \fIname\fR \fIpath\fR \fIslink\fR \fIsname\fr \fIspath\fR
-Add a slave link to an alternative identified by \fIname\fR and \fIpath\fR. \fIsname\fR, \fIslink\fR and \fIspath\fR are
-the generic name, symlink name and alternative for the slave.
+\fB--add-follower\fR \fIname\fR \fIpath\fR \fIfollower_link\fR \fIfollower_name\fr \fIfollower_path\fR
+Add a follower link to an alternative identified by \fIname\fR and \fIpath\fR. \fIfollower_name\fR, \fIfollower_link\fR and \fIfollower_path\fR are
+the generic name, symlink name and alternative for the follower.
 .TP
-\fB--remove-slave\fR \fIname\fR \fIpath\fR \fIsname\fR
-Remove slave with generic name \fIsname\fR from alternative identified by \fIname\fR and \fIpath\fR.
+\fB--remove-follower\fR \fIname\fR \fIpath\fR \fIfollower_name\fR
+Remove follower with generic name \fIfollower_name\fR from alternative identified by \fIname\fR and \fIpath\fR.
 .SH FILES
 .TP
 .I /etc/alternatives/
