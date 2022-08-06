@@ -1,11 +1,16 @@
+---
+
 name: Integration tests
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master, rhel*-branch ]
+    branches: [ main, rhel*-branch ]
   release:
     types: [ published, created ]
+
+permissions:
+  contents: read
 
 jobs:
   buildCheck:
