@@ -501,10 +501,6 @@ static int isXinetdEnabled() {
 }
 
 static int serviceNameCmp(const void *a, const void *b) {
-    return strcmp(*(char **)a, *(char **)b);
-}
-
-static int xinetdNameCmp(const void *a, const void *b) {
     const struct service *first = a;
     const struct service *second = b;
 
@@ -579,7 +575,7 @@ static int listService(char *item, int type) {
                 numServices++;
         }
 
-        qsort(s, numServices, sizeof(*s), xinetdNameCmp);
+        qsort(s, numServices, sizeof(*s), serviceNameCmp);
         t = s;
         for (i = 0; i < numServices; i++, s++) {
             char *tmp = malloc(strlen(s->name) + 5);
