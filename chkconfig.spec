@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.20
+Version: 1.21
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -88,6 +88,48 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Wed Oct 05 2022 Jan Macku <jamacku@redhat.com> - 1.21-1
+- ci: Add CodeQL to replace LGTM
+- alternatives: replace master/slave with leader/follower
+- chkconfig: use correct cmp function
+- Bump redhat-plumbers-in-action/differential-shellcheck from 2 to 3
+- ci: Add Shell linter - Differential ShellCheck
+- ci: Use more inclusive terminology in workflows
+- ci: Update workflows, packit and dependabot
+- Translated using Weblate (Friulian)
+- Translated using Weblate (Swedish)
+- Translated using Weblate (Estonian)
+- Translated using Weblate (Georgian)
+- Translated using Weblate (Polish)
+- Translated using Weblate (Korean)
+- Translated using Weblate (Czech)
+- Translations update from Fedora Weblate (#77)
+- Translations update from Fedora Weblate (#75)
+- Translations update from Fedora Weblate (#74)
+- Translations update from Fedora Weblate (#73)
+- Translated using Weblate (Ukrainian)
+- Update translation files
+- Family mentioned for --set in both man and help
+- Translated using Weblate (French)
+- build-sys: Ensure `systemd-sysv-install` symlink does not have `//`
+- Translated using Weblate (German)
+- Add LGTM badges to README
+- Merge remote-tracking branch 'weblate/master'
+- Translated using Weblate (Indonesian)
+- Translated using Weblate (Finnish)
+- Translated using Weblate (Korean)
+- Translated using Weblate (Ukrainian)
+- Translated using Weblate (Turkish)
+- Translated using Weblate (Polish)
+- Translated using Weblate (Norwegian Nynorsk)
+- Update translation files
+- Translated using Weblate (Finnish)
+- Translated using Weblate (Czech)
+- Translated using Weblate (Swedish)
+- Translated using Weblate (Italian)
+- Translated using Weblate (Spanish)
+- Translated using Weblate (Chinese (Simplified))
+
 * Wed Jul 28 2021 Jan Macku <jamacku@redhat.com> - 1.20-1
 - spec: Replace not working awk command with sed (#62)
 
