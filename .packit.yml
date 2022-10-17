@@ -24,9 +24,6 @@ jobs:
     owner: "@chkconfig" # copr repo namespace
     project: chkconfig  # copr repo name so you can consume the builds
 
-  - <<: *copr
-    trigger: release
-
   - job: propose_downstream
     trigger: release
     dist_git_branches:
