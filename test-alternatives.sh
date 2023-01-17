@@ -13,13 +13,17 @@ PACKAGE="chkconfig"
 FOLLOWER_OR_SLAVE="follower"
 
 function clean_dir {
-    [ -n ${altdir} -a -d ${altdir} ] && rm ${altdir}/* &> /dev/null
-    [ -n ${admindir} -a -d ${admindir} ] && rm ${admindir}/* &> /dev/null
+    [ -n "${altdir}" ] && [ -d "${altdir}" ] && rm ${altdir}/* &> /dev/null
+    [ -n "${admindir}" ] && [ -d "${admindir}" ] && rm ${admindir}/* &> /dev/null
 
-    if [ -n ${testdir} -a -d ${testdir} ] ; then
-        for i in ${testdir}/* ; do
-            [ -f ${i} -o -L ${i} ] &&  rm ${i}
-            [ -d ${i} ] && ( rm ${i}/* ; rmdir ${i} )
+    if [ -n "${testdir}" ] && [ -d "${testdir}" ] ; then
+        for i in "${testdir}"/* ; do
+            if [ -d "${i}" ] ; then
+                rm "${i}"/*
+                rmdir "${i}"
+            else
+                rm "${i}"
+            fi
         done
     fi
 }
