@@ -10,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  lint:
+    runs-on: ubuntu-22.04
 
     permissions:
       security-events: write
