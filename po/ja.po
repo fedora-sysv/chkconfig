@@ -13,13 +13,15 @@
 # Hajime Taira <htaira@fedoraproject.org>, 2016. #zanata
 # Noriko Mizumoto <noriko.mizumoto@gmail.com>, 2016. #zanata
 # Casey Jones <nahareport@live.com>, 2018. #zanata
+# middlingphys <middlingphys@users.noreply.translate.fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-01-18 03:20+0000\n"
+"Last-Translator: middlingphys <middlingphys@users.noreply.translate."
+"fedoraproject.org>\n"
 "Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ja/>\n"
 "Language: ja\n"
@@ -27,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.15\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -90,6 +92,7 @@ msgstr ""
 "注記: この出力に含まれるのは SysV サービスのみです。ネイティブな \n"
 "      systemd サービスは含まれません。SysV の設定データはネイティブな\n"
 "        systemd 設定で上書きされる場合があります。\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -243,9 +246,9 @@ msgid "cannot determine current run level\n"
 msgstr "現在のランレベルを識別できません。\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "%s のためのSELinux コンテキストを設定できません: %s\n"
+msgstr "%s のSELinux コンテキストを設定できません: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -274,14 +277,12 @@ msgstr "使用法: alternatives --install <リンク> <名前> <パス> <優先�
 #: ../alternatives.c:89
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr ""
-"                    [--initscript <サービス>]\n"
-"\n"
+msgstr "                    [--initscript <サービス>]\n"
 
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr "                    [--family <family>]\n"
+msgstr "                    [--family <ファミリー>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
@@ -309,9 +310,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <名前>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <名前> <パス>\n"
+msgstr "       alternatives --set <名前> <パス/ファミリー>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -319,9 +320,9 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <名前> <パス>\n"
+msgstr "       alternatives --remove-all <名前>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
@@ -341,12 +342,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "一般的なオプション: --verbose --test --help --usage --version --keep-"
-"missing\n"
+msgstr ""
+"一般的なオプション: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -460,12 +462,14 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "%s から %s へのリンク失敗: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "シンボリックリンク %s -> %s の作成に失敗しました。 %s "
-"がすでに存在しており、シンボリックリンクファイルではありません。\n"
+msgstr ""
+"シンボリックリンク %s -> %s の作成に失敗しました。 %s "
+"がすでに存在しており、シンボリックリンクファイルではないか、--keep-foreign "
+"が指定されていてかつリンクが %s の外を指しています。\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -475,7 +479,7 @@ msgstr "%s は既に存在します。\n"
 #: ../alternatives.c:611
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "%s の作成に失敗です: %s\n"
+msgstr "%s の作成に失敗しました: %s\n"
 
 #: ../alternatives.c:644
 #, c-format
@@ -522,7 +526,7 @@ msgstr "%s - ステータスは手動です。\n"
 #: ../alternatives.c:976
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "リンクは現在 %s を指しています。\n"
+msgstr " リンクは現在 %s を指しています。\n"
 
 #: ../alternatives.c:981
 #, c-format
@@ -547,12 +551,12 @@ msgstr "現在の「最適」バージョンは %s です。\n"
 #: ../alternatives.c:1024
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "%d プログラムがあり '%s' を提供します。\n"
+msgstr "%d 個の '%s' を提供するプログラムがあります。\n"
 
 #: ../alternatives.c:1025
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d プログラムがあり '%s' を提供します。\n"
+msgstr "%d 個の '%s' を提供するプログラムがあります。\n"
 
 #: ../alternatives.c:1029
 #, c-format
@@ -562,7 +566,7 @@ msgstr "  選択       コマンド\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "Enter を押して現在の選択 [+] を保持するか、選択番号を入力します:"
+msgstr "Enter を押して現在の選択 [+] を保持するか、選択番号を入力します: "
 
 #: ../alternatives.c:1048
 #, c-format
@@ -576,7 +580,8 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "%s/%s にアクセスできません: "
+"そのようなファイルまたはディレクトリはありません\n"
 
 #: ../alternatives.c:1142
 #, c-format
