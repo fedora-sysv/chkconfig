@@ -5,13 +5,14 @@
 # Translators:
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2007
 # notting <notting@redhat.com>, 2011
+# Andi Chandler <andi@gowling.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-02-20 12:20+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/en_GB/>\n"
 "Language: en_GB\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -36,12 +37,12 @@ msgstr ""
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr ""
+msgstr "usage:   %s [name]\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "usage:   %s <enable|disable|is-enabled> [name] \n"
 
 #: ../chkconfig.c:52
 #, c-format
@@ -78,6 +79,12 @@ msgid ""
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
+"      systemd configuration.\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -87,6 +94,10 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+"      To see services enabled on particular target use\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -133,12 +144,12 @@ msgstr "failed to open directory %s: %s\n"
 #: ../chkconfig.c:681
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
+msgstr "Note: Forwarding request to 'systemctl %s %s'.\n"
 
 #: ../chkconfig.c:687
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "Failed to forward service request to systemctl: %m\n"
 
 #: ../chkconfig.c:743
 #, c-format
@@ -225,9 +236,9 @@ msgid "cannot determine current run level\n"
 msgstr "cannot determine current run level\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "failed to open directory %s: %s\n"
+msgstr "Unable to set SELinux context for %s: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -261,7 +272,7 @@ msgstr "                    [--initscript <service>]\n"
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
@@ -289,19 +300,19 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <name> <path/family>\n"
 
 #: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
-msgstr ""
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-all <name>\n"
 
 #: ../alternatives.c:99
 #, fuzzy, c-format
@@ -326,6 +337,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
+"common options: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -391,7 +404,7 @@ msgstr "unexpected line in %s: %s\n"
 #: ../alternatives.c:394
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "closing '@' missing or the family is empty in %s\n"
 
 #: ../alternatives.c:407
 #, c-format
@@ -444,6 +457,8 @@ msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
+"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
+"foreign was set and link points outside %s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -505,12 +520,12 @@ msgstr " link currently points to %s\n"
 #: ../alternatives.c:981
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "family %s "
 
 #: ../alternatives.c:982
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "priority %d\n"
 
 #: ../alternatives.c:984
 #, c-format
@@ -554,7 +569,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "cannot access %s/%s: No such file or directory\n"
 
 #: ../alternatives.c:1142
 #, c-format
@@ -569,7 +584,7 @@ msgstr "failed to remove %s: %s\n"
 #: ../alternatives.c:1312
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family can't contain the symbol '@'\n"
 
 #: ../alternatives.c:1374
 #, c-format
