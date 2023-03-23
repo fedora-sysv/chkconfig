@@ -7,6 +7,7 @@ specfile_path: chkconfig.spec
 files_to_sync:
   - chkconfig.spec
   - .packit.yaml
+  - changelog
 
 upstream_package_name: chkconfig
 downstream_package_name: chkconfig
