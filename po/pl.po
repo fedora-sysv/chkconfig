@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-12 10:00+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/pl/>\n"
+"Language-Team: Polish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,51 +129,51 @@ msgstr "błąd podczas odczytywania informacji o usłudze %s: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Brak wystarczających uprawnień, aby wykonać to działanie.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "włączone"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "wyłączone"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "usługi oparte na xinetd:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "otwarcie katalogu %s się nie powiodło: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Uwaga: przekazywanie żądania do „systemctl %s %s”.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Przekazanie żądania usługi do systemctl się nie powiodło: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s w wersji %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type musi wynosić „sysv” lub „xinetd”\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "tylko jedna z opcji --list, --add, --del lub --override może zostać podana\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -285,8 +285,12 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <rodzina>]\n"
 
 #: ../alternatives.c:91
-#, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, fuzzy, c-format
+#| msgid ""
+#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 "                    [--slave <dowiązanie_podrzędne> <nazwa_podrzędna> "
 "<ścieżka_podrzędna>]*\n"
@@ -327,17 +331,21 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <nazwa>\n"
 
 #: ../alternatives.c:99
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+#| "<slave_path>\n"
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 "       alternatives --add-slave <nazwa> <ścieżka> <dowiązanie_podrzędne> "
 "<nazwa_podrzędna> <ścieżka_podrzędna>\n"
 
 #: ../alternatives.c:100
-#, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, fuzzy, c-format
+#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr ""
 "       alternatives --remove-slave <nazwa> <ścieżka> <nazwa_podrzędna>\n"
 
@@ -352,8 +360,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"wspólne opcje: --verbose --test --help --usage --version --keep-missing "
-"--keep-foreign\n"
+"wspólne opcje: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -396,8 +404,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "ścieżka %s jest nieoczekiwana w %s\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "brak ścieżki dla podrzędnego %s w %s\n"
 
 #: ../alternatives.c:360
@@ -427,8 +436,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "priorytet liczbowy jest oczekiwany w %s\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "ścieżka podrzędna jest oczekiwana w %s\n"
 
 #: ../alternatives.c:454
@@ -498,8 +508,9 @@ msgid "running %s\n"
 msgstr "wykonywanie %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "niepoprawne dowiązanie %s dla podrzędnego %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -509,8 +520,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nie został skonfigurowany jako alternatywa dla %s\n"
 
 #: ../alternatives.c:862
-#, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s nie został skonfigurowany jako podrzędna alternatywa dla %s (%s)\n"
 
 #: ../alternatives.c:920
@@ -544,8 +556,9 @@ msgid "priority %d\n"
 msgstr "priorytet %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " podrzędne %s: %s\n"
 
 #: ../alternatives.c:989
@@ -587,7 +600,8 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr "nie można uzyskać dostępu do %s/%s: nie ma takiego pliku ani katalogu\n"
+msgstr ""
+"nie można uzyskać dostępu do %s/%s: nie ma takiego pliku ani katalogu\n"
 
 #: ../alternatives.c:1142
 #, c-format

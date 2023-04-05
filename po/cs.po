@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <https://translate.fedoraproject.org/projects/fedora-"
@@ -125,51 +125,51 @@ msgstr "chyba při čtení informací o službě %s: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Nemáte dostatečná oprávnění k provedení této operace.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "on"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "off"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "služby založené na xinetd:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "nemohu otevřít adresář %s: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Pozn.: Předávání požadavku 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Předání požadavku systemctl službou %m selhalo.\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s verze %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type musí být 'sysv' nebo 'xinetd'\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "může být zadán pouze jeden z přepínačů --list, --add, --del nebo --override\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "při dotazu může být zadán pouze jeden runlevel\n"
@@ -278,8 +278,12 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--rodina <family>]\n"
 
 #: ../alternatives.c:91
-#, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, fuzzy, c-format
+#| msgid ""
+#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 "                    [--slave <slave_linka> <slave_jméno> <slave_cesta>]*\n"
 
@@ -319,17 +323,21 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <jméno>\n"
 
 #: ../alternatives.c:99
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+#| "<slave_path>\n"
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 "       alternatives --add-slave <jméno> <cesta> <slave_linka> <slave_jméno> "
 "<slave_cesta>\n"
 
 #: ../alternatives.c:100
-#, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, fuzzy, c-format
+#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove-slave <jméno> <cesta> <slave_jméno>\n"
 
 #: ../alternatives.c:101
@@ -386,8 +394,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "neočekávaná cesta %s v %s\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "chybí cesta pro slave %s v %s\n"
 
 #: ../alternatives.c:360
@@ -417,8 +426,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "číselná priorita očekávána v %s\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "cesta k podřízenému očekávána v %s\n"
 
 #: ../alternatives.c:454
@@ -487,8 +497,9 @@ msgid "running %s\n"
 msgstr "spouštím %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "linka %s nesprávný pro podřízeného %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -498,8 +509,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nebyl nastaven jako alternativa pro %s\n"
 
 #: ../alternatives.c:862
-#, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s nebyl nastaven jako slave alternativa pro %s (%s)\n"
 
 #: ../alternatives.c:920
@@ -533,8 +545,9 @@ msgid "priority %d\n"
 msgstr "priorita %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " podřízený %s: %s\n"
 
 #: ../alternatives.c:989

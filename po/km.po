@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Khmer (Central) <https://translate.fedoraproject.org/projects/"
@@ -73,9 +73,9 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម "
-"របស់សេវា systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV "
-"ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ systemd ។\n"
+"សម្គាល់: នេះគឺជាការបង្ហាញសេវា SysV តែប៉ុនោះហើយវាមិនបានរួមបញ្ចូលនូវធាតុដើម របស់សេវា "
+"systemd ទេ ។ ការកំណត់ទិន្នន័យ SysV ប្រហែលជាបដិសេធដោយការកំណត់រចនាសម្ព័ន្ធធាតុដើមរបស់ "
+"systemd ។\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -85,8 +85,7 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-"
-"files' ។\n"
+"      ប្រសិនបើអ្នកចង់កំណត់បញ្ជីសេវា systemd ប្រើប្រាស់ 'systemctl list-unit-files' ។\n"
 "      ដើម្បីមើលសេវាកម្មណាដែលបានបើកជាពិសេសគោលដៅប្រើប្រាស់\n"
 "      'systemctl list-dependencies [target]' ។\n"
 "\n"
@@ -97,8 +96,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run "
-"'chhkconfig -- add %s')\n"
+"សេវា %s គាំទ្រ chkconfig, ប៉ុន្ដែវាមិនយោងទៅតាមកម្រិតនៃការរត់ (run 'chhkconfig -- add "
+"%s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -115,50 +114,50 @@ msgstr "មានកំហុសក្នុងការអានព័ត៌ម
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "អ្នកមិនមានការរក្សាសិទ្ធគ្រប់គ្រាន់ក្នុងការបំពេញប្រតិបត្ដិការនេះ ។\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "បើក"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "បិទ"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd មូលដ្ឋានសេវាកម្ម:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "បរាជ័យក្នុងការបើក %s: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "សម្គាល់៖ ការបញ្ចូនសំណើរបន្ដទៅកាន់ 'systemctl %s %s' ។\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "បរាជ័យក្នុងការបញ្ជូនការស្នើរសុំទៅកាន់ systemctl: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--ការវាយត្រូវតែ 'sysv' or 'xinetd'\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "មានតែមួយប៉ុនោះ --list, --add, --del, ឬ --override ប្រហែលបានបញ្ចក់\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "មានតែកម្រិតរត់តែមួយប៉ុនោះដែលបានបញ្ចក់សម្រាប់ chkconfig query\n"
@@ -268,7 +267,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -309,13 +310,13 @@ msgstr "       ការជំនួស --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       ការជំនួស --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       ការជំនួស --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -371,8 +372,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "ផ្ទូវ %s មិនបានរំពឹងទុកក្នុង  %s \n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "បាត់ផ្លូវសម្រាប់កូនចៅ %s ក្នុង %s\n"
 
 #: ../alternatives.c:360
@@ -402,8 +404,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "អទិភាពចំនួនលេខរំពឹងថានៅក្នុង %s\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "ផ្លូវរបស់កូនចៅរំពឹងថានៅក្នុង %s\n"
 
 #: ../alternatives.c:454
@@ -446,9 +449,7 @@ msgstr "បរាជ័យក្នុងការភ្ជាប់ទៅកា
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr ""
-"បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា "
-"\n"
+msgstr "បរាជ័យក្នុងកភ្ជាប់ទៅកាន់តំណ %s -> %s: %s ដែលមានហើយវាមិនមែនជាតំណនិមិត្តសញ្ញា \n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -472,8 +473,9 @@ msgid "running %s\n"
 msgstr "កំពុងដំណើរការ %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "តំណ %s មិនត្រឹមត្រូវសម្រាប់កូនចៅ %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -484,7 +486,7 @@ msgstr "%s មិនបានកំណត់ជាការជំនួសសម
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s មិនបានកំណត់ជាការជំនួសសម្រាប់ %s\n"
 
 #: ../alternatives.c:920
@@ -518,8 +520,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr "កូនចៅ %s: %s\n"
 
 #: ../alternatives.c:989

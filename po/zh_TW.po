@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -107,8 +107,9 @@ msgstr ""
 msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
-msgstr "%s 服務支援 chkconfig，但未向任何執行層級註冊（請執行「chkconfig --add %s」）"
-"\n"
+msgstr ""
+"%s 服務支援 chkconfig，但未向任何執行層級註冊（請執行「chkconfig --add "
+"%s」）\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -125,50 +126,50 @@ msgstr "在 %s 服務上讀取訊息錯誤：%s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "您沒有足夠的權力進行這項操作。\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "開啟"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "關閉"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "以 xinetd 為主的服務：\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "無法開啟 %s 目錄：%s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "注意：正在轉送請求至「systemctl %s %s」。\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "無法轉送服務請求至 systemctl：%m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s 版本 %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 必須要是「sysv」或是「xinetd」\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "只能指定 --list, --add, --del, 或 --override 中的其中一個\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "只能對 chkconfig 查詢指定一種執行層級\n"
@@ -276,7 +277,9 @@ msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -317,13 +320,13 @@ msgstr "       alternatives --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -379,8 +382,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%2$s 中沒有預期 %1$s 路徑\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "遺失 %2$s 中的從屬 %1$s 路徑\n"
 
 #: ../alternatives.c:360
@@ -410,8 +414,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s 中預期有優先度數字\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "%s 中預期有從屬路徑\n"
 
 #: ../alternatives.c:454
@@ -478,8 +483,9 @@ msgid "running %s\n"
 msgstr "執行中 %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "%s 連結在從屬 %s 上是錯誤的 (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -490,7 +496,7 @@ msgstr "%s 尚未被設定為 %s 的替代選項\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s 尚未被設定為 %s 的替代選項\n"
 
 #: ../alternatives.c:920
@@ -524,8 +530,9 @@ msgid "priority %d\n"
 msgstr "優先度 %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " 從屬 %s：%s\n"
 
 #: ../alternatives.c:989

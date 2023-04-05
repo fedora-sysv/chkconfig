@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
@@ -36,8 +36,8 @@ msgstr "%s %s verzió – Copyright (C) 1997-2000 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 msgstr ""
-"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint."
-"\n"
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -131,50 +131,50 @@ msgstr "hiba történt a(z) %s szolgáltatás adatainak olvasásakor: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Nincs elég jogosultság a művelet elvégzéséhez.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "be"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "ki"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-alapú szolgáltatások:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "a(z) %s könyvtár megnyitása sikertelen: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Megjegyzés: Kérés továbbítása: „systemctl %s %s”.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Nem sikerült a szolgáltatási kérés továbbítása a systemctl felé: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s %s verzió\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "a --type csak „sysv” vagy „xinetd” lehet\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "a --list, --add, --del és --override közül csak egyet lehet megadni\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "csak egy futási szintet lehet megadni egy chkconfig lekérdezésben\n"
@@ -264,8 +264,8 @@ msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
 msgstr ""
-"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei szerint."
-"\n"
+"Ez a szoftver szabadon terjeszthető a GNU Public License feltételei "
+"szerint.\n"
 "\n"
 
 #: ../alternatives.c:88
@@ -285,11 +285,15 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <család>]\n"
 
 #: ../alternatives.c:91
-#, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, fuzzy, c-format
+#| msgid ""
+#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
-"                    [--slave <szolga_link> <szolga_név> <szolga_elérési_út>]*"
-"\n"
+"                    [--slave <szolga_link> <szolga_név> "
+"<szolga_elérési_út>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -327,17 +331,21 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <név>\n"
 
 #: ../alternatives.c:99
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+#| "<slave_path>\n"
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 "       alternatives --add-slave <név> <elérési_út> <szolga_link> "
 "<szolga_név> <szolga_név>\n"
 
 #: ../alternatives.c:100
-#, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, fuzzy, c-format
+#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove-slave <név> <elérési_út> <szolga_név>\n"
 
 #: ../alternatives.c:101
@@ -394,8 +402,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "nem várt elérési út (%s) ebben: %s\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "hiányzó elérési út %s slave-hez ebben: %s\n"
 
 #: ../alternatives.c:360
@@ -425,8 +434,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "számszerű prioritás várt ebben: %s\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "a slave elérési útja várt ebben: %s\n"
 
 #: ../alternatives.c:454
@@ -494,8 +504,9 @@ msgid "running %s\n"
 msgstr "a(z) %s futtatása\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "a(z) %s link helytelen a(z) %s slave-nek (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -505,8 +516,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "a(z) %s nincs beállítva a(z) %s alternatívájának\n"
 
 #: ../alternatives.c:862
-#, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "a(z) %s nincs beállítva a(z) %s (%s) szolga alternatívájának\n"
 
 #: ../alternatives.c:920
@@ -540,8 +552,9 @@ msgid "priority %d\n"
 msgstr "prioritás: %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " %s slave: %s\n"
 
 #: ../alternatives.c:989

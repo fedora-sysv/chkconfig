@@ -13,11 +13,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Kannada <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/kn/>\n"
+"Language-Team: Kannada <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/kn/>\n"
 "Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,8 +97,8 @@ msgid ""
 "\n"
 msgstr ""
 " systemd ಸೇವೆಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಲು ನೀವು ಬಯಸಿದಲ್ಲಿ 'systemctl list-unit-files' "
-"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು "
-"ನೋಡಲು ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
+"ಅನ್ನು ಬಳಸಿ.⏎ ಒಂದು ನಿರ್ದಿಷ್ಟ ಗುರಿಯಲ್ಲಿ ಸೇವೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿರುವುದನ್ನು ನೋಡಲು "
+"ಇದನ್ನು ಬಳಸಿ⏎ 'systemctl list-dependencies [target]'.⏎ ⏎\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -106,8 +106,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ "
-"ಕ್ರಿಯಾಹಂತದಲ್ಲಿ ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
+"ಸೇವೆ %s chkconfig ಅನ್ನು ಅಶ್ರಯಿಸಿಕೊಳ್ಳಬಲ್ಲದು, ಆದರೆ ಇದನ್ನು ಯಾವುದೇ ಕ್ರಿಯಾಹಂತದಲ್ಲಿ "
+"ಬಳಸಲಾಗಿಲ್ಲ (ಪ್ರಯೋಗಿಸು 'chkconfig --ಸೇರಿಸು %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -124,52 +124,52 @@ msgstr "%s ಸೇವೆಯ ಬಗೆಗಿನ ಮಾಹಿತಿಯನ್ನು 
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ನಿಮ್ಮಲ್ಲಿ ಸವಲತ್ತುಗಳಿಲ್ಲ.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "ಆನ್"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "ಆಫ್"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ಆಧರಿತ ಸೇವೆಗಳು:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr " %s ಕಡತಕೋಶವನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "ಟಿಪ್ಪಣಿ: 'systemctl %s %s' ಗೆ ಮನವಿಯನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "ಸೇವೆಯ ಮನವಿಯನ್ನು systemctl ಗೆ ಕಳುಹಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ಆವೃತ್ತಿ %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type ಯು 'sysv' ಅಥವ 'xinetd' ಆಗಿರಲೆ ಬೇಕು\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "--list, --add, --del, ಅಥವ --override ಇವುಗಳಿಂದ ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ "
 "ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "ಒಂದು chkconfig ಮನವಿಗೆ ಕೇವಲ ಒಂದು ರನ್-ಲೆವೆಲನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
@@ -280,7 +280,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -321,13 +323,13 @@ msgstr "       alternatives --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -383,8 +385,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "ಪಥ %s ವು %s ನಲ್ಲಿ ಅನಿರೀಕ್ಷಿತವಾಗಿದೆ\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "ಪೂರಕ ಘಟಕ(slave) %s ಕ್ಕೆ %s ನಲ್ಲಿ ಪಥ ಕಾಣೆಯಾಗಿದೆ\n"
 
 #: ../alternatives.c:360
@@ -414,8 +417,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s ನಲ್ಲಿ ಸಂಖ್ಯಾ ಆದ್ಯತೆಯನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "%s ನಲ್ಲಿ ಪೂರಕ ಘಟಕ ಪಥವನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ\n"
 
 #: ../alternatives.c:454
@@ -484,8 +488,9 @@ msgid "running %s\n"
 msgstr "%s ಅನ್ನು ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "ಕೊಂಡಿ%s ಯು ಪೂರಕ ಘಟಕ %s ಕ್ಕೆ ಸರಿ ಇಲ್ಲ (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -496,7 +501,7 @@ msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂ�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂರಚಿತವಾಗಿಲ್ಲ\n"
 
 #: ../alternatives.c:920
@@ -530,8 +535,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " ಪೂರಕ ಘಟಕ %s: %s\n"
 
 #: ../alternatives.c:989
@@ -557,8 +563,7 @@ msgstr "  ಆಯ್ಕೆ    ಆಜ್ಞೆ\n"
 #: ../alternatives.c:1044
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr ""
-"ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
+msgstr "ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
 
 #: ../alternatives.c:1048
 #, c-format

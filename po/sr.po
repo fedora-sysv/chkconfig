@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/sr/>\n"
+"Language-Team: Serbian <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -109,8 +109,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"сервис %s подржава chkconfig, али није познат ни у једном нивоу извршавања ("
-"извршите „chkconfig --add %s“)\n"
+"сервис %s подржава chkconfig, али није познат ни у једном нивоу извршавања "
+"(извршите „chkconfig --add %s“)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -127,50 +127,50 @@ msgstr "грешка при читању података о сервису %s: 
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Немате довољне повластице за извршавање ове операције.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "укључено"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "искључено"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "сервиси засновани на xinetd-у:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "неуспешно отварање директоријума %s: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Напомена: Преусмеравам захтев на 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Неуспешно преусмеравање сервисног захтева на systemctl: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s верзија %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type мора бити „sysv“ или „xinetd“\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "можете навести само један од --list, --add, --del или --override\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "само један ниво извршавања сме бити наведен у chkconfig упиту\n"
@@ -280,7 +280,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                      [--slave <веза> <име> <путања>]*\n"
 
 #: ../alternatives.c:92
@@ -321,13 +323,13 @@ msgstr "          alternatives --remove <име> <путања>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "          alternatives --remove <име> <путања>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "          alternatives --remove <име> <путања>\n"
 
 #: ../alternatives.c:101
@@ -383,8 +385,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s путања неочекивана у %s\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "недостаје путања за подређеног %s у %s\n"
 
 #: ../alternatives.c:360
@@ -414,8 +417,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "бројчано првенство очекивано у %s\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "путања подређеног очекивана у %s\n"
 
 #: ../alternatives.c:454
@@ -482,8 +486,9 @@ msgid "running %s\n"
 msgstr "извршавам %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "%s веза нетачна за подређени %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -494,7 +499,7 @@ msgstr "%s није подешено као алтернатива за %s\n"
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s није подешено као алтернатива за %s\n"
 
 #: ../alternatives.c:920
@@ -528,8 +533,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " подређени %s: %s\n"
 
 #: ../alternatives.c:989
