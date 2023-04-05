@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Malayalam <https://translate.fedoraproject.org/projects/"
@@ -33,9 +33,7 @@ msgstr "%s വേര്‍ഷന്‍ %s - പകര്‍പ്പവകാശ
 #, c-format
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
-msgstr ""
-"ഗ്നു പബ്ലിക് ലൈസന്‍സ് കരാറിന്‍ പ്രകാരം ഇവ സൌജന്യമായി വിതരണം ചെയ്യാവുന്നതാണ്."
-"\n"
+msgstr "ഗ്നു പബ്ലിക് ലൈസന്‍സ് കരാറിന്‍ പ്രകാരം ഇവ സൌജന്യമായി വിതരണം ചെയ്യാവുന്നതാണ്.\n"
 
 #: ../chkconfig.c:47
 #, c-format
@@ -83,10 +81,8 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"കുറിപ്പു്: ഔട്ട്പുട്ട് SysV സര്‍വീസുകള്‍ മാത്രമേ കാണിയ്ക്കുന്നുള്ളൂ, നേറ്രീവ്"
-" \n"
-"      systemd സര്‍വീസുകള്‍ ലഭ്യമല്ല. നേറ്റീവ് systemd ക്രമീകരണം ഉപയോഗിച്ചു് "
-"ഒരു\n"
+"കുറിപ്പു്: ഔട്ട്പുട്ട് SysV സര്‍വീസുകള്‍ മാത്രമേ കാണിയ്ക്കുന്നുള്ളൂ, നേറ്രീവ് \n"
+"      systemd സര്‍വീസുകള്‍ ലഭ്യമല്ല. നേറ്റീവ് systemd ക്രമീകരണം ഉപയോഗിച്ചു് ഒരു\n"
 "      പക്ഷേ SysV ക്രമീകരണ ഡേറ്റാ തിരുത്തപ്പെടുന്നു.\n"
 "\n"
 
@@ -100,8 +96,7 @@ msgid ""
 msgstr ""
 "      systemd സര്‍വീസുകള്‍ ലഭ്യമാക്കുന്നതിനായി 'systemctl list-unit-files' "
 "ഉപയോഗിയ്ക്കുക.\n"
-"      ഒരു പ്രത്യേക ലക്ഷ്യത്തിനു് പ്രവര്‍ത്തന സജ്ജമാക്കിയ സര്‍വീസുകള്‍ "
-"കാണുന്നതിനു്\n"
+"      ഒരു പ്രത്യേക ലക്ഷ്യത്തിനു് പ്രവര്‍ത്തന സജ്ജമാക്കിയ സര്‍വീസുകള്‍ കാണുന്നതിനു്\n"
 "      'systemctl list-dependencies [target]' ഉപയോഗിയ്ക്കുക.\n"
 "\n"
 
@@ -111,8 +106,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"സര്‍വീസ് %s chkconfig പിന്തുണയ്ക്കുന്നു, പക്ഷേ റണ്‍ലവലുകളില്‍ "
-"സൂചിപ്പിക്കുന്നില്ല ('chkconfig --add %s' പ്രവര്‍ത്തിപ്പിക്കുക)\n"
+"സര്‍വീസ് %s chkconfig പിന്തുണയ്ക്കുന്നു, പക്ഷേ റണ്‍ലവലുകളില്‍ സൂചിപ്പിക്കുന്നില്ല ('chkconfig --"
+"add %s' പ്രവര്‍ത്തിപ്പിക്കുക)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -129,50 +124,50 @@ msgstr "%s സര്‍വീസില്‍ വിവരങ്ങള്‍ വ�
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "ഈ പ്രക്രിയയ്ക്കു് ആവശ്യമായ അനുമതികള്‍ നിങ്ങള്‍ക്കില്ല.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "ഓണ്‍ ചെയ്യുക"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "ഓഫ് ചെയ്യുക"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-യുടെ അടിസ്ഥാനത്തിലുളള സര്‍വീസുകള്‍:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s ഡയറക്ടറി തുറക്കുന്നതില്‍ പരാജയം: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "കുറിപ്പു്: 'systemctl %s %s'-ലേക്കു് ആവശ്യം അയയ്ക്കുന്നു.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "systemctl-ലേക്കു് സേവനത്തിനുള്ള ആവശ്യം അയയ്ക്കുന്നതില്‍ പരാജയം: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ലക്കം%s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type - 'sysv' അല്ലെങ്കില്‍ 'xinetd' ആയിരിക്കണം\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del, --override എന്നവയില്‍ ഒരെണ്ണം വ്യക്തമാക്കുക\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "ഒരു chkconfig ചോദ്യത്തിന് ഒരു റണ്‍ലവല്‍ മാത്രം വ്യക്തമാക്കുക\n"
@@ -282,7 +277,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -323,13 +320,13 @@ msgstr "       alternatives --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -385,8 +382,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s എന്ന പാഥ് %s-ല്‍ അപ്രതീക്ഷിതമാണ്\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "%s-ലുളള %s സ്ളേവിലേക്കുളള വഴി ലഭ്യമല്ല\n"
 
 #: ../alternatives.c:360
@@ -416,8 +414,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s-ല്‍ അക്കങ്ങള്‍ക്ക് മുന്‍ഗണന പ്രതീക്ഷിക്കുന്നു\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "%s-ല്‍ സ്ലേവ് പാഥ് പ്രതീക്ഷിക്കുന്നു\n"
 
 #: ../alternatives.c:454
@@ -428,9 +427,7 @@ msgstr "ലിങ്ക് %s വായിക്കുന്നതില്‍ �
 #: ../alternatives.c:470
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr ""
-"പകരം ഇല്ലാത്തതിലേക്ക് പോയിന്റുകള്‍ ലിങ്ക് ചെയ്യുന്നു -- മാനുവല്‍ ആയി മോഡ് "
-"ക്രമികരിക്കുന്നു\n"
+msgstr "പകരം ഇല്ലാത്തതിലേക്ക് പോയിന്റുകള്‍ ലിങ്ക് ചെയ്യുന്നു -- മാനുവല്‍ ആയി മോഡ് ക്രമികരിക്കുന്നു\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -465,8 +462,7 @@ msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"%s -> %s: സിംലിങ്ക് ഉണ്ടാക്കുന്നതില്‍ പരാജയം. %s ആദ്യമേ ലഭ്യവുമാണ് പിന്നെ അത്"
-" സിംലിങ്ക് അല്ല\n"
+"%s -> %s: സിംലിങ്ക് ഉണ്ടാക്കുന്നതില്‍ പരാജയം. %s ആദ്യമേ ലഭ്യവുമാണ് പിന്നെ അത് സിംലിങ്ക് അല്ല\n"
 "\n"
 
 #: ../alternatives.c:609
@@ -491,8 +487,9 @@ msgid "running %s\n"
 msgstr "%s പ്രവര്‍ത്തിക്കുന്നു\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "ലിങ്ക് %s എന്നത് സ്ലേവ് %s (%s %s)-ന് തെറ്റാണ്\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -503,7 +500,7 @@ msgstr "%s-ന് പകരമായി %s സജ്ജമാക്കിയി�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s-ന് പകരമായി %s സജ്ജമാക്കിയിട്ടില്ല \n"
 
 #: ../alternatives.c:920
@@ -537,8 +534,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " സ്ളേവ് %s: %s\n"
 
 #: ../alternatives.c:989
@@ -565,8 +563,7 @@ msgstr "  തിരഞ്ഞെടുക്കലിനുളള   നിര്�
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"നിലവില്‍ തിരഞ്ഞെടുത്തത്[+] സംരക്ഷിക്കുന്നതിനായി എന്റര്‍ ചെയ്യുക, അല്ലെങ്കില്‍"
-"\n"
+"നിലവില്‍ തിരഞ്ഞെടുത്തത്[+] സംരക്ഷിക്കുന്നതിനായി എന്റര്‍ ചെയ്യുക, അല്ലെങ്കില്‍\n"
 "തിരഞ്ഞെടുത്ത അക്കം ടൈപ്പ് ചെയ്യുക:"
 
 #: ../alternatives.c:1048

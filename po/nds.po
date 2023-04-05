@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German (Low) <https://translate.fedoraproject.org/projects/"
@@ -108,50 +108,50 @@ msgstr ""
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "an"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "ut"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr ""
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr ""
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr ""
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr ""
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr ""
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr ""
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -259,7 +259,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 
 #: ../alternatives.c:92
@@ -300,13 +302,13 @@ msgstr ""
 #: ../alternatives.c:99
 #, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 
 #: ../alternatives.c:100
 #, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr ""
 
 #: ../alternatives.c:101
@@ -363,7 +365,7 @@ msgstr ""
 
 #: ../alternatives.c:350
 #, c-format
-msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr ""
 
 #: ../alternatives.c:360
@@ -394,7 +396,7 @@ msgstr ""
 
 #: ../alternatives.c:425
 #, c-format
-msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr ""
 
 #: ../alternatives.c:454
@@ -462,7 +464,7 @@ msgstr ""
 
 #: ../alternatives.c:770
 #, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr ""
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -473,7 +475,7 @@ msgstr ""
 
 #: ../alternatives.c:862
 #, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr ""
 
 #: ../alternatives.c:920
@@ -508,7 +510,7 @@ msgstr ""
 
 #: ../alternatives.c:984
 #, c-format
-msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr ""
 
 #: ../alternatives.c:989

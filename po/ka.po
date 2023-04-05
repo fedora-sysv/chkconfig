@@ -10,11 +10,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-04-16 19:17+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/ka/>\n"
+"Language-Team: Georgian <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,54 +125,55 @@ msgstr "შეცდომა %s სერვისის შესახებ 
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "ამ ოპერაციის ჩასატარებლად საკმარისი წვდომები არ გაგაჩნიათ.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "ჩართვა"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "გათიშვა"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-ზე დაფუძნებულოი სერვისები:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "შეცდომა %s დირექტორიის გახსნისას: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "გაფრთხილება: მოთხოვნის გადაგზავნა ბრძანებასთან 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "მოთხოვნის systemctl-სთან გადაგზავნის შეცდომა: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ვერსია %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type უნდა იყოს 'sysv' ან 'xinetd'\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "მხოლოდ ერთერთი შეიძლება იყოს მითითებული: --list, --add, --del ან --override\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr "chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
+msgstr ""
+"chkconfig მოთხოვნაში შესაძლებელია მხოლოდ ერთი გაშვების დონის მითითება\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
@@ -266,7 +267,8 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "გამოყენება: alternatives --install <ბმა> <სახელი> <გეზი> <პრიორიტეტი>\n"
+msgstr ""
+"გამოყენება: alternatives --install <ბმა> <სახელი> <გეზი> <პრიორიტეტი>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -279,8 +281,12 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <ოჯახი>]\n"
 
 #: ../alternatives.c:91
-#, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, fuzzy, c-format
+#| msgid ""
+#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 "                    [--slave <მეორადის_ბმული> <მეორადის_სახელი> "
 "<მეორადის_ბილიკი>]*\n"
@@ -321,18 +327,23 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <სახელი>\n"
 
 #: ../alternatives.c:99
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+#| "<slave_path>\n"
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 "       alternatives --add-slave <სახელი> <ბილიკი> <მეორადი_ბმული> "
 "<მეორადი_სახელი> <მეორადი_ბილიკი>\n"
 
 #: ../alternatives.c:100
-#, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
-msgstr "       alternatives --remove-slave <სახელი> <ბილიკი> <მეორადი_სახელი>\n"
+#, fuzzy, c-format
+#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
+msgstr ""
+"       alternatives --remove-slave <სახელი> <ბილიკი> <მეორადი_სახელი>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -389,8 +400,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "მოულოდნელი ბილიკი %s %s-ში\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "მეორადისთვის %s აკლია ბილიკი %s-ში\n"
 
 #: ../alternatives.c:360
@@ -420,8 +432,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s რიცხობრივი პრიორიტეტი უნდა იყოს\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "%s-ში საჭირო მეორადი ბილიკი\n"
 
 #: ../alternatives.c:454
@@ -491,8 +504,9 @@ msgid "running %s\n"
 msgstr "%s-ი გაშვება...\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "ბმული %s არასწორია მეორადისთვის %s (%s%s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -502,8 +516,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s არაა დაყენებული %s-ის ალტერნატივად\n"
 
 #: ../alternatives.c:862
-#, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s არაა დაყეებული, როგორც %s-ის ალტერნატივა (%s)\n"
 
 #: ../alternatives.c:920
@@ -537,8 +552,9 @@ msgid "priority %d\n"
 msgstr "პრიორიტეტი %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " მეორადი %s: %s\n"
 
 #: ../alternatives.c:989

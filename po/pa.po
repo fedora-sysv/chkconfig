@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Punjabi <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/pa/>\n"
+"Language-Team: Punjabi <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/pa/>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,8 +81,8 @@ msgid ""
 msgstr ""
 "\n"
 "ਸੂਚਨਾ: ਇਹ ਆਊਟਪੁੱਟ ਸਿਰਫ SysV ਸਰਵਿਸਾਂ ਵੇਖਾਉਂਦੀ ਹੈ ਅਤੇ ਇਸ ਵਿੱਚ ਪੁਰਾਣੀਆਂ\n"
-"      systemd ਸਰਵਿਸਾਂ ਸ਼ਾਮਿਲ ਨਹੀਂ ਹੁੰਦੀਆਂ। SysV ਸੰਰਚਨਾ ਡਾਟਾ ਪੁਰਾਣੀ systemd "
-"ਸੰਰਚਨਾ ਦੁਆਰਾ\n"
+"      systemd ਸਰਵਿਸਾਂ ਸ਼ਾਮਿਲ ਨਹੀਂ ਹੁੰਦੀਆਂ। SysV ਸੰਰਚਨਾ ਡਾਟਾ ਪੁਰਾਣੀ systemd ਸੰਰਚਨਾ "
+"ਦੁਆਰਾ\n"
 "     ਲਿਖਿਆ ਜਾ ਸਕਦਾ ਹੈ।\n"
 "\n"
 
@@ -101,8 +101,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"ਸਰਵਿਸ %s, chkconfig ਲਈ ਸਹਿਯੋਗੀ ਹੈ, ਪਰ ਕਿਸੇ ਚਾਲੂ-ਦਰਜੇ ਵਿੱਚ ਜਿਕਰ ਨਹੀਂ ਕੀਤਾ ("
-"'chkconfig --add %s' ਚਲਾਓ)\n"
+"ਸਰਵਿਸ %s, chkconfig ਲਈ ਸਹਿਯੋਗੀ ਹੈ, ਪਰ ਕਿਸੇ ਚਾਲੂ-ਦਰਜੇ ਵਿੱਚ ਜਿਕਰ ਨਹੀਂ ਕੀਤਾ "
+"('chkconfig --add %s' ਚਲਾਓ)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -119,50 +119,50 @@ msgstr "%s ਸਰਵਿਸ ਦੀ ਜਾਣਕਾਰੀ ਪੜਨ ਸਮੇ ਗ�
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "ਤੁਹਾਡੇ ਕੋਲ ਇਹ ਕਾਰਵਾਈ ਕਰਨ ਲਈ ਲੋੜੀਂਦੇ ਅਧਿਕਾਰ ਨਹੀਂ ਹਨ।\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "ਚਾਲੂ"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "ਬੰਦ"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ਤੇ ਅਧਾਰਿਤ ਸਰਵਿਸਾਂ:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s ਡਾਇਰੈਕਟਰੀ ਨੂੰ ਖੋਲਣ ਵਿੱਚ ਅਸਫਲ: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "ਸੂਚਨਾ: ਬੇਨਤੀ 'systemctl %s %s' ਨੂੰ ਅੱਗੇ ਭੇਜੀ ਜਾ ਰਹੀ ਹੈ।\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "ਸਰਵਿਸ ਬੇਨਤੀ systemctl ਨੂੰ ਅੱਗੇ ਭੇਜਣ ਤੋਂ ਫੇਲ ਹੋਇਆ ਹੈ: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ਵਰਜਨ %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type, 'sysv' ਜਾਂ 'xinetd' ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr "--list, --add, --del ਜਾਂ --overrider ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਦਰਸਾਇਆ ਹੋਵੇਗਾ\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig ਪ੍ਰਸ਼ਨ ਵਿੱਚੋਂ ਸਿਰਫ ਇੱਕ ਚਾਲੂ-ਦਰਜਾ ਨਿਰਧਾਰਿਤ ਹੋਵੇਗਾ\n"
@@ -272,7 +272,9 @@ msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -313,13 +315,13 @@ msgstr "       alternatives --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -375,8 +377,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s ਮਾਰਗ %s ਵਿੱਚ ਅਣਜਾਣ ਹੈ\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "%s ਸਲੇਵ, %s ਵਿੱਚ, ਲਈ ਮਾਰਗ ਗੁੰਮ ਹੈ\n"
 
 #: ../alternatives.c:360
@@ -406,8 +409,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "ਅੰਕਾਂ ਵਾਲੀ ਤਰਜੀਹ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "ਸਲੇਵ ਮਾਰਗ %s ਵਿੱਚ ਹੋਣ ਦੀ ਉਮੀਦ ਹੈ\n"
 
 #: ../alternatives.c:454
@@ -474,8 +478,9 @@ msgid "running %s\n"
 msgstr "%s ਚੱਲਦਾ ਹੈ\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "ਸਲੇਵ %s (%s %s) ਲਈ ਗਲਤ ਲਿੰਕ %s\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -486,7 +491,7 @@ msgstr "%s ਦੀ %s ਲਈ ਬਦਲ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹ
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s ਦੀ %s ਲਈ ਬਦਲ ਤੌਰ ਤੇ ਸੰਰਚਨਾ ਨਹੀਂ ਕੀਤੀ\n"
 
 #: ../alternatives.c:920
@@ -520,8 +525,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " ਸਲੇਵ %s: %s\n"
 
 #: ../alternatives.c:989

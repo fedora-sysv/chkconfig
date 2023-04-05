@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
@@ -97,8 +97,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      Якщо вам потрібен список служб systemd, скористайтеся командою «"
-"systemctl list-unit-files».\n"
+"      Якщо вам потрібен список служб systemd, скористайтеся командою "
+"«systemctl list-unit-files».\n"
 "      Щоб переглянути служби, увімкнені для певної мети, скористайтеся "
 "командою\n"
 "      «systemctl list-dependencies [мета]».\n"
@@ -128,51 +128,51 @@ msgstr "помилка читання інформації у службі %s: %
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "У вас недостатньо повноважень для виконання цієї дії.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "ввімк"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "вимк"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "служби, що базуються на xinetd:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "не вдається відкрити каталог %s: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Зауваження: переспрямування запиту до «systemctl %s %s».\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Не вдалося переспрямувати запит щодо обслуговування до systemctl: %m\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s версія %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "аргументом --type має бути «sysv» або «xinetd»\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "можна вказувати лише один аргумент з --list, --add, --del або --override\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "можна вказувати лише один рівень виконання для запиту chkconfig\n"
@@ -282,8 +282,12 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <сімейство>]\n"
 
 #: ../alternatives.c:91
-#, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, fuzzy, c-format
+#| msgid ""
+#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr ""
 "                    [--slave <посилання_на_підлеглий> <назва_підлеглого> "
 "<шлях_до_підлеглого>]*\n"
@@ -324,17 +328,21 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <назва>\n"
 
 #: ../alternatives.c:99
-#, c-format
+#, fuzzy, c-format
+#| msgid ""
+#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
+#| "<slave_path>\n"
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr ""
 "       alternatives --add-slave <назва> <шлях> <посилання_на_підлеглий> "
 "<назва_підлеглого> <шлях_до_підлеглого>\n"
 
 #: ../alternatives.c:100
-#, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, fuzzy, c-format
+#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove-slave <назва> <шлях> <назва_підлеглого>\n"
 
 #: ../alternatives.c:101
@@ -392,8 +400,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "неочікуваний шлях %s у %s\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "відсутній шлях до slave %s у %s\n"
 
 #: ../alternatives.c:360
@@ -423,8 +432,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s повинен бути числовим пріоритетом\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "у %s очікувався шлях до slave\n"
 
 #: ../alternatives.c:454
@@ -470,8 +480,8 @@ msgid ""
 "foreign was set and link points outside %s\n"
 msgstr ""
 "не вдалося створити посилання %s -> %s: %s вже існує і або не є символічним "
-"посиланням, або встановлено --keep-foreign і посилання вказує на місце поза %"
-"s\n"
+"посиланням, або встановлено --keep-foreign і посилання вказує на місце поза "
+"%s\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -495,8 +505,9 @@ msgid "running %s\n"
 msgstr "запускається %s\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "посилання %s неправильне для %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -506,8 +517,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s не було налаштовано як альтернативу для %s\n"
 
 #: ../alternatives.c:862
-#, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, fuzzy, c-format
+#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s не було налаштовано як альтернативу підлеглого для %s (%s)\n"
 
 #: ../alternatives.c:920
@@ -541,8 +553,9 @@ msgid "priority %d\n"
 msgstr "пріоритетність %d\n"
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr " slave %s: %s\n"
 
 #: ../alternatives.c:989

@@ -13,11 +13,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 15:30+0100\n"
+"POT-Creation-Date: 2023-03-23 13:27+0100\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Assamese <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/as/>\n"
+"Language-Team: Assamese <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/as/>\n"
 "Language: as\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,8 +95,8 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"      যদি আপুনি systemd সেৱাসমূহ তালিকাভুক্ত কৰিব বিচাৰে 'systemctl list-"
-"unit-files' ব্যৱহাৰ কৰক।\n"
+"      যদি আপুনি systemd সেৱাসমূহ তালিকাভুক্ত কৰিব বিচাৰে 'systemctl list-unit-"
+"files' ব্যৱহাৰ কৰক।\n"
 "      নিৰ্দিষ্ট লক্ষ্যত সামৰ্থবান সেৱাসমূহ চাবলে\n"
 "      'systemctl list-dependencies [target]' ব্যৱহাৰ কৰক।\n"
 "\n"
@@ -107,8 +107,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run "
-"'chkconfig --add %s')\n"
+"%s সেৱাই chkconfig সমৰ্থন কৰে কিন্তু কোনো চলনাস্তৰত উল্লেখিত নহয় (run 'chkconfig "
+"--add %s')\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -125,51 +125,51 @@ msgstr "%s সেৱাত তথ্য পঢ়োঁতে ভুল হৈছ�
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "এই কাৰ্য্য কৰিবলৈ আপোনাৰ ওচৰত যথেষ্ট সুবিধা নাই।\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "on"
 msgstr "চলি আছে"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:587
+#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
 msgid "off"
 msgstr "বন্ধ"
 
-#: ../chkconfig.c:547
+#: ../chkconfig.c:543
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ভিত্তিৰ সেৱা:\n"
 
-#: ../chkconfig.c:549
+#: ../chkconfig.c:545
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "%s ডাইৰেকটৰি খোলাত ব্যৰ্থ: %s\n"
 
-#: ../chkconfig.c:681
+#: ../chkconfig.c:677
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "টোকা: 'systemctl %s %s' লে অনুৰোধ প্ৰেৰণ কৰা হৈ আছে।\n"
 
-#: ../chkconfig.c:687
+#: ../chkconfig.c:683
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "systemctl: %m লে সেৱাৰ অনুৰোধ প্ৰেৰণ কৰিবলে ব্যৰ্থ\n"
 
-#: ../chkconfig.c:743
+#: ../chkconfig.c:739
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s সংস্কৰণ %s\n"
 
-#: ../chkconfig.c:756
+#: ../chkconfig.c:752
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type 'sysv' বা 'xinetd' হ'বই লাগিব\n"
 
-#: ../chkconfig.c:762
+#: ../chkconfig.c:758
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "যিকোনো এটা --list, --add, --del, বা  --override নিৰ্দ্দিষ্ট কৰা যাব পাৰে\n"
 
-#: ../chkconfig.c:873
+#: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig সন্ধানৰ বাবে যিকোনো এটা চলনাস্তৰ নিৰ্দ্দিষ্ট কৰা যাব পাৰে\n"
@@ -279,7 +279,9 @@ msgstr ""
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
-msgid "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 msgstr "                    [--slave <link> <name> <path>]*\n"
 
 #: ../alternatives.c:92
@@ -320,13 +322,13 @@ msgstr "       alternatives --remove <name> <path>\n"
 #: ../alternatives.c:99
 #, fuzzy, c-format
 msgid ""
-"       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-"<slave_path>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
-msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:101
@@ -382,8 +384,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s ত %s পথ অপ্ৰত্যাশিত\n"
 
 #: ../alternatives.c:350
-#, c-format
-msgid "missing path for slave %s in %s\n"
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
 msgstr "%s ত %s স্লেইভৰ পথ নিৰুদ্দেশ\n"
 
 #: ../alternatives.c:360
@@ -413,8 +416,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s ত সাংখ্যিক প্ৰাথমিকতা প্ৰত্যাশিত\n"
 
 #: ../alternatives.c:425
-#, c-format
-msgid "slave path expected in %s\n"
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
 msgstr "%s ত স্লেইভৰ পথ প্ৰত্যাশিত\n"
 
 #: ../alternatives.c:454
@@ -426,8 +430,7 @@ msgstr "%s সংযোগ পঢ়িব'লৈ অক্ষম: %s\n"
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
-"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা "
-"হৈছে\n"
+"সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
 
 #: ../alternatives.c:475
 #, c-format
@@ -483,8 +486,9 @@ msgid "running %s\n"
 msgstr "%s চলোৱা হৈছে\n"
 
 #: ../alternatives.c:770
-#, c-format
-msgid "link %s incorrect for slave %s (%s %s)\n"
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "%s স্লেইভৰ বাবে %s সংযোগ অশুদ্ধ(%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
@@ -495,7 +499,7 @@ msgstr "%s ৰ বিকল্প হিচাপে %s ৰ সংৰূপ ক�
 
 #: ../alternatives.c:862
 #, fuzzy, c-format
-msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s ৰ বিকল্প হিচাপে %s ৰ সংৰূপ কৰা হোৱা নাই\n"
 
 #: ../alternatives.c:920
@@ -529,8 +533,9 @@ msgid "priority %d\n"
 msgstr ""
 
 #: ../alternatives.c:984
-#, c-format
-msgid " slave %s: %s\n"
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
 msgstr "স্লেইভ %s: %s\n"
 
 #: ../alternatives.c:989
