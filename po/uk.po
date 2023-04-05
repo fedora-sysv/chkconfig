@@ -5,16 +5,16 @@
 # Translators:
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
 # notting <notting@redhat.com>, 2011
-# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022.
-# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022.
-# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
+"PO-Revision-Date: 2023-04-02 15:37+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/uk/>\n"
@@ -22,9 +22,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -282,15 +282,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <сімейство>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
-#| msgid ""
-#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
 msgstr ""
-"                    [--slave <посилання_на_підлеглий> <назва_підлеглого> "
-"<шлях_до_підлеглого>]*\n"
+"                    [--follower <посилання_послідовника> "
+"<назва_послідовника> <шлях_послідовника>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -328,22 +326,19 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <назва>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-slave <назва> <шлях> <посилання_на_підлеглий> "
-"<назва_підлеглого> <шлях_до_підлеглого>\n"
+"       alternatives --add-follower <назва> <шлях> <посилання_послідовника> "
+"<назва_послідовника> <шлях_послідовника>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <назва> <шлях> <назва_підлеглого>\n"
+msgstr ""
+"       alternatives --remove-follower <назва> <шлях> <назва_послідовника>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -400,10 +395,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "неочікуваний шлях %s у %s\n"
 
 #: ../alternatives.c:350
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "відсутній шлях до slave %s у %s\n"
+msgstr "не вказано шлях для послідовника %s у %s\n"
 
 #: ../alternatives.c:360
 #, c-format
@@ -432,10 +426,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s повинен бути числовим пріоритетом\n"
 
 #: ../alternatives.c:425
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "у %s очікувався шлях до slave\n"
+msgstr "у %s мало бути вказано шлях послідовника\n"
 
 #: ../alternatives.c:454
 #, c-format
@@ -505,10 +498,9 @@ msgid "running %s\n"
 msgstr "запускається %s\n"
 
 #: ../alternatives.c:770
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "посилання %s неправильне для %s (%s %s)\n"
+msgstr "посилання %s є неправильним для послідовника %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
 #: ../alternatives.c:1126
@@ -517,10 +509,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s не було налаштовано як альтернативу для %s\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s не було налаштовано як альтернативу підлеглого для %s (%s)\n"
+msgstr "%s не було налаштовано як альтернативу послідовника для %s (%s)\n"
 
 #: ../alternatives.c:920
 #, c-format
@@ -553,10 +544,9 @@ msgid "priority %d\n"
 msgstr "пріоритетність %d\n"
 
 #: ../alternatives.c:984
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " slave %s: %s\n"
+msgstr " послідовник %s: %s\n"
 
 #: ../alternatives.c:989
 #, c-format
