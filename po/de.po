@@ -16,13 +16,13 @@
 # Timo Trinks <ttrinks@redhat.com>, 2007
 # Roman Spirgi <bigant@fedoraproject.org>, 2015. #zanata
 # Roman Spirgi <bigant@fedoraproject.org>, 2017. #zanata
-# Ettore Atalan <atalanttore@googlemail.com>, 2021, 2022.
+# Ettore Atalan <atalanttore@googlemail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-25 15:30+0100\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
+"PO-Revision-Date: 2023-04-02 14:20+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/de/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.15.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -251,9 +251,9 @@ msgid "cannot determine current run level\n"
 msgstr "aktueller Runlevel kann nicht ermittelt werden\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "Selinux-Kontext konnte nicht für %s gesetzt werden: %s\n"
+msgstr "SELinux-Kontext für %s kann nicht festgelegt werden: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -315,9 +315,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <Name>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <Name> <Pfad>\n"
+msgstr "       alternatives --set <Name> <Pfad/Familie>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -349,13 +349,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"Allgemeine Optionen: --verbose --test --help --usage --version --keep-"
-"missing\n"
+"allgemeine Optionen: --verbose --test --help --usage --version --keep-"
+"missing --keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -587,7 +587,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "kann nicht auf %s/%s zugreifen: Keine solche Datei oder Verzeichnis\n"
 
 #: ../alternatives.c:1142
 #, c-format
