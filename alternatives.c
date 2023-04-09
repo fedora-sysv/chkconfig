@@ -490,6 +490,12 @@ static int isLink(char *path) {
     return !!S_ISLNK(sbuf.st_mode);
 }
 
+static int fileExists(char *path) {
+    struct stat sbuf;
+
+    return !stat(path, &sbuf);
+}
+
 static int facilityBelongsToUs(char *facility, const char *altDir) {
     char buf[PATH_MAX];
     if (readlink(facility, buf, sizeof(buf)) <= 0)
@@ -533,7 +539,17 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     sl = alloca(strlen(altDir) + strlen(l->title) + 2);
     sprintf(sl, "%s/%s", altDir, l->title);
 
-    if (isLink(l->facility) && (!FL_KEEP_FOREIGN(flags) || facilityBelongsToUs(l->facility, altDir)) ) {
+    if (fileExists(l->facility) && !isLink(l->facility)) {
+        fprintf(
+            stderr,
+            _("failed to link %s -> %s: %s exists and it is not a symlink\n"),
+            l->facility, sl, l->facility);
+    } else if (FL_KEEP_FOREIGN(flags) && isLink(l->facility) && !facilityBelongsToUs(l->facility, altDir)) {
+        fprintf(
+            stderr,
+            _("failed to link %s -> %s: --keep-foreign was set and link %s points outside  %s\n"),
+            l->facility, sl, l->facility, altDir);
+    } else {
         if (FL_TEST(flags)) {
             printf(_("would link %s -> %s\n"), l->facility, sl);
         } else {
@@ -550,11 +566,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
                 }
             }
         }
-    } else
-        fprintf(
-            stderr,
-            _("failed to link %s -> %s: %s exists and it is either not a symlink or --keep-foreign was set and link points outside %s\n"),
-            l->facility, sl, l->facility, altDir);
+    }
 
     if (FL_TEST(flags)) {
         printf(_("would link %s -> %s\n"), sl, l->target);
