@@ -484,13 +484,10 @@ static int readConfig(struct alternativeSet *set, const char *title,
 
 static int isLink(char *path) {
     struct stat sbuf;
-    int rc = 0;
 
-    rc = lstat(path, &sbuf);
-    if (!rc) {
-        rc = S_ISLNK(sbuf.st_mode);
-    }
-    return rc;
+    if (lstat(path, &sbuf))
+        return 0;
+    return !!S_ISLNK(sbuf.st_mode);
 }
 
 static int facilityBelongsToUs(char *facility, const char *altDir) {
