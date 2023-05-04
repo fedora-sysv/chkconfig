@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.23
+Version: 1.24
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -88,6 +88,11 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Thu May 04 2023 Jan Macku <jamacku@redhat.com> - 1.24-1
+- ci: fix `NEXT_VERSION` in Makefile
+- revert: releng: Enable Packit to handle Fedora updates
+- revert: releng: Convert to rpmautospec
+
 * Thu May 04 2023 Jan Macku <jamacku@redhat.com> - 1.23-1
 - Translated using Weblate (Korean)
 - Translated using Weblate (English (United Kingdom))
