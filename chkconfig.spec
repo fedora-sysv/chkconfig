@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.19.1
+Version: 1.19.2
 Release: 1%{?dist}
 License: GPLv2
 URL: https://github.com/fedora-sysv/chkconfig
@@ -77,6 +77,11 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %{_mandir}/*/ntsysv.8*
 
 %changelog
+* Mon May 15 2023 Jan Macku <jamacku@redhat.com> - 1.19.2-1
+- alternatives: --keep-foreign incorrectly handles non-existent files
+- alternatives: isLink should return 0 in case of lstat error
+- spec: Replace not working awk command with sed (#63)
+
 * Tue Jul 27 2021 Jan Macku <jamacku@redhat.com> - 1.19.1-1
 - spec: Revert changes introduced in Fedora (#61)
 
