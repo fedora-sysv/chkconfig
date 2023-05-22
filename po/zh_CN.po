@@ -12,13 +12,14 @@
 # Leah Liu <lliu@redhat.com>, 2015. #zanata
 # Charles Lee <lchopn@gmail.com>, 2017. #zanata, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# yangyangdaji <1504305527@qq.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Charles Lee <lchopn@gmail.com>\n"
+"PO-Revision-Date: 2023-05-22 04:20+0000\n"
+"Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -67,7 +68,7 @@ msgstr "         %s --del <name>\n"
 #: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <name>\n"
+msgstr "         %s --override <名称>\n"
 
 #: ../chkconfig.c:58
 #, c-format
@@ -240,7 +241,7 @@ msgid "cannot determine current run level\n"
 msgstr "无法判断当前运行级别\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "无法为 %s 设置 SELinux 上下文：%s\n"
 
@@ -279,13 +280,11 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <家族>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
-#| msgid ""
-#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <从属链接> <从属名称> <从属路径>]*\n"
+msgstr "                    [--follower <追随者链接> <追随者名称> <追随者路径>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -308,9 +307,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <名称>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <名称> <路径>\n"
+msgstr "       alternatives --set <名称> <路径/家族>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -323,22 +322,17 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <名称>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr ""
-"       alternatives --add-slave <名称> <路径> <从属链接> <从属名称> <从属路径"
-">\n"
+msgstr "       alternatives --add-follower <名称> <路径> <追随者链接> <追随者名称> "
+"<追随者路径>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <名称> <路径> <从属名称>\n"
+msgstr "       alternatives --remove-follower <名称> <路径> <追随者名称>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -346,11 +340,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "常见选项: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
+"常见选项：--verbose --test --help --usage --version --keep-missing --keep-"
+"foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -393,10 +389,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "路径 %s 意外出现在 %s 中\n"
 
 #: ../alternatives.c:350
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "从属 %s 的路径缺失于 %s 中\n"
+msgstr "丢失了 %s 的追随者 %s\n"
 
 #: ../alternatives.c:360
 #, c-format
@@ -425,10 +420,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s 中预期出现数字优先度\n"
 
 #: ../alternatives.c:425
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "%s 中预期出现从属路径\n"
+msgstr "追随者路径预期在 %s\n"
 
 #: ../alternatives.c:454
 #, c-format
@@ -466,11 +460,12 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "%s -> %s 链接失败：%s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
-msgstr "链接 %s -> %s 失败：%s 已存在，且不是符号链接。\n"
+msgstr "无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，"
+"并且链接点在 %s 之外\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -494,10 +489,9 @@ msgid "running %s\n"
 msgstr "正在运行 %s\n"
 
 #: ../alternatives.c:770
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "从属 %s 的链接 %s 不正确（%s %s）\n"
+msgstr "链接 %s 不正确的追随者 %s（%s%s）\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
 #: ../alternatives.c:1126
@@ -506,10 +500,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "未将 %s 配置为 %s 的备用项\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s 没有被配置为%s(%s) 的从属替代\n"
+msgstr "%s 尚未配置为 %s（%s）的追随者替代方案\n"
 
 #: ../alternatives.c:920
 #, c-format
@@ -542,10 +535,9 @@ msgid "priority %d\n"
 msgstr "优先度 %d\n"
 
 #: ../alternatives.c:984
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " 从属 %s：%s\n"
+msgstr " 追随者 %s：%s\n"
 
 #: ../alternatives.c:989
 #, c-format
@@ -584,7 +576,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "无法访问 %s/%s：没有这样的文件或目录\n"
 
 #: ../alternatives.c:1142
 #, c-format
