@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2023-04-24 06:20+0000\n"
+"PO-Revision-Date: 2023-07-03 05:20+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ko/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -371,7 +371,7 @@ msgstr "%s를 여는데 실패했습니다: %s\n"
 #: ../alternatives.c:305
 #, c-format
 msgid "failed to read %s: %s\n"
-msgstr "%s를 여는데 실패했습니다: %s\n"
+msgstr "%s를 읽는데 실패했습니다: %s\n"
 
 #: ../alternatives.c:313
 #, c-format
@@ -554,12 +554,12 @@ msgstr "현재 '최고' 버전은 %s입니다.\n"
 #: ../alternatives.c:1024
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
-msgstr "%d 개의 프로그램이 '%s'를 제공합니다.\n"
+msgstr "%d 프로그램이 있습니다 ('%s'를 제공하는).\n"
 
 #: ../alternatives.c:1025
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
-msgstr "%d 개의 프로그램이 '%s'를 제공합니다.\n"
+msgstr "%d 프로그램이 있습니다 ('%s'를 제공하는).\n"
 
 #: ../alternatives.c:1029
 #, c-format
