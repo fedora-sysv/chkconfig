@@ -264,6 +264,7 @@ char *parseLine(char **buf) {
 static int readConfig(struct alternativeSet *set, const char *title,
                       const char *altDir, const char *stateDir, int flags) {
     char *path;
+    char *leader_path;
     int fd;
     int i;
     struct stat sb;
@@ -448,9 +449,10 @@ static int readConfig(struct alternativeSet *set, const char *title,
         }
     }
 
-    sprintf(path, "%s/%s", altDir, set->alts[0].leader.title);
+    leader_path = alloca(strlen(altDir) + strlen(set->alts[0].leader.title) + 2);
+    sprintf(leader_path, "%s/%s", altDir, set->alts[0].leader.title);
 
-    if (((i = readlink(path, linkBuf, sizeof(linkBuf) - 1)) < 0)) {
+    if (((i = readlink(leader_path, linkBuf, sizeof(linkBuf) - 1)) < 0)) {
         fprintf(stderr, _("failed to read link %s: %s\n"),
                 set->alts[0].leader.facility, strerror(errno));
         return 2;
