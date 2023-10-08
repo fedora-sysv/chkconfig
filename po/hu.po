@@ -10,13 +10,14 @@
 # Meskó Balázs <meskobalazs@gmail.com>, 2019. #zanata
 # Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Hoppár Zoltán <hopparz@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
+"PO-Revision-Date: 2023-10-08 17:36+0000\n"
+"Last-Translator: Hoppár Zoltán <hopparz@gmail.com>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -331,16 +332,13 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <név>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-slave <név> <elérési_út> <szolga_link> "
-"<szolga_név> <szolga_név>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 
 #: ../alternatives.c:100
 #, fuzzy, c-format
@@ -475,12 +473,14 @@ msgid "failed to link %s -> %s: %s\n"
 msgstr "a(z) %s -> %s linkelés sikertelen: %s\n"
 
 #: ../alternatives.c:559
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
 "foreign was set and link points outside %s\n"
 msgstr ""
-"a(z) %s -> %s linkelés meghiúsult: a(z) %s létezik, és nem szimbolikus link\n"
+"nem sikerült linkelni %s - %s: %s létezik, és vagy nem szimbolikus "
+"hivatkozás, vagy a --keep-foreign be lett állítva, és a %s-on kívüli "
+"pontokat linkelték\n"
 
 #: ../alternatives.c:609
 #, c-format
@@ -596,7 +596,7 @@ msgstr ""
 #: ../alternatives.c:1075
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "nem fér hozzá: %s/%s: Nincs ilyen fájl vagy könyvtár\n"
 
 #: ../alternatives.c:1142
 #, c-format
