@@ -946,13 +946,7 @@ int systemdIsInit() {
 }
 
 int systemdActive() {
-    struct stat a, b;
-
-    if (lstat("/sys/fs/cgroup", &a) < 0)
-        return 0;
-    if (lstat("/sys/fs/cgroup/systemd", &b) < 0)
-        return 0;
-    if (a.st_dev == b.st_dev)
+    if (access("/run/systemd/system/", F_OK) < 0)
         return 0;
     if (!systemdIsInit())
         return 0;
