@@ -10,21 +10,22 @@
 # Zdenek <chmelarz@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Daniel Rusek <mail@asciiwolf.com>, 2020, 2022.
+# Matěj Valášek <valmatej@seznam.cz>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
-"Language-Team: Czech <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/cs/>\n"
+"PO-Revision-Date: 2023-12-31 14:36+0000\n"
+"Last-Translator: Matěj Valášek <valmatej@seznam.cz>\n"
+"Language-Team: Czech <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.3.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -323,22 +324,19 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <jméno>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-slave <jméno> <cesta> <slave_linka> <slave_jméno> "
-"<slave_cesta>\n"
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <jméno> <cesta> <slave_jméno>\n"
+msgstr ""
+"       alternatives --remove-follower <jméno> <cesta> <follower_jméno>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -394,10 +392,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "neočekávaná cesta %s v %s\n"
 
 #: ../alternatives.c:350
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "chybí cesta pro slave %s v %s\n"
+msgstr "chybí cesta pro follower %s v %s\n"
 
 #: ../alternatives.c:360
 #, c-format
@@ -426,10 +423,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "číselná priorita očekávána v %s\n"
 
 #: ../alternatives.c:425
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "cesta k podřízenému očekávána v %s\n"
+msgstr "cesta k sledovateli očekávána v %s\n"
 
 #: ../alternatives.c:454
 #, c-format
@@ -497,10 +493,9 @@ msgid "running %s\n"
 msgstr "spouštím %s\n"
 
 #: ../alternatives.c:770
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "linka %s nesprávný pro podřízeného %s (%s %s)\n"
+msgstr "linka %s nesprávný pro odběratele %s (%s %s)\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
 #: ../alternatives.c:1126
@@ -509,10 +504,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s nebyl nastaven jako alternativa pro %s\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s nebyl nastaven jako slave alternativa pro %s (%s)\n"
+msgstr "%s nebyl nastaven jako odběratelská alternativa pro %s (%s)\n"
 
 #: ../alternatives.c:920
 #, c-format
@@ -545,10 +539,9 @@ msgid "priority %d\n"
 msgstr "priorita %d\n"
 
 #: ../alternatives.c:984
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " podřízený %s: %s\n"
+msgstr " odběratel %s: %s\n"
 
 #: ../alternatives.c:989
 #, c-format
