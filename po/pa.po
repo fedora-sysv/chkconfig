@@ -7,21 +7,22 @@
 # notting <notting@redhat.com>, 2011
 # A S Alam <aalam@fedoraproject.org>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# A S Alam <aalam@users.noreply.translate.fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Punjabi <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/pa/>\n"
+"PO-Revision-Date: 2023-12-28 14:37+0000\n"
+"Last-Translator: A S Alam <aalam@users.noreply.translate.fedoraproject.org>\n"
+"Language-Team: Punjabi <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/pa/>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.3\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -232,7 +233,7 @@ msgid "cannot determine current run level\n"
 msgstr "ਮੌਜੂਦਾ ਰਨ ਲੈਵਲ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ ਹੈ\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "%s ਲਈ SELinux ਕਨਟੈਕਸਟ ਸੈੱਟ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %s\n"
 
@@ -271,11 +272,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <link> <name> <path>]*\n"
+msgstr ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -298,9 +301,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <name> <path/family>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -308,21 +311,23 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-all <name>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr ""
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-follower <name> <path> <follower_name>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -335,6 +340,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
+"ਆਮ ਚੋਣਾਂ: --verbose --test --help --usage --version --keep-missing --keep-"
+"foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -377,10 +384,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s ਮਾਰਗ %s ਵਿੱਚ ਅਣਜਾਣ ਹੈ\n"
 
 #: ../alternatives.c:350
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "%s ਸਲੇਵ, %s ਵਿੱਚ, ਲਈ ਮਾਰਗ ਗੁੰਮ ਹੈ\n"
+msgstr ""
 
 #: ../alternatives.c:360
 #, c-format
@@ -517,18 +523,17 @@ msgstr "ਹੁਣ ਲਿੰਕ %s ਨੂੰ ਸੰਕੇਤ ਕਰ ਰਿਹਾ 
 #: ../alternatives.c:981
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "ਸਮੂਹ %s "
 
 #: ../alternatives.c:982
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "ਤਰਜੀਹ %d\n"
 
 #: ../alternatives.c:984
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " ਸਲੇਵ %s: %s\n"
+msgstr " ਫਾਲੋਅਰ %s: %s\n"
 
 #: ../alternatives.c:989
 #, c-format
