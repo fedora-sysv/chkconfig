@@ -105,7 +105,9 @@ function check_alternative {
     cur_path=$(readlink ${altdir}/${name} | xargs dirname | xargs basename)
     cur_state=$(head -1 ${admindir}/${name})
     cur_best=$(LC_ALL=C ${TEST_BIN} --altdir "${altdir}" --admindir "${admindir}" --display TEST | grep best | cut -d " " -f5 | sed -e 's/\.$//' | xargs dirname | xargs basename)
-    cur_spath=$(readlink ${altdir}/${sname} | xargs basename)
+    cur_spath=""
+    # basename fails if the path is empty
+    [ ! "$1" = EMPTY ] && cur_spath=$(readlink "${altdir}/${sname}" | xargs basename)
     echo $cur_spath
     rlAssertEquals "Mode:" "${state}" "${cur_state}"
     rlAssertEquals "Highest Priority:" "${best}" "${cur_best}"
