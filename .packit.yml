@@ -9,3 +9,8 @@ jobs:
     trigger: pull_request
     targets:
       - fedora-all
+
+  - job: tests
+    trigger: pull_request
+    targets:
+      - fedora-all
