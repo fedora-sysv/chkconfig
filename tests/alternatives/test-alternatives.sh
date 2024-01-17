@@ -306,8 +306,6 @@ rlJournalStart
             check_alternative link_a auto EMPTY
             clean_dir
         rlPhaseEnd
-
-        rlPhase
     done
 
     # Cleanup phase: Remove test directory
