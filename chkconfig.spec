@@ -6,7 +6,7 @@ License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-BuildRequires: newt-devel gettext popt-devel libselinux-devel gcc systemd-devel make
+BuildRequires: gcc gettext libselinux-devel make newt-devel popt-devel systemd-devel
 # beakerlib might not be available on CentOS Stream any more
 %if 0%{?fedora}
 BuildRequires: beakerlib
