@@ -78,7 +78,7 @@ install:
 	done && test -z "$$fail"
 
 check: alternatives
-	./test-alternatives.sh
+	TEST_PATH=./ ./tests/alternatives/test-alternatives.sh
 
 tag:
 	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
