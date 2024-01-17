@@ -31,7 +31,7 @@ jobs:
       run:
         shell: bash
 
-    needs: buildcheck
+    needs: buildCheck
 
     steps:
       - name: Repository checkout
