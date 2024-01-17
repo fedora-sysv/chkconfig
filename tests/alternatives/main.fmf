@@ -1,0 +1,13 @@
+summary: Alternatives integration tests
+component: alternatives
+framework: beakerlib
+contact: Jan Macku <jamacku@redhat.com>
+tier: 1
+require:
+  - gcc
+  - gettext
+  - libselinux-devel
+  - make
+  - newt-devel
+  - popt-devel
+test: ./test-alternatives.sh

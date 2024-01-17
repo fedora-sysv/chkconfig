@@ -5,7 +5,13 @@ Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
-BuildRequires: newt-devel gettext popt-devel libselinux-devel beakerlib gcc systemd-devel make
+
+BuildRequires: newt-devel gettext popt-devel libselinux-devel gcc systemd-devel make
+# beakerlib might not be available on CentOS Stream any more
+%if 0%{?fedora}
+BuildRequires: beakerlib
+%endif
+
 Conflicts: initscripts <= 5.30-1
 
 Provides: /sbin/chkconfig
@@ -42,8 +48,11 @@ system at the same time.
 %build
 %make_build RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS"
 
+# tests are executed using tmt and tf on CentOS Stream and RHEL
+%if 0%{?fedora}
 %check
 make check
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT

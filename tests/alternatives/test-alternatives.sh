@@ -7,7 +7,8 @@
 TEST="Test Alternatives"
 
 # Package being tested
-PACKAGE="chkconfig"
+PACKAGE="alternatives"
+TEST_BIN="${TEST_PATH}${PACKAGE}"
 
 # We need to test both new "leader/follower" and legacy "master/slave" options
 FOLLOWER_OR_SLAVE="follower"
@@ -43,7 +44,7 @@ function add_alternative {
     spath="${testdir}/$1/$follower"
     touch ${spath}
 
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --install ${link} ${name} ${path} ${prio} --${FOLLOWER_OR_SLAVE} ${slink} ${sname} ${spath} ${family}" 0 "NEW\tlink: $1\tPrio: $prio\tFamily: $3"
+    rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --install ${link} ${name} ${path} ${prio} --${FOLLOWER_OR_SLAVE} ${slink} ${sname} ${spath} ${family}" 0 "NEW\tlink: $1\tPrio: $prio\tFamily: $3"
 }
 
 function remove_alternative {
@@ -51,13 +52,13 @@ function remove_alternative {
     rm ${testdir}/$1/*
     rmdir ${testdir}/$1
 
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --remove ${name} ${path}" 0 "REMOVE\tlink: $1"
+    rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --remove ${name} ${path}" 0 "REMOVE\tlink: $1"
 }
 
 function set_alternative {
     path="${testdir}/$1/main"
 
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --set ${name} ${path}" 0 "SET\tlink: $1"
+    rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --set ${name} ${path}" 0 "SET\tlink: $1"
 }
 
 function add_follower {
@@ -69,7 +70,7 @@ function add_follower {
 
     spath="${testdir}/$1/$follower"
     touch ${spath}
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --add-${FOLLOWER_OR_SLAVE} ${name} ${path} ${slink} ${sname} ${spath}" 0 "NEW_FOLLOWER\tlink: $spath"
+    rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --add-${FOLLOWER_OR_SLAVE} ${name} ${path} ${slink} ${sname} ${spath}" 0 "NEW_FOLLOWER\tlink: $spath"
 }
 
 function remove_follower {
@@ -78,7 +79,7 @@ function remove_follower {
     touch $path
 
     [ -n "$2" ] && follower=${2}
-    rlRun "./alternatives --altdir ${altdir} --admindir ${admindir} --remove-${FOLLOWER_OR_SLAVE} ${name} ${path} ${sname}" 0 "NEW_FOLLOWER\tlink: $spath"
+    rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --remove-${FOLLOWER_OR_SLAVE} ${name} ${path} ${sname}" 0 "NEW_FOLLOWER\tlink: $spath"
 }
 
 function check_alternative {
@@ -103,7 +104,7 @@ function check_alternative {
 
     cur_path=$(readlink ${altdir}/${name} | xargs dirname | xargs basename)
     cur_state=$(head -1 ${admindir}/${name})
-    cur_best=$(LC_ALL=C ./alternatives --altdir ${altdir} --admindir ${admindir} --display TEST | grep best | cut -d " " -f5 | sed -e 's/\.$//' | xargs dirname | xargs basename)
+    cur_best=$(LC_ALL=C ${TEST_BIN} --altdir "${altdir}" --admindir "${admindir}" --display TEST | grep best | cut -d " " -f5 | sed -e 's/\.$//' | xargs dirname | xargs basename)
     cur_spath=$(readlink ${altdir}/${sname} | xargs basename)
     echo $cur_spath
     rlAssertEquals "Mode:" "${state}" "${cur_state}"
