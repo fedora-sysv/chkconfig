@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 13:27+0100\n"
+"POT-Creation-Date: 2024-01-09 12:58+0100\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Interlingua <https://translate.fedoraproject.org/projects/"
@@ -351,223 +351,229 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directorio> --admindir <directorio>\n"
 
-#: ../alternatives.c:292
+#: ../alternatives.c:293
 #, c-format
 msgid "reading %s\n"
 msgstr "lectura de %s\n"
 
-#: ../alternatives.c:297
+#: ../alternatives.c:298
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "impossibile de aperir %s: %s\n"
 
-#: ../alternatives.c:305
+#: ../alternatives.c:306
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "impossibile de leger %s: %s\n"
 
-#: ../alternatives.c:313
+#: ../alternatives.c:314
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s es vacue!\n"
 
-#: ../alternatives.c:322
+#: ../alternatives.c:323
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "modo incorrecte in le linea 1 de %s\n"
 
-#: ../alternatives.c:329
+#: ../alternatives.c:330
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "ligamine primari incorrecte in %s\n"
 
-#: ../alternatives.c:341
+#: ../alternatives.c:342
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "percurso inexpectate %s in %s\n"
 
-#: ../alternatives.c:350
+#: ../alternatives.c:351
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "percurso mancante pro le sclavo %s in %s\n"
 
-#: ../alternatives.c:360
+#: ../alternatives.c:361
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "fin de file inexpectate in %s\n"
 
-#: ../alternatives.c:369
+#: ../alternatives.c:370
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "percurso al alternativa expectate in %s\n"
 
-#: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
-#: ../alternatives.c:426 ../alternatives.c:446
+#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
+#: ../alternatives.c:427 ../alternatives.c:447
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "linea inexpectate in %s: %s\n"
 
-#: ../alternatives.c:394
+#: ../alternatives.c:395
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:407
+#: ../alternatives.c:408
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "prioritate numeric expectate in %s\n"
 
-#: ../alternatives.c:425
+#: ../alternatives.c:426
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "percurso de sclavo expectate in %s\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:456
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "impossibile de leger le ligamine %s: %s\n"
 
-#: ../alternatives.c:470
+#: ../alternatives.c:472
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "le ligamine puncta a necun alternativa -- passada in modo manual\n"
 
-#: ../alternatives.c:475
+#: ../alternatives.c:477
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "ligamine cambiate -- passada in modo manual\n"
 
-#: ../alternatives.c:512 ../alternatives.c:519
+#: ../alternatives.c:517 ../alternatives.c:524
 #, c-format
 msgid "would remove %s\n"
 msgstr "removerea %s\n"
 
-#: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
+#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "impossibile de remover le ligamine %s: %s\n"
 
-#: ../alternatives.c:541 ../alternatives.c:563
+#: ../alternatives.c:547
+#, fuzzy, c-format
+#| msgid "failed to link %s -> %s: %s\n"
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr "impossibile de ligar %s -> %s: %s\n"
+
+#: ../alternatives.c:552
+#, c-format
+msgid ""
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
+"%s\n"
+msgstr ""
+
+#: ../alternatives.c:556 ../alternatives.c:574
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "ligarea %s -> %s\n"
 
-#: ../alternatives.c:550 ../alternatives.c:576
+#: ../alternatives.c:565 ../alternatives.c:587
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "impossibile de ligar %s -> %s: %s\n"
 
-#: ../alternatives.c:559
-#, c-format
-msgid ""
-"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
-"foreign was set and link points outside %s\n"
-msgstr ""
-
-#: ../alternatives.c:609
+#: ../alternatives.c:620
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s jam existe\n"
 
-#: ../alternatives.c:611
+#: ../alternatives.c:622
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "impossibile de crear %s: %s\n"
 
-#: ../alternatives.c:644
+#: ../alternatives.c:655
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "impossibile de reimplaciar %s con %s: %s\n"
 
-#: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
-#: ../alternatives.c:697
+#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
+#: ../alternatives.c:708
 #, c-format
 msgid "running %s\n"
 msgstr "%s es in le curso del execution\n"
 
-#: ../alternatives.c:770
+#: ../alternatives.c:781
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "le ligamine %s es incorrecte pro le sclavo %s (%s %s)\n"
 
-#: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
-#: ../alternatives.c:1126
+#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
+#: ../alternatives.c:1137
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s non ha essite configurate como un alternativa pro %s\n"
 
-#: ../alternatives.c:862
+#: ../alternatives.c:873
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s non ha essite configurate como un alternativa pro %s\n"
 
-#: ../alternatives.c:920
+#: ../alternatives.c:931
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "le ligamine primari pro %s debe esser %s\n"
 
-#: ../alternatives.c:972
+#: ../alternatives.c:983
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - stato es auto.\n"
 
-#: ../alternatives.c:974
+#: ../alternatives.c:985
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - stato es manual.\n"
 
-#: ../alternatives.c:976
+#: ../alternatives.c:987
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " le ligamine puncta actualmente a %s\n"
 
-#: ../alternatives.c:981
+#: ../alternatives.c:992
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:982
+#: ../alternatives.c:993
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:984
+#: ../alternatives.c:995
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr " sclavo %s: %s\n"
 
-#: ../alternatives.c:989
+#: ../alternatives.c:1000
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Le `melior' version currente es %s.\n"
 
-#: ../alternatives.c:1024
+#: ../alternatives.c:1035
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Il ha %d programma que forni '%s'.\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1036
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Il ha %d programmas que forni '%s'.\n"
 
-#: ../alternatives.c:1029
+#: ../alternatives.c:1040
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Selection    Commando\n"
 
-#: ../alternatives.c:1044
+#: ../alternatives.c:1055
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Preme Intro pro retener le selection currente[+] o introduce le numero de "
 "selection: "
 
-#: ../alternatives.c:1048
+#: ../alternatives.c:1059
 #, c-format
 msgid ""
 "\n"
@@ -576,37 +582,37 @@ msgstr ""
 "\n"
 "error al leger de selection\n"
 
-#: ../alternatives.c:1075
+#: ../alternatives.c:1086
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1142
+#: ../alternatives.c:1153
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(removerea %s\n"
 
-#: ../alternatives.c:1144
+#: ../alternatives.c:1155
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "impossibile de remover %s: %s\n"
 
-#: ../alternatives.c:1312
+#: ../alternatives.c:1323
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1374
+#: ../alternatives.c:1385
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s non valide\n"
 
-#: ../alternatives.c:1379
+#: ../alternatives.c:1390
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s non valide\n"
 
-#: ../alternatives.c:1389
+#: ../alternatives.c:1400
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives, version %s\n"

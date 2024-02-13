@@ -18,12 +18,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 13:27+0100\n"
+"POT-Creation-Date: 2024-01-09 12:58+0100\n"
 "PO-Revision-Date: 2024-02-10 16:36+0000\n"
 "Last-Translator: middlingphys <middlingphys@users.noreply.translate."
 "fedoraproject.org>\n"
-"Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/ja/>\n"
+"Language-Team: Japanese <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,9 +115,8 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"サービス %s は chkconfig をサポートしていますが、"
-"いずれのランレベルでも参照されていません ('chkconfig --add %s' "
-"を実行してください)\n"
+"サービス %s は chkconfig をサポートしていますが、いずれのランレベルでも参照さ"
+"れていません ('chkconfig --add %s' を実行してください)\n"
 
 #: ../chkconfig.c:87
 #, c-format
@@ -292,8 +291,9 @@ msgstr "                    [--family <ファミリー>]\n"
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--follower <フォロワーリンク> <フォロワー名> "
-"<フォロワーパス>]*\n"
+msgstr ""
+"                    [--follower <フォロワーリンク> <フォロワー名> <フォロワー"
+"パス>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -336,8 +336,8 @@ msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-follower <名前> <パス> <フォロワーリンク> "
-"<フォロワー名> <フォロワーパス>\n"
+"       alternatives --add-follower <名前> <パス> <フォロワーリンク> <フォロ"
+"ワー名> <フォロワーパス>\n"
 
 #: ../alternatives.c:100
 #, c-format
@@ -363,220 +363,234 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <ディレクトリ> --admindir <ディレクトリ>\n"
 
-#: ../alternatives.c:292
+#: ../alternatives.c:293
 #, c-format
 msgid "reading %s\n"
 msgstr "%s 読み込み中\n"
 
-#: ../alternatives.c:297
+#: ../alternatives.c:298
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%s を開くのに失敗しました: %s\n"
 
-#: ../alternatives.c:305
+#: ../alternatives.c:306
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%s の読み込みに失敗しました: %s\n"
 
-#: ../alternatives.c:313
+#: ../alternatives.c:314
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s は空です!\n"
 
-#: ../alternatives.c:322
+#: ../alternatives.c:323
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s の 1 行目は不正なモードです。\n"
 
-#: ../alternatives.c:329
+#: ../alternatives.c:330
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s に不正な主要リンクがあります。\n"
 
-#: ../alternatives.c:341
+#: ../alternatives.c:342
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "%2$s に予期しないパス %1$s があります。\n"
 
-#: ../alternatives.c:350
+#: ../alternatives.c:351
 #, c-format
 msgid "missing path for follower %s in %s\n"
 msgstr "%2$s にフォロワー %1$s のパスが欠如しています。\n"
 
-#: ../alternatives.c:360
+#: ../alternatives.c:361
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s に予期しないファイル終端があります。\n"
 
-#: ../alternatives.c:369
+#: ../alternatives.c:370
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "%s には代替のパスが想定されています。\n"
 
-#: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
-#: ../alternatives.c:426 ../alternatives.c:446
+#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
+#: ../alternatives.c:427 ../alternatives.c:447
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s に予期しない行があります: %s\n"
 
-#: ../alternatives.c:394
+#: ../alternatives.c:395
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr "最後の '@' がないか、%s のファミリーが空です\n"
 
-#: ../alternatives.c:407
+#: ../alternatives.c:408
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s には数値の優先度が想定されています。\n"
 
-#: ../alternatives.c:425
+#: ../alternatives.c:426
 #, c-format
 msgid "follower path expected in %s\n"
 msgstr "%s にはフォロワーのパスが想定されています。\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:456
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "リンク %s の読み込みに失敗: %s\n"
 
-#: ../alternatives.c:470
+#: ../alternatives.c:472
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "リンクはどの代替も指定していません -- 手動に設定します。\n"
 
-#: ../alternatives.c:475
+#: ../alternatives.c:477
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "リンクの変更 -- 手動に設定します。\n"
 
-#: ../alternatives.c:512 ../alternatives.c:519
+#: ../alternatives.c:517 ../alternatives.c:524
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s を削除する。\n"
 
-#: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
+#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "リンク %s の削除に失敗: %s\n"
 
-#: ../alternatives.c:541 ../alternatives.c:563
-#, c-format
-msgid "would link %s -> %s\n"
-msgstr "%s から %s へリンク\n"
-
-#: ../alternatives.c:550 ../alternatives.c:576
-#, c-format
-msgid "failed to link %s -> %s: %s\n"
-msgstr "%s から %s へのリンク失敗: %s\n"
-
-#: ../alternatives.c:559
-#, c-format
-msgid ""
-"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
-"foreign was set and link points outside %s\n"
+#: ../alternatives.c:547
+#, fuzzy, c-format
+#| msgid ""
+#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
+#| "keep-foreign was set and link points outside %s\n"
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
 "シンボリックリンク %s -> %s の作成に失敗しました。 %s がすでに存在しており、"
 "シンボリックリンクファイルではないか、--keep-foreign が指定されていてかつリン"
 "クが %s の外を指しています。\n"
 
-#: ../alternatives.c:609
+#: ../alternatives.c:552
+#, fuzzy, c-format
+#| msgid ""
+#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
+#| "keep-foreign was set and link points outside %s\n"
+msgid ""
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
+"%s\n"
+msgstr ""
+"シンボリックリンク %s -> %s の作成に失敗しました。 %s がすでに存在しており、"
+"シンボリックリンクファイルではないか、--keep-foreign が指定されていてかつリン"
+"クが %s の外を指しています。\n"
+
+#: ../alternatives.c:556 ../alternatives.c:574
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "%s から %s へリンク\n"
+
+#: ../alternatives.c:565 ../alternatives.c:587
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "%s から %s へのリンク失敗: %s\n"
+
+#: ../alternatives.c:620
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s は既に存在します。\n"
 
-#: ../alternatives.c:611
+#: ../alternatives.c:622
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s の作成に失敗しました: %s\n"
 
-#: ../alternatives.c:644
+#: ../alternatives.c:655
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s を %s に置き換えるのに失敗しました: %s\n"
 
-#: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
-#: ../alternatives.c:697
+#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
+#: ../alternatives.c:708
 #, c-format
 msgid "running %s\n"
 msgstr "%s 実行中\n"
 
-#: ../alternatives.c:770
+#: ../alternatives.c:781
 #, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "リンク %s はフォロワー %s(%s %s)に不適切です。\n"
 
-#: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
-#: ../alternatives.c:1126
+#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
+#: ../alternatives.c:1137
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s は %s の為の代替として設定されていません。\n"
 
-#: ../alternatives.c:862
+#: ../alternatives.c:873
 #, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s は %s (%s)の為の代替フォロワーとして設定されていません。\n"
 
-#: ../alternatives.c:920
+#: ../alternatives.c:931
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s の主要リンクは %s とします。\n"
 
-#: ../alternatives.c:972
+#: ../alternatives.c:983
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - ステータスは自動です。\n"
 
-#: ../alternatives.c:974
+#: ../alternatives.c:985
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - ステータスは手動です。\n"
 
-#: ../alternatives.c:976
+#: ../alternatives.c:987
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " リンクは現在 %s を指しています。\n"
 
-#: ../alternatives.c:981
+#: ../alternatives.c:992
 #, c-format
 msgid "family %s "
 msgstr "ファミリー %s "
 
-#: ../alternatives.c:982
+#: ../alternatives.c:993
 #, c-format
 msgid "priority %d\n"
 msgstr "優先度 %d\n"
 
-#: ../alternatives.c:984
+#: ../alternatives.c:995
 #, c-format
 msgid " follower %s: %s\n"
 msgstr " フォロワー %s: %s\n"
 
-#: ../alternatives.c:989
+#: ../alternatives.c:1000
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "現在の「最適」バージョンは %s です。\n"
 
-#: ../alternatives.c:1024
+#: ../alternatives.c:1035
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d 個の '%s' を提供するプログラムがあります。\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1036
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d 個の '%s' を提供するプログラムがあります。\n"
 
-#: ../alternatives.c:1029
+#: ../alternatives.c:1040
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  選択       コマンド\n"
 
-#: ../alternatives.c:1044
+#: ../alternatives.c:1055
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Enter を押して現在の選択 [+] を保持するか、選択番号を入力します: "
 
-#: ../alternatives.c:1048
+#: ../alternatives.c:1059
 #, c-format
 msgid ""
 "\n"
@@ -585,39 +599,39 @@ msgstr ""
 "\n"
 "選択の読み込みでエラー\n"
 
-#: ../alternatives.c:1075
+#: ../alternatives.c:1086
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 "%s/%s にアクセスできません: そのようなファイルまたはディレクトリはありませ"
 "ん\n"
 
-#: ../alternatives.c:1142
+#: ../alternatives.c:1153
 #, c-format
 msgid "(would remove %s\n"
 msgstr "%s を削除する。\n"
 
-#: ../alternatives.c:1144
+#: ../alternatives.c:1155
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s の削除に失敗しました: %s\n"
 
-#: ../alternatives.c:1312
+#: ../alternatives.c:1323
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family には '@' 記号を含めることができません\n"
 
-#: ../alternatives.c:1374
+#: ../alternatives.c:1385
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s は無効です。\n"
 
-#: ../alternatives.c:1379
+#: ../alternatives.c:1390
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s は無効です。\n"
 
-#: ../alternatives.c:1389
+#: ../alternatives.c:1400
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives バージョン %s\n"
