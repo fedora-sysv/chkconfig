@@ -13,23 +13,23 @@
 # Hajime Taira <htaira@fedoraproject.org>, 2016. #zanata
 # Noriko Mizumoto <noriko.mizumoto@gmail.com>, 2016. #zanata
 # Casey Jones <nahareport@live.com>, 2018. #zanata
-# middlingphys <middlingphys@users.noreply.translate.fedoraproject.org>, 2023.
+# middlingphys <middlingphys@users.noreply.translate.fedoraproject.org>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 13:27+0100\n"
-"PO-Revision-Date: 2023-01-18 03:20+0000\n"
+"PO-Revision-Date: 2024-02-10 16:36+0000\n"
 "Last-Translator: middlingphys <middlingphys@users.noreply.translate."
 "fedoraproject.org>\n"
-"Language-Team: Japanese <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/ja/>\n"
+"Language-Team: Japanese <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15\n"
+"X-Generator: Weblate 5.3.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -115,13 +115,14 @@ msgid ""
 "service %s supports chkconfig, but is not referenced in any runlevel (run "
 "'chkconfig --add %s')\n"
 msgstr ""
-"サービス %s は chkconfig をサポートしますが実行レベルで参照されていません "
-"(run 'chkconfig --add %s')\n"
+"サービス %s は chkconfig をサポートしていますが、"
+"いずれのランレベルでも参照されていません ('chkconfig --add %s' "
+"を実行してください)\n"
 
 #: ../chkconfig.c:87
 #, c-format
 msgid "service %s does not support chkconfig\n"
-msgstr "サービス %s は、chkconfig をサポートしていません。\n"
+msgstr "サービス %s は、chkconfig をサポートしていません\n"
 
 #: ../chkconfig.c:89
 #, c-format
@@ -220,7 +221,7 @@ msgstr "ディレクトリ %s からの読み込み中にエラーが発生し�
 #: ../ntsysv.c:446
 #, c-format
 msgid "You must be root to run %s.\n"
-msgstr "%sを実行する為にルートでなければなりません。\n"
+msgstr "%s を実行する為にルートでなければなりません。\n"
 
 #: ../ntsysv.c:463
 #, c-format
@@ -287,11 +288,12 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <ファミリー>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <リンク> <名前> <パス>]*\n"
+msgstr "                    [--follower <フォロワーリンク> <フォロワー名> "
+"<フォロワーパス>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -329,16 +331,18 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <名前>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <名前> <パス>\n"
+msgstr ""
+"       alternatives --add-follower <名前> <パス> <フォロワーリンク> "
+"<フォロワー名> <フォロワーパス>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <名前> <パス>\n"
+msgstr "       alternatives --remove-follower <名前> <パス> <フォロワー名>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -392,29 +396,28 @@ msgstr "%s に不正な主要リンクがあります。\n"
 #: ../alternatives.c:341
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%s に予想外のパス %s があります。\n"
+msgstr "%2$s に予期しないパス %1$s があります。\n"
 
 #: ../alternatives.c:350
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "%s にスレーブ %s のパスが欠如しています。\n"
+msgstr "%2$s にフォロワー %1$s のパスが欠如しています。\n"
 
 #: ../alternatives.c:360
 #, c-format
 msgid "unexpected end of file in %s\n"
-msgstr "%s が予想外なファイル終結です。\n"
+msgstr "%s に予期しないファイル終端があります。\n"
 
 #: ../alternatives.c:369
 #, c-format
 msgid "path to alternate expected in %s\n"
-msgstr "%s に交替のパスが予想されます。\n"
+msgstr "%s には代替のパスが想定されています。\n"
 
 #: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
 #: ../alternatives.c:426 ../alternatives.c:446
 #, c-format
 msgid "unexpected line in %s: %s\n"
-msgstr "%s に予想外の行があります: %s\n"
+msgstr "%s に予期しない行があります: %s\n"
 
 #: ../alternatives.c:394
 #, c-format
@@ -424,13 +427,12 @@ msgstr "最後の '@' がないか、%s のファミリーが空です\n"
 #: ../alternatives.c:407
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "%s に数値の優先が予想されます。\n"
+msgstr "%s には数値の優先度が想定されています。\n"
 
 #: ../alternatives.c:425
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "%s にスレーブパスを予想されます。\n"
+msgstr "%s にはフォロワーのパスが想定されています。\n"
 
 #: ../alternatives.c:454
 #, c-format
@@ -445,7 +447,7 @@ msgstr "リンクはどの代替も指定していません -- 手動に設定�
 #: ../alternatives.c:475
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "リンクの変更-- 手動に設定します。\n"
+msgstr "リンクの変更 -- 手動に設定します。\n"
 
 #: ../alternatives.c:512 ../alternatives.c:519
 #, c-format
@@ -490,7 +492,7 @@ msgstr "%s の作成に失敗しました: %s\n"
 #: ../alternatives.c:644
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "%s を %s への交換に失敗しました: %s\n"
+msgstr "%s を %s に置き換えるのに失敗しました: %s\n"
 
 #: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
 #: ../alternatives.c:697
@@ -499,21 +501,20 @@ msgid "running %s\n"
 msgstr "%s 実行中\n"
 
 #: ../alternatives.c:770
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "リンク %s はスレーブ %s(%s %s)に不適切です。\n"
+msgstr "リンク %s はフォロワー %s(%s %s)に不適切です。\n"
 
 #: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
 #: ../alternatives.c:1126
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
-msgstr "%s は %s の為の互換用として設定されていません。\n"
+msgstr "%s は %s の為の代替として設定されていません。\n"
 
 #: ../alternatives.c:862
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s は %s の為の互換用として設定されていません。\n"
+msgstr "%s は %s (%s)の為の代替フォロワーとして設定されていません。\n"
 
 #: ../alternatives.c:920
 #, c-format
@@ -523,7 +524,7 @@ msgstr "%s の主要リンクは %s とします。\n"
 #: ../alternatives.c:972
 #, c-format
 msgid "%s - status is auto.\n"
-msgstr "%s -ステータスは自動です。\n"
+msgstr "%s - ステータスは自動です。\n"
 
 #: ../alternatives.c:974
 #, c-format
@@ -546,10 +547,9 @@ msgid "priority %d\n"
 msgstr "優先度 %d\n"
 
 #: ../alternatives.c:984
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " スレーブ %s: %s\n"
+msgstr " フォロワー %s: %s\n"
 
 #: ../alternatives.c:989
 #, c-format
@@ -605,7 +605,7 @@ msgstr "%s の削除に失敗しました: %s\n"
 #: ../alternatives.c:1312
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr "--ファミリーには '@' 記号を含めることができません\n"
+msgstr "--family には '@' 記号を含めることができません\n"
 
 #: ../alternatives.c:1374
 #, c-format
