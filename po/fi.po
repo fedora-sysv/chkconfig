@@ -10,7 +10,7 @@
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2016. #zanata
 # Toni Rantala <trantalafilo@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
-# Jan Kuparinen <copper_fin@hotmail.com>, 2021, 2022, 2023.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2021, 2022, 2023, 2024.
 # Ricky Tigg <ricky.tigg@gmail.com>, 2021, 2022.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024.
 msgid ""
@@ -19,8 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-09 12:58+0100\n"
 "PO-Revision-Date: 2024-02-20 20:35+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/fi/>\n"
 "Language: fi\n"
@@ -466,16 +465,13 @@ msgstr ""
 "linkki\n"
 
 #: ../alternatives.c:552
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"%s -> %s linkittäminen epäonnistui: %s on olemassa, eikä se ole symbolinen "
-"linkki tai --keep-foreign on asetettu ja linkki osoittaa %s:n ulkopuolelle\n"
+"linkin %s -> %s luominen epäonnistui: --keep-foreign on asetettu ja linkki "
+"%s osoittaa %s:n ulkopuolelle\n"
 
 #: ../alternatives.c:556 ../alternatives.c:574
 #, c-format
