@@ -5,13 +5,13 @@
 # Translators:
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2007
 # notting <notting@redhat.com>, 2011
-# Andi Chandler <andi@gowling.com>, 2023.
+# Andi Chandler <andi@gowling.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-09 12:58+0100\n"
-"PO-Revision-Date: 2023-04-06 18:20+0000\n"
+"PO-Revision-Date: 2024-03-18 18:36+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/en_GB/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.2\n"
+"X-Generator: Weblate 5.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -448,26 +448,18 @@ msgid "failed to remove link %s: %s\n"
 msgstr "failed to remove link %s: %s\n"
 
 #: ../alternatives.c:547
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr ""
-"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
-"foreign was set and link points outside %s\n"
+msgstr "failed to link %s -> %s: %s exists and it is not a symlink\n"
 
 #: ../alternatives.c:552
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
-"foreign was set and link points outside %s\n"
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  %"
+"s\n"
 
 #: ../alternatives.c:556 ../alternatives.c:574
 #, c-format
