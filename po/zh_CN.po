@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 13:27+0100\n"
+"POT-Creation-Date: 2024-01-09 12:58+0100\n"
 "PO-Revision-Date: 2023-05-22 04:20+0000\n"
 "Last-Translator: yangyangdaji <1504305527@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
@@ -284,7 +284,8 @@ msgstr "                    [--family <家族>]\n"
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--follower <追随者链接> <追随者名称> <追随者路径>]*\n"
+msgstr ""
+"                    [--follower <追随者链接> <追随者名称> <追随者路径>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -326,8 +327,9 @@ msgstr "       alternatives --remove-all <名称>\n"
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --add-follower <名称> <路径> <追随者链接> <追随者名称> "
-"<追随者路径>\n"
+msgstr ""
+"       alternatives --add-follower <名称> <路径> <追随者链接> <追随者名称> <"
+"追随者路径>\n"
 
 #: ../alternatives.c:100
 #, c-format
@@ -353,218 +355,232 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <目录> --admindir <目录>\n"
 
-#: ../alternatives.c:292
+#: ../alternatives.c:293
 #, c-format
 msgid "reading %s\n"
 msgstr "正在读取 %s\n"
 
-#: ../alternatives.c:297
+#: ../alternatives.c:298
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%s 打开失败：%s\n"
 
-#: ../alternatives.c:305
+#: ../alternatives.c:306
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%s 读取失败：%s\n"
 
-#: ../alternatives.c:313
+#: ../alternatives.c:314
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s 为空！\n"
 
-#: ../alternatives.c:322
+#: ../alternatives.c:323
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s 第1行的模式错误\n"
 
-#: ../alternatives.c:329
+#: ../alternatives.c:330
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s 中的首要链接错误\n"
 
-#: ../alternatives.c:341
+#: ../alternatives.c:342
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "路径 %s 意外出现在 %s 中\n"
 
-#: ../alternatives.c:350
+#: ../alternatives.c:351
 #, c-format
 msgid "missing path for follower %s in %s\n"
 msgstr "丢失了 %s 的追随者 %s\n"
 
-#: ../alternatives.c:360
+#: ../alternatives.c:361
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s 中意外出现文件结束符\n"
 
-#: ../alternatives.c:369
+#: ../alternatives.c:370
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "%s 中应当出现备用路径\n"
 
-#: ../alternatives.c:370 ../alternatives.c:396 ../alternatives.c:408
-#: ../alternatives.c:426 ../alternatives.c:446
+#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
+#: ../alternatives.c:427 ../alternatives.c:447
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s 中意外出现行：%s\n"
 
-#: ../alternatives.c:394
+#: ../alternatives.c:395
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr "%s 中结尾的 ‘@’ 缺失或者家族项目为空\n"
 
-#: ../alternatives.c:407
+#: ../alternatives.c:408
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s 中预期出现数字优先度\n"
 
-#: ../alternatives.c:425
+#: ../alternatives.c:426
 #, c-format
 msgid "follower path expected in %s\n"
 msgstr "追随者路径预期在 %s\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:456
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "链接 %s 读取失败：%s\n"
 
-#: ../alternatives.c:470
+#: ../alternatives.c:472
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "链接未指向任何备用项 -- 正在将模式设为手工\n"
 
-#: ../alternatives.c:475
+#: ../alternatives.c:477
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "链接已更改 -- 正将模式设为手工\n"
 
-#: ../alternatives.c:512 ../alternatives.c:519
+#: ../alternatives.c:517 ../alternatives.c:524
 #, c-format
 msgid "would remove %s\n"
 msgstr "将移除 %s\n"
 
-#: ../alternatives.c:514 ../alternatives.c:523 ../alternatives.c:570
+#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "链接 %s 移除失败：%s\n"
 
-#: ../alternatives.c:541 ../alternatives.c:563
+#: ../alternatives.c:547
+#, fuzzy, c-format
+#| msgid ""
+#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
+#| "keep-foreign was set and link points outside %s\n"
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr ""
+"无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，并且"
+"链接点在 %s 之外\n"
+
+#: ../alternatives.c:552
+#, fuzzy, c-format
+#| msgid ""
+#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
+#| "keep-foreign was set and link points outside %s\n"
+msgid ""
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
+"%s\n"
+msgstr ""
+"无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，并且"
+"链接点在 %s 之外\n"
+
+#: ../alternatives.c:556 ../alternatives.c:574
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "将链接 %s -> %s\n"
 
-#: ../alternatives.c:550 ../alternatives.c:576
+#: ../alternatives.c:565 ../alternatives.c:587
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s -> %s 链接失败：%s\n"
 
-#: ../alternatives.c:559
-#, c-format
-msgid ""
-"failed to link %s -> %s: %s exists and it is either not a symlink or --keep-"
-"foreign was set and link points outside %s\n"
-msgstr "无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，"
-"并且链接点在 %s 之外\n"
-
-#: ../alternatives.c:609
+#: ../alternatives.c:620
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s 已经存在\n"
 
-#: ../alternatives.c:611
+#: ../alternatives.c:622
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s 创建失败：%s\n"
 
-#: ../alternatives.c:644
+#: ../alternatives.c:655
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "未能将 %s 替换为 %s：%s\n"
 
-#: ../alternatives.c:672 ../alternatives.c:678 ../alternatives.c:690
-#: ../alternatives.c:697
+#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
+#: ../alternatives.c:708
 #, c-format
 msgid "running %s\n"
 msgstr "正在运行 %s\n"
 
-#: ../alternatives.c:770
+#: ../alternatives.c:781
 #, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "链接 %s 不正确的追随者 %s（%s%s）\n"
 
-#: ../alternatives.c:844 ../alternatives.c:881 ../alternatives.c:1095
-#: ../alternatives.c:1126
+#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
+#: ../alternatives.c:1137
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "未将 %s 配置为 %s 的备用项\n"
 
-#: ../alternatives.c:862
+#: ../alternatives.c:873
 #, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s 尚未配置为 %s（%s）的追随者替代方案\n"
 
-#: ../alternatives.c:920
+#: ../alternatives.c:931
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s 的首要链接必须是 %s\n"
 
-#: ../alternatives.c:972
+#: ../alternatives.c:983
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - 状态为自动。\n"
 
-#: ../alternatives.c:974
+#: ../alternatives.c:985
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - 状态为手工。\n"
 
-#: ../alternatives.c:976
+#: ../alternatives.c:987
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " 链接当前指向 %s\n"
 
-#: ../alternatives.c:981
+#: ../alternatives.c:992
 #, c-format
 msgid "family %s "
 msgstr "家族 %s "
 
-#: ../alternatives.c:982
+#: ../alternatives.c:993
 #, c-format
 msgid "priority %d\n"
 msgstr "优先度 %d\n"
 
-#: ../alternatives.c:984
+#: ../alternatives.c:995
 #, c-format
 msgid " follower %s: %s\n"
 msgstr " 追随者 %s：%s\n"
 
-#: ../alternatives.c:989
+#: ../alternatives.c:1000
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "当前“最佳”版本是 %s。\n"
 
-#: ../alternatives.c:1024
+#: ../alternatives.c:1035
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "共有 %d 个提供“%s”的程序。\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1036
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "共有 %d 个提供“%s”的程序。\n"
 
-#: ../alternatives.c:1029
+#: ../alternatives.c:1040
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  选项    命令\n"
 
-#: ../alternatives.c:1044
+#: ../alternatives.c:1055
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "按 Enter 保留当前选项[+]，或者键入选项编号： "
 
-#: ../alternatives.c:1048
+#: ../alternatives.c:1059
 #, c-format
 msgid ""
 "\n"
@@ -573,37 +589,37 @@ msgstr ""
 "\n"
 "选项读取出错\n"
 
-#: ../alternatives.c:1075
+#: ../alternatives.c:1086
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr "无法访问 %s/%s：没有这样的文件或目录\n"
 
-#: ../alternatives.c:1142
+#: ../alternatives.c:1153
 #, c-format
 msgid "(would remove %s\n"
 msgstr "将移除 %s\n"
 
-#: ../alternatives.c:1144
+#: ../alternatives.c:1155
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s 移除失败：%s\n"
 
-#: ../alternatives.c:1312
+#: ../alternatives.c:1323
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family 不能包含 ‘@’ 符号\n"
 
-#: ../alternatives.c:1374
+#: ../alternatives.c:1385
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s 无效\n"
 
-#: ../alternatives.c:1379
+#: ../alternatives.c:1390
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s 无效\n"
 
-#: ../alternatives.c:1389
+#: ../alternatives.c:1400
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives（备用）版本 %s\n"
