@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-09 12:58+0100\n"
-"PO-Revision-Date: 2024-02-11 13:42+0000\n"
+"PO-Revision-Date: 2024-04-02 02:36+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/ko/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.3.1\n"
+"X-Generator: Weblate 5.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -588,7 +588,7 @@ msgstr ""
 #: ../alternatives.c:1086
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr "%s/%s에 접근 할 수 없습니다: 그런 파일이나 디렉토리가 없습니다\n"
+msgstr "%s/%s에 접근 할 수 없습니다: 해당 파일이나 디렉토리가 없습니다\n"
 
 #: ../alternatives.c:1153
 #, c-format
