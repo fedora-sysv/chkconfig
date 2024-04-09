@@ -35,6 +35,11 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 
 %package -n alternatives
 Summary: A tool to maintain symbolic links determining default commands
+%if "%{_sbindir}" == "%{_bindir}"
+Provides: /usr/sbin/alternatives
+Provides: /usr/sbin/update-alternatives
+Requires: filesystem(unmerged-sbin-symlinks)
+%endif
 
 %description -n alternatives
 alternatives creates, removes, maintains and displays information about the
