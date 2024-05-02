@@ -341,6 +341,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     while (line && *line) {
         if (*line == '/') {
             fprintf(stderr, _("path %s unexpected in %s\n"), line, path);
+            free(line);
             return 1;
         }
 
