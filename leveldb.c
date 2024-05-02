@@ -525,6 +525,7 @@ int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
     tmpbufstart = (char *)malloc(sb.st_size + 1);
     if (tmpbufstart == NULL) {
         close(fd);
+        munmap(bufstart, sb.st_size);
         return -1;
     }
 
