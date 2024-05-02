@@ -106,7 +106,7 @@ static int usage(int rc) {
     exit(rc);
 }
 
-/* 
+/*
  * Function to clean path form unnecessary backslashes
  * It will make from //abcd///efgh/ -> /abcd/efgh/
  */
@@ -120,7 +120,7 @@ const char *normalize_path(const char *s) {
             } while (*dst == '/' && *src == '/');
             dst++;
         }
-    }  
+    }
     return (const char *)s;
 }
 
@@ -328,6 +328,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     line = parseLine(&buf);
     if (!line || *line != '/') {
         fprintf(stderr, _("bad primary link in %s\n"), path);
+        free(line);
         return 1;
     }
 
