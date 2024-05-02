@@ -446,8 +446,10 @@ static int readConfig(struct alternativeSet *set, const char *title,
         line = parseLine(&buf);
         if (line && *line) {
             fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
+            free(line);
             return 1;
         }
+        free(line);
     }
 
     leader_path = alloca(strlen(altDir) + strlen(set->alts[0].leader.title) + 2);
