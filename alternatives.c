@@ -1254,7 +1254,9 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
-    char *title, *target, *followerTitle;
+    char *title = NULL;
+    char *target = NULL;
+    char *followerTitle = NULL;
     enum programModes mode = MODE_UNKNOWN;
     struct alternative newAlt = {-1, {NULL, NULL, NULL}, NULL, NULL, 0, NULL};
     int flags = 0;
