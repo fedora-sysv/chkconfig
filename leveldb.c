@@ -140,6 +140,8 @@ int readDescription(char *start, char *bufstop, char **english_desc,
     }
     {
         char *desc = malloc(end - start + 1);
+        if (!desc)
+            return 1;
         strncpy(desc, start, end - start);
         desc[end - start] = '\0';
 
@@ -152,6 +154,7 @@ int readDescription(char *start, char *bufstop, char **english_desc,
             while (isspace(*start) && start < bufstop)
                 start++;
             if (start == bufstop || *start != '#') {
+                free(desc);
                 return 1;
             }
 
@@ -160,6 +163,7 @@ int readDescription(char *start, char *bufstop, char **english_desc,
             while (isspace(*start) && start < bufstop)
                 start++;
             if (start == bufstop) {
+                free(desc);
                 return 1;
             }
 
