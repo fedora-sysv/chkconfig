@@ -510,7 +510,6 @@ static int serviceNameCmp(const void *a, const void *b) {
 static int listService(char *item, int type) {
     DIR *dir;
     struct dirent *ent;
-    struct service *services;
     int i;
     int numServices = 0;
     int numServicesAlloced;
@@ -521,6 +520,7 @@ static int listService(char *item, int type) {
         return showServiceInfoByName(item, type, 0);
 
     if (type & TYPE_INIT_D) {
+        struct service *services;
         numServices = readServices(&services);
         if (numServices < 0)
             return 1;
@@ -530,10 +530,10 @@ static int listService(char *item, int type) {
         for (i = 0; i < numServices; i++) {
             if (systemd && isOverriddenBySystemd(services[i].name))
                 continue;
-            if (showServiceInfo(services[i], 1)) {
-                return 1;
-            }
+            (void) showServiceInfo(services[i], 1);
         }
+
+        free(services);
     }
 
     if (isXinetdEnabled() && type & TYPE_XINETD) {
