@@ -1090,12 +1090,12 @@ int runlevelsToTargets(int runlevels, char ***targets, int *n_targets) {
     char **tmp;
     int n_ret = 0;
     int found = 0;
-    char *t;
     int i, j;
     int r;
 
     for (i = 0; i <= 6; i++) {
         if (1 << i & runlevels) {
+            char *t = NULL;
             runlevel[8] = '0' + i;
             r = readSystemdUnitProperty(runlevel, "Id", &t);
             if (r < 0)
@@ -1110,6 +1110,7 @@ int runlevelsToTargets(int runlevels, char ***targets, int *n_targets) {
             if (!found) {
                 tmp = (char **)realloc(ret, sizeof(char *) * (n_ret + 1));
                 if (tmp == NULL) {
+                    free(t);
                     r = -ENOMEM;
                     goto fail;
                 }
