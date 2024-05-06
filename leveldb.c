@@ -377,6 +377,8 @@ int readServices(struct service **services) {
         if (!readServiceInfo(ent->d_name, TYPE_INIT_D, servs + numservs, 0))
             numservs++;
     }
+
+    closedir(dir);
     *services = servs;
     return numservs;
 }
