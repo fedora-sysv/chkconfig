@@ -226,15 +226,22 @@ int readXinetdServiceInfo(char *name, struct service *service) {
     struct stat sb;
     char *buf = NULL, *ptr;
     char *eng_desc = NULL, *start;
+    int r;
 
-    asprintf(&filename, XINETDDIR "/%s", name);
-
-    if ((fd = open(filename, O_RDONLY)) < 0)
+    r = asprintf(&filename, XINETDDIR "/%s", name);
+    if (r < 0)
+        return -1;
+    fd = open(filename, O_RDONLY);
+    free(filename);
+    if(fd < 0)
         goto out_err;
+
     fstat(fd, &sb);
     if (!S_ISREG(sb.st_mode))
         goto out_err;
     buf = malloc(sb.st_size + 1);
+    if (!buf)
+        goto out_err;
     if (read(fd, buf, sb.st_size) != sb.st_size)
         goto out_err;
     close(fd);
@@ -309,7 +316,6 @@ out_err:
     if (fd >= 0)
         close(fd);
     free(buf);
-    free(filename);
     return -1;
 }
 
