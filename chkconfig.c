@@ -107,10 +107,10 @@ static void reloadSystemd(void) {
 }
 
 static int delService(char *name, int type, int level) {
-    int i, j, k, numservs, rc;
+    int i, j, k, numservs=0, rc;
     glob_t globres;
     struct service s;
-    struct service *services;
+    struct service *services = NULL;
 
     if ((rc = readServiceInfo(name, type, &s, 0))) {
         readServiceError(rc, name);
@@ -123,15 +123,18 @@ static int delService(char *name, int type, int level) {
 
     if (LSB && level == -1) {
         numservs = readServices(&services);
-        if (numservs < 0)
-            return 1;
+        if (numservs < 0) {
+            rc=1;
+            goto finish;
+        }
 
         for (i = 0; i < numservs; i++) {
             if (services[i].startDeps) {
                 for (j = 0; services[i].startDeps[j].name; j++) {
                     if (!strcmp(services[i].startDeps[j].name, s.name)) {
                         if (services[i].currentLevels) {
-                            return 1;
+                            rc=1;
+                            goto finish;
                         }
                     }
                 }
@@ -141,8 +144,10 @@ static int delService(char *name, int type, int level) {
                     if (!strcmp(services[i].stopDeps[j].name, s.name)) {
                         for (k = 0; k <= 6; k++) {
                             if (isConfigured(services[i].name, k, NULL, NULL) &&
-                                !(services[i].currentLevels & (1 << k)))
-                                return 1;
+                                !(services[i].currentLevels & (1 << k))) {
+                                rc=1;
+                                goto finish;
+                            }
                         }
                     }
                 }
@@ -160,7 +165,11 @@ static int delService(char *name, int type, int level) {
             }
         }
     }
-    return 0;
+
+finish:
+    freeService(s);
+    freeServices(services, numservs);
+    return rc;
 }
 
 static inline int laterThan(int i, int j) {
