@@ -313,6 +313,22 @@ out_err:
     return -1;
 }
 
+
+void freeService(struct service s) {
+    free(s.name);
+    free(s.startDeps);
+    free(s.stopDeps);
+    free(s.softStartDeps);
+    free(s.softStopDeps);
+    free(s.provides);
+}
+
+void freeServices(struct service *s, int n) {
+    for (int i = 0; i < n; i++)
+        freeService(s[i]);
+    free(s);
+}
+
 int readServices(struct service **services) {
     DIR *dir;
     struct dirent *ent;
