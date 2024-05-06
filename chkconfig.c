@@ -591,8 +591,14 @@ static int listService(char *item, int type) {
         t = s;
         for (i = 0; i < numServices; i++, s++) {
             char *tmp = malloc(strlen(s->name) + 5);
+            if (!tmp) {
+                closedir(dir);
+                free(t);
+                return 1;
+            }
             sprintf(tmp, "%s:", s->name);
             printf("\t%-15s\t%s\n", tmp, s->levels ? _("on") : _("off"));
+            free(tmp);
         }
         closedir(dir);
         free(t);
