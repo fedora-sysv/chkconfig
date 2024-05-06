@@ -875,7 +875,7 @@ int setXinetdService(struct service s, int on) {
     int oldfd, newfd;
     char oldfname[100], newfname[100];
     char tmpstr[50];
-    char *buf, *ptr, *tmp;
+    char *buf, *ptr, *tmp, *start;
     struct stat sb;
     mode_t mode;
     int r;
@@ -904,6 +904,7 @@ int setXinetdService(struct service s, int on) {
         free(buf);
         return -1;
     }
+    start = buf;
     while (buf) {
         tmp = buf;
         ptr = strchr(buf, '\n');
@@ -924,6 +925,7 @@ int setXinetdService(struct service s, int on) {
         }
         buf = ptr;
     }
+    free(start);
     close(newfd);
     unlink(oldfname);
     r = rename(newfname, oldfname);
