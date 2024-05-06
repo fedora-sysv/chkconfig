@@ -311,6 +311,7 @@ int readXinetdServiceInfo(char *name, struct service *service) {
         buf = ptr;
     }
     *service = serv;
+    free(start);
     return 0;
 out_err:
     if (fd >= 0)
