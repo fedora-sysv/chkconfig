@@ -304,6 +304,7 @@ static int frobDependencies(struct service *s) {
     int numservs = 0;
     int nResolved = 0;
     int i;
+    int r = 0;
 
     numservs = readServices(&servs);
     if (numservs < 0)
@@ -328,8 +329,10 @@ static int frobDependencies(struct service *s) {
 
     /* Resolve our target */
     if (frobOneDependencies(s, servs, numservs, 1, LSB) == -1)
-        return 1;
-    return 0;
+        r=1;
+
+    freeServices(servs, numservs);
+    return r;
 }
 
 static int addService(char *name, int type) {
