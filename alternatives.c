@@ -588,7 +588,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
             printf(_("would link %s -> %s\n"), l->facility, sl);
         } else {
             memset(buf, 0, sizeof(buf));
-            readlink(l->facility, buf, sizeof(buf));
+            readlink(l->facility, buf, sizeof(buf)-1);
 
             if(!streq(sl, buf)) {
                 unlink(l->facility);
@@ -606,7 +606,7 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
         printf(_("would link %s -> %s\n"), sl, l->target);
     } else {
         memset(buf, 0, sizeof(buf));
-        readlink(sl, buf, sizeof(buf));
+        readlink(sl, buf, sizeof(buf)-1);
 
         if(!streq(l->target, buf)) {
             if (unlink(sl) && errno != ENOENT) {
