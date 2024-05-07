@@ -1420,12 +1420,12 @@ int main(int argc, const char **argv) {
 
     if (stat(altDir, &sb) || !S_ISDIR(sb.st_mode) || access(altDir, F_OK)) {
         fprintf(stderr, _("altdir %s invalid\n"), altDir);
-        return (2);
+        exit(2);
     }
 
     if (stat(stateDir, &sb) || !S_ISDIR(sb.st_mode) || access(stateDir, F_OK)) {
         fprintf(stderr, _("admindir %s invalid\n"), stateDir);
-        return (2);
+        exit(2);
     }
 
     switch (mode) {
