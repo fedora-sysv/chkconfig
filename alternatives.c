@@ -321,6 +321,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
         set->mode = MANUAL;
     } else {
         fprintf(stderr, _("bad mode on line 1 of %s\n"), path);
+        free(line);
         return 1;
     }
     free(line);
