@@ -1271,8 +1271,10 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
         if (!strcmp(ent->d_name, ".") || !strcmp(ent->d_name, ".."))
             continue;
 
-        if (readConfig(&set, ent->d_name, altDir, stateDir, flags))
+        if (readConfig(&set, ent->d_name, altDir, stateDir, flags)) {
+            closedir(dir);
             return 2;
+        }
 
         printf("%-*s\t%s\t%s\n", max_name, ent->d_name,
                set.mode == AUTO ? "auto  " : "manual", set.currentLink);
