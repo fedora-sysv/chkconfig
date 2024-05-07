@@ -749,6 +749,7 @@ int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
     if (!partialOk &&
         ((serv.levels == -1) || !serv.desc ||
          (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == 100)))) {
+        freeService(serv);
         return 1;
     }
 
