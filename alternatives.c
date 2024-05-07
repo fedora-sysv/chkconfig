@@ -480,7 +480,8 @@ static int readConfig(struct alternativeSet *set, const char *title,
     if (((i = readlink(leader_path, linkBuf, sizeof(linkBuf) - 1)) < 0)) {
         fprintf(stderr, _("failed to read link %s: %s\n"),
                 set->alts[0].leader.facility, strerror(errno));
-        return 2;
+        r = 2;
+        goto finish;
     }
 
     linkBuf[i] = '\0';
@@ -506,6 +507,11 @@ static int readConfig(struct alternativeSet *set, const char *title,
 
     set->currentLink = strdup(normalize_path(linkBuf));
 finish:
+    for (i = 1; i < numGroups; i++) {
+        free(groups[i].title);
+        free(groups[i].facility);
+    }
+    free(groups);
     free(line);
     return r;
 }
