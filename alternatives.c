@@ -814,6 +814,7 @@ static int matchFollowers(struct alternativeSet *set,
                         set->alts[k].followers[i].facility,
                         set->alts[k].followers[i].title,
                         template.followers[j].facility, template.followers[j].title);
+                    free(newLinks);
                     return 2;
                 }
                 newLinks[j] = set->alts[k].followers[i];
