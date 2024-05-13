@@ -110,7 +110,7 @@ static int usage(int rc) {
  * Function to clean path form unnecessary backslashes
  * It will make from //abcd///efgh/ -> /abcd/efgh/
  */
-const char *normalize_path(const char *s) {
+char *normalize_path(char *s) {
     if (s) {
         const char *src = s;
         char *dst = (char *)s;
@@ -121,7 +121,12 @@ const char *normalize_path(const char *s) {
             dst++;
         }
     }
-    return (const char *)s;
+    return s;
+}
+
+char *normalize_path_alloc(const char *s) {
+    char *ret = strdup(s);
+    return normalize_path(ret);
 }
 
 int streq(const char *a, const char *b) {
@@ -197,7 +202,7 @@ static void setupDoubleArg(enum programModes *mode, const char ***nextArgPtr,
 
     if (!*nextArg)
         usage(2);
-    *target = strdup(normalize_path(*nextArg));
+    *target = normalize_path_alloc(*nextArg);
     *nextArgPtr = nextArg + 1;
 }
 
@@ -218,7 +223,7 @@ static void setupTripleArg(enum programModes *mode, const char ***nextArgPtr,
 
     if (!*nextArg)
         usage(2);
-    *target = strdup(normalize_path(*nextArg));
+    *target = normalize_path_alloc(*nextArg);
     nextArg++;
 
     if (!*nextArg)
@@ -232,7 +237,7 @@ static void setupLinkSet(struct linkSet *set, const char ***nextArgPtr) {
 
     if (!*nextArg || **nextArg != '/')
         usage(2);
-    set->facility = strdup(normalize_path(*nextArg));
+    set->facility = normalize_path_alloc(*nextArg);
     nextArg++;
 
     if (!*nextArg || **nextArg == '/')
@@ -242,7 +247,7 @@ static void setupLinkSet(struct linkSet *set, const char ***nextArgPtr) {
 
     if (!*nextArg || **nextArg != '/')
         usage(2);
-    set->target = strdup(normalize_path(*nextArg));
+    set->target = normalize_path_alloc(*nextArg);
     *nextArgPtr = nextArg + 1;
 }
 
@@ -391,7 +396,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             goto finish;
         }
 
-        set->alts[set->numAlts].leader.facility = strdup(normalize_path(groups[0].facility));
+        set->alts[set->numAlts].leader.facility = normalize_path_alloc(groups[0].facility);
         set->alts[set->numAlts].leader.title = strdup(groups[0].title);
         set->alts[set->numAlts].leader.target = strsteal(&line);
         set->alts[set->numAlts].numFollowers = numGroups - 1;
@@ -455,7 +460,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             set->alts[set->numAlts].followers[i - 1].title =
                 strdup(groups[i].title);
             set->alts[set->numAlts].followers[i - 1].facility =
-                strdup(normalize_path(groups[i].facility));
+                normalize_path_alloc(groups[i].facility);
             set->alts[set->numAlts].followers[i - 1].target =
                 (line && strlen(line)) ? strsteal(&line) : NULL;
         }
@@ -505,7 +510,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
         set->current = i;
     }
 
-    set->currentLink = strdup(normalize_path(linkBuf));
+    set->currentLink = normalize_path_alloc(linkBuf);
 finish:
     for (i = 1; i < numGroups; i++) {
         free(groups[i].title);
@@ -1400,13 +1405,13 @@ int main(int argc, const char **argv) {
             nextArg++;
             if (!*nextArg)
                 usage(2);
-            altDir = strdup(normalize_path(*nextArg));
+            altDir = normalize_path_alloc(*nextArg);
             nextArg++;
         } else if (!strcmp(*nextArg, "--admindir")) {
             nextArg++;
             if (!*nextArg)
                 usage(2);
-            stateDir = strdup(normalize_path(*nextArg));
+            stateDir = normalize_path_alloc(*nextArg);
             nextArg++;
         } else if (!strcmp(*nextArg, "--list")) {
             if (mode != MODE_UNKNOWN)
