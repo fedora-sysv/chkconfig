@@ -44,7 +44,7 @@
 int selinux_restore(const char *name) {
     struct selabel_handle *hnd = NULL;
     struct stat buf;
-    security_context_t newcon = NULL;
+    char *newcon = NULL;
     int r = -1;
 
     hnd = selabel_open(SELABEL_CTX_FILE, NULL, 0);
