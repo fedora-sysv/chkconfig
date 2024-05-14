@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.26
+Version: 1.27
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -97,6 +97,33 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Tue May 14 2024 Jan Macku <jamacku@redhat.com> - 1.27-1
+- alternatives: properly handle chars with const in normalize_path
+- alternatives: use exit in main instead of return for critical failures
+- alternatives: fix leak
+- alternatives: fix leak
+- alternatives: fix possible overrun
+- alternatives: fix all the leaks of groups in readConfig
+- alternatives: fix all the leaks of read line in readConfig
+- alternatives: fix leak
+- alternatives: fix memory leak
+- alternatives: fix memory leak
+- alternatives: initialize parameters in main to NULL
+- alternatives: fix memory leak
+- Translated using Weblate (Korean)
+- Translated using Weblate (English (United Kingdom))
+- Translated using Weblate (Finnish)
+- Translated using Weblate (Finnish)
+- Translated using Weblate (Japanese)
+- Translated using Weblate (Swedish)
+- Translated using Weblate (Japanese)
+- Translated using Weblate (Polish)
+- Translated using Weblate (Korean)
+- Translated using Weblate (Georgian)
+- Update translation files
+- Translated using Weblate (Japanese)
+- Fix systemd dependency
+
 * Wed Jan 17 2024 Jan Macku <jamacku@redhat.com> - 1.26-1
 - fix(test): dot't call `basename` with empty string
 - spec: sort BuildRequires alphabetically
