@@ -44,7 +44,7 @@
 int selinux_restore(const char *name) {
     struct selabel_handle *hnd = NULL;
     struct stat buf;
-    security_context_t newcon = NULL;
+    char *newcon = NULL;
     int r = -1;
 
     hnd = selabel_open(SELABEL_CTX_FILE, NULL, 0);
@@ -140,6 +140,8 @@ int readDescription(char *start, char *bufstop, char **english_desc,
     }
     {
         char *desc = malloc(end - start + 1);
+        if (!desc)
+            return 1;
         strncpy(desc, start, end - start);
         desc[end - start] = '\0';
 
@@ -152,6 +154,7 @@ int readDescription(char *start, char *bufstop, char **english_desc,
             while (isspace(*start) && start < bufstop)
                 start++;
             if (start == bufstop || *start != '#') {
+                free(desc);
                 return 1;
             }
 
@@ -160,6 +163,7 @@ int readDescription(char *start, char *bufstop, char **english_desc,
             while (isspace(*start) && start < bufstop)
                 start++;
             if (start == bufstop) {
+                free(desc);
                 return 1;
             }
 
@@ -222,15 +226,22 @@ int readXinetdServiceInfo(char *name, struct service *service) {
     struct stat sb;
     char *buf = NULL, *ptr;
     char *eng_desc = NULL, *start;
+    int r;
 
-    asprintf(&filename, XINETDDIR "/%s", name);
-
-    if ((fd = open(filename, O_RDONLY)) < 0)
+    r = asprintf(&filename, XINETDDIR "/%s", name);
+    if (r < 0)
+        return -1;
+    fd = open(filename, O_RDONLY);
+    free(filename);
+    if(fd < 0)
         goto out_err;
+
     fstat(fd, &sb);
     if (!S_ISREG(sb.st_mode))
         goto out_err;
     buf = malloc(sb.st_size + 1);
+    if (!buf)
+        goto out_err;
     if (read(fd, buf, sb.st_size) != sb.st_size)
         goto out_err;
     close(fd);
@@ -300,13 +311,29 @@ int readXinetdServiceInfo(char *name, struct service *service) {
         buf = ptr;
     }
     *service = serv;
+    free(start);
     return 0;
 out_err:
     if (fd >= 0)
         close(fd);
     free(buf);
-    free(filename);
     return -1;
+}
+
+
+void freeService(struct service s) {
+    free(s.name);
+    free(s.startDeps);
+    free(s.stopDeps);
+    free(s.softStartDeps);
+    free(s.softStopDeps);
+    free(s.provides);
+}
+
+void freeServices(struct service *s, int n) {
+    for (int i = 0; i < n; i++)
+        freeService(s[i]);
+    free(s);
 }
 
 int readServices(struct service **services) {
@@ -350,6 +377,8 @@ int readServices(struct service **services) {
         if (!readServiceInfo(ent->d_name, TYPE_INIT_D, servs + numservs, 0))
             numservs++;
     }
+
+    closedir(dir);
     *services = servs;
     return numservs;
 }
@@ -525,6 +554,7 @@ int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
     tmpbufstart = (char *)malloc(sb.st_size + 1);
     if (tmpbufstart == NULL) {
         close(fd);
+        munmap(bufstart, sb.st_size);
         return -1;
     }
 
@@ -719,6 +749,7 @@ int parseServiceInfo(int fd, char *name, struct service *service, int honorHide,
     if (!partialOk &&
         ((serv.levels == -1) || !serv.desc ||
          (!serv.isLSB && (serv.sPriority == -1 || serv.kPriority == 100)))) {
+        freeService(serv);
         return 1;
     }
 
@@ -845,7 +876,7 @@ int setXinetdService(struct service s, int on) {
     int oldfd, newfd;
     char oldfname[100], newfname[100];
     char tmpstr[50];
-    char *buf, *ptr, *tmp;
+    char *buf, *ptr, *tmp, *start;
     struct stat sb;
     mode_t mode;
     int r;
@@ -874,6 +905,7 @@ int setXinetdService(struct service s, int on) {
         free(buf);
         return -1;
     }
+    start = buf;
     while (buf) {
         tmp = buf;
         ptr = strchr(buf, '\n');
@@ -894,6 +926,7 @@ int setXinetdService(struct service s, int on) {
         }
         buf = ptr;
     }
+    free(start);
     close(newfd);
     unlink(oldfname);
     r = rename(newfname, oldfname);
@@ -1089,12 +1122,12 @@ int runlevelsToTargets(int runlevels, char ***targets, int *n_targets) {
     char **tmp;
     int n_ret = 0;
     int found = 0;
-    char *t;
     int i, j;
     int r;
 
     for (i = 0; i <= 6; i++) {
         if (1 << i & runlevels) {
+            char *t = NULL;
             runlevel[8] = '0' + i;
             r = readSystemdUnitProperty(runlevel, "Id", &t);
             if (r < 0)
@@ -1109,6 +1142,7 @@ int runlevelsToTargets(int runlevels, char ***targets, int *n_targets) {
             if (!found) {
                 tmp = (char **)realloc(ret, sizeof(char *) * (n_ret + 1));
                 if (tmp == NULL) {
+                    free(t);
                     r = -ENOMEM;
                     goto fail;
                 }

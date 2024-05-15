@@ -318,6 +318,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
     if (!(dir = opendir(RUNLEVELS "/init.d"))) {
         fprintf(stderr, "failed to open " RUNLEVELS "/init.d: %s\n",
                 strerror(errno));
+        free(services);
         return 2;
     }
 
@@ -372,6 +373,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
         if (!(dir = opendir(XINETDDIR))) {
             fprintf(stderr, "failed to open " XINETDDIR ": %s\n",
                     strerror(errno));
+            freeServices(services, numServices);
             return 2;
         }
 
@@ -400,6 +402,7 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
                 fprintf(stderr, _("error reading info for service %s: %s\n"),
                         ent->d_name, strerror(errno));
                 closedir(dir);
+                freeServices(services, numServices);
                 return 2;
             } else if (!rc)
                 numServices++;
@@ -408,8 +411,11 @@ static int getServices(struct service **servicesPtr, int *numServicesPtr,
         if (err) {
             fprintf(stderr, _("error reading from directory %s: %s\n"),
                     XINETDDIR, strerror(err));
+            freeServices(services, numServices);
             return 1;
         }
+
+        closedir(dir);
     }
 
     getSystemdServices(&services, &numServices);

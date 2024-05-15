@@ -107,10 +107,10 @@ static void reloadSystemd(void) {
 }
 
 static int delService(char *name, int type, int level) {
-    int i, j, k, numservs, rc;
+    int i, j, k, numservs=0, rc;
     glob_t globres;
     struct service s;
-    struct service *services;
+    struct service *services = NULL;
 
     if ((rc = readServiceInfo(name, type, &s, 0))) {
         readServiceError(rc, name);
@@ -123,15 +123,18 @@ static int delService(char *name, int type, int level) {
 
     if (LSB && level == -1) {
         numservs = readServices(&services);
-        if (numservs < 0)
-            return 1;
+        if (numservs < 0) {
+            rc=1;
+            goto finish;
+        }
 
         for (i = 0; i < numservs; i++) {
             if (services[i].startDeps) {
                 for (j = 0; services[i].startDeps[j].name; j++) {
                     if (!strcmp(services[i].startDeps[j].name, s.name)) {
                         if (services[i].currentLevels) {
-                            return 1;
+                            rc=1;
+                            goto finish;
                         }
                     }
                 }
@@ -141,8 +144,10 @@ static int delService(char *name, int type, int level) {
                     if (!strcmp(services[i].stopDeps[j].name, s.name)) {
                         for (k = 0; k <= 6; k++) {
                             if (isConfigured(services[i].name, k, NULL, NULL) &&
-                                !(services[i].currentLevels & (1 << k)))
-                                return 1;
+                                !(services[i].currentLevels & (1 << k))) {
+                                rc=1;
+                                goto finish;
+                            }
                         }
                     }
                 }
@@ -160,7 +165,11 @@ static int delService(char *name, int type, int level) {
             }
         }
     }
-    return 0;
+
+finish:
+    freeService(s);
+    freeServices(services, numservs);
+    return rc;
 }
 
 static inline int laterThan(int i, int j) {
@@ -295,6 +304,7 @@ static int frobDependencies(struct service *s) {
     int numservs = 0;
     int nResolved = 0;
     int i;
+    int r = 0;
 
     numservs = readServices(&servs);
     if (numservs < 0)
@@ -319,8 +329,10 @@ static int frobDependencies(struct service *s) {
 
     /* Resolve our target */
     if (frobOneDependencies(s, servs, numservs, 1, LSB) == -1)
-        return 1;
-    return 0;
+        r=1;
+
+    freeServices(servs, numservs);
+    return r;
 }
 
 static int addService(char *name, int type) {
@@ -510,7 +522,6 @@ static int serviceNameCmp(const void *a, const void *b) {
 static int listService(char *item, int type) {
     DIR *dir;
     struct dirent *ent;
-    struct service *services;
     int i;
     int numServices = 0;
     int numServicesAlloced;
@@ -521,6 +532,7 @@ static int listService(char *item, int type) {
         return showServiceInfoByName(item, type, 0);
 
     if (type & TYPE_INIT_D) {
+        struct service *services;
         numServices = readServices(&services);
         if (numServices < 0)
             return 1;
@@ -530,10 +542,10 @@ static int listService(char *item, int type) {
         for (i = 0; i < numServices; i++) {
             if (systemd && isOverriddenBySystemd(services[i].name))
                 continue;
-            if (showServiceInfo(services[i], 1)) {
-                return 1;
-            }
+            (void) showServiceInfo(services[i], 1);
         }
+
+        free(services);
     }
 
     if (isXinetdEnabled() && type & TYPE_XINETD) {
@@ -579,8 +591,14 @@ static int listService(char *item, int type) {
         t = s;
         for (i = 0; i < numServices; i++, s++) {
             char *tmp = malloc(strlen(s->name) + 5);
+            if (!tmp) {
+                closedir(dir);
+                free(t);
+                return 1;
+            }
             sprintf(tmp, "%s:", s->name);
             printf("\t%-15s\t%s\n", tmp, s->levels ? _("on") : _("off"));
+            free(tmp);
         }
         closedir(dir);
         free(t);
