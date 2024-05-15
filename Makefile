@@ -6,7 +6,6 @@ CFLAGS = -g -Wall $(RPM_OPT_FLAGS) -D_GNU_SOURCE
 LDFLAGS += -g
 MAN = chkconfig.8 ntsysv.8 alternatives.8
 PROG = chkconfig
-BINDIR = /sbin
 SBINDIR = /usr/sbin
 MANDIR = /usr/man
 ALTDIR = /var/lib/alternatives
@@ -51,7 +50,6 @@ clean:
 	rm -f chkconfig-*.tar.gz *~ *.old
 
 install:
-	[ -d $(DESTDIR)/$(BINDIR) ] || mkdir -p $(DESTDIR)/$(BINDIR)
 	[ -d $(DESTDIR)/$(SBINDIR) ] || mkdir -p $(DESTDIR)/$(SBINDIR)
 	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
