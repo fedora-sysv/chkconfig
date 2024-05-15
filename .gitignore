@@ -5,3 +5,4 @@ chkconfig
 ntsysv
 po/*.mo
 .vscode/
+build/**
