@@ -377,7 +377,7 @@ int readServiceInfo(char *name, int type, struct service *service,
     asprintf(&filename, RUNLEVELS "/chkconfig.d/%s", name);
     if ((fd = open(filename, O_RDONLY)) >= 0) {
         parseret = parseServiceInfo(fd, name, &serv_overrides, honorHide, 1);
-        if (parseret >= 0) {
+        if (parseret == 0) {
             if (serv_overrides.name)
                 serv.name = serv_overrides.name;
             if (serv_overrides.levels != -1)
