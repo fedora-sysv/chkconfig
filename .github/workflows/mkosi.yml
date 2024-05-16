@@ -1,0 +1,23 @@
+name: mkosi
+
+on:
+  push:
+  pull_request:
+    branches: [ main, rhel*-branch ]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: systemd/mkosi@v22
+
+    - name: Show image summary
+      run: mkosi summary
+
+    - name: Build image
+      run: mkosi build --force
