@@ -1,0 +1,26 @@
+---
+
+name: Build test
+on:
+  push:
+  pull_request:
+    branches: [ main, rhel*-branch ]
+  release:
+    types: [ published, created ]
+
+permissions:
+  contents: read
+
+jobs:
+  buildCheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
+
+      - name: Build & install
+        run: make all && make install DESTDIR=/tmp/chkconfig
