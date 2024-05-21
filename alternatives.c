@@ -291,7 +291,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     struct {
         char *facility;
         char *title;
-    } *groups = NULL;
+    } *groups = NULL, newGroup = {};
     int numGroups = 0;
     char linkBuf[PATH_MAX];
     int r = 0;
@@ -364,8 +364,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             goto finish;
         }
 
-        groups = realloc(groups, sizeof(*groups) * (numGroups + 1));
-        groups[numGroups].title = strsteal(&line);
+        newGroup.title = strsteal(&line);
 
         nextLine(&buf, &line);
         if (!line || !*line) {
@@ -374,7 +373,11 @@ static int readConfig(struct alternativeSet *set, const char *title,
             goto finish;
         }
 
-        groups[numGroups++].facility = strsteal(&line);
+        newGroup.facility = strsteal(&line);
+
+        groups = realloc(groups, sizeof(*groups) * (numGroups + 1));
+        groups[numGroups++] = newGroup;
+        newGroup.title = newGroup.facility = NULL;
 
         nextLine(&buf, &line);
     }
@@ -517,6 +520,8 @@ finish:
         free(groups[i].facility);
     }
     free(groups);
+    free(newGroup.title);
+    free(newGroup.facility);
     free(line);
     return r;
 }
