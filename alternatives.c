@@ -106,6 +106,31 @@ static int usage(int rc) {
     exit(rc);
 }
 
+void clearLinkSet(struct linkSet *ls) {
+    if (!ls)
+        return;
+
+    free(ls->title);
+    free(ls->facility);
+    free(ls->target);
+}
+
+void clearAlternative(struct alternative *alt) {
+    int i;
+
+    if (!alt)
+        return;
+
+    clearLinkSet(&alt->leader);
+
+    for (i = 0; i < alt->numFollowers; i++)
+        clearLinkSet(&alt->followers[i]);
+    free(alt->followers);
+
+    free(alt->initscript);
+    free(alt->family);
+}
+
 /*
  * Function to clean path form unnecessary backslashes
  * It will make from //abcd///efgh/ -> /abcd/efgh/
@@ -294,6 +319,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     } *groups = NULL, newGroup = {};
     int numGroups = 0;
     char linkBuf[PATH_MAX];
+    struct alternative newAlt = {};
     int r = 0;
 
     set->alts = NULL;
@@ -390,8 +416,6 @@ static int readConfig(struct alternativeSet *set, const char *title,
 
     nextLine(&buf, &line);
     while (line && *line) {
-        set->alts = realloc(set->alts, (set->numAlts + 1) * sizeof(*set->alts));
-
         if (*line != '/') {
             fprintf(stderr, _("path to alternate expected in %s\n"), path);
             fprintf(stderr, _("unexpected line in %s: %s\n"), path, line);
@@ -399,19 +423,18 @@ static int readConfig(struct alternativeSet *set, const char *title,
             goto finish;
         }
 
-        set->alts[set->numAlts].leader.facility = normalize_path_alloc(groups[0].facility);
-        set->alts[set->numAlts].leader.title = strdup(groups[0].title);
-        set->alts[set->numAlts].leader.target = strsteal(&line);
-        set->alts[set->numAlts].numFollowers = numGroups - 1;
+        newAlt.leader.facility = normalize_path_alloc(groups[0].facility);
+        newAlt.leader.title = strdup(groups[0].title);
+        newAlt.leader.target = strsteal(&line);
+        newAlt.numFollowers = numGroups - 1;
         if (numGroups > 1)
-            set->alts[set->numAlts].followers = malloc(
-                (numGroups - 1) * sizeof(*set->alts[set->numAlts].followers));
+            newAlt.followers = malloc((numGroups - 1) * sizeof(*newAlt.followers));
         else
-            set->alts[set->numAlts].followers = NULL;
+            newAlt.followers = NULL;
 
-        set->alts[set->numAlts].priority = -1;
-        set->alts[set->numAlts].initscript = NULL;
-        set->alts[set->numAlts].family = NULL;
+        newAlt.priority = -1;
+        newAlt.initscript = NULL;
+        newAlt.family = NULL;
 
         nextLine(&buf, &line);
         ptr = line;
@@ -428,11 +451,11 @@ static int readConfig(struct alternativeSet *set, const char *title,
                 goto finish;
             }
             *end = '\0';
-            set->alts[set->numAlts].family = strdup(ptr);
+            newAlt.family = strdup(ptr);
             ptr = end + 1;
         }
 
-        set->alts[set->numAlts].priority = strtol(ptr, &end, 0);
+        newAlt.priority = strtol(ptr, &end, 0);
 
         if (!end || (end == ptr)) {
             fprintf(stderr, _("numeric priority expected in %s\n"), path);
@@ -444,12 +467,9 @@ static int readConfig(struct alternativeSet *set, const char *title,
             while (*end && isspace(*end))
                 end++;
             if (strlen(end)) {
-                set->alts[set->numAlts].initscript = strdup(end);
+                newAlt.initscript = strdup(end);
             }
         }
-
-        if (set->alts[set->numAlts].priority > set->alts[set->best].priority)
-            set->best = set->numAlts;
 
         for (i = 1; i < numGroups; i++) {
             nextLine(&buf, &line);
@@ -460,15 +480,20 @@ static int readConfig(struct alternativeSet *set, const char *title,
                 goto finish;
             }
 
-            set->alts[set->numAlts].followers[i - 1].title =
-                strdup(groups[i].title);
-            set->alts[set->numAlts].followers[i - 1].facility =
-                normalize_path_alloc(groups[i].facility);
-            set->alts[set->numAlts].followers[i - 1].target =
-                (line && strlen(line)) ? strsteal(&line) : NULL;
+            newAlt.followers[i - 1].title = strdup(groups[i].title);
+            newAlt.followers[i - 1].facility = normalize_path_alloc(groups[i].facility);
+            newAlt.followers[i - 1].target = (line && strlen(line)) ? strsteal(&line) : NULL;
         }
 
+        set->alts = realloc(set->alts, (set->numAlts + 1) * sizeof(*set->alts));
+        set->alts[set->numAlts] = newAlt;
+
+        if (newAlt.priority > set->alts[set->best].priority)
+            set->best = set->numAlts;
+
         set->numAlts++;
+
+        memset(&newAlt, 0, sizeof(struct alternative));
 
         nextLine(&buf, &line);
     }
@@ -523,6 +548,7 @@ finish:
     free(newGroup.title);
     free(newGroup.facility);
     free(line);
+    clearAlternative(&newAlt);
     return r;
 }
 
