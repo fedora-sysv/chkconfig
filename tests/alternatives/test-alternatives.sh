@@ -118,7 +118,6 @@ function check_alternative {
 rlJournalStart
     # Setup phase: Prepare test directory
     rlPhaseStartSetup
-        rlAssertRpm $PACKAGE
         rlRun 'altdir=$(mktemp -d)' 0 'Creating tmp directory' # no-reboot
         rlRun 'admindir=$(mktemp -d)' 0 'Creating tmp directory' # no-reboot
         rlRun 'testdir=$(mktemp -d)' 0 'Creating tmp directory' # no-reboot
@@ -139,28 +138,28 @@ rlJournalStart
             check_alternative link_a auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Set Manual"
             add_alternative link_a 10 ""
             set_alternative link_a
             check_alternative link_a manual link_a
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Auto Priority Ascendant"
             add_alternative link_a 10 ""
             add_alternative link_b  20
             check_alternative link_b auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Auto Priority Descendant"
             add_alternative link_a 20 ""
             add_alternative link_b 10 ""
             check_alternative link_a auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Manual Overrides Best"
             add_alternative link_a 10 ""
             set_alternative link_a
@@ -168,7 +167,7 @@ rlJournalStart
             check_alternative link_a manual link_b
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Remove Manually Set"
             add_alternative link_a 10 ""
             set_alternative link_a
@@ -177,14 +176,14 @@ rlJournalStart
             check_alternative link_b auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Follower"
             add_alternative link_a 10 "" follower_a
             add_alternative link_a 10 "" follower_b
             check_alternative link_a auto follower_b
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Follower Manual"
             add_alternative link_a 10 "" follower_a
             set_alternative link_a
@@ -192,37 +191,37 @@ rlJournalStart
             check_alternative link_a manual link_a follower_b
             clean_dir
         rlPhaseEnd
-            
+
             ##########
-            
+
         rlPhaseStart FAIL "Family Priority Ascendant"
             add_alternative link_a 10 family_a
             add_alternative link_b 20 family_a
             check_alternative link_b auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Family Priority Descendant"
             add_alternative link_a 20 family_a
             add_alternative link_b 10 family_a
             check_alternative link_a auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Families Priority Ascendant"
             add_alternative link_a 10 family_a
             add_alternative link_b 20 family_b
             check_alternative link_b auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Families Priority Descendant"
             add_alternative link_a 20 family_a
             add_alternative link_b 10 family_b
             check_alternative link_a auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Families Priority Ascendant Multiple"
             add_alternative link_a 10 family_a
             add_alternative link_b 20 family_a
@@ -230,7 +229,7 @@ rlJournalStart
             check_alternative link_c auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Families Remove Manually Set"
             add_alternative link_a 10 family_a
             set_alternative link_a
@@ -239,7 +238,7 @@ rlJournalStart
             check_alternative link_c auto
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Families Remove Link After Manually Set Multiple"
             add_alternative link_a 10 family_a
             set_alternative link_a
@@ -249,7 +248,7 @@ rlJournalStart
             check_alternative link_b manual link_c
             clean_dir
         rlPhaseEnd
-            
+
         rlPhaseStart FAIL "Family After Remove Manually Set"
             add_alternative link_a 10 ""
             set_alternative link_a
@@ -318,4 +317,4 @@ rlJournalEnd
 
 # Print the test report
 rlJournalPrintText
-
+rlGetTestState
