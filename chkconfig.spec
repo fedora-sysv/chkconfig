@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.27
+Version: 1.28
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -102,6 +102,10 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Fri Jun 21 2024 Jan Macku <jamacku@redhat.com> - 1.28-1
+- Prepare for bin-sbin merge
+- tests: fix integration with github actions
+
 * Tue May 14 2024 Jan Macku <jamacku@redhat.com> - 1.27-1
 - alternatives: properly handle chars with const in normalize_path
 - alternatives: use exit in main instead of return for critical failures
