@@ -13,22 +13,22 @@
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
 # Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
-# Oğuz Ersen <oguz@ersen.moe>, 2022.
+# Oğuz Ersen <oguz@ersen.moe>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-09 12:58+0100\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
+"PO-Revision-Date: 2024-07-09 07:38+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/tr/>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -88,7 +88,7 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Not: Bu çıktı sadece SysV hizmetlerini gösterir ve yerel sistemd "
+"Not: Bu çıktı yalnızca SysV hizmetlerini gösterir ve yerel sistemd "
 "hizmetlerini\n"
 "      içermez. SysV yapılandırma verileri yerel systemd yapılandırması "
 "tarafından\n"
@@ -175,13 +175,13 @@ msgstr "--type 'sysv' veya 'xinetd' olmalıdır\n"
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
-"--list, --add veya --override seçeneklerinden sadece biri belirtilebilir\n"
+"--list, --add veya --override seçeneklerinden yalnızca biri belirtilebilir\n"
 
 #: ../chkconfig.c:869
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
-"chkconfig sorgulaması için sadece tek bir çalışma seviyesi belirtilebilir\n"
+"chkconfig sorgulaması için yalnızca tek bir çalışma seviyesi belirtilebilir\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
@@ -287,15 +287,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <aile>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
-#| msgid ""
-#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
 msgstr ""
-"                    [--slave <ikincil_bağlantısı> <ikincil_adı> "
-"<ikincil_yolu>]*\n"
+"                    [--follower <takipçi_bağlantısı> <takipçi_adı> "
+"<takipçi_yolu>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -333,22 +331,18 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <ad>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-slave <ad> <yol> <ikincil_bağlantısı> "
-"<ikincil_adı> <ikincil_yolu>\n"
+"       alternatives --add-follower <ad> <yol> <takipçi_bağlantısı> "
+"<takipçi_adı> <takipçi_yolu>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <ad> <yol> <ikincil_adı>\n"
+msgstr "       alternatives --remove-follower <ad> <yol> <takipçi_adı>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -405,10 +399,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "%s yolu %s içinde beklenmiyordu\n"
 
 #: ../alternatives.c:351
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "ikincil %s için %s içinde yol eksik\n"
+msgstr "takipçi %s için %s içinde yol eksik\n"
 
 #: ../alternatives.c:361
 #, c-format
@@ -437,10 +430,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s içinde sayısal öncelik bekleniyor.\n"
 
 #: ../alternatives.c:426
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "%s içinde ikincil yolu bekleniyor\n"
+msgstr "%s içinde takipçi yolu bekleniyor\n"
 
 #: ../alternatives.c:456
 #, c-format
@@ -470,26 +462,19 @@ msgid "failed to remove link %s: %s\n"
 msgstr "sembolik bağ kaldırılamadı %s: %s\n"
 
 #: ../alternatives.c:547
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
-"%s -> %s bağlantısı başarısız oldu: %s var ve bir sembolik bağlantı değil ya "
-"da --keep-foreign ayarlandı ve bağlantı %s dışını işaret ediyor\n"
+"%s -> %s bağlantısı başarısız oldu: %s var ve bir sembolik bağlantı değil\n"
 
 #: ../alternatives.c:552
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"%s -> %s bağlantısı başarısız oldu: %s var ve bir sembolik bağlantı değil ya "
-"da --keep-foreign ayarlandı ve bağlantı %s dışını işaret ediyor\n"
+"%s -> %s bağlantısı başarısız oldu:--keep-foreign ayarlandı ve %s bağlantısı "
+"%s dışını işaret ediyor\n"
 
 #: ../alternatives.c:556 ../alternatives.c:574
 #, c-format
@@ -523,10 +508,9 @@ msgid "running %s\n"
 msgstr "%s çalışıyor\n"
 
 #: ../alternatives.c:781
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "%s bağlantısı ikincil %s için geçerli değil (%s %s)\n"
+msgstr "%s bağlantısı takipçi %s için geçerli değil (%s %s)\n"
 
 #: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
 #: ../alternatives.c:1137
@@ -535,10 +519,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s, %s için bir alternatif olarak yapılandırılmadı\n"
 
 #: ../alternatives.c:873
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s, %s (%s) için bir ikincil alternatif olarak yapılandırılmadı\n"
+msgstr "%s, %s (%s) için bir takipçi alternatif olarak yapılandırılmadı\n"
 
 #: ../alternatives.c:931
 #, c-format
@@ -571,10 +554,9 @@ msgid "priority %d\n"
 msgstr "öncelik %d\n"
 
 #: ../alternatives.c:995
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " ikincil %s: %s\n"
+msgstr " takipçi %s: %s\n"
 
 #: ../alternatives.c:1000
 #, c-format
