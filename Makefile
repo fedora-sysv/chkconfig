@@ -9,7 +9,6 @@ PROG = chkconfig
 BINDIR = /sbin
 SBINDIR = /usr/sbin
 MANDIR = /usr/man
-ALTDIR = /var/lib/alternatives
 ALTDATADIR = /etc/alternatives
 SYSTEMDUTILDIR = $(shell pkg-config --variable=systemdutildir systemd)
 SUBDIRS = po
@@ -55,7 +54,6 @@ install:
 	[ -d $(DESTDIR)/$(SBINDIR) ] || mkdir -p $(DESTDIR)/$(SBINDIR)
 	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
-	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 	[ -d $(DESTDIR)/$(SYSTEMDUTILDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(SYSTEMDUTILDIR)
 
