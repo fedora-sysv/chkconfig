@@ -566,6 +566,15 @@ static int fileExists(char *path) {
     return !stat(path, &sbuf);
 }
 
+static int dirExists(char *path) {
+    struct stat sbuf;
+
+    if (stat(path, &sbuf))
+            return 0;
+
+    return !!S_ISDIR(sbuf.st_mode);
+}
+
 static int facilityBelongsToUs(char *facility, const char *altDir) {
     char buf[PATH_MAX];
     if (readlink(facility, buf, sizeof(buf)) <= 0)
@@ -1321,6 +1330,10 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
     return 0;
 }
 
+static int isOSTree() {
+    return fileExists("/run/ostree-booted") || isLink("/ostree");
+}
+
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
@@ -1331,8 +1344,7 @@ int main(int argc, const char **argv) {
     struct alternative newAlt = {-1, {NULL, NULL, NULL}, NULL, NULL, 0, NULL};
     int flags = 0;
     char *altDir = "/etc/alternatives";
-    char *stateDir = "/var/lib/alternatives";
-    struct stat sb;
+    char *stateDir= NULL;
     struct linkSet newSet = {NULL, NULL, NULL};
 
     setlocale(LC_ALL, "");
@@ -1454,12 +1466,26 @@ int main(int argc, const char **argv) {
         }
     }
 
-    if (stat(altDir, &sb) || !S_ISDIR(sb.st_mode) || access(altDir, F_OK)) {
+    if (!dirExists(altDir)) {
         fprintf(stderr, _("altdir %s invalid\n"), altDir);
         exit(2);
     }
 
-    if (stat(stateDir, &sb) || !S_ISDIR(sb.st_mode) || access(stateDir, F_OK)) {
+    // if the stateDir is not explicitly set, we will use /var/lib/alternatives on normal systems
+    // and /etc/alternatives-admindir on OSTree systems, if the dir does not exist, we will create it
+    // if the stateDir is explicitly set, we will *not* try to create the dir and fail immediately if it does not exist
+    if (!stateDir) {
+        stateDir = "/var/lib/alternatives";
+        if (!dirExists(stateDir)) {
+            if (isOSTree())
+                stateDir = "/etc/alternatives-admindir";
+
+            if (mkdir(stateDir, 0755) < 0 && errno != EEXIST) {
+                fprintf(stderr, _("failed to create admindir: %s\n"), strerror(errno));
+                exit(2);
+            }
+        }
+    } else if (!dirExists(stateDir)) {
         fprintf(stderr, _("admindir %s invalid\n"), stateDir);
         exit(2);
     }
