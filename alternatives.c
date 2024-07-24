@@ -1290,6 +1290,32 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
     return 0;
 }
 
+int dirExists(const char *path) {
+    struct stat stats;
+    stat(path, &stats);
+
+    if (S_ISDIR(stats.st_mode))
+        return 1;
+
+    return 0;
+}
+
+int canUseAlternativeAdminDir() {
+    if (dirExists("/var/lib/alternatives")) {
+        return 0;
+    }
+
+    if (fileExists("/run/ostree-booted")) {
+        return 1;
+    }
+
+    if (isLink("/ostree")) {
+        return 1;
+    }
+
+    return 0;
+}
+
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
@@ -1303,6 +1329,10 @@ int main(int argc, const char **argv) {
     char *stateDir = "/var/lib/alternatives";
     struct stat sb;
     struct linkSet newSet = {NULL, NULL, NULL};
+
+    if (canUseAlternativeAdminDir()) {
+        stateDir = "/etc/alternatives.admindir";
+    }
 
     setlocale(LC_ALL, "");
     bindtextdomain("chkconfig", "/usr/share/locale");
