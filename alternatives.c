@@ -1290,6 +1290,32 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
     return 0;
 }
 
+int dirExists(const char *path) {
+    struct stat stats;
+    stat(path, &stats);
+
+    if (S_ISDIR(stats.st_mode))
+        return 1;
+
+    return 0;
+}
+
+int canUseAlternativeAdminDir() {
+    if (dirExists("/var/lib/alternatives")) {
+        return 0;
+    }
+
+    if (fileExists("/run/ostree-booted")) {
+        return 1;
+    }
+
+    if (isLink("/ostree")) {
+        return 1;
+    }
+
+    return 0;
+}
+
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
@@ -1304,6 +1330,10 @@ int main(int argc, const char **argv) {
     struct stat sb;
     struct linkSet newSet = {NULL, NULL, NULL};
 
+    if (canUseAlternativeAdminDir()) {
+        stateDir = "/etc/alternatives.admindir";
+    }
+
     setlocale(LC_ALL, "");
     bindtextdomain("chkconfig", "/usr/share/locale");
     textdomain("chkconfig");
@@ -1311,6 +1341,7 @@ int main(int argc, const char **argv) {
     if (!argv[1])
         return usage(2);
 
+    int statedir_changed = 0;
     nextArg = argv + 1;
     while (*nextArg) {
         if (!strcmp(*nextArg, "--install")) {
@@ -1408,6 +1439,7 @@ int main(int argc, const char **argv) {
             altDir = normalize_path_alloc(*nextArg);
             nextArg++;
         } else if (!strcmp(*nextArg, "--admindir")) {
+            statedir_changed = 1;
             nextArg++;
             if (!*nextArg)
                 usage(2);
@@ -1426,6 +1458,13 @@ int main(int argc, const char **argv) {
     if (stat(altDir, &sb) || !S_ISDIR(sb.st_mode) || access(altDir, F_OK)) {
         fprintf(stderr, _("altdir %s invalid\n"), altDir);
         exit(2);
+    }
+
+    if ((statedir_changed == 0) && (stat(stateDir, &sb) == -1)) {
+        if (mkdir(stateDir, 0755) == -1) {
+            fprintf(stderr, _("creating admindir: %s\n"), strerror(errno));
+            exit(2);
+        }
     }
 
     if (stat(stateDir, &sb) || !S_ISDIR(sb.st_mode) || access(stateDir, F_OK)) {
