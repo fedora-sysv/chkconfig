@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 11:46+0200\n"
+"POT-Creation-Date: 2024-07-30 14:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -562,22 +562,27 @@ msgstr ""
 msgid "failed to remove %s: %s\n"
 msgstr ""
 
-#: ../alternatives.c:1365
-#, c-format
-msgid "--family can't contain the symbol '@'\n"
-msgstr ""
-
-#: ../alternatives.c:1427
-#, c-format
-msgid "altdir %s invalid\n"
-msgstr ""
-
-#: ../alternatives.c:1432
+#: ../alternatives.c:1300 ../alternatives.c:1469
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr ""
 
-#: ../alternatives.c:1442
+#: ../alternatives.c:1394
+#, c-format
+msgid "--family can't contain the symbol '@'\n"
+msgstr ""
+
+#: ../alternatives.c:1457
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr ""
+
+#: ../alternatives.c:1463
+#, c-format
+msgid "creating admindir: %s\n"
+msgstr ""
+
+#: ../alternatives.c:1479
 #, c-format
 msgid "alternatives version %s\n"
 msgstr ""

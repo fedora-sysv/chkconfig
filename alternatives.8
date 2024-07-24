@@ -210,10 +210,11 @@ containing the symlinks.
 .TP
 administrative directory
 A directory, by default
-.IR /var/lib/alternatives ,
+.IR /etc/alternatives.admindir ,
 containing
 .BR alternatives '
 state information.
+/var/lib/alternatives symlinks to it.
 .TP
 link group
 A set of related symlinks, intended to be updated as a group.
@@ -414,8 +415,9 @@ Can be overridden by the
 .B --altdir
 option.
 .TP
-.I /var/lib/alternatives/
+.I /etc/alternatives.admindir/
 The default administration directory.
+/var/lib/alternatives symlinks to it.
 Can be overridden by the
 .B --admindir
 option.

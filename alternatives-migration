@@ -1,0 +1,18 @@
+#!/usr/bin/sh
+
+# Already symlinked, nothing to do
+if [[ -L /var/lib/alternatives ]]; then
+    exit 0;
+fi
+
+# Make sure that the admindir exists
+mkdir -p /etc/alternatives.admindir
+
+# Migrate the contents
+if [[ -d /var/lib/alternatives ]]; then
+    mv /var/lib/alternatives/* /etc/alternatives.admindir
+    rm -r /var/lib/alternatives
+fi
+
+# Create the symlink
+ln -s /etc/alternatives.admindir /var/lib/alternatives

@@ -1,0 +1,18 @@
+[Unit]
+Description=Migrate /var/lib/alternatives to /etc/alternatives.admindir
+Documentation=man:alternatives(8)
+
+# This should run before any other daemons/tools that may use alternatives
+DefaultDependencies=no
+After=sysinit.target
+Before=basic.target shutdown.target
+Conflicts=shutdown.target
+# In case /var is remote-mounted
+RequiresMountsFor=/var
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/alternatives-migration
+
+[Install]
+WantedBy=default.target

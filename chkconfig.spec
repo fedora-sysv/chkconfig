@@ -6,7 +6,7 @@ License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
 Source: https://github.com/fedora-sysv/chkconfig/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-BuildRequires: gcc gettext libselinux-devel make newt-devel popt-devel pkgconfig(systemd)
+BuildRequires: gcc gettext libselinux-devel make newt-devel popt-devel pkgconfig(systemd) systemd-rpm-macros
 # beakerlib might not be available on CentOS Stream any more
 %if 0%{?fedora}
 BuildRequires: beakerlib
@@ -93,11 +93,17 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %files -n alternatives
 %license COPYING
 %dir /etc/alternatives
+%ghost /etc/alternatives.admindir
+%ghost /var/lib/alternatives
+%dir %{_libexecdir}
+%{_prefix}/lib/systemd/system/alternatives-migration.service
 %{_sbindir}/update-alternatives
 %{_sbindir}/alternatives
 %{_mandir}/*/update-alternatives*
 %{_mandir}/*/alternatives*
-%dir /var/lib/alternatives
+
+%postun
+%systemd_postun alternatives-migration.service
 
 %changelog
 * Fri Jun 21 2024 Jan Macku <jamacku@redhat.com> - 1.28-1

@@ -9,6 +9,7 @@ PROG = chkconfig
 BINDIR = /sbin
 SBINDIR = /usr/sbin
 MANDIR = /usr/man
+LIBEXECDIR = /usr/libexec
 ALTDIR = /var/lib/alternatives
 ALTDATADIR = /etc/alternatives
 SYSTEMDUTILDIR = $(shell pkg-config --variable=systemdutildir systemd)
@@ -55,9 +56,9 @@ install:
 	[ -d $(DESTDIR)/$(SBINDIR) ] || mkdir -p $(DESTDIR)/$(SBINDIR)
 	[ -d $(DESTDIR)/$(MANDIR) ] || mkdir -p $(DESTDIR)/$(MANDIR)
 	[ -d $(DESTDIR)/$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)/$(MANDIR)/man8
-	[ -d $(DESTDIR)/$(ALTDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDIR)
 	[ -d $(DESTDIR)/$(ALTDATADIR) ] || mkdir -p -m 755 $(DESTDIR)/$(ALTDATADIR)
 	[ -d $(DESTDIR)/$(SYSTEMDUTILDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(SYSTEMDUTILDIR)
+	[ -d $(DESTDIR)/$(LIBEXECDIR) ] || mkdir -p -m 755 $(DESTDIR)/$(LIBEXECDIR)
 
 	install -m 755 $(PROG) $(DESTDIR)/$(SBINDIR)/$(PROG)
 	ln -s ../../..$(SBINDIR)/$(PROG) $(DESTDIR)/$(SYSTEMDUTILDIR)/systemd-sysv-install
@@ -65,6 +66,9 @@ install:
 	install -m 755 ntsysv $(DESTDIR)/$(SBINDIR)/ntsysv
 	install -m 755 alternatives $(DESTDIR)/$(SBINDIR)/alternatives
 	ln -s alternatives $(DESTDIR)/$(SBINDIR)/update-alternatives
+
+	install -m 755 alternatives-migration $(DESTDIR)/$(LIBEXECDIR)/alternatives-migration
+	install -m systemd/alternatives-migration.service $(DESTDIR)/$(SYSTEMDUTILDIR)/system/alternatives-migration.service
 
 	for i in $(MAN); do \
 		install -m 644 $$i $(DESTDIR)/$(MANDIR)/man`echo $$i | sed "s/.*\.//"`/$$i ; \
