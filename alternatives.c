@@ -1290,6 +1290,33 @@ static int listServices(const char *altDir, const char *stateDir, int flags) {
     return 0;
 }
 
+int dirExists(const char *path) {
+    struct stat sb;
+
+    if (stat(path, &sb)) {
+        if (errno == ENOENT) {
+            return 0;
+        }
+    }
+
+    if (!S_ISDIR(sb.st_mode) || access(path, F_OK)) {
+        fprintf(stderr, _("admindir %s invalid\n"), path);
+        exit(2);
+    }
+
+    return 1;
+}
+
+int canUseAlternativeAdminDirUnderOSTree() {
+    if (dirExists("/var/lib/alternatives")) { return 0; }
+
+    if (fileExists("/run/ostree-booted") || isLink("/ostree")) {
+        return 1;
+    }
+
+    return 0;
+}
+
 int main(int argc, const char **argv) {
     const char **nextArg;
     char *end;
@@ -1300,9 +1327,10 @@ int main(int argc, const char **argv) {
     struct alternative newAlt = {-1, {NULL, NULL, NULL}, NULL, NULL, 0, NULL};
     int flags = 0;
     char *altDir = "/etc/alternatives";
-    char *stateDir = "/var/lib/alternatives";
+    char *stateDir= NULL;
     struct stat sb;
     struct linkSet newSet = {NULL, NULL, NULL};
+
 
     setlocale(LC_ALL, "");
     bindtextdomain("chkconfig", "/usr/share/locale");
@@ -1426,6 +1454,19 @@ int main(int argc, const char **argv) {
     if (stat(altDir, &sb) || !S_ISDIR(sb.st_mode) || access(altDir, F_OK)) {
         fprintf(stderr, _("altdir %s invalid\n"), altDir);
         exit(2);
+    }
+
+    if ((stateDir == NULL)) {
+        if (canUseAlternativeAdminDirUnderOSTree()) {
+            stateDir = "/etc/alternatives.admindir";
+         } else {
+             stateDir = "/var/lib/alternatives";
+         }
+
+        if ((dirExists(stateDir) == 0) && (mkdir(stateDir, 0755) == -1)) {
+            fprintf(stderr, _("creating admindir: %s\n"), strerror(errno));
+            exit(2);
+        }
     }
 
     if (stat(stateDir, &sb) || !S_ISDIR(sb.st_mode) || access(stateDir, F_OK)) {

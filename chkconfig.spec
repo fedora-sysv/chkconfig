@@ -19,7 +19,7 @@ Provides: /sbin/chkconfig
 %description
 Chkconfig is a basic system utility.  It updates and queries runlevel
 information for system services.  Chkconfig manipulates the numerous
-symbolic links in /etc/rc.d, to relieve system administrators of some 
+symbolic links in /etc/rc.d, to relieve system administrators of some
 of the drudgery of manually editing the symbolic links.
 
 %package -n ntsysv
@@ -93,11 +93,12 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %files -n alternatives
 %license COPYING
 %dir /etc/alternatives
+%ghost /etc/alternatives.admindir
+%ghost /var/lib/alternatives
 %{_sbindir}/update-alternatives
 %{_sbindir}/alternatives
 %{_mandir}/*/update-alternatives*
 %{_mandir}/*/alternatives*
-%dir /var/lib/alternatives
 
 %changelog
 * Fri Jun 21 2024 Jan Macku <jamacku@redhat.com> - 1.28-1
