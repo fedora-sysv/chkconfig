@@ -81,9 +81,7 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %{_sysconfdir}/chkconfig.d
 %{_sysconfdir}/init.d
 %{_sysconfdir}/rc.d
-%{_sysconfdir}/rc.d/init.d
 %{_sysconfdir}/rc[0-6].d
-%{_sysconfdir}/rc.d/rc[0-6].d
 %{_mandir}/*/chkconfig*
 %{_prefix}/lib/systemd/systemd-sysv-install
 
