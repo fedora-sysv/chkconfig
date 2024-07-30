@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.28
+Version: 1.29
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -102,6 +102,29 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %dir /var/lib/alternatives
 
 %changelog
+* Tue Jul 30 2024 Jan Macku <jamacku@redhat.com> - 1.29-1
+- add basic mkosi config
+- remove not used directory from makefile
+- ntsysv: fix leaks
+- leveldb: security_context_t is deprecated
+- leveldb: fix leak
+- leveldb: fix leak
+- leveldb: fix leak
+- leveldb: fix leak
+- leveldb: fix leak
+- chkconfig: fix leak
+- chkconfig: fix leak
+- chkconfig: fix memory leak when deleting a service
+- leveldb: add destructors for service
+- leveldb: fix memory leak
+- leveldb.c: fix memory leak
+- chkconfig: fix leak
+- leveldb: fix memory leak
+- alternatives: ensure the current alt. is freed if parsing fails
+- alternatives: ensure the current group is freed
+- Translated using Weblate (English (United Kingdom))
+- Translated using Weblate (Turkish)
+
 * Fri Jun 21 2024 Jan Macku <jamacku@redhat.com> - 1.28-1
 - Prepare for bin-sbin merge
 - tests: fix integration with github actions
