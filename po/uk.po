@@ -5,9 +5,9 @@
 # Translators:
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
 # notting <notting@redhat.com>, 2011
-# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023.
-# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023.
-# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023, 2024.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Dmytro Markevych <hotr1pak@gmail.com>, 2024.
 msgid ""
@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2024-11-20 18:50+0000\n"
-"Last-Translator: Dmytro Markevych <hotr1pak@gmail.com>\n"
+"PO-Revision-Date: 2024-11-21 19:38+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/uk/>\n"
 "Language: uk\n"
@@ -460,7 +460,9 @@ msgstr "не вдається видалити посилання %s: %s\n"
 #: ../alternatives.c:584
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "не вдалося з'єднати %s -> %s: %s існує, але це не симлінк.\n"
+msgstr ""
+"не вдалося створити посилання %s -> %s: %s існує, але це не символічне "
+"посилання.\n"
 
 #: ../alternatives.c:589
 #, c-format
@@ -468,8 +470,8 @@ msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"не вдалося з'єднати %s -> %s: --встановлено keep-foreign і посилання %s "
-"вказує за межі %s\n"
+"не вдалося створити посилання %s -> %s: %s вже існує і посилання вказує на "
+"місце поза %s\n"
 
 #: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
