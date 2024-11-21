@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-09 12:58+0100\n"
-"PO-Revision-Date: 2024-07-09 07:38+0000\n"
+"PO-Revision-Date: 2024-08-14 13:41+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/tr/>\n"
@@ -45,37 +45,37 @@ msgstr ""
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr "kullanım:   %s [isim]\n"
+msgstr "kullanım:   %s [ad]\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr "kullanım:   %s <enable|disable|is-enabled> [isim] \n"
+msgstr "kullanım:   %s <enable|disable|is-enabled> [ad] \n"
 
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr "kullanım:   %s [--list] [--type <tür>] [isim]\n"
+msgstr "kullanım:   %s [--list] [--type <tür>] [ad]\n"
 
 #: ../chkconfig.c:54
 #, c-format
 msgid "         %s --add <name>\n"
-msgstr "         %s --add <isim>\n"
+msgstr "         %s --add <ad>\n"
 
 #: ../chkconfig.c:55
 #, c-format
 msgid "         %s --del <name>\n"
-msgstr "         %s --del <isim>\n"
+msgstr "         %s --del <ad>\n"
 
 #: ../chkconfig.c:56
 #, c-format
 msgid "         %s --override <name>\n"
-msgstr "         %s --override <isim>\n"
+msgstr "         %s --override <ad>\n"
 
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr "         %s [--level <seviye>] [--type <tür>] <isim> %s\n"
+msgstr "         %s [--level <seviye>] [--type <tür>] <ad> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
@@ -274,7 +274,7 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "kullanım: alternatives --install <bağlantı> <isim> <yol> <öncelik>\n"
+msgstr "kullanım: alternatives --install <bağlantı> <ad> <yol> <öncelik>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -298,27 +298,27 @@ msgstr ""
 #: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "       alternatives --remove <isim> <yol>\n"
+msgstr "       alternatives --remove <ad> <yol>\n"
 
 #: ../alternatives.c:93
 #, c-format
 msgid "       alternatives --auto <name>\n"
-msgstr "       alternatives --auto <isim>\n"
+msgstr "       alternatives --auto <ad>\n"
 
 #: ../alternatives.c:94
 #, c-format
 msgid "       alternatives --config <name>\n"
-msgstr "       alternatives --config <isim>\n"
+msgstr "       alternatives --config <ad>\n"
 
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <isim>\n"
+msgstr "       alternatives --display <ad>\n"
 
 #: ../alternatives.c:96
 #, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <isim> <yol/aile>\n"
+msgstr "       alternatives --set <ad> <yol/aile>\n"
 
 #: ../alternatives.c:97
 #, c-format
