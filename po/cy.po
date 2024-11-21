@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 12:58+0100\n"
+"POT-Creation-Date: 2024-07-26 11:46+0200\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Welsh <https://translate.fedoraproject.org/projects/fedora-"
@@ -337,227 +337,227 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <cyfeiriadur> --admindir <cyfeiriadur>\n"
 
-#: ../alternatives.c:293
+#: ../alternatives.c:311
 #, c-format
 msgid "reading %s\n"
 msgstr "yn dechrau %s\n"
 
-#: ../alternatives.c:298
+#: ../alternatives.c:316
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "methwyd agor %s: %s\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:324
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "methwyd darllen %s: %s\n"
 
-#: ../alternatives.c:314
+#: ../alternatives.c:332
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s yn wag!\n"
 
-#: ../alternatives.c:323
+#: ../alternatives.c:342
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "modd gwael ar linell 1 %s\n"
 
-#: ../alternatives.c:330
+#: ../alternatives.c:349
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "cyswllt cynradd gwael yn %s\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:362
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "llwybr %s annisgwyl yn %s\n"
 
-#: ../alternatives.c:351
+#: ../alternatives.c:372
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "llwybr ar goll ar gyfer gwas %s yn %s\n"
 
-#: ../alternatives.c:361
+#: ../alternatives.c:383
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "diwedd ffeil annisgwyl yn %s\n"
 
-#: ../alternatives.c:370
+#: ../alternatives.c:393
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "disgwyliwyd llwybr at amgen yn %s\n"
 
-#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
-#: ../alternatives.c:427 ../alternatives.c:447
+#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
+#: ../alternatives.c:455 ../alternatives.c:476
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "llinell annisgwyl yn %s: %s\n"
 
-#: ../alternatives.c:395
+#: ../alternatives.c:421
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:408
+#: ../alternatives.c:435
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "disgwyliwyd blaenoriaeth rifol yn %s\n"
 
-#: ../alternatives.c:426
+#: ../alternatives.c:454
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "disgwyliwyd llwybr gwas yn %s\n"
 
-#: ../alternatives.c:456
+#: ../alternatives.c:486
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "methwyd darllen cyswllt %s: %s\n"
 
-#: ../alternatives.c:472
+#: ../alternatives.c:503
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "cyswllt ddim yn pwyntio at amgen -- yn gosod y modd i 'â llaw'\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:508
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "newidiwyd cyswllt -- yn gosod y modd i 'â llaw'\n"
 
-#: ../alternatives.c:517 ../alternatives.c:524
+#: ../alternatives.c:554 ../alternatives.c:561
 #, c-format
 msgid "would remove %s\n"
 msgstr "byddai'n gwaredu %s\n"
 
-#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
+#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "methwyd gwaredu'r cyswllt %s: %s\n"
 
-#: ../alternatives.c:547
+#: ../alternatives.c:584
 #, fuzzy, c-format
 #| msgid "failed to link %s -> %s: %s\n"
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "methwyd cysylltu %s -> %s: %s\n"
 
-#: ../alternatives.c:552
+#: ../alternatives.c:589
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
 
-#: ../alternatives.c:556 ../alternatives.c:574
+#: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "byddai'n cysylltu %s -> %s\n"
 
-#: ../alternatives.c:565 ../alternatives.c:587
+#: ../alternatives.c:602 ../alternatives.c:624
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "methwyd cysylltu %s -> %s: %s\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:657
 #, c-format
 msgid "%s already exists\n"
 msgstr "Mae %s yn bodoli eisioes\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:659
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "methwyd creu %s: %s\n"
 
-#: ../alternatives.c:655
+#: ../alternatives.c:692
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "methwyd amnewid %s â %s: %s\n"
 
-#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
-#: ../alternatives.c:708
+#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
+#: ../alternatives.c:745
 #, c-format
 msgid "running %s\n"
 msgstr "yn rhedeg %s\n"
 
-#: ../alternatives.c:781
+#: ../alternatives.c:818
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "cyswllt %s yn anghywir ar gyfer gwas %s (%s %s)\n"
 
-#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
-#: ../alternatives.c:1137
+#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
+#: ../alternatives.c:1175
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "ni chyfluniwyd %s yn amgen ar gyfer %s\n"
 
-#: ../alternatives.c:873
+#: ../alternatives.c:911
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "ni chyfluniwyd %s yn amgen ar gyfer %s\n"
 
-#: ../alternatives.c:931
+#: ../alternatives.c:969
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "rhaid i gyswllt cynradd %s fod yn %s\n"
 
-#: ../alternatives.c:983
+#: ../alternatives.c:1021
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - awto yw'r statws.\n"
 
-#: ../alternatives.c:985
+#: ../alternatives.c:1023
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - 'â llaw' yw'r statws.\n"
 
-#: ../alternatives.c:987
+#: ../alternatives.c:1025
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " mae'r cyswllt yn pwyntio at %s yn gyfredol\n"
 
-#: ../alternatives.c:992
+#: ../alternatives.c:1030
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:993
+#: ../alternatives.c:1031
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:995
+#: ../alternatives.c:1033
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr " gwas %s: %s\n"
 
-#: ../alternatives.c:1000
+#: ../alternatives.c:1038
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "%s yw'r fersiwn `orau' ar hyn o bryd.\n"
 
-#: ../alternatives.c:1035
+#: ../alternatives.c:1073
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Mae %d rhaglen sy'n darparu '%s'.\n"
 
-#: ../alternatives.c:1036
+#: ../alternatives.c:1074
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Mae %d o raglenni sy'n darparu '%s'.\n"
 
-#: ../alternatives.c:1040
+#: ../alternatives.c:1078
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Dewisiad    Gorchymyn\n"
 
-#: ../alternatives.c:1055
+#: ../alternatives.c:1093
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "Dychwelydd i gadw'r dewisiad cyfredol[+], neu teipiwch rif dewis. "
 
-#: ../alternatives.c:1059
+#: ../alternatives.c:1097
 #, c-format
 msgid ""
 "\n"
@@ -566,37 +566,37 @@ msgstr ""
 "\n"
 "gwall wrth ddarllen dewis\n"
 
-#: ../alternatives.c:1086
+#: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1153
+#: ../alternatives.c:1191
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(byddai'n gwaredu %s\n"
 
-#: ../alternatives.c:1155
+#: ../alternatives.c:1193
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "methwyd gwaredu %s: %s\n"
 
-#: ../alternatives.c:1323
+#: ../alternatives.c:1365
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1385
+#: ../alternatives.c:1427
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "cyfeiriadur amgen %s annilys\n"
 
-#: ../alternatives.c:1390
+#: ../alternatives.c:1432
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "cyfeiriadur gweinyddol %s annilys\n"
 
-#: ../alternatives.c:1400
+#: ../alternatives.c:1442
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives fersiwn %s\n"

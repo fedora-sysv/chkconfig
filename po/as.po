@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 12:58+0100\n"
+"POT-Creation-Date: 2024-07-26 11:46+0200\n"
 "PO-Revision-Date: 2022-03-10 09:12+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Assamese <https://translate.fedoraproject.org/projects/fedora-"
@@ -348,228 +348,228 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:293
+#: ../alternatives.c:311
 #, c-format
 msgid "reading %s\n"
 msgstr "%s পঢ়া হৈছে\n"
 
-#: ../alternatives.c:298
+#: ../alternatives.c:316
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%s খুলিব'লৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:324
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%s পঢ়িব'লৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:314
+#: ../alternatives.c:332
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s খালি!\n"
 
-#: ../alternatives.c:323
+#: ../alternatives.c:342
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s‌ৰ ১ নং শাৰীত বেয়া অৱস্থা\n"
 
-#: ../alternatives.c:330
+#: ../alternatives.c:349
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s ত বেয়া মৌলিক সংযোগ\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:362
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "%s ত %s পথ অপ্ৰত্যাশিত\n"
 
-#: ../alternatives.c:351
+#: ../alternatives.c:372
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "%s ত %s স্লেইভৰ পথ নিৰুদ্দেশ\n"
 
-#: ../alternatives.c:361
+#: ../alternatives.c:383
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s ত ফাইলৰ অপ্ৰত্যাশিত অন্ত\n"
 
-#: ../alternatives.c:370
+#: ../alternatives.c:393
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "%s ত সলনি কৰাৰ পথ প্ৰত্যাশিত\n"
 
-#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
-#: ../alternatives.c:427 ../alternatives.c:447
+#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
+#: ../alternatives.c:455 ../alternatives.c:476
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s ত অপ্ৰত্যাশিত শাৰী: %s\n"
 
-#: ../alternatives.c:395
+#: ../alternatives.c:421
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:408
+#: ../alternatives.c:435
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s ত সাংখ্যিক প্ৰাথমিকতা প্ৰত্যাশিত\n"
 
-#: ../alternatives.c:426
+#: ../alternatives.c:454
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "%s ত স্লেইভৰ পথ প্ৰত্যাশিত\n"
 
-#: ../alternatives.c:456
+#: ../alternatives.c:486
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "%s সংযোগ পঢ়িব'লৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:472
+#: ../alternatives.c:503
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "সংযোগে কোনো বিকল্পলৈ আঙুলিয়াই নিদিয়ে -- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:508
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "সংযোগ সলনি হ'ল-- পদ্ধতি হস্তচালিত ৰূপলৈ নিৰ্ধাৰিত কৰা হৈছে\n"
 
-#: ../alternatives.c:517 ../alternatives.c:524
+#: ../alternatives.c:554 ../alternatives.c:561
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s আঁতৰাই দিব\n"
 
-#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
+#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "%s সংযোগ আঁতৰাব'লৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:547
+#: ../alternatives.c:584
 #, fuzzy, c-format
 #| msgid "failed to link %s -> %s: %s\n"
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "%s সংযোগ কৰিব'লৈ অক্ষম->%s: %s\n"
 
-#: ../alternatives.c:552
+#: ../alternatives.c:589
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
 
-#: ../alternatives.c:556 ../alternatives.c:574
+#: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s সংযোগ হ'ব-> %s\n"
 
-#: ../alternatives.c:565 ../alternatives.c:587
+#: ../alternatives.c:602 ../alternatives.c:624
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s সংযোগ কৰিব'লৈ অক্ষম->%s: %s\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:657
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ইতিমধ্যে অস্তিত্ববান\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:659
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s সৃষ্টি কৰিব'লৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:655
+#: ../alternatives.c:692
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ৰ সৈতে %s সলনি কৰাত অক্ষম: %s\n"
 
-#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
-#: ../alternatives.c:708
+#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
+#: ../alternatives.c:745
 #, c-format
 msgid "running %s\n"
 msgstr "%s চলোৱা হৈছে\n"
 
-#: ../alternatives.c:781
+#: ../alternatives.c:818
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "%s স্লেইভৰ বাবে %s সংযোগ অশুদ্ধ(%s %s)\n"
 
-#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
-#: ../alternatives.c:1137
+#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
+#: ../alternatives.c:1175
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ৰ বিকল্প হিচাপে %s ৰ সংৰূপ কৰা হোৱা নাই\n"
 
-#: ../alternatives.c:873
+#: ../alternatives.c:911
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s ৰ বিকল্প হিচাপে %s ৰ সংৰূপ কৰা হোৱা নাই\n"
 
-#: ../alternatives.c:931
+#: ../alternatives.c:969
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s ৰ বাবে প্ৰাথমিক সংযোগ %s হোৱাটো আৱশ্যক\n"
 
-#: ../alternatives.c:983
+#: ../alternatives.c:1021
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - স্বয়ংক্ৰীয় অৱস্থাত।\n"
 
-#: ../alternatives.c:985
+#: ../alternatives.c:1023
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - হস্তচালিত অৱস্থাত।\n"
 
-#: ../alternatives.c:987
+#: ../alternatives.c:1025
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "সংযোগ বৰ্ত্তমানে %sলৈ আঙুলিয়াই\n"
 
-#: ../alternatives.c:992
+#: ../alternatives.c:1030
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:993
+#: ../alternatives.c:1031
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:995
+#: ../alternatives.c:1033
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr "স্লেইভ %s: %s\n"
 
-#: ../alternatives.c:1000
+#: ../alternatives.c:1038
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "বৰ্ত্তমানৰ 'সৰ্বশ্ৰেষ্ঠ' সংস্কৰণ হৈছে %s।\n"
 
-#: ../alternatives.c:1035
+#: ../alternatives.c:1073
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "এটা %d কাৰ্য্যক্ৰম আছে যি '%s'ৰ যোগান ধৰে।\n"
 
-#: ../alternatives.c:1036
+#: ../alternatives.c:1074
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "এনে কিছু %d কাৰ্য্যক্ৰমৰ সমষ্টি আছে যি '%s'ৰ যোগান ধৰে।\n"
 
-#: ../alternatives.c:1040
+#: ../alternatives.c:1078
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  নিৰ্বাচন    কমান্ড\n"
 
-#: ../alternatives.c:1055
+#: ../alternatives.c:1093
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "বৰ্ত্তমানৰ নিৰ্বাচন থ'বলৈ Enter টিপক, বা নিৰ্বাচন সংখ্যা লিখক"
 
-#: ../alternatives.c:1059
+#: ../alternatives.c:1097
 #, c-format
 msgid ""
 "\n"
@@ -578,37 +578,37 @@ msgstr ""
 "\n"
 "পছন্দ পঢ়োঁতে ভুল\n"
 
-#: ../alternatives.c:1086
+#: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1153
+#: ../alternatives.c:1191
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(%s আঁতৰুৱা যাব\n"
 
-#: ../alternatives.c:1155
+#: ../alternatives.c:1193
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s আঁতৰাবলৈ অক্ষম: %s\n"
 
-#: ../alternatives.c:1323
+#: ../alternatives.c:1365
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1385
+#: ../alternatives.c:1427
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s অবৈধ\n"
 
-#: ../alternatives.c:1390
+#: ../alternatives.c:1432
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s অবৈধ\n"
 
-#: ../alternatives.c:1400
+#: ../alternatives.c:1442
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "বিকল্পসমূহৰ সংস্কৰণ %s\n"

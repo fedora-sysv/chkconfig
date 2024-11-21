@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 12:58+0100\n"
+"POT-Creation-Date: 2024-07-26 11:46+0200\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Tamil <https://translate.fedoraproject.org/projects/fedora-"
@@ -352,228 +352,228 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:293
+#: ../alternatives.c:311
 #, c-format
 msgid "reading %s\n"
 msgstr "%sஐ வாசிக்கிறது\n"
 
-#: ../alternatives.c:298
+#: ../alternatives.c:316
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "%sஐ திறக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:306
+#: ../alternatives.c:324
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "%sஐ வாசிக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:314
+#: ../alternatives.c:332
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s வெற்றாக உள்ளது!\n"
 
-#: ../alternatives.c:323
+#: ../alternatives.c:342
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%sஇன் வரி 1 இல் தவறான முறை\n"
 
-#: ../alternatives.c:330
+#: ../alternatives.c:349
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%sஇல் தவறான முதன்மை இணைப்பு\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:362
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "பாதை %s யானது %sஇல் எதிர்பார்க்கப்படவில்லை\n"
 
-#: ../alternatives.c:351
+#: ../alternatives.c:372
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "துணை %sக்கு %sஇல் விடுபட்ட பாதை\n"
 
-#: ../alternatives.c:361
+#: ../alternatives.c:383
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "எதிர்பாராத கோப்பு முடிவு %s\n"
 
-#: ../alternatives.c:370
+#: ../alternatives.c:393
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "%s இல் பாதை மாற்றாக எதிர்பார்க்கப்படுகிறது\n"
 
-#: ../alternatives.c:371 ../alternatives.c:397 ../alternatives.c:409
-#: ../alternatives.c:427 ../alternatives.c:447
+#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
+#: ../alternatives.c:455 ../alternatives.c:476
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%sஇல் எதிர்பாராத வரி: %s\n"
 
-#: ../alternatives.c:395
+#: ../alternatives.c:421
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:408
+#: ../alternatives.c:435
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "எண் முன்னிரிமை %sஇல் எதிர்பார்க்கப்படுகிறது\n"
 
-#: ../alternatives.c:426
+#: ../alternatives.c:454
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "%sஇல் துணை பாதை எதிர்பார்க்கப்படுகிறது\n"
 
-#: ../alternatives.c:456
+#: ../alternatives.c:486
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "இணைப்பு %sஐ வாசிக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:472
+#: ../alternatives.c:503
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "புள்ளிகளை மாற்றமில்லா -- setting முறையை கைமுறைக்கு இணைக்கவும்\n"
 
-#: ../alternatives.c:477
+#: ../alternatives.c:508
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "இணைப்பு  -- setting முறையை கைமுறையாக மாற்றியது\n"
 
-#: ../alternatives.c:517 ../alternatives.c:524
+#: ../alternatives.c:554 ../alternatives.c:561
 #, c-format
 msgid "would remove %s\n"
 msgstr "%sஐ நீக்கும்\n"
 
-#: ../alternatives.c:519 ../alternatives.c:528 ../alternatives.c:581
+#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "%s இணைப்பை நீக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:547
+#: ../alternatives.c:584
 #, fuzzy, c-format
 #| msgid "failed to link %s -> %s: %s\n"
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "%s -> %sஐ இணைக்க முடியவில்லை : %s\n"
 
-#: ../alternatives.c:552
+#: ../alternatives.c:589
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
 
-#: ../alternatives.c:556 ../alternatives.c:574
+#: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "%s -> %s ஐ இணைக்கலாம்\n"
 
-#: ../alternatives.c:565 ../alternatives.c:587
+#: ../alternatives.c:602 ../alternatives.c:624
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "%s -> %sஐ இணைக்க முடியவில்லை : %s\n"
 
-#: ../alternatives.c:620
+#: ../alternatives.c:657
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ஏற்கனவே உள்ளது\n"
 
-#: ../alternatives.c:622
+#: ../alternatives.c:659
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s உருவாக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:655
+#: ../alternatives.c:692
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ஐ %sஆல் மாற்ற முடியவில்லை: %s\n"
 
-#: ../alternatives.c:683 ../alternatives.c:689 ../alternatives.c:701
-#: ../alternatives.c:708
+#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
+#: ../alternatives.c:745
 #, c-format
 msgid "running %s\n"
 msgstr "%s இயங்குகிறது\n"
 
-#: ../alternatives.c:781
+#: ../alternatives.c:818
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "இணைப்பு %sயானது %s (%s %s) துணைக்கு தவறானவை\n"
 
-#: ../alternatives.c:855 ../alternatives.c:892 ../alternatives.c:1106
-#: ../alternatives.c:1137
+#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
+#: ../alternatives.c:1175
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s க்கு மாற்றாக %s கட்டமைக்கப்படவில்லை\n"
 
-#: ../alternatives.c:873
+#: ../alternatives.c:911
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s க்கு மாற்றாக %s கட்டமைக்கப்படவில்லை\n"
 
-#: ../alternatives.c:931
+#: ../alternatives.c:969
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%sஇன் முதன்மை இணைப்பு %s ஆக இருக்க வேண்டும்\n"
 
-#: ../alternatives.c:983
+#: ../alternatives.c:1021
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - நிலை தானியக்கம்.\n"
 
-#: ../alternatives.c:985
+#: ../alternatives.c:1023
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - நிலையானது கைமுறையாகும்.\n"
 
-#: ../alternatives.c:987
+#: ../alternatives.c:1025
 #, c-format
 msgid " link currently points to %s\n"
 msgstr "தற்போது இணைப்பு %s ஐ குறிக்கிறது\n"
 
-#: ../alternatives.c:992
+#: ../alternatives.c:1030
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:993
+#: ../alternatives.c:1031
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:995
+#: ../alternatives.c:1033
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr " துணை %s: %s\n"
 
-#: ../alternatives.c:1000
+#: ../alternatives.c:1038
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "நடப்பு 'சிறந்த' பதிப்பு %s.\n"
 
-#: ../alternatives.c:1035
+#: ../alternatives.c:1073
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d நிரல் '%s' ஐ கொடுக்கும்.\n"
 
-#: ../alternatives.c:1036
+#: ../alternatives.c:1074
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d நிரல்கள் '%s' ஐ கொடுக்கும்.\n"
 
-#: ../alternatives.c:1040
+#: ../alternatives.c:1078
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  தேர்ந்தெடுப்பு    கட்டளை\n"
 
-#: ../alternatives.c:1055
+#: ../alternatives.c:1093
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "தற்போது உள்ள தேர்ந்தெடுப்பு [+]ஐ வைக்க உள்ளீடவும், அல்லது தேர்ச்சி எண்ணை தட்டச்சு செய்யவும்: "
 
-#: ../alternatives.c:1059
+#: ../alternatives.c:1097
 #, c-format
 msgid ""
 "\n"
@@ -582,37 +582,37 @@ msgstr ""
 "\n"
 "விருப்பத்தை வாசிக்கும் போது பிழை\n"
 
-#: ../alternatives.c:1086
+#: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1153
+#: ../alternatives.c:1191
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(%s நீக்கப்படலாம்\n"
 
-#: ../alternatives.c:1155
+#: ../alternatives.c:1193
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s நீக்க முடியவில்லை: %s\n"
 
-#: ../alternatives.c:1323
+#: ../alternatives.c:1365
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1385
+#: ../alternatives.c:1427
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s தவறானது\n"
 
-#: ../alternatives.c:1390
+#: ../alternatives.c:1432
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s தவறானது\n"
 
-#: ../alternatives.c:1400
+#: ../alternatives.c:1442
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "மாற்று பதிப்பு %s\n"
