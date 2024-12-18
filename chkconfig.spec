@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.30
+Version: 1.31
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -103,6 +103,13 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %{_mandir}/*/alternatives*
 
 %changelog
+* Wed Dec 18 2024 Jan Macku <jamacku@redhat.com> - 1.31-1
+- Translated using Weblate (Ukrainian)
+- Translated using Weblate (Ukrainian)
+- Translated using Weblate (French)
+- Update translation files
+- Translated using Weblate (Turkish)
+
 * Wed Aug 07 2024 Jan Macku <jamacku@redhat.com> - 1.30-1
 - ostree: move admindir to /etc/alternatives.admindir
 - update po/chkconfig.pot
