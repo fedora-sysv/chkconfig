@@ -14,21 +14,22 @@
 # notting <notting@redhat.com>, 2011
 # Elena Metelli <byruit@gmail.com>, 2017. #zanata
 # Enrico Bella <enric@e.email>, 2020, 2022.
+# Salvatore Cocuzza <info@salvatorecocuzza.it>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Enrico Bella <enric@e.email>\n"
-"Language-Team: Italian <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/it/>\n"
+"PO-Revision-Date: 2025-01-11 15:48+0000\n"
+"Last-Translator: Salvatore Cocuzza <info@salvatorecocuzza.it>\n"
+"Language-Team: Italian <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -249,7 +250,7 @@ msgid "cannot determine current run level\n"
 msgstr "impossibile determinare il runlevel attuale\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impossibile impostare il contesto SELinux per %s: %s\n"
 
@@ -289,11 +290,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    --family <family>\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <link> <nome> <percorso>]*\n"
+msgstr ""
+"                    "
+"[--follower <link_follower> <nome_follower> <percorso_follower>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -316,7 +319,7 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <nome>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <nome> <percorso>\n"
 
@@ -326,21 +329,24 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <nome> <percorso>\n"
+msgstr "       alternative --remove-all <nome>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <nome> <percorso>\n"
+msgstr ""
+"       alternative --add-follower <nome> <percorso> <link_follower> "
+"<nome_follower> <percorso_follower>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <nome> <percorso>\n"
+msgstr ""
+"       alternative --remove-follower <nome> <percorso> <nome_follower>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -348,12 +354,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"opzioni comuni: --verbose --test --help --usage --version --keep-missing\n"
+"opzioni comuni: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -396,10 +403,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "percorso %s imprevisto in %s\n"
 
 #: ../alternatives.c:372
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "percorso mancante per lo slave %s in %s\n"
+msgstr "percorso mancante per il follower %s in %s\n"
 
 #: ../alternatives.c:383
 #, c-format
@@ -428,10 +434,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "priorità numerica prevista in %s\n"
 
 #: ../alternatives.c:454
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "percorso slave previsto in %s\n"
+msgstr "percorso follower previsto in %s\n"
 
 #: ../alternatives.c:486
 #, c-format
@@ -460,16 +465,19 @@ msgid "failed to remove link %s: %s\n"
 msgstr "impossibile rimuovere il link %s: %s\n"
 
 #: ../alternatives.c:584
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "impossibile collegare %s ->%s: %s esiste e non è un link simbolico\n"
+msgstr ""
+"impossibile collegare %s -> %s: %s esiste e non è un collegamento simbolico\n"
 
 #: ../alternatives.c:589
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
-msgstr "impossibile collegare %s ->%s: %s esiste e non è un link simbolico\n"
+msgstr ""
+"impossibile collegare %s -> %s: --keep-foreign è stato impostato e collega "
+"%s punti all'esterno di %s\n"
 
 #: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
@@ -503,10 +511,9 @@ msgid "running %s\n"
 msgstr "esecuzione di %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "il link %s non è corretto per lo slave %s (%s %s)\n"
+msgstr "collegamento %s errato per il follower %s (%s %s)\n"
 
 #: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
 #: ../alternatives.c:1175
@@ -515,9 +522,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s non è stato configurato come alternativa per %s\n"
 
 #: ../alternatives.c:911
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s non è stato configurato come alternativa per %s\n"
+msgstr "%s non è stato configurato come follower alternativo per %s (%s)\n"
 
 #: ../alternatives.c:969
 #, c-format
@@ -550,10 +557,9 @@ msgid "priority %d\n"
 msgstr "priorità %d\n"
 
 #: ../alternatives.c:1033
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " slave %s: %s\n"
+msgstr " seguace %s: %s\n"
 
 #: ../alternatives.c:1038
 #, c-format
@@ -594,7 +600,7 @@ msgstr ""
 #: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "impossibile accedere a %s/%s: file o directory non presenti\n"
 
 #: ../alternatives.c:1191
 #, c-format
