@@ -16,6 +16,8 @@ SUBDIRS = po
 OBJS = chkconfig.o leveldb.o
 NTOBJS = ntsysv.o leveldb.o
 
+MERGED_SBIN ?= 0
+
 all: subdirs $(PROG) ntsysv alternatives
 
 subdirs:
@@ -36,7 +38,7 @@ chkconfig.o: chkconfig.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c chkconfig.c
 
 alternatives.o: alternatives.c
-	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c alternatives.c
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -DMERGED_SBIN=$(MERGED_SBIN) -c alternatives.c
 
 ntsysv.o: ntsysv.c leveldb.h
 	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c ntsysv.c

@@ -164,6 +164,41 @@ int streq(const char *a, const char *b) {
     return 0;
 }
 
+int is_bin_or_sbin(const char *path, char **rest) {
+        if (!path)
+                return 0;
+
+        if (strncmp(path, "/usr/bin/", strlen("/usr/bin/")) == 0) {
+                *rest = (char *)path + strlen("/usr/bin/");
+                return 1;
+        } else if (strncmp(path, "/usr/sbin/", strlen("/usr/sbin/")) == 0) {
+                *rest = (char *)path + strlen("/usr/sbin/");
+                return 1;
+        } else if (strncmp(path, "/bin/", strlen("/bin/")) == 0) {
+                *rest = (char *)path + strlen("/bin/");
+                return 1;
+        } else if (strncmp(path, "/sbin/", strlen("/sbin/")) == 0) {
+                *rest = (char *)path + strlen("/sbin/");
+                return 1;
+        }
+
+        return 0;
+}
+
+int streq_bin(const char *a, const char *b) {
+    if (streq(a, b))
+        return 1;
+
+    if (MERGED_SBIN && a && b) {
+        char *rest_a = NULL;
+        char *rest_b = NULL;
+        if (is_bin_or_sbin(a, &rest_a) && is_bin_or_sbin(b, &rest_b))
+            return streq(rest_a, rest_b);
+    }
+
+    return 0;
+}
+
 char * strsteal(char **ptr) {
     char *ret = *ptr;
     *ptr = NULL;
@@ -852,8 +887,8 @@ static int matchFollowers(struct alternativeSet *set,
             /* check if the follower in alternatives exist they have same name
              * and link*/
             if (i < set->alts[k].numFollowers) {
-                if (strcmp(set->alts[k].followers[i].facility,
-                           template.followers[j].facility)) {
+                if (!streq_bin(set->alts[k].followers[i].facility,
+                               template.followers[j].facility)) {
                     fprintf(
                         stderr, _("link %s incorrect for follower %s (%s %s)\n"),
                         set->alts[k].followers[i].facility,
@@ -1005,7 +1040,7 @@ static int addService(struct alternative newAlt, const char *altDir,
         return 2;
 
     if (set.numAlts) {
-        if (strcmp(newAlt.leader.facility, set.alts[0].leader.facility)) {
+        if (!streq_bin(newAlt.leader.facility, set.alts[0].leader.facility)) {
             fprintf(stderr, _("the primary link for %s must be %s\n"),
                     set.alts[0].leader.title, set.alts[0].leader.facility);
             return 2;

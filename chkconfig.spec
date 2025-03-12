@@ -12,6 +12,8 @@ BuildRequires: gcc gettext libselinux-devel make newt-devel popt-devel pkgconfig
 BuildRequires: beakerlib
 %endif
 
+%global merged_sbin %["%{_sbindir}" == "%{_bindir}"]
+
 Conflicts: initscripts <= 5.30-1
 
 Provides: /sbin/chkconfig
@@ -35,7 +37,7 @@ page), ntsysv configures the current runlevel (5 if you're using X).
 
 %package -n alternatives
 Summary: A tool to maintain symbolic links determining default commands
-%if "%{_sbindir}" == "%{_bindir}"
+%if %{merged_sbin}
 Provides: /usr/sbin/alternatives
 Provides: /usr/sbin/update-alternatives
 Requires: filesystem(unmerged-sbin-symlinks)
@@ -51,7 +53,7 @@ system at the same time.
 %setup -q
 
 %build
-%make_build RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS"
+%make_build RPM_OPT_FLAGS="$RPM_OPT_FLAGS" LDFLAGS="$RPM_LD_FLAGS" MERGED_SBIN=%{merged_sbin}
 
 # tests are executed using tmt and tf on CentOS Stream and RHEL
 %if 0%{?fedora}
