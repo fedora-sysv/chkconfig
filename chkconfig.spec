@@ -1,6 +1,6 @@
 Summary: A system tool for maintaining the /etc/rc*.d hierarchy
 Name: chkconfig
-Version: 1.31
+Version: 1.32
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: https://github.com/fedora-sysv/chkconfig
@@ -105,6 +105,11 @@ mkdir -p $RPM_BUILD_ROOT/etc/chkconfig.d
 %{_mandir}/*/alternatives*
 
 %changelog
+* Thu Mar 13 2025 Jan Macku <jamacku@redhat.com> - 1.32-1
+- Allow paths with /usr/sbin and /usr/bin as equivalent
+- mkosi: update conf to match latest mkosi version
+- Translated using Weblate (Italian)
+
 * Wed Dec 18 2024 Jan Macku <jamacku@redhat.com> - 1.31-1
 - Translated using Weblate (Ukrainian)
 - Translated using Weblate (Ukrainian)
