@@ -11,23 +11,23 @@
 # Toni Rantala <trantalafilo@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Jan Kuparinen <copper_fin@hotmail.com>, 2021, 2022, 2023, 2024.
-# Ricky Tigg <ricky.tigg@gmail.com>, 2021, 2022.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2021, 2022, 2025.
 # Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2024-02-20 20:35+0000\n"
-"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
-"Language-Team: Finnish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/fi/>\n"
+"PO-Revision-Date: 2025-03-20 18:13+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -186,7 +186,7 @@ msgstr "Näppäin <F1> antaa lisää tietoja palvelusta."
 
 #: ../ntsysv.c:99 ../ntsysv.c:138
 msgid "Ok"
-msgstr "OK"
+msgstr "Hyvä on"
 
 #: ../ntsysv.c:99
 msgid "Back"
