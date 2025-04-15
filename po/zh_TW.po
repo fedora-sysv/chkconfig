@@ -12,13 +12,14 @@
 # Walter Cheuk <wwycheuk@gmail.com>, 2007
 # Cheng-Chia Tseng <pswo10680@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
+# hsu zangmen <chzang55@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-04-06 20:05+0000\n"
+"Last-Translator: hsu zangmen <chzang55@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -85,8 +86,9 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"注意：本輸出僅顯示 SysV 服務，並且不包含原生的 systemd 服務。\n"
-"      SysV 組態資料可能會被原生的 systemd 組態凌駕。\n"
+"注意：此輸出僅顯示 SysV 服務，不包括本機 systemd 服務。 \n"
+"SysV 配置資料可能會被本機 \n"
+"systemd 配置覆蓋。\n"
 "\n"
 
 #: ../chkconfig.c:73
@@ -239,9 +241,9 @@ msgid "cannot determine current run level\n"
 msgstr "無法取得目前的執行層級\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "無法為 %s 設定 SELinux 情境：%s\n"
+msgstr "無法為 %s 設定 SELinux 內容：%s\n"
 
 #: ../leveldb.c:926
 #, c-format
@@ -258,7 +260,9 @@ msgstr "alternatives 版本 %s - 著作權所有 (C) 2001 Red Hat, Inc.\n"
 msgid ""
 "This may be freely redistributed under the terms of the GNU Public License.\n"
 "\n"
-msgstr "在遵守 GNU 通用公共授權 (GPL) 的條款下，可以自由的散佈這個程式。\n"
+msgstr ""
+"在遵守 GNU 通用公共授權 (GPL) 的條款下，可以自由的散佈這個程式。\n"
+"\n"
 
 #: ../alternatives.c:88
 #, c-format
@@ -276,11 +280,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <family>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <link> <name> <path>]*\n"
+msgstr ""
+"                    "
+"[--follower <follower_link> <follower_name> <follower_path>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -303,7 +309,7 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <name>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
 msgstr "       alternatives --set <name> <path>\n"
 
@@ -313,21 +319,23 @@ msgid "       alternatives --list\n"
 msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove <name> <path>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr ""
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-follower <name> <path> <follower_name>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -335,11 +343,11 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "常用選項：--verbose --test --help --usage --version --keep-missing\n"
+msgstr "常用指令選項：--verbose --test --help --usage --version --keep-missing\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -379,13 +387,12 @@ msgstr "%s 的主要連結不良\n"
 #: ../alternatives.c:362
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "%2$s 中沒有預期 %1$s 路徑\n"
+msgstr "%s 中沒有預期 %s 路徑\n"
 
 #: ../alternatives.c:372
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "遺失 %2$s 中的從屬 %1$s 路徑\n"
+msgstr "在 %s 中遺失追隨 %s 的路徑\n"
 
 #: ../alternatives.c:383
 #, c-format
@@ -414,10 +421,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "%s 中預期有優先度數字\n"
 
 #: ../alternatives.c:454
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "%s 中預期有從屬路徑\n"
+msgstr "追隨路徑預期在 %s\n"
 
 #: ../alternatives.c:486
 #, c-format
@@ -445,16 +451,16 @@ msgid "failed to remove link %s: %s\n"
 msgstr "移除 %s 連結失敗：%s\n"
 
 #: ../alternatives.c:584
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "無法連結 %s -> %s：%s 已存在，而且不是符號連結\n"
 
 #: ../alternatives.c:589
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
-msgstr "無法連結 %s -> %s：%s 已存在，而且不是符號連結\n"
+msgstr "連結 %s -> %s 失敗： 已設定 --keep-foreign 且連結 %s 指向 %s 以外的地方\n"
 
 #: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
@@ -488,8 +494,7 @@ msgid "running %s\n"
 msgstr "執行中 %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "%s 連結在從屬 %s 上是錯誤的 (%s %s)\n"
 
@@ -500,9 +505,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s 尚未被設定為 %s 的替代選項\n"
 
 #: ../alternatives.c:911
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s 尚未被設定為 %s 的替代選項\n"
+msgstr "%s 未設定為 %s (%s) 的從屬者替代方案\n"
 
 #: ../alternatives.c:969
 #, c-format
@@ -535,10 +540,9 @@ msgid "priority %d\n"
 msgstr "優先度 %d\n"
 
 #: ../alternatives.c:1033
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " 從屬 %s：%s\n"
+msgstr " 追隨 %s: %s\n"
 
 #: ../alternatives.c:1038
 #, c-format
@@ -563,7 +567,7 @@ msgstr "  選擇        指令\n"
 #: ../alternatives.c:1093
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
-msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼："
+msgstr "請輸入以保留目前的選擇[+]，或輸入選擇號碼： "
 
 #: ../alternatives.c:1097
 #, c-format
@@ -577,7 +581,7 @@ msgstr ""
 #: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "無法存取 %s/%s： 沒有此檔案或目錄\n"
 
 #: ../alternatives.c:1191
 #, c-format
