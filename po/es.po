@@ -14,26 +14,27 @@
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2015. #zanata
 # Máximo Castañeda Riloba <mcrcctm@gmail.com>, 2017. #zanata
 # Emilio Herrera <ehespinosa57@gmail.com>, 2020, 2022.
+# Javier Francisco <fserrador@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/es/>\n"
+"PO-Revision-Date: 2025-04-15 15:53+0000\n"
+"Last-Translator: Javier Francisco <fserrador@gmail.com>\n"
+"Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
 msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
-msgstr "%s versión %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s versión %s - Copyright © 1997-2000 Red Hat, Inc.\n"
 
 #: ../chkconfig.c:43
 #, c-format
@@ -248,19 +249,19 @@ msgid "cannot determine current run level\n"
 msgstr "No se puede determinar el nivel de ejecución actual\n"
 
 #: ../leveldb.c:901
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "No se pudo establecer el contexto SELinux para %s: %s\n"
+msgstr "No es capaz de establecer el contexto SELinux para %s: %s\n"
 
 #: ../leveldb.c:926
 #, c-format
 msgid "failed to make symlink %s: %s\n"
-msgstr "no se pudo crear el enlace simbólico %s: %s\n"
+msgstr "no fue capaz de crear el enlace simbólico %s: %s\n"
 
 #: ../alternatives.c:83
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives versión %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "versión alternativa %s - © 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:85
 #, c-format
@@ -275,7 +276,8 @@ msgstr ""
 #: ../alternatives.c:88
 #, c-format
 msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
-msgstr "uso: alternatives --install <enlace> <nombre> <ruta> <prioridad>\n"
+msgstr ""
+"modo de empleo: alternatives --install <enlace> <nombre> <ruta> <prioridad>\n"
 
 #: ../alternatives.c:89
 #, c-format
@@ -288,15 +290,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <familia>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
-#| msgid ""
-#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
 msgstr ""
-"                    [--slave <enlace_esclavo> <nombre_esclavo> "
-"<ruta_esclavo>]*\n"
+"                    "
+"[--follower <enlace_seguidor> <nombre_seguidor> <ruta_seguidor>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -319,9 +319,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <nombre>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <nombre> <ruta>\n"
+msgstr "       alternatives --set <nombre> <ruta/familia>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -334,22 +334,19 @@ msgid "       alternatives --remove-all <name>\n"
 msgstr "       alternatives --remove-all <nombre>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
-#| msgid ""
-#| "       alternatives --add-slave <name> <path> <slave_link> <slave_name> "
-#| "<slave_path>\n"
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-slave <nombre> <ruta> <enlace_esclavo> "
-"<nombre_esclavo> <ruta_esclavo>\n"
+"       alternatives --add-follower <nombre> <ruta> <enlace_seguido> "
+"<nombre_seguido> <ruta_seguida>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <nombre> <ruta> <nombre_esclavo>\n"
+msgstr ""
+"       alternatives --remove-follower <nombre> <ruta> <nombre_seguidor>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -357,12 +354,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"opciones comunes: --verbose --test --help --usage --version --keep-missing\n"
+"opciones comunes: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -397,7 +395,7 @@ msgstr "modo incorrecto en la línea 1 de %s\n"
 #: ../alternatives.c:349
 #, c-format
 msgid "bad primary link in %s\n"
-msgstr "enlace primario dañado en %s\n"
+msgstr "enlace primario incorrecto en %s\n"
 
 #: ../alternatives.c:362
 #, c-format
@@ -405,10 +403,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "ruta %s inesperada en %s\n"
 
 #: ../alternatives.c:372
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "falta la ruta para el esclavo %s en %s\n"
+msgstr "falta la ruta para seguidor %s en %s\n"
 
 #: ../alternatives.c:383
 #, c-format
@@ -437,49 +434,49 @@ msgid "numeric priority expected in %s\n"
 msgstr "se esperaba prioridad numérica en %s\n"
 
 #: ../alternatives.c:454
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "se esperaba ruta esclava en %s\n"
+msgstr "se esperaba ruta seguidora en %s\n"
 
 #: ../alternatives.c:486
 #, c-format
 msgid "failed to read link %s: %s\n"
-msgstr "error al leer enlace %s: %s\n"
+msgstr "incapaz de leer enlace %s: %s\n"
 
 #: ../alternatives.c:503
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
-msgstr "el enlace no apunta a ninguna alternativa -- poniendo modo manual\n"
+msgstr "el enlace no apunta a ninguna alternativa; poniendo modo manual\n"
 
 #: ../alternatives.c:508
 #, c-format
 msgid "link changed -- setting mode to manual\n"
-msgstr "enlace modificado -- poniendo modo manual\n"
+msgstr "enlace modificado; poniendo modo manual\n"
 
 #: ../alternatives.c:554 ../alternatives.c:561
 #, c-format
 msgid "would remove %s\n"
-msgstr "se borraría %s\n"
+msgstr "se eliminaría %s\n"
 
 #: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "no se pudo eliminar el enlace simbólico %s: %s\n"
+msgstr "no fue capaz de eliminar el enlace simbólico %s: %s\n"
 
 #: ../alternatives.c:584
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
-"no se pudo enlazar %s -> %s: %s ya existe y no es un enlace simbólico\n"
+"no fue capaz de enlazar %s -> %s: %s ya existe y no es un enlace simbólico\n"
 
 #: ../alternatives.c:589
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"no se pudo enlazar %s -> %s: %s ya existe y no es un enlace simbólico\n"
+"no fue capaz de enlazar %s -> %s: --keep-foreign fue puesto y enlaza %s "
+"apunta fuera  %s\n"
 
 #: ../alternatives.c:593 ../alternatives.c:611
 #, c-format
@@ -489,7 +486,7 @@ msgstr "enlazaría %s -> %s\n"
 #: ../alternatives.c:602 ../alternatives.c:624
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
-msgstr "no se pudo enlazar %s -> %s: %s\n"
+msgstr "no fue capaz de enlazar %s -> %s: %s\n"
 
 #: ../alternatives.c:657
 #, c-format
@@ -499,12 +496,12 @@ msgstr "%s ya existe\n"
 #: ../alternatives.c:659
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "error al crear %s: %s\n"
+msgstr "no fue capaz de crear %s: %s\n"
 
 #: ../alternatives.c:692
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
-msgstr "no se pudo reemplazar %s con %s: %s\n"
+msgstr "no fue capaz de reemplazar %s con %s: %s\n"
 
 #: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
 #: ../alternatives.c:745
@@ -513,10 +510,9 @@ msgid "running %s\n"
 msgstr "ejecutando %s\n"
 
 #: ../alternatives.c:818
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "el enlace %s es incorrecto para el esclavo %s (%s %s)\n"
+msgstr "el enlace %s es incorrecto para el seguidor %s (%s %s)\n"
 
 #: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
 #: ../alternatives.c:1175
@@ -525,10 +521,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s no ha sido configurado como una alternativa para %s\n"
 
 #: ../alternatives.c:911
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s no ha sido configurado como un esclavo alternativa para %s (%s)\n"
+msgstr "%s no ha sido configurado como un seguidor alternativa para %s (%s)\n"
 
 #: ../alternatives.c:969
 #, c-format
@@ -561,15 +556,14 @@ msgid "priority %d\n"
 msgstr "prioridad %d\n"
 
 #: ../alternatives.c:1033
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " esclavo %s: %s\n"
+msgstr " seguidor %s: %s\n"
 
 #: ../alternatives.c:1038
 #, c-format
 msgid "Current `best' version is %s.\n"
-msgstr "La 'mejor' versión actual es %s.\n"
+msgstr "La `mejor' versión actual es %s.\n"
 
 #: ../alternatives.c:1073
 #, c-format
@@ -590,7 +584,7 @@ msgstr "  Selección    Comando\n"
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
-"Presione Intro para mantener la selección actual[+], o escriba el número de "
+"Presione Intro para mantener la selección actual[+], o teclee el número de "
 "la selección: "
 
 #: ../alternatives.c:1097
@@ -600,12 +594,12 @@ msgid ""
 "error reading choice\n"
 msgstr ""
 "\n"
-"error al leer la selección\n"
+"error al leer la elección\n"
 
 #: ../alternatives.c:1124
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "no se puede acceder a %s/%s: sin tal archivo o directorio\n"
 
 #: ../alternatives.c:1191
 #, c-format
