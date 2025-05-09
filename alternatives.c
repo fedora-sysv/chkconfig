@@ -555,7 +555,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
     linkBuf[i] = '\0';
 
     for (i = 0; i < set->numAlts; i++)
-        if (!strcmp(linkBuf, set->alts[i].leader.target))
+        if (streq_bin(linkBuf, set->alts[i].leader.target))
             break;
 
     if (i == set->numAlts) {
@@ -845,8 +845,9 @@ static void fillTemplateFrom(struct alternative source,
 static void addFollowerToAlternative(struct alternative *template,
                                   struct linkSet follower) {
     int i;
+
     for (i = 0; i < template->numFollowers; i++) {
-        if (streq(follower.facility, template->followers[i].facility))
+        if (streq_bin(follower.facility, template->followers[i].facility))
             break;
     }
     if (i == template->numFollowers) {
@@ -919,7 +920,7 @@ static struct alternative *findAlternativeInSet(struct alternativeSet set,
     int i;
 
     for (i = 0; i < set.numAlts; i++)
-        if (streq(set.alts[i].leader.target, target))
+        if (streq_bin(set.alts[i].leader.target, target))
             return set.alts + i;
     return NULL;
 }
@@ -1202,7 +1203,7 @@ static int setService(const char *title, const char *target, const char *altDir,
     }
 
     for (i = 0; i < set.numAlts; i++)
-        if (!strcmp(set.alts[i].leader.target, target)) {
+        if (streq_bin(set.alts[i].leader.target, target)) {
             found = i;
             break;
         }
@@ -1242,7 +1243,7 @@ static int removeService(const char *title, const char *target,
         return 2;
 
     for (i = 0; i < set.numAlts; i++)
-        if (!strcmp(set.alts[i].leader.target, target))
+        if (streq_bin(set.alts[i].leader.target, target))
             break;
 
     if (i == set.numAlts) {
