@@ -5,9 +5,9 @@
 # Translators:
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
 # notting <notting@redhat.com>, 2011
-# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023, 2024.
-# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023, 2024.
-# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Dmytro Markevych <hotr1pak@gmail.com>, 2024.
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2024-11-21 19:38+0000\n"
+"PO-Revision-Date: 2025-06-13 08:44+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/uk/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -615,10 +615,9 @@ msgid "altdir %s invalid\n"
 msgstr "каталог altdir %s неправильний\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "не вдається створити %s: %s\n"
+msgstr "не вдалося створити адміністративний каталог: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
