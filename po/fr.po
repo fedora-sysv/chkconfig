@@ -24,11 +24,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 11:46+0200\n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2024-10-08 08:38+0000\n"
 "Last-Translator: Léane GRASSER <leane.grasser@proton.me>\n"
-"Language-Team: French <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/fr/>\n"
+"Language-Team: French <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,52 +141,52 @@ msgid "You do not have enough privileges to perform this operation.\n"
 msgstr ""
 "Vous n’avez pas les privilèges nécessaires pour effectuer cette opération.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "on"
 msgstr "marche"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "off"
 msgstr "arrêt"
 
-#: ../chkconfig.c:543
+#: ../chkconfig.c:555
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "services basés sur xinetd :\n"
 
-#: ../chkconfig.c:545
+#: ../chkconfig.c:557
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "impossible d’ouvrir le répertoire %s : %s\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Note : transfert de la requête à « systemctl %s %s ».\n"
 
-#: ../chkconfig.c:683
+#: ../chkconfig.c:701
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Impossible de transférer la requête de service à systemctl : %m\n"
 
-#: ../chkconfig.c:739
+#: ../chkconfig.c:757
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s version %s\n"
 
-#: ../chkconfig.c:752
+#: ../chkconfig.c:770
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type doit être « sysv » ou « xinetd »\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:776
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "spécifiez une seule des options suivantes --list, --add, --del ou --"
 "override\n"
 
-#: ../chkconfig.c:869
+#: ../chkconfig.c:887
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr ""
@@ -217,52 +217,52 @@ msgstr "Quels services doivent être démarrés automatiquement ?"
 msgid "Services"
 msgstr "Services"
 
-#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "erreur lors de la lecture d’informations sur le service %s : %s\n"
 
-#: ../ntsysv.c:409
+#: ../ntsysv.c:412
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "erreur lors de la lecture depuis le répertoire %s : %s\n"
 
-#: ../ntsysv.c:446
+#: ../ntsysv.c:452
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Vous devez être connecté en tant que root pour exécuter %s.\n"
 
-#: ../ntsysv.c:463
+#: ../ntsysv.c:469
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "argument incorrect pour --levels\n"
 
-#: ../ntsysv.c:471
+#: ../ntsysv.c:477
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Aucun service ne peut être administré par ntsysv !\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:348
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "impossible d’ouvrir %s/init.d : %s\n"
 
-#: ../leveldb.c:766 ../leveldb.c:774
+#: ../leveldb.c:797 ../leveldb.c:805
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "échec d’interprétation du motif %s : %s\n"
 
-#: ../leveldb.c:820
+#: ../leveldb.c:851
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "impossible de déterminer le niveau d’exécution en cours\n"
 
-#: ../leveldb.c:901
+#: ../leveldb.c:934
 #, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Impossible de définir le contexte SELinux pour %s : %s\n"
 
-#: ../leveldb.c:926
+#: ../leveldb.c:959
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "impossible de créer le lien symbolique %s : %s\n"
@@ -375,111 +375,111 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <répertoire> --admindir <répertoire>\n"
 
-#: ../alternatives.c:311
+#: ../alternatives.c:372
 #, c-format
 msgid "reading %s\n"
 msgstr "lecture de %s\n"
 
-#: ../alternatives.c:316
+#: ../alternatives.c:377
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "impossible d’ouvrir %s : %s\n"
 
-#: ../alternatives.c:324
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "impossible de lire %s : %s\n"
 
-#: ../alternatives.c:332
+#: ../alternatives.c:393
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s est vide !\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:403
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "mode incorrect sur la ligne 1 de %s\n"
 
-#: ../alternatives.c:349
+#: ../alternatives.c:410
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "lien primaire incorrect dans %s\n"
 
-#: ../alternatives.c:362
+#: ../alternatives.c:423
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "chemin %s inattendu dans %s\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:432
 #, c-format
 msgid "missing path for follower %s in %s\n"
 msgstr "chemin manquant pour le suiveur %s dans %s\n"
 
-#: ../alternatives.c:383
+#: ../alternatives.c:447
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "fin de fichier inattendue dans %s\n"
 
-#: ../alternatives.c:393
+#: ../alternatives.c:455
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "chemin de l’alternative attendu dans %s\n"
 
-#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
-#: ../alternatives.c:455 ../alternatives.c:476
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "ligne inattendue dans %s : %s\n"
 
-#: ../alternatives.c:421
+#: ../alternatives.c:482
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 "le caractère « @ » de fermeture est manquant ou la famille est vide dans %s\n"
 
-#: ../alternatives.c:435
+#: ../alternatives.c:496
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "priorité numérique attendue dans %s\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:512
 #, c-format
 msgid "follower path expected in %s\n"
 msgstr "chemin de suiveur attendu dans %s\n"
 
-#: ../alternatives.c:486
+#: ../alternatives.c:549
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "impossible de lire le lien %s : %s\n"
 
-#: ../alternatives.c:503
+#: ../alternatives.c:566
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "le lien ne pointe pas sur une alternative -- passage en mode manuel\n"
 
-#: ../alternatives.c:508
+#: ../alternatives.c:571
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "lien changé -- passage en mode manuel\n"
 
-#: ../alternatives.c:554 ../alternatives.c:561
+#: ../alternatives.c:629 ../alternatives.c:636
 #, c-format
 msgid "would remove %s\n"
 msgstr "supprimerait %s\n"
 
-#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "impossible de supprimer le lien %s : %s\n"
 
-#: ../alternatives.c:584
+#: ../alternatives.c:659
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
 "échec de la création du lien %s -> %s : %s existe et n’est pas un lien "
 "symbolique\n"
 
-#: ../alternatives.c:589
+#: ../alternatives.c:664
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
@@ -488,118 +488,118 @@ msgstr ""
 "échec de la création du lien %s -> %s : --keep-foreign a été défini et le "
 "lien %s pointe en dehors de %s\n"
 
-#: ../alternatives.c:593 ../alternatives.c:611
+#: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "lierait %s -> %s\n"
 
-#: ../alternatives.c:602 ../alternatives.c:624
+#: ../alternatives.c:677 ../alternatives.c:699
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "Impossible de lier %s -> %s : %s\n"
 
-#: ../alternatives.c:657
+#: ../alternatives.c:732
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s existe déjà\n"
 
-#: ../alternatives.c:659
+#: ../alternatives.c:734
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "impossible de créer %s : %s\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:767
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "Impossible de remplacer %s avec %s : %s\n"
 
-#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
-#: ../alternatives.c:745
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
 #, c-format
 msgid "running %s\n"
 msgstr "%s en cours d’exécution\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:894
 #, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "lien %s incorrect pour le suiveur %s (%s %s)\n"
 
-#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
-#: ../alternatives.c:1175
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s n’a pas encore été configuré en tant qu’alternative à %s\n"
 
-#: ../alternatives.c:911
+#: ../alternatives.c:987
 #, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr ""
 "%s n’a pas encore été configuré en tant que suiveur d'alternative pour %s "
 "(%s)\n"
 
-#: ../alternatives.c:969
+#: ../alternatives.c:1045
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "le lien primaire pour %s doit être %s\n"
 
-#: ../alternatives.c:1021
+#: ../alternatives.c:1097
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s est dans l’état auto.\n"
 
-#: ../alternatives.c:1023
+#: ../alternatives.c:1099
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s est dans l’état manuel.\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1101
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " le lien pointe actuellement sur %s\n"
 
-#: ../alternatives.c:1030
+#: ../alternatives.c:1106
 #, c-format
 msgid "family %s "
 msgstr "famille %s "
 
-#: ../alternatives.c:1031
+#: ../alternatives.c:1107
 #, c-format
 msgid "priority %d\n"
 msgstr "priorité %d\n"
 
-#: ../alternatives.c:1033
+#: ../alternatives.c:1109
 #, c-format
 msgid " follower %s: %s\n"
 msgstr " suiveur %s : %s\n"
 
-#: ../alternatives.c:1038
+#: ../alternatives.c:1114
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "La « meilleure » version courante est %s.\n"
 
-#: ../alternatives.c:1073
+#: ../alternatives.c:1149
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Il existe %d programmes qui fournissent %s.\n"
 
-#: ../alternatives.c:1074
+#: ../alternatives.c:1150
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Il existe %d programmes qui fournissent « %s ».\n"
 
-#: ../alternatives.c:1078
+#: ../alternatives.c:1154
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Sélection    Commande\n"
 
-#: ../alternatives.c:1093
+#: ../alternatives.c:1169
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "Tapez « Entrée » pour garder la sélection courante [+] ou saisissez le "
 "numéro de sélection : "
 
-#: ../alternatives.c:1097
+#: ../alternatives.c:1173
 #, c-format
 msgid ""
 "\n"
@@ -608,37 +608,43 @@ msgstr ""
 "\n"
 "erreur lors de la lecture du choix\n"
 
-#: ../alternatives.c:1124
+#: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr "impossible d'accéder à %s/%s : Fichier ou répertoire introuvable\n"
 
-#: ../alternatives.c:1191
+#: ../alternatives.c:1267
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(supprimerait %s\n"
 
-#: ../alternatives.c:1193
+#: ../alternatives.c:1269
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "impossible de supprimer %s : %s\n"
 
-#: ../alternatives.c:1365
+#: ../alternatives.c:1444
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family ne peut pas contenir le caractère « @ »\n"
 
-#: ../alternatives.c:1427
+#: ../alternatives.c:1506
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s invalide\n"
 
-#: ../alternatives.c:1432
+#: ../alternatives.c:1520
+#, fuzzy, c-format
+#| msgid "failed to create %s: %s\n"
+msgid "failed to create admindir: %s\n"
+msgstr "impossible de créer %s : %s\n"
+
+#: ../alternatives.c:1525
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s invalide\n"
 
-#: ../alternatives.c:1442
+#: ../alternatives.c:1535
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "Alternatives, version %s\n"

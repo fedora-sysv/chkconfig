@@ -17,11 +17,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 11:46+0200\n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2025-03-20 18:13+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
-"Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/fi/>\n"
+"Language-Team: Finnish <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,52 +130,52 @@ msgstr "virhe luettaessa palvelun %s tietoja: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Sinulla ei ole riittävästi oikeuksia tämän toiminnon suorittamiseen.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "on"
 msgstr "päällä"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "off"
 msgstr "pois päältä"
 
-#: ../chkconfig.c:543
+#: ../chkconfig.c:555
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd-pohjaiset palvelut:\n"
 
-#: ../chkconfig.c:545
+#: ../chkconfig.c:557
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "hakemiston %s avaaminen epäonnistui: %s\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Huomautus: Välitetään pyyntö ”systemctl %s %s”.\n"
 
-#: ../chkconfig.c:683
+#: ../chkconfig.c:701
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Palvelupyynnön välittäminen systemctl:lle epäonnistui: %m\n"
 
-#: ../chkconfig.c:739
+#: ../chkconfig.c:757
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s versio %s\n"
 
-#: ../chkconfig.c:752
+#: ../chkconfig.c:770
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "'--type':n on oltava 'sysv' tai 'xinetd'\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:776
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "vain yksi valitsimista '--list', '--add', '--del' tai '--override' voidaan "
 "määritä\n"
 
-#: ../chkconfig.c:869
+#: ../chkconfig.c:887
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "chkconfig-kyselyssä voidaan määritä vain yksi ajotaso\n"
@@ -204,52 +204,52 @@ msgstr "Mitkä palvelut käynnistetään automaattisesti?"
 msgid "Services"
 msgstr "Palvelut"
 
-#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "virhe luettaessa tietoja palvelulle %s: %s\n"
 
-#: ../ntsysv.c:409
+#: ../ntsysv.c:412
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "virhe luettaessa hakemistosta %s: %s\n"
 
-#: ../ntsysv.c:446
+#: ../ntsysv.c:452
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Vain pääkäyttäjä voi ajaa ohjelman %s.\n"
 
-#: ../ntsysv.c:463
+#: ../ntsysv.c:469
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "virheellinen argumentti valitsimelle '--levels'\n"
 
-#: ../ntsysv.c:471
+#: ../ntsysv.c:477
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ntsysv:n hallitsemia palveluita ei löytynyt!\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:348
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "tiedoston %s/init.d avaaminen epäonnistui: %s\n"
 
-#: ../leveldb.c:766 ../leveldb.c:774
+#: ../leveldb.c:797 ../leveldb.c:805
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "hahmon %s täsmäys epäonnistui: %s\n"
 
-#: ../leveldb.c:820
+#: ../leveldb.c:851
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "nykyisen ajotason määritys ei onnistu\n"
 
-#: ../leveldb.c:901
+#: ../leveldb.c:934
 #, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "Ei voitu asettaa SELinux-kontekstia kohteelle %s: %s\n"
 
-#: ../leveldb.c:926
+#: ../leveldb.c:959
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "symbolisen linkin %s tekeminen epäonnistui: %s\n"
@@ -361,110 +361,110 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <hakemisto> --admindir <hakemisto>\n"
 
-#: ../alternatives.c:311
+#: ../alternatives.c:372
 #, c-format
 msgid "reading %s\n"
 msgstr "luetaan %s\n"
 
-#: ../alternatives.c:316
+#: ../alternatives.c:377
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "tiedoston %s avaaminen epäonnistui: %s\n"
 
-#: ../alternatives.c:324
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "tiedoston %s lukeminen epäonnistui: %s\n"
 
-#: ../alternatives.c:332
+#: ../alternatives.c:393
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s tyhjänä!\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:403
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "virheellinen tila rivillä 1 tiedostossa %s\n"
 
-#: ../alternatives.c:349
+#: ../alternatives.c:410
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "virheellinen ensisijainen linkki tiedostossa %s\n"
 
-#: ../alternatives.c:362
+#: ../alternatives.c:423
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "odottamaton polku %s tiedostossa %s\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:432
 #, c-format
 msgid "missing path for follower %s in %s\n"
 msgstr "puuttuva polku seuraajalle %s tiedostossa %s\n"
 
-#: ../alternatives.c:383
+#: ../alternatives.c:447
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "odottamaton tiedoston loppu tiedostossa %s\n"
 
-#: ../alternatives.c:393
+#: ../alternatives.c:455
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "polkua vaihtoehtoon odotettiin tiedostossa %s\n"
 
-#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
-#: ../alternatives.c:455 ../alternatives.c:476
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "odottamaton rivi tiedostossa %s: %s\n"
 
-#: ../alternatives.c:421
+#: ../alternatives.c:482
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr "lopettava '@' puuttuu tai perhe on tyhjä tiedostossa %s\n"
 
-#: ../alternatives.c:435
+#: ../alternatives.c:496
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "numeerista prioriteettia odotettiin tiedostossa %s\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:512
 #, c-format
 msgid "follower path expected in %s\n"
 msgstr "seuraajapolkua odotettiin tiedostossa %s\n"
 
-#: ../alternatives.c:486
+#: ../alternatives.c:549
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "linkin %s lukeminen epäonnistui: %s\n"
 
-#: ../alternatives.c:503
+#: ../alternatives.c:566
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "linkki ei osoita vaihtoehtoon -- asetetaan tila käsikäyttöiseksi\n"
 
-#: ../alternatives.c:508
+#: ../alternatives.c:571
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "linkki muutettu -- asetetaan tila käsikäyttöiseksi\n"
 
-#: ../alternatives.c:554 ../alternatives.c:561
+#: ../alternatives.c:629 ../alternatives.c:636
 #, c-format
 msgid "would remove %s\n"
 msgstr "poistetettaisiin %s\n"
 
-#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "linkin %s poistaminen epäonnistui: %s\n"
 
-#: ../alternatives.c:584
+#: ../alternatives.c:659
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
 "linkin %s -> %s luominen epäonnistui: %s on olemassa eikä ole symbolinen "
 "linkki\n"
 
-#: ../alternatives.c:589
+#: ../alternatives.c:664
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
@@ -473,116 +473,116 @@ msgstr ""
 "linkin %s -> %s luominen epäonnistui: --keep-foreign on asetettu ja linkki "
 "%s osoittaa %s:n ulkopuolelle\n"
 
-#: ../alternatives.c:593 ../alternatives.c:611
+#: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "linkitettäisiin %s -> %s\n"
 
-#: ../alternatives.c:602 ../alternatives.c:624
+#: ../alternatives.c:677 ../alternatives.c:699
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "linkin %s -> %s luominen epäonnistui: %s\n"
 
-#: ../alternatives.c:657
+#: ../alternatives.c:732
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s on jo olemassa\n"
 
-#: ../alternatives.c:659
+#: ../alternatives.c:734
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "tiedoston %s luominen epäonnistui: %s\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:767
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "tiedoston %s korvaaminen tiedostolla %s epäonnistui: %s\n"
 
-#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
-#: ../alternatives.c:745
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
 #, c-format
 msgid "running %s\n"
 msgstr "suoritetaan %s\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:894
 #, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "linkki %s on virheellinen seuraajalle %s (%s %s)\n"
 
-#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
-#: ../alternatives.c:1175
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "ohjelmaa %s ei ole asetettu sovelluksen %s vaihtoehdoksi\n"
 
-#: ../alternatives.c:911
+#: ../alternatives.c:987
 #, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr ""
 "ohjelmaa %s ei ole asetettu sovelluksen %s (%s) seuraajavaihtoehdoksi\n"
 
-#: ../alternatives.c:969
+#: ../alternatives.c:1045
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "ensisijaisen linkin sovellukselle %s on oltava %s\n"
 
-#: ../alternatives.c:1021
+#: ../alternatives.c:1097
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - tila on automaattinen.\n"
 
-#: ../alternatives.c:1023
+#: ../alternatives.c:1099
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - tila on käsikäyttöinen.\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1101
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " linkki viittaa tällä hetkellä tiedostoon %s\n"
 
-#: ../alternatives.c:1030
+#: ../alternatives.c:1106
 #, c-format
 msgid "family %s "
 msgstr "perhe %s "
 
-#: ../alternatives.c:1031
+#: ../alternatives.c:1107
 #, c-format
 msgid "priority %d\n"
 msgstr "prioriteetti %d\n"
 
-#: ../alternatives.c:1033
+#: ../alternatives.c:1109
 #, c-format
 msgid " follower %s: %s\n"
 msgstr " seuraaja %s: %s\n"
 
-#: ../alternatives.c:1038
+#: ../alternatives.c:1114
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Nykyinen \"paras\" versio on %s.\n"
 
-#: ../alternatives.c:1073
+#: ../alternatives.c:1149
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d ohjelma tarjoaa sovelluksen '%s'.\n"
 
-#: ../alternatives.c:1074
+#: ../alternatives.c:1150
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d ohjelmaa tarjoavat sovelluksen '%s'.\n"
 
-#: ../alternatives.c:1078
+#: ../alternatives.c:1154
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Valinta      Komento\n"
 
-#: ../alternatives.c:1093
+#: ../alternatives.c:1169
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr ""
 "[Enter] ([+]) säilyttääkseen nykyisen valinnan, tai syötä valintanumero: "
 
-#: ../alternatives.c:1097
+#: ../alternatives.c:1173
 #, c-format
 msgid ""
 "\n"
@@ -591,37 +591,43 @@ msgstr ""
 "\n"
 "virhe luettaessa valintaa\n"
 
-#: ../alternatives.c:1124
+#: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr "ei voi käyttää %s/%s: Ei tällaista tiedostoa tai hakemistoa\n"
 
-#: ../alternatives.c:1191
+#: ../alternatives.c:1267
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(poistettaisiin %s)\n"
 
-#: ../alternatives.c:1193
+#: ../alternatives.c:1269
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "tiedoston %s poistaminen epäonnistui: %s\n"
 
-#: ../alternatives.c:1365
+#: ../alternatives.c:1444
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr "--family ei voi sisältää symboolia '@'\n"
 
-#: ../alternatives.c:1427
+#: ../alternatives.c:1506
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s on virheellinen\n"
 
-#: ../alternatives.c:1432
+#: ../alternatives.c:1520
+#, fuzzy, c-format
+#| msgid "failed to create %s: %s\n"
+msgid "failed to create admindir: %s\n"
+msgstr "tiedoston %s luominen epäonnistui: %s\n"
+
+#: ../alternatives.c:1525
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s on virheellinen\n"
 
-#: ../alternatives.c:1442
+#: ../alternatives.c:1535
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives versio %s\n"

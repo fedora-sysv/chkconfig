@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 11:46+0200\n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Kannada <https://translate.fedoraproject.org/projects/fedora-"
@@ -124,52 +124,52 @@ msgstr "%s ಸೇವೆಯ ಬಗೆಗಿನ ಮಾಹಿತಿಯನ್ನು 
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ನಿಮ್ಮಲ್ಲಿ ಸವಲತ್ತುಗಳಿಲ್ಲ.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "on"
 msgstr "ಆನ್"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "off"
 msgstr "ಆಫ್"
 
-#: ../chkconfig.c:543
+#: ../chkconfig.c:555
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "xinetd ಆಧರಿತ ಸೇವೆಗಳು:\n"
 
-#: ../chkconfig.c:545
+#: ../chkconfig.c:557
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr " %s ಕಡತಕೋಶವನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "ಟಿಪ್ಪಣಿ: 'systemctl %s %s' ಗೆ ಮನವಿಯನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ.\n"
 
-#: ../chkconfig.c:683
+#: ../chkconfig.c:701
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "ಸೇವೆಯ ಮನವಿಯನ್ನು systemctl ಗೆ ಕಳುಹಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ: %m\n"
 
-#: ../chkconfig.c:739
+#: ../chkconfig.c:757
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s ಆವೃತ್ತಿ %s\n"
 
-#: ../chkconfig.c:752
+#: ../chkconfig.c:770
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type ಯು 'sysv' ಅಥವ 'xinetd' ಆಗಿರಲೆ ಬೇಕು\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:776
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "--list, --add, --del, ಅಥವ --override ಇವುಗಳಿಂದ ಯಾವುದಾದರೂ ಒಂದನ್ನು ಮಾತ್ರ "
 "ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
 
-#: ../chkconfig.c:869
+#: ../chkconfig.c:887
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "ಒಂದು chkconfig ಮನವಿಗೆ ಕೇವಲ ಒಂದು ರನ್-ಲೆವೆಲನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ\n"
@@ -198,52 +198,52 @@ msgstr "ಯಾವ ಸೇವೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತ�
 msgid "Services"
 msgstr "ಸೇವೆಗಳು"
 
-#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "%s ಸೇವೆಯ ಮಾಹಿತಿಯನ್ನು ಓದುವಲ್ಲಿ ದೋಷವಿದೆ : %s\n"
 
-#: ../ntsysv.c:409
+#: ../ntsysv.c:412
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "ಕಡತಕೋಶ %s ದಿಂದ ಓದುವಲ್ಲಿ ದೋಷ: %s\n"
 
-#: ../ntsysv.c:446
+#: ../ntsysv.c:452
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "%s ಅನ್ನು ಚಲಾಯಿಸಲು ನೀವು ನಿರ್ವಾಹಕರಾಗಿರಬೇಕು.\n"
 
-#: ../ntsysv.c:463
+#: ../ntsysv.c:469
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "--levels ಗೆ ತಪ್ಪು ಆರ್ಗ್ಯುಮೆಂಟ್\n"
 
-#: ../ntsysv.c:471
+#: ../ntsysv.c:477
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "ಯಾವುದೇ ಸೇವೆಗಳನ್ನು ntsysv ಇಂದ ನಿರ್ವಹಿಸಲಾಗುವುದಿಲ್ಲ\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:348
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "%s/init.d ಅನ್ನು ತೆರೆಯುವ ಯತ್ನ ವಿಪಲವಾಗಿದೆ: %s\n"
 
-#: ../leveldb.c:766 ../leveldb.c:774
+#: ../leveldb.c:797 ../leveldb.c:805
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "ವಿನ್ಯಾಸ %s ಅನ್ನು glob ಮಾಡುವಲ್ಲಿ ವಿಫಲ: %s\n"
 
-#: ../leveldb.c:820
+#: ../leveldb.c:851
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "ಈಗಿನ ಕ್ರಿಯಾ ಹಂತವನ್ನು ಕಂಡುಹಿಡಿಯಲಾಗಿಲ್ಲ\n"
 
-#: ../leveldb.c:901
+#: ../leveldb.c:934
 #, fuzzy, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr " %s ಕಡತಕೋಶವನ್ನು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../leveldb.c:926
+#: ../leveldb.c:959
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "symlink ಮಾಡುವಲ್ಲಿ ಅಡಚಣೆಯಾಗಿದೆ %s: %s\n"
@@ -349,229 +349,229 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                --altdir <directory> --admindir <directory>\n"
 
-#: ../alternatives.c:311
+#: ../alternatives.c:372
 #, c-format
 msgid "reading %s\n"
 msgstr "ಓದುತ್ತಿದೆ %s\n"
 
-#: ../alternatives.c:316
+#: ../alternatives.c:377
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "ತೆರೆಯಲಾಗುತ್ತಿಲ್ಲ %s: %s\n"
 
-#: ../alternatives.c:324
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "ಓದಲಾಗುತ್ತಿಲ್ಲ %s: %s\n"
 
-#: ../alternatives.c:332
+#: ../alternatives.c:393
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s ಕಾಲಿಯಾಗಿದೆ!\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:403
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "%s ನ ೧ ನೇ ಸಾಲಿನಲ್ಲಿ ತಪ್ಪು ಕ್ರಮ\n"
 
-#: ../alternatives.c:349
+#: ../alternatives.c:410
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "%s ನಲ್ಲಿ ತಪ್ಪು ಪ್ರಾಥಮಿಕ ಕೊಂಡಿ\n"
 
-#: ../alternatives.c:362
+#: ../alternatives.c:423
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "ಪಥ %s ವು %s ನಲ್ಲಿ ಅನಿರೀಕ್ಷಿತವಾಗಿದೆ\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:432
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "ಪೂರಕ ಘಟಕ(slave) %s ಕ್ಕೆ %s ನಲ್ಲಿ ಪಥ ಕಾಣೆಯಾಗಿದೆ\n"
 
-#: ../alternatives.c:383
+#: ../alternatives.c:447
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "%s ನಲ್ಲಿ ಕಡತದ ಅನಿರೀಕ್ಷಿತ ಅಂತ್ಯ\n"
 
-#: ../alternatives.c:393
+#: ../alternatives.c:455
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "ಪರ್ಯಾಯಕ್ಕೆ %s ನಲ್ಲಿ ಪಥವನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ\n"
 
-#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
-#: ../alternatives.c:455 ../alternatives.c:476
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "%s ನಲ್ಲಿ ಅನಪೇಕ್ಷಿತ ಸಾಲು: %s\n"
 
-#: ../alternatives.c:421
+#: ../alternatives.c:482
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:435
+#: ../alternatives.c:496
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "%s ನಲ್ಲಿ ಸಂಖ್ಯಾ ಆದ್ಯತೆಯನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:512
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "%s ನಲ್ಲಿ ಪೂರಕ ಘಟಕ ಪಥವನ್ನು ನಿರೀಕ್ಷಿಸಲಾಗಿದೆ\n"
 
-#: ../alternatives.c:486
+#: ../alternatives.c:549
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "ಕೊಂಡಿ %s ಯನ್ನು ಓದುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../alternatives.c:503
+#: ../alternatives.c:566
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr ""
 "ಕೊಂಡಿಯು ಯಾವುದೇ ಪರ್ಯಾಯಕ್ಕೆ ಸೂಚಿತವಾಗಿಲ್ಲ-- ಕ್ರಮವನ್ನು ಸ್ವಹಸ್ತ(‌manual)ಗೆ "
 "ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ\n"
 
-#: ../alternatives.c:508
+#: ../alternatives.c:571
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "ಕೊಂಡಿ ಬದಲಾಗಿದೆ-- ಕ್ರಮವನ್ನು ಸ್ವಹಸ್ತ(‌manual)ಗೆ ಹೊಂದಿಸಲಾಗುತ್ತಿದೆ\n"
 
-#: ../alternatives.c:554 ../alternatives.c:561
+#: ../alternatives.c:629 ../alternatives.c:636
 #, c-format
 msgid "would remove %s\n"
 msgstr "%s ಅನ್ನು ತೆಗೆಯಲಾಗುತ್ತದೆ\n"
 
-#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "ಕೊಂಡಿ %s ಯನ್ನು ತೆಗೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../alternatives.c:584
+#: ../alternatives.c:659
 #, fuzzy, c-format
 #| msgid "failed to link %s -> %s: %s\n"
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "ಕೊಂಡಿ %s -> %s ಮಾಡುವಲ್ಲಿ ವಿಫಲ: %s\n"
 
-#: ../alternatives.c:589
+#: ../alternatives.c:664
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
 
-#: ../alternatives.c:593 ../alternatives.c:611
+#: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "ಕೊಂಡಿ %s -> %s ಮಾಡಲಾಗುತ್ತದೆ\n"
 
-#: ../alternatives.c:602 ../alternatives.c:624
+#: ../alternatives.c:677 ../alternatives.c:699
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "ಕೊಂಡಿ %s -> %s ಮಾಡುವಲ್ಲಿ ವಿಫಲ: %s\n"
 
-#: ../alternatives.c:657
+#: ../alternatives.c:732
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s ವು ಈಗಾಗಲೆ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ\n"
 
-#: ../alternatives.c:659
+#: ../alternatives.c:734
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "%s ಅನ್ನು ರಚಿಸುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:767
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "%s ಅನ್ನು %s ನೊಂದಿಗೆ ಬದಲಾಯಿಸುವುದರಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
-#: ../alternatives.c:745
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
 #, c-format
 msgid "running %s\n"
 msgstr "%s ಅನ್ನು ಚಲಾಯಿಸಲಾಗುತ್ತಿದೆ\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:894
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "ಕೊಂಡಿ%s ಯು ಪೂರಕ ಘಟಕ %s ಕ್ಕೆ ಸರಿ ಇಲ್ಲ (%s %s)\n"
 
-#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
-#: ../alternatives.c:1175
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂರಚಿತವಾಗಿಲ್ಲ\n"
 
-#: ../alternatives.c:911
+#: ../alternatives.c:987
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s ವು %s ಗೆ ಒಂದು ಪರ್ಯಾಯವಾಗಿ ಸಂರಚಿತವಾಗಿಲ್ಲ\n"
 
-#: ../alternatives.c:969
+#: ../alternatives.c:1045
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "%s ಗೆ ಪ್ರಾಥಮಿಕ ಕೊಂಡಿಯು %s ಆಗಿರಬೇಕು\n"
 
-#: ../alternatives.c:1021
+#: ../alternatives.c:1097
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - ಸ್ಥಿತಿಯು ಸ್ವಯಂ(auto) ಆಗಿದೆ.\n"
 
-#: ../alternatives.c:1023
+#: ../alternatives.c:1099
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - ಸ್ಥಿತಿಯು ಹಸ್ತಮುಖೇನ(manual) ಆಗಿದೆ.\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1101
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " ಕೊಂಡಿಯು ಪ್ರಸಕ್ತ %s ಕ್ಕೆ ಸೂಚಿತಗೊಂಡಿದೆ\n"
 
-#: ../alternatives.c:1030
+#: ../alternatives.c:1106
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:1031
+#: ../alternatives.c:1107
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:1033
+#: ../alternatives.c:1109
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr " ಪೂರಕ ಘಟಕ %s: %s\n"
 
-#: ../alternatives.c:1038
+#: ../alternatives.c:1114
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "ಪ್ರಸಕ್ತ `ಉತ್ತಮ`ಆವೃತ್ತಿಯು %s ಆಗಿದೆ.\n"
 
-#: ../alternatives.c:1073
+#: ../alternatives.c:1149
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "%d ಪ್ರೋಗ್ರಾಂ '%s' ಅನ್ನು ಒದಗಿಸುತ್ತದೆ.\n"
 
-#: ../alternatives.c:1074
+#: ../alternatives.c:1150
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "%d ನಷ್ಟು ಪ್ರೋಗ್ರಾಂಗಳು '%s' ಅನ್ನು ಒದಗಿಸುತ್ತವೆ.\n"
 
-#: ../alternatives.c:1078
+#: ../alternatives.c:1154
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  ಆಯ್ಕೆ    ಆಜ್ಞೆ\n"
 
-#: ../alternatives.c:1093
+#: ../alternatives.c:1169
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "ಪ್ರಸಕ್ತ ಆಯ್ಕೆಯನ್ನು [+] ಉಳಿಸಿಕೊಳ್ಳಲು ನಮೂದಿಸಿ, ಅಥವ ಆಯ್ಕಾ ಸಂಖ್ಯೆಯನ್ನು ಆರಿಸಿ: "
 
-#: ../alternatives.c:1097
+#: ../alternatives.c:1173
 #, c-format
 msgid ""
 "\n"
@@ -580,37 +580,43 @@ msgstr ""
 "\n"
 "ಆಯ್ಕೆಯನ್ನು ಓದುವಲ್ಲಿ ದೋಷ\n"
 
-#: ../alternatives.c:1124
+#: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1191
+#: ../alternatives.c:1267
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(%s ಅನ್ನು ತೆಗೆಯಲಾಗುತ್ತದೆ\n"
 
-#: ../alternatives.c:1193
+#: ../alternatives.c:1269
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "%s ಅನ್ನು ತೆಗೆಯುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
 
-#: ../alternatives.c:1365
+#: ../alternatives.c:1444
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1427
+#: ../alternatives.c:1506
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "altdir %s ಅಮಾನ್ಯವಾಗಿದೆ\n"
 
-#: ../alternatives.c:1432
+#: ../alternatives.c:1520
+#, fuzzy, c-format
+#| msgid "failed to create %s: %s\n"
+msgid "failed to create admindir: %s\n"
+msgstr "%s ಅನ್ನು ರಚಿಸುವಲ್ಲಿ ವಿಫಲತೆ: %s\n"
+
+#: ../alternatives.c:1525
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "admindir %s ಅಮಾನ್ಯವಾಗಿದೆ\n"
 
-#: ../alternatives.c:1442
+#: ../alternatives.c:1535
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "ಬದಲಿಯ ಆವೃತ್ತಿ %s\n"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 11:46+0200\n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2022-03-10 09:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Icelandic <https://translate.fedoraproject.org/projects/"
@@ -117,51 +117,51 @@ msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 msgid "You do not have enough privileges to perform this operation.\n"
 msgstr "Þú hefur ekki nægar heimildir til að framkvæma þessa aðgerð.\n"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "on"
 msgstr "virk"
 
-#: ../chkconfig.c:457 ../chkconfig.c:462 ../chkconfig.c:583
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "off"
 msgstr "óvirk"
 
-#: ../chkconfig.c:543
+#: ../chkconfig.c:555
 #, c-format
 msgid "xinetd based services:\n"
 msgstr "þjónustur úr xinetd:\n"
 
-#: ../chkconfig.c:545
+#: ../chkconfig.c:557
 #, c-format
 msgid "failed to open directory %s: %s\n"
 msgstr "gat ekki opnað möppuna %s: %s\n"
 
-#: ../chkconfig.c:677
+#: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
 msgstr "Athugið: Áframsendi beiðni í 'systemctl %s %s'.\n"
 
-#: ../chkconfig.c:683
+#: ../chkconfig.c:701
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
 msgstr "Ekki tókst að áframsenda þjónustubeiðni í systemctl: %m\n"
 
-#: ../chkconfig.c:739
+#: ../chkconfig.c:757
 #, c-format
 msgid "%s version %s\n"
 msgstr "%s útgáfa %s\n"
 
-#: ../chkconfig.c:752
+#: ../chkconfig.c:770
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
 msgstr "--type verður að vera 'sysv' eða 'xinetd'\n"
 
-#: ../chkconfig.c:758
+#: ../chkconfig.c:776
 #, c-format
 msgid "only one of --list, --add, --del, or --override may be specified\n"
 msgstr ""
 "einungis má nefna eitt af --list, --add, --del eða --override viðföngunum\n"
 
-#: ../chkconfig.c:869
+#: ../chkconfig.c:887
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
 msgstr "einungis má nefna eitt keyrslustig fyrir chkconfig fyrirspurn\n"
@@ -190,52 +190,52 @@ msgstr "Hvaða þjónustur viltu ræsa sjálfvirkt?"
 msgid "Services"
 msgstr "Þjónustur"
 
-#: ../ntsysv.c:333 ../ntsysv.c:362 ../ntsysv.c:400
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
 #, c-format
 msgid "error reading info for service %s: %s\n"
 msgstr "villa við lestur upplýsinga um þjónustu %s: %s\n"
 
-#: ../ntsysv.c:409
+#: ../ntsysv.c:412
 #, c-format
 msgid "error reading from directory %s: %s\n"
 msgstr "villa við lestur úr möppunni %s: %s\n"
 
-#: ../ntsysv.c:446
+#: ../ntsysv.c:452
 #, c-format
 msgid "You must be root to run %s.\n"
 msgstr "Þú þarf að vera rót til að keyra %s.\n"
 
-#: ../ntsysv.c:463
+#: ../ntsysv.c:469
 #, c-format
 msgid "bad argument to --levels\n"
 msgstr "óleyfilegt viðfang við --levels\n"
 
-#: ../ntsysv.c:471
+#: ../ntsysv.c:477
 #, c-format
 msgid "No services may be managed by ntsysv!\n"
 msgstr "Engum þjónustum er hægt að stjórna með ntsysv!\n"
 
-#: ../leveldb.c:321
+#: ../leveldb.c:348
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
 msgstr "gat ekki opnað %s/init.d: %s\n"
 
-#: ../leveldb.c:766 ../leveldb.c:774
+#: ../leveldb.c:797 ../leveldb.c:805
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
 msgstr "gat ekki mátað mynstrið %s: %s\n"
 
-#: ../leveldb.c:820
+#: ../leveldb.c:851
 #, c-format
 msgid "cannot determine current run level\n"
 msgstr "get ekki ákvarðað núverandi keyrslustig\n"
 
-#: ../leveldb.c:901
+#: ../leveldb.c:934
 #, fuzzy, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "gat ekki opnað möppuna %s: %s\n"
 
-#: ../leveldb.c:926
+#: ../leveldb.c:959
 #, c-format
 msgid "failed to make symlink %s: %s\n"
 msgstr "gat ekki búið til tákntengið %s: %s\n"
@@ -340,227 +340,227 @@ msgstr ""
 msgid "                --altdir <directory> --admindir <directory>\n"
 msgstr "                     --altdir <mappa> --admindir <mappa>\n"
 
-#: ../alternatives.c:311
+#: ../alternatives.c:372
 #, c-format
 msgid "reading %s\n"
 msgstr "les %s\n"
 
-#: ../alternatives.c:316
+#: ../alternatives.c:377
 #, c-format
 msgid "failed to open %s: %s\n"
 msgstr "gat ekki opnað %s: %s\n"
 
-#: ../alternatives.c:324
+#: ../alternatives.c:385
 #, c-format
 msgid "failed to read %s: %s\n"
 msgstr "gat ekki lesið %s: %s\n"
 
-#: ../alternatives.c:332
+#: ../alternatives.c:393
 #, c-format
 msgid "%s empty!\n"
 msgstr "%s er tómt!\n"
 
-#: ../alternatives.c:342
+#: ../alternatives.c:403
 #, c-format
 msgid "bad mode on line 1 of %s\n"
 msgstr "ógildur hamur á línu 1 í %s\n"
 
-#: ../alternatives.c:349
+#: ../alternatives.c:410
 #, c-format
 msgid "bad primary link in %s\n"
 msgstr "ógildur tengill í %s\n"
 
-#: ../alternatives.c:362
+#: ../alternatives.c:423
 #, c-format
 msgid "path %s unexpected in %s\n"
 msgstr "slóðin %s á ekki við %s\n"
 
-#: ../alternatives.c:372
+#: ../alternatives.c:432
 #, fuzzy, c-format
 #| msgid "missing path for slave %s in %s\n"
 msgid "missing path for follower %s in %s\n"
 msgstr "vantar slóð fyrir 'slave' %s í %s\n"
 
-#: ../alternatives.c:383
+#: ../alternatives.c:447
 #, c-format
 msgid "unexpected end of file in %s\n"
 msgstr "skráin %s endar óvænt\n"
 
-#: ../alternatives.c:393
+#: ../alternatives.c:455
 #, c-format
 msgid "path to alternate expected in %s\n"
 msgstr "slóð í 'alternate' vantar í %s\n"
 
-#: ../alternatives.c:394 ../alternatives.c:423 ../alternatives.c:436
-#: ../alternatives.c:455 ../alternatives.c:476
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
 #, c-format
 msgid "unexpected line in %s: %s\n"
 msgstr "ógild lína í %s: %s\n"
 
-#: ../alternatives.c:421
+#: ../alternatives.c:482
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
 msgstr ""
 
-#: ../alternatives.c:435
+#: ../alternatives.c:496
 #, c-format
 msgid "numeric priority expected in %s\n"
 msgstr "tölulegt forgildi vantar í %s\n"
 
-#: ../alternatives.c:454
+#: ../alternatives.c:512
 #, fuzzy, c-format
 #| msgid "slave path expected in %s\n"
 msgid "follower path expected in %s\n"
 msgstr "'slave' slóð vantar í %s\n"
 
-#: ../alternatives.c:486
+#: ../alternatives.c:549
 #, c-format
 msgid "failed to read link %s: %s\n"
 msgstr "gat ekki lesið tengið %s: %s\n"
 
-#: ../alternatives.c:503
+#: ../alternatives.c:566
 #, c-format
 msgid "link points to no alternative -- setting mode to manual\n"
 msgstr "tengið vísar ekki í staðgengil -- set haminn á handvirkt\n"
 
-#: ../alternatives.c:508
+#: ../alternatives.c:571
 #, c-format
 msgid "link changed -- setting mode to manual\n"
 msgstr "tengið er breytt -- set haminn á handvirkt\n"
 
-#: ../alternatives.c:554 ../alternatives.c:561
+#: ../alternatives.c:629 ../alternatives.c:636
 #, c-format
 msgid "would remove %s\n"
 msgstr "myndi eyða %s\n"
 
-#: ../alternatives.c:556 ../alternatives.c:565 ../alternatives.c:618
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
 #, c-format
 msgid "failed to remove link %s: %s\n"
 msgstr "gat ekki eytt tákntenginu %s: %s\n"
 
-#: ../alternatives.c:584
+#: ../alternatives.c:659
 #, fuzzy, c-format
 #| msgid "failed to link %s -> %s: %s\n"
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr "gat ekki búið til tengið %s -> %s: %s\n"
 
-#: ../alternatives.c:589
+#: ../alternatives.c:664
 #, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
 
-#: ../alternatives.c:593 ../alternatives.c:611
+#: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
 msgid "would link %s -> %s\n"
 msgstr "myndi tengja %s -> %s\n"
 
-#: ../alternatives.c:602 ../alternatives.c:624
+#: ../alternatives.c:677 ../alternatives.c:699
 #, c-format
 msgid "failed to link %s -> %s: %s\n"
 msgstr "gat ekki búið til tengið %s -> %s: %s\n"
 
-#: ../alternatives.c:657
+#: ../alternatives.c:732
 #, c-format
 msgid "%s already exists\n"
 msgstr "%s er þegar til\n"
 
-#: ../alternatives.c:659
+#: ../alternatives.c:734
 #, c-format
 msgid "failed to create %s: %s\n"
 msgstr "gat ekki búið til %s: %s\n"
 
-#: ../alternatives.c:692
+#: ../alternatives.c:767
 #, c-format
 msgid "failed to replace %s with %s: %s\n"
 msgstr "gat ekki skipt út %s með %s: %s\n"
 
-#: ../alternatives.c:720 ../alternatives.c:726 ../alternatives.c:738
-#: ../alternatives.c:745
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
 #, c-format
 msgid "running %s\n"
 msgstr "keyri %s\n"
 
-#: ../alternatives.c:818
+#: ../alternatives.c:894
 #, fuzzy, c-format
 #| msgid "link %s incorrect for slave %s (%s %s)\n"
 msgid "link %s incorrect for follower %s (%s %s)\n"
 msgstr "tengið %s er ógilt fyrir %s (%s %s)\n"
 
-#: ../alternatives.c:893 ../alternatives.c:930 ../alternatives.c:1144
-#: ../alternatives.c:1175
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
 #, c-format
 msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s hefur ekki verið stillt sem staðgengill %s\n"
 
-#: ../alternatives.c:911
+#: ../alternatives.c:987
 #, fuzzy, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
 msgstr "%s hefur ekki verið stillt sem staðgengill %s\n"
 
-#: ../alternatives.c:969
+#: ../alternatives.c:1045
 #, c-format
 msgid "the primary link for %s must be %s\n"
 msgstr "aðaltengið fyrir %s verður að vera %s\n"
 
-#: ../alternatives.c:1021
+#: ../alternatives.c:1097
 #, c-format
 msgid "%s - status is auto.\n"
 msgstr "%s - er í sjálfvirkum ham.\n"
 
-#: ../alternatives.c:1023
+#: ../alternatives.c:1099
 #, c-format
 msgid "%s - status is manual.\n"
 msgstr "%s - er í handvirkum ham.\n"
 
-#: ../alternatives.c:1025
+#: ../alternatives.c:1101
 #, c-format
 msgid " link currently points to %s\n"
 msgstr " tengið vísar nú í %s\n"
 
-#: ../alternatives.c:1030
+#: ../alternatives.c:1106
 #, c-format
 msgid "family %s "
 msgstr ""
 
-#: ../alternatives.c:1031
+#: ../alternatives.c:1107
 #, c-format
 msgid "priority %d\n"
 msgstr ""
 
-#: ../alternatives.c:1033
+#: ../alternatives.c:1109
 #, fuzzy, c-format
 #| msgid " slave %s: %s\n"
 msgid " follower %s: %s\n"
 msgstr " slave %s: %s\n"
 
-#: ../alternatives.c:1038
+#: ../alternatives.c:1114
 #, c-format
 msgid "Current `best' version is %s.\n"
 msgstr "Núvarandi 'besta' útgáfa er %s.\n"
 
-#: ../alternatives.c:1073
+#: ../alternatives.c:1149
 #, c-format
 msgid "There is %d program that provides '%s'.\n"
 msgstr "Það eru %d forrit sem veita '%s'.\n"
 
-#: ../alternatives.c:1074
+#: ../alternatives.c:1150
 #, c-format
 msgid "There are %d programs which provide '%s'.\n"
 msgstr "Það eru %d forrit sem veita '%s'.\n"
 
-#: ../alternatives.c:1078
+#: ../alternatives.c:1154
 #, c-format
 msgid "  Selection    Command\n"
 msgstr "  Val          Skipun\n"
 
-#: ../alternatives.c:1093
+#: ../alternatives.c:1169
 #, c-format
 msgid "Enter to keep the current selection[+], or type selection number: "
 msgstr "'Enter' til að halda núverandi vali[+] eða sláðu inn númer: "
 
-#: ../alternatives.c:1097
+#: ../alternatives.c:1173
 #, c-format
 msgid ""
 "\n"
@@ -569,37 +569,43 @@ msgstr ""
 "\n"
 "villa við lestur vals\n"
 
-#: ../alternatives.c:1124
+#: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
 msgstr ""
 
-#: ../alternatives.c:1191
+#: ../alternatives.c:1267
 #, c-format
 msgid "(would remove %s\n"
 msgstr "(mun fjarlægja %s\n"
 
-#: ../alternatives.c:1193
+#: ../alternatives.c:1269
 #, c-format
 msgid "failed to remove %s: %s\n"
 msgstr "gat ekki fjarlægt %s: %s\n"
 
-#: ../alternatives.c:1365
+#: ../alternatives.c:1444
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
 msgstr ""
 
-#: ../alternatives.c:1427
+#: ../alternatives.c:1506
 #, c-format
 msgid "altdir %s invalid\n"
 msgstr "mappan %s er ógild\n"
 
-#: ../alternatives.c:1432
+#: ../alternatives.c:1520
+#, fuzzy, c-format
+#| msgid "failed to create %s: %s\n"
+msgid "failed to create admindir: %s\n"
+msgstr "gat ekki búið til %s: %s\n"
+
+#: ../alternatives.c:1525
 #, c-format
 msgid "admindir %s invalid\n"
 msgstr "mappan %s er ógild\n"
 
-#: ../alternatives.c:1442
+#: ../alternatives.c:1535
 #, c-format
 msgid "alternatives version %s\n"
 msgstr "alternatives útgáfa %s\n"
