@@ -11,21 +11,22 @@
 # ppapadeas <ppapadeas@gmail.com>, 2008
 # Simos Xenitellis <simos@hellug.gr>, 2002
 # mitzie <soldizach@gmail.com>, 2013
+# Jim Spentzos <jimspentzos2000@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 11:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:12+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/el/>\n"
+"PO-Revision-Date: 2025-06-12 14:44+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Language-Team: Greek <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -98,11 +99,11 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
-"Αν θέλετε να κατηγοριοποιήσετε τις υπηρεσίες του systemd χρησιμοποίηστε το "
-"'systemctl list-unit-files'.\n"
-"Για να δείτε τις ενεργοποιημένες υπηρεσίες για συγκεκριμένο σκοπό "
-"χρησιμοποίηστε \n"
-"systemctl list-dependencies [target]'\n"
+"      Εάν θέλετε να δείτε μια λίστα των υπηρεσιών systemd, χρησιμοποιήστε "
+"την εντολή «systemctl list-unit-files».\n"
+"      Για να δείτε τις υπηρεσίες που έχουν ενεργοποιηθεί σε έναν "
+"συγκεκριμένο στόχο, χρησιμοποιήστε την εντολή\n"
+"      «systemctl list-dependencies [στόχος]».\n"
 "\n"
 
 #: ../chkconfig.c:83
@@ -295,7 +296,7 @@ msgstr "                    [--slave <σύνδεση> <όνομα> <διαδρο
 #: ../alternatives.c:92
 #, c-format
 msgid "       alternatives --remove <name> <path>\n"
-msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n"
+msgstr "       alternatives --remove <όνομα> <διαδρομή>\n"
 
 #: ../alternatives.c:93
 #, c-format
@@ -320,24 +321,27 @@ msgstr "       alternatives --set <όνομα> <διαδρομή>\n"
 #: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "εναλλακτικές - λίστα\n"
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n"
+msgstr "       alternatives --remove-all <όνομα>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n"
+msgstr ""
+"       alternatives --add-follower <όνομα> <διαδρομή> <σύνδεσμος_ακόλουθου> "
+"<όνομα_ακόλουθου> <διαδρομή_ακόλουθου>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "·······alternatives·--remove·<όνομα>·<διαδρομή>\n"
+msgstr ""
+"       alternatives --remove-follower <όνομα> <διαδρομή> <όνομα_ακόλουθου>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -513,9 +517,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s δεν έχει ρυθμιστεί ως μια εναλλακτική για·%s\n"
 
 #: ../alternatives.c:911
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s δεν έχει ρυθμιστεί ως μια εναλλακτική για·%s\n"
+msgstr "Το %s δεν έχει διαμορφωθεί ως εναλλακτική ακόλουθου για το %s (%s)\n"
 
 #: ../alternatives.c:969
 #, c-format
@@ -535,7 +539,7 @@ msgstr "%s·- χειροκίνητη κατάσταση.\n"
 #: ../alternatives.c:1025
 #, c-format
 msgid " link currently points to %s\n"
-msgstr "η σύνδεση αυτή τη στιγμή δείχνει στο·%s\n"
+msgstr " ο σύνδεσμος δείχνει στο %s\n"
 
 #: ../alternatives.c:1030
 #, c-format
@@ -571,7 +575,7 @@ msgstr "Υπάρχουν %d προγράμματα που παρέχουν '%s'.
 #: ../alternatives.c:1078
 #, c-format
 msgid "  Selection    Command\n"
-msgstr " Επιλογή   Εντολή\n"
+msgstr "  Επιλογή    Εντολή\n"
 
 #: ../alternatives.c:1093
 #, c-format
