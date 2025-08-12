@@ -15,7 +15,7 @@ jobs:
 
     steps: 
       - name: Repository checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Weblate Locale Linter
         uses: WeblateOrg/locale_lint@v0.3.1
