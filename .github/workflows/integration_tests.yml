@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Repository checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install dependencies
         run: sudo apt install -y libpopt-dev libselinux1-dev libnewt-dev gettext
@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Repository checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Clone beakerlib repository
         run: git clone --depth=1 https://github.com/beakerlib/beakerlib.git
