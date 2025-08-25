@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2025-06-16 14:19+0000\n"
+"PO-Revision-Date: 2025-06-30 11:18+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/el/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -86,9 +86,11 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Σημείωση: Η έξοδος αυτή δείχνει SysV υπηρεσίες μόνο και δεν περιλαμβάνει τις "
-"μητρικές systemd υπηρεσίες.SysV δεδομένα διαμόρφωσης μπορεί να παρακαμφθουν "
-"από τη μητρική systemd διαμόρφωσης.\n"
+"Σημείωση: Αυτή η έξοδος εμφανίζει μόνο τις υπηρεσίες SysV και δεν "
+"περιλαμβάνει\n"
+"      εγγενείς υπηρεσίες systemd. Τα δεδομένα διαμόρφωσης του SysV ενδέχεται "
+"να\n"
+"      αντικατασταθούν από την εγγενή διαμόρφωση του systemd.\n"
 "\n"
 
 #: ../chkconfig.c:73
@@ -151,7 +153,7 @@ msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s\n
 #: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr "Σημείωση: το αιτημα προωθειται στο  'systemctl %s %s'.\n"
+msgstr "Σημείωση: γίνεται προώθηση του αιτήματος στο «systemctl %s %s».\n"
 
 #: ../chkconfig.c:701
 #, c-format
@@ -176,9 +178,7 @@ msgstr "μπορούν να καθοριστούν μόνο ένα από τα -
 #: ../chkconfig.c:887
 #, c-format
 msgid "only one runlevel may be specified for a chkconfig query\n"
-msgstr ""
-"μόνο ένα επίπεδο εκτέλεσης μπορεί να καθοριστεί σε \n"
-"κάθε χρήση του chkconfig\n"
+msgstr "μπορεί να καθοριστεί μόνο ένα επίπεδο εκτέλεσης ανά αίτημα chkconfig\n"
 
 #: ../ntsysv.c:49
 msgid "Press <F1> for more information on a service."
@@ -279,7 +279,7 @@ msgstr ""
 #: ../alternatives.c:89
 #, c-format
 msgid "                    [--initscript <service>]\n"
-msgstr "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <υπηρεσία>]\n"
 
 #: ../alternatives.c:90
 #, c-format
@@ -631,4 +631,4 @@ msgstr "admindir %s δεν είναι έγκυρο\n"
 #: ../alternatives.c:1535
 #, c-format
 msgid "alternatives version %s\n"
-msgstr "έκδοση alternatives  %s\n"
+msgstr "έκδοση alternatives %s\n"
