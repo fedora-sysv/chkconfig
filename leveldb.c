@@ -267,8 +267,10 @@ int readXinetdServiceInfo(char *name, struct service *service) {
                 buf += 11;
                 if (readDescription(buf, start + sb.st_size, &serv.desc,
                                     &eng_desc)) {
-                    if (serv.desc)
+                    if (serv.desc) {
                         free(serv.desc);
+                        serv.desc = NULL;
+                    }
                 }
                 if (!serv.desc) {
                     if (eng_desc)
