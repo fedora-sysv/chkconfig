@@ -12,13 +12,14 @@
 # Andika Triwidada <andika@gmail.com>, 2017. #zanata
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Didik Supriadi <didiksupriadi41@gmail.com>, 2021, 2022.
+# Arif Budiman <arifpedia@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Didik Supriadi <didiksupriadi41@gmail.com>\n"
+"PO-Revision-Date: 2026-01-01 16:58+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/id/>\n"
 "Language: id\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -243,12 +244,12 @@ msgstr "gagal untuk mengglob pola %s: %s\n"
 #: ../leveldb.c:851
 #, c-format
 msgid "cannot determine current run level\n"
-msgstr "tidak dapat menentukan run level yang aktif\n"
+msgstr "tidak dapat menentukan level run saat ini\n"
 
 #: ../leveldb.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "Tidak bisa menata konteks SELinux untuk %s: %s\n"
+msgstr "Tidak dapat menetapkan konteks SELinux untuk %s: %s\n"
 
 #: ../leveldb.c:959
 #, c-format
@@ -282,14 +283,16 @@ msgstr "                    [--initscript <service>]\n"
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr "                    [--family <family>]\n"
+msgstr "                    [--family <keluarga>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <link> <name> <path> *\n"
+msgstr ""
+"                    [--follower <tautan_pengikut> <nama_pengikut> "
+"<jalur_pengikut>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -309,34 +312,36 @@ msgstr "       alternatives --config <name>\n"
 #: ../alternatives.c:95
 #, c-format
 msgid "       alternatives --display <name>\n"
-msgstr "       alternatives --display <name>\n"
+msgstr "       alternatives --display <nama>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <name> <path>\n"
+msgstr "       alternatives --set <nama> <jalur/keluarga>\n"
 
 #: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
-msgstr "       cara lainnya --list\n"
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-all <nama>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr ""
+"       alternatives --add-follower <nama> <path> <tautan_pengikut> "
+"<nama_pengikut> <path_pengikut>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove-follower <nama> <jalur> <nama_pengikut>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -344,11 +349,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
-msgstr "opsi umum: --verbose --test --help --usage --version --keep-missing\n"
+msgstr ""
+"opsi umum: --verbose --test --help --usage --version --keep-missing --keep-"
+"foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -388,13 +395,12 @@ msgstr "link utama di %s rusak\n"
 #: ../alternatives.c:423
 #, c-format
 msgid "path %s unexpected in %s\n"
-msgstr "path %s tidak seharusnya ada di %s\n"
+msgstr "path %s tidak terduga dalam %s\n"
 
 #: ../alternatives.c:432
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "tidak ditemukan path untuk slave %s di %s\n"
+msgstr "jalur untuk pengikut %s tidak ada di %s\n"
 
 #: ../alternatives.c:447
 #, c-format
@@ -420,13 +426,12 @@ msgstr "kurang '@' penutup atau family kosong dalam %s\n"
 #: ../alternatives.c:496
 #, c-format
 msgid "numeric priority expected in %s\n"
-msgstr "prioritas angka diharapkan pada %s\n"
+msgstr "prioritas numerik diharapkan dalam %s\n"
 
 #: ../alternatives.c:512
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "slave path expected in %s\n"
+msgstr "jalur pengikut diharapkan ada di %s\n"
 
 #: ../alternatives.c:549
 #, c-format
@@ -451,19 +456,21 @@ msgstr "Akan dihapus %s\n"
 #: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
 #, c-format
 msgid "failed to remove link %s: %s\n"
-msgstr "gagal untuk menghapus link %s: %s\n"
+msgstr "gagal menghapus tautan %s: %s\n"
 
 #: ../alternatives.c:659
-#, fuzzy, c-format
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "gagal menaut %s -> %s: %s ada dan bukan symlink\n"
+msgstr "gagal menautkan %s -> %s: %s sudah ada dan bukan merupakan symlink\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
-msgstr "gagal menaut %s -> %s: %s ada dan bukan symlink\n"
+msgstr ""
+"gagal menautkan %s -> %s: --keep-foreign telah disetel dan tautan %s "
+"menunjuk ke luar  %s\n"
 
 #: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
@@ -494,13 +501,12 @@ msgstr "gagal untuk mengganti %s dengan  %s: %s\n"
 #: ../alternatives.c:820
 #, c-format
 msgid "running %s\n"
-msgstr "Jalan di %s\n"
+msgstr "menjalankan %s\n"
 
 #: ../alternatives.c:894
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "link %s incorrect for slave %s (%s %s)\n"
+msgstr "tautan %s tidak benar untuk pengikut %s (%s %s)\n"
 
 #: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
 #: ../alternatives.c:1251
@@ -509,9 +515,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
 
 #: ../alternatives.c:987
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s belum dikonfigurasi sebagai alternatif untuk %s\n"
+msgstr "%s belum dikonfigurasi sebagai alternatif pengikut untuk %s (%s)\n"
 
 #: ../alternatives.c:1045
 #, c-format
@@ -544,10 +550,9 @@ msgid "priority %d\n"
 msgstr "prioritas %d\n"
 
 #: ../alternatives.c:1109
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " slave %s: %s\n"
+msgstr " pengikut %s: %s\n"
 
 #: ../alternatives.c:1114
 #, c-format
@@ -588,7 +593,7 @@ msgstr ""
 #: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "tidak dapat mengakses %s/%s: Berkas atau direktori tidak ada\n"
 
 #: ../alternatives.c:1267
 #, c-format
@@ -611,10 +616,9 @@ msgid "altdir %s invalid\n"
 msgstr "altdir %s tidak valid\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "gagal untuk membuat %s: %s\n"
+msgstr "gagal membuat admindir: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
