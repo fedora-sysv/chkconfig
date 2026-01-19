@@ -11,13 +11,14 @@
 # Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2022.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Hoppár Zoltán <hopparz@gmail.com>, 2023.
+# Mate Babos <hunorjani17@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2023-10-08 17:36+0000\n"
-"Last-Translator: Hoppár Zoltán <hopparz@gmail.com>\n"
+"PO-Revision-Date: 2026-01-19 18:58+0000\n"
+"Last-Translator: Mate Babos <hunorjani17@gmail.com>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -245,7 +246,7 @@ msgid "cannot determine current run level\n"
 msgstr "nem lehet megállapítani az aktuális futási szintet\n"
 
 #: ../leveldb.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
 msgstr "A(z) %s SELinux környezete nem állítható be: %s\n"
 
@@ -286,15 +287,13 @@ msgid "                    [--family <family>]\n"
 msgstr "                    [--family <család>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
-#| msgid ""
-#| "                    [--slave <slave_link> <slave_name> <slave_path>]*\n"
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
 msgstr ""
-"                    [--slave <szolga_link> <szolga_név> "
-"<szolga_elérési_út>]*\n"
+"                    [--follower <követő_link> <követő_név> "
+"<követő_elérési_út>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -317,9 +316,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <név>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <név> <elérési_út>\n"
+msgstr "       alternatives --set <név> <elérési_út/család>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -341,10 +340,10 @@ msgstr ""
 "<follower_name> <follower_path>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
-#| msgid "       alternatives --remove-slave <name> <path> <slave_name>\n"
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove-slave <név> <elérési_út> <szolga_név>\n"
+msgstr ""
+"       alternatives --remove-follower <név> <elérési_út> <follower_név>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -352,12 +351,13 @@ msgid "\n"
 msgstr "\n"
 
 #: ../alternatives.c:102
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
-"gyakori kapcsolók: --verbose --test --help --usage --version --keep-missing\n"
+"gyakori kapcsolók: --verbose --test --help --usage --version --keep-"
+"missing --keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -400,10 +400,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "nem várt elérési út (%s) ebben: %s\n"
 
 #: ../alternatives.c:432
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "hiányzó elérési út %s slave-hez ebben: %s\n"
+msgstr "hiányzó elérési út %s follower-hez ebben: %s\n"
 
 #: ../alternatives.c:447
 #, c-format
@@ -432,10 +431,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "számszerű prioritás várt ebben: %s\n"
 
 #: ../alternatives.c:512
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "a slave elérési útja várt ebben: %s\n"
+msgstr "a follower elérési útja várt ebben: %s\n"
 
 #: ../alternatives.c:549
 #, c-format
@@ -474,17 +472,13 @@ msgstr ""
 "pontokat linkelték\n"
 
 #: ../alternatives.c:664
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
-"nem sikerült linkelni %s - %s: %s létezik, és vagy nem szimbolikus "
-"hivatkozás, vagy a --keep-foreign be lett állítva, és a %s-on kívüli "
-"pontokat linkelték\n"
+"Nem sikerült létrehozni a hivatkozást: %s → %s. A --keep-foreign be volt "
+"állítva, és a(z) %s hivatkozás a(z) %s könyvtáron kívülre mutat.\n"
 
 #: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
@@ -518,10 +512,9 @@ msgid "running %s\n"
 msgstr "a(z) %s futtatása\n"
 
 #: ../alternatives.c:894
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "a(z) %s link helytelen a(z) %s slave-nek (%s %s)\n"
+msgstr "a(z) %s link helytelen a(z) %sfollower-nek (%s %s)\n"
 
 #: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
 #: ../alternatives.c:1251
@@ -530,10 +523,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "a(z) %s nincs beállítva a(z) %s alternatívájának\n"
 
 #: ../alternatives.c:987
-#, fuzzy, c-format
-#| msgid "%s has not been configured as an slave alternative for %s (%s)\n"
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "a(z) %s nincs beállítva a(z) %s (%s) szolga alternatívájának\n"
+msgstr "a(z) %s nincs beállítva a(z) %s (%s) követő alternatívájának\n"
 
 #: ../alternatives.c:1045
 #, c-format
@@ -566,10 +558,9 @@ msgid "priority %d\n"
 msgstr "prioritás: %d\n"
 
 #: ../alternatives.c:1109
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " %s slave: %s\n"
+msgstr " %s follower: %s\n"
 
 #: ../alternatives.c:1114
 #, c-format
@@ -633,10 +624,9 @@ msgid "altdir %s invalid\n"
 msgstr "a(z) %s altdir érvénytelen\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "a(z) %s létrehozása sikertelen: %s\n"
+msgstr "a(z) admindir létrehozása sikertelen: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
