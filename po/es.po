@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2025-06-13 08:44+0000\n"
+"PO-Revision-Date: 2025-09-04 20:53+0000\n"
 "Last-Translator: \"Fco. Javier F. Serrador\" <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/es/>\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.13\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -91,11 +91,11 @@ msgid ""
 "\n"
 msgstr ""
 "\n"
-"Nota: Esta salida muestra sólo servicios SysV y no incluye servicios "
-"nativos \n"
-"      de systemd. Los datos de configuración SysV pueden verse invalidados "
-"por \n"
-"      la configuración nativa de systemd.\n"
+"Nota: Esta salida muestra sólo servicios SysV y no incluye servicios nativos "
+"de\n"
+"      systemd. Los datos de configuración SysV pueden verse invalidados por "
+"la\n"
+"      configuración nativa de systemd.\n"
 "\n"
 
 #: ../chkconfig.c:73
@@ -195,7 +195,7 @@ msgstr "Aceptar"
 
 #: ../ntsysv.c:99
 msgid "Back"
-msgstr "Anterior"
+msgstr "Atrás"
 
 #: ../ntsysv.c:99
 msgid "Cancel"
