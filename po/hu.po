@@ -12,13 +12,15 @@
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Hoppár Zoltán <hopparz@gmail.com>, 2023.
 # Mate Babos <hunorjani17@gmail.com>, 2026.
+# Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2026-01-19 18:58+0000\n"
-"Last-Translator: Mate Babos <hunorjani17@gmail.com>\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
@@ -461,15 +463,10 @@ msgid "failed to remove link %s: %s\n"
 msgstr "a(z) %s link eltávolítása sikertelen: %s\n"
 
 #: ../alternatives.c:659
-#, fuzzy, c-format
-#| msgid ""
-#| "failed to link %s -> %s: %s exists and it is either not a symlink or --"
-#| "keep-foreign was set and link points outside %s\n"
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
 msgstr ""
-"nem sikerült linkelni %s - %s: %s létezik, és vagy nem szimbolikus "
-"hivatkozás, vagy a --keep-foreign be lett állítva, és a %s-on kívüli "
-"pontokat linkelték\n"
+"a(z) %s -> %s linkelés meghiúsult: a(z) %s létezik, és nem szimbolikus link\n"
 
 #: ../alternatives.c:664
 #, c-format
