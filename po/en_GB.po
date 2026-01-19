@@ -5,13 +5,13 @@
 # Translators:
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2007
 # notting <notting@redhat.com>, 2011
-# Andi Chandler <andi@gowling.com>, 2023, 2024.
+# Andi Chandler <andi@gowling.com>, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2024-07-11 12:38+0000\n"
+"PO-Revision-Date: 2025-10-14 11:53+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/en_GB/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -603,10 +603,9 @@ msgid "altdir %s invalid\n"
 msgstr "altdir %s invalid\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "failed to create %s: %s\n"
+msgstr "failed to create admindir: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
