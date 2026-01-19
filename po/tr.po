@@ -13,22 +13,22 @@
 # Serdar Sağlam <teknomobil@msn.com>, 2019. #zanata
 # Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
-# Oğuz Ersen <oguz@ersen.moe>, 2022, 2024.
+# Oğuz Ersen <oguz@ersen.moe>, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2024-08-14 13:41+0000\n"
+"PO-Revision-Date: 2025-10-04 19:53+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
-"Language-Team: Turkish <https://translate.fedoraproject.org/projects/fedora-"
-"sysv/chkconfig/tr/>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -494,7 +494,7 @@ msgstr "%s zaten var\n"
 #: ../alternatives.c:734
 #, c-format
 msgid "failed to create %s: %s\n"
-msgstr "%s yaratılamadı: %s\n"
+msgstr "%s oluşturulamadı: %s\n"
 
 #: ../alternatives.c:767
 #, c-format
@@ -620,10 +620,9 @@ msgid "altdir %s invalid\n"
 msgstr "%s alternatif dizini geçersiz\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "%s yaratılamadı: %s\n"
+msgstr "yönetici dizini oluşturulamadı: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
