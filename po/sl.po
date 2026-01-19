@@ -6,13 +6,14 @@
 # notting <notting@redhat.com>, 2011
 # Rok Papez <rok.papez@lugos.si>, 2006, 2007
 # Roman Maurer <roman@lugos.si>, 2001
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-12-10 15:28+0000\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/sl/>\n"
 "Language: sl\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -37,17 +38,17 @@ msgstr "To lahko prosto razširjate pod pogoji GNU Public License.\n"
 #: ../chkconfig.c:47
 #, c-format
 msgid "usage:   %s [name]\n"
-msgstr ""
+msgstr "raba:   %s [name]\n"
 
 #: ../chkconfig.c:49
 #, c-format
 msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
-msgstr ""
+msgstr "raba:   %s <enable|disable|is-enabled> [name] \n"
 
 #: ../chkconfig.c:52
 #, c-format
 msgid "usage:   %s [--list] [--type <type>] [name]\n"
-msgstr ""
+msgstr "raba:   %s [--list] [--type <type>] [name]\n"
 
 #: ../chkconfig.c:54
 #, c-format
@@ -67,7 +68,7 @@ msgstr "         %s --override <ime>\n"
 #: ../chkconfig.c:58
 #, c-format
 msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
-msgstr ""
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
 
 #: ../chkconfig.c:66
 #, c-format
@@ -79,6 +80,11 @@ msgid ""
 "      systemd configuration.\n"
 "\n"
 msgstr ""
+"\n"
+"Opomba: Ta izpis prikazuje samo storitve SysV in ne vključuje izvornih\n"
+"      storitev systemd. Podatke o konfiguraciji SysV lahko izvorna\n"
+"      konfiguracija systemd prepiše.\n"
+"\n"
 
 #: ../chkconfig.c:73
 #, c-format
@@ -88,6 +94,11 @@ msgid ""
 "      'systemctl list-dependencies [target]'.\n"
 "\n"
 msgstr ""
+"      Če želite našteti storitve systemd, uporabite 'systemctl list-unit-"
+"files'.\n"
+"      Za ogled storitev, omogočenih na določenem cilju, uporabite\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
 
 #: ../chkconfig.c:83
 #, c-format
@@ -111,7 +122,7 @@ msgstr "napaka pri branju podatkov o storitvi %s: %s\n"
 #: ../chkconfig.c:98
 #, c-format
 msgid "You do not have enough privileges to perform this operation.\n"
-msgstr ""
+msgstr "Nimate dovolj pravic za izvedbo te operacije.\n"
 
 #: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
 msgid "on"
@@ -134,12 +145,12 @@ msgstr "ni moč odpreti imenika %s: %s\n"
 #: ../chkconfig.c:695
 #, c-format
 msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
-msgstr ""
+msgstr "Opomba: Posredovanje zahteve na 'systemctl %s %s'.\n"
 
 #: ../chkconfig.c:701
 #, c-format
 msgid "Failed to forward service request to systemctl: %m\n"
-msgstr ""
+msgstr "Zahteve za storitev ni bilo mogoče posredovati na systemctl: %m\n"
 
 #: ../chkconfig.c:757
 #, c-format
@@ -149,7 +160,7 @@ msgstr "%s različice %s\n"
 #: ../chkconfig.c:770
 #, c-format
 msgid "--type must be 'sysv' or 'xinetd'\n"
-msgstr ""
+msgstr "--type mora biti 'sysv' ali 'xinetd'\n"
 
 #: ../chkconfig.c:776
 #, c-format
@@ -226,9 +237,9 @@ msgid "cannot determine current run level\n"
 msgstr "ne morem ugotoviti trenutne ravni teka\n"
 
 #: ../leveldb.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "ni moč odpreti imenika %s: %s\n"
+msgstr "Ni mogoče nastaviti konteksta za SELinux %s: %s\n"
 
 #: ../leveldb.c:959
 #, c-format
@@ -238,7 +249,7 @@ msgstr "ni moč narediti simbolne povezave %s: %s\n"
 #: ../alternatives.c:83
 #, c-format
 msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
-msgstr "alternatives različice %s - Pravna zaščita (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives različice %s - Copyright  (C) 2001 Red Hat, Inc.\n"
 
 #: ../alternatives.c:85
 #, c-format
@@ -262,14 +273,16 @@ msgstr "                    [--initscript <storitev>]\n"
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <družina>]\n"
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <povezava> <ime> <pot>]*\n"
+msgstr ""
+"                    "
+"[--follower <povezava_sledilca> <ime_sledilca> <pot_sledilca>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -292,31 +305,33 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <ime>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <ime> <pot>\n"
+msgstr "       alternatives --set <ime> <pot/družina>\n"
 
 #: ../alternatives.c:97
 #, c-format
 msgid "       alternatives --list\n"
-msgstr ""
+msgstr "       alternatives --list\n"
 
 #: ../alternatives.c:98
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-all <name>\n"
-msgstr "       alternatives --remove <ime> <pot>\n"
+msgstr "       alternatives --remove-all <ime>\n"
 
 #: ../alternatives.c:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
-msgstr "       alternatives --remove <ime> <pot>\n"
+msgstr ""
+"       alternatives --add-follower <ime> <pot> <povezava_sledilca> "
+"<ime_sledilca> <fpot_sledlca>\n"
 
 #: ../alternatives.c:100
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr "       alternatives --remove <ime> <pot>\n"
+msgstr "       alternatives --remove-follower <ime> <pot> <ime_sledilca>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -329,6 +344,8 @@ msgid ""
 "common options: --verbose --test --help --usage --version --keep-missing --"
 "keep-foreign\n"
 msgstr ""
+"običajne možnosti: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
 
 #: ../alternatives.c:104
 #, c-format
@@ -371,10 +388,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "nepričakovana pot %s v %s\n"
 
 #: ../alternatives.c:432
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "manjkajoča pot za podrejeno %s v %s\n"
+msgstr "manjkajoča pot za sledilca %s v %s\n"
 
 #: ../alternatives.c:447
 #, c-format
@@ -395,7 +411,7 @@ msgstr "nepričakovana vrstica v %s: %s\n"
 #: ../alternatives.c:482
 #, c-format
 msgid "closing '@' missing or the family is empty in %s\n"
-msgstr ""
+msgstr "končni '@' manjka ali družina je prazna v %s\n"
 
 #: ../alternatives.c:496
 #, c-format
@@ -403,10 +419,9 @@ msgid "numeric priority expected in %s\n"
 msgstr "numerična prioriteta pričakovana v %s\n"
 
 #: ../alternatives.c:512
-#, fuzzy, c-format
-#| msgid "slave path expected in %s\n"
+#, c-format
 msgid "follower path expected in %s\n"
-msgstr "podrejena pot pričakovana v %s\n"
+msgstr "pot sledilca pričakovana v %s\n"
 
 #: ../alternatives.c:549
 #, c-format
@@ -434,10 +449,10 @@ msgid "failed to remove link %s: %s\n"
 msgstr "ni moč narediti povezave %s: %s\n"
 
 #: ../alternatives.c:659
-#, fuzzy, c-format
-#| msgid "failed to link %s -> %s: %s\n"
+#, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "ni moč narediti povezave %s -> %s: %s\n"
+msgstr ""
+"ni moč narediti povezave %s -> %s: %s obstaja in ni simbolična povezava\n"
 
 #: ../alternatives.c:664
 #, c-format
@@ -445,6 +460,8 @@ msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
 msgstr ""
+"neuspelo povezati %s -> %s: --keep-foreign je bil nastavljen in povezava %s "
+"kaže navzven  %s\n"
 
 #: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
@@ -478,10 +495,9 @@ msgid "running %s\n"
 msgstr "poganjam %s\n"
 
 #: ../alternatives.c:894
-#, fuzzy, c-format
-#| msgid "link %s incorrect for slave %s (%s %s)\n"
+#, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "povezava %s nepravilna za podrejeno %s (%s %s)\n"
+msgstr "povezava %s nepravilna za sledilca %s (%s %s)\n"
 
 #: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
 #: ../alternatives.c:1251
@@ -490,9 +506,9 @@ msgid "%s has not been configured as an alternative for %s\n"
 msgstr "%s ni bil prikrojen kot alternativa za %s\n"
 
 #: ../alternatives.c:987
-#, fuzzy, c-format
+#, c-format
 msgid "%s has not been configured as an follower alternative for %s (%s)\n"
-msgstr "%s ni bil prikrojen kot alternativa za %s\n"
+msgstr "%s ni bil prikrojen kot sledilčeva alternativa za %s (%s)\n"
 
 #: ../alternatives.c:1045
 #, c-format
@@ -517,18 +533,17 @@ msgstr " povezava trenutno kaže na %s\n"
 #: ../alternatives.c:1106
 #, c-format
 msgid "family %s "
-msgstr ""
+msgstr "dtužina %s "
 
 #: ../alternatives.c:1107
 #, c-format
 msgid "priority %d\n"
-msgstr ""
+msgstr "prioriteta %d\n"
 
 #: ../alternatives.c:1109
-#, fuzzy, c-format
-#| msgid " slave %s: %s\n"
+#, c-format
 msgid " follower %s: %s\n"
-msgstr " podrejeni %s: %s\n"
+msgstr " sledilec %s: %s\n"
 
 #: ../alternatives.c:1114
 #, c-format
@@ -567,7 +582,7 @@ msgstr ""
 #: ../alternatives.c:1200
 #, c-format
 msgid "cannot access %s/%s: No such file or directory\n"
-msgstr ""
+msgstr "ni mogoče dostopati do %s/%s: Ni take datoteke ali imenika\n"
 
 #: ../alternatives.c:1267
 #, c-format
@@ -582,7 +597,7 @@ msgstr "ni moč odstraniti %s: %s\n"
 #: ../alternatives.c:1444
 #, c-format
 msgid "--family can't contain the symbol '@'\n"
-msgstr ""
+msgstr "--family ne more vsebovati simbola '@'\n"
 
 #: ../alternatives.c:1506
 #, c-format
@@ -590,10 +605,9 @@ msgid "altdir %s invalid\n"
 msgstr "altdir %s neveljaven\n"
 
 #: ../alternatives.c:1520
-#, fuzzy, c-format
-#| msgid "failed to create %s: %s\n"
+#, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "ni moč narediti %s: %s\n"
+msgstr "ni bilo moč ustvariti admindir: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
