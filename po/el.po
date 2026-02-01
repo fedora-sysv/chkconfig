@@ -11,22 +11,22 @@
 # ppapadeas <ppapadeas@gmail.com>, 2008
 # Simos Xenitellis <simos@hellug.gr>, 2002
 # mitzie <soldizach@gmail.com>, 2013
-# Jim Spentzos <jimspentzos2000@gmail.com>, 2025.
+# Jim Spentzos <jimspentzos2000@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2025-06-30 11:18+0000\n"
+"PO-Revision-Date: 2026-02-01 14:58+0000\n"
 "Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
-"Language-Team: Greek <https://translate.fedoraproject.org/projects/"
-"fedora-sysv/chkconfig/el/>\n"
+"Language-Team: Greek <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -245,9 +245,9 @@ msgid "cannot determine current run level\n"
 msgstr "αδύνατος ο καθορισμός του τρέχοντος επιπέδου εκτέλεσης\n"
 
 #: ../leveldb.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "αποτυχία ανοίγματος του καταλόγου %s: %s\n"
+msgstr "Δεν είναι δυνατός ο ορισμός του πλαισίου του SELinux για το %s: %s\n"
 
 #: ../leveldb.c:959
 #, c-format
@@ -287,11 +287,13 @@ msgid "                    [--family <family>]\n"
 msgstr ""
 
 #: ../alternatives.c:91
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "                    [--follower <follower_link> <follower_name> "
 "<follower_path>]*\n"
-msgstr "                    [--slave <σύνδεση> <όνομα> <διαδρομή>]*\n"
+msgstr ""
+"                    [--follower <σύνδεσμος_ακόλουθου> <όνομα_ακόλουθου> "
+"<διαδρομή_ακόλουθου>]*\n"
 
 #: ../alternatives.c:92
 #, c-format
@@ -314,9 +316,9 @@ msgid "       alternatives --display <name>\n"
 msgstr "       alternatives --display <όνομα>\n"
 
 #: ../alternatives.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "       alternatives --set <name> <path/family>\n"
-msgstr "       alternatives --set <όνομα> <διαδρομή>\n"
+msgstr "       alternatives --set <όνομα> <διαδρομή/οικογένεια>\n"
 
 #: ../alternatives.c:97
 #, c-format
@@ -396,10 +398,9 @@ msgid "path %s unexpected in %s\n"
 msgstr "διαδρομή %s μη αναμενόμενη στη %s\n"
 
 #: ../alternatives.c:432
-#, fuzzy, c-format
-#| msgid "missing path for slave %s in %s\n"
+#, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "λείπει η διαδρομή για το δευτερεύον %s στη %s\n"
+msgstr "λείπει η διαδρομή για τον ακόλουθο %s στο %s\n"
 
 #: ../alternatives.c:447
 #, c-format
