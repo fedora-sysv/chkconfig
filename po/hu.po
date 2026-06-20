@@ -8,7 +8,7 @@
 # Zoltan Hoppár <hopparz@gmail.com>, 2012-2013
 # Meskó Balázs <meskobalazs@gmail.com>, 2018. #zanata
 # Meskó Balázs <meskobalazs@gmail.com>, 2019. #zanata
-# Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2022.
+# Balázs Meskó <meskobalazs@mailbox.org>, 2020, 2022, 2026.
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # Hoppár Zoltán <hopparz@gmail.com>, 2023.
 # Mate Babos <hunorjani17@gmail.com>, 2026.
@@ -18,9 +18,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2026-01-19 18:58+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"PO-Revision-Date: 2026-04-06 08:58+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
 "Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
 "fedora-sysv/chkconfig/hu/>\n"
 "Language: hu\n"
@@ -28,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -338,14 +337,13 @@ msgid ""
 "       alternatives --add-follower <name> <path> <follower_link> "
 "<follower_name> <follower_path>\n"
 msgstr ""
-"       alternatives --add-follower <name> <path> <follower_link> "
-"<follower_name> <follower_path>\n"
+"       alternatives --add-follower <név> <elérési_út> <követő_link> "
+"<követőnév> <követő_elérési_út>\n"
 
 #: ../alternatives.c:100
 #, c-format
 msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
-msgstr ""
-"       alternatives --remove-follower <név> <elérési_út> <follower_név>\n"
+msgstr "       alternatives --remove-follower <név> <elérési_út> <követőnév>\n"
 
 #: ../alternatives.c:101
 #, c-format
@@ -404,7 +402,7 @@ msgstr "nem várt elérési út (%s) ebben: %s\n"
 #: ../alternatives.c:432
 #, c-format
 msgid "missing path for follower %s in %s\n"
-msgstr "hiányzó elérési út %s follower-hez ebben: %s\n"
+msgstr "hiányzó elérési út a(z) %s követőhöz ebben: %s\n"
 
 #: ../alternatives.c:447
 #, c-format
@@ -435,7 +433,7 @@ msgstr "számszerű prioritás várt ebben: %s\n"
 #: ../alternatives.c:512
 #, c-format
 msgid "follower path expected in %s\n"
-msgstr "a follower elérési útja várt ebben: %s\n"
+msgstr "a követő elérési útja várt ebben: %s\n"
 
 #: ../alternatives.c:549
 #, c-format
@@ -511,7 +509,7 @@ msgstr "a(z) %s futtatása\n"
 #: ../alternatives.c:894
 #, c-format
 msgid "link %s incorrect for follower %s (%s %s)\n"
-msgstr "a(z) %s link helytelen a(z) %sfollower-nek (%s %s)\n"
+msgstr "a(z) %s link helytelen a(z) %s követőhöz (%s %s)\n"
 
 #: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
 #: ../alternatives.c:1251
@@ -623,7 +621,7 @@ msgstr "a(z) %s altdir érvénytelen\n"
 #: ../alternatives.c:1520
 #, c-format
 msgid "failed to create admindir: %s\n"
-msgstr "a(z) admindir létrehozása sikertelen: %s\n"
+msgstr "nem sikerült az admindir létrehozása: %s\n"
 
 #: ../alternatives.c:1525
 #, c-format
