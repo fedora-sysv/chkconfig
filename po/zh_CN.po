@@ -14,13 +14,14 @@
 # Allan Nordhøy <epost@anotheragency.no>, 2020.
 # yangyangdaji <1504305527@qq.com>, 2023.
 # 耗子 <haozi@loli.email>, 2026.
+# Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2026-04-02 23:59+0000\n"
-"Last-Translator: 耗子 <haozi@loli.email>\n"
+"PO-Revision-Date: 2026-06-20 10:10+0000\n"
+"Last-Translator: Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -28,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -453,16 +454,20 @@ msgid "failed to remove link %s: %s\n"
 msgstr "链接 %s 移除失败：%s\n"
 
 #: ../alternatives.c:659
-#, c-format
+#, c-format, fuzzy
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "链接 %s -> %s 失败：%s 已存在且不是符号链接\n"
+msgstr ""
+"无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，并且"
+"链接点在 %s 之外\n"
 
 #: ../alternatives.c:664
-#, c-format
+#, c-format, fuzzy
 msgid ""
 "failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
 "%s\n"
-msgstr "链接 %s -> %s 失败：已设置 --keep-foreign 且链接 %s 指向 %s 之外\n"
+msgstr ""
+"无法链接 %s-> %s：%s 存在，它不是符号链接，或者 --keep-foreign 是设置的，并且"
+"链接点在 %s 之外\n"
 
 #: ../alternatives.c:668 ../alternatives.c:686
 #, c-format
@@ -606,9 +611,9 @@ msgid "altdir %s invalid\n"
 msgstr "altdir %s 无效\n"
 
 #: ../alternatives.c:1520
-#, c-format
+#, c-format, fuzzy
 msgid "failed to create admindir: %s\n"
-msgstr "创建 admindir 失败：%s\n"
+msgstr "%s 创建失败：%s\n"
 
 #: ../alternatives.c:1525
 #, c-format
