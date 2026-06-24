@@ -337,8 +337,84 @@ void nextLine(char **buf, char **line) {
     *line = parseLine(buf);
 }
 
-static int readConfig(struct alternativeSet *set, const char *title,
-                      const char *altDir, const char *stateDir, int flags) {
+/* Forward declaration */
+static int writeStateConf(struct alternativeSet *set, const char *stateDir, int flags);
+
+/*
+ * Detect and remove bin/sbin duplicate alternatives.
+ * Returns the number of duplicates removed.
+ */
+static int removeBinSbinDuplicates(struct alternativeSet *set, int flags) {
+    int i, j;
+    int removedCount = 0;
+
+    if (!MERGED_SBIN || set->numAlts < 2)
+        return 0;
+
+    for (i = 0; i < set->numAlts; i++) {
+        for (j = i + 1; j < set->numAlts; j++) {
+            /* Check if they differ only in bin/sbin (or are exactly the same) */
+            if (streq_bin(set->alts[i].leader.target, set->alts[j].leader.target)) {
+                int k;
+
+                /* Check if all followers match */
+                for (k = 0; k < set->alts[i].numFollowers; k++) {
+                    if (!streq_bin(set->alts[i].followers[k].target,
+                                  set->alts[j].followers[k].target))
+                        break;
+                }
+                /* If any follower didn't match, skip this pair */
+                if (k < set->alts[i].numFollowers)
+                    continue;
+
+                /* Keep i if it is not in /sbin/, otherwise keep j */
+                if (strstr(set->alts[i].leader.target, "/sbin/")) {
+                    if (FL_VERBOSE(flags)) {
+                        fprintf(stderr, _("removing duplicate alternative: %s (keeping %s)\n"),
+                                set->alts[i].leader.target, set->alts[j].leader.target);
+                    }
+                    clearAlternative(&set->alts[i]);
+                    set->alts[i] = set->alts[j];
+                    if (set->best == j)
+                        set->best = i;
+                    if (set->current == j)
+                        set->current = i;
+                } else {
+                    if (FL_VERBOSE(flags)) {
+                        fprintf(stderr, _("removing duplicate alternative: %s (keeping %s)\n"),
+                                set->alts[j].leader.target, set->alts[i].leader.target);
+                    }
+                    clearAlternative(&set->alts[j]);
+                }
+
+                /* Always remove j (shift everything down) */
+                for (int k = j; k < set->numAlts - 1; k++) {
+                    set->alts[k] = set->alts[k + 1];
+                }
+                set->numAlts--;
+                removedCount++;
+
+                /* Adjust current and best indices if they're after j */
+                if (set->current > j)
+                    set->current--;
+                if (set->best > j)
+                    set->best--;
+
+                /* Adjust j since we removed an element */
+                j--;
+            }
+        }
+    }
+
+    return removedCount;
+}
+
+/*
+ * Internal function to read alternatives configuration.
+ * Reads the config file and verifies symlinks without any modifications.
+ */
+static int readConfigInternal(struct alternativeSet *set, const char *title,
+                               const char *altDir, const char *stateDir, int flags) {
     char *path;
     char *leader_path;
     int fd;
@@ -587,6 +663,47 @@ finish:
     return r;
 }
 
+/*
+ * Read alternatives configuration and remove bin/sbin duplicates if found.
+ * This is the main entry point for reading config.
+ */
+static int readConfig(struct alternativeSet *set, const char *title,
+                      const char *altDir, const char *stateDir, int flags) {
+    int rc;
+
+    rc = readConfigInternal(set, title, altDir, stateDir, flags);
+    if (rc)
+        return rc;
+
+    /* If we removed duplicates, rewrite the config file and re-read */
+    if (removeBinSbinDuplicates(set, flags) > 0) {
+        if (FL_VERBOSE(flags))
+            fprintf(stderr, _("rewriting config after removing duplicates\n"));
+
+        if (!FL_TEST(flags)) {
+            rc = writeStateConf(set, stateDir, flags);
+            if (rc) {
+                fprintf(stderr, _("failed to write cleaned config for %s\n"), title);
+                return rc;
+            }
+
+            /* Free existing data before re-reading */
+            for (int i = 0; i < set->numAlts; i++) {
+                clearAlternative(&set->alts[i]);
+            }
+            free(set->alts);
+            free(set->currentLink);
+
+            /* Re-read the config to ensure consistency */
+            rc = readConfigInternal(set, title, altDir, stateDir, flags);
+            if (rc)
+                return rc;
+        }
+    }
+
+    return 0;
+}
+
 static int isLink(char *path) {
     struct stat sbuf;
 
@@ -706,15 +823,16 @@ static int makeLinks(struct linkSet *l, const char *altDir, int flags) {
     return 0;
 }
 
-static int writeState(struct alternativeSet *set, const char *altDir,
-                      const char *stateDir, int forceLinks, int flags) {
+/*
+ * Write the alternatives configuration file to stateDir.
+ * This only updates the config file, not the actual symlinks.
+ */
+static int writeStateConf(struct alternativeSet *set, const char *stateDir, int flags) {
     char *path;
     char *path2;
     int fd;
     FILE *f;
     int i, j;
-    int rc = 0;
-    struct alternative *alt;
 
     path = alloca(strlen(stateDir) + strlen(set->alts[0].leader.title) + 6);
     sprintf(path, "%s/%s.new", stateDir, set->alts[0].leader.title);
@@ -769,6 +887,20 @@ static int writeState(struct alternativeSet *set, const char *altDir,
         unlink(path);
         return 1;
     }
+
+    return 0;
+}
+
+/*
+ * Update the actual symlinks and initscripts for the current alternative.
+ * Should be called after writeStateConf.
+ */
+static int writeStatePaths(struct alternativeSet *set, const char *altDir,
+                           int forceLinks, int flags) {
+    char *path;
+    int i;
+    int rc = 0;
+    struct alternative *alt;
 
     if (set->mode == AUTO)
         set->current = set->best;
@@ -825,6 +957,18 @@ static int writeState(struct alternativeSet *set, const char *altDir,
         }
     }
 
+    return rc;
+}
+
+static int writeState(struct alternativeSet *set, const char *altDir,
+                      const char *stateDir, int forceLinks, int flags) {
+    int rc;
+
+    rc = writeStateConf(set, stateDir, flags);
+    if (rc)
+        return rc;
+
+    rc = writeStatePaths(set, altDir, forceLinks, flags);
     return rc;
 }
 
