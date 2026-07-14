@@ -8,7 +8,11 @@ TEST="Test Alternatives"
 
 # Package being tested
 PACKAGE="alternatives"
-TEST_BIN="${TEST_PATH}${PACKAGE}"
+if [ "${MERGED_SBIN}" = "1" ] ; then
+    TEST_BIN="${TEST_PATH}alternatives-merged"
+else
+    TEST_BIN="${TEST_PATH}${PACKAGE}"
+fi
 
 # We need to test both new "leader/follower" and legacy "master/slave" options
 FOLLOWER_OR_SLAVE="follower"
@@ -80,6 +84,53 @@ function remove_follower {
 
     [ -n "$2" ] && follower=${2}
     rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --remove-${FOLLOWER_OR_SLAVE} ${name} ${path} ${sname}" 0 "NEW_FOLLOWER\tlink: $spath"
+}
+
+function write_config {
+    local config_name=$1
+    local mode=$2
+    local link_title=$3
+    local follower_title=$4
+    local follower_link=$5
+    shift 5
+
+    local config="${admindir}/${config_name}"
+    echo "${mode}" > "${config}"
+    echo "${link_title}" >> "${config}"
+    if [ -n "${follower_title}" ] ; then
+        echo "${follower_title}" >> "${config}"
+        echo "${follower_link}" >> "${config}"
+    fi
+    echo "" >> "${config}"
+
+    while [ $# -ge 2 ] ; do
+        local target=$1
+        local prio=$2
+        shift 2
+        echo "${target}" >> "${config}"
+        echo "${prio}" >> "${config}"
+        if [ -n "${follower_title}" ] ; then
+            local ftarget=$1
+            shift
+            echo "${ftarget}" >> "${config}"
+        fi
+    done
+}
+
+function count_alts_in_config {
+    local config="${admindir}/$1"
+    local count=0
+    local in_alts=0
+    while IFS= read -r line; do
+        if [ ${in_alts} -eq 0 ] ; then
+            [ -z "${line}" ] && in_alts=1
+            continue
+        fi
+        if [[ "${line}" =~ ^[0-9] ]] || [[ "${line}" =~ ^@ ]] ; then
+            count=$((count + 1))
+        fi
+    done < "${config}"
+    echo ${count}
 }
 
 function check_alternative {
@@ -308,6 +359,117 @@ rlJournalStart
             clean_dir
         rlPhaseEnd
     done
+
+    if [ "${MERGED_SBIN}" = "1" ] ; then
+
+        rlPhaseStart FAIL "Dedup bin/sbin leader"
+            # Create two alternatives that differ only in /usr/bin vs /usr/sbin
+            mkdir -p "${testdir}/bin_link" "${testdir}/sbin_link"
+            touch "${testdir}/bin_link/main" "${testdir}/bin_link/follower"
+            touch "${testdir}/sbin_link/main" "${testdir}/sbin_link/follower"
+
+            write_config "${name}" auto "${link}" "${sname}" "${slink}" \
+                "${testdir}/bin_link/main" 10 "${testdir}/bin_link/follower" \
+                "${testdir}/sbin_link/main" 10 "${testdir}/sbin_link/follower"
+
+            # Also need the altdir symlink to exist
+            ln -sf "${testdir}/bin_link/main" "${altdir}/${name}"
+            ln -sf "${testdir}/bin_link/follower" "${altdir}/${sname}"
+
+            # Display triggers readConfig which should NOT dedup (paths don't start with /usr/bin or /usr/sbin)
+            # These paths are in testdir, so no dedup expected
+            rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --display ${name}" 0 "Display before dedup"
+            count=$(count_alts_in_config "${name}")
+            rlAssertEquals "Both alternatives still present (no bin/sbin paths)" "${count}" "2"
+
+            clean_dir
+        rlPhaseEnd
+
+        rlPhaseStart FAIL "Dedup real bin/sbin paths"
+            # Write a config with /usr/bin/ and /usr/sbin/ paths that should be deduped
+            mkdir -p "${testdir}/realbin" "${testdir}/realsbin"
+            touch "${testdir}/realbin/main" "${testdir}/realsbin/main"
+
+            write_config "${name}" auto "${link}" "" "" \
+                "/usr/bin/testprog" 10 \
+                "/usr/sbin/testprog" 10
+
+            ln -sf "/usr/bin/testprog" "${altdir}/${name}"
+
+            rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --display ${name}" 0 "Display triggers dedup"
+            count=$(count_alts_in_config "${name}")
+            rlAssertEquals "Duplicate removed, only one alternative remains" "${count}" "1"
+            remaining=$(grep "^/usr/" "${admindir}/${name}")
+            rlAssertEquals "Kept /usr/bin/ path" "${remaining}" "/usr/bin/testprog"
+
+            clean_dir
+        rlPhaseEnd
+
+        rlPhaseStart FAIL "Dedup keeps bin over sbin"
+            write_config "${name}" auto "${link}" "" "" \
+                "/usr/sbin/myprog" 20 \
+                "/usr/bin/myprog" 10
+
+            ln -sf "/usr/sbin/myprog" "${altdir}/${name}"
+
+            rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --display ${name}" 0 "Display triggers dedup (sbin first)"
+            count=$(count_alts_in_config "${name}")
+            rlAssertEquals "Duplicate removed" "${count}" "1"
+            remaining=$(grep "^/usr/" "${admindir}/${name}")
+            rlAssertEquals "Kept /usr/bin/ over /usr/sbin/" "${remaining}" "/usr/bin/myprog"
+
+            clean_dir
+        rlPhaseEnd
+
+        rlPhaseStart FAIL "Dedup skips different follower count"
+            mkdir -p "${testdir}/fc_a" "${testdir}/fc_b"
+            touch "${testdir}/fc_a/main" "${testdir}/fc_a/follower"
+            touch "${testdir}/fc_b/main"
+
+            # alt A has a follower, alt B does not — they should NOT be deduped
+            {
+                echo "auto"
+                echo "${link}"
+                echo "${sname}"
+                echo "${slink}"
+                echo ""
+                echo "/usr/bin/fcprog"
+                echo "10"
+                echo "${testdir}/fc_a/follower"
+                echo "/usr/sbin/fcprog"
+                echo "10"
+            } > "${admindir}/${name}"
+
+            ln -sf "/usr/bin/fcprog" "${altdir}/${name}"
+            ln -sf "${testdir}/fc_a/follower" "${altdir}/${sname}"
+
+            rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --display ${name}" 0 "Display with different follower count"
+            count=$(count_alts_in_config "${name}")
+            rlAssertEquals "Both alternatives kept (different follower count)" "${count}" "2"
+
+            clean_dir
+        rlPhaseEnd
+
+        rlPhaseStart FAIL "Dedup with three alternatives"
+            write_config "${name}" auto "${link}" "" "" \
+                "/usr/bin/triprog" 10 \
+                "/usr/sbin/triprog" 20 \
+                "/usr/bin/otherprog" 30
+
+            ln -sf "/usr/bin/otherprog" "${altdir}/${name}"
+
+            rlRun "${TEST_BIN} --altdir ${altdir} --admindir ${admindir} --display ${name}" 0 "Display with three alts"
+            count=$(count_alts_in_config "${name}")
+            rlAssertEquals "One duplicate removed, two remain" "${count}" "2"
+            # triprog bin/sbin deduped, otherprog kept
+            rlRun "grep -q '/usr/bin/triprog' ${admindir}/${name}" 0 "bin/triprog kept"
+            rlRun "grep -q '/usr/sbin/triprog' ${admindir}/${name}" 1 "sbin/triprog removed"
+            rlRun "grep -q '/usr/bin/otherprog' ${admindir}/${name}" 0 "otherprog kept"
+
+            clean_dir
+        rlPhaseEnd
+
+    fi
 
     # Cleanup phase: Remove test directory
     rlPhaseStartCleanup

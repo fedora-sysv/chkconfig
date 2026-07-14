@@ -48,6 +48,7 @@ leveldb.o: leveldb.c leveldb.h
 clean:
 	rm -f chkconfig ntsysv $(OBJS) $(NTOBJS)
 	rm -f alternatives alternatives.o
+	rm -f alternatives-merged alternatives-merged.o
 	make -C po clean
 	rm -f chkconfig-*.tar.gz *~ *.old
 
@@ -76,8 +77,13 @@ install:
 	    || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac;\
 	done && test -z "$$fail"
 
-check: alternatives
+alternatives-merged: alternatives.c
+	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -DMERGED_SBIN=1 -c alternatives.c -o alternatives-merged.o
+	$(CC) $(LDFLAGS) alternatives-merged.o -o alternatives-merged
+
+check: alternatives alternatives-merged
 	TEST_PATH=./ ./tests/alternatives/test-alternatives.sh
+	TEST_PATH=./ MERGED_SBIN=1 ./tests/alternatives/test-alternatives.sh
 
 tag:
 	@git tag -a -m "Tag as $(TAG)" -f $(TAG)
