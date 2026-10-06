@@ -16,13 +16,15 @@
 # 耗子 <haozi@loli.email>, 2026.
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2026.
 # Kung Kun <kun17.kung317@silomails.com>, 2026.
+# Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
 "PO-Revision-Date: 2026-10-06 14:17+0000\n"
-"Last-Translator: Kung Kun <kun17.kung317@silomails.com>\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -457,7 +459,7 @@ msgstr "链接 %s 移除失败：%s\n"
 #: ../alternatives.c:659
 #, c-format
 msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
-msgstr "无法链接 %s-> %s：%s 存在，且它不是符号链接\n"
+msgstr "链接 %s -> %s 失败：%s 已存在，且不是符号链接。\n"
 
 #: ../alternatives.c:664
 #, c-format
