@@ -12,13 +12,14 @@
 # ufa <ufa@technotroll.org>, 2011
 # Daniel Lara <danniel@fedoraproject.org>, 2016. #zanata
 # Filipe Rosset <rosset.filipe@gmail.com>, 2017. #zanata
+# Rafael Fontenelle <rafaelff@gnome.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 17:46+0200\n"
-"PO-Revision-Date: 2022-03-10 09:13+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-09-29 18:17+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
 "projects/fedora-sysv/chkconfig/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 #: ../chkconfig.c:41
 #, c-format
@@ -233,12 +234,12 @@ msgstr "Nenhum serviço pode ser gerenciado pelo ntsysv!\n"
 #: ../leveldb.c:348
 #, c-format
 msgid "failed to open %s/init.d: %s\n"
-msgstr "não foi possível abrir %s/init.d: %s\n"
+msgstr "falha ao abrir %s/init.d: %s\n"
 
 #: ../leveldb.c:797 ../leveldb.c:805
 #, c-format
 msgid "failed to glob pattern %s: %s\n"
-msgstr "impossível definir o padrão %s: %s\n"
+msgstr "falha ao definir o padrão %s: %s\n"
 
 #: ../leveldb.c:851
 #, c-format
@@ -246,9 +247,9 @@ msgid "cannot determine current run level\n"
 msgstr "não foi possível determinar o nível de execução atual\n"
 
 #: ../leveldb.c:934
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to set SELinux context for %s: %s\n"
-msgstr "Impossível definir contexto SELinux para  %s: %s\n"
+msgstr "Não foi possível definir contexto SELinux para %s: %s\n"
 
 #: ../leveldb.c:959
 #, c-format
@@ -282,7 +283,7 @@ msgstr "                    [--initscript <serviço>]\n"
 #: ../alternatives.c:90
 #, c-format
 msgid "                    [--family <family>]\n"
-msgstr ""
+msgstr "                    [--family <família>]\n"
 
 #: ../alternatives.c:91
 #, fuzzy, c-format
