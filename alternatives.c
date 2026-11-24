@@ -984,7 +984,7 @@ static int removeFollower(char *title, char *target, char *followerTitle,
     }
     fprintf(
         stderr,
-        _("%s has not been configured as an follower alternative for %s (%s)\n"),
+        _("%s has not been configured as a follower alternative for %s (%s)\n"),
         followerTitle, title, target);
     return 2;
 }
