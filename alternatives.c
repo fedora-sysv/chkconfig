@@ -520,6 +520,12 @@ static int readConfig(struct alternativeSet *set, const char *title,
             newAlt.followers[i - 1].target = (line && strlen(line)) ? strsteal(&line) : NULL;
         }
 
+        for (i = 0; i < set->numAlts; i++) {
+            if (streq_bin(newAlt.leader.target, set->alts[i].leader.target)) {
+                goto nextalt;
+            }
+        }
+
         set->alts = realloc(set->alts, (set->numAlts + 1) * sizeof(*set->alts));
         set->alts[set->numAlts] = newAlt;
 
@@ -527,7 +533,7 @@ static int readConfig(struct alternativeSet *set, const char *title,
             set->best = set->numAlts;
 
         set->numAlts++;
-
+nextalt:
         memset(&newAlt, 0, sizeof(struct alternative));
 
         nextLine(&buf, &line);
